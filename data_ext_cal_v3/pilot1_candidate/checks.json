@@ -1,0 +1,155 @@
+{
+  "gold_reexec_mismatch": [],
+  "gold_fixture_semantic_mismatch": [],
+  "message_answer_mismatch": [],
+  "n_existing_files_scanned": 72,
+  "overlap_task_signature": [],
+  "overlap_prompt": [],
+  "overlap_messages": [],
+  "overlap_calendar_call": [],
+  "calendar_train_templates": [
+    "calendar_attendees",
+    "calendar_count_date",
+    "calendar_count_month",
+    "calendar_free_slot",
+    "calendar_list_titles",
+    "calendar_search_dates"
+  ],
+  "v3_types": [
+    "cv3_attendee_count",
+    "cv3_free_latest",
+    "cv3_last_end",
+    "cv3_locations",
+    "cv3_search_count"
+  ],
+  "fixture_id_overlap_with_v1_fixture": [],
+  "fixture_stats": {
+    "events": 167,
+    "days": 39,
+    "months": [
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "meetings_per_day": {
+      "2": 6,
+      "3": 5,
+      "4": 9,
+      "5": 10,
+      "6": 9
+    },
+    "distinct_start_times": 31,
+    "attendee_count_hist": {
+      "1": 17,
+      "2": 36,
+      "3": 33,
+      "4": 29,
+      "5": 18,
+      "6": 18,
+      "7": 16
+    },
+    "locations": {
+      "Room B": 30,
+      "Atrium": 23,
+      "Room A": 26,
+      "Lab 2": 27,
+      "Online": 29,
+      "Room D": 32
+    }
+  },
+  "n_rows": 150,
+  "types": {
+    "cv3_free_latest": 30,
+    "cv3_locations": 30,
+    "cv3_attendee_count": 30,
+    "cv3_search_count": 30,
+    "cv3_last_end": 30
+  },
+  "ok": true,
+  "task_stats": {
+    "free_latest": {
+      "n": 30,
+      "candidates": 94,
+      "distinct_calls": 30,
+      "distinct_answers": 17,
+      "most_common_answer_share": 0.16666666666666666,
+      "answer_hist": {
+        "{\"end\":\"17:00\",\"start\":\"16:00\"}": 5,
+        "{\"end\":\"16:30\",\"start\":\"15:00\"}": 3,
+        "{\"end\":\"17:00\",\"start\":\"14:30\"}": 3,
+        "{\"end\":\"17:00\",\"start\":\"13:30\"}": 3,
+        "{\"end\":\"16:00\",\"start\":\"14:00\"}": 2,
+        "{\"end\":\"17:00\",\"start\":\"15:00\"}": 2,
+        "{\"end\":\"17:00\",\"start\":\"15:30\"}": 2,
+        "{\"end\":\"16:00\",\"start\":\"15:00\"}": 1
+      }
+    },
+    "locations": {
+      "n": 30,
+      "candidates": 25,
+      "distinct_calls": 25,
+      "distinct_answers": 18,
+      "most_common_answer_share": 0.1,
+      "answer_hist": {
+        "[\"Room B\",\"Room D\"]": 3,
+        "[\"Lab 2\",\"Room A\",\"Room B\"]": 3,
+        "[\"Atrium\",\"Lab 2\",\"Online\",\"Room D\"]": 3,
+        "[\"Lab 2\",\"Room B\",\"Room D\"]": 3,
+        "[\"Lab 2\",\"Room A\",\"Room B\",\"Room D\"]": 3,
+        "[\"Atrium\",\"Lab 2\",\"Online\",\"Room A\",\"Room D\"]": 2,
+        "[\"Atrium\",\"Online\",\"Room A\",\"Room D\"]": 2,
+        "[\"Atrium\",\"Lab 2\",\"Online\",\"Room A\"]": 1
+      }
+    },
+    "attendee_count": {
+      "n": 30,
+      "candidates": 167,
+      "distinct_calls": 30,
+      "distinct_answers": 7,
+      "most_common_answer_share": 0.16666666666666666,
+      "answer_hist": {
+        "1": 5,
+        "2": 5,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4
+      }
+    },
+    "search_count": {
+      "n": 30,
+      "candidates": 56,
+      "distinct_calls": 30,
+      "distinct_answers": 10,
+      "most_common_answer_share": 0.13333333333333333,
+      "answer_hist": {
+        "2": 4,
+        "3": 4,
+        "5": 3,
+        "6": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "12": 3
+      }
+    },
+    "last_end": {
+      "n": 30,
+      "candidates": 39,
+      "distinct_calls": 30,
+      "distinct_answers": 10,
+      "most_common_answer_share": 0.26666666666666666,
+      "answer_hist": {
+        "\"17:00\"": 8,
+        "\"16:00\"": 4,
+        "\"16:30\"": 4,
+        "\"16:45\"": 4,
+        "\"16:15\"": 3,
+        "\"15:45\"": 2,
+        "\"14:30\"": 2,
+        "\"13:30\"": 1
+      }
+    }
+  }
+}

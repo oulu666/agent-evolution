@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "P6_B1_A_seed20261108_devgrad_uniform",
+  "family": "database",
+  "metrics": {
+    "n": 24,
+    "tool_selection_accuracy": 0.916667,
+    "argument_accuracy": 0.5,
+    "execution_success_rate": 0.75,
+    "final_task_success_rate": 0.75,
+    "joint_success_rate": 0.416667,
+    "conditional_argument_accuracy": 0.454545,
+    "conditional_argument_numerator": 10,
+    "conditional_argument_denominator": 22
+  },
+  "skill_metrics": {
+    "db.filter_cmp_top": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.666667,
+      "final_task_success_rate": 0.666667,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 12
+    },
+    "db.list_tables": {
+      "n": 12,
+      "tool_selection_accuracy": 0.833333,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 0.833333,
+      "final_task_success_rate": 0.833333,
+      "joint_success_rate": 0.833333,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 48,
+    "input_tokens": 13171,
+    "output_tokens": 1538,
+    "total_tokens": 14709,
+    "generation_seconds": 131.973804,
+    "n": 24,
+    "generation_batches": 48,
+    "usage_coverage": {
+      "inference_calls": 24,
+      "input_tokens": 24,
+      "output_tokens": 24,
+      "total_tokens": 24,
+      "generation_seconds": 24
+    },
+    "recorded_totals": {
+      "inference_calls": 48,
+      "input_tokens": 13171,
+      "output_tokens": 1538,
+      "total_tokens": 14709,
+      "generation_seconds": 131.973804
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 132.4
+  },
+  "peak_gpu_gb": 0.646,
+  "duration_seconds": 132.4,
+  "evaluation_protocol": {
+    "batch_size": 1,
+    "do_sample": false,
+    "use_cache": "model_default",
+    "padding_side": "single_sequence",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p6_devplan_attempt2/branches/A_seed20261108_devgrad_uniform/checkpoint"
+}

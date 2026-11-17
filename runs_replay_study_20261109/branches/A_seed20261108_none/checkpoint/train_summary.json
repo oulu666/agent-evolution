@@ -1,0 +1,86 @@
+{
+  "stage": "stage_04_calendar",
+  "family": "calendar",
+  "mode": "none",
+  "seed": 20261108,
+  "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+  "epochs": 2,
+  "train_samples": 80,
+  "new_order_sha256": "4d5ef1f2ac0060fca472069896a69d3ec57c0854bc20b8a0398e5a8ae235e349",
+  "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+  "probe_data_sha256": {
+    "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+    "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+    "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+  },
+  "start_trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+  "midpoint_trainable_state_sha256": "0e54fb0fc5e28ecd3dc88c4c5428a40d91c63d92ee718452fb88277938bcd53d",
+  "train_tokens": 74944,
+  "steps": 160,
+  "last_loss": 0.0004637207603082061,
+  "microsteps": 160,
+  "optimizer_steps": 20,
+  "new_samples": 160,
+  "replay_samples": 0,
+  "new_input_tokens": 74944,
+  "replay_input_tokens": 0,
+  "new_supervised_tokens": 8542,
+  "replay_supervised_tokens": 0,
+  "replay_ratio_requested": 0.1,
+  "replay_ratio_actual": 0.0,
+  "budget_input_tokens": 7494,
+  "budget_unused_input_tokens": 7494,
+  "quota_error_tokens_by_family": {
+    "database": 0.0,
+    "file": 0.0,
+    "python": 0.0
+  },
+  "within_one_percent_of_budget": null,
+  "actual_replay_tokens_by_family": {
+    "database": 0,
+    "file": 0,
+    "python": 0
+  },
+  "peak_gpu_gb": 3.696,
+  "compute_dtype": "torch.bfloat16",
+  "duration_seconds": 252.245,
+  "probe_duration_seconds": 118.22,
+  "training_and_overhead_seconds": 134.025,
+  "probe_input_tokens": 84593,
+  "probe_generated_tokens": 9022,
+  "probe_episodes": 144,
+  "probes": {
+    "start": {
+      "scores": {
+        "database": 0.333333,
+        "file": 0.166667,
+        "python": 1.0
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 69.484,
+      "episodes": 72,
+      "trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+      "generation_calls": 6,
+      "logical_generation_requests": 144,
+      "input_tokens": 42327,
+      "generated_tokens": 4943
+    },
+    "midpoint": {
+      "scores": {
+        "database": 0.333333,
+        "file": 0.291667,
+        "python": 1.0
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 48.736,
+      "episodes": 72,
+      "trainable_state_sha256": "0e54fb0fc5e28ecd3dc88c4c5428a40d91c63d92ee718452fb88277938bcd53d",
+      "generation_calls": 6,
+      "logical_generation_requests": 144,
+      "input_tokens": 42266,
+      "generated_tokens": 4079
+    }
+  },
+  "partial_accumulation_microsteps": 0,
+  "completed": true
+}

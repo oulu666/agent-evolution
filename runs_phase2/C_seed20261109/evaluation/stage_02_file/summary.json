@@ -1,0 +1,285 @@
+{
+  "stage": {
+    "name": "stage_02_file",
+    "family": "file",
+    "index": 2,
+    "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file",
+    "train_summary": {
+      "stage": "stage_02_file",
+      "family": "file",
+      "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_01_database",
+      "train_samples": 80,
+      "val_samples": 20,
+      "epochs": 2,
+      "steps": 160,
+      "optimizer_steps": 20,
+      "train_tokens": 54894,
+      "last_loss": 0.01088770478963852,
+      "val_loss": 0.061041300059756276,
+      "compute_dtype": "torch.bfloat16",
+      "peak_gpu_gb": 2.095,
+      "duration_seconds": 95.73,
+      "seed": 20261109,
+      "max_seq_length": 1024
+    }
+  },
+  "reports": [
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.833333
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 1.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 22.76,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.833333,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.602,
+      "duration_seconds": 27.04,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 29.99,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.833333,
+          "execution_success_rate": 0.833333,
+          "final_task_success_rate": 0.666667
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.617,
+      "duration_seconds": 34.25,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file"
+    }
+  ]
+}

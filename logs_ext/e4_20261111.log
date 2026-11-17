@@ -1,0 +1,1059 @@
+===== LAUNCH Wed Nov 11 11:07:35 CST 2026 =====
+2026-11-11 11:07:35 CHAIN_START pid=535 seeds=[20261108 20261109 20261110] arms=[tf00 tf25 tf50 none]
+2026-11-11 11:07:35 START check_e4_data
+PASS checker flags exactly the 16 known mislabeled round2 targets
+PASS checker flags all 30 round2 final File rows (whole-list gold)
+PASS new File pool: 0 label/execution failures
+PASS final_v2 File: 0 label/execution failures
+PASS checker catches an injected whole-list label
+PASS checker catches an injected first-instead-of-last label
+PASS calendar final: 30 rows, 6 types x 5
+PASS calendar gold re-derived from fixture JSON matches
+PASS no old target id left in pool
+E4_DATA_OK {"pool": {"file": 96, "database": 91, "python": 94}, "pool_targets": {"file": 16, "database": 11, "python": 14}, "final_v2": {"file": 30, "database": 30, "python": 30, "calendar": 30}} final_v2 5dcc7d786fd60556
+PASS verify() ok (hashes, leakage, executed gold)
+ALL_PASS
+2026-11-11 11:07:38 DONE check_e4_data rc=0 wall=3s
+2026-11-11 11:07:38 WAIT_GPU busy: 593 MiB, 2 % waited=0s
+2026-11-11 11:08:18 GPU_IDLE after 40s
+2026-11-11 11:08:18 START smoke_train_tf00
+train A_seed20261108_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:03,  4.87it/s]Loading weights:   1%|          | 2/311 [00:00<01:06,  4.67it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:41,  7.37it/s]Loading weights:   8%|▊         | 25/311 [00:00<00:04, 57.50it/s]Loading weights:  14%|█▍        | 43/311 [00:00<00:03, 88.03it/s]Loading weights:  26%|██▌       | 81/311 [00:00<00:01, 165.72it/s]Loading weights:  41%|████      | 126/311 [00:01<00:00, 244.19it/s]Loading weights:  52%|█████▏    | 163/311 [00:01<00:00, 273.40it/s]Loading weights:  64%|██████▍   | 199/311 [00:01<00:00, 290.30it/s]Loading weights:  78%|███████▊  | 243/311 [00:01<00:00, 330.45it/s]Loading weights:  90%|████████▉ | 279/311 [00:01<00:00, 337.58it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 207.71it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 4
+eval done probe_start database final 0.25 peak_gpu_gb 1.204
+eval probe_start file n 4
+eval done probe_start file final 0.0 peak_gpu_gb 1.212
+eval probe_start python n 4
+eval done probe_start python final 0.5 peak_gpu_gb 1.213
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 4
+eval done probe_midpoint database final 0.25 peak_gpu_gb 1.214
+eval probe_midpoint file n 4
+eval done probe_midpoint file final 0.0 peak_gpu_gb 1.239
+eval probe_midpoint python n 4
+eval done probe_midpoint python final 0.5 peak_gpu_gb 1.223
+replay train done targeted new tokens 8060 replay tokens 654 seconds 64.28
+TRAIN_OK 20261108 tf00 64.278
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4_smoke/report.md
+2026-11-11 11:10:37 DONE smoke_train_tf00 rc=0 wall=139s
+2026-11-11 11:10:37 WAIT_GPU busy: 703 MiB, 1 % waited=0s
+2026-11-11 11:11:17 GPU_IDLE after 40s
+2026-11-11 11:11:17 START smoke_eval_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:42,  7.33it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:29, 10.26it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:02, 104.79it/s]Loading weights:  22%|██▏       | 67/311 [00:00<00:01, 162.22it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:01, 205.83it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 255.29it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 313.50it/s]Loading weights:  75%|███████▍  | 232/311 [00:01<00:00, 364.86it/s]Loading weights:  87%|████████▋ | 271/311 [00:01<00:00, 345.34it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 252.18it/s]
+eval E4_A_seed20261108_tf00 file n 3
+eval done E4_A_seed20261108_tf00 file final 0.0 peak_gpu_gb 0.704
+eval E4_A_seed20261108_tf00 database n 3
+eval done E4_A_seed20261108_tf00 database final 0.666667 peak_gpu_gb 0.683
+eval E4_A_seed20261108_tf00 python n 3
+eval done E4_A_seed20261108_tf00 python final 1.0 peak_gpu_gb 0.699
+eval E4_A_seed20261108_tf00 calendar n 3
+eval done E4_A_seed20261108_tf00 calendar final 0.0 peak_gpu_gb 0.78
+eval E4_A_seed20261108_tf00 file n 3
+eval done E4_A_seed20261108_tf00 file final 0.0 peak_gpu_gb 0.696
+eval E4_A_seed20261108_tf00 database n 3
+eval done E4_A_seed20261108_tf00 database final 0.0 peak_gpu_gb 0.69
+eval E4_A_seed20261108_tf00 python n 3
+eval done E4_A_seed20261108_tf00 python final 1.0 peak_gpu_gb 0.701
+eval E4_A_seed20261108_tf00 calendar n 3
+eval done E4_A_seed20261108_tf00 calendar final 1.0 peak_gpu_gb 0.783
+EVAL_OK 20261108 tf00
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4_smoke/report.md
+2026-11-11 11:13:13 DONE smoke_eval_tf00 rc=0 wall=116s
+2026-11-11 11:13:13 WAIT_GPU busy: 719 MiB, 1 % waited=0s
+2026-11-11 11:13:53 GPU_IDLE after 40s
+2026-11-11 11:13:53 START smoke_train_tf50
+train A_seed20261108_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:26, 11.86it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:23, 13.31it/s]Loading weights:  19%|█▉        | 59/311 [00:00<00:01, 204.80it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 322.71it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 467.23it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 514.26it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 400.79it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 8060 replay tokens 718 seconds 65.25
+TRAIN_OK 20261108 tf50 8.299
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4_smoke/report.md
+2026-11-11 11:15:05 DONE smoke_train_tf50 rc=0 wall=72s
+2026-11-11 11:15:05 WAIT_GPU busy: 757 MiB, 0 % waited=0s
+2026-11-11 11:15:45 GPU_IDLE after 40s
+2026-11-11 11:15:45 START smoke_eval_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:20, 14.86it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 14.94it/s]Loading weights:  23%|██▎       | 72/311 [00:00<00:00, 268.12it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 457.92it/s]Loading weights:  77%|███████▋  | 240/311 [00:00<00:00, 593.94it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 472.78it/s]
+eval E4_A_seed20261108_tf50 file n 3
+eval done E4_A_seed20261108_tf50 file final 0.0 peak_gpu_gb 0.704
+eval E4_A_seed20261108_tf50 database n 3
+eval done E4_A_seed20261108_tf50 database final 0.666667 peak_gpu_gb 0.683
+eval E4_A_seed20261108_tf50 python n 3
+eval done E4_A_seed20261108_tf50 python final 1.0 peak_gpu_gb 0.699
+eval E4_A_seed20261108_tf50 calendar n 3
+eval done E4_A_seed20261108_tf50 calendar final 0.0 peak_gpu_gb 0.78
+eval E4_A_seed20261108_tf50 file n 3
+eval done E4_A_seed20261108_tf50 file final 0.0 peak_gpu_gb 0.686
+eval E4_A_seed20261108_tf50 database n 3
+eval done E4_A_seed20261108_tf50 database final 0.0 peak_gpu_gb 0.69
+eval E4_A_seed20261108_tf50 python n 3
+eval done E4_A_seed20261108_tf50 python final 1.0 peak_gpu_gb 0.701
+eval E4_A_seed20261108_tf50 calendar n 3
+eval done E4_A_seed20261108_tf50 calendar final 1.0 peak_gpu_gb 0.783
+EVAL_OK 20261108 tf50
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4_smoke/report.md
+2026-11-11 11:17:42 DONE smoke_eval_tf50 rc=0 wall=117s
+2026-11-11 11:17:42 START smoke_check
+tf00 replay 654 budget 806 target_tokens 0 actual_tf None new_file_targets_in_plan 0
+tf50 replay 718 budget 806 target_tokens 361 actual_tf 0.5027855153203342 new_file_targets_in_plan 0
+SMOKE_OK
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4_smoke/report.md
+2026-11-11 11:17:42 DONE smoke_check rc=0 wall=0s
+2026-11-11 11:17:43 WAIT_GPU busy: 755 MiB, 1 % waited=0s
+2026-11-11 11:18:23 GPU_IDLE after 40s
+2026-11-11 11:18:23 START calnl_old_20261108
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:24, 12.54it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:23, 13.23it/s]Loading weights:  18%|█▊        | 57/311 [00:00<00:01, 197.84it/s]Loading weights:  36%|███▌      | 111/311 [00:00<00:00, 312.77it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 454.65it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 505.88it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 398.58it/s]
+eval E2calnl_A_seed20261108_tf00 calendar n 30
+eval E2calnl_A_seed20261108_tf00 calendar 10
+eval E2calnl_A_seed20261108_tf00 calendar 20
+eval E2calnl_A_seed20261108_tf00 calendar 30
+eval done E2calnl_A_seed20261108_tf00 calendar final 0.666667 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:21, 14.68it/s]Loading weights:  23%|██▎       | 72/311 [00:00<00:00, 361.36it/s]Loading weights:  44%|████▍     | 137/311 [00:00<00:00, 481.97it/s]Loading weights:  74%|███████▎  | 229/311 [00:00<00:00, 643.09it/s]Loading weights:  95%|█████████▌| 297/311 [00:00<00:00, 655.78it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 560.99it/s]
+eval E2calnl_A_seed20261108_tf25 calendar n 30
+eval E2calnl_A_seed20261108_tf25 calendar 10
+eval E2calnl_A_seed20261108_tf25 calendar 20
+eval E2calnl_A_seed20261108_tf25 calendar 30
+eval done E2calnl_A_seed20261108_tf25 calendar final 0.666667 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.36it/s]Loading weights:  41%|████      | 128/311 [00:00<00:00, 739.86it/s]Loading weights:  83%|████████▎ | 258/311 [00:00<00:00, 992.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 910.13it/s]
+eval E2calnl_A_seed20261108_tf50 calendar n 30
+eval E2calnl_A_seed20261108_tf50 calendar 10
+eval E2calnl_A_seed20261108_tf50 calendar 20
+eval E2calnl_A_seed20261108_tf50 calendar 30
+eval done E2calnl_A_seed20261108_tf50 calendar final 0.7 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 24/311 [00:00<00:01, 238.60it/s]Loading weights:  42%|████▏     | 131/311 [00:00<00:00, 722.53it/s]Loading weights:  88%|████████▊ | 274/311 [00:00<00:00, 1041.40it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 915.91it/s] 
+eval E2calnl_A_seed20261108_tf75 calendar n 30
+eval E2calnl_A_seed20261108_tf75 calendar 10
+eval E2calnl_A_seed20261108_tf75 calendar 20
+eval E2calnl_A_seed20261108_tf75 calendar 30
+eval done E2calnl_A_seed20261108_tf75 calendar final 0.733333 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 15.89it/s]Loading weights:  24%|██▍       | 75/311 [00:00<00:00, 394.47it/s]Loading weights:  55%|█████▍    | 171/311 [00:00<00:00, 634.74it/s]Loading weights:  83%|████████▎ | 258/311 [00:00<00:00, 722.45it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 653.21it/s]
+eval E2calnl_A_seed20261108_none calendar n 30
+eval E2calnl_A_seed20261108_none calendar 10
+eval E2calnl_A_seed20261108_none calendar 20
+eval E2calnl_A_seed20261108_none calendar 30
+eval done E2calnl_A_seed20261108_none calendar final 0.7 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.42it/s]Loading weights:  20%|█▉        | 61/311 [00:00<00:00, 330.51it/s]Loading weights:  47%|████▋     | 145/311 [00:00<00:00, 550.79it/s]Loading weights:  77%|███████▋  | 240/311 [00:00<00:00, 703.51it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 603.01it/s]
+eval E2calnl_A_seed20261108_start calendar n 30
+eval E2calnl_A_seed20261108_start calendar 10
+eval E2calnl_A_seed20261108_start calendar 20
+eval E2calnl_A_seed20261108_start calendar 30
+eval done E2calnl_A_seed20261108_start calendar final 0.333333 peak_gpu_gb 3.513
+CALNL_OLD_OK 20261108
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:21:28 DONE calnl_old_20261108 rc=0 wall=185s
+2026-11-11 11:21:28 WAIT_GPU busy: 804 MiB, 0 % waited=0s
+2026-11-11 11:22:09 GPU_IDLE after 40s
+2026-11-11 11:22:09 START calnl_old_20261109
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.78it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:19, 15.75it/s]Loading weights:  37%|███▋      | 114/311 [00:00<00:00, 447.29it/s]Loading weights:  75%|███████▍  | 233/311 [00:00<00:00, 714.37it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 595.31it/s]
+eval E2calnl_A_seed20261109_tf00 calendar n 30
+eval E2calnl_A_seed20261109_tf00 calendar 10
+eval E2calnl_A_seed20261109_tf00 calendar 20
+eval E2calnl_A_seed20261109_tf00 calendar 30
+eval done E2calnl_A_seed20261109_tf00 calendar final 0.7 peak_gpu_gb 3.032
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 16.06it/s]Loading weights:  30%|███       | 94/311 [00:00<00:00, 498.54it/s]Loading weights:  58%|█████▊    | 180/311 [00:00<00:00, 649.84it/s]Loading weights:  83%|████████▎ | 258/311 [00:00<00:00, 696.75it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 642.73it/s]
+eval E2calnl_A_seed20261109_tf25 calendar n 30
+eval E2calnl_A_seed20261109_tf25 calendar 10
+eval E2calnl_A_seed20261109_tf25 calendar 20
+eval E2calnl_A_seed20261109_tf25 calendar 30
+eval done E2calnl_A_seed20261109_tf25 calendar final 0.7 peak_gpu_gb 3.032
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.57it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 880.73it/s]Loading weights:  89%|████████▉ | 277/311 [00:00<00:00, 1034.31it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 957.14it/s] 
+eval E2calnl_A_seed20261109_tf50 calendar n 30
+eval E2calnl_A_seed20261109_tf50 calendar 10
+eval E2calnl_A_seed20261109_tf50 calendar 20
+eval E2calnl_A_seed20261109_tf50 calendar 30
+eval done E2calnl_A_seed20261109_tf50 calendar final 0.7 peak_gpu_gb 3.032
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 29/311 [00:00<00:00, 289.66it/s]Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 943.53it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1034.26it/s]
+eval E2calnl_A_seed20261109_tf75 calendar n 30
+eval E2calnl_A_seed20261109_tf75 calendar 10
+eval E2calnl_A_seed20261109_tf75 calendar 20
+eval E2calnl_A_seed20261109_tf75 calendar 30
+eval done E2calnl_A_seed20261109_tf75 calendar final 0.7 peak_gpu_gb 3.032
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/311 [00:00<00:05, 59.85it/s]Loading weights:  33%|███▎      | 104/311 [00:00<00:00, 598.79it/s]Loading weights:  76%|███████▌  | 236/311 [00:00<00:00, 925.59it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 864.03it/s]
+eval E2calnl_A_seed20261109_none calendar n 30
+eval E2calnl_A_seed20261109_none calendar 10
+eval E2calnl_A_seed20261109_none calendar 20
+eval E2calnl_A_seed20261109_none calendar 30
+eval done E2calnl_A_seed20261109_none calendar final 0.633333 peak_gpu_gb 3.032
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 198.85it/s]Loading weights:  42%|████▏     | 131/311 [00:00<00:00, 731.72it/s]Loading weights:  85%|████████▍ | 263/311 [00:00<00:00, 999.08it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 910.93it/s]
+eval E2calnl_A_seed20261109_start calendar n 30
+eval E2calnl_A_seed20261109_start calendar 10
+eval E2calnl_A_seed20261109_start calendar 20
+eval E2calnl_A_seed20261109_start calendar 30
+eval done E2calnl_A_seed20261109_start calendar final 0.4 peak_gpu_gb 3.513
+CALNL_OLD_OK 20261109
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:24:44 DONE calnl_old_20261109 rc=0 wall=155s
+2026-11-11 11:24:44 WAIT_GPU busy: 804 MiB, 0 % waited=0s
+2026-11-11 11:25:24 GPU_IDLE after 40s
+2026-11-11 11:25:24 START calnl_old_20261110
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:18, 16.79it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.27it/s]Loading weights:  26%|██▌       | 81/311 [00:00<00:00, 308.96it/s]Loading weights:  57%|█████▋    | 177/311 [00:00<00:00, 540.22it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 669.85it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 515.79it/s]
+eval E2calnl_A_seed20261110_tf00 calendar n 30
+eval E2calnl_A_seed20261110_tf00 calendar 10
+eval E2calnl_A_seed20261110_tf00 calendar 20
+eval E2calnl_A_seed20261110_tf00 calendar 30
+eval done E2calnl_A_seed20261110_tf00 calendar final 0.733333 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 13/311 [00:00<00:02, 129.32it/s]Loading weights:  41%|████      | 127/311 [00:00<00:00, 717.53it/s]Loading weights:  81%|████████  | 252/311 [00:00<00:00, 959.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 899.91it/s]
+eval E2calnl_A_seed20261110_tf25 calendar n 30
+eval E2calnl_A_seed20261110_tf25 calendar 10
+eval E2calnl_A_seed20261110_tf25 calendar 20
+eval E2calnl_A_seed20261110_tf25 calendar 30
+eval done E2calnl_A_seed20261110_tf25 calendar final 0.733333 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 99.53it/s]Loading weights:  31%|███       | 97/311 [00:00<00:00, 549.85it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 702.80it/s]Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 776.91it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 706.26it/s]
+eval E2calnl_A_seed20261110_tf50 calendar n 30
+eval E2calnl_A_seed20261110_tf50 calendar 10
+eval E2calnl_A_seed20261110_tf50 calendar 20
+eval E2calnl_A_seed20261110_tf50 calendar 30
+eval done E2calnl_A_seed20261110_tf50 calendar final 0.733333 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 317.11it/s]Loading weights:  56%|█████▌    | 174/311 [00:00<00:00, 962.55it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1051.46it/s]
+eval E2calnl_A_seed20261110_tf75 calendar n 30
+eval E2calnl_A_seed20261110_tf75 calendar 10
+eval E2calnl_A_seed20261110_tf75 calendar 20
+eval E2calnl_A_seed20261110_tf75 calendar 30
+eval done E2calnl_A_seed20261110_tf75 calendar final 0.766667 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 18.03it/s]Loading weights:  34%|███▍      | 106/311 [00:00<00:00, 593.10it/s]Loading weights:  75%|███████▍  | 232/311 [00:00<00:00, 886.22it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 831.40it/s]
+eval E2calnl_A_seed20261110_none calendar n 30
+eval E2calnl_A_seed20261110_none calendar 10
+eval E2calnl_A_seed20261110_none calendar 20
+eval E2calnl_A_seed20261110_none calendar 30
+eval done E2calnl_A_seed20261110_none calendar final 0.733333 peak_gpu_gb 3.513
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 319.86it/s]Loading weights:  56%|█████▋    | 175/311 [00:00<00:00, 971.87it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1055.82it/s]
+eval E2calnl_A_seed20261110_start calendar n 30
+eval E2calnl_A_seed20261110_start calendar 10
+eval E2calnl_A_seed20261110_start calendar 20
+eval E2calnl_A_seed20261110_start calendar 30
+eval done E2calnl_A_seed20261110_start calendar final 0.366667 peak_gpu_gb 3.513
+CALNL_OLD_OK 20261110
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:28:30 DONE calnl_old_20261110 rc=0 wall=186s
+2026-11-11 11:28:30 START report_calnl_old
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:28:32 DONE report_calnl_old rc=0 wall=2s
+2026-11-11 11:28:32 WAIT_GPU busy: 804 MiB, 0 % waited=0s
+2026-11-11 11:29:13 GPU_IDLE after 40s
+2026-11-11 11:29:13 START train_20261108_tf00
+train A_seed20261108_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 15.48it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:22, 13.44it/s]Loading weights:  23%|██▎       | 70/311 [00:00<00:00, 244.71it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 440.36it/s]Loading weights:  79%|███████▉  | 245/311 [00:00<00:00, 595.87it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 464.48it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 32
+eval probe_start database 10
+eval probe_start database 20
+eval probe_start database 30
+eval done probe_start database final 0.3125 peak_gpu_gb 3.856
+eval probe_start file n 32
+eval probe_start file 10
+eval probe_start file 20
+eval probe_start file 30
+eval done probe_start file final 0.03125 peak_gpu_gb 4.332
+eval probe_start python n 32
+eval probe_start python 10
+eval probe_start python 20
+eval probe_start python 30
+eval done probe_start python final 0.84375 peak_gpu_gb 3.982
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 32
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval probe_midpoint database 30
+eval done probe_midpoint database final 0.6875 peak_gpu_gb 3.842
+eval probe_midpoint file n 32
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval probe_midpoint file 30
+eval done probe_midpoint file final 0.09375 peak_gpu_gb 4.363
+eval probe_midpoint python n 32
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval probe_midpoint python 30
+eval done probe_midpoint python final 0.78125 peak_gpu_gb 3.991
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 210.79
+TRAIN_OK 20261108 tf00 210.789
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:33:51 DONE train_20261108_tf00 rc=0 wall=278s
+2026-11-11 11:33:51 WAIT_GPU busy: 521 MiB, 0 % waited=0s
+2026-11-11 11:34:32 GPU_IDLE after 40s
+2026-11-11 11:34:32 START eval_20261108_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:57,  5.37it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:39,  7.74it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:03, 81.62it/s]Loading weights:  23%|██▎       | 70/311 [00:00<00:01, 148.88it/s]Loading weights:  30%|███       | 94/311 [00:00<00:01, 169.30it/s]Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 193.52it/s]Loading weights:  47%|████▋     | 145/311 [00:01<00:00, 209.08it/s]Loading weights:  58%|█████▊    | 180/311 [00:01<00:00, 246.47it/s]Loading weights:  69%|██████▉   | 215/311 [00:01<00:00, 275.57it/s]Loading weights:  80%|███████▉  | 248/311 [00:01<00:00, 287.26it/s]Loading weights:  90%|████████▉ | 279/311 [00:01<00:00, 260.48it/s]Loading weights:  99%|█████████▊| 307/311 [00:01<00:00, 248.80it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 187.70it/s]
+eval E4_A_seed20261108_tf00 file n 30
+eval E4_A_seed20261108_tf00 file 10
+eval E4_A_seed20261108_tf00 file 20
+eval E4_A_seed20261108_tf00 file 30
+eval done E4_A_seed20261108_tf00 file final 0.5 peak_gpu_gb 2.155
+eval E4_A_seed20261108_tf00 database n 30
+eval E4_A_seed20261108_tf00 database 10
+eval E4_A_seed20261108_tf00 database 20
+eval E4_A_seed20261108_tf00 database 30
+eval done E4_A_seed20261108_tf00 database final 0.566667 peak_gpu_gb 2.072
+eval E4_A_seed20261108_tf00 python n 30
+eval E4_A_seed20261108_tf00 python 10
+eval E4_A_seed20261108_tf00 python 20
+eval E4_A_seed20261108_tf00 python 30
+eval done E4_A_seed20261108_tf00 python final 0.866667 peak_gpu_gb 2.547
+eval E4_A_seed20261108_tf00 calendar n 30
+eval E4_A_seed20261108_tf00 calendar 10
+eval E4_A_seed20261108_tf00 calendar 20
+eval E4_A_seed20261108_tf00 calendar 30
+eval done E4_A_seed20261108_tf00 calendar final 0.8 peak_gpu_gb 2.974
+eval E4_A_seed20261108_tf00 file n 30
+eval E4_A_seed20261108_tf00 file 10
+eval E4_A_seed20261108_tf00 file 20
+eval E4_A_seed20261108_tf00 file 30
+eval done E4_A_seed20261108_tf00 file final 0.666667 peak_gpu_gb 2.163
+eval E4_A_seed20261108_tf00 database n 30
+eval E4_A_seed20261108_tf00 database 10
+eval E4_A_seed20261108_tf00 database 20
+eval E4_A_seed20261108_tf00 database 30
+eval done E4_A_seed20261108_tf00 database final 0.366667 peak_gpu_gb 2.109
+eval E4_A_seed20261108_tf00 python n 30
+eval E4_A_seed20261108_tf00 python 10
+eval E4_A_seed20261108_tf00 python 20
+eval E4_A_seed20261108_tf00 python 30
+eval done E4_A_seed20261108_tf00 python final 0.3 peak_gpu_gb 2.146
+eval E4_A_seed20261108_tf00 calendar n 30
+eval E4_A_seed20261108_tf00 calendar 10
+eval E4_A_seed20261108_tf00 calendar 20
+eval E4_A_seed20261108_tf00 calendar 30
+eval done E4_A_seed20261108_tf00 calendar final 0.633333 peak_gpu_gb 3.513
+EVAL_OK 20261108 tf00
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:37:28 DONE eval_20261108_tf00 rc=0 wall=176s
+2026-11-11 11:37:28 WAIT_GPU busy: 755 MiB, 2 % waited=0s
+2026-11-11 11:38:08 GPU_IDLE after 40s
+2026-11-11 11:38:08 START train_20261108_tf25
+train A_seed20261108_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:46,  6.59it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:32,  9.51it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:02, 103.22it/s]Loading weights:  23%|██▎       | 72/311 [00:00<00:01, 170.98it/s]Loading weights:  32%|███▏      | 100/311 [00:00<00:01, 202.00it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 215.86it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 248.13it/s]Loading weights:  64%|██████▍   | 199/311 [00:01<00:00, 287.23it/s]Loading weights:  78%|███████▊  | 243/311 [00:01<00:00, 329.71it/s]Loading weights:  89%|████████▉ | 278/311 [00:01<00:00, 307.68it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 300.73it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 219.65it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 202.16
+TRAIN_OK 20261108 tf25 51.559
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:40:07 DONE train_20261108_tf25 rc=0 wall=119s
+2026-11-11 11:40:07 WAIT_GPU busy: 870 MiB, 0 % waited=0s
+2026-11-11 11:40:47 GPU_IDLE after 40s
+2026-11-11 11:40:47 START eval_20261108_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<01:00,  5.09it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:40,  7.55it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:03, 86.94it/s]Loading weights:  23%|██▎       | 70/311 [00:00<00:01, 144.23it/s]Loading weights:  31%|███       | 97/311 [00:00<00:01, 176.31it/s]Loading weights:  40%|████      | 125/311 [00:00<00:00, 198.87it/s]Loading weights:  50%|████▉     | 155/311 [00:01<00:00, 226.13it/s]Loading weights:  62%|██████▏   | 193/311 [00:01<00:00, 264.98it/s]Loading weights:  76%|███████▌  | 237/311 [00:01<00:00, 312.59it/s]Loading weights:  87%|████████▋ | 271/311 [00:01<00:00, 303.65it/s]Loading weights:  97%|█████████▋| 303/311 [00:01<00:00, 293.81it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 200.56it/s]
+eval E4_A_seed20261108_tf25 file n 30
+eval E4_A_seed20261108_tf25 file 10
+eval E4_A_seed20261108_tf25 file 20
+eval E4_A_seed20261108_tf25 file 30
+eval done E4_A_seed20261108_tf25 file final 0.566667 peak_gpu_gb 2.155
+eval E4_A_seed20261108_tf25 database n 30
+eval E4_A_seed20261108_tf25 database 10
+eval E4_A_seed20261108_tf25 database 20
+eval E4_A_seed20261108_tf25 database 30
+eval done E4_A_seed20261108_tf25 database final 0.633333 peak_gpu_gb 2.072
+eval E4_A_seed20261108_tf25 python n 30
+eval E4_A_seed20261108_tf25 python 10
+eval E4_A_seed20261108_tf25 python 20
+eval E4_A_seed20261108_tf25 python 30
+eval done E4_A_seed20261108_tf25 python final 1.0 peak_gpu_gb 2.547
+eval E4_A_seed20261108_tf25 calendar n 30
+eval E4_A_seed20261108_tf25 calendar 10
+eval E4_A_seed20261108_tf25 calendar 20
+eval E4_A_seed20261108_tf25 calendar 30
+eval done E4_A_seed20261108_tf25 calendar final 0.466667 peak_gpu_gb 2.974
+eval E4_A_seed20261108_tf25 file n 30
+eval E4_A_seed20261108_tf25 file 10
+eval E4_A_seed20261108_tf25 file 20
+eval E4_A_seed20261108_tf25 file 30
+eval done E4_A_seed20261108_tf25 file final 0.566667 peak_gpu_gb 2.163
+eval E4_A_seed20261108_tf25 database n 30
+eval E4_A_seed20261108_tf25 database 10
+eval E4_A_seed20261108_tf25 database 20
+eval E4_A_seed20261108_tf25 database 30
+eval done E4_A_seed20261108_tf25 database final 0.633333 peak_gpu_gb 2.091
+eval E4_A_seed20261108_tf25 python n 30
+eval E4_A_seed20261108_tf25 python 10
+eval E4_A_seed20261108_tf25 python 20
+eval E4_A_seed20261108_tf25 python 30
+eval done E4_A_seed20261108_tf25 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261108_tf25 calendar n 30
+eval E4_A_seed20261108_tf25 calendar 10
+eval E4_A_seed20261108_tf25 calendar 20
+eval E4_A_seed20261108_tf25 calendar 30
+eval done E4_A_seed20261108_tf25 calendar final 0.633333 peak_gpu_gb 3.513
+EVAL_OK 20261108 tf25
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:43:27 DONE eval_20261108_tf25 rc=0 wall=160s
+2026-11-11 11:43:27 WAIT_GPU busy: 714 MiB, 1 % waited=0s
+2026-11-11 11:44:08 GPU_IDLE after 40s
+2026-11-11 11:44:08 START train_20261108_tf50
+train A_seed20261108_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:40,  7.66it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:29, 10.48it/s]Loading weights:  14%|█▍        | 45/311 [00:00<00:02, 131.73it/s]Loading weights:  28%|██▊       | 87/311 [00:00<00:01, 216.33it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 235.30it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 266.20it/s]Loading weights:  63%|██████▎   | 196/311 [00:00<00:00, 326.82it/s]Loading weights:  79%|███████▉  | 247/311 [00:01<00:00, 378.76it/s]Loading weights:  92%|█████████▏| 287/311 [00:01<00:00, 369.13it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 260.03it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 199.64
+TRAIN_OK 20261108 tf50 49.037
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:46:03 DONE train_20261108_tf50 rc=0 wall=115s
+2026-11-11 11:46:03 WAIT_GPU busy: 709 MiB, 1 % waited=0s
+2026-11-11 11:46:43 GPU_IDLE after 40s
+2026-11-11 11:46:43 START eval_20261108_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.90it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:19, 15.42it/s]Loading weights:  30%|███       | 94/311 [00:00<00:00, 363.01it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 584.63it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 736.60it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 545.00it/s]
+eval E4_A_seed20261108_tf50 file n 30
+eval E4_A_seed20261108_tf50 file 10
+eval E4_A_seed20261108_tf50 file 20
+eval E4_A_seed20261108_tf50 file 30
+eval done E4_A_seed20261108_tf50 file final 0.6 peak_gpu_gb 2.432
+eval E4_A_seed20261108_tf50 database n 30
+eval E4_A_seed20261108_tf50 database 10
+eval E4_A_seed20261108_tf50 database 20
+eval E4_A_seed20261108_tf50 database 30
+eval done E4_A_seed20261108_tf50 database final 0.633333 peak_gpu_gb 2.072
+eval E4_A_seed20261108_tf50 python n 30
+eval E4_A_seed20261108_tf50 python 10
+eval E4_A_seed20261108_tf50 python 20
+eval E4_A_seed20261108_tf50 python 30
+eval done E4_A_seed20261108_tf50 python final 0.933333 peak_gpu_gb 2.547
+eval E4_A_seed20261108_tf50 calendar n 30
+eval E4_A_seed20261108_tf50 calendar 10
+eval E4_A_seed20261108_tf50 calendar 20
+eval E4_A_seed20261108_tf50 calendar 30
+eval done E4_A_seed20261108_tf50 calendar final 0.6 peak_gpu_gb 2.975
+eval E4_A_seed20261108_tf50 file n 30
+eval E4_A_seed20261108_tf50 file 10
+eval E4_A_seed20261108_tf50 file 20
+eval E4_A_seed20261108_tf50 file 30
+eval done E4_A_seed20261108_tf50 file final 0.8 peak_gpu_gb 2.159
+eval E4_A_seed20261108_tf50 database n 30
+eval E4_A_seed20261108_tf50 database 10
+eval E4_A_seed20261108_tf50 database 20
+eval E4_A_seed20261108_tf50 database 30
+eval done E4_A_seed20261108_tf50 database final 1.0 peak_gpu_gb 2.035
+eval E4_A_seed20261108_tf50 python n 30
+eval E4_A_seed20261108_tf50 python 10
+eval E4_A_seed20261108_tf50 python 20
+eval E4_A_seed20261108_tf50 python 30
+eval done E4_A_seed20261108_tf50 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261108_tf50 calendar n 30
+eval E4_A_seed20261108_tf50 calendar 10
+eval E4_A_seed20261108_tf50 calendar 20
+eval E4_A_seed20261108_tf50 calendar 30
+eval done E4_A_seed20261108_tf50 calendar final 0.7 peak_gpu_gb 3.513
+EVAL_OK 20261108 tf50
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:49:21 DONE eval_20261108_tf50 rc=0 wall=158s
+2026-11-11 11:49:22 WAIT_GPU busy: 722 MiB, 1 % waited=0s
+2026-11-11 11:50:02 GPU_IDLE after 40s
+2026-11-11 11:50:02 START train_20261108_none
+train A_seed20261108_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.21it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 14.73it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 366.56it/s]Loading weights:  62%|██████▏   | 193/311 [00:00<00:00, 569.78it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 719.83it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 529.90it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done none new tokens 74944 replay tokens 0 seconds 192.04
+TRAIN_OK 20261108 none 41.436
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:51:53 DONE train_20261108_none rc=0 wall=111s
+2026-11-11 11:51:53 WAIT_GPU busy: 729 MiB, 1 % waited=0s
+2026-11-11 11:52:34 GPU_IDLE after 40s
+2026-11-11 11:52:34 START eval_20261108_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.84it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:19, 15.68it/s]Loading weights:  32%|███▏      | 101/311 [00:00<00:00, 394.03it/s]Loading weights:  67%|██████▋   | 207/311 [00:00<00:00, 633.92it/s]Loading weights:  96%|█████████▌| 299/311 [00:00<00:00, 730.18it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 553.59it/s]
+eval E4_A_seed20261108_none file n 30
+eval E4_A_seed20261108_none file 10
+eval E4_A_seed20261108_none file 20
+eval E4_A_seed20261108_none file 30
+eval done E4_A_seed20261108_none file final 0.466667 peak_gpu_gb 2.155
+eval E4_A_seed20261108_none database n 30
+eval E4_A_seed20261108_none database 10
+eval E4_A_seed20261108_none database 20
+eval E4_A_seed20261108_none database 30
+eval done E4_A_seed20261108_none database final 0.6 peak_gpu_gb 2.072
+eval E4_A_seed20261108_none python n 30
+eval E4_A_seed20261108_none python 10
+eval E4_A_seed20261108_none python 20
+eval E4_A_seed20261108_none python 30
+eval done E4_A_seed20261108_none python final 0.966667 peak_gpu_gb 2.547
+eval E4_A_seed20261108_none calendar n 30
+eval E4_A_seed20261108_none calendar 10
+eval E4_A_seed20261108_none calendar 20
+eval E4_A_seed20261108_none calendar 30
+eval done E4_A_seed20261108_none calendar final 0.633333 peak_gpu_gb 2.974
+eval E4_A_seed20261108_none file n 30
+eval E4_A_seed20261108_none file 10
+eval E4_A_seed20261108_none file 20
+eval E4_A_seed20261108_none file 30
+eval done E4_A_seed20261108_none file final 0.3 peak_gpu_gb 2.163
+eval E4_A_seed20261108_none database n 30
+eval E4_A_seed20261108_none database 10
+eval E4_A_seed20261108_none database 20
+eval E4_A_seed20261108_none database 30
+eval done E4_A_seed20261108_none database final 0.4 peak_gpu_gb 2.109
+eval E4_A_seed20261108_none python n 30
+eval E4_A_seed20261108_none python 10
+eval E4_A_seed20261108_none python 20
+eval E4_A_seed20261108_none python 30
+eval done E4_A_seed20261108_none python final 0.666667 peak_gpu_gb 2.146
+eval E4_A_seed20261108_none calendar n 30
+eval E4_A_seed20261108_none calendar 10
+eval E4_A_seed20261108_none calendar 20
+eval E4_A_seed20261108_none calendar 30
+eval done E4_A_seed20261108_none calendar final 0.7 peak_gpu_gb 3.513
+EVAL_OK 20261108 none
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:55:24 DONE eval_20261108_none rc=0 wall=170s
+2026-11-11 11:55:24 START report_after_20261108
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 11:55:31 DONE report_after_20261108 rc=0 wall=7s
+2026-11-11 11:55:31 WAIT_GPU busy: 728 MiB, 0 % waited=0s
+2026-11-11 11:56:11 GPU_IDLE after 40s
+2026-11-11 11:56:11 START train_20261109_tf00
+train A_seed20261109_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.61it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.27it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 429.68it/s]Loading weights:  72%|███████▏  | 223/311 [00:00<00:00, 672.68it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 575.80it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 32
+eval probe_start database 10
+eval probe_start database 20
+eval probe_start database 30
+eval done probe_start database final 0.5625 peak_gpu_gb 3.856
+eval probe_start file n 32
+eval probe_start file 10
+eval probe_start file 20
+eval probe_start file 30
+eval done probe_start file final 0.0625 peak_gpu_gb 4.456
+eval probe_start python n 32
+eval probe_start python 10
+eval probe_start python 20
+eval probe_start python 30
+eval done probe_start python final 0.875 peak_gpu_gb 3.982
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 32
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval probe_midpoint database 30
+eval done probe_midpoint database final 0.625 peak_gpu_gb 3.842
+eval probe_midpoint file n 32
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval probe_midpoint file 30
+eval done probe_midpoint file final 0.0625 peak_gpu_gb 4.363
+eval probe_midpoint python n 32
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval probe_midpoint python 30
+eval done probe_midpoint python final 0.78125 peak_gpu_gb 3.991
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 235.74
+TRAIN_OK 20261109 tf00 235.74
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:01:20 DONE train_20261109_tf00 rc=0 wall=309s
+2026-11-11 12:01:20 WAIT_GPU busy: 265 MiB, 1 % waited=0s
+2026-11-11 12:02:00 GPU_IDLE after 40s
+2026-11-11 12:02:00 START eval_20261109_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:18, 16.55it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 14.65it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 344.96it/s]Loading weights:  57%|█████▋    | 178/311 [00:00<00:00, 519.12it/s]Loading weights:  84%|████████▍ | 262/311 [00:00<00:00, 625.27it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 492.33it/s]
+eval E4_A_seed20261109_tf00 file n 30
+eval E4_A_seed20261109_tf00 file 10
+eval E4_A_seed20261109_tf00 file 20
+eval E4_A_seed20261109_tf00 file 30
+eval done E4_A_seed20261109_tf00 file final 0.666667 peak_gpu_gb 2.155
+eval E4_A_seed20261109_tf00 database n 30
+eval E4_A_seed20261109_tf00 database 10
+eval E4_A_seed20261109_tf00 database 20
+eval E4_A_seed20261109_tf00 database 30
+eval done E4_A_seed20261109_tf00 database final 0.633333 peak_gpu_gb 2.072
+eval E4_A_seed20261109_tf00 python n 30
+eval E4_A_seed20261109_tf00 python 10
+eval E4_A_seed20261109_tf00 python 20
+eval E4_A_seed20261109_tf00 python 30
+eval done E4_A_seed20261109_tf00 python final 0.9 peak_gpu_gb 2.547
+eval E4_A_seed20261109_tf00 calendar n 30
+eval E4_A_seed20261109_tf00 calendar 10
+eval E4_A_seed20261109_tf00 calendar 20
+eval E4_A_seed20261109_tf00 calendar 30
+eval done E4_A_seed20261109_tf00 calendar final 0.733333 peak_gpu_gb 2.974
+eval E4_A_seed20261109_tf00 file n 30
+eval E4_A_seed20261109_tf00 file 10
+eval E4_A_seed20261109_tf00 file 20
+eval E4_A_seed20261109_tf00 file 30
+eval done E4_A_seed20261109_tf00 file final 0.9 peak_gpu_gb 2.163
+eval E4_A_seed20261109_tf00 database n 30
+eval E4_A_seed20261109_tf00 database 10
+eval E4_A_seed20261109_tf00 database 20
+eval E4_A_seed20261109_tf00 database 30
+eval done E4_A_seed20261109_tf00 database final 0.266667 peak_gpu_gb 2.109
+eval E4_A_seed20261109_tf00 python n 30
+eval E4_A_seed20261109_tf00 python 10
+eval E4_A_seed20261109_tf00 python 20
+eval E4_A_seed20261109_tf00 python 30
+eval done E4_A_seed20261109_tf00 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261109_tf00 calendar n 30
+eval E4_A_seed20261109_tf00 calendar 10
+eval E4_A_seed20261109_tf00 calendar 20
+eval E4_A_seed20261109_tf00 calendar 30
+eval done E4_A_seed20261109_tf00 calendar final 0.633333 peak_gpu_gb 3.03
+EVAL_OK 20261109 tf00
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:04:43 DONE eval_20261109_tf00 rc=0 wall=163s
+2026-11-11 12:04:43 WAIT_GPU busy: 255 MiB, 2 % waited=0s
+2026-11-11 12:05:23 GPU_IDLE after 40s
+2026-11-11 12:05:23 START train_20261109_tf25
+train A_seed20261109_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:32,  9.63it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:26, 11.46it/s]Loading weights:  16%|█▌        | 50/311 [00:00<00:01, 156.66it/s]Loading weights:  31%|███       | 97/311 [00:00<00:00, 255.20it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 296.17it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 357.65it/s]Loading weights:  77%|███████▋  | 241/311 [00:00<00:00, 414.47it/s]Loading weights:  92%|█████████▏| 286/311 [00:00<00:00, 406.12it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 296.43it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7491 seconds 220.28
+TRAIN_OK 20261109 tf25 52.21
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:08:03 DONE train_20261109_tf25 rc=0 wall=160s
+2026-11-11 12:08:03 WAIT_GPU busy: 255 MiB, 1 % waited=0s
+2026-11-11 12:08:43 GPU_IDLE after 40s
+2026-11-11 12:08:43 START eval_20261109_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:27, 11.28it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:27, 11.10it/s]Loading weights:  18%|█▊        | 56/311 [00:00<00:01, 171.79it/s]Loading weights:  33%|███▎      | 103/311 [00:00<00:00, 264.16it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 334.34it/s]Loading weights:  71%|███████▏  | 222/311 [00:00<00:00, 440.73it/s]Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 470.68it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 333.25it/s]
+eval E4_A_seed20261109_tf25 file n 30
+eval E4_A_seed20261109_tf25 file 10
+eval E4_A_seed20261109_tf25 file 20
+eval E4_A_seed20261109_tf25 file 30
+eval done E4_A_seed20261109_tf25 file final 0.5 peak_gpu_gb 2.155
+eval E4_A_seed20261109_tf25 database n 30
+eval E4_A_seed20261109_tf25 database 10
+eval E4_A_seed20261109_tf25 database 20
+eval E4_A_seed20261109_tf25 database 30
+eval done E4_A_seed20261109_tf25 database final 0.633333 peak_gpu_gb 2.072
+eval E4_A_seed20261109_tf25 python n 30
+eval E4_A_seed20261109_tf25 python 10
+eval E4_A_seed20261109_tf25 python 20
+eval E4_A_seed20261109_tf25 python 30
+eval done E4_A_seed20261109_tf25 python final 0.866667 peak_gpu_gb 2.547
+eval E4_A_seed20261109_tf25 calendar n 30
+eval E4_A_seed20261109_tf25 calendar 10
+eval E4_A_seed20261109_tf25 calendar 20
+eval E4_A_seed20261109_tf25 calendar 30
+eval done E4_A_seed20261109_tf25 calendar final 0.8 peak_gpu_gb 2.974
+eval E4_A_seed20261109_tf25 file n 30
+eval E4_A_seed20261109_tf25 file 10
+eval E4_A_seed20261109_tf25 file 20
+eval E4_A_seed20261109_tf25 file 30
+eval done E4_A_seed20261109_tf25 file final 0.633333 peak_gpu_gb 2.163
+eval E4_A_seed20261109_tf25 database n 30
+eval E4_A_seed20261109_tf25 database 10
+eval E4_A_seed20261109_tf25 database 20
+eval E4_A_seed20261109_tf25 database 30
+eval done E4_A_seed20261109_tf25 database final 0.766667 peak_gpu_gb 2.091
+eval E4_A_seed20261109_tf25 python n 30
+eval E4_A_seed20261109_tf25 python 10
+eval E4_A_seed20261109_tf25 python 20
+eval E4_A_seed20261109_tf25 python 30
+eval done E4_A_seed20261109_tf25 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261109_tf25 calendar n 30
+eval E4_A_seed20261109_tf25 calendar 10
+eval E4_A_seed20261109_tf25 calendar 20
+eval E4_A_seed20261109_tf25 calendar 30
+eval done E4_A_seed20261109_tf25 calendar final 0.7 peak_gpu_gb 3.03
+EVAL_OK 20261109 tf25
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:11:24 DONE eval_20261109_tf25 rc=0 wall=161s
+2026-11-11 12:11:24 WAIT_GPU busy: 970 MiB, 5 % waited=0s
+2026-11-11 12:12:04 GPU_IDLE after 40s
+2026-11-11 12:12:04 START train_20261109_tf50
+train A_seed20261109_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:24, 12.72it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:23, 12.91it/s]Loading weights:  22%|██▏       | 69/311 [00:00<00:01, 236.99it/s]Loading weights:  42%|████▏     | 130/311 [00:00<00:00, 360.43it/s]Loading weights:  64%|██████▍   | 200/311 [00:00<00:00, 468.68it/s]Loading weights:  86%|████████▌ | 268/311 [00:00<00:00, 530.54it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 399.53it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 226.18
+TRAIN_OK 20261109 tf50 58.11
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:14:17 DONE train_20261109_tf50 rc=0 wall=133s
+2026-11-11 12:14:18 WAIT_GPU busy: 1621 MiB, 12 % waited=0s
+2026-11-11 12:14:58 GPU_IDLE after 40s
+2026-11-11 12:14:58 START eval_20261109_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 15.83it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:21, 14.03it/s]Loading weights:  28%|██▊       | 87/311 [00:00<00:00, 316.47it/s]Loading weights:  57%|█████▋    | 176/311 [00:00<00:00, 514.93it/s]Loading weights:  84%|████████▍ | 262/311 [00:00<00:00, 626.45it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 483.19it/s]
+eval E4_A_seed20261109_tf50 file n 30
+eval E4_A_seed20261109_tf50 file 10
+eval E4_A_seed20261109_tf50 file 20
+eval E4_A_seed20261109_tf50 file 30
+eval done E4_A_seed20261109_tf50 file final 0.6 peak_gpu_gb 2.432
+eval E4_A_seed20261109_tf50 database n 30
+eval E4_A_seed20261109_tf50 database 10
+eval E4_A_seed20261109_tf50 database 20
+eval E4_A_seed20261109_tf50 database 30
+eval done E4_A_seed20261109_tf50 database final 0.666667 peak_gpu_gb 2.072
+eval E4_A_seed20261109_tf50 python n 30
+eval E4_A_seed20261109_tf50 python 10
+eval E4_A_seed20261109_tf50 python 20
+eval E4_A_seed20261109_tf50 python 30
+eval done E4_A_seed20261109_tf50 python final 0.866667 peak_gpu_gb 2.547
+eval E4_A_seed20261109_tf50 calendar n 30
+eval E4_A_seed20261109_tf50 calendar 10
+eval E4_A_seed20261109_tf50 calendar 20
+eval E4_A_seed20261109_tf50 calendar 30
+eval done E4_A_seed20261109_tf50 calendar final 0.7 peak_gpu_gb 2.975
+eval E4_A_seed20261109_tf50 file n 30
+eval E4_A_seed20261109_tf50 file 10
+eval E4_A_seed20261109_tf50 file 20
+eval E4_A_seed20261109_tf50 file 30
+eval done E4_A_seed20261109_tf50 file final 0.8 peak_gpu_gb 2.159
+eval E4_A_seed20261109_tf50 database n 30
+eval E4_A_seed20261109_tf50 database 10
+eval E4_A_seed20261109_tf50 database 20
+eval E4_A_seed20261109_tf50 database 30
+eval done E4_A_seed20261109_tf50 database final 1.0 peak_gpu_gb 2.035
+eval E4_A_seed20261109_tf50 python n 30
+eval E4_A_seed20261109_tf50 python 10
+eval E4_A_seed20261109_tf50 python 20
+eval E4_A_seed20261109_tf50 python 30
+eval done E4_A_seed20261109_tf50 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261109_tf50 calendar n 30
+eval E4_A_seed20261109_tf50 calendar 10
+eval E4_A_seed20261109_tf50 calendar 20
+eval E4_A_seed20261109_tf50 calendar 30
+eval done E4_A_seed20261109_tf50 calendar final 0.666667 peak_gpu_gb 3.028
+EVAL_OK 20261109 tf50
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:17:44 DONE eval_20261109_tf50 rc=0 wall=166s
+2026-11-11 12:17:44 WAIT_GPU busy: 1140 MiB, 5 % waited=0s
+2026-11-11 12:18:24 GPU_IDLE after 40s
+2026-11-11 12:18:24 START train_20261109_none
+train A_seed20261109_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.25it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.29it/s]Loading weights:  30%|███       | 94/311 [00:00<00:00, 360.16it/s]Loading weights:  63%|██████▎   | 196/311 [00:00<00:00, 595.98it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 737.25it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 544.52it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done none new tokens 74944 replay tokens 0 seconds 212.6
+TRAIN_OK 20261109 none 44.531
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:20:23 DONE train_20261109_none rc=0 wall=119s
+2026-11-11 12:20:23 WAIT_GPU busy: 1092 MiB, 3 % waited=0s
+2026-11-11 12:21:03 GPU_IDLE after 40s
+2026-11-11 12:21:03 START eval_20261109_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 16.14it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.19it/s]Loading weights:  34%|███▍      | 105/311 [00:00<00:00, 400.59it/s]Loading weights:  68%|██████▊   | 211/311 [00:00<00:00, 632.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 553.64it/s]
+eval E4_A_seed20261109_none file n 30
+eval E4_A_seed20261109_none file 10
+eval E4_A_seed20261109_none file 20
+eval E4_A_seed20261109_none file 30
+eval done E4_A_seed20261109_none file final 0.5 peak_gpu_gb 2.155
+eval E4_A_seed20261109_none database n 30
+eval E4_A_seed20261109_none database 10
+eval E4_A_seed20261109_none database 20
+eval E4_A_seed20261109_none database 30
+eval done E4_A_seed20261109_none database final 0.666667 peak_gpu_gb 2.072
+eval E4_A_seed20261109_none python n 30
+eval E4_A_seed20261109_none python 10
+eval E4_A_seed20261109_none python 20
+eval E4_A_seed20261109_none python 30
+eval done E4_A_seed20261109_none python final 0.866667 peak_gpu_gb 2.547
+eval E4_A_seed20261109_none calendar n 30
+eval E4_A_seed20261109_none calendar 10
+eval E4_A_seed20261109_none calendar 20
+eval E4_A_seed20261109_none calendar 30
+eval done E4_A_seed20261109_none calendar final 0.8 peak_gpu_gb 2.974
+eval E4_A_seed20261109_none file n 30
+eval E4_A_seed20261109_none file 10
+eval E4_A_seed20261109_none file 20
+eval E4_A_seed20261109_none file 30
+eval done E4_A_seed20261109_none file final 0.433333 peak_gpu_gb 2.163
+eval E4_A_seed20261109_none database n 30
+eval E4_A_seed20261109_none database 10
+eval E4_A_seed20261109_none database 20
+eval E4_A_seed20261109_none database 30
+eval done E4_A_seed20261109_none database final 0.3 peak_gpu_gb 2.109
+eval E4_A_seed20261109_none python n 30
+eval E4_A_seed20261109_none python 10
+eval E4_A_seed20261109_none python 20
+eval E4_A_seed20261109_none python 30
+eval done E4_A_seed20261109_none python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261109_none calendar n 30
+eval E4_A_seed20261109_none calendar 10
+eval E4_A_seed20261109_none calendar 20
+eval E4_A_seed20261109_none calendar 30
+eval done E4_A_seed20261109_none calendar final 0.633333 peak_gpu_gb 3.03
+EVAL_OK 20261109 none
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:23:47 DONE eval_20261109_none rc=0 wall=164s
+2026-11-11 12:23:47 START report_after_20261109
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:23:59 DONE report_after_20261109 rc=0 wall=12s
+2026-11-11 12:23:59 WAIT_GPU busy: 1067 MiB, 3 % waited=0s
+2026-11-11 12:24:39 GPU_IDLE after 40s
+2026-11-11 12:24:39 START train_20261110_tf00
+train A_seed20261110_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 18.18it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.20it/s]Loading weights:  33%|███▎      | 104/311 [00:00<00:00, 397.21it/s]Loading weights:  68%|██████▊   | 213/311 [00:00<00:00, 640.54it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 562.15it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 32
+eval probe_start database 10
+eval probe_start database 20
+eval probe_start database 30
+eval done probe_start database final 0.5625 peak_gpu_gb 3.856
+eval probe_start file n 32
+eval probe_start file 10
+eval probe_start file 20
+eval probe_start file 30
+eval done probe_start file final 0.03125 peak_gpu_gb 4.332
+eval probe_start python n 32
+eval probe_start python 10
+eval probe_start python 20
+eval probe_start python 30
+eval done probe_start python final 0.78125 peak_gpu_gb 3.982
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 32
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval probe_midpoint database 30
+eval done probe_midpoint database final 0.65625 peak_gpu_gb 3.842
+eval probe_midpoint file n 32
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval probe_midpoint file 30
+eval done probe_midpoint file final 0.25 peak_gpu_gb 4.221
+eval probe_midpoint python n 32
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval probe_midpoint python 30
+eval done probe_midpoint python final 0.78125 peak_gpu_gb 3.991
+replay train done targeted new tokens 74944 replay tokens 7493 seconds 344.43
+TRAIN_OK 20261110 tf00 344.428
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:31:43 DONE train_20261110_tf00 rc=0 wall=424s
+2026-11-11 12:31:43 WAIT_GPU busy: 350 MiB, 2 % waited=0s
+2026-11-11 12:32:23 GPU_IDLE after 40s
+2026-11-11 12:32:23 START eval_20261110_tf00
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:31,  9.90it/s]Loading weights:   1%|          | 2/311 [00:00<00:33,  9.32it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:29, 10.50it/s]Loading weights:  22%|██▏       | 69/311 [00:00<00:01, 214.83it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 357.15it/s]Loading weights:  65%|██████▍   | 201/311 [00:00<00:00, 447.54it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 520.53it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 367.53it/s]
+eval E4_A_seed20261110_tf00 file n 30
+eval E4_A_seed20261110_tf00 file 10
+eval E4_A_seed20261110_tf00 file 20
+eval E4_A_seed20261110_tf00 file 30
+eval done E4_A_seed20261110_tf00 file final 0.6 peak_gpu_gb 2.155
+eval E4_A_seed20261110_tf00 database n 30
+eval E4_A_seed20261110_tf00 database 10
+eval E4_A_seed20261110_tf00 database 20
+eval E4_A_seed20261110_tf00 database 30
+eval done E4_A_seed20261110_tf00 database final 0.566667 peak_gpu_gb 2.072
+eval E4_A_seed20261110_tf00 python n 30
+eval E4_A_seed20261110_tf00 python 10
+eval E4_A_seed20261110_tf00 python 20
+eval E4_A_seed20261110_tf00 python 30
+eval done E4_A_seed20261110_tf00 python final 0.966667 peak_gpu_gb 2.547
+eval E4_A_seed20261110_tf00 calendar n 30
+eval E4_A_seed20261110_tf00 calendar 10
+eval E4_A_seed20261110_tf00 calendar 20
+eval E4_A_seed20261110_tf00 calendar 30
+eval done E4_A_seed20261110_tf00 calendar final 0.7 peak_gpu_gb 2.974
+eval E4_A_seed20261110_tf00 file n 30
+eval E4_A_seed20261110_tf00 file 10
+eval E4_A_seed20261110_tf00 file 20
+eval E4_A_seed20261110_tf00 file 30
+eval done E4_A_seed20261110_tf00 file final 0.766667 peak_gpu_gb 2.163
+eval E4_A_seed20261110_tf00 database n 30
+eval E4_A_seed20261110_tf00 database 10
+eval E4_A_seed20261110_tf00 database 20
+eval E4_A_seed20261110_tf00 database 30
+eval done E4_A_seed20261110_tf00 database final 0.433333 peak_gpu_gb 2.109
+eval E4_A_seed20261110_tf00 python n 30
+eval E4_A_seed20261110_tf00 python 10
+eval E4_A_seed20261110_tf00 python 20
+eval E4_A_seed20261110_tf00 python 30
+eval done E4_A_seed20261110_tf00 python final 0.966667 peak_gpu_gb 2.142
+eval E4_A_seed20261110_tf00 calendar n 30
+eval E4_A_seed20261110_tf00 calendar 10
+eval E4_A_seed20261110_tf00 calendar 20
+eval E4_A_seed20261110_tf00 calendar 30
+eval done E4_A_seed20261110_tf00 calendar final 0.766667 peak_gpu_gb 3.513
+EVAL_OK 20261110 tf00
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:35:24 DONE eval_20261110_tf00 rc=0 wall=181s
+2026-11-11 12:35:24 WAIT_GPU busy: 361 MiB, 3 % waited=0s
+2026-11-11 12:36:04 GPU_IDLE after 40s
+2026-11-11 12:36:04 START train_20261110_tf25
+train A_seed20261110_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:41,  7.47it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:30, 10.16it/s]Loading weights:  15%|█▍        | 46/311 [00:00<00:02, 132.47it/s]Loading weights:  29%|██▊       | 89/311 [00:00<00:01, 219.18it/s]Loading weights:  40%|████      | 125/311 [00:00<00:00, 256.94it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 304.87it/s]Loading weights:  68%|██████▊   | 211/311 [00:00<00:00, 337.85it/s]Loading weights:  81%|████████  | 252/311 [00:01<00:00, 358.88it/s]Loading weights:  93%|█████████▎| 290/311 [00:01<00:00, 340.18it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 255.23it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 289.51
+TRAIN_OK 20261110 tf25 52.384
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:38:14 DONE train_20261110_tf25 rc=0 wall=130s
+2026-11-11 12:38:14 WAIT_GPU busy: 361 MiB, 3 % waited=0s
+2026-11-11 12:38:55 GPU_IDLE after 40s
+2026-11-11 12:38:55 START eval_20261110_tf25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:18, 16.39it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 14.90it/s]Loading weights:  35%|███▍      | 108/311 [00:00<00:00, 408.83it/s]Loading weights:  69%|██████▉   | 215/311 [00:00<00:00, 642.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 566.95it/s]
+eval E4_A_seed20261110_tf25 file n 30
+eval E4_A_seed20261110_tf25 file 10
+eval E4_A_seed20261110_tf25 file 20
+eval E4_A_seed20261110_tf25 file 30
+eval done E4_A_seed20261110_tf25 file final 0.6 peak_gpu_gb 2.155
+eval E4_A_seed20261110_tf25 database n 30
+eval E4_A_seed20261110_tf25 database 10
+eval E4_A_seed20261110_tf25 database 20
+eval E4_A_seed20261110_tf25 database 30
+eval done E4_A_seed20261110_tf25 database final 0.5 peak_gpu_gb 2.072
+eval E4_A_seed20261110_tf25 python n 30
+eval E4_A_seed20261110_tf25 python 10
+eval E4_A_seed20261110_tf25 python 20
+eval E4_A_seed20261110_tf25 python 30
+eval done E4_A_seed20261110_tf25 python final 1.0 peak_gpu_gb 2.547
+eval E4_A_seed20261110_tf25 calendar n 30
+eval E4_A_seed20261110_tf25 calendar 10
+eval E4_A_seed20261110_tf25 calendar 20
+eval E4_A_seed20261110_tf25 calendar 30
+eval done E4_A_seed20261110_tf25 calendar final 0.8 peak_gpu_gb 2.974
+eval E4_A_seed20261110_tf25 file n 30
+eval E4_A_seed20261110_tf25 file 10
+eval E4_A_seed20261110_tf25 file 20
+eval E4_A_seed20261110_tf25 file 30
+eval done E4_A_seed20261110_tf25 file final 0.766667 peak_gpu_gb 2.163
+eval E4_A_seed20261110_tf25 database n 30
+eval E4_A_seed20261110_tf25 database 10
+eval E4_A_seed20261110_tf25 database 20
+eval E4_A_seed20261110_tf25 database 30
+eval done E4_A_seed20261110_tf25 database final 0.4 peak_gpu_gb 2.091
+eval E4_A_seed20261110_tf25 python n 30
+eval E4_A_seed20261110_tf25 python 10
+eval E4_A_seed20261110_tf25 python 20
+eval E4_A_seed20261110_tf25 python 30
+eval done E4_A_seed20261110_tf25 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261110_tf25 calendar n 30
+eval E4_A_seed20261110_tf25 calendar 10
+eval E4_A_seed20261110_tf25 calendar 20
+eval E4_A_seed20261110_tf25 calendar 30
+eval done E4_A_seed20261110_tf25 calendar final 0.733333 peak_gpu_gb 3.513
+EVAL_OK 20261110 tf25
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:42:00 DONE eval_20261110_tf25 rc=0 wall=185s
+2026-11-11 12:42:00 WAIT_GPU busy: 361 MiB, 2 % waited=0s
+2026-11-11 12:42:40 GPU_IDLE after 40s
+2026-11-11 12:42:40 START train_20261110_tf50
+train A_seed20261110_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 19.26it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:19, 15.87it/s]Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 472.92it/s]Loading weights:  73%|███████▎  | 226/311 [00:00<00:00, 685.00it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 600.51it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7460 seconds 288.25
+TRAIN_OK 20261110 tf50 51.122
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:44:50 DONE train_20261110_tf50 rc=0 wall=130s
+2026-11-11 12:44:50 WAIT_GPU busy: 369 MiB, 3 % waited=0s
+2026-11-11 12:45:30 GPU_IDLE after 40s
+2026-11-11 12:45:30 START eval_20261110_tf50
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 17.72it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:19, 15.37it/s]Loading weights:  33%|███▎      | 104/311 [00:00<00:00, 401.58it/s]Loading weights:  68%|██████▊   | 210/311 [00:00<00:00, 637.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 567.30it/s]
+eval E4_A_seed20261110_tf50 file n 30
+eval E4_A_seed20261110_tf50 file 10
+eval E4_A_seed20261110_tf50 file 20
+eval E4_A_seed20261110_tf50 file 30
+eval done E4_A_seed20261110_tf50 file final 0.6 peak_gpu_gb 2.155
+eval E4_A_seed20261110_tf50 database n 30
+eval E4_A_seed20261110_tf50 database 10
+eval E4_A_seed20261110_tf50 database 20
+eval E4_A_seed20261110_tf50 database 30
+eval done E4_A_seed20261110_tf50 database final 0.533333 peak_gpu_gb 2.072
+eval E4_A_seed20261110_tf50 python n 30
+eval E4_A_seed20261110_tf50 python 10
+eval E4_A_seed20261110_tf50 python 20
+eval E4_A_seed20261110_tf50 python 30
+eval done E4_A_seed20261110_tf50 python final 1.0 peak_gpu_gb 2.547
+eval E4_A_seed20261110_tf50 calendar n 30
+eval E4_A_seed20261110_tf50 calendar 10
+eval E4_A_seed20261110_tf50 calendar 20
+eval E4_A_seed20261110_tf50 calendar 30
+eval done E4_A_seed20261110_tf50 calendar final 0.766667 peak_gpu_gb 2.974
+eval E4_A_seed20261110_tf50 file n 30
+eval E4_A_seed20261110_tf50 file 10
+eval E4_A_seed20261110_tf50 file 20
+eval E4_A_seed20261110_tf50 file 30
+eval done E4_A_seed20261110_tf50 file final 0.766667 peak_gpu_gb 2.163
+eval E4_A_seed20261110_tf50 database n 30
+eval E4_A_seed20261110_tf50 database 10
+eval E4_A_seed20261110_tf50 database 20
+eval E4_A_seed20261110_tf50 database 30
+eval done E4_A_seed20261110_tf50 database final 0.933333 peak_gpu_gb 2.035
+eval E4_A_seed20261110_tf50 python n 30
+eval E4_A_seed20261110_tf50 python 10
+eval E4_A_seed20261110_tf50 python 20
+eval E4_A_seed20261110_tf50 python 30
+eval done E4_A_seed20261110_tf50 python final 1.0 peak_gpu_gb 2.142
+eval E4_A_seed20261110_tf50 calendar n 30
+eval E4_A_seed20261110_tf50 calendar 10
+eval E4_A_seed20261110_tf50 calendar 20
+eval E4_A_seed20261110_tf50 calendar 30
+eval done E4_A_seed20261110_tf50 calendar final 0.766667 peak_gpu_gb 3.513
+EVAL_OK 20261110 tf50
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:48:23 DONE eval_20261110_tf50 rc=0 wall=173s
+2026-11-11 12:48:23 WAIT_GPU busy: 375 MiB, 3 % waited=0s
+2026-11-11 12:49:03 GPU_IDLE after 40s
+2026-11-11 12:49:03 START train_20261110_none
+train A_seed20261110_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:38,  7.98it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:28, 10.64it/s]Loading weights:  15%|█▍        | 46/311 [00:00<00:01, 136.62it/s]Loading weights:  29%|██▊       | 89/311 [00:00<00:00, 224.43it/s]Loading weights:  40%|████      | 125/311 [00:00<00:00, 265.10it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 311.43it/s]Loading weights:  66%|██████▌   | 204/311 [00:00<00:00, 325.65it/s]Loading weights:  82%|████████▏ | 254/311 [00:01<00:00, 375.67it/s]Loading weights:  95%|█████████▍| 294/311 [00:01<00:00, 356.97it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 264.31it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:550: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done none new tokens 74944 replay tokens 0 seconds 280.51
+TRAIN_OK 20261110 none 43.383
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:51:06 DONE train_20261110_none rc=0 wall=123s
+2026-11-11 12:51:07 WAIT_GPU busy: 375 MiB, 3 % waited=0s
+2026-11-11 12:51:47 GPU_IDLE after 40s
+2026-11-11 12:51:47 START eval_20261110_none
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 16.17it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 14.77it/s]Loading weights:  33%|███▎      | 104/311 [00:00<00:00, 391.89it/s]Loading weights:  64%|██████▍   | 200/311 [00:00<00:00, 592.19it/s]Loading weights:  99%|█████████▉| 309/311 [00:00<00:00, 756.61it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 545.30it/s]
+eval E4_A_seed20261110_none file n 30
+eval E4_A_seed20261110_none file 10
+eval E4_A_seed20261110_none file 20
+eval E4_A_seed20261110_none file 30
+eval done E4_A_seed20261110_none file final 0.566667 peak_gpu_gb 2.155
+eval E4_A_seed20261110_none database n 30
+eval E4_A_seed20261110_none database 10
+eval E4_A_seed20261110_none database 20
+eval E4_A_seed20261110_none database 30
+eval done E4_A_seed20261110_none database final 0.566667 peak_gpu_gb 2.072
+eval E4_A_seed20261110_none python n 30
+eval E4_A_seed20261110_none python 10
+eval E4_A_seed20261110_none python 20
+eval E4_A_seed20261110_none python 30
+eval done E4_A_seed20261110_none python final 0.933333 peak_gpu_gb 2.547
+eval E4_A_seed20261110_none calendar n 30
+eval E4_A_seed20261110_none calendar 10
+eval E4_A_seed20261110_none calendar 20
+eval E4_A_seed20261110_none calendar 30
+eval done E4_A_seed20261110_none calendar final 0.6 peak_gpu_gb 2.974
+eval E4_A_seed20261110_none file n 30
+eval E4_A_seed20261110_none file 10
+eval E4_A_seed20261110_none file 20
+eval E4_A_seed20261110_none file 30
+eval done E4_A_seed20261110_none file final 0.766667 peak_gpu_gb 2.163
+eval E4_A_seed20261110_none database n 30
+eval E4_A_seed20261110_none database 10
+eval E4_A_seed20261110_none database 20
+eval E4_A_seed20261110_none database 30
+eval done E4_A_seed20261110_none database final 0.433333 peak_gpu_gb 2.109
+eval E4_A_seed20261110_none python n 30
+eval E4_A_seed20261110_none python 10
+eval E4_A_seed20261110_none python 20
+eval E4_A_seed20261110_none python 30
+eval done E4_A_seed20261110_none python final 0.933333 peak_gpu_gb 2.142
+eval E4_A_seed20261110_none calendar n 30
+eval E4_A_seed20261110_none calendar 10
+eval E4_A_seed20261110_none calendar 20
+eval E4_A_seed20261110_none calendar 30
+eval done E4_A_seed20261110_none calendar final 0.733333 peak_gpu_gb 3.513
+EVAL_OK 20261110 none
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:54:47 DONE eval_20261110_none rc=0 wall=180s
+2026-11-11 12:54:47 START report_after_20261110
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:55:03 DONE report_after_20261110 rc=0 wall=16s
+2026-11-11 12:55:03 START final_report
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/report.md
+2026-11-11 12:55:19 DONE final_report rc=0 wall=16s
+2026-11-11 12:55:19 ALL_DONE total=6464s
+E4_FINISHED

@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "family": "file",
+      "row_index": 72,
+      "episode_id": "file-train-file_write_report-008",
+      "input_tokens": 307,
+      "supervised_tokens": 46,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "python",
+      "row_index": 22,
+      "episode_id": "python-train-stats_median-008",
+      "input_tokens": 347,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": false
+    }
+  ],
+  "budget_input_tokens": 806,
+  "actual_input_tokens": 654,
+  "actual_supervised_tokens": 103,
+  "unused_input_tokens": 152,
+  "unused_fraction": 0.18858560794044665,
+  "within_one_percent_of_budget": false,
+  "weights": {
+    "database": 0.3333333333333333,
+    "file": 0.3333333333333333,
+    "python": 0.3333333333333333
+  },
+  "target_tokens_by_family": {
+    "database": 268.66666666666663,
+    "file": 268.66666666666663,
+    "python": 268.66666666666663
+  },
+  "actual_tokens_by_family": {
+    "database": 0,
+    "file": 307,
+    "python": 347
+  },
+  "quota_error_tokens_by_family": {
+    "database": -268.66666666666663,
+    "file": 38.33333333333337,
+    "python": 78.33333333333337
+  },
+  "samples_by_family": {
+    "database": 0,
+    "file": 1,
+    "python": 1
+  },
+  "target_fraction": 0.0,
+  "target_family_weights": {},
+  "uniform_actual_input_tokens": 654,
+  "target_actual_input_tokens": 0,
+  "mode": "targeted",
+  "baseline_probe_scores": {
+    "database": 0.25,
+    "file": 0.0,
+    "python": 0.5
+  },
+  "midpoint_probe_scores": {
+    "database": 0.25,
+    "file": 0.0,
+    "python": 0.5
+  },
+  "positive_drops": {
+    "database": 0.0,
+    "file": 0.0,
+    "python": 0.0
+  },
+  "adaptive_triggered": false,
+  "common_replay_positions": [
+    15
+  ],
+  "insertion_schedule": {
+    "15": [
+      {
+        "family": "file",
+        "row_index": 72,
+        "episode_id": "file-train-file_write_report-008",
+        "input_tokens": 307,
+        "supervised_tokens": 46,
+        "truncated": false,
+        "target": false
+      },
+      {
+        "family": "python",
+        "row_index": 22,
+        "episode_id": "python-train-stats_median-008",
+        "input_tokens": 347,
+        "supervised_tokens": 57,
+        "truncated": false,
+        "target": false
+      }
+    ]
+  },
+  "adaptive_actual_input_tokens": 654,
+  "targeted_actual_input_tokens": 654,
+  "between_replay_arms_budget_difference": 0
+}

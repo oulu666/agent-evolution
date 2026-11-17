@@ -1,0 +1,66 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_midpoint",
+  "family": "python",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.65625,
+    "argument_accuracy": 0.90625,
+    "execution_success_rate": 0.75,
+    "final_task_success_rate": 0.78125,
+    "joint_success_rate": 0.65625,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 21,
+    "conditional_argument_denominator": 21
+  },
+  "skill_metrics": {
+    "numeric_input": {
+      "n": 32,
+      "tool_selection_accuracy": 0.65625,
+      "argument_accuracy": 0.90625,
+      "execution_success_rate": 0.75,
+      "final_task_success_rate": 0.78125,
+      "joint_success_rate": 0.65625,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 21,
+      "conditional_argument_denominator": 21
+    },
+    "stat_median": {
+      "n": 32,
+      "tool_selection_accuracy": 0.65625,
+      "argument_accuracy": 0.90625,
+      "execution_success_rate": 0.75,
+      "final_task_success_rate": 0.78125,
+      "joint_success_rate": 0.65625,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 21,
+      "conditional_argument_denominator": 21
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 20049,
+    "output_tokens": 1755,
+    "total_tokens": 21804,
+    "generation_seconds": 18.155859,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 20049,
+      "output_tokens": 1755,
+      "total_tokens": 21804,
+      "generation_seconds": 18.155859
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "stage": "stage_03_calendar",
+  "family": "calendar",
+  "mode": "adaptive",
+  "seed": 20261109,
+  "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file",
+  "epochs": 2,
+  "train_samples": 80,
+  "new_order_sha256": "2c1709727d8f4c3c6a12c4e67af5e459bd281bb81d0d0abb418a0ecaffbecbdf",
+  "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+  "probe_data_sha256": {
+    "file": "0c8b7c837cddebbddaf81e6f5c0ccda3b07f647f955bfe9eb6fe24ddd13133be",
+    "database": "4c957ca7f94503cb1d1b6c40adbe37c92756724943dd34ddf611bb309676836f"
+  },
+  "start_trainable_state_sha256": "c820e7642bb3f0a6d65becebbce4bdc2a85ce012c170bea9ae100330a7bb0ff3",
+  "midpoint_trainable_state_sha256": "6820fcf3c2a5fae8900b2738bf62a20599f25050ccdd564d4dcf15ef32c4c617",
+  "train_tokens": 82435,
+  "steps": 183,
+  "last_loss": 0.0003215909528080374,
+  "microsteps": 183,
+  "optimizer_steps": 23,
+  "new_samples": 160,
+  "replay_samples": 23,
+  "new_input_tokens": 74944,
+  "replay_input_tokens": 7491,
+  "new_supervised_tokens": 8542,
+  "replay_supervised_tokens": 1108,
+  "replay_ratio_requested": 0.1,
+  "replay_ratio_actual": 0.09995463279248505,
+  "budget_input_tokens": 7494,
+  "budget_unused_input_tokens": 3,
+  "quota_error_tokens_by_family": {
+    "database": -6.0,
+    "file": 3.0
+  },
+  "within_one_percent_of_budget": true,
+  "actual_replay_tokens_by_family": {
+    "database": 3741,
+    "file": 3750
+  },
+  "adaptive_triggered": false,
+  "target_fraction": 0.0,
+  "target_family_weights": {},
+  "target_samples_by_family": {},
+  "target_actual_input_tokens": 0,
+  "uniform_actual_input_tokens": 7491,
+  "peak_gpu_gb": 3.084,
+  "compute_dtype": "torch.bfloat16",
+  "duration_seconds": 168.394,
+  "probe_duration_seconds": 56.37,
+  "actual_elapsed_seconds": 64.087,
+  "prefix_reused": true,
+  "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_round2_c/prefixes/C_seed20261109",
+  "shared_prefix_state_sha256": "2691839028593998613a3ba2ea9805d6f424d7d74829a888929c1b0d4c536d93",
+  "actual_probe_duration_seconds": 0.0,
+  "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+  "training_and_overhead_seconds": 112.024,
+  "probe_input_tokens": 53593,
+  "probe_generated_tokens": 5069,
+  "probe_episodes": 96,
+  "probes": {
+    "start": {
+      "scores": {
+        "database": 0.25,
+        "file": 0.0
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 22.21,
+      "episodes": 48,
+      "trainable_state_sha256": "c820e7642bb3f0a6d65becebbce4bdc2a85ce012c170bea9ae100330a7bb0ff3",
+      "generation_calls": 4,
+      "logical_generation_requests": 96,
+      "input_tokens": 26777,
+      "generated_tokens": 2426
+    },
+    "midpoint": {
+      "scores": {
+        "database": 0.583333,
+        "file": 0.0
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 34.16,
+      "episodes": 48,
+      "trainable_state_sha256": "6820fcf3c2a5fae8900b2738bf62a20599f25050ccdd564d4dcf15ef32c4c617",
+      "generation_calls": 4,
+      "logical_generation_requests": 96,
+      "input_tokens": 26816,
+      "generated_tokens": 2643
+    }
+  },
+  "partial_accumulation_microsteps": 7,
+  "completed": true
+}

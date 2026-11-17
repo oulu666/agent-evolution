@@ -1,0 +1,1512 @@
+{
+  "meta": {
+    "checkpoint": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/branches/A_seed20261108_tf50/checkpoint",
+    "adapter_sha256": "605977eb6b70cb55db4c0e45273d1256ae5c615a26a7f1ae0b71389236283811",
+    "calendar_v3_rows_sha256": "4cca511187606ece1ab90c0903dd81b9a2bcb8919cadf8882de77486b2244f64",
+    "model_config_use_cache": false,
+    "generation_config_use_cache": null,
+    "attn_implementation": "sdpa",
+    "pad_token_id": 151643,
+    "eos_token_id": 151645,
+    "started": "2026-11-12 16:08:21 +0800",
+    "torch": "2.15.0+cu132",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "duration_seconds": 217.5,
+  "items": {
+    "calv3-final-last_end-008": {
+      "expected": "17:00",
+      "b1_answer": "{\"answer\": \"10:30\"}",
+      "b1_min_margin_step": {
+        "step": 5,
+        "chosen": 15,
+        "chosen_tok": "0",
+        "top1": 22,
+        "top1_tok": "7",
+        "top1_logit": 23.625,
+        "top2": 15,
+        "top2_tok": "0",
+        "top2_logit": 23.625,
+        "margin": 0.0
+      },
+      "b1_trace_margins": [
+        10.125,
+        2.875,
+        12.875,
+        9.875,
+        6.875,
+        0.0,
+        9.25,
+        9.75,
+        12.125,
+        7.25,
+        12.25
+      ],
+      "divergence_steps_seen": [
+        5
+      ],
+      "n_conditions": 27,
+      "n_differ_from_b1": 11,
+      "conditions": [
+        {
+          "cond": "official_bs1_fn",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "official_batch_fn_single",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": true
+        },
+        {
+          "cond": "lowgen_default_cache_nopad",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_nopad",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_nopad",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad8",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad8",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad32",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad32",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad128",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad128",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n2",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n4",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n8",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.5
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n32",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.375
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_original",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 4,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_reversed",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 4,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_target_first",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 4,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_target_last",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 4,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs32probe_original",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": 20,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs32probe_reversed",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": 20,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "hist_b32_original",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 22,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "hist_b32_reversed",
+          "text": "{\"answer\": \"17:00\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 22,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "7",
+            "top2_tok": "0",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_short_neighbour_after",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": 2,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": false,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_short_neighbour_before",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": 2,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": false,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_long_neighbour_after",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 241,
+          "batch_size": 2,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": false,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_long_neighbour_before",
+          "text": "{\"answer\": \"10:30\"}",
+          "correct": false,
+          "n_left_pad": 241,
+          "batch_size": 2,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": false,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        }
+      ]
+    },
+    "calv3-final-last_end-024": {
+      "expected": "16:45",
+      "b1_answer": "{\"answer\": \"11:15\"}",
+      "b1_min_margin_step": {
+        "step": 5,
+        "chosen": 16,
+        "chosen_tok": "1",
+        "top1": 21,
+        "top1_tok": "6",
+        "top1_logit": 24.125,
+        "top2": 16,
+        "top2_tok": "1",
+        "top2_logit": 24.125,
+        "margin": 0.0
+      },
+      "b1_trace_margins": [
+        9.75,
+        5.5,
+        12.25,
+        10.375,
+        6.375,
+        0.0,
+        10.625,
+        9.875,
+        13.125,
+        8.0,
+        12.75
+      ],
+      "divergence_steps_seen": [
+        5
+      ],
+      "n_conditions": 27,
+      "n_differ_from_b1": 15,
+      "conditions": [
+        {
+          "cond": "official_bs1_fn",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "official_batch_fn_single",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": true
+        },
+        {
+          "cond": "lowgen_default_cache_nopad",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_nopad",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_nopad",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad8",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad8",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.375
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad32",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad32",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": false,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad128",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad128",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n2",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n4",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n8",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.375
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n32",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_original",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 223,
+          "batch_size": 4,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_reversed",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 223,
+          "batch_size": 4,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_target_first",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 223,
+          "batch_size": 4,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs4_target_last",
+          "text": "{\"answer\": \"11:15\"}",
+          "correct": false,
+          "n_left_pad": 223,
+          "batch_size": 4,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs32probe_original",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 223,
+          "batch_size": 20,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "p0_bs32probe_reversed",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 223,
+          "batch_size": 20,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "hist_b32_original",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 223,
+          "batch_size": 22,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "hist_b32_reversed",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 223,
+          "batch_size": 22,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_short_neighbour_after",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 2,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_short_neighbour_before",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 0,
+          "batch_size": 2,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.125
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_long_neighbour_after",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 464,
+          "batch_size": 2,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "pair_long_neighbour_before",
+          "text": "{\"answer\": \"16:45\"}",
+          "correct": true,
+          "n_left_pad": 464,
+          "batch_size": 2,
+          "diverges_at": 5,
+          "this_run_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.25
+          },
+          "b1_at_div": {
+            "step": 5,
+            "top1_tok": "6",
+            "top2_tok": "1",
+            "margin": 0.0
+          },
+          "reproduces_replayed_run": true,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        }
+      ]
+    },
+    "calv3-final-last_end-000": {
+      "expected": "16:45",
+      "b1_answer": "{\"answer\": \"16:30\"}",
+      "b1_min_margin_step": {
+        "step": 5,
+        "chosen": 21,
+        "chosen_tok": "6",
+        "top1": 21,
+        "top1_tok": "6",
+        "top1_logit": 25.875,
+        "top2": 20,
+        "top2_tok": "5",
+        "top2_logit": 24.5,
+        "margin": 1.375
+      },
+      "b1_trace_margins": [
+        10.25,
+        4.375,
+        12.5,
+        10.125,
+        7.0,
+        1.375,
+        11.375,
+        6.375,
+        11.125,
+        8.25,
+        12.25
+      ],
+      "divergence_steps_seen": [],
+      "n_conditions": 15,
+      "n_differ_from_b1": 0,
+      "conditions": [
+        {
+          "cond": "official_bs1_fn",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "official_batch_fn_single",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": true
+        },
+        {
+          "cond": "lowgen_default_cache_nopad",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_nopad",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_nopad",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad8",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad8",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad32",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad32",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad128",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad128",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n2",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n4",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n8",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n32",
+          "text": "{\"answer\": \"16:30\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        }
+      ]
+    },
+    "calv3-final-last_end-016": {
+      "expected": "13:30",
+      "b1_answer": "{\"answer\": \"12:00\"}",
+      "b1_min_margin_step": {
+        "step": 5,
+        "chosen": 17,
+        "chosen_tok": "2",
+        "top1": 17,
+        "top1_tok": "2",
+        "top1_logit": 25.625,
+        "top2": 18,
+        "top2_tok": "3",
+        "top2_logit": 24.375,
+        "margin": 1.25
+      },
+      "b1_trace_margins": [
+        10.25,
+        5.0,
+        12.625,
+        10.0,
+        2.5,
+        1.25,
+        11.625,
+        4.25,
+        9.125,
+        5.75,
+        12.125
+      ],
+      "divergence_steps_seen": [],
+      "n_conditions": 15,
+      "n_differ_from_b1": 0,
+      "conditions": [
+        {
+          "cond": "official_bs1_fn",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "official_batch_fn_single",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": true
+        },
+        {
+          "cond": "lowgen_default_cache_nopad",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_nopad",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_nopad",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad8",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad8",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 8,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad32",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad32",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 32,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheTrue_pad128",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "lowgen_cacheFalse_pad128",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 128,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": true,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n2",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n4",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n8",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        },
+        {
+          "cond": "identical_copies_n32",
+          "text": "{\"answer\": \"12:00\"}",
+          "correct": false,
+          "n_left_pad": 0,
+          "batch_size": null,
+          "diverges_at": null,
+          "this_run_at_div": null,
+          "b1_at_div": null,
+          "reproduces_replayed_run": null,
+          "same_as_official_bs1": null,
+          "same_as_bs1": null
+        }
+      ]
+    }
+  }
+}

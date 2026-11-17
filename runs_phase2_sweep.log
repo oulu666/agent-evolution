@@ -1,0 +1,649 @@
+START A_seed20261108 order ['file', 'database', 'python', 'calendar'] seed 20261108
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:02,  4.94it/s]Loading weights:   1%|          | 2/311 [00:00<00:57,  5.36it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:38,  7.94it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:03, 87.58it/s]Loading weights:  24%|██▍       | 76/311 [00:00<00:01, 170.00it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 277.44it/s]Loading weights:  58%|█████▊    | 181/311 [00:00<00:00, 326.10it/s]Loading weights:  76%|███████▌  | 236/311 [00:01<00:00, 388.31it/s]Loading weights:  91%|█████████▏| 284/311 [00:01<00:00, 408.70it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 253.02it/s]
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.586
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.586
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.6
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.607
+M0 done
+stage start stage_01_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 365.94it/s]Loading weights:  57%|█████▋    | 178/311 [00:00<00:00, 972.88it/s]Loading weights:  90%|█████████ | 281/311 [00:00<00:00, 983.77it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 906.85it/s]
+train stage_01_file family file samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_file val_loss 0.02548508333142646 peak_gpu_gb 2.092 seconds 104.52
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 17/311 [00:00<00:01, 168.03it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 760.98it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 947.93it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 791.25it/s]
+eval stage_01_file file n 6
+eval done stage_01_file file final 0.5 peak_gpu_gb 0.6
+eval stage_01_file database n 6
+eval done stage_01_file database final 0.333333 peak_gpu_gb 0.604
+eval stage_01_file python n 6
+eval done stage_01_file python final 0.666667 peak_gpu_gb 0.613
+eval stage_01_file calendar n 6
+eval done stage_01_file calendar final 0.333333 peak_gpu_gb 0.629
+stage done stage_01_file
+stage start stage_02_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 276.15it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 805.74it/s]Loading weights:  76%|███████▌  | 235/311 [00:00<00:00, 837.08it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 838.32it/s]
+train stage_02_database family database samples 80 val 20
+train done stage_02_database val_loss 0.00029340371838770807 peak_gpu_gb 1.855 seconds 103.89
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 256.84it/s]Loading weights:  41%|████      | 127/311 [00:00<00:00, 694.81it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 922.94it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 869.77it/s]
+eval stage_02_database file n 6
+eval done stage_02_database file final 0.666667 peak_gpu_gb 0.601
+eval stage_02_database database n 6
+eval done stage_02_database database final 0.5 peak_gpu_gb 0.602
+eval stage_02_database python n 6
+eval done stage_02_database python final 0.666667 peak_gpu_gb 0.615
+eval stage_02_database calendar n 6
+eval done stage_02_database calendar final 0.333333 peak_gpu_gb 0.63
+stage done stage_02_database
+stage start stage_03_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 12/311 [00:00<00:02, 119.17it/s]Loading weights:  42%|████▏     | 131/311 [00:00<00:00, 746.96it/s]Loading weights:  68%|██████▊   | 210/311 [00:00<00:00, 761.06it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 787.83it/s]
+train stage_03_python family python samples 80 val 20
+train done stage_03_python val_loss 8.556838473567518e-05 peak_gpu_gb 2.096 seconds 109.16
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.93it/s]Loading weights:  39%|███▉      | 122/311 [00:00<00:00, 695.18it/s]Loading weights:  79%|███████▉  | 246/311 [00:00<00:00, 937.48it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 858.19it/s]
+eval stage_03_python file n 6
+eval done stage_03_python file final 0.5 peak_gpu_gb 0.607
+eval stage_03_python database n 6
+eval done stage_03_python database final 0.5 peak_gpu_gb 0.603
+eval stage_03_python python n 6
+eval done stage_03_python python final 1.0 peak_gpu_gb 0.616
+eval stage_03_python calendar n 6
+eval done stage_03_python calendar final 0.166667 peak_gpu_gb 0.63
+stage done stage_03_python
+stage start stage_04_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 366.99it/s]Loading weights:  57%|█████▋    | 177/311 [00:00<00:00, 971.23it/s]Loading weights:  88%|████████▊ | 275/311 [00:00<00:00, 951.75it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 934.60it/s]
+train stage_04_calendar family calendar samples 80 val 20
+train done stage_04_calendar val_loss 0.014696198927074577 peak_gpu_gb 2.608 seconds 113.84
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 13/311 [00:00<00:02, 129.95it/s]Loading weights:  42%|████▏     | 130/311 [00:00<00:00, 740.22it/s]Loading weights:  77%|███████▋  | 241/311 [00:00<00:00, 907.17it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 852.88it/s]
+eval stage_04_calendar file n 6
+eval done stage_04_calendar file final 0.5 peak_gpu_gb 0.604
+eval stage_04_calendar database n 6
+eval done stage_04_calendar database final 0.666667 peak_gpu_gb 0.603
+eval stage_04_calendar python n 6
+eval done stage_04_calendar python final 0.833333 peak_gpu_gb 0.617
+eval stage_04_calendar calendar n 6
+eval done stage_04_calendar calendar final 0.666667 peak_gpu_gb 0.632
+stage done stage_04_calendar
+START A_seed20261109 order ['file', 'database', 'python', 'calendar'] seed 20261109
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.39it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 815.19it/s]Loading weights:  88%|████████▊ | 273/311 [00:00<00:00, 1042.87it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 901.79it/s] 
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+M0 done
+stage start stage_01_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 23/311 [00:00<00:01, 227.53it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 936.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1165.42it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1029.49it/s]
+train stage_01_file family file samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_file val_loss 0.024236689048992125 peak_gpu_gb 2.095 seconds 104.57
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 207.56it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 502.51it/s]Loading weights:  64%|██████▍   | 200/311 [00:00<00:00, 757.51it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 790.03it/s]
+eval stage_01_file file n 6
+eval done stage_01_file file final 0.333333 peak_gpu_gb 0.602
+eval stage_01_file database n 6
+eval done stage_01_file database final 0.166667 peak_gpu_gb 0.606
+eval stage_01_file python n 6
+eval done stage_01_file python final 0.833333 peak_gpu_gb 0.617
+eval stage_01_file calendar n 6
+eval done stage_01_file calendar final 0.0 peak_gpu_gb 0.631
+stage done stage_01_file
+stage start stage_02_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:07, 39.99it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 821.75it/s]Loading weights:  76%|███████▌  | 235/311 [00:00<00:00, 871.28it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 868.92it/s]
+train stage_02_database family database samples 80 val 20
+train done stage_02_database val_loss 0.0006353030912578106 peak_gpu_gb 1.855 seconds 108.37
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.77it/s]Loading weights:  40%|███▉      | 123/311 [00:00<00:00, 700.24it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 944.52it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 874.64it/s]
+eval stage_02_database file n 6
+eval done stage_02_database file final 0.5 peak_gpu_gb 0.601
+eval stage_02_database database n 6
+eval done stage_02_database database final 0.666667 peak_gpu_gb 0.603
+eval stage_02_database python n 6
+eval done stage_02_database python final 0.833333 peak_gpu_gb 0.617
+eval stage_02_database calendar n 6
+eval done stage_02_database calendar final 0.333333 peak_gpu_gb 0.631
+stage done stage_02_database
+stage start stage_03_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.68it/s]Loading weights:  30%|███       | 94/311 [00:00<00:00, 538.49it/s]Loading weights:  63%|██████▎   | 197/311 [00:00<00:00, 759.62it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 809.59it/s]
+train stage_03_python family python samples 80 val 20
+train done stage_03_python val_loss 4.4562046226571105e-05 peak_gpu_gb 2.095 seconds 112.13
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 18.03it/s]Loading weights:  39%|███▉      | 122/311 [00:00<00:00, 682.73it/s]Loading weights:  77%|███████▋  | 241/311 [00:00<00:00, 908.05it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 832.91it/s]
+eval stage_03_python file n 6
+eval done stage_03_python file final 0.5 peak_gpu_gb 0.602
+eval stage_03_python database n 6
+eval done stage_03_python database final 0.666667 peak_gpu_gb 0.603
+eval stage_03_python python n 6
+eval done stage_03_python python final 1.0 peak_gpu_gb 0.617
+eval stage_03_python calendar n 6
+eval done stage_03_python calendar final 0.0 peak_gpu_gb 0.631
+stage done stage_03_python
+stage start stage_04_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 13/311 [00:00<00:02, 129.12it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 838.36it/s]Loading weights:  85%|████████▍ | 263/311 [00:00<00:00, 982.52it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 912.12it/s]
+train stage_04_calendar family calendar samples 80 val 20
+train done stage_04_calendar val_loss 0.021412075533040684 peak_gpu_gb 2.608 seconds 115.61
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 24/311 [00:00<00:01, 238.48it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 782.78it/s]Loading weights:  81%|████████  | 251/311 [00:00<00:00, 927.18it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 845.99it/s]
+eval stage_04_calendar file n 6
+eval done stage_04_calendar file final 0.5 peak_gpu_gb 0.602
+eval stage_04_calendar database n 6
+eval done stage_04_calendar database final 0.666667 peak_gpu_gb 0.603
+eval stage_04_calendar python n 6
+eval done stage_04_calendar python final 0.833333 peak_gpu_gb 0.617
+eval stage_04_calendar calendar n 6
+eval done stage_04_calendar calendar final 0.666667 peak_gpu_gb 0.632
+stage done stage_04_calendar
+START A_seed20261110 order ['file', 'database', 'python', 'calendar'] seed 20261110
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.95it/s]Loading weights:  28%|██▊       | 87/311 [00:00<00:00, 506.83it/s]Loading weights:  68%|██████▊   | 213/311 [00:00<00:00, 845.65it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 813.04it/s]
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+M0 done
+stage start stage_01_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 309.40it/s]Loading weights:  53%|█████▎    | 166/311 [00:00<00:00, 919.72it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 969.70it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 912.77it/s]
+train stage_01_file family file samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_file val_loss 0.025013823839584868 peak_gpu_gb 2.096 seconds 113.76
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.55it/s]Loading weights:  23%|██▎       | 72/311 [00:00<00:00, 406.09it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 568.15it/s]Loading weights:  74%|███████▎  | 229/311 [00:00<00:00, 658.53it/s]Loading weights:  99%|█████████▉| 309/311 [00:00<00:00, 704.22it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 606.70it/s]
+eval stage_01_file file n 6
+eval done stage_01_file file final 0.5 peak_gpu_gb 0.602
+eval stage_01_file database n 6
+eval done stage_01_file database final 0.333333 peak_gpu_gb 0.607
+eval stage_01_file python n 6
+eval done stage_01_file python final 0.833333 peak_gpu_gb 0.617
+eval stage_01_file calendar n 6
+eval done stage_01_file calendar final 0.333333 peak_gpu_gb 0.631
+stage done stage_01_file
+stage start stage_02_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.35it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 550.96it/s]Loading weights:  62%|██████▏   | 194/311 [00:00<00:00, 733.30it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 785.99it/s]
+train stage_02_database family database samples 80 val 20
+train done stage_02_database val_loss 0.0005807206034660339 peak_gpu_gb 1.855 seconds 107.99
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:02, 147.74it/s]Loading weights:  38%|███▊      | 119/311 [00:00<00:00, 665.20it/s]Loading weights:  79%|███████▉  | 246/311 [00:00<00:00, 938.40it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 868.91it/s]
+eval stage_02_database file n 6
+eval done stage_02_database file final 0.5 peak_gpu_gb 0.604
+eval stage_02_database database n 6
+eval done stage_02_database database final 0.666667 peak_gpu_gb 0.603
+eval stage_02_database python n 6
+eval done stage_02_database python final 0.833333 peak_gpu_gb 0.617
+eval stage_02_database calendar n 6
+eval done stage_02_database calendar final 0.333333 peak_gpu_gb 0.61
+stage done stage_02_database
+stage start stage_03_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 208.30it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 818.33it/s]Loading weights:  79%|███████▉  | 246/311 [00:00<00:00, 891.20it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 889.30it/s]
+train stage_03_python family python samples 80 val 20
+train done stage_03_python val_loss 8.712221123922243e-05 peak_gpu_gb 2.095 seconds 108.17
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.47it/s]Loading weights:  35%|███▌      | 110/311 [00:00<00:00, 636.32it/s]Loading weights:  75%|███████▍  | 233/311 [00:00<00:00, 904.25it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 812.05it/s]
+eval stage_03_python file n 6
+eval done stage_03_python file final 0.5 peak_gpu_gb 0.602
+eval stage_03_python database n 6
+eval done stage_03_python database final 0.5 peak_gpu_gb 0.603
+eval stage_03_python python n 6
+eval done stage_03_python python final 1.0 peak_gpu_gb 0.617
+eval stage_03_python calendar n 6
+eval done stage_03_python calendar final 0.0 peak_gpu_gb 0.631
+stage done stage_03_python
+stage start stage_04_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 158.88it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 840.95it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 1001.85it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 912.11it/s] 
+train stage_04_calendar family calendar samples 80 val 20
+train done stage_04_calendar val_loss 0.03548004918855486 peak_gpu_gb 2.608 seconds 116.31
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 199.71it/s]Loading weights:  30%|██▉       | 92/311 [00:00<00:00, 500.21it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 618.20it/s]Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 803.48it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 692.30it/s]
+eval stage_04_calendar file n 6
+eval done stage_04_calendar file final 0.5 peak_gpu_gb 0.602
+eval stage_04_calendar database n 6
+eval done stage_04_calendar database final 0.5 peak_gpu_gb 0.603
+eval stage_04_calendar python n 6
+eval done stage_04_calendar python final 0.833333 peak_gpu_gb 0.617
+eval stage_04_calendar calendar n 6
+eval done stage_04_calendar calendar final 0.333333 peak_gpu_gb 0.631
+stage done stage_04_calendar
+START B_seed20261108 order ['calendar', 'python', 'database', 'file'] seed 20261108
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 19.21it/s]Loading weights:  35%|███▌      | 109/311 [00:00<00:00, 626.77it/s]Loading weights:  71%|███████   | 221/311 [00:00<00:00, 848.85it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 868.67it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 766.77it/s]
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+M0 done
+stage start stage_01_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 33/311 [00:00<00:00, 329.83it/s]Loading weights:  56%|█████▌    | 174/311 [00:00<00:00, 964.66it/s]Loading weights:  96%|█████████▌| 299/311 [00:00<00:00, 1092.32it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1004.27it/s]
+train stage_01_calendar family calendar samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_calendar val_loss 0.024834358178038127 peak_gpu_gb 2.607 seconds 105.6
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 23/311 [00:00<00:01, 228.43it/s]Loading weights:  47%|████▋     | 145/311 [00:00<00:00, 808.44it/s]Loading weights:  73%|███████▎  | 226/311 [00:00<00:00, 787.80it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 815.13it/s]
+eval stage_01_calendar calendar n 6
+eval done stage_01_calendar calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_01_calendar python n 6
+eval done stage_01_calendar python final 0.666667 peak_gpu_gb 0.615
+eval stage_01_calendar database n 6
+eval done stage_01_calendar database final 0.166667 peak_gpu_gb 0.606
+eval stage_01_calendar file n 6
+eval done stage_01_calendar file final 0.333333 peak_gpu_gb 0.598
+stage done stage_01_calendar
+stage start stage_02_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 99.74it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 556.79it/s]Loading weights:  65%|██████▌   | 203/311 [00:00<00:00, 778.92it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 788.50it/s]
+train stage_02_python family python samples 80 val 20
+train done stage_02_python val_loss 0.0001067114832278362 peak_gpu_gb 2.095 seconds 132.54
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.27it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 647.09it/s]Loading weights:  68%|██████▊   | 211/311 [00:00<00:00, 783.75it/s]Loading weights:  94%|█████████▎| 291/311 [00:00<00:00, 786.60it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 713.07it/s]
+eval stage_02_python calendar n 6
+eval done stage_02_python calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_02_python python n 6
+eval done stage_02_python python final 1.0 peak_gpu_gb 0.617
+eval stage_02_python database n 6
+eval done stage_02_python database final 0.166667 peak_gpu_gb 0.601
+eval stage_02_python file n 6
+eval done stage_02_python file final 0.333333 peak_gpu_gb 0.598
+stage done stage_02_python
+stage start stage_03_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.82it/s]Loading weights:  38%|███▊      | 119/311 [00:00<00:00, 666.92it/s]Loading weights:  68%|██████▊   | 211/311 [00:00<00:00, 781.80it/s]Loading weights:  99%|█████████▊| 307/311 [00:00<00:00, 850.33it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 766.06it/s]
+train stage_03_database family database samples 80 val 20
+train done stage_03_database val_loss 0.00046524559729732573 peak_gpu_gb 1.856 seconds 127.93
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.67it/s]Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 675.45it/s]Loading weights:  75%|███████▍  | 233/311 [00:00<00:00, 877.65it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 770.68it/s]
+eval stage_03_database calendar n 6
+eval done stage_03_database calendar final 0.666667 peak_gpu_gb 0.631
+eval stage_03_database python n 6
+eval done stage_03_database python final 1.0 peak_gpu_gb 0.617
+eval stage_03_database database n 6
+eval done stage_03_database database final 0.833333 peak_gpu_gb 0.603
+eval stage_03_database file n 6
+eval done stage_03_database file final 0.5 peak_gpu_gb 0.607
+stage done stage_03_database
+stage start stage_04_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 158.29it/s]Loading weights:  49%|████▊     | 151/311 [00:00<00:00, 856.02it/s]Loading weights:  93%|█████████▎| 288/311 [00:00<00:00, 1087.33it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 968.75it/s] 
+train stage_04_file family file samples 80 val 20
+train done stage_04_file val_loss 0.037303805106227474 peak_gpu_gb 2.095 seconds 104.28
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 23/311 [00:00<00:01, 228.30it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 528.95it/s]Loading weights:  71%|███████   | 221/311 [00:00<00:00, 842.82it/s]Loading weights:  98%|█████████▊| 306/311 [00:00<00:00, 798.06it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 732.95it/s]
+eval stage_04_file calendar n 6
+eval done stage_04_file calendar final 0.666667 peak_gpu_gb 0.631
+eval stage_04_file python n 6
+eval done stage_04_file python final 1.0 peak_gpu_gb 0.617
+eval stage_04_file database n 6
+eval done stage_04_file database final 0.666667 peak_gpu_gb 0.603
+eval stage_04_file file n 6
+eval done stage_04_file file final 0.666667 peak_gpu_gb 0.602
+stage done stage_04_file
+START B_seed20261109 order ['calendar', 'python', 'database', 'file'] seed 20261109
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.57it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 536.92it/s]Loading weights:  75%|███████▍  | 233/311 [00:00<00:00, 928.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 865.86it/s]
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+M0 done
+stage start stage_01_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 33/311 [00:00<00:00, 329.94it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 881.17it/s]Loading weights:  88%|████████▊ | 274/311 [00:00<00:00, 998.45it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 949.42it/s]
+train stage_01_calendar family calendar samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_calendar val_loss 0.024989888728771992 peak_gpu_gb 2.608 seconds 104.25
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 199.79it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 770.44it/s]Loading weights:  85%|████████▍ | 263/311 [00:00<00:00, 984.86it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 908.76it/s]
+eval stage_01_calendar calendar n 6
+eval done stage_01_calendar calendar final 0.333333 peak_gpu_gb 0.632
+eval stage_01_calendar python n 6
+eval done stage_01_calendar python final 0.666667 peak_gpu_gb 0.615
+eval stage_01_calendar database n 6
+eval done stage_01_calendar database final 0.333333 peak_gpu_gb 0.606
+eval stage_01_calendar file n 6
+eval done stage_01_calendar file final 0.333333 peak_gpu_gb 0.598
+stage done stage_01_calendar
+stage start stage_02_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 17/311 [00:00<00:01, 168.79it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 834.20it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 1051.07it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 941.77it/s] 
+train stage_02_python family python samples 80 val 20
+train done stage_02_python val_loss 0.00012303862263177536 peak_gpu_gb 2.095 seconds 104.37
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 29/311 [00:00<00:00, 289.83it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 813.28it/s]Loading weights:  89%|████████▉ | 277/311 [00:00<00:00, 1034.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 909.13it/s] 
+eval stage_02_python calendar n 6
+eval done stage_02_python calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_02_python python n 6
+eval done stage_02_python python final 0.833333 peak_gpu_gb 0.617
+eval stage_02_python database n 6
+eval done stage_02_python database final 0.333333 peak_gpu_gb 0.606
+eval stage_02_python file n 6
+eval done stage_02_python file final 0.5 peak_gpu_gb 0.602
+stage done stage_02_python
+stage start stage_03_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 198.59it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 857.58it/s]Loading weights:  77%|███████▋  | 241/311 [00:00<00:00, 865.77it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 820.78it/s]
+train stage_03_database family database samples 80 val 20
+train done stage_03_database val_loss 0.000558673229534179 peak_gpu_gb 1.855 seconds 101.27
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 258.33it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 862.56it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 988.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 913.10it/s]
+eval stage_03_database calendar n 6
+eval done stage_03_database calendar final 0.666667 peak_gpu_gb 0.631
+eval stage_03_database python n 6
+eval done stage_03_database python final 0.833333 peak_gpu_gb 0.617
+eval stage_03_database database n 6
+eval done stage_03_database database final 0.833333 peak_gpu_gb 0.603
+eval stage_03_database file n 6
+eval done stage_03_database file final 0.5 peak_gpu_gb 0.607
+stage done stage_03_database
+stage start stage_04_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 148.96it/s]Loading weights:  47%|████▋     | 145/311 [00:00<00:00, 820.54it/s]Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 1055.85it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 955.89it/s] 
+train stage_04_file family file samples 80 val 20
+train done stage_04_file val_loss 0.05730203816090002 peak_gpu_gb 2.095 seconds 107.89
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 199.40it/s]Loading weights:  46%|████▋     | 144/311 [00:00<00:00, 809.24it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 1013.66it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 913.25it/s] 
+eval stage_04_file calendar n 6
+eval done stage_04_file calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_04_file python n 6
+eval done stage_04_file python final 0.833333 peak_gpu_gb 0.617
+eval stage_04_file database n 6
+eval done stage_04_file database final 0.833333 peak_gpu_gb 0.603
+eval stage_04_file file n 6
+eval done stage_04_file file final 0.666667 peak_gpu_gb 0.602
+stage done stage_04_file
+START B_seed20261110 order ['calendar', 'python', 'database', 'file'] seed 20261110
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 148.09it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 841.93it/s]Loading weights:  92%|█████████▏| 286/311 [00:00<00:00, 1081.53it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 967.92it/s] 
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+M0 done
+stage start stage_01_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 277.28it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 844.15it/s]Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 1014.95it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 936.46it/s] 
+train stage_01_calendar family calendar samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_calendar val_loss 0.02371186580737385 peak_gpu_gb 2.608 seconds 96.45
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 279.95it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 884.67it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 1073.43it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 971.90it/s] 
+eval stage_01_calendar calendar n 6
+eval done stage_01_calendar calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_01_calendar python n 6
+eval done stage_01_calendar python final 0.5 peak_gpu_gb 0.615
+eval stage_01_calendar database n 6
+eval done stage_01_calendar database final 0.333333 peak_gpu_gb 0.603
+eval stage_01_calendar file n 6
+eval done stage_01_calendar file final 0.333333 peak_gpu_gb 0.598
+stage done stage_01_calendar
+stage start stage_02_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 257.34it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 861.06it/s]Loading weights:  92%|█████████▏| 285/311 [00:00<00:00, 1058.20it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 972.03it/s] 
+train stage_02_python family python samples 80 val 20
+train done stage_02_python val_loss 0.0001423143453438734 peak_gpu_gb 2.095 seconds 95.82
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:07, 39.27it/s]Loading weights:  33%|███▎      | 103/311 [00:00<00:00, 592.89it/s]Loading weights:  79%|███████▉  | 247/311 [00:00<00:00, 972.28it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 852.17it/s]
+eval stage_02_python calendar n 6
+eval done stage_02_python calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_02_python python n 6
+eval done stage_02_python python final 0.833333 peak_gpu_gb 0.617
+eval stage_02_python database n 6
+eval done stage_02_python database final 0.333333 peak_gpu_gb 0.606
+eval stage_02_python file n 6
+eval done stage_02_python file final 0.5 peak_gpu_gb 0.602
+stage done stage_02_python
+stage start stage_03_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 259.09it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 946.29it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1042.07it/s]
+train stage_03_database family database samples 80 val 20
+train done stage_03_database val_loss 0.00035040295915678144 peak_gpu_gb 1.855 seconds 95.64
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 257.97it/s]Loading weights:  46%|████▌     | 142/311 [00:00<00:00, 782.31it/s]Loading weights:  79%|███████▉  | 247/311 [00:00<00:00, 900.93it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 877.01it/s]
+eval stage_03_database calendar n 6
+eval done stage_03_database calendar final 0.666667 peak_gpu_gb 0.631
+eval stage_03_database python n 6
+eval done stage_03_database python final 0.833333 peak_gpu_gb 0.617
+eval stage_03_database database n 6
+eval done stage_03_database database final 0.833333 peak_gpu_gb 0.603
+eval stage_03_database file n 6
+eval done stage_03_database file final 0.5 peak_gpu_gb 0.607
+stage done stage_03_database
+stage start stage_04_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.52it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 882.33it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 930.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 899.72it/s]
+train stage_04_file family file samples 80 val 20
+train done stage_04_file val_loss 0.03717954013591443 peak_gpu_gb 2.096 seconds 100.02
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.77it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 733.28it/s]Loading weights:  79%|███████▉  | 246/311 [00:00<00:00, 943.04it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 870.98it/s]
+eval stage_04_file calendar n 6
+eval done stage_04_file calendar final 0.666667 peak_gpu_gb 0.631
+eval stage_04_file python n 6
+eval done stage_04_file python final 0.833333 peak_gpu_gb 0.617
+eval stage_04_file database n 6
+eval done stage_04_file database final 0.833333 peak_gpu_gb 0.603
+eval stage_04_file file n 6
+eval done stage_04_file file final 0.666667 peak_gpu_gb 0.602
+stage done stage_04_file
+START C_seed20261108 order ['database', 'file', 'calendar', 'python'] seed 20261108
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 12/311 [00:00<00:02, 119.17it/s]Loading weights:  42%|████▏     | 131/311 [00:00<00:00, 744.13it/s]Loading weights:  79%|███████▉  | 247/311 [00:00<00:00, 928.84it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 893.75it/s]
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+M0 done
+stage start stage_01_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 268.79it/s]Loading weights:  50%|█████     | 156/311 [00:00<00:00, 864.15it/s]Loading weights:  97%|█████████▋| 301/311 [00:00<00:00, 1126.13it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1004.14it/s]
+train stage_01_database family database samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_database val_loss 0.005689054727554321 peak_gpu_gb 1.856 seconds 92.66
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 317.03it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 879.94it/s]Loading weights:  94%|█████████▎| 291/311 [00:00<00:00, 1070.28it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 957.89it/s] 
+eval stage_01_database database n 6
+eval done stage_01_database database final 0.666667 peak_gpu_gb 0.603
+eval stage_01_database file n 6
+eval done stage_01_database file final 0.5 peak_gpu_gb 0.598
+eval stage_01_database calendar n 6
+eval done stage_01_database calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_01_database python n 6
+eval done stage_01_database python final 0.5 peak_gpu_gb 0.605
+stage done stage_01_database
+stage start stage_02_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 266.94it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 690.16it/s]Loading weights:  72%|███████▏  | 225/311 [00:00<00:00, 826.52it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 861.71it/s]
+train stage_02_file family file samples 80 val 20
+train done stage_02_file val_loss 0.05327332736547858 peak_gpu_gb 2.095 seconds 95.92
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 13/311 [00:00<00:02, 129.84it/s]Loading weights:  46%|████▌     | 142/311 [00:00<00:00, 808.96it/s]Loading weights:  74%|███████▍  | 231/311 [00:00<00:00, 845.34it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 841.69it/s]
+eval stage_02_file database n 6
+eval done stage_02_file database final 0.666667 peak_gpu_gb 0.603
+eval stage_02_file file n 6
+eval done stage_02_file file final 0.666667 peak_gpu_gb 0.602
+eval stage_02_file calendar n 6
+eval done stage_02_file calendar final 0.0 peak_gpu_gb 0.631
+eval stage_02_file python n 6
+eval done stage_02_file python final 0.666667 peak_gpu_gb 0.619
+stage done stage_02_file
+stage start stage_03_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 208.26it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 830.16it/s]Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 1038.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 953.63it/s] 
+train stage_03_calendar family calendar samples 80 val 20
+train done stage_03_calendar val_loss 0.006957424685590368 peak_gpu_gb 2.607 seconds 95.8
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.35it/s]Loading weights:  27%|██▋       | 83/311 [00:00<00:00, 474.56it/s]Loading weights:  65%|██████▍   | 202/311 [00:00<00:00, 793.82it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 778.14it/s]
+eval stage_03_calendar database n 6
+eval done stage_03_calendar database final 0.666667 peak_gpu_gb 0.604
+eval stage_03_calendar file n 6
+eval done stage_03_calendar file final 0.5 peak_gpu_gb 0.602
+eval stage_03_calendar calendar n 6
+eval done stage_03_calendar calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_03_calendar python n 6
+eval done stage_03_calendar python final 0.5 peak_gpu_gb 0.615
+stage done stage_03_calendar
+stage start stage_04_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 208.29it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 899.51it/s]Loading weights:  97%|█████████▋| 303/311 [00:00<00:00, 1134.56it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1012.38it/s]
+train stage_04_python family python samples 80 val 20
+train done stage_04_python val_loss 0.00012935609098110675 peak_gpu_gb 2.095 seconds 93.63
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 269.06it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 849.49it/s]Loading weights:  90%|█████████ | 281/311 [00:00<00:00, 1041.45it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 952.92it/s] 
+eval stage_04_python database n 6
+eval done stage_04_python database final 0.833333 peak_gpu_gb 0.603
+eval stage_04_python file n 6
+eval done stage_04_python file final 0.5 peak_gpu_gb 0.602
+eval stage_04_python calendar n 6
+eval done stage_04_python calendar final 0.0 peak_gpu_gb 0.631
+eval stage_04_python python n 6
+eval done stage_04_python python final 0.833333 peak_gpu_gb 0.617
+stage done stage_04_python
+START C_seed20261109 order ['database', 'file', 'calendar', 'python'] seed 20261109
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.69it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 818.87it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 1074.26it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 957.73it/s] 
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+M0 done
+stage start stage_01_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 366.98it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 996.74it/s]Loading weights:  99%|█████████▊| 307/311 [00:00<00:00, 1111.63it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1020.49it/s]
+train stage_01_database family database samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_database val_loss 0.006605525501072407 peak_gpu_gb 1.855 seconds 92.51
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 277.01it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 873.60it/s]Loading weights:  93%|█████████▎| 288/311 [00:00<00:00, 1067.08it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 973.45it/s] 
+eval stage_01_database database n 6
+eval done stage_01_database database final 0.666667 peak_gpu_gb 0.604
+eval stage_01_database file n 6
+eval done stage_01_database file final 0.333333 peak_gpu_gb 0.598
+eval stage_01_database calendar n 6
+eval done stage_01_database calendar final 0.0 peak_gpu_gb 0.631
+eval stage_01_database python n 6
+eval done stage_01_database python final 0.5 peak_gpu_gb 0.607
+stage done stage_01_database
+stage start stage_02_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 209.32it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 827.56it/s]Loading weights:  93%|█████████▎| 288/311 [00:00<00:00, 1086.67it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 976.26it/s] 
+train stage_02_file family file samples 80 val 20
+train done stage_02_file val_loss 0.061041300059756276 peak_gpu_gb 2.095 seconds 95.73
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 278.82it/s]Loading weights:  50%|█████     | 157/311 [00:00<00:00, 871.93it/s]Loading weights:  92%|█████████▏| 287/311 [00:00<00:00, 1065.47it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 946.12it/s] 
+eval stage_02_file database n 6
+eval done stage_02_file database final 0.833333 peak_gpu_gb 0.603
+eval stage_02_file file n 6
+eval done stage_02_file file final 0.666667 peak_gpu_gb 0.602
+eval stage_02_file calendar n 6
+eval done stage_02_file calendar final 0.0 peak_gpu_gb 0.631
+eval stage_02_file python n 6
+eval done stage_02_file python final 0.666667 peak_gpu_gb 0.617
+stage done stage_02_file
+stage start stage_03_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 268.37it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 938.39it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1036.25it/s]
+train stage_03_calendar family calendar samples 80 val 20
+train done stage_03_calendar val_loss 0.018906835554941534 peak_gpu_gb 2.608 seconds 97.36
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 308.52it/s]Loading weights:  47%|████▋     | 145/311 [00:00<00:00, 794.03it/s]Loading weights:  88%|████████▊ | 274/311 [00:00<00:00, 1016.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 900.64it/s] 
+eval stage_03_calendar database n 6
+eval done stage_03_calendar database final 0.833333 peak_gpu_gb 0.603
+eval stage_03_calendar file n 6
+eval done stage_03_calendar file final 0.5 peak_gpu_gb 0.602
+eval stage_03_calendar calendar n 6
+eval done stage_03_calendar calendar final 0.0 peak_gpu_gb 0.632
+eval stage_03_calendar python n 6
+eval done stage_03_calendar python final 0.666667 peak_gpu_gb 0.617
+stage done stage_03_calendar
+stage start stage_04_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 199.67it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 701.33it/s]Loading weights:  84%|████████▍ | 262/311 [00:00<00:00, 999.00it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 924.00it/s]
+train stage_04_python family python samples 80 val 20
+train done stage_04_python val_loss 8.179046433903497e-05 peak_gpu_gb 2.095 seconds 99.61
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 307.68it/s]Loading weights:  52%|█████▏    | 163/311 [00:00<00:00, 899.27it/s]Loading weights:  95%|█████████▍| 295/311 [00:00<00:00, 1089.49it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 989.88it/s] 
+eval stage_04_python database n 6
+eval done stage_04_python database final 0.833333 peak_gpu_gb 0.603
+eval stage_04_python file n 6
+eval done stage_04_python file final 0.5 peak_gpu_gb 0.601
+eval stage_04_python calendar n 6
+eval done stage_04_python calendar final 0.0 peak_gpu_gb 0.631
+eval stage_04_python python n 6
+eval done stage_04_python python final 0.833333 peak_gpu_gb 0.617
+stage done stage_04_python
+START C_seed20261110 order ['database', 'file', 'calendar', 'python'] seed 20261110
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.73it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 643.39it/s]Loading weights:  83%|████████▎ | 258/311 [00:00<00:00, 999.79it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 882.08it/s]
+eval stage_00_base database n 6
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.588
+eval stage_00_base file n 6
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.589
+eval stage_00_base calendar n 6
+eval done stage_00_base calendar final 0.0 peak_gpu_gb 0.61
+eval stage_00_base python n 6
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.603
+M0 done
+stage start stage_01_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 278.46it/s]Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 947.11it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1040.30it/s]
+train stage_01_database family database samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_database val_loss 0.006641195621341467 peak_gpu_gb 1.855 seconds 96.1
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 278.70it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 874.31it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 1074.42it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 977.47it/s] 
+eval stage_01_database database n 6
+eval done stage_01_database database final 0.666667 peak_gpu_gb 0.603
+eval stage_01_database file n 6
+eval done stage_01_database file final 0.333333 peak_gpu_gb 0.598
+eval stage_01_database calendar n 6
+eval done stage_01_database calendar final 0.0 peak_gpu_gb 0.631
+eval stage_01_database python n 6
+eval done stage_01_database python final 0.333333 peak_gpu_gb 0.607
+stage done stage_01_database
+stage start stage_02_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 268.27it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 861.23it/s]Loading weights:  95%|█████████▌| 297/311 [00:00<00:00, 1115.70it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 996.84it/s] 
+train stage_02_file family file samples 80 val 20
+train done stage_02_file val_loss 0.04277921243177582 peak_gpu_gb 2.096 seconds 94.92
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 279.94it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 875.90it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 980.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 919.71it/s]
+eval stage_02_file database n 6
+eval done stage_02_file database final 0.833333 peak_gpu_gb 0.603
+eval stage_02_file file n 6
+eval done stage_02_file file final 0.666667 peak_gpu_gb 0.602
+eval stage_02_file calendar n 6
+eval done stage_02_file calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_02_file python n 6
+eval done stage_02_file python final 0.5 peak_gpu_gb 0.617
+stage done stage_02_file
+stage start stage_03_calendar family calendar
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.74it/s]Loading weights:  46%|████▌     | 142/311 [00:00<00:00, 804.51it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 1016.24it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 944.01it/s] 
+train stage_03_calendar family calendar samples 80 val 20
+train done stage_03_calendar val_loss 0.018406388677180557 peak_gpu_gb 2.608 seconds 92.46
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 277.73it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 872.83it/s]Loading weights:  92%|█████████▏| 285/311 [00:00<00:00, 1048.12it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 962.15it/s] 
+eval stage_03_calendar database n 6
+eval done stage_03_calendar database final 0.666667 peak_gpu_gb 0.604
+eval stage_03_calendar file n 6
+eval done stage_03_calendar file final 0.5 peak_gpu_gb 0.602
+eval stage_03_calendar calendar n 6
+eval done stage_03_calendar calendar final 0.333333 peak_gpu_gb 0.631
+eval stage_03_calendar python n 6
+eval done stage_03_calendar python final 0.666667 peak_gpu_gb 0.617
+stage done stage_03_calendar
+stage start stage_04_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 208.02it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 824.23it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 899.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 898.44it/s]
+train stage_04_python family python samples 80 val 20
+train done stage_04_python val_loss 6.310236571093288e-05 peak_gpu_gb 2.095 seconds 99.55
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 275.79it/s]Loading weights:  49%|████▉     | 152/311 [00:00<00:00, 836.05it/s]Loading weights:  76%|███████▌  | 236/311 [00:00<00:00, 820.51it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 794.68it/s]
+eval stage_04_python database n 6
+eval done stage_04_python database final 0.5 peak_gpu_gb 0.603
+eval stage_04_python file n 6
+eval done stage_04_python file final 0.5 peak_gpu_gb 0.602
+eval stage_04_python calendar n 6
+eval done stage_04_python calendar final 0.0 peak_gpu_gb 0.631
+eval stage_04_python python n 6
+eval done stage_04_python python final 0.666667 peak_gpu_gb 0.617
+stage done stage_04_python
+sweep complete: ['A_seed20261108', 'A_seed20261109', 'A_seed20261110', 'B_seed20261108', 'B_seed20261109', 'B_seed20261110', 'C_seed20261108', 'C_seed20261109', 'C_seed20261110']

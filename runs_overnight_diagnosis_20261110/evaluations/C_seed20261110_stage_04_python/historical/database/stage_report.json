@@ -1,0 +1,133 @@
+{
+  "stage_index": 4,
+  "stage_name": "C_seed20261110_stage_04_python",
+  "family": "database",
+  "metrics": {
+    "n": 30,
+    "tool_selection_accuracy": 0.4,
+    "argument_accuracy": 0.066667,
+    "execution_success_rate": 0.266667,
+    "final_task_success_rate": 0.333333,
+    "joint_success_rate": 0.066667,
+    "conditional_argument_accuracy": 0.166667,
+    "conditional_argument_numerator": 2,
+    "conditional_argument_denominator": 12
+  },
+  "skill_metrics": {
+    "counting": {
+      "n": 6,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.333333,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "schema_reading": {
+      "n": 12,
+      "tool_selection_accuracy": 0.5,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.5,
+      "final_task_success_rate": 0.666667,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 6
+    },
+    "sql_aggregation": {
+      "n": 12,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "sql_filter": {
+      "n": 12,
+      "tool_selection_accuracy": 0.5,
+      "argument_accuracy": 0.166667,
+      "execution_success_rate": 0.166667,
+      "final_task_success_rate": 0.166667,
+      "joint_success_rate": 0.166667,
+      "conditional_argument_accuracy": 0.333333,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 6
+    },
+    "sql_group": {
+      "n": 6,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "sql_order": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.333333,
+      "execution_success_rate": 0.333333,
+      "final_task_success_rate": 0.333333,
+      "joint_success_rate": 0.333333,
+      "conditional_argument_accuracy": 0.333333,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 6
+    },
+    "tool_selection": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 6
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 60,
+    "input_tokens": 14804,
+    "output_tokens": 1103,
+    "total_tokens": 15907,
+    "generation_seconds": 13.143697,
+    "n": 30,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 30,
+      "input_tokens": 30,
+      "output_tokens": 30,
+      "total_tokens": 30,
+      "generation_seconds": 30
+    },
+    "recorded_totals": {
+      "inference_calls": 60,
+      "input_tokens": 14804,
+      "output_tokens": 1103,
+      "total_tokens": 15907,
+      "generation_seconds": 13.143697
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 13.66
+  },
+  "peak_gpu_gb": 2.067,
+  "duration_seconds": 13.66,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+}

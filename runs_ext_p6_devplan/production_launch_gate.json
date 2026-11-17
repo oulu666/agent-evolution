@@ -1,0 +1,181 @@
+{
+  "time": "2026-11-15 04:07:46 +0800",
+  "plans": {
+    "A_seed20261108_balanced_uniform": {
+      "counts": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261108_balanced_early": {
+      "counts": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261108_devgrad_uniform": {
+      "counts": {
+        "py.median": 1,
+        "db.list_tables": 5,
+        "db.filter_cmp_top": 1,
+        "file.search_last": 3
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261109_balanced_uniform": {
+      "counts": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261109_balanced_early": {
+      "counts": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261109_devgrad_uniform": {
+      "counts": {
+        "file.search_last": 4,
+        "py.median": 2,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 1
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261110_balanced_uniform": {
+      "counts": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261110_balanced_early": {
+      "counts": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    },
+    "A_seed20261110_devgrad_uniform": {
+      "counts": {
+        "db.filter_cmp_top": 1,
+        "db.list_tables": 6,
+        "py.median": 1,
+        "file.search_last": 2
+      },
+      "tokens": 7494,
+      "optimizer_steps": 23,
+      "items": 22
+    }
+  },
+  "calibration": {
+    "20261108": {
+      "benefit": {
+        "db.list_tables": 0.7716303308081806,
+        "db.filter_cmp_top": 0.2645842699162005,
+        "file.search_last": 0.5424135917258885,
+        "py.median": 0.3312098826592124
+      },
+      "forward_backward_pairs": 41,
+      "optimizer_steps": 0,
+      "parameter_hash_unchanged": true,
+      "formal_holdout_loaded": false,
+      "prefix_LoRA_tensor_count": 392,
+      "only_LoRA_prefix_tensors": true
+    },
+    "20261109": {
+      "benefit": {
+        "db.list_tables": 0.42733665222274936,
+        "db.filter_cmp_top": 0.18325258973336658,
+        "file.search_last": 0.6798667344722966,
+        "py.median": 0.4862109999810877
+      },
+      "forward_backward_pairs": 41,
+      "optimizer_steps": 0,
+      "parameter_hash_unchanged": true,
+      "formal_holdout_loaded": false,
+      "prefix_LoRA_tensor_count": 392,
+      "only_LoRA_prefix_tensors": true
+    },
+    "20261110": {
+      "benefit": {
+        "db.list_tables": 0.8114614684777524,
+        "db.filter_cmp_top": 0.12835796391951984,
+        "file.search_last": 0.4057083525029535,
+        "py.median": 0.1367185680598386
+      },
+      "forward_backward_pairs": 41,
+      "optimizer_steps": 0,
+      "parameter_hash_unchanged": true,
+      "formal_holdout_loaded": false,
+      "prefix_LoRA_tensor_count": 392,
+      "only_LoRA_prefix_tensors": true
+    }
+  },
+  "data": {
+    "db.list_tables": {
+      "dev": 4,
+      "holdout": 12,
+      "exact_train_dev_test_episode_overlap": false,
+      "train_dev_answer_literal_overlap": 0,
+      "dev_holdout_answer_literal_overlap": 0
+    },
+    "db.filter_cmp_top": {
+      "dev": 4,
+      "holdout": 12,
+      "exact_train_dev_test_episode_overlap": false,
+      "train_dev_answer_literal_overlap": 0,
+      "dev_holdout_answer_literal_overlap": 0
+    },
+    "file.search_last": {
+      "dev": 4,
+      "holdout": 12,
+      "exact_train_dev_test_episode_overlap": false,
+      "train_dev_answer_literal_overlap": 0,
+      "dev_holdout_answer_literal_overlap": 0
+    },
+    "py.median": {
+      "dev": 4,
+      "holdout": 12,
+      "exact_train_dev_test_episode_overlap": false,
+      "train_dev_answer_literal_overlap": 0,
+      "dev_holdout_answer_literal_overlap": 1
+    }
+  },
+  "gpu_launched_by_this_audit": false,
+  "gradient_definition": "requires_grad tensors from PEFT LoRA only; shared HF loss averages non--100 assistant labels per row; gradients averaged equally across rows for both dev and candidate groups",
+  "note": "Coincident scalar median values are not episode leakage; full numeric multisets are disjoint. LT generic empty args intentionally recur, but DB schema entities and final names are disjoint."
+}

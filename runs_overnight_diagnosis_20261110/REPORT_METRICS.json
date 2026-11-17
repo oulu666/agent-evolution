@@ -1,0 +1,422 @@
+{
+  "source_sha256": {
+    "summary.json": "8d2903c0a7c984fc5589680e91636d5cbb3e94a50fabe9497697dc67a96839b6",
+    "status.json": "f44ac57a917c0c5cff4f4864d69254f27b0adafc07fbf74a7cbd41c4e454be2c",
+    "data/paired_median.jsonl": "121daad203b4e24089ec4874a8701df778565ca5419490b4396cc6a0f49bf784"
+  },
+  "status": {
+    "status": "completed",
+    "pid": 671,
+    "started_at": "2026-11-10T00:38:55+08:00",
+    "total_units": 216,
+    "total_task_evaluations": 8208,
+    "completed_units": 216,
+    "current_state": "C_seed20261110_stage_04_python",
+    "updated_at": "2026-11-10T01:49:40+08:00",
+    "current_unit": "historical/calendar",
+    "invocation_elapsed_seconds": 4257.5,
+    "finished_at": "2026-11-10T01:49:53+08:00"
+  },
+  "core": {
+    "stage_03_python": {
+      "historical": {
+        "joint": 0.6481481481481481,
+        "answer": 0.7148148148148148,
+        "n": 270
+      },
+      "probe": {
+        "joint": 0.5,
+        "answer": 0.5277777777777778,
+        "n": 216
+      }
+    },
+    "v2_midpoint": {
+      "historical": {
+        "joint": 0.5962962962962963,
+        "answer": 0.6703703703703704,
+        "n": 270
+      },
+      "probe": {
+        "joint": 0.5555555555555556,
+        "answer": 0.6481481481481481,
+        "n": 216
+      }
+    },
+    "v2_none_final": {
+      "historical": {
+        "joint": 0.6,
+        "answer": 0.674074074074074,
+        "n": 270
+      },
+      "probe": {
+        "joint": 0.5185185185185185,
+        "answer": 0.5833333333333334,
+        "n": 216
+      }
+    },
+    "stage_04_calendar": {
+      "historical": {
+        "joint": 0.5962962962962963,
+        "answer": 0.6666666666666666,
+        "n": 270
+      },
+      "probe": {
+        "joint": 0.5509259259259259,
+        "answer": 0.6157407407407407,
+        "n": 216
+      }
+    }
+  },
+  "wording": {
+    "stage_03_python": {
+      "explicit": {
+        "joint": 1,
+        "answer": 1,
+        "tool": 1,
+        "n": 288
+      },
+      "natural": {
+        "joint": 0.96875,
+        "answer": 0.9895833333333334,
+        "tool": 0.9965277777777778,
+        "n": 288
+      }
+    },
+    "v2_midpoint": {
+      "explicit": {
+        "joint": 1,
+        "answer": 1,
+        "tool": 1,
+        "n": 288
+      },
+      "natural": {
+        "joint": 0.9305555555555556,
+        "answer": 0.9722222222222222,
+        "tool": 1,
+        "n": 288
+      }
+    },
+    "v2_none_final": {
+      "explicit": {
+        "joint": 1,
+        "answer": 1,
+        "tool": 1,
+        "n": 288
+      },
+      "natural": {
+        "joint": 0.78125,
+        "answer": 0.8784722222222222,
+        "tool": 0.8923611111111112,
+        "n": 288
+      }
+    },
+    "stage_04_calendar": {
+      "explicit": {
+        "joint": 1,
+        "answer": 1,
+        "tool": 1,
+        "n": 288
+      },
+      "natural": {
+        "joint": 0.7638888888888888,
+        "answer": 0.8229166666666666,
+        "tool": 0.8472222222222222,
+        "n": 288
+      }
+    }
+  },
+  "natural_error_categories": {
+    "stage_03_python": {
+      "exact": 279,
+      "exact_answer_correct": 279,
+      "permutation": 6,
+      "permutation_answer_correct": 6,
+      "wrong_tool": 1,
+      "wrong_tool_answer_correct": 0,
+      "changed_values": 2,
+      "changed_values_answer_correct": 0
+    },
+    "v2_midpoint": {
+      "exact": 268,
+      "exact_answer_correct": 268,
+      "permutation": 12,
+      "permutation_answer_correct": 12,
+      "changed_values": 8,
+      "changed_values_answer_correct": 0
+    },
+    "v2_none_final": {
+      "exact": 225,
+      "exact_answer_correct": 225,
+      "wrong_tool": 31,
+      "wrong_tool_answer_correct": 5,
+      "permutation": 23,
+      "permutation_answer_correct": 23,
+      "changed_values": 9,
+      "changed_values_answer_correct": 0
+    },
+    "stage_04_calendar": {
+      "wrong_tool": 44,
+      "wrong_tool_answer_correct": 0,
+      "exact": 220,
+      "exact_answer_correct": 220,
+      "permutation": 17,
+      "permutation_answer_correct": 17,
+      "changed_values": 7,
+      "changed_values_answer_correct": 0
+    }
+  },
+  "natural_per_seed": [
+    {
+      "seed": 20261108,
+      "state": "stage_03_python",
+      "n": 96,
+      "joint": 0.9791666666666666,
+      "answer": 1,
+      "tool": 1
+    },
+    {
+      "seed": 20261109,
+      "state": "stage_03_python",
+      "n": 96,
+      "joint": 0.9895833333333334,
+      "answer": 0.9895833333333334,
+      "tool": 0.9895833333333334
+    },
+    {
+      "seed": 20261110,
+      "state": "stage_03_python",
+      "n": 96,
+      "joint": 0.9375,
+      "answer": 0.9791666666666666,
+      "tool": 1
+    },
+    {
+      "seed": 20261108,
+      "state": "v2_midpoint",
+      "n": 96,
+      "joint": 0.8958333333333334,
+      "answer": 0.96875,
+      "tool": 1
+    },
+    {
+      "seed": 20261109,
+      "state": "v2_midpoint",
+      "n": 96,
+      "joint": 0.9895833333333334,
+      "answer": 1,
+      "tool": 1
+    },
+    {
+      "seed": 20261110,
+      "state": "v2_midpoint",
+      "n": 96,
+      "joint": 0.90625,
+      "answer": 0.9479166666666666,
+      "tool": 1
+    },
+    {
+      "seed": 20261108,
+      "state": "v2_none_final",
+      "n": 96,
+      "joint": 0.6145833333333334,
+      "answer": 0.7083333333333334,
+      "tool": 0.6770833333333334
+    },
+    {
+      "seed": 20261109,
+      "state": "v2_none_final",
+      "n": 96,
+      "joint": 0.96875,
+      "answer": 1,
+      "tool": 1
+    },
+    {
+      "seed": 20261110,
+      "state": "v2_none_final",
+      "n": 96,
+      "joint": 0.7604166666666666,
+      "answer": 0.9270833333333334,
+      "tool": 1
+    },
+    {
+      "seed": 20261108,
+      "state": "stage_04_calendar",
+      "n": 96,
+      "joint": 0.4270833333333333,
+      "answer": 0.5208333333333334,
+      "tool": 0.5416666666666666
+    },
+    {
+      "seed": 20261109,
+      "state": "stage_04_calendar",
+      "n": 96,
+      "joint": 1,
+      "answer": 1,
+      "tool": 1
+    },
+    {
+      "seed": 20261110,
+      "state": "stage_04_calendar",
+      "n": 96,
+      "joint": 0.8645833333333334,
+      "answer": 0.9479166666666666,
+      "tool": 1
+    }
+  ],
+  "stage_transitions": [
+    {
+      "order": "A",
+      "before": 1,
+      "after": 2,
+      "joint_change_pp": 12.222222222222221,
+      "answer_change_pp": 12.222222222222221
+    },
+    {
+      "order": "A",
+      "before": 2,
+      "after": 3,
+      "joint_change_pp": -11.111111111111109,
+      "answer_change_pp": -1.1111111111111107
+    },
+    {
+      "order": "A",
+      "before": 3,
+      "after": 4,
+      "joint_change_pp": -5.185185185185184,
+      "answer_change_pp": -4.814814814814813
+    },
+    {
+      "order": "B",
+      "before": 1,
+      "after": 2,
+      "joint_change_pp": -2.2222222222222214,
+      "answer_change_pp": -2.2222222222222214
+    },
+    {
+      "order": "B",
+      "before": 2,
+      "after": 3,
+      "joint_change_pp": 16.666666666666668,
+      "answer_change_pp": 16.666666666666668
+    },
+    {
+      "order": "B",
+      "before": 3,
+      "after": 4,
+      "joint_change_pp": -5.185185185185187,
+      "answer_change_pp": -5.185185185185187
+    },
+    {
+      "order": "C",
+      "before": 1,
+      "after": 2,
+      "joint_change_pp": -20.0,
+      "answer_change_pp": 3.3333333333333326
+    },
+    {
+      "order": "C",
+      "before": 2,
+      "after": 3,
+      "joint_change_pp": -8.333333333333332,
+      "answer_change_pp": -9.444444444444443
+    },
+    {
+      "order": "C",
+      "before": 3,
+      "after": 4,
+      "joint_change_pp": -4.814814814814815,
+      "answer_change_pp": -5.555555555555555
+    }
+  ],
+  "sampling_method": "2000 subsets without replacement from fixed 96-instance pool; same subset across three seeds; positive mean answer drop only, not a significance test or calibrated deployment detector",
+  "subsampling": [
+    {
+      "n_pairs": 12,
+      "state": "v2_midpoint",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 0.446,
+      "median_drop_pp": 0.0,
+      "pool_subsample_5_95_percentile_pp": [
+        -2.7777777777777777,
+        8.333333333333332
+      ]
+    },
+    {
+      "n_pairs": 12,
+      "state": "v2_none_final",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 0.9895,
+      "median_drop_pp": 11.11111111111111,
+      "pool_subsample_5_95_percentile_pp": [
+        2.7777777777777777,
+        19.444444444444446
+      ]
+    },
+    {
+      "n_pairs": 24,
+      "state": "v2_midpoint",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 0.6835,
+      "median_drop_pp": 1.3888888888888888,
+      "pool_subsample_5_95_percentile_pp": [
+        -1.3888888888888888,
+        5.555555555555555
+      ]
+    },
+    {
+      "n_pairs": 24,
+      "state": "v2_none_final",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 1.0,
+      "median_drop_pp": 11.11111111111111,
+      "pool_subsample_5_95_percentile_pp": [
+        5.555555555555555,
+        16.666666666666664
+      ]
+    },
+    {
+      "n_pairs": 48,
+      "state": "v2_midpoint",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 0.917,
+      "median_drop_pp": 1.3888888888888888,
+      "pool_subsample_5_95_percentile_pp": [
+        0.0,
+        3.4722222222222223
+      ]
+    },
+    {
+      "n_pairs": 48,
+      "state": "v2_none_final",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 1.0,
+      "median_drop_pp": 11.11111111111111,
+      "pool_subsample_5_95_percentile_pp": [
+        7.638888888888889,
+        14.583333333333334
+      ]
+    },
+    {
+      "n_pairs": 96,
+      "state": "v2_midpoint",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 1.0,
+      "median_drop_pp": 1.7361111111111112,
+      "pool_subsample_5_95_percentile_pp": [
+        1.7361111111111112,
+        1.7361111111111112
+      ]
+    },
+    {
+      "n_pairs": 96,
+      "state": "v2_none_final",
+      "draws": 2000,
+      "positive_mean_answer_drop_fraction": 1.0,
+      "median_drop_pp": 11.11111111111111,
+      "pool_subsample_5_95_percentile_pp": [
+        11.11111111111111,
+        11.11111111111111
+      ]
+    }
+  ]
+}

@@ -1,0 +1,634 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:12, 24.35it/s]Loading weights:  40%|████      | 125/311 [00:00<00:00, 575.38it/s]Loading weights:  80%|████████  | 250/311 [00:00<00:00, 844.36it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 754.06it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+generation_kwargs: {'max_gen_toks': 32} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'abstract_algebra' at /home/egret/.cache/huggingface/datasets/cais___mmlu/abstract_algebra/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:48:12 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'anatomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/anatomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:49:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'astronomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/astronomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:52:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_biology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_biology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:59:48 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_chemistry' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_chemistry/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 14:03:08 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_computer_science' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_computer_science/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:11 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_mathematics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_mathematics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:17 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_physics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_physics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:25 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'computer_security' at /home/egret/.cache/huggingface/datasets/cais___mmlu/computer_security/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:28 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'conceptual_physics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/conceptual_physics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:31 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'electrical_engineering' at /home/egret/.cache/huggingface/datasets/cais___mmlu/electrical_engineering/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:15 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'elementary_mathematics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/elementary_mathematics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:18 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_biology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_biology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:27 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_chemistry' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_chemistry/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:30 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_computer_science' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_computer_science/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:33:28 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_mathematics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_mathematics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:25 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_physics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_physics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:31 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_statistics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_statistics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:37 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'machine_learning' at /home/egret/.cache/huggingface/datasets/cais___mmlu/machine_learning/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:58:37 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'business_ethics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/business_ethics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:08:55 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'clinical_knowledge' at /home/egret/.cache/huggingface/datasets/cais___mmlu/clinical_knowledge/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:09:01 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_medicine' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_medicine/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:21:22 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'global_facts' at /home/egret/.cache/huggingface/datasets/cais___mmlu/global_facts/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:24 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'human_aging' at /home/egret/.cache/huggingface/datasets/cais___mmlu/human_aging/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:41:57 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'management' at /home/egret/.cache/huggingface/datasets/cais___mmlu/management/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:02:35 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'marketing' at /home/egret/.cache/huggingface/datasets/cais___mmlu/marketing/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:06:35 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'medical_genetics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/medical_genetics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:06:38 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'miscellaneous' at /home/egret/.cache/huggingface/datasets/cais___mmlu/miscellaneous/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:06:41 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'nutrition' at /home/egret/.cache/huggingface/datasets/cais___mmlu/nutrition/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:23:56 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'professional_accounting' at /home/egret/.cache/huggingface/datasets/cais___mmlu/professional_accounting/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:48 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'professional_medicine' at /home/egret/.cache/huggingface/datasets/cais___mmlu/professional_medicine/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:54 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'virology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/virology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:34:07 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'econometrics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/econometrics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:10 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_geography' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_geography/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:33:35 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_government_and_politics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_government_and_politics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:33:38 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_macroeconomics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_macroeconomics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:21 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_microeconomics' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_microeconomics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:28 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_psychology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_psychology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:33 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'human_sexuality' at /home/egret/.cache/huggingface/datasets/cais___mmlu/human_sexuality/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:48:14 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'professional_psychology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/professional_psychology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:57 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'public_relations' at /home/egret/.cache/huggingface/datasets/cais___mmlu/public_relations/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:59 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'security_studies' at /home/egret/.cache/huggingface/datasets/cais___mmlu/security_studies/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:32:14 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'sociology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/sociology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:32:20 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'us_foreign_policy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/us_foreign_policy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:32:23 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'formal_logic' at /home/egret/.cache/huggingface/datasets/cais___mmlu/formal_logic/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:22:21 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_european_history' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_european_history/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:33:32 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_us_history' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_us_history/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:40 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'high_school_world_history' at /home/egret/.cache/huggingface/datasets/cais___mmlu/high_school_world_history/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:35:42 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'international_law' at /home/egret/.cache/huggingface/datasets/cais___mmlu/international_law/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:54:31 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'jurisprudence' at /home/egret/.cache/huggingface/datasets/cais___mmlu/jurisprudence/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:54:35 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'logical_fallacies' at /home/egret/.cache/huggingface/datasets/cais___mmlu/logical_fallacies/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 17:58:34 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'moral_disputes' at /home/egret/.cache/huggingface/datasets/cais___mmlu/moral_disputes/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:06:44 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'moral_scenarios' at /home/egret/.cache/huggingface/datasets/cais___mmlu/moral_scenarios/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:12:59 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'philosophy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/philosophy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:23:59 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'prehistory' at /home/egret/.cache/huggingface/datasets/cais___mmlu/prehistory/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:43 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'professional_law' at /home/egret/.cache/huggingface/datasets/cais___mmlu/professional_law/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:25:51 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'world_religions' at /home/egret/.cache/huggingface/datasets/cais___mmlu/world_religions/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 18:40:45 2026).
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1026.67it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1044.71it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1041.80it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1039.43it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1068.47it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1034.68it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1052.43it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1057.60it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1059.45it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1020.28it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1005.36it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1045.70it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1031.62it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 867.52it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1039.96it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1034.12it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1062.21it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1043.48it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1041.01it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1031.37it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1033.95it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1042.29it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1056.54it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1075.55it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1046.17it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1042.06it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1076.51it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1070.10it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1079.80it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1050.45it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1073.15it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1054.25it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1073.81it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1061.92it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1078.30it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1067.74it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1060.29it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1071.34it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1068.49it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1063.66it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1071.54it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1080.60it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1059.51it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1073.57it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 948.92it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1072.15it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1056.25it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1050.50it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1072.64it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1063.19it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1037.41it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1061.38it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1060.97it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1049.94it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 994.98it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1028.20it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1031.66it/s]
+Running generate_until requests:   0%|          | 0/855 [00:00<?, ?it/s]Running generate_until requests:   0%|          | 1/855 [00:03<46:26,  3.26s/it]Running generate_until requests:   2%|▏         | 17/855 [00:04<02:33,  5.47it/s]Running generate_until requests:   4%|▍         | 33/855 [00:04<01:21, 10.07it/s]Running generate_until requests:   6%|▌         | 49/855 [00:05<00:57, 14.05it/s]Running generate_until requests:   8%|▊         | 65/855 [00:05<00:42, 18.44it/s]Running generate_until requests:   9%|▉         | 81/855 [00:06<00:33, 22.86it/s]Running generate_until requests:  11%|█▏        | 97/855 [00:06<00:33, 22.41it/s]Running generate_until requests:  13%|█▎        | 113/855 [00:07<00:39, 18.76it/s]Running generate_until requests:  15%|█▌        | 129/855 [00:10<01:01, 11.72it/s]Running generate_until requests:  17%|█▋        | 145/855 [00:12<01:16,  9.24it/s]Running generate_until requests:  19%|█▉        | 161/855 [00:13<01:02, 11.10it/s]Running generate_until requests:  21%|██        | 177/855 [00:17<01:28,  7.66it/s]Running generate_until requests:  23%|██▎       | 193/855 [00:18<01:09,  9.54it/s]Running generate_until requests:  24%|██▍       | 209/855 [00:20<01:20,  8.05it/s]Running generate_until requests:  26%|██▋       | 225/855 [00:23<01:30,  6.95it/s]Running generate_until requests:  28%|██▊       | 241/855 [00:25<01:24,  7.29it/s]Running generate_until requests:  30%|███       | 257/855 [00:25<00:59,  9.98it/s]Running generate_until requests:  32%|███▏      | 273/855 [00:28<01:10,  8.30it/s]Running generate_until requests:  34%|███▍      | 289/855 [00:31<01:21,  6.98it/s]Running generate_until requests:  36%|███▌      | 305/855 [00:35<01:30,  6.08it/s]Running generate_until requests:  38%|███▊      | 321/855 [00:38<01:31,  5.85it/s]Running generate_until requests:  39%|███▉      | 337/855 [00:40<01:24,  6.10it/s]Running generate_until requests:  41%|████▏     | 353/855 [00:43<01:24,  5.96it/s]Running generate_until requests:  43%|████▎     | 369/855 [00:45<01:15,  6.39it/s]Running generate_until requests:  45%|████▌     | 385/855 [00:48<01:20,  5.82it/s]Running generate_until requests:  47%|████▋     | 401/855 [00:52<01:25,  5.31it/s]Running generate_until requests:  49%|████▉     | 417/855 [00:53<01:10,  6.20it/s]Running generate_until requests:  51%|█████     | 433/855 [00:56<01:08,  6.18it/s]Running generate_until requests:  53%|█████▎    | 449/855 [00:59<01:09,  5.86it/s]Running generate_until requests:  54%|█████▍    | 465/855 [01:02<01:09,  5.64it/s]Running generate_until requests:  56%|█████▋    | 481/855 [01:03<00:49,  7.56it/s]Running generate_until requests:  58%|█████▊    | 497/855 [01:05<00:50,  7.11it/s]Running generate_until requests:  60%|██████    | 513/855 [01:09<00:55,  6.13it/s]Running generate_until requests:  62%|██████▏   | 529/855 [01:09<00:39,  8.31it/s]Running generate_until requests:  64%|██████▎   | 545/855 [01:11<00:40,  7.67it/s]Running generate_until requests:  66%|██████▌   | 561/855 [01:14<00:43,  6.82it/s]Running generate_until requests:  67%|██████▋   | 577/855 [01:17<00:41,  6.68it/s]Running generate_until requests:  69%|██████▉   | 593/855 [01:18<00:33,  7.93it/s]Running generate_until requests:  71%|███████   | 609/855 [01:18<00:22, 10.85it/s]Running generate_until requests:  73%|███████▎  | 625/855 [01:21<00:26,  8.65it/s]Running generate_until requests:  75%|███████▍  | 641/855 [01:22<00:22,  9.60it/s]Running generate_until requests:  77%|███████▋  | 657/855 [01:24<00:20,  9.70it/s]Running generate_until requests:  79%|███████▊  | 673/855 [01:26<00:22,  8.26it/s]Running generate_until requests:  81%|████████  | 689/855 [01:27<00:17,  9.67it/s]Running generate_until requests:  82%|████████▏ | 705/855 [01:28<00:13, 10.99it/s]Running generate_until requests:  84%|████████▍ | 721/855 [01:29<00:11, 12.05it/s]Running generate_until requests:  86%|████████▌ | 737/855 [01:32<00:13,  8.70it/s]Running generate_until requests:  88%|████████▊ | 753/855 [01:33<00:09, 11.28it/s]Running generate_until requests:  90%|████████▉ | 769/855 [01:34<00:06, 13.28it/s]Running generate_until requests:  92%|█████████▏| 785/855 [01:37<00:07,  8.92it/s]Running generate_until requests:  94%|█████████▎| 801/855 [01:38<00:05, 10.54it/s]Running generate_until requests:  96%|█████████▌| 817/855 [01:40<00:04,  9.20it/s]Running generate_until requests:  97%|█████████▋| 833/855 [01:41<00:02,  9.89it/s]Running generate_until requests:  99%|█████████▉| 849/855 [01:41<00:00, 13.37it/s]Running generate_until requests: 100%|██████████| 855/855 [01:41<00:00,  8.38it/s]
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+wrote samples.json n=855
+{
+  "results": {
+    "mmlu_abstract_algebra_generative": {
+      "name": "mmlu_abstract_algebra_generative",
+      "alias": "abstract_algebra",
+      "sample_len": 15,
+      "exact_match,get_response": 0.5333333333333333,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_anatomy_generative": {
+      "name": "mmlu_anatomy_generative",
+      "alias": "anatomy",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496977
+    },
+    "mmlu_astronomy_generative": {
+      "name": "mmlu_astronomy_generative",
+      "alias": "astronomy",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_college_biology_generative": {
+      "name": "mmlu_college_biology_generative",
+      "alias": "college_biology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_college_chemistry_generative": {
+      "name": "mmlu_college_chemistry_generative",
+      "alias": "college_chemistry",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_college_computer_science_generative": {
+      "name": "mmlu_college_computer_science_generative",
+      "alias": "college_computer_science",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_college_mathematics_generative": {
+      "name": "mmlu_college_mathematics_generative",
+      "alias": "college_mathematics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496977
+    },
+    "mmlu_college_physics_generative": {
+      "name": "mmlu_college_physics_generative",
+      "alias": "college_physics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.13333333333333333,
+      "exact_match_stderr,get_response": 0.09085135251589957
+    },
+    "mmlu_computer_security_generative": {
+      "name": "mmlu_computer_security_generative",
+      "alias": "computer_security",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_conceptual_physics_generative": {
+      "name": "mmlu_conceptual_physics_generative",
+      "alias": "conceptual_physics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_electrical_engineering_generative": {
+      "name": "mmlu_electrical_engineering_generative",
+      "alias": "electrical_engineering",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_elementary_mathematics_generative": {
+      "name": "mmlu_elementary_mathematics_generative",
+      "alias": "elementary_mathematics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496976
+    },
+    "mmlu_high_school_biology_generative": {
+      "name": "mmlu_high_school_biology_generative",
+      "alias": "high_school_biology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_high_school_chemistry_generative": {
+      "name": "mmlu_high_school_chemistry_generative",
+      "alias": "high_school_chemistry",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_high_school_computer_science_generative": {
+      "name": "mmlu_high_school_computer_science_generative",
+      "alias": "high_school_computer_science",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_high_school_mathematics_generative": {
+      "name": "mmlu_high_school_mathematics_generative",
+      "alias": "high_school_mathematics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.06666666666666667,
+      "exact_match_stderr,get_response": 0.06666666666666667
+    },
+    "mmlu_high_school_physics_generative": {
+      "name": "mmlu_high_school_physics_generative",
+      "alias": "high_school_physics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_high_school_statistics_generative": {
+      "name": "mmlu_high_school_statistics_generative",
+      "alias": "high_school_statistics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_machine_learning_generative": {
+      "name": "mmlu_machine_learning_generative",
+      "alias": "machine_learning",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_business_ethics_generative": {
+      "name": "mmlu_business_ethics_generative",
+      "alias": "business_ethics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_clinical_knowledge_generative": {
+      "name": "mmlu_clinical_knowledge_generative",
+      "alias": "clinical_knowledge",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159545
+    },
+    "mmlu_college_medicine_generative": {
+      "name": "mmlu_college_medicine_generative",
+      "alias": "college_medicine",
+      "sample_len": 15,
+      "exact_match,get_response": 0.13333333333333333,
+      "exact_match_stderr,get_response": 0.09085135251589957
+    },
+    "mmlu_global_facts_generative": {
+      "name": "mmlu_global_facts_generative",
+      "alias": "global_facts",
+      "sample_len": 15,
+      "exact_match,get_response": 0.13333333333333333,
+      "exact_match_stderr,get_response": 0.09085135251589956
+    },
+    "mmlu_human_aging_generative": {
+      "name": "mmlu_human_aging_generative",
+      "alias": "human_aging",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_management_generative": {
+      "name": "mmlu_management_generative",
+      "alias": "management",
+      "sample_len": 15,
+      "exact_match,get_response": 0.5333333333333333,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_marketing_generative": {
+      "name": "mmlu_marketing_generative",
+      "alias": "marketing",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496976
+    },
+    "mmlu_medical_genetics_generative": {
+      "name": "mmlu_medical_genetics_generative",
+      "alias": "medical_genetics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_miscellaneous_generative": {
+      "name": "mmlu_miscellaneous_generative",
+      "alias": "miscellaneous",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_nutrition_generative": {
+      "name": "mmlu_nutrition_generative",
+      "alias": "nutrition",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_professional_accounting_generative": {
+      "name": "mmlu_professional_accounting_generative",
+      "alias": "professional_accounting",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496977
+    },
+    "mmlu_professional_medicine_generative": {
+      "name": "mmlu_professional_medicine_generative",
+      "alias": "professional_medicine",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_virology_generative": {
+      "name": "mmlu_virology_generative",
+      "alias": "virology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.13333333333333333,
+      "exact_match_stderr,get_response": 0.09085135251589957
+    },
+    "mmlu_econometrics_generative": {
+      "name": "mmlu_econometrics_generative",
+      "alias": "econometrics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_high_school_geography_generative": {
+      "name": "mmlu_high_school_geography_generative",
+      "alias": "high_school_geography",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_high_school_government_and_politics_generative": {
+      "name": "mmlu_high_school_government_and_politics_generative",
+      "alias": "high_school_government_and_politics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_high_school_macroeconomics_generative": {
+      "name": "mmlu_high_school_macroeconomics_generative",
+      "alias": "high_school_macroeconomics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_high_school_microeconomics_generative": {
+      "name": "mmlu_high_school_microeconomics_generative",
+      "alias": "high_school_microeconomics",
+      "sample_len": 15,
+      "exact_match,get_response": 0.2,
+      "exact_match_stderr,get_response": 0.10690449676496977
+    },
+    "mmlu_high_school_psychology_generative": {
+      "name": "mmlu_high_school_psychology_generative",
+      "alias": "high_school_psychology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.5333333333333333,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_human_sexuality_generative": {
+      "name": "mmlu_human_sexuality_generative",
+      "alias": "human_sexuality",
+      "sample_len": 15,
+      "exact_match,get_response": 0.6,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_professional_psychology_generative": {
+      "name": "mmlu_professional_psychology_generative",
+      "alias": "professional_psychology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_public_relations_generative": {
+      "name": "mmlu_public_relations_generative",
+      "alias": "public_relations",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_security_studies_generative": {
+      "name": "mmlu_security_studies_generative",
+      "alias": "security_studies",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_sociology_generative": {
+      "name": "mmlu_sociology_generative",
+      "alias": "sociology",
+      "sample_len": 15,
+      "exact_match,get_response": 0.5333333333333333,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_us_foreign_policy_generative": {
+      "name": "mmlu_us_foreign_policy_generative",
+      "alias": "us_foreign_policy",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_formal_logic_generative": {
+      "name": "mmlu_formal_logic_generative",
+      "alias": "formal_logic",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_high_school_european_history_generative": {
+      "name": "mmlu_high_school_european_history_generative",
+      "alias": "high_school_european_history",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_high_school_us_history_generative": {
+      "name": "mmlu_high_school_us_history_generative",
+      "alias": "high_school_us_history",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_high_school_world_history_generative": {
+      "name": "mmlu_high_school_world_history_generative",
+      "alias": "high_school_world_history",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_international_law_generative": {
+      "name": "mmlu_international_law_generative",
+      "alias": "international_law",
+      "sample_len": 15,
+      "exact_match,get_response": 0.6666666666666666,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_jurisprudence_generative": {
+      "name": "mmlu_jurisprudence_generative",
+      "alias": "jurisprudence",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4666666666666667,
+      "exact_match_stderr,get_response": 0.1333333333333333
+    },
+    "mmlu_logical_fallacies_generative": {
+      "name": "mmlu_logical_fallacies_generative",
+      "alias": "logical_fallacies",
+      "sample_len": 15,
+      "exact_match,get_response": 0.26666666666666666,
+      "exact_match_stderr,get_response": 0.11818736805705578
+    },
+    "mmlu_moral_disputes_generative": {
+      "name": "mmlu_moral_disputes_generative",
+      "alias": "moral_disputes",
+      "sample_len": 15,
+      "exact_match,get_response": 0.13333333333333333,
+      "exact_match_stderr,get_response": 0.09085135251589957
+    },
+    "mmlu_moral_scenarios_generative": {
+      "name": "mmlu_moral_scenarios_generative",
+      "alias": "moral_scenarios",
+      "sample_len": 15,
+      "exact_match,get_response": 0.0,
+      "exact_match_stderr,get_response": 0.0
+    },
+    "mmlu_philosophy_generative": {
+      "name": "mmlu_philosophy_generative",
+      "alias": "philosophy",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_prehistory_generative": {
+      "name": "mmlu_prehistory_generative",
+      "alias": "prehistory",
+      "sample_len": 15,
+      "exact_match,get_response": 0.06666666666666667,
+      "exact_match_stderr,get_response": 0.06666666666666667
+    },
+    "mmlu_professional_law_generative": {
+      "name": "mmlu_professional_law_generative",
+      "alias": "professional_law",
+      "sample_len": 15,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.12598815766974242
+    },
+    "mmlu_world_religions_generative": {
+      "name": "mmlu_world_religions_generative",
+      "alias": "world_religions",
+      "sample_len": 15,
+      "exact_match,get_response": 0.4,
+      "exact_match_stderr,get_response": 0.13093073414159542
+    },
+    "mmlu_generative::stem": {
+      "alias": "mmlu_generative::stem",
+      "name": "mmlu_generative::stem",
+      "sample_len": 285,
+      "exact_match,get_response": 0.3333333333333333,
+      "exact_match_stderr,get_response": 0.027913094320452837,
+      "sample_count": {
+        "exact_match,get_response": 285
+      }
+    },
+    "mmlu_generative::other": {
+      "alias": "mmlu_generative::other",
+      "name": "mmlu_generative::other",
+      "sample_len": 195,
+      "exact_match,get_response": 0.3076923076923077,
+      "exact_match_stderr,get_response": 0.03277927812629611,
+      "sample_count": {
+        "exact_match,get_response": 195
+      }
+    },
+    "mmlu_generative::social sciences": {
+      "alias": "mmlu_generative::social sciences",
+      "name": "mmlu_generative::social sciences",
+      "sample_len": 180,
+      "exact_match,get_response": 0.37777777777777777,
+      "exact_match_stderr,get_response": 0.03612637040235251,
+      "sample_count": {
+        "exact_match,get_response": 180
+      }
+    },
+    "mmlu_generative::humanities": {
+      "alias": "mmlu_generative::humanities",
+      "name": "mmlu_generative::humanities",
+      "sample_len": 195,
+      "exact_match,get_response": 0.3128205128205128,
+      "exact_match_stderr,get_response": 0.03190810511411365,
+      "sample_count": {
+        "exact_match,get_response": 195
+      }
+    },
+    "mmlu_generative": {
+      "alias": "mmlu (generative)",
+      "name": "mmlu_generative",
+      "sample_len": 855,
+      "exact_match,get_response": 0.3321637426900585,
+      "exact_match_stderr,get_response": 0.015914293600388513,
+      "sample_count": {
+        "exact_match,get_response": 855
+      }
+    }
+  },
+  "wall_seconds": 112.5,
+  "peak_gpu_gb": 2.988
+}

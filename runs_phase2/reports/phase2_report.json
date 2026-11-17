@@ -1,0 +1,408 @@
+{
+  "runs": [
+    "A_seed20261108",
+    "A_seed20261109",
+    "A_seed20261110",
+    "B_seed20261108",
+    "B_seed20261109",
+    "B_seed20261110",
+    "C_seed20261108",
+    "C_seed20261109",
+    "C_seed20261110"
+  ],
+  "orders": [
+    "A",
+    "B",
+    "C"
+  ],
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "families": [
+    "calendar",
+    "database",
+    "file",
+    "python"
+  ],
+  "test_limit": 6,
+  "family_forgetting": [
+    {
+      "family": "calendar",
+      "mean": 0.16666666666666666,
+      "std": 0.1825741858354205,
+      "n": 6
+    },
+    {
+      "family": "database",
+      "mean": 0.074074,
+      "std": 0.12108040512919503,
+      "n": 9
+    },
+    {
+      "family": "file",
+      "mean": 0.11111133333333334,
+      "std": 0.08606646871498021,
+      "n": 6
+    },
+    {
+      "family": "python",
+      "mean": 0.0833335,
+      "std": 0.09128727549171353,
+      "n": 6
+    }
+  ],
+  "family_final": [
+    {
+      "family": "python",
+      "mean": 0.8333331111111111,
+      "std": 0.08333325000029167,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "mean": 0.7037036666666666,
+      "std": 0.138888700000216,
+      "runs": 9
+    },
+    {
+      "family": "file",
+      "mean": 0.5555556666666667,
+      "std": 0.0833335,
+      "runs": 9
+    },
+    {
+      "family": "calendar",
+      "mean": 0.37037044444444445,
+      "std": 0.3093204120067536,
+      "runs": 9
+    }
+  ],
+  "order_final": [
+    {
+      "order": "B",
+      "mean": 0.7222222500000001,
+      "std": 0.048112690826459685,
+      "runs": 3
+    },
+    {
+      "order": "A",
+      "mean": 0.625,
+      "std": 0.07216892798627048,
+      "runs": 3
+    },
+    {
+      "order": "C",
+      "mean": 0.4999999166666667,
+      "std": 0.07216863931113597,
+      "runs": 3
+    }
+  ],
+  "peak_final": [
+    {
+      "order": "A",
+      "family": "calendar",
+      "peak": null,
+      "final": 0.5555556666666667,
+      "forgetting": null,
+      "runs": 0
+    },
+    {
+      "order": "A",
+      "family": "database",
+      "peak": 0.6111113333333333,
+      "final": 0.6111113333333333,
+      "forgetting": 0.05555566666666667,
+      "runs": 3
+    },
+    {
+      "order": "A",
+      "family": "file",
+      "peak": 0.5555556666666667,
+      "final": 0.5,
+      "forgetting": 0.05555566666666667,
+      "runs": 3
+    },
+    {
+      "order": "A",
+      "family": "python",
+      "peak": 1.0,
+      "final": 0.833333,
+      "forgetting": 0.166667,
+      "runs": 3
+    },
+    {
+      "order": "B",
+      "family": "calendar",
+      "peak": 0.666667,
+      "final": 0.5555556666666667,
+      "forgetting": 0.11111133333333334,
+      "runs": 3
+    },
+    {
+      "order": "B",
+      "family": "database",
+      "peak": 0.833333,
+      "final": 0.7777776666666667,
+      "forgetting": 0.05555533333333334,
+      "runs": 3
+    },
+    {
+      "order": "B",
+      "family": "file",
+      "peak": null,
+      "final": 0.666667,
+      "forgetting": null,
+      "runs": 0
+    },
+    {
+      "order": "B",
+      "family": "python",
+      "peak": 0.8888886666666667,
+      "final": 0.8888886666666667,
+      "forgetting": 0.0,
+      "runs": 3
+    },
+    {
+      "order": "C",
+      "family": "calendar",
+      "peak": 0.222222,
+      "final": 0.0,
+      "forgetting": 0.222222,
+      "runs": 3
+    },
+    {
+      "order": "C",
+      "family": "database",
+      "peak": 0.7777776666666667,
+      "final": 0.722222,
+      "forgetting": 0.111111,
+      "runs": 3
+    },
+    {
+      "order": "C",
+      "family": "file",
+      "peak": 0.666667,
+      "final": 0.5,
+      "forgetting": 0.166667,
+      "runs": 3
+    },
+    {
+      "order": "C",
+      "family": "python",
+      "peak": null,
+      "final": 0.7777776666666667,
+      "forgetting": null,
+      "runs": 0
+    }
+  ],
+  "skill_forgetting": [
+    {
+      "family": "file",
+      "skill": "file_search",
+      "weighted_mean": 0.5,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "line_index",
+      "weighted_mean": 0.5,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "python",
+      "skill": "stat_median",
+      "weighted_mean": 0.5,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "calendar",
+      "skill": "calendar_attendees",
+      "weighted_mean": 0.333,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "calendar",
+      "skill": "calendar_count",
+      "weighted_mean": 0.333,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "python",
+      "skill": "stat_regression",
+      "weighted_mean": 0.167,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "calendar",
+      "skill": "calendar_free",
+      "weighted_mean": 0.167,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "calendar",
+      "skill": "calendar_time",
+      "weighted_mean": 0.167,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "database",
+      "skill": "sql_filter",
+      "weighted_mean": 0.148,
+      "n": 27,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "skill": "sql_aggregation",
+      "weighted_mean": 0.111,
+      "n": 27,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "skill": "sql_order",
+      "weighted_mean": 0.111,
+      "n": 9,
+      "runs": 9
+    },
+    {
+      "family": "python",
+      "skill": "numeric_input",
+      "weighted_mean": 0.083,
+      "n": 36,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "character_count",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "counting",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "file_list",
+      "weighted_mean": 0.0,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "file_read",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "file_write",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "file",
+      "skill": "final_formatting",
+      "weighted_mean": 0.0,
+      "n": 12,
+      "runs": 6
+    },
+    {
+      "family": "database",
+      "skill": "counting",
+      "weighted_mean": 0.0,
+      "n": 9,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "skill": "schema_reading",
+      "weighted_mean": 0.0,
+      "n": 18,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "skill": "sql_group",
+      "weighted_mean": 0.0,
+      "n": 9,
+      "runs": 9
+    },
+    {
+      "family": "database",
+      "skill": "tool_selection",
+      "weighted_mean": 0.0,
+      "n": 9,
+      "runs": 9
+    },
+    {
+      "family": "python",
+      "skill": "stat_correlation",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "python",
+      "skill": "stat_mean",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "python",
+      "skill": "stat_percentile",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "python",
+      "skill": "stat_std",
+      "weighted_mean": 0.0,
+      "n": 6,
+      "runs": 6
+    },
+    {
+      "family": "calendar",
+      "skill": "calendar_list",
+      "weighted_mean": 0.0,
+      "n": 12,
+      "runs": 6
+    }
+  ],
+  "order_average": [
+    [
+      "A",
+      "0.093±0.032",
+      3
+    ],
+    [
+      "B",
+      "0.056±0.056",
+      3
+    ],
+    [
+      "C",
+      "0.167±0.111",
+      3
+    ]
+  ]
+}

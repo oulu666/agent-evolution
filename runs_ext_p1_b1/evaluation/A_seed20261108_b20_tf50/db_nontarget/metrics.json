@@ -1,0 +1,88 @@
+{
+  "stage_index": 4,
+  "stage_name": "P1_B1_A_seed20261108_b20_tf50",
+  "family": "database",
+  "metrics": {
+    "n": 40,
+    "tool_selection_accuracy": 0.475,
+    "argument_accuracy": 0.35,
+    "execution_success_rate": 0.35,
+    "final_task_success_rate": 0.375,
+    "joint_success_rate": 0.2,
+    "conditional_argument_accuracy": 0.736842,
+    "conditional_argument_numerator": 14,
+    "conditional_argument_denominator": 19
+  },
+  "skill_metrics": {
+    "sql_aggregation": {
+      "n": 16,
+      "tool_selection_accuracy": 0.4375,
+      "argument_accuracy": 0.1875,
+      "execution_success_rate": 0.1875,
+      "final_task_success_rate": 0.3125,
+      "joint_success_rate": 0.1875,
+      "conditional_argument_accuracy": 0.428571,
+      "conditional_argument_numerator": 3,
+      "conditional_argument_denominator": 7
+    },
+    "sql_count": {
+      "n": 24,
+      "tool_selection_accuracy": 0.5,
+      "argument_accuracy": 0.458333,
+      "execution_success_rate": 0.458333,
+      "final_task_success_rate": 0.416667,
+      "joint_success_rate": 0.208333,
+      "conditional_argument_accuracy": 0.916667,
+      "conditional_argument_numerator": 11,
+      "conditional_argument_denominator": 12
+    },
+    "sql_filter": {
+      "n": 39,
+      "tool_selection_accuracy": 0.461538,
+      "argument_accuracy": 0.333333,
+      "execution_success_rate": 0.333333,
+      "final_task_success_rate": 0.358974,
+      "joint_success_rate": 0.179487,
+      "conditional_argument_accuracy": 0.722222,
+      "conditional_argument_numerator": 13,
+      "conditional_argument_denominator": 18
+    },
+    "sql_group": {
+      "n": 8,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.875,
+      "execution_success_rate": 0.875,
+      "final_task_success_rate": 0.25,
+      "joint_success_rate": 0.125,
+      "conditional_argument_accuracy": 0.875,
+      "conditional_argument_numerator": 7,
+      "conditional_argument_denominator": 8
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 80,
+    "input_tokens": 20554,
+    "output_tokens": 1286,
+    "total_tokens": 21840,
+    "generation_seconds": 118.469253,
+    "n": 40,
+    "generation_batches": 80,
+    "usage_coverage": {
+      "inference_calls": 40,
+      "input_tokens": 40,
+      "output_tokens": 40,
+      "total_tokens": 40,
+      "generation_seconds": 40
+    },
+    "recorded_totals": {
+      "inference_calls": 80,
+      "input_tokens": 20554,
+      "output_tokens": 1286,
+      "total_tokens": 21840,
+      "generation_seconds": 118.469253
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}

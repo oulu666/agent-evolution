@@ -1,0 +1,29 @@
+{
+  "duration_seconds": 158.04,
+  "batch_size": 1,
+  "reports": {
+    "database_nontarget": {
+      "duration_seconds": 156.31,
+      "peak_gpu_gb": 0.603,
+      "evaluation_protocol": {
+        "batch_size": 1,
+        "do_sample": false,
+        "use_cache": "model_default",
+        "padding_side": "single_sequence",
+        "output_token_count_includes_eos": true,
+        "output_token_count_excludes_post_eos_padding": true
+      },
+      "metrics": {
+        "n": 40,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.8,
+        "execution_success_rate": 0.8,
+        "final_task_success_rate": 0.775,
+        "joint_success_rate": 0.75,
+        "conditional_argument_accuracy": 0.8,
+        "conditional_argument_numerator": 32,
+        "conditional_argument_denominator": 40
+      }
+    }
+  }
+}

@@ -1,0 +1,2358 @@
+{
+  "new_model_calls": 0,
+  "changes_frozen_metrics": false,
+  "explicit_last_ascending_by_match_count": {
+    "3": {
+      "n": 6,
+      "correct": 6
+    },
+    "2": {
+      "n": 6,
+      "correct": 0
+    },
+    "4": {
+      "n": 6,
+      "correct": 5
+    }
+  },
+  "alias_only_value_correct_cases": [
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-sort-structured",
+      "sql": "SELECT name AS v FROM p81_zero ORDER BY v DESC LIMIT 4",
+      "original_columns": [
+        "v"
+      ],
+      "value_semantics_pass_after_column_label_normalization": true
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-sort-structured",
+      "sql": "SELECT name AS v FROM p81_ties ORDER BY score DESC LIMIT 4",
+      "original_columns": [
+        "v"
+      ],
+      "value_semantics_pass_after_column_label_normalization": true
+    }
+  ],
+  "actual_database_tables": [
+    "p81_zero",
+    "p81_few",
+    "p81_ties"
+  ],
+  "schema_prompt_audit": [
+    {
+      "id": "p81-db-zero-sort-natural",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-sort-structured",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter-natural",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter-structured",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter_sort-natural",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter_sort-structured",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter_sort_tie-natural",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-zero-filter_sort_tie-structured",
+      "target_table": "p81_zero",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-sort-natural",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-sort-structured",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter-natural",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter-structured",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter_sort-natural",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter_sort-structured",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter_sort_tie-natural",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-few-filter_sort_tie-structured",
+      "target_table": "p81_few",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-sort-natural",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-sort-structured",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter-natural",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter-structured",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter_sort-natural",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter_sort-structured",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter_sort_tie-natural",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    },
+    {
+      "id": "p81-db-ties-filter_sort_tie-structured",
+      "target_table": "p81_ties",
+      "target_in_system": false,
+      "legacy_employees_in_system": true
+    }
+  ],
+  "selected_seen_file_samples": [
+    {
+      "seed": "20261108",
+      "id": "p8-train-file.search_first-006",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full first matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 1: p8trainmark6 item train_6_1"
+    },
+    {
+      "seed": "20261108",
+      "id": "p8-train-file.search_last-006",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 2: p8trainmark6 item train_6_2"
+    },
+    {
+      "seed": "20261109",
+      "id": "p8-train-file.search_first-003",
+      "prompt": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full first matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 1: p8trainmark3 item train_3_1"
+    },
+    {
+      "seed": "20261109",
+      "id": "p8-train-file.search_last-003",
+      "prompt": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full last matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 2: p8trainmark3 item train_3_2"
+    },
+    {
+      "seed": "20261109",
+      "id": "p8-train-file.search_last-006",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 2: p8trainmark6 item train_6_2"
+    },
+    {
+      "seed": "20261110",
+      "id": "p8-train-file.search_first-000",
+      "prompt": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full first matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 1: p8trainmark0 item train_0_1"
+    },
+    {
+      "seed": "20261110",
+      "id": "p8-train-file.search_last-000",
+      "prompt": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full last matching line, not the other matches.",
+      "n_matches": 2,
+      "expected_answer": "record 2: p8trainmark0 item train_0_2"
+    }
+  ],
+  "selected_cases": [
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort_tie-natural",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort_tie-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 241,
+            "output_tokens": 30,
+            "total_tokens": 271,
+            "generation_seconds": 2.6961933670000064,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names whose score is above 50, highest score first, with smaller id first when scores tie.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort_tie-structured",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort_tie-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": false,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": null,
+        "predicted_arguments": {},
+        "tool_call_raw": "{\"answer\": [\"zero\"]}",
+        "observation": "{\"error\":\"model did not return a valid tool call\",\"ok\":false}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 251,
+            "output_tokens": 7,
+            "total_tokens": 258,
+            "generation_seconds": 0.5726099020000106,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending, then id ascending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter-structured",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter"
+        },
+        "tool_correct": false,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": null,
+        "predicted_arguments": {},
+        "tool_call_raw": "{\"answer\": [\"p81_zero\"], \"tool\": \"db_query\"}",
+        "observation": "{\"error\":\"model did not return a valid tool call\",\"ok\":false}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 245,
+            "output_tokens": 17,
+            "total_tokens": 262,
+            "generation_seconds": 1.339463545000001,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: none. Limit: none. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-sort-structured",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-sort-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "sort"
+        },
+        "tool_correct": false,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": null,
+        "predicted_arguments": {},
+        "tool_call_raw": "{\"answer\": [\"p81_zero\", \"p81_zero\", \"p81_zero\", \"p81_zero\"]}",
+        "observation": "{\"error\":\"model did not return a valid tool call\",\"ok\":false}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 243,
+            "output_tokens": 28,
+            "total_tokens": 271,
+            "generation_seconds": 2.5047323910000046,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: none. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_0_6",
+        "p81_entity_0_5",
+        "p81_entity_0_4",
+        "p81_entity_0_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter-natural",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 227,
+            "output_tokens": 29,
+            "total_tokens": 256,
+            "generation_seconds": 2.1160583360000373,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "From p81_zero(id, name, score), return the names whose score is above 50.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort-structured",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter_sort"
+        },
+        "tool_correct": false,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": null,
+        "predicted_arguments": {},
+        "tool_call_raw": "{\"answer\": [\"zero\"]}",
+        "observation": "{\"error\":\"model did not return a valid tool call\",\"ok\":false}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 247,
+            "output_tokens": 7,
+            "total_tokens": 254,
+            "generation_seconds": 0.5086269829999992,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-sort-natural",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-sort-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 226,
+            "output_tokens": 30,
+            "total_tokens": 256,
+            "generation_seconds": 2.474585540000021,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_0_6",
+        "p81_entity_0_5",
+        "p81_entity_0_4",
+        "p81_entity_0_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort-natural",
+        "seed": 20261108,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 233,
+            "output_tokens": 30,
+            "total_tokens": 263,
+            "generation_seconds": 2.974630525000009,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names whose score is above 50, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-first-explicit_line-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-first-explicit_line-ascending",
+        "meta": {
+          "case": 1,
+          "intent": "first",
+          "wording": "explicit_line",
+          "presentation": "ascending",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key1 value p81_1_2\"}",
+        "predicted_answer": "entry 2: p81key1 value p81_1_2",
+        "correct": true,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 368,
+            "output_tokens": 23,
+            "total_tokens": 391,
+            "generation_seconds": 1.7010005480000245,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_1.txt for 'p81key1'. Among the matching file lines, select the one with the smallest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 2: p81key1 value p81_1_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-last-natural-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-last-natural-reversed",
+        "meta": {
+          "case": 1,
+          "intent": "last",
+          "wording": "natural",
+          "presentation": "reversed",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 6: p81key1 value p81_1_6\"}",
+        "predicted_answer": "entry 6: p81key1 value p81_1_6",
+        "correct": true,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 353,
+            "output_tokens": 23,
+            "total_tokens": 376,
+            "generation_seconds": 1.8625720709999882,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full last matching line in p81/record_1.txt containing 'p81key1'.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 6: p81key1 value p81_1_6",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-first-natural-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-first-natural-reversed",
+        "meta": {
+          "case": 0,
+          "intent": "first",
+          "wording": "natural",
+          "presentation": "reversed",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 4: p81key0 value p81_0_4\"}",
+        "predicted_answer": "entry 4: p81key0 value p81_0_4",
+        "correct": false,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 329,
+            "output_tokens": 23,
+            "total_tokens": 352,
+            "generation_seconds": 2.53873693099996,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full first matching line in p81/record_0.txt containing 'p81key0'.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 2: p81key0 value p81_0_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"},{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-sort-natural",
+        "meta": {
+          "case": "ties",
+          "wording": "natural",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 227,
+            "output_tokens": 31,
+            "total_tokens": 258,
+            "generation_seconds": 3.112127170000008,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_ties(id, name, score), return up to four names, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 245,
+            "output_tokens": 29,
+            "total_tokens": 274,
+            "generation_seconds": 2.281071373999964,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: none. Limit: none. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 233,
+            "output_tokens": 30,
+            "total_tokens": 263,
+            "generation_seconds": 2.18864615800004,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names whose score is above 50, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter_sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter_sort-natural",
+        "meta": {
+          "case": "few",
+          "wording": "natural",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"],[\"p81_entity_1_6\"],[\"p81_entity_1_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 234,
+            "output_tokens": 31,
+            "total_tokens": 265,
+            "generation_seconds": 2.1427090899999826,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_few(id, name, score), return up to four names whose score is above 50, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter_sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter_sort-structured",
+        "meta": {
+          "case": "ties",
+          "wording": "structured",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 248,
+            "output_tokens": 37,
+            "total_tokens": 285,
+            "generation_seconds": 2.5340128270000264,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_ties(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-last-natural-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-last-natural-ascending",
+        "meta": {
+          "case": 1,
+          "intent": "last",
+          "wording": "natural",
+          "presentation": "ascending",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key1 value p81_1_2\"}",
+        "predicted_answer": "entry 2: p81key1 value p81_1_2",
+        "correct": false,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 353,
+            "output_tokens": 23,
+            "total_tokens": 376,
+            "generation_seconds": 2.1065170709999848,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full last matching line in p81/record_1.txt containing 'p81key1'.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 6: p81key1 value p81_1_6",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-last-explicit_line-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-last-explicit_line-reversed",
+        "meta": {
+          "case": 0,
+          "intent": "last",
+          "wording": "explicit_line",
+          "presentation": "reversed",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 4: p81key0 value p81_0_4\"}",
+        "predicted_answer": "entry 4: p81key0 value p81_0_4",
+        "correct": true,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 344,
+            "output_tokens": 23,
+            "total_tokens": 367,
+            "generation_seconds": 1.7098869570000375,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_0.txt for 'p81key0'. Among the matching file lines, select the one with the largest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 4: p81key0 value p81_0_4",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"},{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-first-explicit_line-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-first-explicit_line-ascending",
+        "meta": {
+          "case": 0,
+          "intent": "first",
+          "wording": "explicit_line",
+          "presentation": "ascending",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key0 value p81_0_2\"}",
+        "predicted_answer": "entry 2: p81key0 value p81_0_2",
+        "correct": true,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 344,
+            "output_tokens": 23,
+            "total_tokens": 367,
+            "generation_seconds": 1.5624005399999987,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_0.txt for 'p81key0'. Among the matching file lines, select the one with the smallest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 2: p81key0 value p81_0_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"},{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter-structured",
+        "meta": {
+          "case": "few",
+          "wording": "structured",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 246,
+            "output_tokens": 30,
+            "total_tokens": 276,
+            "generation_seconds": 1.8798062570000411,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_few(id, name, score). Output column: name. Filter: score > 50. Ordering: none. Limit: none. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter_sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter_sort-structured",
+        "meta": {
+          "case": "few",
+          "wording": "structured",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 248,
+            "output_tokens": 37,
+            "total_tokens": 285,
+            "generation_seconds": 2.803292407000015,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_few(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-last-natural-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-last-natural-reversed",
+        "meta": {
+          "case": 0,
+          "intent": "last",
+          "wording": "natural",
+          "presentation": "reversed",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 4: p81key0 value p81_0_4\"}",
+        "predicted_answer": "entry 4: p81key0 value p81_0_4",
+        "correct": true,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 329,
+            "output_tokens": 23,
+            "total_tokens": 352,
+            "generation_seconds": 1.4134155890000102,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full last matching line in p81/record_0.txt containing 'p81key0'.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 4: p81key0 value p81_0_4",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"},{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-sort-natural",
+        "meta": {
+          "case": "few",
+          "wording": "natural",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"],[\"p81_entity_1_6\"],[\"p81_entity_1_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"],[\"p81_entity_1_6\"],[\"p81_entity_1_4\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 227,
+            "output_tokens": 31,
+            "total_tokens": 258,
+            "generation_seconds": 2.3755923119999807,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_few(id, name, score), return up to four names, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2",
+        "p81_entity_1_6",
+        "p81_entity_1_4"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort_tie-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort_tie-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 251,
+            "output_tokens": 38,
+            "total_tokens": 289,
+            "generation_seconds": 3.4927795510000124,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending, then id ascending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-sort-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 226,
+            "output_tokens": 30,
+            "total_tokens": 256,
+            "generation_seconds": 1.8495161749999625,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_0_6",
+        "p81_entity_0_5",
+        "p81_entity_0_4",
+        "p81_entity_0_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-first-explicit_line-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-first-explicit_line-reversed",
+        "meta": {
+          "case": 0,
+          "intent": "first",
+          "wording": "explicit_line",
+          "presentation": "reversed",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 4: p81key0 value p81_0_4\"}",
+        "predicted_answer": "entry 4: p81key0 value p81_0_4",
+        "correct": false,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 344,
+            "output_tokens": 23,
+            "total_tokens": 367,
+            "generation_seconds": 1.8595678300000031,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_0.txt for 'p81key0'. Among the matching file lines, select the one with the smallest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 2: p81key0 value p81_0_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"},{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter_sort_tie-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter_sort_tie-structured",
+        "meta": {
+          "case": "few",
+          "wording": "structured",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_2\"],[\"p81_entity_1_5\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_2\"],[\"p81_entity_1_5\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 252,
+            "output_tokens": 39,
+            "total_tokens": 291,
+            "generation_seconds": 2.7580058519999966,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_few(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending, then id ascending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_2",
+        "p81_entity_1_5"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter_sort_tie-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter_sort_tie-natural",
+        "meta": {
+          "case": "ties",
+          "wording": "natural",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties ORDER BY name ASC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties ORDER BY name ASC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_1\"],[\"p81_entity_2_2\"],[\"p81_entity_2_3\"],[\"p81_entity_2_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_1\"],[\"p81_entity_2_2\"],[\"p81_entity_2_3\"],[\"p81_entity_2_4\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 242,
+            "output_tokens": 31,
+            "total_tokens": 273,
+            "generation_seconds": 2.08581951299999,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_ties(id, name, score), return up to four names whose score is above 50, highest score first, with smaller id first when scores tie.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_1",
+        "p81_entity_2_2",
+        "p81_entity_2_3",
+        "p81_entity_2_4"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-sort-structured",
+        "meta": {
+          "case": "few",
+          "wording": "structured",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name AS v FROM p81_few ORDER BY v DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name AS v FROM p81_few ORDER BY v DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"v\"],\"rows\":[[\"p81_entity_1_6\"],[\"p81_entity_1_5\"],[\"p81_entity_1_4\"],[\"p81_entity_1_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"],[\"p81_entity_1_6\"],[\"p81_entity_1_4\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 244,
+            "output_tokens": 33,
+            "total_tokens": 277,
+            "generation_seconds": 2.8300016190000292,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_few(id, name, score). Output column: name. Filter: none. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2",
+        "p81_entity_1_6",
+        "p81_entity_1_4"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 227,
+            "output_tokens": 29,
+            "total_tokens": 256,
+            "generation_seconds": 2.237309776000018,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "From p81_zero(id, name, score), return the names whose score is above 50.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter-natural",
+        "meta": {
+          "case": "ties",
+          "wording": "natural",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"],[\"p81_entity_2_2\"],[\"p81_entity_2_1\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"],[\"p81_entity_2_2\"],[\"p81_entity_2_1\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 228,
+            "output_tokens": 30,
+            "total_tokens": 258,
+            "generation_seconds": 1.9281809540000268,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "From p81_ties(id, name, score), return the names whose score is above 50.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3",
+        "p81_entity_2_2",
+        "p81_entity_2_1"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter_sort_tie-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter_sort_tie-natural",
+        "meta": {
+          "case": "few",
+          "wording": "natural",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"],[\"p81_entity_1_6\"],[\"p81_entity_1_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_2\"],[\"p81_entity_1_5\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 242,
+            "output_tokens": 31,
+            "total_tokens": 273,
+            "generation_seconds": 2.585892111000021,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_few(id, name, score), return up to four names whose score is above 50, highest score first, with smaller id first when scores tie.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_1_2",
+        "p81_entity_1_5"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-sort-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name AS v FROM p81_zero ORDER BY v DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name AS v FROM p81_zero ORDER BY v DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"v\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_6\"],[\"p81_entity_0_5\"],[\"p81_entity_0_4\"],[\"p81_entity_0_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 243,
+            "output_tokens": 32,
+            "total_tokens": 275,
+            "generation_seconds": 2.9725422139999864,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: none. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_0_6",
+        "p81_entity_0_5",
+        "p81_entity_0_4",
+        "p81_entity_0_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-first-natural-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-first-natural-ascending",
+        "meta": {
+          "case": 0,
+          "intent": "first",
+          "wording": "natural",
+          "presentation": "ascending",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key0 value p81_0_2\"}",
+        "predicted_answer": "entry 2: p81key0 value p81_0_2",
+        "correct": true,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 329,
+            "output_tokens": 23,
+            "total_tokens": 352,
+            "generation_seconds": 1.8930280010000047,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full first matching line in p81/record_0.txt containing 'p81key0'.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 2: p81key0 value p81_0_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"},{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter-structured",
+        "meta": {
+          "case": "ties",
+          "wording": "structured",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"],[\"p81_entity_2_2\"],[\"p81_entity_2_1\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"],[\"p81_entity_2_2\"],[\"p81_entity_2_1\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 246,
+            "output_tokens": 30,
+            "total_tokens": 276,
+            "generation_seconds": 2.1731151189999878,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "Table: p81_ties(id, name, score). Output column: name. Filter: score > 50. Ordering: none. Limit: none. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3",
+        "p81_entity_2_2",
+        "p81_entity_2_1"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-last-natural-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-last-natural-ascending",
+        "meta": {
+          "case": 0,
+          "intent": "last",
+          "wording": "natural",
+          "presentation": "ascending",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key0 value p81_0_2\"}",
+        "predicted_answer": "entry 2: p81key0 value p81_0_2",
+        "correct": false,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 329,
+            "output_tokens": 23,
+            "total_tokens": 352,
+            "generation_seconds": 1.6799113060000082,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full last matching line in p81/record_0.txt containing 'p81key0'.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 4: p81key0 value p81_0_4",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"},{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort-structured",
+        "meta": {
+          "case": "zero",
+          "wording": "structured",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 247,
+            "output_tokens": 36,
+            "total_tokens": 283,
+            "generation_seconds": 2.540156427999989,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_zero(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-first-explicit_line-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-first-explicit_line-reversed",
+        "meta": {
+          "case": 1,
+          "intent": "first",
+          "wording": "explicit_line",
+          "presentation": "reversed",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 6: p81key1 value p81_1_6\"}",
+        "predicted_answer": "entry 6: p81key1 value p81_1_6",
+        "correct": false,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 368,
+            "output_tokens": 23,
+            "total_tokens": 391,
+            "generation_seconds": 2.0354470229999606,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_1.txt for 'p81key1'. Among the matching file lines, select the one with the smallest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 2: p81key1 value p81_1_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter_sort_tie-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter_sort_tie-structured",
+        "meta": {
+          "case": "ties",
+          "wording": "structured",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_1\"],[\"p81_entity_2_2\"],[\"p81_entity_2_3\"],[\"p81_entity_2_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_1\"],[\"p81_entity_2_2\"],[\"p81_entity_2_3\"],[\"p81_entity_2_4\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 252,
+            "output_tokens": 39,
+            "total_tokens": 291,
+            "generation_seconds": 3.760192169999982,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_ties(id, name, score). Output column: name. Filter: score > 50. Ordering: score descending, then id ascending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_1",
+        "p81_entity_2_2",
+        "p81_entity_2_3",
+        "p81_entity_2_4"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-last-explicit_line-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-last-explicit_line-reversed",
+        "meta": {
+          "case": 1,
+          "intent": "last",
+          "wording": "explicit_line",
+          "presentation": "reversed",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 6: p81key1 value p81_1_6\"}",
+        "predicted_answer": "entry 6: p81key1 value p81_1_6",
+        "correct": true,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 368,
+            "output_tokens": 23,
+            "total_tokens": 391,
+            "generation_seconds": 2.6047462410000435,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_1.txt for 'p81key1'. Among the matching file lines, select the one with the largest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 6: p81key1 value p81_1_6",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-last-explicit_line-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-last-explicit_line-ascending",
+        "meta": {
+          "case": 1,
+          "intent": "last",
+          "wording": "explicit_line",
+          "presentation": "ascending",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 6: p81key1 value p81_1_6\"}",
+        "predicted_answer": "entry 6: p81key1 value p81_1_6",
+        "correct": true,
+        "first_presented": false,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 368,
+            "output_tokens": 23,
+            "total_tokens": 391,
+            "generation_seconds": 1.6291831269999761,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_1.txt for 'p81key1'. Among the matching file lines, select the one with the largest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 6: p81key1 value p81_1_6",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-few-filter-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-few-filter-natural",
+        "meta": {
+          "case": "few",
+          "wording": "natural",
+          "operation": "filter"
+        },
+        "tool_correct": true,
+        "arguments_correct": true,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_few WHERE score > 50"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_few WHERE score > 50\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_1_5\"],[\"p81_entity_1_2\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 228,
+            "output_tokens": 30,
+            "total_tokens": 258,
+            "generation_seconds": 1.8827057559999503,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": true,
+        "has_tie": false,
+        "has_limit": false
+      },
+      "prompt": "From p81_few(id, name, score), return the names whose score is above 50.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_few WHERE score > 50"
+      },
+      "expected_answer": [
+        "p81_entity_1_5",
+        "p81_entity_1_2"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-sort-structured",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-sort-structured",
+        "meta": {
+          "case": "ties",
+          "wording": "structured",
+          "operation": "sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name AS v FROM p81_ties ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name AS v FROM p81_ties ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"v\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 244,
+            "output_tokens": 33,
+            "total_tokens": 277,
+            "generation_seconds": 3.2855107430000317,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "Table: p81_ties(id, name, score). Output column: name. Filter: none. Ordering: score descending. Limit: 4. Return names as a JSON list.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-first-natural-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-first-natural-ascending",
+        "meta": {
+          "case": 1,
+          "intent": "first",
+          "wording": "natural",
+          "presentation": "ascending",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key1 value p81_1_2\"}",
+        "predicted_answer": "entry 2: p81key1 value p81_1_2",
+        "correct": true,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 353,
+            "output_tokens": 23,
+            "total_tokens": 376,
+            "generation_seconds": 1.709550266000008,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full first matching line in p81/record_1.txt containing 'p81key1'.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 2: p81key1 value p81_1_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"}]}"
+    },
+    {
+      "record": {
+        "id": "file:p81-file-0-last-explicit_line-ascending",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-0-last-explicit_line-ascending",
+        "meta": {
+          "case": 0,
+          "intent": "last",
+          "wording": "explicit_line",
+          "presentation": "ascending",
+          "n_matches": 2
+        },
+        "answer_raw": "{\"answer\": \"entry 2: p81key0 value p81_0_2\"}",
+        "predicted_answer": "entry 2: p81key0 value p81_0_2",
+        "correct": false,
+        "first_presented": true,
+        "min_line": true,
+        "max_line": false,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 344,
+            "output_tokens": 23,
+            "total_tokens": 367,
+            "generation_seconds": 1.9740420079999694,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Search p81/record_0.txt for 'p81key0'. Among the matching file lines, select the one with the largest line number. Return only its complete text.",
+      "expected_arguments": {
+        "path": "p81/record_0.txt",
+        "pattern": "p81key0"
+      },
+      "expected_answer": "entry 4: p81key0 value p81_0_4",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":2,\"text\":\"entry 2: p81key0 value p81_0_2\"},{\"line\":4,\"text\":\"entry 4: p81key0 value p81_0_4\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-ties-filter_sort-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-ties-filter_sort-natural",
+        "meta": {
+          "case": "ties",
+          "wording": "natural",
+          "operation": "filter_sort"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": true,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_2_6\"],[\"p81_entity_2_5\"],[\"p81_entity_2_4\"],[\"p81_entity_2_3\"]],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 234,
+            "output_tokens": 31,
+            "total_tokens": 265,
+            "generation_seconds": 2.4939388149999786,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": true,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_ties(id, name, score), return up to four names whose score is above 50, highest score first.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4"
+      },
+      "expected_answer": [
+        "p81_entity_2_6",
+        "p81_entity_2_5",
+        "p81_entity_2_4",
+        "p81_entity_2_3"
+      ],
+      "presented_observation": null
+    },
+    {
+      "record": {
+        "id": "file:p81-file-1-first-natural-reversed",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "file",
+        "episode_id": "p81-file-1-first-natural-reversed",
+        "meta": {
+          "case": 1,
+          "intent": "first",
+          "wording": "natural",
+          "presentation": "reversed",
+          "n_matches": 3
+        },
+        "answer_raw": "{\"answer\": \"entry 6: p81key1 value p81_1_6\"}",
+        "predicted_answer": "entry 6: p81key1 value p81_1_6",
+        "correct": false,
+        "first_presented": true,
+        "min_line": false,
+        "max_line": true,
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 353,
+            "output_tokens": 23,
+            "total_tokens": 376,
+            "generation_seconds": 1.8949296199999708,
+            "batch_size": 1
+          }
+        ]
+      },
+      "prompt": "Return the full first matching line in p81/record_1.txt containing 'p81key1'.",
+      "expected_arguments": {
+        "path": "p81/record_1.txt",
+        "pattern": "p81key1"
+      },
+      "expected_answer": "entry 2: p81key1 value p81_1_2",
+      "presented_observation": "{\"ok\":true,\"result\":[{\"line\":6,\"text\":\"entry 6: p81key1 value p81_1_6\"},{\"line\":4,\"text\":\"entry 4: p81key1 value p81_1_4\"},{\"line\":2,\"text\":\"entry 2: p81key1 value p81_1_2\"}]}"
+    },
+    {
+      "record": {
+        "id": "sql:p81-db-zero-filter_sort_tie-natural",
+        "seed": 20261109,
+        "arm": "decision",
+        "kind": "sql",
+        "episode_id": "p81-db-zero-filter_sort_tie-natural",
+        "meta": {
+          "case": "zero",
+          "wording": "natural",
+          "operation": "filter_sort_tie"
+        },
+        "tool_correct": true,
+        "arguments_correct": false,
+        "execution_success": false,
+        "predicted_tool": "db_query",
+        "predicted_arguments": {
+          "sql": "SELECT name FROM p81_zero ORDER BY name ASC LIMIT 4"
+        },
+        "tool_call_raw": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p81_zero ORDER BY name ASC LIMIT 4\"}}",
+        "observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"p81_entity_0_1\"],[\"p81_entity_0_2\"],[\"p81_entity_0_3\"],[\"p81_entity_0_4\"]],\"truncated\":false}}",
+        "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+        "usage": [
+          {
+            "inference_calls": 1,
+            "input_tokens": 241,
+            "output_tokens": 30,
+            "total_tokens": 271,
+            "generation_seconds": 2.3019725379999727,
+            "batch_size": 1
+          }
+        ],
+        "semantic_execution": false,
+        "has_where": false,
+        "has_tie": false,
+        "has_limit": true
+      },
+      "prompt": "From p81_zero(id, name, score), return up to four names whose score is above 50, highest score first, with smaller id first when scores tie.",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_answer": [],
+      "presented_observation": null
+    }
+  ]
+}

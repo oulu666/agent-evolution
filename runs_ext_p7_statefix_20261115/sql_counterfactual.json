@@ -1,0 +1,7318 @@
+{
+  "analysis_type": "Post-hoc CPU diagnostic, not a replacement P6 endpoint",
+  "predicted_calls_reexecuted": 432,
+  "counts": {
+    "n": 108,
+    "exact": 13,
+    "original_execution_correct": 79,
+    "execution_right_args_wrong": 66,
+    "coincidental_result_counterexample": 66,
+    "missing_where": 66,
+    "missing_tie": 66
+  },
+  "details": [
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261108_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 1",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261109_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates ORDER BY score DESC LIMIT 3",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_early",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 10",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_balanced_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-000",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-001",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-002",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-003",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-004",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-005",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-006",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-007",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-008",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 27 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-009",
+      "original_execution_correct": false,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_people WHERE score > 37 ORDER BY score DESC, id ASC LIMIT 1",
+      "predicted_sql": "SELECT name FROM p6h_people ORDER BY score DESC LIMIT 10",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ],
+            [
+              "below_3"
+            ],
+            [
+              "below_4"
+            ],
+            [
+              "below_5"
+            ],
+            [
+              "below_6"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ],
+            [
+              "few_3"
+            ],
+            [
+              "few_4"
+            ],
+            [
+              "few_5"
+            ],
+            [
+              "few_6"
+            ]
+          ]
+        },
+        "ties": {
+          "same": false,
+          "expected": [
+            [
+              "tie_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ],
+            [
+              "tie_4"
+            ],
+            [
+              "tie_5"
+            ],
+            [
+              "tie_6"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-010",
+      "original_execution_correct": true,
+      "arguments_exact": false,
+      "expected_sql": "SELECT name FROM p6h_stock WHERE score > 47 ORDER BY score DESC, id ASC LIMIT 2",
+      "predicted_sql": "SELECT name FROM p6h_stock ORDER BY score DESC LIMIT 2",
+      "has_where": false,
+      "has_id_tie": false,
+      "probes": {
+        "none_qualify": {
+          "same": false,
+          "expected": [],
+          "predicted": [
+            [
+              "below_1"
+            ],
+            [
+              "below_2"
+            ]
+          ]
+        },
+        "few_qualify": {
+          "same": false,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ],
+            [
+              "few_2"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "branch": "A_seed20261110_devgrad_uniform",
+      "id": "p6-holdout-db.filter_cmp_top-011",
+      "original_execution_correct": true,
+      "arguments_exact": true,
+      "expected_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "predicted_sql": "SELECT name FROM p6h_rates WHERE score > 57 ORDER BY score DESC, id ASC LIMIT 3",
+      "has_where": true,
+      "has_id_tie": true,
+      "probes": {
+        "none_qualify": {
+          "same": true,
+          "expected": [],
+          "predicted": []
+        },
+        "few_qualify": {
+          "same": true,
+          "expected": [
+            [
+              "few_1"
+            ]
+          ],
+          "predicted": [
+            [
+              "few_1"
+            ]
+          ]
+        },
+        "ties": {
+          "same": true,
+          "expected": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ],
+          "predicted": [
+            [
+              "tie_1"
+            ],
+            [
+              "tie_2"
+            ],
+            [
+              "tie_3"
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "branch_sensitivity": {
+    "A_seed20261108_balanced_early": {
+      "strict": 0.375,
+      "execution_final": 0.5416666666666666
+    },
+    "A_seed20261108_balanced_uniform": {
+      "strict": 0.20833333333333334,
+      "execution_final": 0.375
+    },
+    "A_seed20261108_devgrad_uniform": {
+      "strict": 0.20833333333333334,
+      "execution_final": 0.375
+    },
+    "A_seed20261109_balanced_early": {
+      "strict": 0.20833333333333334,
+      "execution_final": 0.3541666666666667
+    },
+    "A_seed20261109_balanced_uniform": {
+      "strict": 0.16666666666666666,
+      "execution_final": 0.3958333333333333
+    },
+    "A_seed20261109_devgrad_uniform": {
+      "strict": 0.1875,
+      "execution_final": 0.4375
+    },
+    "A_seed20261110_balanced_early": {
+      "strict": 0.2708333333333333,
+      "execution_final": 0.3541666666666667
+    },
+    "A_seed20261110_balanced_uniform": {
+      "strict": 0.2708333333333333,
+      "execution_final": 0.3541666666666667
+    },
+    "A_seed20261110_devgrad_uniform": {
+      "strict": 0.25,
+      "execution_final": 0.3333333333333333
+    }
+  }
+}

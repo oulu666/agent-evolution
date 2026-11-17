@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_start",
+  "family": "file",
+  "metrics": {
+    "n": 4,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 1.0,
+    "final_task_success_rate": 0.0,
+    "joint_success_rate": 0.0,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 4,
+    "conditional_argument_denominator": 4
+  },
+  "skill_metrics": {
+    "file_search": {
+      "n": 4,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 4,
+      "conditional_argument_denominator": 4
+    },
+    "line_index": {
+      "n": 4,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 4,
+      "conditional_argument_denominator": 4
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 8,
+    "input_tokens": 2265,
+    "output_tokens": 329,
+    "total_tokens": 2594,
+    "generation_seconds": 9.607394,
+    "n": 4,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 4,
+      "input_tokens": 4,
+      "output_tokens": 4,
+      "total_tokens": 4,
+      "generation_seconds": 4
+    },
+    "recorded_totals": {
+      "inference_calls": 8,
+      "input_tokens": 2265,
+      "output_tokens": 329,
+      "total_tokens": 2594,
+      "generation_seconds": 9.607394
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 9.68
+  },
+  "peak_gpu_gb": 1.212,
+  "duration_seconds": 9.68,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": null
+}

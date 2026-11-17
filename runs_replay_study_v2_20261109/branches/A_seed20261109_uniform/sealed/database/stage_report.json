@@ -1,0 +1,144 @@
+{
+  "stage_index": 4,
+  "stage_name": "stage_04_calendar",
+  "family": "database",
+  "metrics": {
+    "n": 60,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 0.55,
+    "execution_success_rate": 0.716667,
+    "final_task_success_rate": 0.683333,
+    "joint_success_rate": 0.45,
+    "conditional_argument_accuracy": 0.55,
+    "conditional_argument_numerator": 33,
+    "conditional_argument_denominator": 60
+  },
+  "skill_metrics": {
+    "schema_reading": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.8,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.4,
+      "joint_success_rate": 0.3,
+      "conditional_argument_accuracy": 0.8,
+      "conditional_argument_numerator": 8,
+      "conditional_argument_denominator": 10
+    },
+    "sql_aggregation": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 12,
+      "conditional_argument_denominator": 12
+    },
+    "sql_count": {
+      "n": 22,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.545455,
+      "execution_success_rate": 0.545455,
+      "final_task_success_rate": 0.863636,
+      "joint_success_rate": 0.545455,
+      "conditional_argument_accuracy": 0.545455,
+      "conditional_argument_numerator": 12,
+      "conditional_argument_denominator": 22
+    },
+    "sql_filter": {
+      "n": 50,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.5,
+      "execution_success_rate": 0.66,
+      "final_task_success_rate": 0.74,
+      "joint_success_rate": 0.48,
+      "conditional_argument_accuracy": 0.5,
+      "conditional_argument_numerator": 25,
+      "conditional_argument_denominator": 50
+    },
+    "sql_group": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.7,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 10
+    },
+    "sql_order": {
+      "n": 16,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0625,
+      "execution_success_rate": 0.5625,
+      "final_task_success_rate": 0.375,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0625,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 16
+    },
+    "sql_select": {
+      "n": 16,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0625,
+      "execution_success_rate": 0.5625,
+      "final_task_success_rate": 0.375,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0625,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 16
+    },
+    "tool_selection": {
+      "n": 2,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.5,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 2
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 120,
+    "input_tokens": 32352,
+    "output_tokens": 2692,
+    "total_tokens": 35044,
+    "generation_seconds": 21.336085,
+    "n": 60,
+    "generation_batches": 4,
+    "usage_coverage": {
+      "inference_calls": 60,
+      "input_tokens": 60,
+      "output_tokens": 60,
+      "total_tokens": 60,
+      "generation_seconds": 60
+    },
+    "recorded_totals": {
+      "inference_calls": 120,
+      "input_tokens": 32352,
+      "output_tokens": 2692,
+      "total_tokens": 35044,
+      "generation_seconds": 21.336085
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 23.07
+  },
+  "peak_gpu_gb": 2.133,
+  "duration_seconds": 23.07,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261109_uniform/checkpoint"
+}

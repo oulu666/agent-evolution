@@ -1,0 +1,172 @@
+Tue Nov 10 16:55:49 CST 2026
+687 MiB, 8188 MiB
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:53,  5.76it/s]Loading weights:   1%|          | 2/311 [00:00<00:52,  5.94it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:21, 13.91it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:02, 110.22it/s]Loading weights:  26%|██▋       | 82/311 [00:00<00:01, 213.74it/s]Loading weights:  44%|████▍     | 137/311 [00:00<00:00, 315.21it/s]Loading weights:  58%|█████▊    | 181/311 [00:00<00:00, 349.24it/s]Loading weights:  76%|███████▌  | 235/311 [00:00<00:00, 405.86it/s]Loading weights:  90%|████████▉ | 279/311 [00:01<00:00, 414.57it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 280.51it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'abstract_algebra' at /home/egret/.cache/huggingface/datasets/cais___mmlu/abstract_algebra/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:48:12 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'anatomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/anatomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:49:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'astronomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/astronomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:52:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_biology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_biology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:59:48 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_chemistry' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_chemistry/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 14:03:08 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 103, in <module>
+    main()
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 82, in main
+    results = lm_eval.simple_evaluate(**eval_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/utils.py", line 580, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/evaluator.py", line 302, in simple_evaluate
+    loaded = task_manager.load(tasks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 208, in load
+    obj = self._load_spec(spec) if not isinstance(spec, (Task, Group)) else spec  # type:ignore[invalid-argument-type]
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 154, in _load_spec
+    return self._factory.build(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 58, in build
+    return self._build_group(entry.name, raw_cfg, overrides, registry)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 120, in _build_group
+    for child in self._build_group_members(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 200, in _build_group_members
+    child_obj = self.build(
+                ^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 58, in build
+    return self._build_group(entry.name, raw_cfg, overrides, registry)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 120, in _build_group
+    for child in self._build_group_members(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 210, in _build_group_members
+    child_obj = self.build(
+                ^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 61, in build
+    return self._build_task(entry, overrides)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 81, in _build_task
+    obj = ConfigurableTask(config=cfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/api/task.py", line 753, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/api/task.py", line 869, in download
+    self.dataset = datasets.load_dataset(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/load.py", line 1667, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/load.py", line 1332, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+    config_name, version, hash = _find_hash_in_cache(
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+    or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/utils/file_utils.py", line 1217, in open
+    return xopen(str(self), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/utils/file_utils.py", line 961, in xopen
+    return open(main_hop, mode, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/egret/.cache/huggingface/datasets/cais___mmlu/college_computer_science/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe.incomplete/dataset_info.json'
+RC5=0
+687 MiB, 8188 MiB
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.64it/s]Loading weights:   5%|▌         | 17/311 [00:00<00:03, 93.21it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 581.28it/s]Loading weights:  63%|██████▎   | 195/311 [00:00<00:00, 547.39it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 561.02it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 508.55it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 470.61it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'abstract_algebra' at /home/egret/.cache/huggingface/datasets/cais___mmlu/abstract_algebra/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:48:12 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'anatomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/anatomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:49:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'astronomy' at /home/egret/.cache/huggingface/datasets/cais___mmlu/astronomy/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:52:05 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_biology' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_biology/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 13:59:48 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'college_chemistry' at /home/egret/.cache/huggingface/datasets/cais___mmlu/college_chemistry/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Tue Nov 10 14:03:08 2026).
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 103, in <module>
+    main()
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 82, in main
+    results = lm_eval.simple_evaluate(**eval_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/utils.py", line 580, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/evaluator.py", line 302, in simple_evaluate
+    loaded = task_manager.load(tasks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 208, in load
+    obj = self._load_spec(spec) if not isinstance(spec, (Task, Group)) else spec  # type:ignore[invalid-argument-type]
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/manager.py", line 154, in _load_spec
+    return self._factory.build(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 58, in build
+    return self._build_group(entry.name, raw_cfg, overrides, registry)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 120, in _build_group
+    for child in self._build_group_members(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 200, in _build_group_members
+    child_obj = self.build(
+                ^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 58, in build
+    return self._build_group(entry.name, raw_cfg, overrides, registry)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 120, in _build_group
+    for child in self._build_group_members(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 210, in _build_group_members
+    child_obj = self.build(
+                ^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 61, in build
+    return self._build_task(entry, overrides)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/_factory.py", line 81, in _build_task
+    obj = ConfigurableTask(config=cfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/api/task.py", line 753, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/api/task.py", line 869, in download
+    self.dataset = datasets.load_dataset(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/load.py", line 1667, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/load.py", line 1332, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+    config_name, version, hash = _find_hash_in_cache(
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+    or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/utils/file_utils.py", line 1217, in open
+    return xopen(str(self), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/datasets/utils/file_utils.py", line 961, in xopen
+    return open(main_hop, mode, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/egret/.cache/huggingface/datasets/cais___mmlu/college_computer_science/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe.incomplete/dataset_info.json'
+RC6=0
+Tue Nov 10 16:56:18 CST 2026

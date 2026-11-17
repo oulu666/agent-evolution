@@ -1,0 +1,211 @@
+{
+  "runs": [
+    {
+      "round": "REF",
+      "seed": 20261108,
+      "arm": "start",
+      "scores": {
+        "free_latest": 0.03333333333333333,
+        "locations": 0,
+        "attendee_count": 0.8666666666666667,
+        "search_count": 0.23333333333333334,
+        "last_end": 0,
+        "overall": 0.22666666666666668
+      },
+      "diagnostics": {
+        "free_latest": {
+          "n": 30,
+          "tool_ok": 30,
+          "args_ok": 30,
+          "exec_ok": 30,
+          "answer_ok": 1,
+          "answered_first_slot": 8
+        },
+        "locations": {
+          "n": 30,
+          "tool_ok": 0,
+          "args_ok": 0,
+          "exec_ok": 0,
+          "answer_ok": 0
+        },
+        "attendee_count": {
+          "n": 30,
+          "tool_ok": 30,
+          "args_ok": 30,
+          "exec_ok": 30,
+          "answer_ok": 26,
+          "count_off_by": 10
+        },
+        "search_count": {
+          "n": 30,
+          "tool_ok": 15,
+          "args_ok": 15,
+          "exec_ok": 15,
+          "answer_ok": 7,
+          "count_off_by": 8
+        },
+        "last_end": {
+          "n": 30,
+          "tool_ok": 0,
+          "args_ok": 0,
+          "exec_ok": 0,
+          "answer_ok": 2
+        }
+      },
+      "duration_seconds": 56.39
+    },
+    {
+      "round": "E4",
+      "seed": 20261108,
+      "arm": "tf50",
+      "scores": {
+        "free_latest": 0.5666666666666667,
+        "locations": 0.03333333333333333,
+        "attendee_count": 0.9333333333333333,
+        "search_count": 0.3,
+        "last_end": 0.5666666666666667,
+        "overall": 0.48
+      },
+      "diagnostics": {
+        "free_latest": {
+          "n": 30,
+          "tool_ok": 30,
+          "args_ok": 30,
+          "exec_ok": 30,
+          "answer_ok": 17,
+          "answered_first_slot": 12
+        },
+        "locations": {
+          "n": 30,
+          "tool_ok": 30,
+          "args_ok": 30,
+          "exec_ok": 30,
+          "answer_ok": 1,
+          "answered_with_duplicates": 2
+        },
+        "attendee_count": {
+          "n": 30,
+          "tool_ok": 30,
+          "args_ok": 30,
+          "exec_ok": 30,
+          "answer_ok": 28,
+          "count_off_by": 2
+        },
+        "search_count": {
+          "n": 30,
+          "tool_ok": 22,
+          "args_ok": 22,
+          "exec_ok": 22,
+          "answer_ok": 9,
+          "count_off_by": 46
+        },
+        "last_end": {
+          "n": 30,
+          "tool_ok": 26,
+          "args_ok": 26,
+          "exec_ok": 26,
+          "answer_ok": 17
+        }
+      },
+      "duration_seconds": 55.52
+    }
+  ],
+  "aggregates": [
+    {
+      "round": "REF",
+      "arm": "start",
+      "n_seeds": 1,
+      "free_latest": {
+        "mean": 0.03333333333333333,
+        "std": 0.0,
+        "per_seed": [
+          0.03333333333333333
+        ]
+      },
+      "locations": {
+        "mean": 0,
+        "std": 0.0,
+        "per_seed": [
+          0
+        ]
+      },
+      "attendee_count": {
+        "mean": 0.8666666666666667,
+        "std": 0.0,
+        "per_seed": [
+          0.8666666666666667
+        ]
+      },
+      "search_count": {
+        "mean": 0.23333333333333334,
+        "std": 0.0,
+        "per_seed": [
+          0.23333333333333334
+        ]
+      },
+      "last_end": {
+        "mean": 0,
+        "std": 0.0,
+        "per_seed": [
+          0
+        ]
+      },
+      "overall": {
+        "mean": 0.22666666666666668,
+        "std": 0.0,
+        "per_seed": [
+          0.22666666666666668
+        ]
+      }
+    },
+    {
+      "round": "E4",
+      "arm": "tf50",
+      "n_seeds": 1,
+      "free_latest": {
+        "mean": 0.5666666666666667,
+        "std": 0.0,
+        "per_seed": [
+          0.5666666666666667
+        ]
+      },
+      "locations": {
+        "mean": 0.03333333333333333,
+        "std": 0.0,
+        "per_seed": [
+          0.03333333333333333
+        ]
+      },
+      "attendee_count": {
+        "mean": 0.9333333333333333,
+        "std": 0.0,
+        "per_seed": [
+          0.9333333333333333
+        ]
+      },
+      "search_count": {
+        "mean": 0.3,
+        "std": 0.0,
+        "per_seed": [
+          0.3
+        ]
+      },
+      "last_end": {
+        "mean": 0.5666666666666667,
+        "std": 0.0,
+        "per_seed": [
+          0.5666666666666667
+        ]
+      },
+      "overall": {
+        "mean": 0.48,
+        "std": 0.0,
+        "per_seed": [
+          0.48
+        ]
+      }
+    }
+  ],
+  "comparisons": {},
+  "generated": "2026-11-11 13:22:14"
+}

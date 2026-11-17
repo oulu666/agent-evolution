@@ -1,0 +1,133 @@
+{
+  "stage_index": 4,
+  "stage_name": "E3_A_seed20261108_b20_tf50",
+  "family": "calendar",
+  "metrics": {
+    "n": 150,
+    "tool_selection_accuracy": 0.846667,
+    "argument_accuracy": 0.846667,
+    "execution_success_rate": 0.846667,
+    "final_task_success_rate": 0.413333,
+    "joint_success_rate": 0.413333,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 127,
+    "conditional_argument_denominator": 127
+  },
+  "skill_metrics": {
+    "calendar_attendees": {
+      "n": 30,
+      "tool_selection_accuracy": 0.933333,
+      "argument_accuracy": 0.933333,
+      "execution_success_rate": 0.933333,
+      "final_task_success_rate": 0.766667,
+      "joint_success_rate": 0.766667,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 28,
+      "conditional_argument_denominator": 28
+    },
+    "calendar_count": {
+      "n": 60,
+      "tool_selection_accuracy": 0.833333,
+      "argument_accuracy": 0.833333,
+      "execution_success_rate": 0.833333,
+      "final_task_success_rate": 0.6,
+      "joint_success_rate": 0.6,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 50,
+      "conditional_argument_denominator": 50
+    },
+    "calendar_free": {
+      "n": 30,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.3,
+      "joint_success_rate": 0.3,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 30,
+      "conditional_argument_denominator": 30
+    },
+    "calendar_list": {
+      "n": 60,
+      "tool_selection_accuracy": 0.783333,
+      "argument_accuracy": 0.783333,
+      "execution_success_rate": 0.783333,
+      "final_task_success_rate": 0.283333,
+      "joint_success_rate": 0.283333,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 47,
+      "conditional_argument_denominator": 47
+    },
+    "calendar_location": {
+      "n": 30,
+      "tool_selection_accuracy": 0.733333,
+      "argument_accuracy": 0.733333,
+      "execution_success_rate": 0.733333,
+      "final_task_success_rate": 0.233333,
+      "joint_success_rate": 0.233333,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 22,
+      "conditional_argument_denominator": 22
+    },
+    "calendar_search": {
+      "n": 30,
+      "tool_selection_accuracy": 0.733333,
+      "argument_accuracy": 0.733333,
+      "execution_success_rate": 0.733333,
+      "final_task_success_rate": 0.433333,
+      "joint_success_rate": 0.433333,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 22,
+      "conditional_argument_denominator": 22
+    },
+    "calendar_time": {
+      "n": 60,
+      "tool_selection_accuracy": 0.916667,
+      "argument_accuracy": 0.916667,
+      "execution_success_rate": 0.916667,
+      "final_task_success_rate": 0.316667,
+      "joint_success_rate": 0.316667,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 55,
+      "conditional_argument_denominator": 55
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 300,
+    "input_tokens": 108448,
+    "output_tokens": 5780,
+    "total_tokens": 114228,
+    "generation_seconds": 58.375309,
+    "n": 150,
+    "generation_batches": 10,
+    "usage_coverage": {
+      "inference_calls": 150,
+      "input_tokens": 150,
+      "output_tokens": 150,
+      "total_tokens": 150,
+      "generation_seconds": 150
+    },
+    "recorded_totals": {
+      "inference_calls": 300,
+      "input_tokens": 108448,
+      "output_tokens": 5780,
+      "total_tokens": 114228,
+      "generation_seconds": 58.375309
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 60.24
+  },
+  "peak_gpu_gb": 5.376,
+  "duration_seconds": 60.24,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e3/branches/A_seed20261108_b20_tf50/checkpoint"
+}

@@ -1,0 +1,270 @@
+{
+  "run_name": "C_seed20261110",
+  "run_dir": "runs_phase2/C_seed20261110",
+  "final_stage": {
+    "name": "stage_04_python",
+    "family": "python"
+  },
+  "final_index": 4,
+  "adapter": "runs_phase2/C_seed20261110/checkpoints/stage_04_python",
+  "test_per_family": "all",
+  "reports": [
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python_full",
+      "family": "database",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 0.466667,
+        "argument_accuracy": 0.133333,
+        "execution_success_rate": 0.333333,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 6,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 0.333333
+        },
+        "schema_reading": {
+          "n": 12,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.166667,
+          "execution_success_rate": 0.666667,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_aggregation": {
+          "n": 12,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 12,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.166667,
+          "execution_success_rate": 0.166667,
+          "final_task_success_rate": 0.166667
+        },
+        "sql_group": {
+          "n": 6,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 0.333333
+        },
+        "tool_selection": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.601,
+      "duration_seconds": 99.5,
+      "adapter": "runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python_full",
+      "family": "file",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.466667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 132.79,
+      "adapter": "runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python_full",
+      "family": "calendar",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.1
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.3
+        },
+        "calendar_time": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.628,
+      "duration_seconds": 151.18,
+      "adapter": "runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python_full",
+      "family": "python",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 0.633333,
+        "argument_accuracy": 0.5,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.6
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 30,
+          "tool_selection_accuracy": 0.633333,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.6
+        },
+        "stat_correlation": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.4,
+          "execution_success_rate": 0.4,
+          "final_task_success_rate": 0.4
+        },
+        "stat_mean": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 5,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.6
+        },
+        "stat_percentile": {
+          "n": 5,
+          "tool_selection_accuracy": 0.6,
+          "argument_accuracy": 0.6,
+          "execution_success_rate": 0.6,
+          "final_task_success_rate": 0.6
+        },
+        "stat_regression": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.8,
+          "execution_success_rate": 0.8,
+          "final_task_success_rate": 0.8
+        },
+        "stat_std": {
+          "n": 5,
+          "tool_selection_accuracy": 0.2,
+          "argument_accuracy": 0.2,
+          "execution_success_rate": 0.2,
+          "final_task_success_rate": 0.2
+        }
+      },
+      "peak_gpu_gb": 0.614,
+      "duration_seconds": 176.26,
+      "adapter": "runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+    }
+  ]
+}

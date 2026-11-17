@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "created": "2026-11-09T12:43:16+08:00",
+  "seed": 20261109,
+  "source_root": "../data_phase2",
+  "exclusion_roots": [
+    "../data",
+    "../data_smoke",
+    "../data_phase2",
+    "../data_phase2_smoke"
+  ],
+  "legacy_files": [
+    {
+      "path": "../data/file/train.jsonl",
+      "sha256": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42"
+    },
+    {
+      "path": "../data/file/val.jsonl",
+      "sha256": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196"
+    },
+    {
+      "path": "../data/file/test.jsonl",
+      "sha256": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66"
+    },
+    {
+      "path": "../data/database/train.jsonl",
+      "sha256": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b"
+    },
+    {
+      "path": "../data/database/val.jsonl",
+      "sha256": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767"
+    },
+    {
+      "path": "../data/database/test.jsonl",
+      "sha256": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2"
+    },
+    {
+      "path": "../data/python/train.jsonl",
+      "sha256": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7"
+    },
+    {
+      "path": "../data/python/val.jsonl",
+      "sha256": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f"
+    },
+    {
+      "path": "../data/python/test.jsonl",
+      "sha256": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747"
+    },
+    {
+      "path": "../data_smoke/file/train.jsonl",
+      "sha256": "288c35ef0e2a2625ecc27add8620615fd07fe85929a7e5e6e9347b0df68e6a3b"
+    },
+    {
+      "path": "../data_smoke/file/val.jsonl",
+      "sha256": "bcc9a25eae79f16bf774aabb1dcf7b3daeeaf638e6d42f59c2696f4d67dec035"
+    },
+    {
+      "path": "../data_smoke/file/test.jsonl",
+      "sha256": "9e0a69d8846918697d4a82391600f1ec4023ae41100e4cead666acb0a46e5f9f"
+    },
+    {
+      "path": "../data_smoke/database/train.jsonl",
+      "sha256": "66684a6bff81d3c313ec77c93d0d10caaad038353ff60ad9b14b53d03705226f"
+    },
+    {
+      "path": "../data_smoke/database/val.jsonl",
+      "sha256": "9fe247ca36f599365f73e4340c335d3a6cf588ace80757796c293c432964fb78"
+    },
+    {
+      "path": "../data_smoke/database/test.jsonl",
+      "sha256": "04c1154b1803df90cc6309faae1ef993c2d12c97629f64f93df57e6eaf3c6df0"
+    },
+    {
+      "path": "../data_smoke/python/train.jsonl",
+      "sha256": "b4dbe0ff7cad224153d2f59bbefbe9585e5105a74e2ae5ee78cfba0a6e0b70a3"
+    },
+    {
+      "path": "../data_smoke/python/val.jsonl",
+      "sha256": "b4de31431a87f83ebb3860c5ede60d3e59704ff4bff4cf0c8622235dbf9fb6f0"
+    },
+    {
+      "path": "../data_smoke/python/test.jsonl",
+      "sha256": "fddf1a338b11be74dfd5d4c059e4d199b89c19b479bd22edabd6cb00c5aa04da"
+    },
+    {
+      "path": "../data_phase2/file/train.jsonl",
+      "sha256": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42"
+    },
+    {
+      "path": "../data_phase2/file/val.jsonl",
+      "sha256": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196"
+    },
+    {
+      "path": "../data_phase2/file/test.jsonl",
+      "sha256": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66"
+    },
+    {
+      "path": "../data_phase2/database/train.jsonl",
+      "sha256": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b"
+    },
+    {
+      "path": "../data_phase2/database/val.jsonl",
+      "sha256": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767"
+    },
+    {
+      "path": "../data_phase2/database/test.jsonl",
+      "sha256": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2"
+    },
+    {
+      "path": "../data_phase2/python/train.jsonl",
+      "sha256": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7"
+    },
+    {
+      "path": "../data_phase2/python/val.jsonl",
+      "sha256": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f"
+    },
+    {
+      "path": "../data_phase2/python/test.jsonl",
+      "sha256": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747"
+    },
+    {
+      "path": "../data_phase2/calendar/train.jsonl",
+      "sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0"
+    },
+    {
+      "path": "../data_phase2/calendar/val.jsonl",
+      "sha256": "f696f08dfb77fe761b4413c9ed3ec533346101c35c31c2bda13463da129d97e1"
+    },
+    {
+      "path": "../data_phase2/calendar/test.jsonl",
+      "sha256": "ea59377e110c03cb9fea3e5e326fa54697f7481d67bd6b4cd3fef1bc62b436ca"
+    },
+    {
+      "path": "../data_phase2_smoke/file/train.jsonl",
+      "sha256": "21d98e2f57ee19c02f1726a6901ae39b32d481849a54ddf7f687e29f22b2e246"
+    },
+    {
+      "path": "../data_phase2_smoke/file/val.jsonl",
+      "sha256": "31d7bfda38b26b6670d231fad0a2c7bec5055e9c1aeba5edd5e51a3a127146ec"
+    },
+    {
+      "path": "../data_phase2_smoke/file/test.jsonl",
+      "sha256": "6ea7efd21569cf6daa0cbb5c9684957fcf19441e63b60cfcc20253cd1326044e"
+    },
+    {
+      "path": "../data_phase2_smoke/database/train.jsonl",
+      "sha256": "7d1a930b8cac8007debd28f429cf961b53f3ac6f581c64e614b6c1bf5e11a8a3"
+    },
+    {
+      "path": "../data_phase2_smoke/database/val.jsonl",
+      "sha256": "4acf9806f76a0de97087a2876d2488d8e6f566edb0a7493194c1d9ec55029ce3"
+    },
+    {
+      "path": "../data_phase2_smoke/database/test.jsonl",
+      "sha256": "14d8944d98f10512e394e166b3e85a07ab355fb5f0b9225a33bced0fa1682f23"
+    },
+    {
+      "path": "../data_phase2_smoke/python/train.jsonl",
+      "sha256": "ed3f1b861feca044223a9f77522128cdac84eccbc1b3ff10ac571d5ac3c2d900"
+    },
+    {
+      "path": "../data_phase2_smoke/python/val.jsonl",
+      "sha256": "29f06282f78afbf5c02841ffabfa6be3f64e76f249cd99d0e4560dae8a0bf271"
+    },
+    {
+      "path": "../data_phase2_smoke/python/test.jsonl",
+      "sha256": "72f30e747332acd97c9e3d01fd933c82d1816c64ebb7b9decb37afbd27f9835a"
+    },
+    {
+      "path": "../data_phase2_smoke/calendar/train.jsonl",
+      "sha256": "ceeea8c8e20638f1f6ed6f773ffce4ee0698132a60b71c3a361b9abb50b9f2c5"
+    },
+    {
+      "path": "../data_phase2_smoke/calendar/val.jsonl",
+      "sha256": "07003118a6d951b18fcc97546d69f46487ecbd879c403792b7f4076a106b18ac"
+    },
+    {
+      "path": "../data_phase2_smoke/calendar/test.jsonl",
+      "sha256": "616ef47748b69addc436f607c91ce3dcfc8b14731c148232c058d76e66de0377"
+    }
+  ],
+  "legacy_rows": 1022,
+  "task_identity": "sha256(canonical JSON of prompt, tool, arguments)",
+  "purpose": {
+    "probe": "Monitoring and controller selection only; never replay as training data.",
+    "sealed_test": "Final evaluation after choices are frozen; never used for selection or tuning."
+  },
+  "limitations": [
+    "Instance/wording holdout, not structural OOD.",
+    "The existing fixed database and calendar fixtures are reused.",
+    "Unique tasks can share a tool call or answer; counts are not independent environments.",
+    "Family-specific tool menus are retained; no cross-family routing.",
+    "Sealing is an experiment protocol and hash commitment, not access control."
+  ],
+  "fixtures": {
+    "toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974"
+  },
+  "families": {
+    "file": {
+      "probe": {
+        "path": "file/probe.jsonl",
+        "count": 24,
+        "sha256": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+        "unique_tasks": 24,
+        "unique_calls": 24,
+        "tools": {
+          "file_list": 4,
+          "file_read": 8,
+          "file_search": 8,
+          "file_write": 4
+        },
+        "categories": {
+          "study_first_match": 4,
+          "study_last_match": 4,
+          "study_line_count": 4,
+          "study_list": 4,
+          "study_word_count": 4,
+          "study_write": 4
+        },
+        "skills": {
+          "character_count": 4,
+          "counting": 8,
+          "file_list": 4,
+          "file_read": 8,
+          "file_search": 8,
+          "file_write": 4,
+          "final_formatting": 4,
+          "line_index": 8
+        }
+      },
+      "sealed_test": {
+        "path": "file/sealed_test.jsonl",
+        "count": 60,
+        "sha256": "f9ab646b610ce32182af7d0612d112f3e1de9ea8526bb9aba4b89bb4a62d3e0c",
+        "unique_tasks": 60,
+        "unique_calls": 59,
+        "tools": {
+          "file_list": 10,
+          "file_read": 20,
+          "file_search": 20,
+          "file_write": 10
+        },
+        "categories": {
+          "study_first_match": 10,
+          "study_last_match": 10,
+          "study_line_count": 10,
+          "study_list": 10,
+          "study_word_count": 10,
+          "study_write": 10
+        },
+        "skills": {
+          "character_count": 10,
+          "counting": 20,
+          "file_list": 10,
+          "file_read": 20,
+          "file_search": 20,
+          "file_write": 10,
+          "final_formatting": 10,
+          "line_index": 20
+        }
+      },
+      "call_overlap_probe_sealed": 3
+    },
+    "database": {
+      "probe": {
+        "path": "database/probe.jsonl",
+        "count": 24,
+        "sha256": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+        "unique_tasks": 24,
+        "unique_calls": 22,
+        "tools": {
+          "db_list_tables": 2,
+          "db_query": 18,
+          "db_schema": 4
+        },
+        "categories": {
+          "study_filter_count": 4,
+          "study_filter_mean": 4,
+          "study_group_count": 4,
+          "study_rank": 6,
+          "study_schema": 4,
+          "study_tables": 2
+        },
+        "skills": {
+          "schema_reading": 6,
+          "sql_aggregation": 4,
+          "sql_count": 8,
+          "sql_filter": 18,
+          "sql_group": 4,
+          "sql_order": 6,
+          "sql_select": 6,
+          "tool_selection": 2
+        }
+      },
+      "sealed_test": {
+        "path": "database/sealed_test.jsonl",
+        "count": 60,
+        "sha256": "d26e91bbe03eaf9aed1b761fe6c258b43f5f2be8712e2766247d4b87c767223f",
+        "unique_tasks": 60,
+        "unique_calls": 54,
+        "tools": {
+          "db_list_tables": 2,
+          "db_query": 50,
+          "db_schema": 8
+        },
+        "categories": {
+          "study_filter_count": 12,
+          "study_filter_mean": 12,
+          "study_group_count": 10,
+          "study_rank": 16,
+          "study_schema": 8,
+          "study_tables": 2
+        },
+        "skills": {
+          "schema_reading": 10,
+          "sql_aggregation": 12,
+          "sql_count": 22,
+          "sql_filter": 50,
+          "sql_group": 10,
+          "sql_order": 16,
+          "sql_select": 16,
+          "tool_selection": 2
+        }
+      },
+      "call_overlap_probe_sealed": 4
+    },
+    "python": {
+      "probe": {
+        "path": "python/probe.jsonl",
+        "count": 24,
+        "sha256": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909",
+        "unique_tasks": 24,
+        "unique_calls": 24,
+        "tools": {
+          "stats_correlation": 4,
+          "stats_linear_regression": 4,
+          "stats_mean": 4,
+          "stats_median": 4,
+          "stats_percentile": 4,
+          "stats_std": 4
+        },
+        "categories": {
+          "study_correlation": 4,
+          "study_mean": 4,
+          "study_median": 4,
+          "study_percentile": 4,
+          "study_regression": 4,
+          "study_std": 4
+        },
+        "skills": {
+          "numeric_input": 24,
+          "stat_correlation": 4,
+          "stat_mean": 4,
+          "stat_median": 4,
+          "stat_percentile": 4,
+          "stat_regression": 4,
+          "stat_std": 4
+        }
+      },
+      "sealed_test": {
+        "path": "python/sealed_test.jsonl",
+        "count": 60,
+        "sha256": "1055953f4c83268c64d3f00fa0f760255bebe597b401fa9e6e24c937c59a1f4e",
+        "unique_tasks": 60,
+        "unique_calls": 60,
+        "tools": {
+          "stats_correlation": 10,
+          "stats_linear_regression": 10,
+          "stats_mean": 10,
+          "stats_median": 10,
+          "stats_percentile": 10,
+          "stats_std": 10
+        },
+        "categories": {
+          "study_correlation": 10,
+          "study_mean": 10,
+          "study_median": 10,
+          "study_percentile": 10,
+          "study_regression": 10,
+          "study_std": 10
+        },
+        "skills": {
+          "numeric_input": 60,
+          "stat_correlation": 10,
+          "stat_mean": 10,
+          "stat_median": 10,
+          "stat_percentile": 10,
+          "stat_regression": 10,
+          "stat_std": 10
+        }
+      },
+      "call_overlap_probe_sealed": 0
+    },
+    "calendar": {
+      "probe": {
+        "path": "calendar/probe.jsonl",
+        "count": 24,
+        "sha256": "151947936898ffc5c091b25aac8ec91fb0a8033b2c31daabd6d787fb8c5404a6",
+        "unique_tasks": 24,
+        "unique_calls": 22,
+        "tools": {
+          "calendar_attendees": 7,
+          "calendar_count": 1,
+          "calendar_free_slots": 8,
+          "calendar_list": 4,
+          "calendar_search": 4
+        },
+        "categories": {
+          "study_attendees": 7,
+          "study_free": 8,
+          "study_list": 4,
+          "study_month": 1,
+          "study_search": 4
+        },
+        "skills": {
+          "calendar_attendees": 7,
+          "calendar_count": 1,
+          "calendar_date": 8,
+          "calendar_event": 7,
+          "calendar_free": 8,
+          "calendar_list": 4,
+          "calendar_month": 1,
+          "calendar_search": 4,
+          "calendar_time": 8
+        }
+      },
+      "sealed_test": {
+        "path": "calendar/sealed_test.jsonl",
+        "count": 60,
+        "sha256": "87e78639ecc4b97717a894f34bd4c110920a2f1c255f85b602e3237efa48ab04",
+        "unique_tasks": 60,
+        "unique_calls": 56,
+        "tools": {
+          "calendar_attendees": 18,
+          "calendar_count": 2,
+          "calendar_free_slots": 20,
+          "calendar_list": 10,
+          "calendar_search": 10
+        },
+        "categories": {
+          "study_attendees": 18,
+          "study_free": 20,
+          "study_list": 10,
+          "study_month": 2,
+          "study_search": 10
+        },
+        "skills": {
+          "calendar_attendees": 18,
+          "calendar_count": 2,
+          "calendar_date": 20,
+          "calendar_event": 18,
+          "calendar_free": 20,
+          "calendar_list": 10,
+          "calendar_month": 2,
+          "calendar_search": 10,
+          "calendar_time": 20
+        }
+      },
+      "call_overlap_probe_sealed": 5
+    }
+  },
+  "path_base": "manifest directory"
+}

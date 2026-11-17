@@ -1,0 +1,34 @@
+{
+  "version": "calendar_natural_final_v3",
+  "frozen_at": "2026-11-11 13:32:13 +0800",
+  "files": {
+    "calendar_v3": {
+      "path": "final_v3/calendar_v3.jsonl",
+      "count": 150,
+      "sha256": "4cca511187606ece1ab90c0903dd81b9a2bcb8919cadf8882de77486b2244f64"
+    }
+  },
+  "fixture": {
+    "path": "fixtures/calendar_v3.json",
+    "sha256": "3289868b4a22ccb2770f3a4a3b72723f30fb0a11c44b823fa6055f88d1f2b04d"
+  },
+  "combined_sha256": "2b203ab5123620b99fb64c06afb1e89a388596eade154012e331bb4a27b3633a",
+  "types": {
+    "cv3_free_latest": 30,
+    "cv3_locations": 30,
+    "cv3_attendee_count": 30,
+    "cv3_search_count": 30,
+    "cv3_last_end": 30
+  },
+  "seeds": {
+    "fixture": 20261131,
+    "tasks": 20261132
+  },
+  "untrained_rationale": "Calendar training templates = ['calendar_attendees', 'calendar_count_date', 'calendar_count_month', 'calendar_free_slot', 'calendar_list_titles', 'calendar_search_dates']; v3 types are none of these (last free slot, distinct locations, attendee count, title-search count, last end time).",
+  "scoring": "joint success (tool, exact arguments, execution on fixtures/calendar_v3.json, exact answer via metrics.answers_equal); per sub-skill = mean over its items",
+  "pilot_note": "pilot 1 -> difficulty adjusted (locations 3-5 events, attendees 2-10); pilot 2 on seed 20261108: start 0.180, E4 tf50 0.493; see data_ext_cal_v3/PILOT.md",
+  "rules": [
+    "Evaluation only: never a training, replay, probe or selection input.",
+    "Scored once per finished checkpoint; any change requires a new version string and hashes."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "stage_index": 3,
+  "stage_name": "A_seed20261108_v2_midpoint",
+  "family": "database",
+  "metrics": {
+    "n": 2,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 1.0,
+    "final_task_success_rate": 1.0,
+    "joint_success_rate": 1.0,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 2,
+    "conditional_argument_denominator": 2
+  },
+  "skill_metrics": {
+    "sql_count": {
+      "n": 2,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 2
+    },
+    "sql_filter": {
+      "n": 2,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 2
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 4,
+    "input_tokens": 1007,
+    "output_tokens": 73,
+    "total_tokens": 1080,
+    "generation_seconds": 5.484059,
+    "n": 2,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 2,
+      "input_tokens": 2,
+      "output_tokens": 2,
+      "total_tokens": 2,
+      "generation_seconds": 2
+    },
+    "recorded_totals": {
+      "inference_calls": 4,
+      "input_tokens": 1007,
+      "output_tokens": 73,
+      "total_tokens": 1080,
+      "generation_seconds": 5.484059
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 5.57
+  },
+  "peak_gpu_gb": 0.633,
+  "duration_seconds": 5.57,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python"
+}

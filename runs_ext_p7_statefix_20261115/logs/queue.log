@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:55,  5.59it/s]Loading weights:   1%|          | 2/311 [00:00<00:54,  5.69it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:32,  9.41it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:02, 101.45it/s]Loading weights:  26%|██▋       | 82/311 [00:00<00:01, 204.88it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 317.50it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 369.67it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 423.22it/s]Loading weights:  97%|█████████▋| 301/311 [00:01<00:00, 452.55it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 281.46it/s]
+2026-11-15 18:03:52 +0800 MEASURE 20261109 baseline FULL_STATE_EXACT
+2026-11-15 18:03:57 +0800 REUSE COMPLETE 20261109 db.filter_cmp_top
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+2026-11-15 18:04:08 +0800 MEASURE 20261109 file.search_last_1 FULL_STATE_EXACT
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p7_statefix_20261115.py", line 246, in <module>
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=['build','verify','audit','queue']);args=p.parse_args();globals()[args.phase]()
+                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p7_statefix_20261115.py", line 222, in queue
+    scaler.step(opt);scaler.update();opt.zero_grad(set_to_none=True);costs['reconstruction_optimizer_steps' if reconstruct else 'optimizer_steps']+=1
+    ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/amp/grad_scaler.py", line 400, in step
+    return optimizer.step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 567, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/bitsandbytes/optim/optimizer.py", line 333, in step
+    self.prefetch_state(p)
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/bitsandbytes/optim/optimizer.py", line 395, in prefetch_state
+    s1 = state["state1"]
+         ~~~~~^^^^^^^^^^
+KeyError: 'state1'

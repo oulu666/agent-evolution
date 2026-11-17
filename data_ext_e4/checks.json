@@ -1,0 +1,93 @@
+{
+  "file_pool_label_check": {
+    "n": 96,
+    "n_bad": 0,
+    "bad": [],
+    "rules": {
+      "contents": 16,
+      "line_count": 16,
+      "first_match": 16,
+      "txt_count": 16,
+      "characters": 16,
+      "last_match": 16
+    }
+  },
+  "file_final_v2_label_check": {
+    "n": 30,
+    "n_bad": 0,
+    "bad": [],
+    "rules": {
+      "last_match": 30
+    }
+  },
+  "round2_pool_label_check_reference": {
+    "n": 96,
+    "n_bad": 16,
+    "rules": {
+      "contents": 16,
+      "line_count": 16,
+      "first_match": 16,
+      "txt_count": 16,
+      "characters": 16,
+      "last_match": 16
+    }
+  },
+  "executed_gold_mismatch": [],
+  "calendar_semantic_check": {
+    "n": 30,
+    "n_bad": 0,
+    "bad": [],
+    "types": {
+      "cal_nl_count_date": 5,
+      "cal_nl_count_month": 5,
+      "cal_nl_list_titles": 5,
+      "cal_nl_search_dates": 5,
+      "cal_nl_attendees": 5,
+      "cal_nl_free_first": 5
+    }
+  },
+  "leakage": {
+    "task_signature_overlap_train_vs_eval": 0,
+    "message_overlap_train_vs_eval": 0,
+    "file_path_overlap_pool_vs_final_v2": [],
+    "file_path_overlap_pool_vs_any_eval": [],
+    "file_content_overlap_pool_vs_final_v2": 0,
+    "file_content_overlap_pool_vs_any_eval": 0,
+    "file_pattern_content_overlap_pool_vs_final_v2": 0,
+    "new_target_root_dirs": [
+      "e4_replay"
+    ],
+    "final_v2_file_root_dirs": [
+      "round2_final"
+    ],
+    "new_target_lines_also_in_final_files": {
+      "lines": 96,
+      "shared": 35,
+      "note": "line template 'line N: <word> appears in this line' recurs by design; whole files never repeat"
+    },
+    "probe_vs_final_v2_signature_overlap": 0,
+    "final_v2_internal_duplicates": 0
+  },
+  "counts": {
+    "pool": {
+      "file": 96,
+      "database": 91,
+      "python": 94
+    },
+    "pool_targets": {
+      "file": 16,
+      "database": 11,
+      "python": 14
+    },
+    "final_v2": {
+      "file": 30,
+      "database": 30,
+      "python": 30,
+      "calendar": 30
+    }
+  },
+  "final_v2_version": "natural_final_v2",
+  "final_v2_combined_sha256": "5dcc7d786fd60556e97d4e2ebefe143fdd9e96e9aa9052877a1317758b15a8f6",
+  "problems": [],
+  "ok": true
+}

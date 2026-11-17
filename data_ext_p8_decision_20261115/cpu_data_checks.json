@@ -1,0 +1,87 @@
+{
+  "gold_checks": 116,
+  "counterexamples": {
+    "extra_args_strict_failure": 24,
+    "SQL_where_or_tie_required": 28,
+    "SQL_where_individually_required": 19,
+    "SQL_tie_individually_required": 18,
+    "file_first_instead_of_last": 24,
+    "median_gold_scalar": 24
+  },
+  "exact_conversations_disjoint": true,
+  "prompts_vs_old_disjoint": true,
+  "database_file_entities_disjoint_numeric_input_sets_disjoint": true,
+  "templates_split_disjoint": true,
+  "schema_and_scorer_unchanged": true,
+  "plans": {
+    "20261108": {
+      "A_tokens": 7494,
+      "B_tokens": 7521,
+      "relative_deviation": 0.003602882305844676,
+      "A_supervised_tokens": 1202,
+      "B_supervised_tokens": 1238,
+      "target_counts": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "old_A_checkpoint": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p6_devplan_attempt2/branches/A_seed20261108_balanced_uniform/checkpoint",
+      "A_optimizer_audit": {
+        "prefix_updates": 10,
+        "prefix_microsteps": 80,
+        "suffix_actual_optimizer_steps": 13,
+        "total_actual_optimizer_steps": 23,
+        "suffix_microsteps": 102,
+        "tail_microsteps": 6,
+        "tail_actual_steps": 1
+      }
+    },
+    "20261109": {
+      "A_tokens": 7494,
+      "B_tokens": 7538,
+      "relative_deviation": 0.005871363757672805,
+      "A_supervised_tokens": 1187,
+      "B_supervised_tokens": 1223,
+      "target_counts": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "old_A_checkpoint": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p6_devplan_attempt2/branches/A_seed20261109_balanced_uniform/checkpoint",
+      "A_optimizer_audit": {
+        "prefix_updates": 10,
+        "prefix_microsteps": 80,
+        "suffix_actual_optimizer_steps": 13,
+        "total_actual_optimizer_steps": 23,
+        "suffix_microsteps": 102,
+        "tail_microsteps": 6,
+        "tail_actual_steps": 1
+      }
+    },
+    "20261110": {
+      "A_tokens": 7494,
+      "B_tokens": 7556,
+      "relative_deviation": 0.008273285294902588,
+      "A_supervised_tokens": 1184,
+      "B_supervised_tokens": 1234,
+      "target_counts": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "old_A_checkpoint": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p6_devplan_attempt2/branches/A_seed20261110_balanced_uniform/checkpoint",
+      "A_optimizer_audit": {
+        "prefix_updates": 10,
+        "prefix_microsteps": 80,
+        "suffix_actual_optimizer_steps": 13,
+        "total_actual_optimizer_steps": 23,
+        "suffix_microsteps": 102,
+        "tail_microsteps": 6,
+        "tail_actual_steps": 1
+      }
+    }
+  }
+}

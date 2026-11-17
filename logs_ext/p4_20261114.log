@@ -1,0 +1,813 @@
+===== LAUNCH 2026-11-14 13:53:40 +0800 args: queue =====
+2026-11-14 13:53:41 +0800 PREFLIGHT ok game=no power_cap=90W other_gpu_procs=none 1291 MiB, 1 %
+2026-11-14 13:53:41 +0800 START queue
+2026-11-14 13:54:04 EVAL A_seed20261108_T0_stage_02 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:20,  3.85it/s]Loading weights:   1%|          | 2/311 [00:00<01:10,  4.36it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:42,  7.14it/s]Loading weights:  10%|█         | 32/311 [00:00<00:03, 71.48it/s]Loading weights:  21%|██        | 65/311 [00:00<00:01, 136.75it/s]Loading weights:  35%|███▌      | 109/311 [00:00<00:00, 216.61it/s]Loading weights:  48%|████▊     | 149/311 [00:01<00:00, 263.15it/s]Loading weights:  62%|██████▏   | 192/311 [00:01<00:00, 305.91it/s]Loading weights:  76%|███████▌  | 236/311 [00:01<00:00, 342.22it/s]Loading weights:  90%|████████▉ | 279/311 [00:01<00:00, 363.45it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 217.02it/s]
+eval P4_B1_A_seed20261108_T0_stage_02 database n 24
+eval P4_B1_A_seed20261108_T0_stage_02 database 10
+eval P4_B1_A_seed20261108_T0_stage_02 database 20
+eval done P4_B1_A_seed20261108_T0_stage_02 database final 1.0 peak_gpu_gb 0.59
+2026-11-14 13:56:13   done A_seed20261108_T0_stage_02 lt_probe n=24 53.9s
+2026-11-14 13:56:13 EVAL done A_seed20261108_T0_stage_02 in 128.9s
+2026-11-14 13:56:15 EVAL A_seed20261108_prefix_step80 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 258.26it/s]Loading weights:  52%|█████▏    | 163/311 [00:00<00:00, 906.98it/s]Loading weights:  97%|█████████▋| 301/311 [00:00<00:00, 1120.99it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 995.41it/s] 
+2026-11-14 13:56:17   prefix params loaded {'n_params': 392, 'hash_matches_prefix': True}
+eval P4_B1_A_seed20261108_prefix_step80 database n 24
+eval P4_B1_A_seed20261108_prefix_step80 database 10
+eval P4_B1_A_seed20261108_prefix_step80 database 20
+eval done P4_B1_A_seed20261108_prefix_step80 database final 1.0 peak_gpu_gb 0.591
+2026-11-14 13:57:21   done A_seed20261108_prefix_step80 lt_probe n=24 63.2s
+2026-11-14 13:57:21 EVAL done A_seed20261108_prefix_step80 in 66.3s
+2026-11-14 13:57:21 summary written
+2026-11-14 13:57:22 EVAL A_seed20261109_T0_stage_02 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 23/311 [00:00<00:01, 228.07it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 851.95it/s]Loading weights:  85%|████████▌ | 265/311 [00:00<00:00, 970.83it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 927.25it/s]
+eval P4_B1_A_seed20261109_T0_stage_02 database n 24
+eval P4_B1_A_seed20261109_T0_stage_02 database 10
+eval P4_B1_A_seed20261109_T0_stage_02 database 20
+eval done P4_B1_A_seed20261109_T0_stage_02 database final 1.0 peak_gpu_gb 0.59
+2026-11-14 13:58:21   done A_seed20261109_T0_stage_02 lt_probe n=24 57.2s
+2026-11-14 13:58:21 EVAL done A_seed20261109_T0_stage_02 in 59.5s
+2026-11-14 13:58:23 EVAL A_seed20261109_prefix_step80 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 17/311 [00:00<00:01, 166.86it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 772.28it/s]Loading weights:  75%|███████▌  | 234/311 [00:00<00:00, 857.24it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 863.66it/s]
+2026-11-14 13:58:25   prefix params loaded {'n_params': 392, 'hash_matches_prefix': True}
+eval P4_B1_A_seed20261109_prefix_step80 database n 24
+eval P4_B1_A_seed20261109_prefix_step80 database 10
+eval P4_B1_A_seed20261109_prefix_step80 database 20
+eval done P4_B1_A_seed20261109_prefix_step80 database final 1.0 peak_gpu_gb 0.591
+2026-11-14 13:59:34   done A_seed20261109_prefix_step80 lt_probe n=24 68.0s
+2026-11-14 13:59:34 EVAL done A_seed20261109_prefix_step80 in 71.0s
+2026-11-14 13:59:34 summary written
+2026-11-14 13:59:35 EVAL A_seed20261110_T0_stage_02 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.31it/s]Loading weights:  33%|███▎      | 103/311 [00:00<00:00, 589.99it/s]Loading weights:  78%|███████▊  | 243/311 [00:00<00:00, 956.59it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 883.53it/s]
+eval P4_B1_A_seed20261110_T0_stage_02 database n 24
+eval P4_B1_A_seed20261110_T0_stage_02 database 10
+eval P4_B1_A_seed20261110_T0_stage_02 database 20
+eval done P4_B1_A_seed20261110_T0_stage_02 database final 1.0 peak_gpu_gb 0.59
+2026-11-14 14:00:35   done A_seed20261110_T0_stage_02 lt_probe n=24 58.2s
+2026-11-14 14:00:36 EVAL done A_seed20261110_T0_stage_02 in 60.6s
+2026-11-14 14:00:37 EVAL A_seed20261110_prefix_step80 suites=['lt_probe']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 24/311 [00:00<00:01, 239.43it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 821.53it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 1043.53it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 959.39it/s] 
+2026-11-14 14:00:39   prefix params loaded {'n_params': 392, 'hash_matches_prefix': True}
+eval P4_B1_A_seed20261110_prefix_step80 database n 24
+eval P4_B1_A_seed20261110_prefix_step80 database 10
+eval P4_B1_A_seed20261110_prefix_step80 database 20
+eval done P4_B1_A_seed20261110_prefix_step80 database final 0.833333 peak_gpu_gb 0.592
+2026-11-14 14:01:47   done A_seed20261110_prefix_step80 lt_probe n=24 66.8s
+2026-11-14 14:01:47 EVAL done A_seed20261110_prefix_step80 in 69.8s
+2026-11-14 14:01:47 summary written
+2026-11-14 14:01:49 TRAIN A_seed20261108_P4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.78it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 881.09it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1120.56it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 997.16it/s] 
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/e3_train.py:117: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+2026-11-14 14:01:51 p4 plan P4_early items 22 tracked [('list_tables', 95, 11), ('median_nat', 95, 11), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7455 seconds 197.08
+2026-11-14 14:02:37 TRAIN done A_seed20261108_P4_early steps=23 replay_tokens=7455 sum_after={'filter': 9, 'list_tables': 11, 'median_nat': 11}
+2026-11-14 14:02:38 EVAL A_seed20261108_P4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.12it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 772.64it/s]Loading weights:  85%|████████▌ | 265/311 [00:00<00:00, 1015.84it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 919.43it/s] 
+eval P4_B1_A_seed20261108_P4_early database n 24
+eval P4_B1_A_seed20261108_P4_early database 10
+eval P4_B1_A_seed20261108_P4_early database 20
+eval done P4_B1_A_seed20261108_P4_early database final 1.0 peak_gpu_gb 0.592
+2026-11-14 14:03:50   done A_seed20261108_P4_early lt_probe n=24 69.9s
+eval P4_B1_A_seed20261108_P4_early database n 30
+eval P4_B1_A_seed20261108_P4_early database 10
+eval P4_B1_A_seed20261108_P4_early database 20
+eval P4_B1_A_seed20261108_P4_early database 30
+eval done P4_B1_A_seed20261108_P4_early database final 0.633333 peak_gpu_gb 0.602
+2026-11-14 14:05:30   done A_seed20261108_P4_early p2_database n=30 99.4s
+eval P4_B1_A_seed20261108_P4_early python n 30
+eval P4_B1_A_seed20261108_P4_early python 10
+eval P4_B1_A_seed20261108_P4_early python 20
+eval P4_B1_A_seed20261108_P4_early python 30
+eval done P4_B1_A_seed20261108_P4_early python final 1.0 peak_gpu_gb 0.603
+2026-11-14 14:07:45   done A_seed20261108_P4_early natv2_python n=30 134.1s
+eval P4_B1_A_seed20261108_P4_early database n 30
+eval P4_B1_A_seed20261108_P4_early database 10
+eval P4_B1_A_seed20261108_P4_early database 20
+eval P4_B1_A_seed20261108_P4_early database 30
+eval done P4_B1_A_seed20261108_P4_early database final 0.966667 peak_gpu_gb 0.601
+2026-11-14 14:10:00   done A_seed20261108_P4_early natv2_database n=30 134.2s
+eval P4_B1_A_seed20261108_P4_early calendar n 30
+eval P4_B1_A_seed20261108_P4_early calendar 10
+eval P4_B1_A_seed20261108_P4_early calendar 20
+eval P4_B1_A_seed20261108_P4_early calendar 30
+eval done P4_B1_A_seed20261108_P4_early calendar final 0.3 peak_gpu_gb 0.924
+2026-11-14 14:11:20   done A_seed20261108_P4_early v3fix n=30 79.2s
+2026-11-14 14:11:20 EVAL done A_seed20261108_P4_early in 522.3s
+2026-11-14 14:11:20 summary written
+2026-11-14 14:11:21 TRAIN A_seed20261109_P4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 12/311 [00:00<00:02, 118.79it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 760.83it/s]Loading weights:  81%|████████  | 252/311 [00:00<00:00, 947.16it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 874.37it/s]
+2026-11-14 14:11:24 p4 plan P4_early items 22 tracked [('list_tables', 95, 11), ('median_nat', 95, 11), ('filter', 143, 4), ('filter', 143, 4), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7465 seconds 211.92
+2026-11-14 14:12:07 TRAIN done A_seed20261109_P4_early steps=23 replay_tokens=7465 sum_after={'filter': 11, 'list_tables': 11, 'median_nat': 11}
+2026-11-14 14:12:07 EVAL A_seed20261109_P4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 12/311 [00:00<00:02, 119.93it/s]Loading weights:  32%|███▏      | 101/311 [00:00<00:00, 572.10it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 721.60it/s]Loading weights:  99%|█████████▉| 309/311 [00:00<00:00, 895.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 768.88it/s]
+eval P4_B1_A_seed20261109_P4_early database n 24
+eval P4_B1_A_seed20261109_P4_early database 10
+eval P4_B1_A_seed20261109_P4_early database 20
+eval done P4_B1_A_seed20261109_P4_early database final 1.0 peak_gpu_gb 0.592
+2026-11-14 14:13:02   done A_seed20261109_P4_early lt_probe n=24 52.7s
+eval P4_B1_A_seed20261109_P4_early database n 30
+eval P4_B1_A_seed20261109_P4_early database 10
+eval P4_B1_A_seed20261109_P4_early database 20
+eval P4_B1_A_seed20261109_P4_early database 30
+eval done P4_B1_A_seed20261109_P4_early database final 0.633333 peak_gpu_gb 0.602
+2026-11-14 14:14:26   done A_seed20261109_P4_early p2_database n=30 82.6s
+eval P4_B1_A_seed20261109_P4_early python n 30
+eval P4_B1_A_seed20261109_P4_early python 10
+eval P4_B1_A_seed20261109_P4_early python 20
+eval P4_B1_A_seed20261109_P4_early python 30
+eval done P4_B1_A_seed20261109_P4_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 14:16:27   done A_seed20261109_P4_early natv2_python n=30 120.3s
+eval P4_B1_A_seed20261109_P4_early database n 30
+eval P4_B1_A_seed20261109_P4_early database 10
+eval P4_B1_A_seed20261109_P4_early database 20
+eval P4_B1_A_seed20261109_P4_early database 30
+eval done P4_B1_A_seed20261109_P4_early database final 0.933333 peak_gpu_gb 0.601
+2026-11-14 14:18:27   done A_seed20261109_P4_early natv2_database n=30 119.7s
+eval P4_B1_A_seed20261109_P4_early calendar n 30
+eval P4_B1_A_seed20261109_P4_early calendar 10
+eval P4_B1_A_seed20261109_P4_early calendar 20
+eval P4_B1_A_seed20261109_P4_early calendar 30
+eval done P4_B1_A_seed20261109_P4_early calendar final 0.366667 peak_gpu_gb 0.924
+2026-11-14 14:19:42   done A_seed20261109_P4_early v3fix n=30 73.6s
+2026-11-14 14:19:43 EVAL done A_seed20261109_P4_early in 455.8s
+2026-11-14 14:19:44 summary written
+2026-11-14 14:19:45 TRAIN A_seed20261110_P4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 148.48it/s]Loading weights:  46%|████▋     | 144/311 [00:00<00:00, 812.20it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 1005.25it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 925.15it/s] 
+2026-11-14 14:19:47 p4 plan P4_early items 22 tracked [('list_tables', 95, 11), ('median_nat', 95, 11), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7469 seconds 285.74
+2026-11-14 14:20:35 TRAIN done A_seed20261110_P4_early steps=23 replay_tokens=7469 sum_after={'filter': 9, 'list_tables': 11, 'median_nat': 11}
+2026-11-14 14:20:36 EVAL A_seed20261110_P4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 209.43it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 820.31it/s]Loading weights:  88%|████████▊ | 274/311 [00:00<00:00, 1020.59it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 936.61it/s] 
+eval P4_B1_A_seed20261110_P4_early database n 24
+eval P4_B1_A_seed20261110_P4_early database 10
+eval P4_B1_A_seed20261110_P4_early database 20
+eval done P4_B1_A_seed20261110_P4_early database final 0.916667 peak_gpu_gb 0.593
+2026-11-14 14:21:47   done A_seed20261110_P4_early lt_probe n=24 68.5s
+eval P4_B1_A_seed20261110_P4_early database n 30
+eval P4_B1_A_seed20261110_P4_early database 10
+eval P4_B1_A_seed20261110_P4_early database 20
+eval P4_B1_A_seed20261110_P4_early database 30
+eval done P4_B1_A_seed20261110_P4_early database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 14:23:12   done A_seed20261110_P4_early p2_database n=30 84.1s
+eval P4_B1_A_seed20261110_P4_early python n 30
+eval P4_B1_A_seed20261110_P4_early python 10
+eval P4_B1_A_seed20261110_P4_early python 20
+eval P4_B1_A_seed20261110_P4_early python 30
+eval done P4_B1_A_seed20261110_P4_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 14:25:22   done A_seed20261110_P4_early natv2_python n=30 129.8s
+eval P4_B1_A_seed20261110_P4_early database n 30
+eval P4_B1_A_seed20261110_P4_early database 10
+eval P4_B1_A_seed20261110_P4_early database 20
+eval P4_B1_A_seed20261110_P4_early database 30
+eval done P4_B1_A_seed20261110_P4_early database final 0.9 peak_gpu_gb 0.601
+2026-11-14 14:27:40   done A_seed20261110_P4_early natv2_database n=30 131.1s
+eval P4_B1_A_seed20261110_P4_early calendar n 30
+eval P4_B1_A_seed20261110_P4_early calendar 10
+eval P4_B1_A_seed20261110_P4_early calendar 20
+eval P4_B1_A_seed20261110_P4_early calendar 30
+eval done P4_B1_A_seed20261110_P4_early calendar final 0.466667 peak_gpu_gb 0.925
+2026-11-14 14:28:57   done A_seed20261110_P4_early v3fix n=30 72.1s
+2026-11-14 14:28:58 EVAL done A_seed20261110_P4_early in 502.2s
+2026-11-14 14:28:58 summary written
+2026-11-14 14:29:00 TRAIN A_seed20261108_P4_mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 256.71it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 873.20it/s]Loading weights:  94%|█████████▍| 292/311 [00:00<00:00, 1079.81it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 964.55it/s] 
+2026-11-14 14:29:02 p4 plan P4_mid items 22 tracked [('list_tables', 127, 6), ('median_nat', 127, 6), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7455 seconds 193.38
+2026-11-14 14:29:44 TRAIN done A_seed20261108_P4_mid steps=23 replay_tokens=7455 sum_after={'filter': 9, 'list_tables': 6, 'median_nat': 6}
+2026-11-14 14:29:45 EVAL A_seed20261108_P4_mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 256.37it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 860.35it/s]Loading weights:  95%|█████████▍| 294/311 [00:00<00:00, 1101.24it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 993.18it/s] 
+eval P4_B1_A_seed20261108_P4_mid database n 24
+eval P4_B1_A_seed20261108_P4_mid database 10
+eval P4_B1_A_seed20261108_P4_mid database 20
+eval done P4_B1_A_seed20261108_P4_mid database final 1.0 peak_gpu_gb 0.592
+2026-11-14 14:30:49   done A_seed20261108_P4_mid lt_probe n=24 62.7s
+eval P4_B1_A_seed20261108_P4_mid database n 30
+eval P4_B1_A_seed20261108_P4_mid database 10
+eval P4_B1_A_seed20261108_P4_mid database 20
+eval P4_B1_A_seed20261108_P4_mid database 30
+eval done P4_B1_A_seed20261108_P4_mid database final 0.633333 peak_gpu_gb 0.602
+2026-11-14 14:32:20   done A_seed20261108_P4_mid p2_database n=30 90.1s
+eval P4_B1_A_seed20261108_P4_mid python n 30
+eval P4_B1_A_seed20261108_P4_mid python 10
+eval P4_B1_A_seed20261108_P4_mid python 20
+eval P4_B1_A_seed20261108_P4_mid python 30
+eval done P4_B1_A_seed20261108_P4_mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 14:34:30   done A_seed20261108_P4_mid natv2_python n=30 129.4s
+eval P4_B1_A_seed20261108_P4_mid database n 30
+eval P4_B1_A_seed20261108_P4_mid database 10
+eval P4_B1_A_seed20261108_P4_mid database 20
+eval P4_B1_A_seed20261108_P4_mid database 30
+eval done P4_B1_A_seed20261108_P4_mid database final 0.966667 peak_gpu_gb 0.601
+2026-11-14 14:36:39   done A_seed20261108_P4_mid natv2_database n=30 127.7s
+eval P4_B1_A_seed20261108_P4_mid calendar n 30
+eval P4_B1_A_seed20261108_P4_mid calendar 10
+eval P4_B1_A_seed20261108_P4_mid calendar 20
+eval P4_B1_A_seed20261108_P4_mid calendar 30
+eval done P4_B1_A_seed20261108_P4_mid calendar final 0.3 peak_gpu_gb 0.925
+2026-11-14 14:37:50   done A_seed20261108_P4_mid v3fix n=30 70.7s
+2026-11-14 14:37:50 EVAL done A_seed20261108_P4_mid in 485.4s
+2026-11-14 14:37:51 summary written
+2026-11-14 14:37:52 TRAIN A_seed20261109_P4_mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.16it/s]Loading weights:  44%|████▍     | 137/311 [00:00<00:00, 772.77it/s]Loading weights:  87%|████████▋ | 271/311 [00:00<00:00, 1030.56it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 939.73it/s] 
+2026-11-14 14:37:54 p4 plan P4_mid items 22 tracked [('list_tables', 127, 6), ('median_nat', 127, 6), ('filter', 143, 4), ('filter', 143, 4), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7465 seconds 207.29
+2026-11-14 14:38:33 TRAIN done A_seed20261109_P4_mid steps=23 replay_tokens=7465 sum_after={'filter': 11, 'list_tables': 6, 'median_nat': 6}
+2026-11-14 14:38:34 EVAL A_seed20261109_P4_mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 34/311 [00:00<00:00, 337.39it/s]Loading weights:  58%|█████▊    | 180/311 [00:00<00:00, 991.98it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1069.24it/s]
+eval P4_B1_A_seed20261109_P4_mid database n 24
+eval P4_B1_A_seed20261109_P4_mid database 10
+eval P4_B1_A_seed20261109_P4_mid database 20
+eval done P4_B1_A_seed20261109_P4_mid database final 1.0 peak_gpu_gb 0.592
+2026-11-14 14:39:32   done A_seed20261109_P4_mid lt_probe n=24 56.0s
+eval P4_B1_A_seed20261109_P4_mid database n 30
+eval P4_B1_A_seed20261109_P4_mid database 10
+eval P4_B1_A_seed20261109_P4_mid database 20
+eval P4_B1_A_seed20261109_P4_mid database 30
+eval done P4_B1_A_seed20261109_P4_mid database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 14:40:53   done A_seed20261109_P4_mid p2_database n=30 80.9s
+eval P4_B1_A_seed20261109_P4_mid python n 30
+eval P4_B1_A_seed20261109_P4_mid python 10
+eval P4_B1_A_seed20261109_P4_mid python 20
+eval P4_B1_A_seed20261109_P4_mid python 30
+eval done P4_B1_A_seed20261109_P4_mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 14:43:02   done A_seed20261109_P4_mid natv2_python n=30 127.5s
+eval P4_B1_A_seed20261109_P4_mid database n 30
+eval P4_B1_A_seed20261109_P4_mid database 10
+eval P4_B1_A_seed20261109_P4_mid database 20
+eval P4_B1_A_seed20261109_P4_mid database 30
+eval done P4_B1_A_seed20261109_P4_mid database final 0.933333 peak_gpu_gb 0.601
+2026-11-14 14:45:04   done A_seed20261109_P4_mid natv2_database n=30 122.1s
+eval P4_B1_A_seed20261109_P4_mid calendar n 30
+eval P4_B1_A_seed20261109_P4_mid calendar 10
+eval P4_B1_A_seed20261109_P4_mid calendar 20
+eval P4_B1_A_seed20261109_P4_mid calendar 30
+eval done P4_B1_A_seed20261109_P4_mid calendar final 0.333333 peak_gpu_gb 0.925
+2026-11-14 14:46:20   done A_seed20261109_P4_mid v3fix n=30 75.2s
+2026-11-14 14:46:21 EVAL done A_seed20261109_P4_mid in 467.2s
+2026-11-14 14:46:21 summary written
+2026-11-14 14:46:22 TRAIN A_seed20261110_P4_mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 366.57it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 999.64it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1086.22it/s]
+2026-11-14 14:46:25 p4 plan P4_mid items 22 tracked [('list_tables', 127, 6), ('median_nat', 127, 6), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7469 seconds 282.71
+2026-11-14 14:47:10 TRAIN done A_seed20261110_P4_mid steps=23 replay_tokens=7469 sum_after={'filter': 9, 'list_tables': 6, 'median_nat': 6}
+2026-11-14 14:47:10 EVAL A_seed20261110_P4_mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 279.76it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 889.49it/s]Loading weights:  85%|████████▌ | 265/311 [00:00<00:00, 960.33it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 898.46it/s]
+eval P4_B1_A_seed20261110_P4_mid database n 24
+eval P4_B1_A_seed20261110_P4_mid database 10
+eval P4_B1_A_seed20261110_P4_mid database 20
+eval done P4_B1_A_seed20261110_P4_mid database final 0.791667 peak_gpu_gb 0.593
+2026-11-14 14:48:21   done A_seed20261110_P4_mid lt_probe n=24 69.2s
+eval P4_B1_A_seed20261110_P4_mid database n 30
+eval P4_B1_A_seed20261110_P4_mid database 10
+eval P4_B1_A_seed20261110_P4_mid database 20
+eval P4_B1_A_seed20261110_P4_mid database 30
+eval done P4_B1_A_seed20261110_P4_mid database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 14:49:53   done A_seed20261110_P4_mid p2_database n=30 91.2s
+eval P4_B1_A_seed20261110_P4_mid python n 30
+eval P4_B1_A_seed20261110_P4_mid python 10
+eval P4_B1_A_seed20261110_P4_mid python 20
+eval P4_B1_A_seed20261110_P4_mid python 30
+eval done P4_B1_A_seed20261110_P4_mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 14:51:58   done A_seed20261110_P4_mid natv2_python n=30 123.3s
+eval P4_B1_A_seed20261110_P4_mid database n 30
+eval P4_B1_A_seed20261110_P4_mid database 10
+eval P4_B1_A_seed20261110_P4_mid database 20
+eval P4_B1_A_seed20261110_P4_mid database 30
+eval done P4_B1_A_seed20261110_P4_mid database final 0.9 peak_gpu_gb 0.601
+2026-11-14 14:54:00   done A_seed20261110_P4_mid natv2_database n=30 121.7s
+eval P4_B1_A_seed20261110_P4_mid calendar n 30
+eval P4_B1_A_seed20261110_P4_mid calendar 10
+eval P4_B1_A_seed20261110_P4_mid calendar 20
+eval P4_B1_A_seed20261110_P4_mid calendar 30
+eval done P4_B1_A_seed20261110_P4_mid calendar final 0.433333 peak_gpu_gb 0.925
+2026-11-14 15:00:19   done A_seed20261110_P4_mid v3fix n=30 373.8s
+2026-11-14 15:00:21 EVAL done A_seed20261110_P4_mid in 790.6s
+2026-11-14 15:00:22 summary written
+2026-11-14 15:00:23 TRAIN A_seed20261108_P4_late
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:22, 13.94it/s]Loading weights:  30%|███       | 94/311 [00:00<00:00, 462.94it/s]Loading weights:  54%|█████▍    | 168/311 [00:00<00:00, 577.60it/s]Loading weights:  79%|███████▉  | 247/311 [00:00<00:00, 651.15it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 590.31it/s]
+2026-11-14 15:00:26 p4 plan P4_late items 22 tracked [('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('list_tables', 159, 1), ('filter', 159, 1), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7455 seconds 191.21
+2026-11-14 15:01:06 TRAIN done A_seed20261108_P4_late steps=23 replay_tokens=7455 sum_after={'filter': 9, 'list_tables': 1, 'median_nat': 1}
+2026-11-14 15:01:06 EVAL A_seed20261108_P4_late suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.50it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 842.37it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 1136.43it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1000.68it/s]
+eval P4_B1_A_seed20261108_P4_late database n 24
+eval P4_B1_A_seed20261108_P4_late database 10
+eval P4_B1_A_seed20261108_P4_late database 20
+eval done P4_B1_A_seed20261108_P4_late database final 0.833333 peak_gpu_gb 0.593
+2026-11-14 15:02:09   done A_seed20261108_P4_late lt_probe n=24 61.2s
+eval P4_B1_A_seed20261108_P4_late database n 30
+eval P4_B1_A_seed20261108_P4_late database 10
+eval P4_B1_A_seed20261108_P4_late database 20
+eval P4_B1_A_seed20261108_P4_late database 30
+eval done P4_B1_A_seed20261108_P4_late database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 15:03:37   done A_seed20261108_P4_late p2_database n=30 87.4s
+eval P4_B1_A_seed20261108_P4_late python n 30
+eval P4_B1_A_seed20261108_P4_late python 10
+eval P4_B1_A_seed20261108_P4_late python 20
+eval P4_B1_A_seed20261108_P4_late python 30
+eval done P4_B1_A_seed20261108_P4_late python final 1.0 peak_gpu_gb 0.604
+2026-11-14 15:05:37   done A_seed20261108_P4_late natv2_python n=30 118.7s
+eval P4_B1_A_seed20261108_P4_late database n 30
+eval P4_B1_A_seed20261108_P4_late database 10
+eval P4_B1_A_seed20261108_P4_late database 20
+eval P4_B1_A_seed20261108_P4_late database 30
+eval done P4_B1_A_seed20261108_P4_late database final 0.933333 peak_gpu_gb 0.603
+2026-11-14 15:07:35   done A_seed20261108_P4_late natv2_database n=30 117.5s
+eval P4_B1_A_seed20261108_P4_late calendar n 30
+eval P4_B1_A_seed20261108_P4_late calendar 10
+eval P4_B1_A_seed20261108_P4_late calendar 20
+eval P4_B1_A_seed20261108_P4_late calendar 30
+eval done P4_B1_A_seed20261108_P4_late calendar final 0.3 peak_gpu_gb 0.925
+2026-11-14 15:08:42   done A_seed20261108_P4_late v3fix n=30 66.5s
+2026-11-14 15:08:42 EVAL done A_seed20261108_P4_late in 455.4s
+2026-11-14 15:08:42 summary written
+2026-11-14 15:08:43 TRAIN A_seed20261109_P4_late
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 199.06it/s]Loading weights:  53%|█████▎    | 164/311 [00:00<00:00, 923.33it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 1075.64it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 982.44it/s] 
+2026-11-14 15:08:46 p4 plan P4_late items 22 tracked [('filter', 143, 4), ('filter', 143, 4), ('filter', 151, 2), ('filter', 159, 1), ('list_tables', 159, 1), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7465 seconds 211.03
+2026-11-14 15:09:28 TRAIN done A_seed20261109_P4_late steps=23 replay_tokens=7465 sum_after={'filter': 11, 'list_tables': 1, 'median_nat': 1}
+2026-11-14 15:09:29 EVAL A_seed20261109_P4_late suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 319.02it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 923.99it/s]Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 1005.48it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 953.63it/s] 
+eval P4_B1_A_seed20261109_P4_late database n 24
+eval P4_B1_A_seed20261109_P4_late database 10
+eval P4_B1_A_seed20261109_P4_late database 20
+eval done P4_B1_A_seed20261109_P4_late database final 1.0 peak_gpu_gb 0.593
+2026-11-14 15:10:29   done A_seed20261109_P4_late lt_probe n=24 58.8s
+eval P4_B1_A_seed20261109_P4_late database n 30
+eval P4_B1_A_seed20261109_P4_late database 10
+eval P4_B1_A_seed20261109_P4_late database 20
+eval P4_B1_A_seed20261109_P4_late database 30
+eval done P4_B1_A_seed20261109_P4_late database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 15:11:50   done A_seed20261109_P4_late p2_database n=30 80.0s
+eval P4_B1_A_seed20261109_P4_late python n 30
+eval P4_B1_A_seed20261109_P4_late python 10
+eval P4_B1_A_seed20261109_P4_late python 20
+eval P4_B1_A_seed20261109_P4_late python 30
+eval done P4_B1_A_seed20261109_P4_late python final 1.0 peak_gpu_gb 0.604
+2026-11-14 15:13:49   done A_seed20261109_P4_late natv2_python n=30 118.6s
+eval P4_B1_A_seed20261109_P4_late database n 30
+eval P4_B1_A_seed20261109_P4_late database 10
+eval P4_B1_A_seed20261109_P4_late database 20
+eval P4_B1_A_seed20261109_P4_late database 30
+eval done P4_B1_A_seed20261109_P4_late database final 0.933333 peak_gpu_gb 0.601
+2026-11-14 15:15:37   done A_seed20261109_P4_late natv2_database n=30 107.8s
+eval P4_B1_A_seed20261109_P4_late calendar n 30
+eval P4_B1_A_seed20261109_P4_late calendar 10
+eval P4_B1_A_seed20261109_P4_late calendar 20
+eval P4_B1_A_seed20261109_P4_late calendar 30
+eval done P4_B1_A_seed20261109_P4_late calendar final 0.366667 peak_gpu_gb 0.925
+2026-11-14 15:16:47   done A_seed20261109_P4_late v3fix n=30 69.0s
+2026-11-14 15:16:48 EVAL done A_seed20261109_P4_late in 439.6s
+2026-11-14 15:16:49 summary written
+2026-11-14 15:16:50 TRAIN A_seed20261110_P4_late
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 349.84it/s]Loading weights:  58%|█████▊    | 180/311 [00:00<00:00, 995.64it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1065.10it/s]
+2026-11-14 15:16:52 p4 plan P4_late items 22 tracked [('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('list_tables', 159, 1), ('median_nat', 159, 1), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7469 seconds 288.53
+2026-11-14 15:17:43 TRAIN done A_seed20261110_P4_late steps=23 replay_tokens=7469 sum_after={'filter': 9, 'list_tables': 1, 'median_nat': 1}
+2026-11-14 15:17:44 EVAL A_seed20261110_P4_late suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/311 [00:00<00:05, 58.97it/s]Loading weights:  42%|████▏     | 130/311 [00:00<00:00, 746.83it/s]Loading weights:  89%|████████▉ | 277/311 [00:00<00:00, 1074.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 953.00it/s] 
+eval P4_B1_A_seed20261110_P4_late database n 24
+eval P4_B1_A_seed20261110_P4_late database 10
+eval P4_B1_A_seed20261110_P4_late database 20
+eval done P4_B1_A_seed20261110_P4_late database final 0.875 peak_gpu_gb 0.593
+2026-11-14 15:18:41   done A_seed20261110_P4_late lt_probe n=24 56.2s
+eval P4_B1_A_seed20261110_P4_late database n 30
+eval P4_B1_A_seed20261110_P4_late database 10
+eval P4_B1_A_seed20261110_P4_late database 20
+eval P4_B1_A_seed20261110_P4_late database 30
+eval done P4_B1_A_seed20261110_P4_late database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 15:25:20   done A_seed20261110_P4_late p2_database n=30 387.5s
+eval P4_B1_A_seed20261110_P4_late python n 30
+eval P4_B1_A_seed20261110_P4_late python 10
+eval P4_B1_A_seed20261110_P4_late python 20
+eval P4_B1_A_seed20261110_P4_late python 30
+eval done P4_B1_A_seed20261110_P4_late python final 1.0 peak_gpu_gb 0.604
+2026-11-14 15:27:13   done A_seed20261110_P4_late natv2_python n=30 110.5s
+eval P4_B1_A_seed20261110_P4_late database n 30
+eval P4_B1_A_seed20261110_P4_late database 10
+eval P4_B1_A_seed20261110_P4_late database 20
+eval P4_B1_A_seed20261110_P4_late database 30
+eval done P4_B1_A_seed20261110_P4_late database final 0.9 peak_gpu_gb 0.601
+2026-11-14 15:29:04   done A_seed20261110_P4_late natv2_database n=30 108.6s
+eval P4_B1_A_seed20261110_P4_late calendar n 30
+eval P4_B1_A_seed20261110_P4_late calendar 10
+eval P4_B1_A_seed20261110_P4_late calendar 20
+eval P4_B1_A_seed20261110_P4_late calendar 30
+eval done P4_B1_A_seed20261110_P4_late calendar final 0.4 peak_gpu_gb 0.925
+2026-11-14 15:30:09   done A_seed20261110_P4_late v3fix n=30 64.7s
+2026-11-14 15:30:10 EVAL done A_seed20261110_P4_late in 746.9s
+2026-11-14 15:30:11 summary written
+2026-11-14 15:30:12 TRAIN A_seed20261108_P4_LT2mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 18.14it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 628.42it/s]Loading weights:  68%|██████▊   | 213/311 [00:00<00:00, 796.36it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 782.88it/s]
+2026-11-14 15:30:15 p4 plan P4_LT2mid items 22 tracked [('list_tables', 127, 6), ('list_tables', 127, 6), ('median_nat', 135, 5), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7386 seconds 192.71
+2026-11-14 15:30:56 TRAIN done A_seed20261108_P4_LT2mid steps=23 replay_tokens=7386 sum_after={'filter': 9, 'list_tables': 12, 'median_nat': 5}
+2026-11-14 15:30:57 EVAL A_seed20261108_P4_LT2mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 22/311 [00:00<00:01, 219.39it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 870.02it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 1124.90it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1004.43it/s]
+eval P4_B1_A_seed20261108_P4_LT2mid database n 24
+eval P4_B1_A_seed20261108_P4_LT2mid database 10
+eval P4_B1_A_seed20261108_P4_LT2mid database 20
+eval done P4_B1_A_seed20261108_P4_LT2mid database final 0.958333 peak_gpu_gb 0.593
+2026-11-14 15:31:50   done A_seed20261108_P4_LT2mid lt_probe n=24 51.6s
+eval P4_B1_A_seed20261108_P4_LT2mid database n 30
+eval P4_B1_A_seed20261108_P4_LT2mid database 10
+eval P4_B1_A_seed20261108_P4_LT2mid database 20
+eval P4_B1_A_seed20261108_P4_LT2mid database 30
+eval done P4_B1_A_seed20261108_P4_LT2mid database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 15:33:10   done A_seed20261108_P4_LT2mid p2_database n=30 79.9s
+eval P4_B1_A_seed20261108_P4_LT2mid python n 30
+eval P4_B1_A_seed20261108_P4_LT2mid python 10
+eval P4_B1_A_seed20261108_P4_LT2mid python 20
+eval P4_B1_A_seed20261108_P4_LT2mid python 30
+eval done P4_B1_A_seed20261108_P4_LT2mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 15:35:06   done A_seed20261108_P4_LT2mid natv2_python n=30 114.6s
+eval P4_B1_A_seed20261108_P4_LT2mid database n 30
+eval P4_B1_A_seed20261108_P4_LT2mid database 10
+eval P4_B1_A_seed20261108_P4_LT2mid database 20
+eval P4_B1_A_seed20261108_P4_LT2mid database 30
+eval done P4_B1_A_seed20261108_P4_LT2mid database final 0.966667 peak_gpu_gb 0.601
+2026-11-14 15:36:57   done A_seed20261108_P4_LT2mid natv2_database n=30 111.4s
+eval P4_B1_A_seed20261108_P4_LT2mid calendar n 30
+eval P4_B1_A_seed20261108_P4_LT2mid calendar 10
+eval P4_B1_A_seed20261108_P4_LT2mid calendar 20
+eval P4_B1_A_seed20261108_P4_LT2mid calendar 30
+eval done P4_B1_A_seed20261108_P4_LT2mid calendar final 0.266667 peak_gpu_gb 0.925
+2026-11-14 15:38:05   done A_seed20261108_P4_LT2mid v3fix n=30 67.2s
+2026-11-14 15:38:06 EVAL done A_seed20261108_P4_LT2mid in 428.8s
+2026-11-14 15:38:06 summary written
+2026-11-14 15:38:07 TRAIN A_seed20261109_P4_LT2mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 258.20it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 885.57it/s]Loading weights:  96%|█████████▌| 299/311 [00:00<00:00, 1111.71it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 995.61it/s] 
+2026-11-14 15:38:10 p4 plan P4_LT2mid items 22 tracked [('list_tables', 127, 6), ('list_tables', 127, 6), ('median_nat', 135, 5), ('filter', 143, 4), ('filter', 143, 4), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7396 seconds 209.2
+2026-11-14 15:38:50 TRAIN done A_seed20261109_P4_LT2mid steps=23 replay_tokens=7396 sum_after={'filter': 11, 'list_tables': 12, 'median_nat': 5}
+2026-11-14 15:38:51 EVAL A_seed20261109_P4_LT2mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 268.27it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 688.25it/s]Loading weights:  83%|████████▎ | 257/311 [00:00<00:00, 969.37it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 869.49it/s]
+eval P4_B1_A_seed20261109_P4_LT2mid database n 24
+eval P4_B1_A_seed20261109_P4_LT2mid database 10
+eval P4_B1_A_seed20261109_P4_LT2mid database 20
+eval done P4_B1_A_seed20261109_P4_LT2mid database final 1.0 peak_gpu_gb 0.592
+2026-11-14 15:39:39   done A_seed20261109_P4_LT2mid lt_probe n=24 46.6s
+eval P4_B1_A_seed20261109_P4_LT2mid database n 30
+eval P4_B1_A_seed20261109_P4_LT2mid database 10
+eval P4_B1_A_seed20261109_P4_LT2mid database 20
+eval P4_B1_A_seed20261109_P4_LT2mid database 30
+eval done P4_B1_A_seed20261109_P4_LT2mid database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 15:41:07   done A_seed20261109_P4_LT2mid p2_database n=30 87.1s
+eval P4_B1_A_seed20261109_P4_LT2mid python n 30
+eval P4_B1_A_seed20261109_P4_LT2mid python 10
+eval P4_B1_A_seed20261109_P4_LT2mid python 20
+eval P4_B1_A_seed20261109_P4_LT2mid python 30
+eval done P4_B1_A_seed20261109_P4_LT2mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 15:43:20   done A_seed20261109_P4_LT2mid natv2_python n=30 132.7s
+eval P4_B1_A_seed20261109_P4_LT2mid database n 30
+eval P4_B1_A_seed20261109_P4_LT2mid database 10
+eval P4_B1_A_seed20261109_P4_LT2mid database 20
+eval P4_B1_A_seed20261109_P4_LT2mid database 30
+eval done P4_B1_A_seed20261109_P4_LT2mid database final 0.933333 peak_gpu_gb 0.601
+2026-11-14 15:45:29   done A_seed20261109_P4_LT2mid natv2_database n=30 128.6s
+eval P4_B1_A_seed20261109_P4_LT2mid calendar n 30
+eval P4_B1_A_seed20261109_P4_LT2mid calendar 10
+eval P4_B1_A_seed20261109_P4_LT2mid calendar 20
+eval P4_B1_A_seed20261109_P4_LT2mid calendar 30
+eval done P4_B1_A_seed20261109_P4_LT2mid calendar final 0.366667 peak_gpu_gb 0.925
+2026-11-14 15:46:42   done A_seed20261109_P4_LT2mid v3fix n=30 72.0s
+2026-11-14 15:46:42 EVAL done A_seed20261109_P4_LT2mid in 471.7s
+2026-11-14 15:46:43 summary written
+2026-11-14 15:46:44 TRAIN A_seed20261110_P4_LT2mid
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 347.67it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 924.98it/s]Loading weights: 100%|█████████▉| 310/311 [00:00<00:00, 1141.76it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1025.91it/s]
+2026-11-14 15:46:46 p4 plan P4_LT2mid items 22 tracked [('list_tables', 127, 6), ('list_tables', 127, 6), ('median_nat', 135, 5), ('filter', 143, 4), ('filter', 151, 2), ('filter', 151, 2), ('filter', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7396 seconds 550.08
+2026-11-14 15:51:59 TRAIN done A_seed20261110_P4_LT2mid steps=23 replay_tokens=7396 sum_after={'filter': 9, 'list_tables': 12, 'median_nat': 5}
+2026-11-14 15:51:59 EVAL A_seed20261110_P4_LT2mid suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 34/311 [00:00<00:00, 338.71it/s]Loading weights:  55%|█████▍    | 171/311 [00:00<00:00, 937.42it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1033.04it/s]
+eval P4_B1_A_seed20261110_P4_LT2mid database n 24
+eval P4_B1_A_seed20261110_P4_LT2mid database 10
+eval P4_B1_A_seed20261110_P4_LT2mid database 20
+eval done P4_B1_A_seed20261110_P4_LT2mid database final 0.875 peak_gpu_gb 0.592
+2026-11-14 15:52:58   done A_seed20261110_P4_LT2mid lt_probe n=24 57.1s
+eval P4_B1_A_seed20261110_P4_LT2mid database n 30
+eval P4_B1_A_seed20261110_P4_LT2mid database 10
+eval P4_B1_A_seed20261110_P4_LT2mid database 20
+eval P4_B1_A_seed20261110_P4_LT2mid database 30
+eval done P4_B1_A_seed20261110_P4_LT2mid database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 16:01:44   done A_seed20261110_P4_LT2mid p2_database n=30 525.6s
+eval P4_B1_A_seed20261110_P4_LT2mid python n 30
+eval P4_B1_A_seed20261110_P4_LT2mid python 10
+eval P4_B1_A_seed20261110_P4_LT2mid python 20
+eval P4_B1_A_seed20261110_P4_LT2mid python 30
+eval done P4_B1_A_seed20261110_P4_LT2mid python final 1.0 peak_gpu_gb 0.604
+2026-11-14 16:12:17   done A_seed20261110_P4_LT2mid natv2_python n=30 632.2s
+eval P4_B1_A_seed20261110_P4_LT2mid database n 30
+eval P4_B1_A_seed20261110_P4_LT2mid database 10
+eval P4_B1_A_seed20261110_P4_LT2mid database 20
+eval P4_B1_A_seed20261110_P4_LT2mid database 30
+eval done P4_B1_A_seed20261110_P4_LT2mid database final 0.8 peak_gpu_gb 0.603
+2026-11-14 16:14:07   done A_seed20261110_P4_LT2mid natv2_database n=30 109.0s
+eval P4_B1_A_seed20261110_P4_LT2mid calendar n 30
+eval P4_B1_A_seed20261110_P4_LT2mid calendar 10
+eval P4_B1_A_seed20261110_P4_LT2mid calendar 20
+eval P4_B1_A_seed20261110_P4_LT2mid calendar 30
+eval done P4_B1_A_seed20261110_P4_LT2mid calendar final 0.433333 peak_gpu_gb 0.925
+2026-11-14 16:30:30   done A_seed20261110_P4_LT2mid v3fix n=30 980.8s
+2026-11-14 16:30:32 EVAL done A_seed20261110_P4_LT2mid in 2312.6s
+2026-11-14 16:30:33 summary written
+2026-11-14 16:30:34 TRAIN A_seed20261108_db2_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 308.51it/s]Loading weights:  41%|████      | 127/311 [00:00<00:00, 687.83it/s]Loading weights:  86%|████████▌ | 267/311 [00:00<00:00, 1011.84it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 898.28it/s] 
+2026-11-14 16:30:37 p4 plan db2_early items 23 tracked [('list_tables', 95, 11), ('list_tables', 119, 7), ('filter', 127, 6), ('filter', 127, 6), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 191.22
+2026-11-14 16:31:17 TRAIN done A_seed20261108_db2_early steps=23 replay_tokens=7494 sum_after={'filter': 12, 'list_tables': 18, 'median_nat': 1}
+2026-11-14 16:31:17 EVAL A_seed20261108_db2_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 309.14it/s]Loading weights:  44%|████▍     | 137/311 [00:00<00:00, 749.48it/s]Loading weights:  83%|████████▎ | 259/311 [00:00<00:00, 962.87it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 911.41it/s]
+eval P4_B1_A_seed20261108_db2_early database n 24
+eval P4_B1_A_seed20261108_db2_early database 10
+eval P4_B1_A_seed20261108_db2_early database 20
+eval done P4_B1_A_seed20261108_db2_early database final 1.0 peak_gpu_gb 0.593
+2026-11-14 16:32:09   done A_seed20261108_db2_early lt_probe n=24 49.8s
+eval P4_B1_A_seed20261108_db2_early database n 30
+eval P4_B1_A_seed20261108_db2_early database 10
+eval P4_B1_A_seed20261108_db2_early database 20
+eval P4_B1_A_seed20261108_db2_early database 30
+eval done P4_B1_A_seed20261108_db2_early database final 0.633333 peak_gpu_gb 0.602
+2026-11-14 16:33:27   done A_seed20261108_db2_early p2_database n=30 78.3s
+eval P4_B1_A_seed20261108_db2_early python n 30
+eval P4_B1_A_seed20261108_db2_early python 10
+eval P4_B1_A_seed20261108_db2_early python 20
+eval P4_B1_A_seed20261108_db2_early python 30
+eval done P4_B1_A_seed20261108_db2_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 16:35:21   done A_seed20261108_db2_early natv2_python n=30 113.4s
+eval P4_B1_A_seed20261108_db2_early database n 30
+eval P4_B1_A_seed20261108_db2_early database 10
+eval P4_B1_A_seed20261108_db2_early database 20
+eval P4_B1_A_seed20261108_db2_early database 30
+eval done P4_B1_A_seed20261108_db2_early database final 0.966667 peak_gpu_gb 0.601
+2026-11-14 16:37:12   done A_seed20261108_db2_early natv2_database n=30 110.0s
+eval P4_B1_A_seed20261108_db2_early calendar n 30
+eval P4_B1_A_seed20261108_db2_early calendar 10
+eval P4_B1_A_seed20261108_db2_early calendar 20
+eval P4_B1_A_seed20261108_db2_early calendar 30
+eval done P4_B1_A_seed20261108_db2_early calendar final 0.3 peak_gpu_gb 0.925
+2026-11-14 16:38:18   done A_seed20261108_db2_early v3fix n=30 65.6s
+2026-11-14 16:38:18 EVAL done A_seed20261108_db2_early in 421.3s
+2026-11-14 16:38:20 summary written
+2026-11-14 16:38:21 TRAIN A_seed20261109_db2_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.07it/s]Loading weights:  40%|███▉      | 123/311 [00:00<00:00, 691.87it/s]Loading weights:  77%|███████▋  | 240/311 [00:00<00:00, 906.43it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 854.09it/s]
+2026-11-14 16:38:24 p4 plan db2_early items 22 tracked [('filter', 127, 6), ('filter', 127, 6), ('median_nat', 159, 1), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 208.32
+2026-11-14 16:39:03 TRAIN done A_seed20261109_db2_early steps=23 replay_tokens=7494 sum_after={'filter': 12, 'list_tables': 0, 'median_nat': 2}
+2026-11-14 16:39:04 EVAL A_seed20261109_db2_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 9/311 [00:00<00:03, 89.43it/s]Loading weights:  41%|████      | 126/311 [00:00<00:00, 720.00it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 1044.58it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 945.73it/s] 
+eval P4_B1_A_seed20261109_db2_early database n 24
+eval P4_B1_A_seed20261109_db2_early database 10
+eval P4_B1_A_seed20261109_db2_early database 20
+eval done P4_B1_A_seed20261109_db2_early database final 1.0 peak_gpu_gb 0.593
+2026-11-14 16:40:10   done A_seed20261109_db2_early lt_probe n=24 64.3s
+eval P4_B1_A_seed20261109_db2_early database n 30
+eval P4_B1_A_seed20261109_db2_early database 10
+eval P4_B1_A_seed20261109_db2_early database 20
+eval P4_B1_A_seed20261109_db2_early database 30
+eval done P4_B1_A_seed20261109_db2_early database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 16:41:42   done A_seed20261109_db2_early p2_database n=30 91.7s
+eval P4_B1_A_seed20261109_db2_early python n 30
+eval P4_B1_A_seed20261109_db2_early python 10
+eval P4_B1_A_seed20261109_db2_early python 20
+eval P4_B1_A_seed20261109_db2_early python 30
+eval done P4_B1_A_seed20261109_db2_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 16:43:44   done A_seed20261109_db2_early natv2_python n=30 121.7s
+eval P4_B1_A_seed20261109_db2_early database n 30
+eval P4_B1_A_seed20261109_db2_early database 10
+eval P4_B1_A_seed20261109_db2_early database 20
+eval P4_B1_A_seed20261109_db2_early database 30
+eval done P4_B1_A_seed20261109_db2_early database final 0.933333 peak_gpu_gb 0.601
+2026-11-14 16:45:36   done A_seed20261109_db2_early natv2_database n=30 111.2s
+eval P4_B1_A_seed20261109_db2_early calendar n 30
+eval P4_B1_A_seed20261109_db2_early calendar 10
+eval P4_B1_A_seed20261109_db2_early calendar 20
+eval P4_B1_A_seed20261109_db2_early calendar 30
+eval done P4_B1_A_seed20261109_db2_early calendar final 0.366667 peak_gpu_gb 0.925
+2026-11-14 16:46:46   done A_seed20261109_db2_early v3fix n=30 69.5s
+2026-11-14 16:46:47 EVAL done A_seed20261109_db2_early in 463.0s
+2026-11-14 16:46:48 summary written
+2026-11-14 16:46:49 TRAIN A_seed20261110_db2_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 308.83it/s]Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 942.66it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1053.49it/s]
+2026-11-14 16:46:51 p4 plan db2_early items 22 tracked [('filter', 127, 6), ('filter', 127, 6), ('median_nat', 151, 2), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7492 seconds 1882.32
+2026-11-14 17:14:15 TRAIN done A_seed20261110_db2_early steps=23 replay_tokens=7492 sum_after={'filter': 12, 'list_tables': 0, 'median_nat': 3}
+2026-11-14 17:14:17 EVAL A_seed20261110_db2_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:49,  6.30it/s]Loading weights:   1%|          | 2/311 [00:00<00:46,  6.57it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:02, 129.65it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 285.18it/s]Loading weights:  52%|█████▏    | 162/311 [00:00<00:00, 399.20it/s]Loading weights:  72%|███████▏  | 225/311 [00:00<00:00, 463.67it/s]Loading weights:  91%|█████████▏| 284/311 [00:00<00:00, 493.31it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 362.58it/s]
+eval P4_B1_A_seed20261110_db2_early database n 24
+eval P4_B1_A_seed20261110_db2_early database 10
+eval P4_B1_A_seed20261110_db2_early database 20
+eval done P4_B1_A_seed20261110_db2_early database final 0.791667 peak_gpu_gb 0.593
+2026-11-14 17:15:21   done A_seed20261110_db2_early lt_probe n=24 61.9s
+eval P4_B1_A_seed20261110_db2_early database n 30
+eval P4_B1_A_seed20261110_db2_early database 10
+===== LAUNCH 2026-11-14 20:19:46 +0800 args: queue =====
+2026-11-14 20:19:46 +0800 PREFLIGHT ok game=no power_cap=123W other_gpu_procs=none 1579 MiB, 7 %
+2026-11-14 20:19:46 +0800 START queue
+2026-11-14 20:19:47 skip eval A_seed20261108_T0_stage_02
+2026-11-14 20:19:47 skip eval A_seed20261108_prefix_step80
+2026-11-14 20:19:49 summary written
+2026-11-14 20:19:49 skip eval A_seed20261109_T0_stage_02
+2026-11-14 20:19:49 skip eval A_seed20261109_prefix_step80
+2026-11-14 20:19:50 summary written
+2026-11-14 20:19:50 skip eval A_seed20261110_T0_stage_02
+2026-11-14 20:19:50 skip eval A_seed20261110_prefix_step80
+2026-11-14 20:19:51 summary written
+2026-11-14 20:19:52 skip train A_seed20261108_P4_early
+2026-11-14 20:19:52 skip eval A_seed20261108_P4_early
+2026-11-14 20:19:52 summary written
+2026-11-14 20:19:53 skip train A_seed20261109_P4_early
+2026-11-14 20:19:53 skip eval A_seed20261109_P4_early
+2026-11-14 20:19:54 summary written
+2026-11-14 20:19:54 skip train A_seed20261110_P4_early
+2026-11-14 20:19:54 skip eval A_seed20261110_P4_early
+2026-11-14 20:19:55 summary written
+2026-11-14 20:19:55 skip train A_seed20261108_P4_mid
+2026-11-14 20:19:55 skip eval A_seed20261108_P4_mid
+2026-11-14 20:19:56 summary written
+2026-11-14 20:19:57 skip train A_seed20261109_P4_mid
+2026-11-14 20:19:57 skip eval A_seed20261109_P4_mid
+2026-11-14 20:19:57 summary written
+2026-11-14 20:19:58 skip train A_seed20261110_P4_mid
+2026-11-14 20:19:58 skip eval A_seed20261110_P4_mid
+2026-11-14 20:19:59 summary written
+2026-11-14 20:19:59 skip train A_seed20261108_P4_late
+2026-11-14 20:19:59 skip eval A_seed20261108_P4_late
+2026-11-14 20:20:00 summary written
+2026-11-14 20:20:00 skip train A_seed20261109_P4_late
+2026-11-14 20:20:00 skip eval A_seed20261109_P4_late
+2026-11-14 20:20:01 summary written
+2026-11-14 20:20:01 skip train A_seed20261110_P4_late
+2026-11-14 20:20:01 skip eval A_seed20261110_P4_late
+2026-11-14 20:20:02 summary written
+2026-11-14 20:20:03 skip train A_seed20261108_P4_LT2mid
+2026-11-14 20:20:03 skip eval A_seed20261108_P4_LT2mid
+2026-11-14 20:20:03 summary written
+2026-11-14 20:20:04 skip train A_seed20261109_P4_LT2mid
+2026-11-14 20:20:04 skip eval A_seed20261109_P4_LT2mid
+2026-11-14 20:20:05 summary written
+2026-11-14 20:20:05 skip train A_seed20261110_P4_LT2mid
+2026-11-14 20:20:05 skip eval A_seed20261110_P4_LT2mid
+2026-11-14 20:20:06 summary written
+2026-11-14 20:20:06 skip train A_seed20261108_db2_early
+2026-11-14 20:20:06 skip eval A_seed20261108_db2_early
+2026-11-14 20:20:07 summary written
+2026-11-14 20:20:07 skip train A_seed20261109_db2_early
+2026-11-14 20:20:07 skip eval A_seed20261109_db2_early
+2026-11-14 20:20:08 summary written
+2026-11-14 20:20:09 skip train A_seed20261110_db2_early
+2026-11-14 20:20:28 EVAL A_seed20261110_db2_early suites=['p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:07,  4.59it/s]Loading weights:   1%|          | 2/311 [00:00<01:03,  4.84it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:39,  7.79it/s]Loading weights:  10%|█         | 32/311 [00:00<00:03, 78.15it/s]Loading weights:  23%|██▎       | 71/311 [00:00<00:01, 158.28it/s]Loading weights:  39%|███▉      | 122/311 [00:00<00:00, 253.87it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 310.41it/s]Loading weights:  69%|██████▉   | 214/311 [00:01<00:00, 349.92it/s]Loading weights:  85%|████████▌ | 265/311 [00:01<00:00, 396.03it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 242.29it/s]
+eval P4_B1_A_seed20261110_db2_early database n 30
+eval P4_B1_A_seed20261110_db2_early database 10
+eval P4_B1_A_seed20261110_db2_early database 20
+eval P4_B1_A_seed20261110_db2_early database 30
+eval done P4_B1_A_seed20261110_db2_early database final 0.666667 peak_gpu_gb 0.601
+2026-11-14 20:22:59   done A_seed20261110_db2_early p2_database n=30 89.3s
+eval P4_B1_A_seed20261110_db2_early python n 30
+eval P4_B1_A_seed20261110_db2_early python 10
+eval P4_B1_A_seed20261110_db2_early python 20
+eval P4_B1_A_seed20261110_db2_early python 30
+eval done P4_B1_A_seed20261110_db2_early python final 1.0 peak_gpu_gb 0.603
+2026-11-14 20:25:17   done A_seed20261110_db2_early natv2_python n=30 137.5s
+eval P4_B1_A_seed20261110_db2_early database n 30
+eval P4_B1_A_seed20261110_db2_early database 10
+eval P4_B1_A_seed20261110_db2_early database 20
+eval P4_B1_A_seed20261110_db2_early database 30
+eval done P4_B1_A_seed20261110_db2_early database final 0.666667 peak_gpu_gb 0.6
+2026-11-14 20:27:23   done A_seed20261110_db2_early natv2_database n=30 125.9s
+eval P4_B1_A_seed20261110_db2_early calendar n 30
+eval P4_B1_A_seed20261110_db2_early calendar 10
+eval P4_B1_A_seed20261110_db2_early calendar 20
+eval P4_B1_A_seed20261110_db2_early calendar 30
+eval done P4_B1_A_seed20261110_db2_early calendar final 0.4 peak_gpu_gb 0.924
+2026-11-14 20:28:37   done A_seed20261110_db2_early v3fix n=30 73.3s
+2026-11-14 20:28:37 EVAL done A_seed20261110_db2_early in 489.0s
+2026-11-14 20:28:38 summary written
+2026-11-14 20:28:38 TRAIN A_seed20261108_db4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 34/311 [00:00<00:00, 338.27it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 925.66it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1037.56it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/e3_train.py:117: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+2026-11-14 20:28:41 p4 plan db4_early items 22 tracked [('filter', 127, 6), ('filter', 127, 6), ('filter', 135, 5), ('filter', 135, 5), ('median_nat', 159, 1)]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 195.8
+2026-11-14 20:29:25 TRAIN done A_seed20261108_db4_early steps=23 replay_tokens=7494 sum_after={'filter': 22, 'list_tables': 0, 'median_nat': 1}
+2026-11-14 20:29:25 EVAL A_seed20261108_db4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/311 [00:00<00:05, 59.22it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 849.57it/s]Loading weights:  92%|█████████▏| 287/311 [00:00<00:00, 1093.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 973.87it/s] 
+eval P4_B1_A_seed20261108_db4_early database n 24
+eval P4_B1_A_seed20261108_db4_early database 10
+eval P4_B1_A_seed20261108_db4_early database 20
+eval done P4_B1_A_seed20261108_db4_early database final 0.625 peak_gpu_gb 0.593
+2026-11-14 20:30:42   done A_seed20261108_db4_early lt_probe n=24 75.2s
+eval P4_B1_A_seed20261108_db4_early database n 30
+eval P4_B1_A_seed20261108_db4_early database 10
+eval P4_B1_A_seed20261108_db4_early database 20
+eval P4_B1_A_seed20261108_db4_early database 30
+eval done P4_B1_A_seed20261108_db4_early database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 20:32:27   done A_seed20261108_db4_early p2_database n=30 104.5s
+eval P4_B1_A_seed20261108_db4_early python n 30
+eval P4_B1_A_seed20261108_db4_early python 10
+eval P4_B1_A_seed20261108_db4_early python 20
+eval P4_B1_A_seed20261108_db4_early python 30
+eval done P4_B1_A_seed20261108_db4_early python final 1.0 peak_gpu_gb 0.603
+2026-11-14 20:34:41   done A_seed20261108_db4_early natv2_python n=30 134.1s
+eval P4_B1_A_seed20261108_db4_early database n 30
+eval P4_B1_A_seed20261108_db4_early database 10
+eval P4_B1_A_seed20261108_db4_early database 20
+eval P4_B1_A_seed20261108_db4_early database 30
+eval done P4_B1_A_seed20261108_db4_early database final 1.0 peak_gpu_gb 0.601
+2026-11-14 20:36:54   done A_seed20261108_db4_early natv2_database n=30 132.7s
+eval P4_B1_A_seed20261108_db4_early calendar n 30
+eval P4_B1_A_seed20261108_db4_early calendar 10
+eval P4_B1_A_seed20261108_db4_early calendar 20
+eval P4_B1_A_seed20261108_db4_early calendar 30
+eval done P4_B1_A_seed20261108_db4_early calendar final 0.3 peak_gpu_gb 0.924
+2026-11-14 20:38:13   done A_seed20261108_db4_early v3fix n=30 78.7s
+2026-11-14 20:38:13 EVAL done A_seed20261108_db4_early in 527.5s
+2026-11-14 20:38:14 summary written
+2026-11-14 20:38:14 TRAIN A_seed20261109_db4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:22, 13.64it/s]Loading weights:  26%|██▌       | 81/311 [00:00<00:00, 394.12it/s]Loading weights:  56%|█████▋    | 175/311 [00:00<00:00, 612.07it/s]Loading weights:  92%|█████████▏| 285/311 [00:00<00:00, 788.92it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 647.10it/s]
+2026-11-14 20:38:17 p4 plan db4_early items 22 tracked [('filter', 127, 6), ('filter', 127, 6), ('filter', 135, 5), ('filter', 135, 5), ('median_nat', 151, 2), ('median_nat', 159, 1)]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 215.04
+2026-11-14 20:39:03 TRAIN done A_seed20261109_db4_early steps=23 replay_tokens=7494 sum_after={'filter': 22, 'list_tables': 0, 'median_nat': 3}
+2026-11-14 20:39:04 EVAL A_seed20261109_db4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 318.78it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 882.58it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1095.91it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 996.89it/s] 
+eval P4_B1_A_seed20261109_db4_early database n 24
+eval P4_B1_A_seed20261109_db4_early database 10
+eval P4_B1_A_seed20261109_db4_early database 20
+eval done P4_B1_A_seed20261109_db4_early database final 1.0 peak_gpu_gb 0.593
+2026-11-14 20:40:09   done A_seed20261109_db4_early lt_probe n=24 63.7s
+eval P4_B1_A_seed20261109_db4_early database n 30
+eval P4_B1_A_seed20261109_db4_early database 10
+eval P4_B1_A_seed20261109_db4_early database 20
+eval P4_B1_A_seed20261109_db4_early database 30
+eval done P4_B1_A_seed20261109_db4_early database final 0.666667 peak_gpu_gb 0.602
+2026-11-14 20:41:47   done A_seed20261109_db4_early p2_database n=30 97.8s
+eval P4_B1_A_seed20261109_db4_early python n 30
+eval P4_B1_A_seed20261109_db4_early python 10
+eval P4_B1_A_seed20261109_db4_early python 20
+eval P4_B1_A_seed20261109_db4_early python 30
+eval done P4_B1_A_seed20261109_db4_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 20:44:03   done A_seed20261109_db4_early natv2_python n=30 136.5s
+eval P4_B1_A_seed20261109_db4_early database n 30
+eval P4_B1_A_seed20261109_db4_early database 10
+eval P4_B1_A_seed20261109_db4_early database 20
+eval P4_B1_A_seed20261109_db4_early database 30
+eval done P4_B1_A_seed20261109_db4_early database final 1.0 peak_gpu_gb 0.601
+2026-11-14 20:46:12   done A_seed20261109_db4_early natv2_database n=30 128.3s
+eval P4_B1_A_seed20261109_db4_early calendar n 30
+eval P4_B1_A_seed20261109_db4_early calendar 10
+eval P4_B1_A_seed20261109_db4_early calendar 20
+eval P4_B1_A_seed20261109_db4_early calendar 30
+eval done P4_B1_A_seed20261109_db4_early calendar final 0.366667 peak_gpu_gb 0.924
+2026-11-14 20:47:31   done A_seed20261109_db4_early v3fix n=30 79.0s
+2026-11-14 20:47:31 EVAL done A_seed20261109_db4_early in 507.8s
+2026-11-14 20:47:32 summary written
+2026-11-14 20:47:33 TRAIN A_seed20261110_db4_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 34/311 [00:00<00:00, 339.26it/s]Loading weights:  58%|█████▊    | 181/311 [00:00<00:00, 1003.12it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1083.45it/s]
+2026-11-14 20:47:35 p4 plan db4_early items 22 tracked [('filter', 127, 6), ('filter', 127, 6), ('filter', 135, 5), ('filter', 135, 5), ('median_nat', 143, 4), ('median_nat', 151, 2)]
+replay train done targeted new tokens 74944 replay tokens 7490 seconds 284.16
+2026-11-14 20:48:22 TRAIN done A_seed20261110_db4_early steps=23 replay_tokens=7490 sum_after={'filter': 22, 'list_tables': 0, 'median_nat': 6}
+2026-11-14 20:48:22 EVAL A_seed20261110_db4_early suites=['lt_probe', 'p2_database', 'natv2_python', 'natv2_database', 'v3fix']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 377.28it/s]Loading weights:  57%|█████▋    | 177/311 [00:00<00:00, 968.45it/s]Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 972.73it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 917.62it/s]
+eval P4_B1_A_seed20261110_db4_early database n 24
+eval P4_B1_A_seed20261110_db4_early database 10
+eval P4_B1_A_seed20261110_db4_early database 20
+eval done P4_B1_A_seed20261110_db4_early database final 0.958333 peak_gpu_gb 0.594
+2026-11-14 20:49:35   done A_seed20261110_db4_early lt_probe n=24 71.7s
+eval P4_B1_A_seed20261110_db4_early database n 30
+eval P4_B1_A_seed20261110_db4_early database 10
+eval P4_B1_A_seed20261110_db4_early database 20
+eval P4_B1_A_seed20261110_db4_early database 30
+eval done P4_B1_A_seed20261110_db4_early database final 0.733333 peak_gpu_gb 0.602
+2026-11-14 20:51:09   done A_seed20261110_db4_early p2_database n=30 93.8s
+eval P4_B1_A_seed20261110_db4_early python n 30
+eval P4_B1_A_seed20261110_db4_early python 10
+eval P4_B1_A_seed20261110_db4_early python 20
+eval P4_B1_A_seed20261110_db4_early python 30
+eval done P4_B1_A_seed20261110_db4_early python final 1.0 peak_gpu_gb 0.604
+2026-11-14 20:53:12   done A_seed20261110_db4_early natv2_python n=30 122.9s
+eval P4_B1_A_seed20261110_db4_early database n 30
+eval P4_B1_A_seed20261110_db4_early database 10
+eval P4_B1_A_seed20261110_db4_early database 20
+eval P4_B1_A_seed20261110_db4_early database 30
+eval done P4_B1_A_seed20261110_db4_early database final 1.0 peak_gpu_gb 0.601
+2026-11-14 20:55:18   done A_seed20261110_db4_early natv2_database n=30 125.4s
+eval P4_B1_A_seed20261110_db4_early calendar n 30
+eval P4_B1_A_seed20261110_db4_early calendar 10
+eval P4_B1_A_seed20261110_db4_early calendar 20
+eval P4_B1_A_seed20261110_db4_early calendar 30
+eval done P4_B1_A_seed20261110_db4_early calendar final 0.466667 peak_gpu_gb 0.925
+2026-11-14 20:56:36   done A_seed20261110_db4_early v3fix n=30 78.4s
+2026-11-14 20:56:36 EVAL done A_seed20261110_db4_early in 494.5s
+2026-11-14 20:56:37 summary written
+2026-11-14 20:56:37 QUEUE COMPLETE
+2026-11-14 20:56:40 +0800 END queue rc=0
+2026-11-14 21:13:03 +0800 START summarize (CPU)
+2026-11-14 21:13:04 summary written
+2026-11-14 21:13:04 +0800 END summarize rc=0

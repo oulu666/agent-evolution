@@ -1,0 +1,1897 @@
+{
+  "run_id": "20261108_203916_seed20261108",
+  "created": "2026-11-08T20:45:05+08:00",
+  "config": {
+    "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+    "seed": 20261108,
+    "split_seed": 20261108,
+    "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_smoke",
+    "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke",
+    "device": "cuda",
+    "dtype": "auto",
+    "trust_remote_code": true,
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "auto"
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "learning_rate": 0.0001,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "num_epochs": 2,
+      "max_seq_length": 1024,
+      "gradient_checkpointing": true,
+      "optimizer": "paged_adamw_8bit",
+      "logging_steps": 1
+    },
+    "evaluation": {
+      "batch_size": 1,
+      "max_new_tokens_tool": 128,
+      "max_new_tokens_answer": 128,
+      "do_sample": false,
+      "temperature": 0.0
+    },
+    "data": {
+      "families": [
+        "file",
+        "database",
+        "python"
+      ],
+      "train_per_family": 8,
+      "val_per_family": 2,
+      "test_per_family": 6
+    },
+    "stages": [
+      {
+        "name": "stage_00_base",
+        "family": null
+      },
+      {
+        "name": "stage_01_file",
+        "family": "file"
+      },
+      {
+        "name": "stage_02_database",
+        "family": "database"
+      },
+      {
+        "name": "stage_03_python",
+        "family": "python"
+      }
+    ],
+    "oom_advice": true,
+    "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/smoke.json",
+    "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent"
+  },
+  "stages": [
+    {
+      "name": "stage_00_base",
+      "family": null,
+      "index": 0,
+      "adapter": null
+    },
+    {
+      "name": "stage_01_file",
+      "family": "file",
+      "index": 1,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_01_file",
+      "train_summary": {
+        "stage": "stage_01_file",
+        "family": "file",
+        "previous_adapter": null,
+        "train_samples": 8,
+        "val_samples": 2,
+        "epochs": 2,
+        "steps": 16,
+        "optimizer_steps": 2,
+        "train_tokens": 5786,
+        "last_loss": 0.4756292402744293,
+        "val_loss": 0.6811320717076221,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 2.055,
+        "duration_seconds": 8.91,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    },
+    {
+      "name": "stage_02_database",
+      "family": "database",
+      "index": 2,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_02_database",
+      "train_summary": {
+        "stage": "stage_02_database",
+        "family": "database",
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_01_file",
+        "train_samples": 8,
+        "val_samples": 2,
+        "epochs": 2,
+        "steps": 16,
+        "optimizer_steps": 2,
+        "train_tokens": 4816,
+        "last_loss": 0.7554854154586792,
+        "val_loss": 0.3219974935054779,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 1.852,
+        "duration_seconds": 10.62,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    },
+    {
+      "name": "stage_03_python",
+      "family": "python",
+      "index": 3,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_03_python",
+      "train_summary": {
+        "stage": "stage_03_python",
+        "family": "python",
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_02_database",
+        "train_samples": 8,
+        "val_samples": 2,
+        "epochs": 2,
+        "steps": 16,
+        "optimizer_steps": 2,
+        "train_tokens": 5986,
+        "last_loss": 0.005241844803094864,
+        "val_loss": 0.0022750063016858013,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 2.092,
+        "duration_seconds": 12.63,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    }
+  ],
+  "evaluations": [
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "counting": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "final_formatting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.588,
+      "duration_seconds": 15.68,
+      "adapter": null
+    },
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.333333,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.586,
+      "duration_seconds": 19.79,
+      "adapter": null
+    },
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.833333,
+          "execution_success_rate": 0.833333,
+          "final_task_success_rate": 0.333333
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.6,
+      "duration_seconds": 32.7,
+      "adapter": null
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_file",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.166667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "counting": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "final_formatting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.605,
+      "duration_seconds": 34.19,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_01_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_database",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.5,
+        "argument_accuracy": 0.5,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.166667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.597,
+      "duration_seconds": 26.19,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_02_database"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_database",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.333333,
+        "argument_accuracy": 0.0,
+        "execution_success_rate": 0.166667,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.6,
+      "duration_seconds": 21.06,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_02_database"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_python",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.608,
+      "duration_seconds": 39.71,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_03_python"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_python",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.333333,
+        "final_task_success_rate": 0.166667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.604,
+      "duration_seconds": 27.06,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_03_python"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_python",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.833333
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.833333,
+          "execution_success_rate": 0.833333,
+          "final_task_success_rate": 0.833333
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.616,
+      "duration_seconds": 39.43,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_03_python"
+    }
+  ],
+  "capability_matrix": {
+    "families": [
+      "database",
+      "file",
+      "python"
+    ],
+    "pivot": [
+      {
+        "stage_index": 0,
+        "stage_name": "stage_00_base",
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.333333
+      },
+      {
+        "stage_index": 1,
+        "stage_name": "stage_01_file",
+        "database": null,
+        "file": 0.166667,
+        "python": null
+      },
+      {
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "database": 0.0,
+        "file": 0.166667,
+        "python": null
+      },
+      {
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "database": 0.166667,
+        "file": 0.333333,
+        "python": 0.833333
+      }
+    ]
+  },
+  "forgetting": {
+    "family_average": {
+      "2": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.166667,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.166667
+      },
+      "3": {
+        "argument_accuracy": 0.0,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "skill_average": {
+      "2": {
+        "argument_accuracy": 0.125,
+        "execution_success_rate": 0.125,
+        "final_task_success_rate": 0.125,
+        "tool_selection_accuracy": 0.125
+      },
+      "3": {
+        "argument_accuracy": 0.0,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "family_rows": [
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 0.666667,
+        "forgetting": 0.166667
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 0.666667,
+        "forgetting": 0.166667
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 0.666667,
+        "forgetting": 0.166667
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.166667,
+        "peak": 0.166667,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.166667,
+        "peak": 0.166667,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.166667,
+        "peak": 0.166667,
+        "forgetting": 0.0
+      }
+    ],
+    "skill_rows": [
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_database",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0
+      }
+    ]
+  }
+}

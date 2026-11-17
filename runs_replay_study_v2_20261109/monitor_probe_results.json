@@ -1,0 +1,258 @@
+{
+  "order": "A",
+  "rows": [
+    {
+      "seed": 20261108,
+      "family": "file",
+      "start": {
+        "n": 24,
+        "joint": 0.16666666666666666,
+        "answer": 0.16666666666666666
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.2916666666666667,
+        "answer": 0.2916666666666667
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.16666666666666666,
+        "answer": 0.16666666666666666
+      }
+    },
+    {
+      "seed": 20261108,
+      "family": "database",
+      "start": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.375
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.625
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.5
+      }
+    },
+    {
+      "seed": 20261108,
+      "family": "python",
+      "start": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "end": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      }
+    },
+    {
+      "seed": 20261109,
+      "family": "file",
+      "start": {
+        "n": 24,
+        "joint": 0.16666666666666666,
+        "answer": 0.16666666666666666
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.3333333333333333
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.16666666666666666,
+        "answer": 0.16666666666666666
+      }
+    },
+    {
+      "seed": 20261109,
+      "family": "database",
+      "start": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.4166666666666667
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.5833333333333334
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.4166666666666667,
+        "answer": 0.625
+      }
+    },
+    {
+      "seed": 20261109,
+      "family": "python",
+      "start": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "end": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      }
+    },
+    {
+      "seed": 20261110,
+      "family": "file",
+      "start": {
+        "n": 24,
+        "joint": 0.16666666666666666,
+        "answer": 0.16666666666666666
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.375,
+        "answer": 0.375
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.25,
+        "answer": 0.25
+      }
+    },
+    {
+      "seed": 20261110,
+      "family": "database",
+      "start": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.4583333333333333
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.625
+      },
+      "end": {
+        "n": 24,
+        "joint": 0.3333333333333333,
+        "answer": 0.5416666666666666
+      }
+    },
+    {
+      "seed": 20261110,
+      "family": "python",
+      "start": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "midpoint": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      },
+      "end": {
+        "n": 24,
+        "joint": 1,
+        "answer": 1
+      }
+    }
+  ],
+  "historical_drops": [
+    {
+      "order": "A",
+      "seed": 20261108,
+      "family": "python",
+      "template": "stats_median_prose",
+      "before": 1,
+      "after": 0.4,
+      "n": 5
+    },
+    {
+      "order": "A",
+      "seed": 20261109,
+      "family": "database",
+      "template": "db_filter_top",
+      "before": 0.5,
+      "after": 0.3333333333333333,
+      "n": 6
+    },
+    {
+      "order": "A",
+      "seed": 20261109,
+      "family": "python",
+      "template": "stats_median_prose",
+      "before": 1,
+      "after": 0.2,
+      "n": 5
+    },
+    {
+      "order": "A",
+      "seed": 20261110,
+      "family": "file",
+      "template": "file_last_match",
+      "before": 0.5,
+      "after": 0,
+      "n": 8
+    },
+    {
+      "order": "A",
+      "seed": 20261110,
+      "family": "database",
+      "template": "db_filter_top",
+      "before": 0.5,
+      "after": 0,
+      "n": 6
+    },
+    {
+      "order": "A",
+      "seed": 20261110,
+      "family": "python",
+      "template": "stats_median_prose",
+      "before": 1,
+      "after": 0.6,
+      "n": 5
+    }
+  ],
+  "probe_templates": [
+    "study_correlation",
+    "study_filter_count",
+    "study_filter_mean",
+    "study_first_match",
+    "study_group_count",
+    "study_last_match",
+    "study_line_count",
+    "study_list",
+    "study_mean",
+    "study_median",
+    "study_percentile",
+    "study_rank",
+    "study_regression",
+    "study_schema",
+    "study_std",
+    "study_tables",
+    "study_word_count",
+    "study_write"
+  ],
+  "drop_templates": [
+    "db_filter_top",
+    "file_last_match",
+    "stats_median_prose"
+  ],
+  "overlap": []
+}

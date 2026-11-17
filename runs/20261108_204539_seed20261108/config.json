@@ -1,0 +1,78 @@
+{
+  "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+  "seed": 20261108,
+  "split_seed": 20261108,
+  "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data",
+  "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs",
+  "device": "cuda",
+  "dtype": "auto",
+  "trust_remote_code": true,
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "auto"
+  },
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "learning_rate": 0.0001,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "num_epochs": 2,
+    "max_seq_length": 1024,
+    "gradient_checkpointing": true,
+    "optimizer": "paged_adamw_8bit",
+    "logging_steps": 1
+  },
+  "evaluation": {
+    "batch_size": 1,
+    "max_new_tokens_tool": 128,
+    "max_new_tokens_answer": 128,
+    "do_sample": false,
+    "temperature": 0.0
+  },
+  "data": {
+    "families": [
+      "file",
+      "database",
+      "python"
+    ],
+    "train_per_family": 80,
+    "val_per_family": 20,
+    "test_per_family": 30
+  },
+  "stages": [
+    {
+      "name": "stage_00_base",
+      "family": null
+    },
+    {
+      "name": "stage_01_file",
+      "family": "file"
+    },
+    {
+      "name": "stage_02_database",
+      "family": "database"
+    },
+    {
+      "name": "stage_03_python",
+      "family": "python"
+    }
+  ],
+  "oom_advice": true,
+  "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/local_full.json",
+  "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent"
+}

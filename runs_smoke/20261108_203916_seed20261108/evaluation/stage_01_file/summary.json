@@ -1,0 +1,101 @@
+{
+  "stage": {
+    "name": "stage_01_file",
+    "family": "file",
+    "index": 1,
+    "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_01_file",
+    "train_summary": {
+      "stage": "stage_01_file",
+      "family": "file",
+      "previous_adapter": null,
+      "train_samples": 8,
+      "val_samples": 2,
+      "epochs": 2,
+      "steps": 16,
+      "optimizer_steps": 2,
+      "train_tokens": 5786,
+      "last_loss": 0.4756292402744293,
+      "val_loss": 0.6811320717076221,
+      "compute_dtype": "torch.bfloat16",
+      "peak_gpu_gb": 2.055,
+      "duration_seconds": 8.91,
+      "seed": 20261108,
+      "max_seq_length": 1024
+    }
+  },
+  "reports": [
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_file",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.166667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "counting": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "final_formatting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.605,
+      "duration_seconds": 34.19,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke/20261108_203916_seed20261108/checkpoints/stage_01_file"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "stage": {
+    "name": "stage_01_calendar",
+    "family": "calendar",
+    "index": 1,
+    "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar",
+    "train_summary": {
+      "stage": "stage_01_calendar",
+      "family": "calendar",
+      "previous_adapter": null,
+      "train_samples": 80,
+      "val_samples": 20,
+      "epochs": 2,
+      "steps": 160,
+      "optimizer_steps": 20,
+      "train_tokens": 74944,
+      "last_loss": 0.004550314974039793,
+      "val_loss": 0.024834358178038127,
+      "compute_dtype": "torch.bfloat16",
+      "peak_gpu_gb": 2.607,
+      "duration_seconds": 105.6,
+      "seed": 20261108,
+      "max_seq_length": 1024
+    }
+  },
+  "reports": [
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_calendar",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 28.73,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_calendar",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.666667,
+          "execution_success_rate": 0.666667,
+          "final_task_success_rate": 0.666667
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.615,
+      "duration_seconds": 35.51,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_calendar",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.166667,
+        "final_task_success_rate": 0.166667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.5
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.606,
+      "duration_seconds": 19.44,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_calendar",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.333333,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.333333,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.598,
+      "duration_seconds": 22.27,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar"
+    }
+  ]
+}

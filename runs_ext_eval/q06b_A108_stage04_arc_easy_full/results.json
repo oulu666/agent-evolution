@@ -1,0 +1,49 @@
+{
+  "model": "/home/egret/models/Qwen3-0.6B",
+  "adapter": "runs_phase2/A_seed20261108/checkpoints/stage_04_calendar",
+  "precision": "4bit",
+  "compute_dtype": "torch.bfloat16",
+  "tasks": "arc_easy",
+  "limit": null,
+  "chat_template": false,
+  "max_gen_toks": null,
+  "seed": 1234,
+  "wall_seconds": 332.8,
+  "peak_gpu_gb": 2.378,
+  "lm_eval_version": "0.4.13",
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.5437710437710438,
+      "acc_stderr,none": 0.0102203943837221,
+      "acc_norm,none": 0.5033670033670034,
+      "acc_norm_stderr,none": 0.010259550893799069
+    }
+  },
+  "n_samples": {
+    "arc_easy": {
+      "original": 2376,
+      "effective": 2376
+    }
+  },
+  "configs": {
+    "arc_easy": {
+      "num_fewshot": 0,
+      "generation_kwargs": null,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ]
+    }
+  }
+}

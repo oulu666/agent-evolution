@@ -1,0 +1,530 @@
+{
+  "synthetic_cpu_contract": false,
+  "time": "2026-11-15 12:37:30 +0800",
+  "complete": true,
+  "B1_suites": 45,
+  "rows": [
+    {
+      "seed": 20261108,
+      "arm": "balanced_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.8333333333333334,
+          "tool_correct": 0.8333333333333334,
+          "arguments_correct": 1.0,
+          "final_correct": 0.8333333333333334
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.20833333333333334,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3,
+        "tool_correct": 0.5,
+        "arguments_correct": 0.5,
+        "final_correct": 0.3
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 1.0,
+        "arguments_correct": 1.0,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261108,
+      "arm": "balanced_early",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.6666666666666666,
+          "tool_correct": 0.6666666666666666,
+          "arguments_correct": 0.9166666666666666,
+          "final_correct": 0.6666666666666666
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.8333333333333334,
+          "tool_correct": 0.8333333333333334,
+          "arguments_correct": 1.0,
+          "final_correct": 0.8333333333333334
+        }
+      },
+      "macro_joint": 0.375,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3,
+        "tool_correct": 0.5,
+        "arguments_correct": 0.5,
+        "final_correct": 0.3333333333333333
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 0.6363636363636364,
+        "arguments_correct": 0.6363636363636364,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261108,
+      "arm": "devgrad_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.8333333333333334,
+          "tool_correct": 0.8333333333333334,
+          "arguments_correct": 1.0,
+          "final_correct": 0.8333333333333334
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.20833333333333334,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.26666666666666666,
+        "tool_correct": 0.5,
+        "arguments_correct": 0.5,
+        "final_correct": 0.26666666666666666
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 0.7272727272727273,
+        "arguments_correct": 0.7272727272727273,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "py.median": 1,
+        "db.list_tables": 5,
+        "db.filter_cmp_top": 1,
+        "file.search_last": 3
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261109,
+      "arm": "balanced_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.6666666666666666,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.6666666666666666
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "final_correct": 0.9166666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.16666666666666666,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3333333333333333,
+        "tool_correct": 0.5,
+        "arguments_correct": 0.5,
+        "final_correct": 0.4
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 1.0,
+        "arguments_correct": 1.0,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261109,
+      "arm": "balanced_early",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.75,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.75
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.08333333333333333,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.08333333333333333,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.20833333333333334,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3,
+        "tool_correct": 0.4666666666666667,
+        "arguments_correct": 0.4666666666666667,
+        "final_correct": 0.3333333333333333
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 0.6818181818181818,
+        "arguments_correct": 0.6818181818181818,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261109,
+      "arm": "devgrad_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.75,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.75
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "final_correct": 1.0
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.1875,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3333333333333333,
+        "tool_correct": 0.5,
+        "arguments_correct": 0.5,
+        "final_correct": 0.36666666666666664
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 1.0,
+        "arguments_correct": 1.0,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "file.search_last": 4,
+        "py.median": 2,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 1
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261110,
+      "arm": "balanced_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.75,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.75
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.3333333333333333,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.3333333333333333,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.2708333333333333,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.36666666666666664,
+        "tool_correct": 0.4666666666666667,
+        "arguments_correct": 0.4666666666666667,
+        "final_correct": 0.4
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 1.0,
+        "arguments_correct": 1.0,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261110,
+      "arm": "balanced_early",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.75,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.75
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.3333333333333333,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.3333333333333333,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.2708333333333333,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.36666666666666664,
+        "tool_correct": 0.4666666666666667,
+        "arguments_correct": 0.4666666666666667,
+        "final_correct": 0.43333333333333335
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 0.6363636363636364,
+        "arguments_correct": 0.6363636363636364,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "tokens": 7494
+    },
+    {
+      "seed": 20261110,
+      "arm": "devgrad_uniform",
+      "skills": {
+        "db.list_tables": {
+          "n": 12,
+          "joint_success": 0.6666666666666666,
+          "tool_correct": 0.75,
+          "arguments_correct": 0.8333333333333334,
+          "final_correct": 0.6666666666666666
+        },
+        "db.filter_cmp_top": {
+          "n": 12,
+          "joint_success": 0.3333333333333333,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.3333333333333333,
+          "final_correct": 0.6666666666666666
+        },
+        "file.search_last": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "n": 12,
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "final_correct": 0.0
+        }
+      },
+      "macro_joint": 0.25,
+      "calendar": {
+        "n": 30,
+        "joint_success": 0.3333333333333333,
+        "tool_correct": 0.4666666666666667,
+        "arguments_correct": 0.4666666666666667,
+        "final_correct": 0.4
+      },
+      "file_nontarget": {
+        "n": 22,
+        "joint_success": 0.6363636363636364,
+        "tool_correct": 1.0,
+        "arguments_correct": 1.0,
+        "final_correct": 0.6363636363636364
+      },
+      "allocation": {
+        "db.filter_cmp_top": 1,
+        "db.list_tables": 6,
+        "py.median": 1,
+        "file.search_last": 2
+      },
+      "tokens": 7494
+    }
+  ],
+  "pairs": {
+    "devgrad_uniform-balanced_uniform": {
+      "per_seed": [
+        0.0,
+        0.020833333333333343,
+        -0.020833333333333315
+      ],
+      "mean": 9.25185853854297e-18
+    },
+    "devgrad_uniform-balanced_early": {
+      "per_seed": [
+        -0.16666666666666666,
+        -0.020833333333333343,
+        -0.020833333333333315
+      ],
+      "mean": -0.06944444444444443
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "stage_index": 1,
+  "stage_name": "A_seed20261109_stage_01_file",
+  "family": "database",
+  "metrics": {
+    "n": 30,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 0.2,
+    "execution_success_rate": 0.4,
+    "final_task_success_rate": 0.2,
+    "joint_success_rate": 0.2,
+    "conditional_argument_accuracy": 0.2,
+    "conditional_argument_numerator": 6,
+    "conditional_argument_denominator": 30
+  },
+  "skill_metrics": {
+    "counting": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 6,
+      "conditional_argument_denominator": 6
+    },
+    "schema_reading": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.5,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.5,
+      "joint_success_rate": 0.5,
+      "conditional_argument_accuracy": 0.5,
+      "conditional_argument_numerator": 6,
+      "conditional_argument_denominator": 12
+    },
+    "sql_aggregation": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 12
+    },
+    "sql_filter": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 12
+    },
+    "sql_group": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 6
+    },
+    "sql_order": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 6
+    },
+    "tool_selection": {
+      "n": 6,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 6
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 60,
+    "input_tokens": 15824,
+    "output_tokens": 1381,
+    "total_tokens": 17205,
+    "generation_seconds": 18.40625,
+    "n": 30,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 30,
+      "input_tokens": 30,
+      "output_tokens": 30,
+      "total_tokens": 30,
+      "generation_seconds": 30
+    },
+    "recorded_totals": {
+      "inference_calls": 60,
+      "input_tokens": 15824,
+      "output_tokens": 1381,
+      "total_tokens": 17205,
+      "generation_seconds": 18.40625
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 19.32
+  },
+  "peak_gpu_gb": 2.187,
+  "duration_seconds": 19.32,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_01_file"
+}

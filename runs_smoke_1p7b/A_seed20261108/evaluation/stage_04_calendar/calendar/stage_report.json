@@ -1,0 +1,111 @@
+{
+  "stage_index": 4,
+  "stage_name": "stage_04_calendar",
+  "family": "calendar",
+  "metrics": {
+    "n": 3,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 1.0,
+    "final_task_success_rate": 0.0,
+    "joint_success_rate": 0.0,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 3,
+    "conditional_argument_denominator": 3
+  },
+  "skill_metrics": {
+    "calendar_attendees": {
+      "n": 1,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 1
+    },
+    "calendar_count": {
+      "n": 1,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 1
+    },
+    "calendar_free": {
+      "n": 1,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 1
+    },
+    "calendar_list": {
+      "n": 1,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 1
+    },
+    "calendar_time": {
+      "n": 1,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 1,
+      "conditional_argument_denominator": 1
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 6,
+    "input_tokens": 2001,
+    "output_tokens": 225,
+    "total_tokens": 2226,
+    "generation_seconds": 21.427192,
+    "n": 3,
+    "generation_batches": 6,
+    "usage_coverage": {
+      "inference_calls": 3,
+      "input_tokens": 3,
+      "output_tokens": 3,
+      "total_tokens": 3,
+      "generation_seconds": 3
+    },
+    "recorded_totals": {
+      "inference_calls": 6,
+      "input_tokens": 2001,
+      "output_tokens": 225,
+      "total_tokens": 2226,
+      "generation_seconds": 21.427192
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 21.49
+  },
+  "peak_gpu_gb": 1.425,
+  "duration_seconds": 21.49,
+  "evaluation_protocol": {
+    "batch_size": 1,
+    "do_sample": false,
+    "use_cache": "model_default",
+    "padding_side": "single_sequence",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_smoke_1p7b/A_seed20261108/checkpoints/stage_04_calendar"
+}

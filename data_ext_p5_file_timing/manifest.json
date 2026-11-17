@@ -1,0 +1,73 @@
+{
+  "created": "2026-11-15 01:39:45 +0800",
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "arms": [
+    "early",
+    "uniform",
+    "late"
+  ],
+  "target_ids": [
+    "file-train-e4_last_match-000",
+    "file-train-e4_last_match-006",
+    "file-train-e4_last_match-007",
+    "file-train-e4_last_match-014"
+  ],
+  "suites": [
+    "natv2_file",
+    "p2_file",
+    "natv2_database",
+    "natv2_python",
+    "v3fix"
+  ],
+  "steps": 23,
+  "budget": 7494,
+  "protocol": "Protocol-B1",
+  "references": {
+    "P5_PREREG_20261115_file_timing_ZH.md": "157bf0dd9a2579d07249126bcf1f37bebb4941fe7ce2909f433cf6c12b4df512",
+    "fac_tinyagent/p5_file_timing.py": "42f95a6dd35ac45a50a017dec377ac53914c9c023195fe24b02cf8cf28e0666c",
+    "scripts/run_p5_20261115.py": "b74fd2463a93b27bbed0126f505c84bb3a93c6a66353aa1e86fe78f19cd71fec",
+    "scripts/launch_p5_20261115.sh": "8656cfabae1c792a400bba4fd0daf8684a80ed76fa5c61e5550cce6dea993988",
+    "data_ext_e4/pool/file.jsonl": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+    "data_ext_e4/pool/database.jsonl": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+    "data_ext_e4/pool/python.jsonl": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62",
+    "data_phase2/calendar/train.jsonl": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "data_ext_monitor_v2/file.jsonl": "44dba480ce54d169532ca799ead69358ce525728c7174040fb7f421c6e6a44a1",
+    "data_ext_monitor_v2/database.jsonl": "7d35dcd5a670dcaab1cb71232f9a357af20f981a70d81985a03da1a5af382f35",
+    "data_ext_monitor_v2/python.jsonl": "2b2fe5b448381cf8106c1774be1bd4754716dea14d7215b7fcc2f6a2d0c1a52b",
+    "data_ext_e3/plans/A_seed20261108_dose_db4.json": "25f74f7aeb427bdb416428bbe2e1f890f367a3beb707ebb0db14b37e1755e9ea",
+    "runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_model.safetensors": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "runs_ext_e4/prefixes/A_seed20261108/manifest.json": "844c1ccfa152f2588e5203885e1ba1e277fbbc1c7697884d9fae2d4861324e52",
+    "runs_ext_e4/prefixes/A_seed20261108/training_state.pt": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+    "data_ext_e3/plans/A_seed20261109_dose_db4.json": "cf45d3a8dc8e0c3703cfebd0b0cba0d926d9b9ab46de5f2106bc687358311246",
+    "runs_phase2/A_seed20261109/checkpoints/stage_03_python/adapter_model.safetensors": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+    "runs_ext_e4/prefixes/A_seed20261109/manifest.json": "150b5c1fa7866d5db44e9be1d2a63bbe09274132cad2aa8323e1f62a076cf382",
+    "runs_ext_e4/prefixes/A_seed20261109/training_state.pt": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+    "data_ext_e3/plans/A_seed20261110_dose_db4.json": "4aa2d2966d757872df29f00c03a9ecff73e05cb47e0e172430f7db053ab8da0b",
+    "runs_phase2/A_seed20261110/checkpoints/stage_03_python/adapter_model.safetensors": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5",
+    "runs_ext_e4/prefixes/A_seed20261110/manifest.json": "33607f704e1ab1c6b1e7de0215a2cc755b127085f080af17ac700bad61dfecd7",
+    "runs_ext_e4/prefixes/A_seed20261110/training_state.pt": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb",
+    "data_ext_e4/final_v2/file.jsonl": "b99cfe7e011f01163c883befb8cac8349354264df6fe29a6cb3da0d4a7467194",
+    "data_ext_e4/final_v2/database.jsonl": "bca808bf154af5d687416b74be871b5903d3c4b32ffc07496af39a67ded828e1",
+    "data_ext_e4/final_v2/python.jsonl": "d7ea0e8e24616f32b3ca7596e6dec0e65363056da8fa640788391cb1748bbeb3",
+    "data_phase2/file/test.jsonl": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66",
+    "data_ext_p0_cal_titlecount/final/title_count_v3fix.jsonl": "84c2e5173142a839dda97a7a20f3cc6309ccb022d1b3e8da93db388f797b305c",
+    "data_ext_cal_v3/fixtures/calendar_v3.json": "3289868b4a22ccb2770f3a4a3b72723f30fb0a11c44b823fa6055f88d1f2b04d",
+    "data_phase2/fixtures/toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "data_phase2/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974"
+  },
+  "plans": {
+    "data_ext_p5_file_timing/plans/A_seed20261108_early.json": "ddf71bca94e53337465c87da7263919d0b697a89a914b6b6ab5f8752cf225878",
+    "data_ext_p5_file_timing/plans/A_seed20261108_uniform.json": "57fcd45acc3fe8232348ddc417c023e086c2a1d0e5b9ba2e2fadbf0b9071ff8e",
+    "data_ext_p5_file_timing/plans/A_seed20261108_late.json": "3ceeb82190ddcb3e8a3858d32f3e03dc3e1ec180a789e1f03760accaadd40e34",
+    "data_ext_p5_file_timing/plans/A_seed20261109_early.json": "e5c00d1f6ed124c2fed870b16e56959fefecd832d9b0e18ed185bcb83d10138a",
+    "data_ext_p5_file_timing/plans/A_seed20261109_uniform.json": "a5261cd67aadab8fb853bf1e2ee782174f27136e297b11a50f5d735cf20f051c",
+    "data_ext_p5_file_timing/plans/A_seed20261109_late.json": "3dd563a287ec02bb06a8709d69b629376ad26dfbe8976220c1bf55a6e340cb32",
+    "data_ext_p5_file_timing/plans/A_seed20261110_early.json": "618d0e67d2f81098209e36f789963aac8eb174779d712afabf1b715614f04c06",
+    "data_ext_p5_file_timing/plans/A_seed20261110_uniform.json": "3a756055823b030294b7a152d6d7e8ab968467d9c7c2c0d7407bb4a0f8706c0e",
+    "data_ext_p5_file_timing/plans/A_seed20261110_late.json": "c32814e8ed4e48ca5e671287972fbf42e5bc6088520f86ef89f9ff027353e83c"
+  }
+}

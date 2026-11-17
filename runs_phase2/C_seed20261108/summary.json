@@ -1,0 +1,3729 @@
+{
+  "run_id": "C_seed20261108",
+  "created": "2026-11-09T02:04:01+08:00",
+  "config": {
+    "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+    "seed": 20261108,
+    "split_seed": 20261108,
+    "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+    "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+    "device": "cuda",
+    "dtype": "auto",
+    "trust_remote_code": true,
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "auto"
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "learning_rate": 0.0001,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "num_epochs": 2,
+      "max_seq_length": 1024,
+      "gradient_checkpointing": true,
+      "optimizer": "paged_adamw_8bit",
+      "logging_steps": 1
+    },
+    "evaluation": {
+      "batch_size": 1,
+      "max_new_tokens_tool": 128,
+      "max_new_tokens_answer": 128,
+      "do_sample": false,
+      "temperature": 0.0,
+      "all_families": true,
+      "test_limit": 6
+    },
+    "data": {
+      "families": [
+        "database",
+        "file",
+        "calendar",
+        "python"
+      ],
+      "train_per_family": 80,
+      "val_per_family": 20,
+      "test_per_family": 30
+    },
+    "stages": [
+      {
+        "name": "stage_00_base",
+        "family": null
+      },
+      {
+        "name": "stage_01_database",
+        "family": "database"
+      },
+      {
+        "name": "stage_02_file",
+        "family": "file"
+      },
+      {
+        "name": "stage_03_calendar",
+        "family": "calendar"
+      },
+      {
+        "name": "stage_04_python",
+        "family": "python"
+      }
+    ],
+    "oom_advice": true,
+    "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+    "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+    "run_name": "C_seed20261108"
+  },
+  "stages": [
+    {
+      "name": "stage_00_base",
+      "family": null,
+      "index": 0,
+      "adapter": null
+    },
+    {
+      "name": "stage_01_database",
+      "family": "database",
+      "index": 1,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database",
+      "train_summary": {
+        "stage": "stage_01_database",
+        "family": "database",
+        "previous_adapter": null,
+        "train_samples": 80,
+        "val_samples": 20,
+        "epochs": 2,
+        "steps": 160,
+        "optimizer_steps": 20,
+        "train_tokens": 48950,
+        "last_loss": 0.011184591799974442,
+        "val_loss": 0.005689054727554321,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 1.856,
+        "duration_seconds": 92.66,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    },
+    {
+      "name": "stage_02_file",
+      "family": "file",
+      "index": 2,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file",
+      "train_summary": {
+        "stage": "stage_02_file",
+        "family": "file",
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database",
+        "train_samples": 80,
+        "val_samples": 20,
+        "epochs": 2,
+        "steps": 160,
+        "optimizer_steps": 20,
+        "train_tokens": 54894,
+        "last_loss": 0.00022328976774588227,
+        "val_loss": 0.05327332736547858,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 2.095,
+        "duration_seconds": 95.92,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    },
+    {
+      "name": "stage_03_calendar",
+      "family": "calendar",
+      "index": 3,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar",
+      "train_summary": {
+        "stage": "stage_03_calendar",
+        "family": "calendar",
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file",
+        "train_samples": 80,
+        "val_samples": 20,
+        "epochs": 2,
+        "steps": 160,
+        "optimizer_steps": 20,
+        "train_tokens": 74944,
+        "last_loss": 0.00025151760200969875,
+        "val_loss": 0.006957424685590368,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 2.607,
+        "duration_seconds": 95.8,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    },
+    {
+      "name": "stage_04_python",
+      "family": "python",
+      "index": 4,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python",
+      "train_summary": {
+        "stage": "stage_04_python",
+        "family": "python",
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar",
+        "train_samples": 80,
+        "val_samples": 20,
+        "epochs": 2,
+        "steps": 160,
+        "optimizer_steps": 20,
+        "train_tokens": 61094,
+        "last_loss": 3.45325970556587e-05,
+        "val_loss": 0.00012935609098110675,
+        "compute_dtype": "torch.bfloat16",
+        "peak_gpu_gb": 2.095,
+        "duration_seconds": 93.63,
+        "seed": 20261108,
+        "max_seq_length": 1024
+      }
+    }
+  ],
+  "evaluations": [
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.333333,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 0.333333,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.588,
+      "duration_seconds": 18.61,
+      "adapter": null
+    },
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.833333,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.589,
+      "duration_seconds": 15.18,
+      "adapter": null
+    },
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.61,
+      "duration_seconds": 24.02,
+      "adapter": null
+    },
+    {
+      "stage_index": 0,
+      "stage_name": "stage_00_base",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.833333,
+          "execution_success_rate": 0.833333,
+          "final_task_success_rate": 0.333333
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 32.55,
+      "adapter": null
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_database",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.5,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.333333
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 29.56,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_database",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.5,
+        "argument_accuracy": 0.5,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.5
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.598,
+      "duration_seconds": 20.81,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_database",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 32.7,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database"
+    },
+    {
+      "stage_index": 1,
+      "stage_name": "stage_01_database",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.5,
+        "argument_accuracy": 0.5,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.5
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.5
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.605,
+      "duration_seconds": 20.14,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.333333
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 24.54,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.602,
+      "duration_seconds": 29.88,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 49.1,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 2,
+      "stage_name": "stage_02_file",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.666667,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.833333,
+          "execution_success_rate": 0.666667,
+          "final_task_success_rate": 0.666667
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.619,
+      "duration_seconds": 40.39,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_calendar",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.833333,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.333333
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 0.666667,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.604,
+      "duration_seconds": 23.06,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_calendar",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.833333,
+        "argument_accuracy": 0.833333,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.5
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.602,
+      "duration_seconds": 26.3,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_calendar",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.333333
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 24.97,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar"
+    },
+    {
+      "stage_index": 3,
+      "stage_name": "stage_03_calendar",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.5,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.5
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 0.5,
+          "argument_accuracy": 0.666667,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.5
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.615,
+      "duration_seconds": 35.61,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python",
+      "family": "database",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.333333,
+        "execution_success_rate": 0.5,
+        "final_task_success_rate": 0.833333
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_filter": {
+          "n": 3,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.333333,
+          "execution_success_rate": 0.333333,
+          "final_task_success_rate": 1.0
+        },
+        "sql_group": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "tool_selection": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 21.38,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python",
+      "family": "file",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.5
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.602,
+      "duration_seconds": 28.19,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python",
+      "family": "calendar",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.0
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_count": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_free": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_list": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "calendar_time": {
+          "n": 2,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.631,
+      "duration_seconds": 27.36,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_python",
+      "family": "python",
+      "metrics": {
+        "n": 6,
+        "tool_selection_accuracy": 0.833333,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 0.833333,
+        "final_task_success_rate": 0.833333
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 6,
+          "tool_selection_accuracy": 0.833333,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.833333,
+          "final_task_success_rate": 0.833333
+        },
+        "stat_correlation": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_mean": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 1,
+          "tool_selection_accuracy": 0.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "stat_percentile": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 1,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.617,
+      "duration_seconds": 38.51,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python"
+    }
+  ],
+  "capability_matrix": {
+    "families": [
+      "calendar",
+      "database",
+      "file",
+      "python"
+    ],
+    "pivot": [
+      {
+        "stage_index": 0,
+        "stage_name": "stage_00_base",
+        "calendar": 0.0,
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.333333
+      },
+      {
+        "stage_index": 1,
+        "stage_name": "stage_01_database",
+        "calendar": 0.333333,
+        "database": 0.666667,
+        "file": 0.5,
+        "python": 0.5
+      },
+      {
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "calendar": 0.0,
+        "database": 0.666667,
+        "file": 0.666667,
+        "python": 0.666667
+      },
+      {
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "calendar": 0.333333,
+        "database": 0.666667,
+        "file": 0.5,
+        "python": 0.5
+      },
+      {
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "calendar": 0.0,
+        "database": 0.833333,
+        "file": 0.5,
+        "python": 0.833333
+      }
+    ]
+  },
+  "forgetting": {
+    "family_average": {
+      "2": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      },
+      "3": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.083334,
+        "final_task_success_rate": 0.083334,
+        "tool_selection_accuracy": 0.166667
+      },
+      "4": {
+        "argument_accuracy": 0.055556,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.166667,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "family_average_weighted": {
+      "2": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      },
+      "3": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.083334,
+        "final_task_success_rate": 0.083334,
+        "tool_selection_accuracy": 0.166667
+      },
+      "4": {
+        "argument_accuracy": 0.055556,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.166667,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "skill_average": {
+      "2": {
+        "argument_accuracy": 0.214286,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      },
+      "3": {
+        "argument_accuracy": 0.233333,
+        "execution_success_rate": 0.133333,
+        "final_task_success_rate": 0.066667,
+        "tool_selection_accuracy": 0.177778
+      },
+      "4": {
+        "argument_accuracy": 0.075,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.15,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "skill_average_weighted": {
+      "2": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.0,
+        "tool_selection_accuracy": 0.0
+      },
+      "3": {
+        "argument_accuracy": 0.166667,
+        "execution_success_rate": 0.083333,
+        "final_task_success_rate": 0.083333,
+        "tool_selection_accuracy": 0.166667
+      },
+      "4": {
+        "argument_accuracy": 0.058824,
+        "execution_success_rate": 0.0,
+        "final_task_success_rate": 0.176471,
+        "tool_selection_accuracy": 0.0
+      }
+    },
+    "family_rows": [
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.833333,
+        "peak": 1.0,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.333333,
+        "peak": 0.5,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.333333,
+        "peak": 0.5,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.333333,
+        "peak": 0.5,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.5,
+        "peak": 0.5,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "database",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.833333,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.833333,
+        "peak": 1.0,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.833333,
+        "peak": 1.0,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.833333,
+        "peak": 1.0,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.5,
+        "peak": 0.666667,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "file",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.5,
+        "peak": 0.666667,
+        "forgetting": 0.166667,
+        "n": 6
+      },
+      {
+        "family": "calendar",
+        "skill": "",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "calendar",
+        "skill": "",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "calendar",
+        "skill": "",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 6
+      },
+      {
+        "family": "calendar",
+        "skill": "",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.333333,
+        "forgetting": 0.333333,
+        "n": 6
+      }
+    ],
+    "skill_rows": [
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.5,
+        "peak": 1.0,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "schema_reading",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.666667,
+        "peak": 1.0,
+        "forgetting": 0.333333,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_aggregation",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.666667,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.666667,
+        "peak": 1.0,
+        "forgetting": 0.333333,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.333333,
+        "peak": 0.333333,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.666667,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_filter",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 0.666667,
+        "forgetting": 0.0,
+        "n": 3
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_group",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "sql_order",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "argument_accuracy",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "execution_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "final_task_success_rate",
+        "stage_index": 2,
+        "stage_name": "stage_02_file",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "database",
+        "skill": "tool_selection",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "character_count",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "counting",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_list",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_read",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_search",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "file_write",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 1
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "final_formatting",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "argument_accuracy",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "execution_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "final_task_success_rate",
+        "stage_index": 3,
+        "stage_name": "stage_03_calendar",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "file",
+        "skill": "line_index",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.5,
+        "forgetting": 0.5,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_attendees",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_attendees",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_attendees",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_attendees",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_count",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_count",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_count",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_count",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 1.0,
+        "forgetting": 1.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_free",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_free",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_free",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_free",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_list",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_list",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_list",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_list",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_time",
+        "metric": "tool_selection_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_time",
+        "metric": "argument_accuracy",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_time",
+        "metric": "execution_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 1.0,
+        "peak": 1.0,
+        "forgetting": 0.0,
+        "n": 2
+      },
+      {
+        "family": "calendar",
+        "skill": "calendar_time",
+        "metric": "final_task_success_rate",
+        "stage_index": 4,
+        "stage_name": "stage_04_python",
+        "value": 0.0,
+        "peak": 0.0,
+        "forgetting": 0.0,
+        "n": 2
+      }
+    ]
+  }
+}

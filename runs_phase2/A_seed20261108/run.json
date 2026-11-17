@@ -1,0 +1,210 @@
+{
+  "run_id": "A_seed20261108",
+  "created": "2026-11-09T00:02:37+08:00",
+  "seed": 20261108,
+  "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+  "run_name": "A_seed20261108",
+  "config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+  "data_manifest": {
+    "created": "2026-11-08T22:55:23+08:00",
+    "split_seed": 20261108,
+    "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+    "families": {
+      "file": {
+        "templates": {
+          "train": [
+            "file_read_exact",
+            "file_count_lines",
+            "file_search_first",
+            "file_list_count",
+            "file_write_report"
+          ],
+          "val": [
+            "file_search_count",
+            "file_read_line"
+          ],
+          "test": [
+            "file_word_count",
+            "file_last_match",
+            "file_list_all",
+            "file_write_test"
+          ]
+        },
+        "counts": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        },
+        "files": {
+          "train": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\file\\train.jsonl",
+            "sha256": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42"
+          },
+          "val": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\file\\val.jsonl",
+            "sha256": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196"
+          },
+          "test": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\file\\test.jsonl",
+            "sha256": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66"
+          }
+        },
+        "unique_signatures": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        }
+      },
+      "database": {
+        "templates": {
+          "train": [
+            "db_count",
+            "db_filter_count",
+            "db_average",
+            "db_group_count",
+            "db_top_n",
+            "db_schema_count",
+            "db_list_tables"
+          ],
+          "val": [
+            "db_schema_count_val"
+          ],
+          "test": [
+            "db_filter_average",
+            "db_filter_top",
+            "db_group_average",
+            "db_schema_test",
+            "db_list_tables_test"
+          ]
+        },
+        "counts": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        },
+        "files": {
+          "train": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\database\\train.jsonl",
+            "sha256": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b"
+          },
+          "val": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\database\\val.jsonl",
+            "sha256": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767"
+          },
+          "test": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\database\\test.jsonl",
+            "sha256": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2"
+          }
+        },
+        "unique_signatures": {
+          "train": 21,
+          "val": 1,
+          "test": 17
+        }
+      },
+      "python": {
+        "templates": {
+          "train": [
+            "stats_mean",
+            "stats_median",
+            "stats_std",
+            "stats_percentile",
+            "stats_correlation",
+            "stats_regression"
+          ],
+          "val": [
+            "stats_median_wording",
+            "stats_percentile_wording"
+          ],
+          "test": [
+            "stats_mean_prose",
+            "stats_correlation_prose",
+            "stats_regression_prose",
+            "stats_median_prose",
+            "stats_std_prose",
+            "stats_percentile_prose"
+          ]
+        },
+        "counts": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        },
+        "files": {
+          "train": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\python\\train.jsonl",
+            "sha256": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7"
+          },
+          "val": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\python\\val.jsonl",
+            "sha256": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f"
+          },
+          "test": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\python\\test.jsonl",
+            "sha256": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747"
+          }
+        },
+        "unique_signatures": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        }
+      },
+      "calendar": {
+        "templates": {
+          "train": [
+            "calendar_count_date",
+            "calendar_count_month",
+            "calendar_list_titles",
+            "calendar_search_dates",
+            "calendar_attendees",
+            "calendar_free_slot"
+          ],
+          "val": [
+            "calendar_count_month_val",
+            "calendar_search_count"
+          ],
+          "test": [
+            "calendar_list_locations",
+            "calendar_attendees_count",
+            "calendar_free_slot_latest"
+          ]
+        },
+        "counts": {
+          "train": 80,
+          "val": 20,
+          "test": 30
+        },
+        "files": {
+          "train": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\calendar\\train.jsonl",
+            "sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0"
+          },
+          "val": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\calendar\\val.jsonl",
+            "sha256": "f696f08dfb77fe761b4413c9ed3ec533346101c35c31c2bda13463da129d97e1"
+          },
+          "test": {
+            "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\calendar\\test.jsonl",
+            "sha256": "ea59377e110c03cb9fea3e5e326fa54697f7481d67bd6b4cd3fef1bc62b436ca"
+          }
+        },
+        "unique_signatures": {
+          "train": 46,
+          "val": 9,
+          "test": 27
+        }
+      }
+    },
+    "db_fixture": {
+      "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\fixtures\\toolbench.db",
+      "sha256": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4"
+    },
+    "calendar_fixture": {
+      "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data_phase2\\fixtures\\calendar.json",
+      "sha256": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974"
+    }
+  },
+  "test_limit": 6,
+  "all_families": true
+}

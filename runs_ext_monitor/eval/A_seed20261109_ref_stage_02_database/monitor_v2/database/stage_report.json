@@ -1,0 +1,100 @@
+{
+  "stage_index": 2,
+  "stage_name": "A_seed20261109_ref_stage_02_database",
+  "family": "database",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.65625,
+    "argument_accuracy": 0.25,
+    "execution_success_rate": 0.53125,
+    "final_task_success_rate": 0.46875,
+    "joint_success_rate": 0.25,
+    "conditional_argument_accuracy": 0.380952,
+    "conditional_argument_numerator": 8,
+    "conditional_argument_denominator": 21
+  },
+  "skill_metrics": {
+    "sql_aggregation": {
+      "n": 8,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 8,
+      "conditional_argument_denominator": 8
+    },
+    "sql_filter": {
+      "n": 32,
+      "tool_selection_accuracy": 0.65625,
+      "argument_accuracy": 0.25,
+      "execution_success_rate": 0.53125,
+      "final_task_success_rate": 0.46875,
+      "joint_success_rate": 0.25,
+      "conditional_argument_accuracy": 0.380952,
+      "conditional_argument_numerator": 8,
+      "conditional_argument_denominator": 21
+    },
+    "sql_order": {
+      "n": 24,
+      "tool_selection_accuracy": 0.541667,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.375,
+      "final_task_success_rate": 0.291667,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 13
+    },
+    "sql_select": {
+      "n": 24,
+      "tool_selection_accuracy": 0.541667,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.375,
+      "final_task_success_rate": 0.291667,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 13
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 17676,
+    "output_tokens": 1734,
+    "total_tokens": 19410,
+    "generation_seconds": 14.771364,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 17676,
+      "output_tokens": 1734,
+      "total_tokens": 19410,
+      "generation_seconds": 14.771364
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 15.34
+  },
+  "peak_gpu_gb": 2.414,
+  "duration_seconds": 15.34,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_02_database"
+}

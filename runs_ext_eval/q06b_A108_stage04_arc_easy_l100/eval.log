@@ -1,0 +1,24 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:14, 21.65it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 481.56it/s]Loading weights:  72%|███████▏  | 225/311 [00:00<00:00, 728.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 670.70it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  0%|          | 0/100 [00:00<?, ?it/s]100%|██████████| 100/100 [00:00<00:00, 1188.11it/s]
+Tokenizing inputs:   0%|          | 0/399 [00:00<?, ?it/s]Tokenizing inputs: 100%|██████████| 399/399 [00:00<00:00, 10527.98it/s]
+Running loglikelihood requests:   0%|          | 0/399 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/399 [00:00<03:50,  1.72it/s]Running loglikelihood requests:   5%|▍         | 18/399 [00:00<00:12, 29.37it/s]Running loglikelihood requests:   7%|▋         | 26/399 [00:01<00:12, 29.85it/s]Running loglikelihood requests:   9%|▉         | 37/399 [00:01<00:10, 33.69it/s]Running loglikelihood requests:  11%|█▏        | 45/399 [00:01<00:10, 32.58it/s]Running loglikelihood requests:  13%|█▎        | 53/399 [00:01<00:10, 31.83it/s]Running loglikelihood requests:  15%|█▌        | 61/399 [00:02<00:10, 32.10it/s]Running loglikelihood requests:  18%|█▊        | 71/399 [00:02<00:09, 34.84it/s]Running loglikelihood requests:  20%|█▉        | 79/399 [00:02<00:09, 34.44it/s]Running loglikelihood requests:  22%|██▏       | 87/399 [00:02<00:09, 33.74it/s]Running loglikelihood requests:  24%|██▍       | 97/399 [00:02<00:07, 39.69it/s]Running loglikelihood requests:  28%|██▊       | 113/399 [00:03<00:05, 53.86it/s]Running loglikelihood requests:  32%|███▏      | 129/399 [00:03<00:04, 65.46it/s]Running loglikelihood requests:  37%|███▋      | 147/399 [00:03<00:03, 74.68it/s]Running loglikelihood requests:  39%|███▉      | 155/399 [00:03<00:04, 59.37it/s]Running loglikelihood requests:  42%|████▏     | 166/399 [00:03<00:04, 53.81it/s]Running loglikelihood requests:  44%|████▍     | 176/399 [00:04<00:03, 60.14it/s]Running loglikelihood requests:  48%|████▊     | 193/399 [00:04<00:02, 73.17it/s]Running loglikelihood requests:  53%|█████▎    | 212/399 [00:04<00:02, 86.16it/s]Running loglikelihood requests:  57%|█████▋    | 228/399 [00:04<00:01, 90.64it/s]Running loglikelihood requests:  63%|██████▎   | 250/399 [00:04<00:01, 105.26it/s]Running loglikelihood requests:  68%|██████▊   | 270/399 [00:04<00:01, 111.36it/s]Running loglikelihood requests:  72%|███████▏  | 287/399 [00:05<00:01, 111.34it/s]Running loglikelihood requests:  76%|███████▋  | 305/399 [00:05<00:00, 112.14it/s]Running loglikelihood requests:  82%|████████▏ | 327/399 [00:05<00:00, 121.11it/s]Running loglikelihood requests:  87%|████████▋ | 349/399 [00:05<00:00, 128.05it/s]Running loglikelihood requests:  92%|█████████▏| 367/399 [00:05<00:00, 125.32it/s]Running loglikelihood requests:  99%|█████████▉| 396/399 [00:05<00:00, 145.14it/s]Running loglikelihood requests: 100%|██████████| 399/399 [00:05<00:00, 68.76it/s] 
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+{
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 100,
+      "acc,none": 0.54,
+      "acc_stderr,none": 0.05009082659620331,
+      "acc_norm,none": 0.57,
+      "acc_norm_stderr,none": 0.049756985195624305
+    }
+  },
+  "wall_seconds": 21.3,
+  "peak_gpu_gb": 0.989
+}

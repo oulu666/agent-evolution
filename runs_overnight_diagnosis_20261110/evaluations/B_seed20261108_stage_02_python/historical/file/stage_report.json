@@ -1,0 +1,144 @@
+{
+  "stage_index": 2,
+  "stage_name": "B_seed20261108_stage_02_python",
+  "family": "file",
+  "metrics": {
+    "n": 30,
+    "tool_selection_accuracy": 0.233333,
+    "argument_accuracy": 0.233333,
+    "execution_success_rate": 0.233333,
+    "final_task_success_rate": 0.233333,
+    "joint_success_rate": 0.233333,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 7,
+    "conditional_argument_denominator": 7
+  },
+  "skill_metrics": {
+    "character_count": {
+      "n": 7,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "counting": {
+      "n": 8,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "file_list": {
+      "n": 7,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 7,
+      "conditional_argument_denominator": 7
+    },
+    "file_read": {
+      "n": 8,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "file_search": {
+      "n": 8,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "file_write": {
+      "n": 7,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    },
+    "final_formatting": {
+      "n": 7,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 7,
+      "conditional_argument_denominator": 7
+    },
+    "line_index": {
+      "n": 8,
+      "tool_selection_accuracy": 0.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 0.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": null,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 0
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 60,
+    "input_tokens": 14678,
+    "output_tokens": 823,
+    "total_tokens": 15501,
+    "generation_seconds": 8.820321,
+    "n": 30,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 30,
+      "input_tokens": 30,
+      "output_tokens": 30,
+      "total_tokens": 30,
+      "generation_seconds": 30
+    },
+    "recorded_totals": {
+      "inference_calls": 60,
+      "input_tokens": 14678,
+      "output_tokens": 823,
+      "total_tokens": 15501,
+      "generation_seconds": 8.820321
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 9.12
+  },
+  "peak_gpu_gb": 1.892,
+  "duration_seconds": 9.12,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_02_python"
+}

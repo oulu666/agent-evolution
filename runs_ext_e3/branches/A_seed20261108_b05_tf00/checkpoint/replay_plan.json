@@ -1,0 +1,291 @@
+{
+  "items": [
+    {
+      "family": "python",
+      "row_index": 86,
+      "episode_id": "python-train-target_median_natural-020",
+      "input_tokens": 361,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": true
+    },
+    {
+      "family": "file",
+      "row_index": 27,
+      "episode_id": "file-train-file_count_lines-011",
+      "input_tokens": 335,
+      "supervised_tokens": 34,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "database",
+      "row_index": 71,
+      "episode_id": "database-train-db_list_tables-002",
+      "input_tokens": 272,
+      "supervised_tokens": 31,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "database",
+      "row_index": 22,
+      "episode_id": "database-train-db_filter_count-010",
+      "input_tokens": 289,
+      "supervised_tokens": 40,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "database",
+      "row_index": 55,
+      "episode_id": "database-train-db_top_n-008",
+      "input_tokens": 312,
+      "supervised_tokens": 47,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "file",
+      "row_index": 15,
+      "episode_id": "file-train-file_read_exact-015",
+      "input_tokens": 460,
+      "supervised_tokens": 128,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "database",
+      "row_index": 57,
+      "episode_id": "database-train-db_top_n-010",
+      "input_tokens": 321,
+      "supervised_tokens": 52,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "file",
+      "row_index": 41,
+      "episode_id": "file-train-file_search_first-009",
+      "input_tokens": 328,
+      "supervised_tokens": 49,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "python",
+      "row_index": 26,
+      "episode_id": "python-train-stats_median-012",
+      "input_tokens": 347,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "python",
+      "row_index": 86,
+      "episode_id": "python-train-target_median_natural-020",
+      "input_tokens": 361,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": true
+    },
+    {
+      "family": "python",
+      "row_index": 86,
+      "episode_id": "python-train-target_median_natural-020",
+      "input_tokens": 361,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": true
+    }
+  ],
+  "budget_input_tokens": 3747,
+  "actual_input_tokens": 3747,
+  "actual_supervised_tokens": 609,
+  "unused_input_tokens": 0,
+  "unused_fraction": 0.0,
+  "within_one_percent_of_budget": true,
+  "weights": {
+    "database": 0.3333333333333333,
+    "file": 0.3333333333333333,
+    "python": 0.3333333333333333
+  },
+  "target_tokens_by_family": {
+    "database": 1249.0,
+    "file": 1249.0,
+    "python": 1249.0
+  },
+  "actual_tokens_by_family": {
+    "database": 1194,
+    "file": 1123,
+    "python": 1430
+  },
+  "quota_error_tokens_by_family": {
+    "database": -55.0,
+    "file": -126.0,
+    "python": 181.0
+  },
+  "samples_by_family": {
+    "database": 4,
+    "file": 3,
+    "python": 4
+  },
+  "target_fraction": 0.0,
+  "target_family_weights": {},
+  "uniform_actual_input_tokens": 3747,
+  "target_actual_input_tokens": 0,
+  "mode": "targeted",
+  "baseline_probe_scores": {
+    "database": 0.25,
+    "file": 0.03125,
+    "python": 0.71875
+  },
+  "midpoint_probe_scores": {
+    "database": 0.25,
+    "file": 0.03125,
+    "python": 0.6875
+  },
+  "positive_drops": {
+    "database": 0.0,
+    "file": 0.0,
+    "python": 0.03125
+  },
+  "adaptive_triggered": false,
+  "common_replay_positions": [
+    87,
+    95,
+    103,
+    111,
+    119,
+    127,
+    135,
+    143,
+    151,
+    159
+  ],
+  "insertion_schedule": {
+    "87": [
+      {
+        "family": "python",
+        "row_index": 86,
+        "episode_id": "python-train-target_median_natural-020",
+        "input_tokens": 361,
+        "supervised_tokens": 57,
+        "truncated": false,
+        "target": true
+      }
+    ],
+    "95": [
+      {
+        "family": "file",
+        "row_index": 27,
+        "episode_id": "file-train-file_count_lines-011",
+        "input_tokens": 335,
+        "supervised_tokens": 34,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "103": [
+      {
+        "family": "database",
+        "row_index": 71,
+        "episode_id": "database-train-db_list_tables-002",
+        "input_tokens": 272,
+        "supervised_tokens": 31,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "111": [
+      {
+        "family": "database",
+        "row_index": 22,
+        "episode_id": "database-train-db_filter_count-010",
+        "input_tokens": 289,
+        "supervised_tokens": 40,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "119": [
+      {
+        "family": "database",
+        "row_index": 55,
+        "episode_id": "database-train-db_top_n-008",
+        "input_tokens": 312,
+        "supervised_tokens": 47,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "127": [
+      {
+        "family": "file",
+        "row_index": 15,
+        "episode_id": "file-train-file_read_exact-015",
+        "input_tokens": 460,
+        "supervised_tokens": 128,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "135": [
+      {
+        "family": "database",
+        "row_index": 57,
+        "episode_id": "database-train-db_top_n-010",
+        "input_tokens": 321,
+        "supervised_tokens": 52,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "143": [
+      {
+        "family": "file",
+        "row_index": 41,
+        "episode_id": "file-train-file_search_first-009",
+        "input_tokens": 328,
+        "supervised_tokens": 49,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "151": [
+      {
+        "family": "python",
+        "row_index": 26,
+        "episode_id": "python-train-stats_median-012",
+        "input_tokens": 347,
+        "supervised_tokens": 57,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "159": [
+      {
+        "family": "python",
+        "row_index": 86,
+        "episode_id": "python-train-target_median_natural-020",
+        "input_tokens": 361,
+        "supervised_tokens": 57,
+        "truncated": false,
+        "target": true
+      },
+      {
+        "family": "python",
+        "row_index": 86,
+        "episode_id": "python-train-target_median_natural-020",
+        "input_tokens": 361,
+        "supervised_tokens": 57,
+        "truncated": false,
+        "target": true
+      }
+    ]
+  },
+  "adaptive_actual_input_tokens": 3747,
+  "targeted_actual_input_tokens": 3747,
+  "between_replay_arms_budget_difference": 0
+}

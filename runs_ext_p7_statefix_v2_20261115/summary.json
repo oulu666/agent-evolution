@@ -1,0 +1,310 @@
+{
+  "complete": true,
+  "finished": "2026-11-15 18:18:04 +0800",
+  "seeds": 3,
+  "paired_actions": 15,
+  "logical_optimizer_steps": 30,
+  "new_optimizer_steps": 18,
+  "reused_logical_steps": 12,
+  "known_discarded_or_failed_reconstruction_steps": 4,
+  "minimum_physical_optimizer_steps_including_old_work": 34,
+  "generation_episodes": 144,
+  "joint_macro": {
+    "baseline": {
+      "20261108": 0.125,
+      "20261109": 0.25,
+      "20261110": 0.25
+    },
+    "background": {
+      "20261108": 0.0,
+      "20261109": 0.25,
+      "20261110": 0.25
+    },
+    "db.list_tables": {
+      "20261108": 0.0,
+      "20261109": 0.25,
+      "20261110": 0.25
+    },
+    "db.filter_cmp_top": {
+      "20261108": 0.0,
+      "20261109": 0.25,
+      "20261110": 0.25
+    },
+    "file.search_last": {
+      "20261108": 0.0,
+      "20261109": 0.25,
+      "20261110": 0.25
+    },
+    "py.median": {
+      "20261108": 0.0,
+      "20261109": 0.25,
+      "20261110": 0.25
+    }
+  },
+  "mean_joint_macro": {
+    "baseline": 0.20833333333333334,
+    "background": 0.16666666666666666,
+    "db.list_tables": 0.16666666666666666,
+    "db.filter_cmp_top": 0.16666666666666666,
+    "file.search_last": 0.16666666666666666,
+    "py.median": 0.16666666666666666
+  },
+  "mean_NLL_gain_vs_background": {
+    "db.list_tables": {
+      "dev": 0.01788818552934875,
+      "check": 0.021416950155980885
+    },
+    "db.filter_cmp_top": {
+      "dev": 0.003039584553334862,
+      "check": 0.0006702908625205358
+    },
+    "file.search_last": {
+      "dev": 0.0044100044954878586,
+      "check": 0.001053481362760067
+    },
+    "py.median": {
+      "dev": 0.0032590056459108987,
+      "check": 0.0013737593156596024
+    }
+  },
+  "choices": {
+    "20261108": {
+      "1": {
+        "p6_proxy": "db.list_tables",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": 0.8,
+        "spearman_dev_to_check": 0.2,
+        "spearman_norm_to_check": 0.2,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.041606719605624676,
+          "db.filter_cmp_top": 0.0035045396960163952,
+          "file.search_last": 0.004056432660211597,
+          "py.median": 0.0026084520077523763
+        },
+        "spearman_single_unit_gradient_to_check": 1.0,
+        "spearman_single_raw_gradient_to_check": 0.2
+      },
+      "2": {
+        "p6_proxy": "db.list_tables",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": 1.0,
+        "spearman_dev_to_check": 0.4,
+        "spearman_norm_to_check": 0.4,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.05081705261117724,
+          "db.filter_cmp_top": 0.0021079492481632964,
+          "file.search_last": 0.003925132002638427,
+          "py.median": 0.0037995748830716696
+        },
+        "spearman_single_unit_gradient_to_check": 0.8,
+        "spearman_single_raw_gradient_to_check": 0.4
+      }
+    },
+    "20261109": {
+      "1": {
+        "p6_proxy": "file.search_last",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": -0.4,
+        "spearman_dev_to_check": 0.2,
+        "spearman_norm_to_check": 0.4,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.008803146021604976,
+          "db.filter_cmp_top": 0.000599615604561918,
+          "file.search_last": -0.006214164174590374,
+          "py.median": -0.0023950720747669646
+        },
+        "spearman_single_unit_gradient_to_check": -0.4,
+        "spearman_single_raw_gradient_to_check": -0.4
+      },
+      "2": {
+        "p6_proxy": "file.search_last",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": -0.4,
+        "spearman_dev_to_check": 0.2,
+        "spearman_norm_to_check": 0.4,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.01496087626197978,
+          "db.filter_cmp_top": 0.002379797461768544,
+          "file.search_last": 0.0013536973387972843,
+          "py.median": 0.0016440578073345722
+        },
+        "spearman_single_unit_gradient_to_check": -0.4,
+        "spearman_single_raw_gradient_to_check": -0.4
+      }
+    },
+    "20261110": {
+      "1": {
+        "p6_proxy": "db.list_tables",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": 0.4,
+        "spearman_dev_to_check": 1.0,
+        "spearman_norm_to_check": 0.8,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.04076893845408717,
+          "db.filter_cmp_top": 0.0014184046307349348,
+          "file.search_last": -0.0016387274260060828,
+          "py.median": 0.0011909277748491955
+        },
+        "spearman_single_unit_gradient_to_check": 0.4,
+        "spearman_single_raw_gradient_to_check": 0.4
+      },
+      "2": {
+        "p6_proxy": "db.list_tables",
+        "measured_dev": "db.list_tables",
+        "check_oracle": "db.list_tables",
+        "spearman_proxy_to_check": 0.4,
+        "spearman_dev_to_check": 0.4,
+        "spearman_norm_to_check": 0.8,
+        "check_gain_per_1k_tokens": {
+          "db.list_tables": 0.05233025213409051,
+          "db.filter_cmp_top": -0.0015915631639036346,
+          "file.search_last": -0.0006863653915051817,
+          "py.median": 0.00026450851039543045
+        },
+        "spearman_single_unit_gradient_to_check": 0.4,
+        "spearman_single_raw_gradient_to_check": 1.0
+      }
+    }
+  },
+  "cross_skill_check_NLL_gain": {
+    "20261108": {
+      "db.list_tables_2": {
+        "db.list_tables": 0.10812448710203171,
+        "db.filter_cmp_top": 0.000498652458190918,
+        "file.search_last": 0.0021009063348174095,
+        "py.median": -0.00014613941311836243
+      },
+      "db.filter_cmp_top_2": {
+        "db.list_tables": 5.056709051132202e-05,
+        "db.filter_cmp_top": 0.005084507167339325,
+        "file.search_last": -0.0004384787753224373,
+        "py.median": 0.0011297762393951416
+      },
+      "file.search_last_2": {
+        "db.list_tables": 0.0018291175365447998,
+        "db.filter_cmp_top": 0.0001346394419670105,
+        "file.search_last": 0.0073506636545062065,
+        "py.median": 0.0015503447502851486
+      },
+      "py.median_2": {
+        "db.list_tables": 0.004140868782997131,
+        "db.filter_cmp_top": 0.0005830526351928711,
+        "file.search_last": -0.0017566792666912079,
+        "py.median": 0.008005930110812187
+      }
+    },
+    "20261109": {
+      "db.list_tables_2": {
+        "db.list_tables": 0.031588612124323845,
+        "db.filter_cmp_top": 0.0010353177785873413,
+        "file.search_last": 1.5776604413986206e-06,
+        "py.median": -7.064081728458405e-05
+      },
+      "db.filter_cmp_top_2": {
+        "db.list_tables": 0.001669013872742653,
+        "db.filter_cmp_top": 0.005923055112361908,
+        "file.search_last": -0.00027365703135728836,
+        "py.median": -0.00081680528819561
+      },
+      "file.search_last_2": {
+        "db.list_tables": 0.0020242836326360703,
+        "db.filter_cmp_top": 0.0006881728768348694,
+        "file.search_last": 0.0007669487968087196,
+        "py.median": 0.00018099229782819748
+      },
+      "py.median_2": {
+        "db.list_tables": 0.0019936896860599518,
+        "db.filter_cmp_top": 0.0011417940258979797,
+        "file.search_last": -0.0009683407843112946,
+        "py.median": 0.002580896019935608
+      }
+    },
+    "20261110": {
+      "db.list_tables_2": {
+        "db.list_tables": 0.11469334922730923,
+        "db.filter_cmp_top": -0.0016559809446334839,
+        "file.search_last": 0.00016174418851733208,
+        "py.median": 0.0006715161725878716
+      },
+      "db.filter_cmp_top_2": {
+        "db.list_tables": -0.006272599101066589,
+        "db.filter_cmp_top": 0.0024938583374023438,
+        "file.search_last": -0.0016095954924821854,
+        "py.median": 0.0011038482189178467
+      },
+      "file.search_last_2": {
+        "db.list_tables": -0.0006788671016693115,
+        "db.filter_cmp_top": -0.0009203851222991943,
+        "file.search_last": -0.0005315570160746574,
+        "py.median": 0.00024742260575294495
+      },
+      "py.median_2": {
+        "db.list_tables": 0.0010246485471725464,
+        "db.filter_cmp_top": 0.0005070343613624573,
+        "file.search_last": -0.0020426628179848194,
+        "py.median": 0.001274880487471819
+      }
+    }
+  },
+  "costs": {
+    "20261108": {
+      "seed": 20261108,
+      "costs": {
+        "restorations": 12,
+        "nll_forward": 264,
+        "generation_episodes": 48,
+        "diagnostic_backward": 21,
+        "training_backward": 80,
+        "training_input_tokens": 35663,
+        "optimizer_steps": 10
+      },
+      "seconds": 295.3693063259125,
+      "prefix_restored": true,
+      "frozen_inputs_unchanged": true
+    },
+    "20261109": {
+      "seed": 20261109,
+      "costs": {
+        "restorations": 10,
+        "exact_disk_restore_checks": 18,
+        "diagnostic_backward": 20,
+        "training_backward": 64,
+        "training_input_tokens": 28370,
+        "optimizer_steps": 8,
+        "nll_forward": 192,
+        "generation_episodes": 32,
+        "reused_optimizer_steps": 2,
+        "reused_generation_episodes": 16
+      },
+      "seconds": 218.22321486473083,
+      "prefix_restored": true,
+      "frozen_inputs_unchanged": true
+    },
+    "20261110": {
+      "seed": 20261110,
+      "costs": {
+        "restorations": 12,
+        "exact_disk_restore_checks": 22,
+        "nll_forward": 264,
+        "generation_episodes": 48,
+        "diagnostic_backward": 21,
+        "training_backward": 80,
+        "training_input_tokens": 32599,
+        "optimizer_steps": 10,
+        "reused_optimizer_steps": 0,
+        "reused_generation_episodes": 0
+      },
+      "seconds": 299.9186267852783,
+      "prefix_restored": true,
+      "frozen_inputs_unchanged": true
+    }
+  },
+  "exact_state_bindings": 20,
+  "old_partial_reused": false,
+  "known_extra_training_backward": 40
+}

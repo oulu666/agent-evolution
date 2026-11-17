@@ -1,0 +1,98 @@
+{
+  "duration_seconds": 51.6,
+  "batch_size": 4,
+  "reports": {
+    "natv2_file": {
+      "duration_seconds": 8.0,
+      "peak_gpu_gb": 0.746,
+      "evaluation_protocol": {
+        "batch_size": 4,
+        "do_sample": false,
+        "use_cache": true,
+        "padding_side": "left",
+        "output_token_count_includes_eos": true,
+        "output_token_count_excludes_post_eos_padding": true
+      },
+      "metrics": {
+        "n": 8,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.875,
+        "joint_success_rate": 0.875,
+        "conditional_argument_accuracy": 1.0,
+        "conditional_argument_numerator": 8,
+        "conditional_argument_denominator": 8
+      }
+    },
+    "natv2_database": {
+      "duration_seconds": 10.94,
+      "peak_gpu_gb": 0.737,
+      "evaluation_protocol": {
+        "batch_size": 4,
+        "do_sample": false,
+        "use_cache": true,
+        "padding_side": "left",
+        "output_token_count_includes_eos": true,
+        "output_token_count_excludes_post_eos_padding": true
+      },
+      "metrics": {
+        "n": 8,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 1.0,
+        "joint_success_rate": 1.0,
+        "conditional_argument_accuracy": 1.0,
+        "conditional_argument_numerator": 8,
+        "conditional_argument_denominator": 8
+      }
+    },
+    "natv2_python": {
+      "duration_seconds": 8.48,
+      "peak_gpu_gb": 0.752,
+      "evaluation_protocol": {
+        "batch_size": 4,
+        "do_sample": false,
+        "use_cache": true,
+        "padding_side": "left",
+        "output_token_count_includes_eos": true,
+        "output_token_count_excludes_post_eos_padding": true
+      },
+      "metrics": {
+        "n": 8,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 1.0,
+        "joint_success_rate": 1.0,
+        "conditional_argument_accuracy": 1.0,
+        "conditional_argument_numerator": 8,
+        "conditional_argument_denominator": 8
+      }
+    },
+    "calendar_v3": {
+      "duration_seconds": 22.55,
+      "peak_gpu_gb": 0.977,
+      "evaluation_protocol": {
+        "batch_size": 4,
+        "do_sample": false,
+        "use_cache": true,
+        "padding_side": "left",
+        "output_token_count_includes_eos": true,
+        "output_token_count_excludes_post_eos_padding": true
+      },
+      "metrics": {
+        "n": 20,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.55,
+        "joint_success_rate": 0.55,
+        "conditional_argument_accuracy": 1.0,
+        "conditional_argument_numerator": 20,
+        "conditional_argument_denominator": 20
+      }
+    }
+  }
+}

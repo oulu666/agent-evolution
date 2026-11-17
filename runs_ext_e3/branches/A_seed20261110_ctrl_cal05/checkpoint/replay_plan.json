@@ -1,0 +1,289 @@
+{
+  "items": [
+    {
+      "family": "calendar",
+      "row_index": 59,
+      "episode_id": "calendar-train-calendar_attendees-005",
+      "input_tokens": 305,
+      "supervised_tokens": 38,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 61,
+      "episode_id": "calendar-train-calendar_attendees-007",
+      "input_tokens": 305,
+      "supervised_tokens": 38,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 61,
+      "episode_id": "calendar-train-calendar_attendees-007",
+      "input_tokens": 305,
+      "supervised_tokens": 38,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 14,
+      "episode_id": "calendar-train-calendar_count_month-000",
+      "input_tokens": 307,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 61,
+      "episode_id": "calendar-train-calendar_attendees-007",
+      "input_tokens": 305,
+      "supervised_tokens": 38,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 4,
+      "episode_id": "calendar-train-calendar_count_date-004",
+      "input_tokens": 531,
+      "supervised_tokens": 37,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 14,
+      "episode_id": "calendar-train-calendar_count_month-000",
+      "input_tokens": 307,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 60,
+      "episode_id": "calendar-train-calendar_attendees-006",
+      "input_tokens": 305,
+      "supervised_tokens": 38,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 55,
+      "episode_id": "calendar-train-calendar_attendees-001",
+      "input_tokens": 315,
+      "supervised_tokens": 44,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 71,
+      "episode_id": "calendar-train-calendar_free_slot-004",
+      "input_tokens": 421,
+      "supervised_tokens": 63,
+      "truncated": false,
+      "target": false
+    },
+    {
+      "family": "calendar",
+      "row_index": 21,
+      "episode_id": "calendar-train-calendar_count_month-007",
+      "input_tokens": 307,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false
+    }
+  ],
+  "budget_input_tokens": 3747,
+  "actual_input_tokens": 3713,
+  "actual_supervised_tokens": 439,
+  "weights": {
+    "calendar": 1.0
+  },
+  "target_family_weights": {},
+  "target_fraction": 0.0,
+  "actual_target_fraction": 0.0,
+  "uniform_actual_input_tokens": 3713,
+  "target_actual_input_tokens": 0,
+  "actual_tokens_by_family": {
+    "calendar": 3713
+  },
+  "target_samples_by_family": {
+    "calendar": 0
+  },
+  "quota_error_tokens_by_family": {
+    "calendar": 0
+  },
+  "samples_by_family": {
+    "calendar": 11
+  },
+  "unused_input_tokens": 34,
+  "unused_fraction": 0.009073925807312517,
+  "within_one_percent_of_budget": true,
+  "e3_plan": {
+    "kind": "calendar_only_control",
+    "ratio": 0.05,
+    "n_target": 11,
+    "optimizer_steps_expected": 22,
+    "note": "replay slots filled with Calendar training rows; no old-tool replay"
+  },
+  "mode": "targeted",
+  "baseline_probe_scores": {
+    "database": 0.25,
+    "file": 0.0,
+    "python": 0.65625
+  },
+  "midpoint_probe_scores": {
+    "database": 0.21875,
+    "file": 0.21875,
+    "python": 0.625
+  },
+  "positive_drops": {
+    "database": 0.03125,
+    "file": 0.0,
+    "python": 0.03125
+  },
+  "adaptive_triggered": false,
+  "common_replay_positions": [
+    87,
+    95,
+    103,
+    111,
+    119,
+    127,
+    135,
+    143,
+    151,
+    159
+  ],
+  "insertion_schedule": {
+    "87": [
+      {
+        "family": "calendar",
+        "row_index": 59,
+        "episode_id": "calendar-train-calendar_attendees-005",
+        "input_tokens": 305,
+        "supervised_tokens": 38,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "95": [
+      {
+        "family": "calendar",
+        "row_index": 61,
+        "episode_id": "calendar-train-calendar_attendees-007",
+        "input_tokens": 305,
+        "supervised_tokens": 38,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "103": [
+      {
+        "family": "calendar",
+        "row_index": 61,
+        "episode_id": "calendar-train-calendar_attendees-007",
+        "input_tokens": 305,
+        "supervised_tokens": 38,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "111": [
+      {
+        "family": "calendar",
+        "row_index": 14,
+        "episode_id": "calendar-train-calendar_count_month-000",
+        "input_tokens": 307,
+        "supervised_tokens": 35,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "119": [
+      {
+        "family": "calendar",
+        "row_index": 61,
+        "episode_id": "calendar-train-calendar_attendees-007",
+        "input_tokens": 305,
+        "supervised_tokens": 38,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "127": [
+      {
+        "family": "calendar",
+        "row_index": 4,
+        "episode_id": "calendar-train-calendar_count_date-004",
+        "input_tokens": 531,
+        "supervised_tokens": 37,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "135": [
+      {
+        "family": "calendar",
+        "row_index": 14,
+        "episode_id": "calendar-train-calendar_count_month-000",
+        "input_tokens": 307,
+        "supervised_tokens": 35,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "143": [
+      {
+        "family": "calendar",
+        "row_index": 60,
+        "episode_id": "calendar-train-calendar_attendees-006",
+        "input_tokens": 305,
+        "supervised_tokens": 38,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "151": [
+      {
+        "family": "calendar",
+        "row_index": 55,
+        "episode_id": "calendar-train-calendar_attendees-001",
+        "input_tokens": 315,
+        "supervised_tokens": 44,
+        "truncated": false,
+        "target": false
+      }
+    ],
+    "159": [
+      {
+        "family": "calendar",
+        "row_index": 71,
+        "episode_id": "calendar-train-calendar_free_slot-004",
+        "input_tokens": 421,
+        "supervised_tokens": 63,
+        "truncated": false,
+        "target": false
+      },
+      {
+        "family": "calendar",
+        "row_index": 21,
+        "episode_id": "calendar-train-calendar_count_month-007",
+        "input_tokens": 307,
+        "supervised_tokens": 35,
+        "truncated": false,
+        "target": false
+      }
+    ]
+  },
+  "adaptive_actual_input_tokens": 3714,
+  "targeted_actual_input_tokens": 3713,
+  "between_replay_arms_budget_difference": 0
+}

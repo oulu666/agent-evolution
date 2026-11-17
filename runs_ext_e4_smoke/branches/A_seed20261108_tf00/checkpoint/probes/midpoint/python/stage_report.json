@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_midpoint",
+  "family": "python",
+  "metrics": {
+    "n": 4,
+    "tool_selection_accuracy": 0.5,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 0.5,
+    "final_task_success_rate": 0.5,
+    "joint_success_rate": 0.5,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 2,
+    "conditional_argument_denominator": 2
+  },
+  "skill_metrics": {
+    "numeric_input": {
+      "n": 4,
+      "tool_selection_accuracy": 0.5,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 0.5,
+      "final_task_success_rate": 0.5,
+      "joint_success_rate": 0.5,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 2
+    },
+    "stat_median": {
+      "n": 4,
+      "tool_selection_accuracy": 0.5,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 0.5,
+      "final_task_success_rate": 0.5,
+      "joint_success_rate": 0.5,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 2
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 8,
+    "input_tokens": 2497,
+    "output_tokens": 258,
+    "total_tokens": 2755,
+    "generation_seconds": 5.398039,
+    "n": 4,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 4,
+      "input_tokens": 4,
+      "output_tokens": 4,
+      "total_tokens": 4,
+      "generation_seconds": 4
+    },
+    "recorded_totals": {
+      "inference_calls": 8,
+      "input_tokens": 2497,
+      "output_tokens": 258,
+      "total_tokens": 2755,
+      "generation_seconds": 5.398039
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 5.48
+  },
+  "peak_gpu_gb": 1.223,
+  "duration_seconds": 5.48,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": null
+}

@@ -1,0 +1,49 @@
+{
+  "arm": "db2_early",
+  "seed": 20261110,
+  "plan_sha256": "a4089acefbab8e96b2861a8cab45da1d19bf36dd641e44a8182392550b47af2d",
+  "prefix_state_sha256": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb",
+  "optimizer_steps": 23,
+  "replay_input_tokens": 7492,
+  "tracked_timing": {
+    "tracked": [
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-009",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-001",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "median_nat",
+        "id": "target_median_natural-025",
+        "position": 151,
+        "after": 2
+      },
+      {
+        "kind": "median_nat",
+        "id": "target_median_natural-016",
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "total_steps": 23,
+    "sum_after": {
+      "filter": 12,
+      "list_tables": 0,
+      "median_nat": 3
+    },
+    "n": {
+      "filter": 2,
+      "list_tables": 0,
+      "median_nat": 2
+    },
+    "mom_filter": 0.9371
+  },
+  "finished": "2026-11-14 17:14:15 +0800"
+}

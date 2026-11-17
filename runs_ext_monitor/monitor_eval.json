@@ -1,0 +1,3239 @@
+{
+  "params": {
+    "tau": 0.8,
+    "delta": 0.1,
+    "alpha": 0.1,
+    "n_min": 8,
+    "ie_margin": 0.25
+  },
+  "thresholds": {
+    "drop": 0.1,
+    "need": 0.8
+  },
+  "units": [
+    {
+      "scenario": "A",
+      "seed": 20261108,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.13333333333333333,
+        "end_none": 0.06666666666666667,
+        "ref": 0.6333333333333333
+      },
+      "gold_scores_raw": {
+        "start": 0.5666666666666667,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": true
+      },
+      "gold_raw": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 0.20833333333333334,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.041666666666666664,
+          "p1": 0.375
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.041666666666666664,
+          "p1": 0.375,
+          "drop": -0.3333333333333333,
+          "p_value": 0.9977673710638368,
+          "ci90": [
+            0.23305153214508628,
+            0.5422760132271509
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.42500000000000004
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.03125,
+          "p1": 0.03125
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.03125,
+          "p1": 0.03125,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.007002788780185019,
+            0.12858199064617307
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.76875
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.15084979123917402,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.125,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.041666666666666664,
+          "p1": 0.375,
+          "drop": -0.3333333333333333,
+          "p_value": 0.9977673710638368,
+          "ci90": [
+            0.23305153214508628,
+            0.5422760132271509
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.42500000000000004
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.03125,
+          "p1": 0.03125,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.007002788780185019,
+            0.12858199064617307
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.76875
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.15084979123917402,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.125,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261108,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.0,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold_scores_raw": {
+        "start": 0.0,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.25,
+          "p1": 0.25
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.25,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.14702790221066353,
+            0.3919506468167274
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.55
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.25,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.14702790221066353,
+            0.3919506468167274
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.55
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261108,
+      "family": "python",
+      "gold_scores_fixed": {
+        "start": 0.9666666666666667,
+        "end_none": 0.1,
+        "ref": 0.9666666666666667
+      },
+      "gold_scores_raw": {
+        "start": 0.9666666666666667,
+        "end_none": 0.1,
+        "ref": 0.9666666666666667
+      },
+      "gold": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": true
+      },
+      "gold_raw": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": true
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 1.0,
+          "p1": 0.7916666666666666
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 1.0,
+          "p1": 0.7916666666666666
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 1.0,
+          "p1": 0.7916666666666666,
+          "drop": 0.20833333333333337,
+          "p_value": 0.00907612721316172,
+          "ci90": [
+            0.6295196877598103,
+            0.8947160397049696
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.20833333333333337
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.71875,
+          "p1": 0.65625
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.71875,
+          "p1": 0.65625,
+          "drop": 0.0625,
+          "p_value": 0.29481927581328354,
+          "ci90": [
+            0.5108986479199504,
+            0.7772397589379302
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.14375000000000004
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.4375,
+          "p1": 0.3125,
+          "drop": 0.125,
+          "p_value": 0.23260440922607087,
+          "ci90": [
+            0.16126565708702384,
+            0.5179738146383297
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.48750000000000004,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.4375,
+              "p1": 0.3125
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 1.0,
+          "p1": 0.7916666666666666,
+          "drop": 0.20833333333333337,
+          "p_value": 0.00907612721316172,
+          "ci90": [
+            0.6295196877598103,
+            0.8947160397049696
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.20833333333333337
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.71875,
+          "p1": 0.65625,
+          "drop": 0.0625,
+          "p_value": 0.29481927581328354,
+          "ci90": [
+            0.5108986479199504,
+            0.7772397589379302
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.14375000000000004
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.4375,
+          "p1": 0.3125,
+          "drop": 0.125,
+          "p_value": 0.23260440922607087,
+          "ci90": [
+            0.16126565708702384,
+            0.5179738146383297
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.48750000000000004,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.4375,
+              "p1": 0.3125
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261109,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.13333333333333333,
+        "end_none": 0.43333333333333335,
+        "ref": 0.5
+      },
+      "gold_scores_raw": {
+        "start": 0.5333333333333333,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 0.375,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 0.25,
+          "p1": 0.20833333333333334
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.20833333333333334,
+          "drop": 0.04166666666666666,
+          "p_value": 0.3656419030913453,
+          "ci90": [
+            0.10528396029503043,
+            0.37048031224018974
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.5916666666666667
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.03125,
+          "p1": 0.03125
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.03125,
+          "p1": 0.03125,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.007002788780185019,
+            0.12858199064617307
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.76875
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.15084979123917402,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.125,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.20833333333333334,
+          "drop": 0.04166666666666666,
+          "p_value": 0.3656419030913453,
+          "ci90": [
+            0.10528396029503043,
+            0.37048031224018974
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.5916666666666667
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.03125,
+          "p1": 0.03125,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.007002788780185019,
+            0.12858199064617307
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.76875
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.15084979123917402,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.125,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261109,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.03333333333333333,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold_scores_raw": {
+        "start": 0.03333333333333333,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.25,
+          "p1": 0.21875
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.21875,
+          "drop": 0.03125,
+          "p_value": 0.38396468585627724,
+          "ci90": [
+            0.1231872603884566,
+            0.3581636072673583
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.58125
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 1.0,
+              "p1": 0.875
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.21875,
+          "drop": 0.03125,
+          "p_value": 0.38396468585627724,
+          "ci90": [
+            0.1231872603884566,
+            0.3581636072673583
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.58125
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 1.0,
+              "p1": 0.875
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261109,
+      "family": "python",
+      "gold_scores_fixed": {
+        "start": 1.0,
+        "end_none": 1.0,
+        "ref": 1.0
+      },
+      "gold_scores_raw": {
+        "start": 1.0,
+        "end_none": 1.0,
+        "ref": 1.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": false,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": false,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 1.0,
+          "p1": 1.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 1.0,
+          "p1": 1.0
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 1.0,
+          "p1": 1.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.8986898185110513,
+            1.0
+          ],
+          "status": "OK",
+          "reason": "no_drop_level_ok",
+          "gap": 0.0
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.625,
+          "p1": 0.625
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.625,
+          "p1": 0.625,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.4797335828999954,
+            0.7507771425863091
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.25,
+          "p1": 0.25,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.11755580446533705,
+            0.4547634911684676
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.55,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.25
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 1.0,
+          "p1": 1.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.8986898185110513,
+            1.0
+          ],
+          "status": "OK",
+          "reason": "no_drop_level_ok",
+          "gap": 0.0
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.625,
+          "p1": 0.625,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.4797335828999954,
+            0.7507771425863091
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.25,
+          "p1": 0.25,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.11755580446533705,
+            0.4547634911684676
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.55,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.25
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261110,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.4,
+        "end_none": 0.6666666666666666,
+        "ref": 0.4666666666666667
+      },
+      "gold_scores_raw": {
+        "start": 0.23333333333333334,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 0.20833333333333334,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.25,
+          "p1": 0.7083333333333334
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.7083333333333334,
+          "drop": -0.45833333333333337,
+          "p_value": 0.9992590031065949,
+          "ci90": [
+            0.5410221295196959,
+            0.8334319615265755
+          ],
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "level_ci_too_wide",
+          "gap": 0.0
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.1875
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.0,
+          "p1": 0.1875,
+          "drop": -0.1875,
+          "p_value": 0.9949599603214043,
+          "ci90": [
+            0.10019349618866828,
+            0.3235296900955705
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.6125
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.08333333333333333,
+          "drop": -0.08333333333333333,
+          "p_value": 0.8464930509830874,
+          "ci90": [
+            0.018816049516361844,
+            0.30116827943986896
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.7166666666666667,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.25
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.25
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.7083333333333334,
+          "drop": -0.45833333333333337,
+          "p_value": 0.9992590031065949,
+          "ci90": [
+            0.5410221295196959,
+            0.8334319615265755
+          ],
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "level_ci_too_wide",
+          "gap": 0.0
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.0,
+          "p1": 0.1875,
+          "drop": -0.1875,
+          "p_value": 0.9949599603214043,
+          "ci90": [
+            0.10019349618866828,
+            0.3235296900955705
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.6125
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.08333333333333333,
+          "drop": -0.08333333333333333,
+          "p_value": 0.8464930509830874,
+          "ci90": [
+            0.018816049516361844,
+            0.30116827943986896
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.7166666666666667,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.25
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.25
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.08333333333333333
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261110,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.03333333333333333,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold_scores_raw": {
+        "start": 0.03333333333333333,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 0.041666666666666664,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 0.041666666666666664,
+          "p1": 0.0
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.041666666666666664,
+          "p1": 0.0,
+          "drop": 0.041666666666666664,
+          "p_value": 0.15610819417165966,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.25,
+          "p1": 0.21875
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.21875,
+          "drop": 0.03125,
+          "p_value": 0.38396468585627724,
+          "ci90": [
+            0.1231872603884566,
+            0.3581636072673583
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.58125
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 1.0,
+              "p1": 0.875
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.041666666666666664,
+          "p1": 0.0,
+          "drop": 0.041666666666666664,
+          "p_value": 0.15610819417165966,
+          "ci90": [
+            0.0,
+            0.10131018148894873
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.25,
+          "p1": 0.21875,
+          "drop": 0.03125,
+          "p_value": 0.38396468585627724,
+          "ci90": [
+            0.1231872603884566,
+            0.3581636072673583
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.58125
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 1.0,
+              "p1": 0.875
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "A",
+      "seed": 20261110,
+      "family": "python",
+      "gold_scores_fixed": {
+        "start": 0.9666666666666667,
+        "end_none": 0.8,
+        "ref": 0.9666666666666667
+      },
+      "gold_scores_raw": {
+        "start": 0.9666666666666667,
+        "end_none": 0.8,
+        "ref": 0.9666666666666667
+      },
+      "gold": {
+        "G_drop": true,
+        "G_need": false,
+        "G_cum": true
+      },
+      "gold_raw": {
+        "G_drop": true,
+        "G_need": false,
+        "G_cum": true
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "DEGRADED",
+          "p0": 0.9166666666666666,
+          "p1": 0.7083333333333334
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 0.9166666666666666,
+          "p1": 0.7083333333333334
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.9166666666666666,
+          "p1": 0.7083333333333334,
+          "drop": 0.20833333333333326,
+          "p_value": 0.03222885913533798,
+          "ci90": [
+            0.5410221295196959,
+            0.8334319615265755
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.20833333333333326
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.65625,
+          "p1": 0.625
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.65625,
+          "p1": 0.625,
+          "drop": 0.03125,
+          "p_value": 0.39723294784653124,
+          "ci90": [
+            0.4797335828999954,
+            0.7507771425863091
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.3125,
+          "p1": 0.25,
+          "drop": 0.0625,
+          "p_value": 0.3470938057114213,
+          "ci90": [
+            0.11755580446533705,
+            0.4547634911684676
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.55,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.3125,
+              "p1": 0.25
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.9166666666666666,
+          "p1": 0.7083333333333334,
+          "drop": 0.20833333333333326,
+          "p_value": 0.03222885913533798,
+          "ci90": [
+            0.5410221295196959,
+            0.8334319615265755
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.20833333333333326
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.65625,
+          "p1": 0.625,
+          "drop": 0.03125,
+          "p_value": 0.39723294784653124,
+          "ci90": [
+            0.4797335828999954,
+            0.7507771425863091
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 16,
+          "n1": 16,
+          "p0": 0.3125,
+          "p1": 0.25,
+          "drop": 0.0625,
+          "p_value": 0.3470938057114213,
+          "ci90": [
+            0.11755580446533705,
+            0.4547634911684676
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.55,
+          "n_subsets": 3,
+          "subsets": {
+            "explicit": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "natural_canon": {
+              "status": "OK",
+              "p0": 1.0,
+              "p1": 1.0
+            },
+            "sort_para": {
+              "status": "DEFICIENT",
+              "p0": 0.3125,
+              "p1": 0.25
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261108,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.7666666666666667,
+        "end_none": 0.8333333333333334,
+        "ref": 0.7666666666666667
+      },
+      "gold_scores_raw": {
+        "start": 0.0,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": false,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.7083333333333334,
+          "p1": 0.75
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.7083333333333334,
+          "p1": 0.75,
+          "drop": -0.04166666666666663,
+          "p_value": 0.6273334663345985,
+          "ci90": [
+            0.584539861760291,
+            0.8648050474952346
+          ],
+          "status": "OK",
+          "reason": "no_drop_level_ok",
+          "gap": 0.0
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.375,
+          "p1": 0.4375
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.375,
+          "p1": 0.4375,
+          "drop": -0.0625,
+          "p_value": 0.6946336345888523,
+          "ci90": [
+            0.3037776070112922,
+            0.5809670302455556
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.36250000000000004
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.08333333333333333,
+          "p1": 0.08333333333333333,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.018816049516361844,
+            0.30116827943986896
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.7166666666666667,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 0.625,
+              "p1": 0.625
+            },
+            "last_canon": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 0.5,
+              "p1": 0.6666666666666666
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.08333333333333333,
+              "p1": 0.08333333333333333
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.7083333333333334,
+          "p1": 0.75,
+          "drop": -0.04166666666666663,
+          "p_value": 0.6273334663345985,
+          "ci90": [
+            0.584539861760291,
+            0.8648050474952346
+          ],
+          "status": "OK",
+          "reason": "no_drop_level_ok",
+          "gap": 0.0
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.375,
+          "p1": 0.4375,
+          "drop": -0.0625,
+          "p_value": 0.6946336345888523,
+          "ci90": [
+            0.3037776070112922,
+            0.5809670302455556
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.36250000000000004
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.08333333333333333,
+          "p1": 0.08333333333333333,
+          "drop": 0.0,
+          "p_value": 0.5,
+          "ci90": [
+            0.018816049516361844,
+            0.30116827943986896
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.7166666666666667,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 0.625,
+              "p1": 0.625
+            },
+            "last_canon": {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "p0": 0.5,
+              "p1": 0.6666666666666666
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.08333333333333333,
+              "p1": 0.08333333333333333
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261108,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.23333333333333334,
+        "end_none": 0.26666666666666666,
+        "ref": 0.03333333333333333
+      },
+      "gold_scores_raw": {
+        "start": 0.23333333333333334,
+        "end_none": 0.26666666666666666,
+        "ref": 0.03333333333333333
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.2916666666666667,
+          "p1": 0.5
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.2916666666666667,
+          "p1": 0.5
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.2916666666666667,
+          "p1": 0.5,
+          "drop": -0.20833333333333331,
+          "p_value": 0.9299954180794082,
+          "ci90": [
+            0.3408536982137593,
+            0.6591463017862407
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.30000000000000004
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.09375,
+          "p1": 0.15625
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.15625,
+          "drop": -0.0625,
+          "p_value": 0.7751541010155545,
+          "ci90": [
+            0.07818752814061462,
+            0.287907976772048
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.64375
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.4166666666666667
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.2916666666666667,
+          "p1": 0.5,
+          "drop": -0.20833333333333331,
+          "p_value": 0.9299954180794082,
+          "ci90": [
+            0.3408536982137593,
+            0.6591463017862407
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.30000000000000004
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.15625,
+          "drop": -0.0625,
+          "p_value": 0.7751541010155545,
+          "ci90": [
+            0.07818752814061462,
+            0.287907976772048
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.64375
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.4166666666666667
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261109,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.8,
+        "end_none": 0.4,
+        "ref": 0.8
+      },
+      "gold_scores_raw": {
+        "start": 0.0,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": true,
+        "G_need": true,
+        "G_cum": true
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 0.75,
+          "p1": 0.625
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.75,
+          "p1": 0.625,
+          "drop": 0.125,
+          "p_value": 0.17510069458964783,
+          "ci90": [
+            0.45772398677284915,
+            0.7669484678549137
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.125,
+          "p1": 0.0
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.019433551906208636,
+          "ci90": [
+            0.0,
+            0.07795709805478197
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.8
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.16666666666666666,
+          "p1": 0.0,
+          "drop": 0.16666666666666666,
+          "p_value": 0.06982469930521469,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEGRADED",
+              "p0": 0.16666666666666666,
+              "p1": 0.0
+            },
+            "last_para": {
+              "status": "DEGRADED",
+              "p0": 0.16666666666666666,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.75,
+          "p1": 0.625,
+          "drop": 0.125,
+          "p_value": 0.17510069458964783,
+          "ci90": [
+            0.45772398677284915,
+            0.7669484678549137
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.125,
+          "p1": 0.0,
+          "drop": 0.125,
+          "p_value": 0.019433551906208636,
+          "ci90": [
+            0.0,
+            0.07795709805478197
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.8
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 12,
+          "n1": 12,
+          "p0": 0.16666666666666666,
+          "p1": 0.0,
+          "drop": 0.16666666666666666,
+          "p_value": 0.06982469930521469,
+          "ci90": [
+            0.0,
+            0.18398119474747693
+          ],
+          "status": "DEGRADED",
+          "reason": "significant_drop",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEGRADED",
+              "p0": 0.16666666666666666,
+              "p1": 0.0
+            },
+            "last_para": {
+              "status": "DEGRADED",
+              "p0": 0.16666666666666666,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261109,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.3,
+        "end_none": 0.3333333333333333,
+        "ref": 0.06666666666666667
+      },
+      "gold_scores_raw": {
+        "start": 0.3,
+        "end_none": 0.3333333333333333,
+        "ref": 0.06666666666666667
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.25,
+          "p1": 0.5833333333333334
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.25,
+          "p1": 0.5833333333333334
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.5833333333333334,
+          "drop": -0.33333333333333337,
+          "p_value": 0.9904137576223885,
+          "ci90": [
+            0.41774350354288503,
+            0.7320381328756236
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.21666666666666667
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.09375,
+          "p1": 0.1875
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.1875,
+          "drop": -0.09375,
+          "p_value": 0.859643667365752,
+          "ci90": [
+            0.10019349618866828,
+            0.3235296900955705
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.6125
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.5
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.25,
+          "p1": 0.5833333333333334,
+          "drop": -0.33333333333333337,
+          "p_value": 0.9904137576223885,
+          "ci90": [
+            0.41774350354288503,
+            0.7320381328756236
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.21666666666666667
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.1875,
+          "drop": -0.09375,
+          "p_value": 0.859643667365752,
+          "ci90": [
+            0.10019349618866828,
+            0.3235296900955705
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.6125
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.5
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261110,
+      "family": "file",
+      "gold_scores_fixed": {
+        "start": 0.8,
+        "end_none": 0.8333333333333334,
+        "ref": 0.8
+      },
+      "gold_scores_raw": {
+        "start": 0.0,
+        "end_none": 0.0,
+        "ref": 0.0
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": false,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.0,
+          "p1": 0.0
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "DEGRADED",
+          "p0": 0.7083333333333334,
+          "p1": 0.625
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.7083333333333334,
+          "p1": 0.625,
+          "drop": 0.08333333333333337,
+          "p_value": 0.27014568730370986,
+          "ci90": [
+            0.45772398677284915,
+            0.7669484678549137
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes_drop>0": {
+          "status": "DEGRADED",
+          "p0": 0.15625,
+          "p1": 0.09375
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.15625,
+          "p1": 0.09375,
+          "drop": 0.0625,
+          "p_value": 0.22484589898444549,
+          "ci90": [
+            0.038091372834826186,
+            0.21274876933468417
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.70625
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.3333333333333333,
+              "p1": 0.25
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.08333333333333333,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.7083333333333334,
+          "p1": 0.625,
+          "drop": 0.08333333333333337,
+          "p_value": 0.27014568730370986,
+          "ci90": [
+            0.45772398677284915,
+            0.7669484678549137
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.17500000000000004
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.15625,
+          "p1": 0.09375,
+          "drop": 0.0625,
+          "p_value": 0.22484589898444549,
+          "ci90": [
+            0.038091372834826186,
+            0.21274876933468417
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.70625
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "first_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "last_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.3333333333333333,
+              "p1": 0.25
+            },
+            "last_para": {
+              "status": "DEFICIENT",
+              "p0": 0.08333333333333333,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "seed": 20261110,
+      "family": "database",
+      "gold_scores_fixed": {
+        "start": 0.3333333333333333,
+        "end_none": 0.4,
+        "ref": 0.13333333333333333
+      },
+      "gold_scores_raw": {
+        "start": 0.3333333333333333,
+        "end_none": 0.4,
+        "ref": 0.13333333333333333
+      },
+      "gold": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "gold_raw": {
+        "G_drop": false,
+        "G_need": true,
+        "G_cum": false
+      },
+      "detectors": {
+        "V1_drop>0_rawlabels": {
+          "status": "OK",
+          "p0": 0.2916666666666667,
+          "p1": 0.6666666666666666
+        },
+        "V1_drop>0_fixedlabels": {
+          "status": "OK",
+          "p0": 0.2916666666666667,
+          "p1": 0.6666666666666666
+        },
+        "V1probes+rule2": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.2916666666666667,
+          "p1": 0.6666666666666666,
+          "drop": -0.37499999999999994,
+          "p_value": 0.9953433525088263,
+          "ci90": [
+            0.498789987938561,
+            0.800773284898456
+          ],
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "level_ci_too_wide",
+          "gap": 0.0
+        },
+        "V2probes_drop>0": {
+          "status": "OK",
+          "p0": 0.09375,
+          "p1": 0.15625
+        },
+        "V2probes+rule2_pooled": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.15625,
+          "drop": -0.0625,
+          "p_value": 0.7751541010155545,
+          "ci90": [
+            0.07818752814061462,
+            0.287907976772048
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.64375
+        },
+        "V2probes+rule2_subsetmax": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "DEFICIENT",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.4166666666666667
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        },
+        "V1probes+rule2[DEGRADED-only]": {
+          "n0": 24,
+          "n1": 24,
+          "p0": 0.2916666666666667,
+          "p1": 0.6666666666666666,
+          "drop": -0.37499999999999994,
+          "p_value": 0.9953433525088263,
+          "ci90": [
+            0.498789987938561,
+            0.800773284898456
+          ],
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "level_ci_too_wide",
+          "gap": 0.0
+        },
+        "V2probes+rule2_pooled[DEGRADED-only]": {
+          "n0": 32,
+          "n1": 32,
+          "p0": 0.09375,
+          "p1": 0.15625,
+          "drop": -0.0625,
+          "p_value": 0.7751541010155545,
+          "ci90": [
+            0.07818752814061462,
+            0.287907976772048
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.64375
+        },
+        "V2probes+rule2_subsetmax[DEGRADED-only]": {
+          "n0": 8,
+          "n1": 8,
+          "p0": 0.0,
+          "p1": 0.0,
+          "drop": 0.0,
+          "p_value": 1.0,
+          "ci90": [
+            0.0,
+            0.25272359742376327
+          ],
+          "status": "OK",
+          "reason": "level_below_tau",
+          "gap": 0.8,
+          "n_subsets": 3,
+          "subsets": {
+            "filter_mean_nat": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            },
+            "filter_top_canon": {
+              "status": "DEFICIENT",
+              "p0": 0.25,
+              "p1": 0.4166666666666667
+            },
+            "filter_top_para": {
+              "status": "DEFICIENT",
+              "p0": 0.0,
+              "p1": 0.0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "table": {
+    "V1_drop>0_rawlabels|G_drop|IE=neg": {
+      "tp": 2,
+      "fn": 1,
+      "fp": 4,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.6666666666666666,
+      "fpr": 0.3333333333333333,
+      "n": 15
+    },
+    "V1_drop>0_rawlabels|G_drop|IE=flag": {
+      "tp": 2,
+      "fn": 1,
+      "fp": 4,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.6666666666666666,
+      "fpr": 0.3333333333333333,
+      "n": 15
+    },
+    "V1_drop>0_rawlabels|G_need|IE=neg": {
+      "tp": 5,
+      "fn": 6,
+      "fp": 1,
+      "tn": 3,
+      "ie": 0,
+      "recall": 0.45454545454545453,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1_drop>0_rawlabels|G_need|IE=flag": {
+      "tp": 5,
+      "fn": 6,
+      "fp": 1,
+      "tn": 3,
+      "ie": 0,
+      "recall": 0.45454545454545453,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1_drop>0_rawlabels|G_cum|IE=neg": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V1_drop>0_rawlabels|G_cum|IE=flag": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_drop|IE=neg": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 3,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_drop|IE=flag": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 3,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_need|IE=neg": {
+      "tp": 4,
+      "fn": 7,
+      "fp": 2,
+      "tn": 2,
+      "ie": 0,
+      "recall": 0.36363636363636365,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_need|IE=flag": {
+      "tp": 4,
+      "fn": 7,
+      "fp": 2,
+      "tn": 2,
+      "ie": 0,
+      "recall": 0.36363636363636365,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_cum|IE=neg": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V1_drop>0_fixedlabels|G_cum|IE=flag": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V1probes+rule2|G_drop|IE=neg": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 8,
+      "tn": 4,
+      "ie": 2,
+      "recall": 1.0,
+      "fpr": 0.6666666666666666,
+      "n": 15
+    },
+    "V1probes+rule2|G_drop|IE=flag": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 10,
+      "tn": 2,
+      "ie": 2,
+      "recall": 1.0,
+      "fpr": 0.8333333333333334,
+      "n": 15
+    },
+    "V1probes+rule2|G_need|IE=neg": {
+      "tp": 9,
+      "fn": 2,
+      "fp": 2,
+      "tn": 2,
+      "ie": 2,
+      "recall": 0.8181818181818182,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V1probes+rule2|G_need|IE=flag": {
+      "tp": 11,
+      "fn": 0,
+      "fp": 2,
+      "tn": 2,
+      "ie": 2,
+      "recall": 1.0,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V1probes+rule2|G_cum|IE=neg": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "ie": 2,
+      "recall": 1.0,
+      "fpr": 0.6363636363636364,
+      "n": 15
+    },
+    "V1probes+rule2|G_cum|IE=flag": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "ie": 2,
+      "recall": 1.0,
+      "fpr": 0.8181818181818182,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_drop|IE=neg": {
+      "tp": 2,
+      "fn": 1,
+      "fp": 0,
+      "tn": 12,
+      "ie": 2,
+      "recall": 0.6666666666666666,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_drop|IE=flag": {
+      "tp": 2,
+      "fn": 1,
+      "fp": 2,
+      "tn": 10,
+      "ie": 2,
+      "recall": 0.6666666666666666,
+      "fpr": 0.16666666666666666,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_need|IE=neg": {
+      "tp": 1,
+      "fn": 10,
+      "fp": 1,
+      "tn": 3,
+      "ie": 2,
+      "recall": 0.09090909090909091,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_need|IE=flag": {
+      "tp": 3,
+      "fn": 8,
+      "fp": 1,
+      "tn": 3,
+      "ie": 2,
+      "recall": 0.2727272727272727,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_cum|IE=neg": {
+      "tp": 2,
+      "fn": 2,
+      "fp": 0,
+      "tn": 11,
+      "ie": 2,
+      "recall": 0.5,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V1probes+rule2[DEGRADED-only]|G_cum|IE=flag": {
+      "tp": 2,
+      "fn": 2,
+      "fp": 2,
+      "tn": 9,
+      "ie": 2,
+      "recall": 0.5,
+      "fpr": 0.18181818181818182,
+      "n": 15
+    },
+    "V2probes_drop>0|G_drop|IE=neg": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 3,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V2probes_drop>0|G_drop|IE=flag": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 3,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.25,
+      "n": 15
+    },
+    "V2probes_drop>0|G_need|IE=neg": {
+      "tp": 4,
+      "fn": 7,
+      "fp": 2,
+      "tn": 2,
+      "ie": 0,
+      "recall": 0.36363636363636365,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V2probes_drop>0|G_need|IE=flag": {
+      "tp": 4,
+      "fn": 7,
+      "fp": 2,
+      "tn": 2,
+      "ie": 0,
+      "recall": 0.36363636363636365,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "V2probes_drop>0|G_cum|IE=neg": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V2probes_drop>0|G_cum|IE=flag": {
+      "tp": 3,
+      "fn": 1,
+      "fp": 3,
+      "tn": 8,
+      "ie": 0,
+      "recall": 0.75,
+      "fpr": 0.2727272727272727,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_drop|IE=neg": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 12,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_drop|IE=flag": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 12,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_need|IE=neg": {
+      "tp": 11,
+      "fn": 0,
+      "fp": 4,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_need|IE=flag": {
+      "tp": 11,
+      "fn": 0,
+      "fp": 4,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_cum|IE=neg": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled|G_cum|IE=flag": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_drop|IE=neg": {
+      "tp": 1,
+      "fn": 2,
+      "fp": 0,
+      "tn": 12,
+      "ie": 0,
+      "recall": 0.3333333333333333,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_drop|IE=flag": {
+      "tp": 1,
+      "fn": 2,
+      "fp": 0,
+      "tn": 12,
+      "ie": 0,
+      "recall": 0.3333333333333333,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_need|IE=neg": {
+      "tp": 1,
+      "fn": 10,
+      "fp": 0,
+      "tn": 4,
+      "ie": 0,
+      "recall": 0.09090909090909091,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_need|IE=flag": {
+      "tp": 1,
+      "fn": 10,
+      "fp": 0,
+      "tn": 4,
+      "ie": 0,
+      "recall": 0.09090909090909091,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_cum|IE=neg": {
+      "tp": 1,
+      "fn": 3,
+      "fp": 0,
+      "tn": 11,
+      "ie": 0,
+      "recall": 0.25,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_pooled[DEGRADED-only]|G_cum|IE=flag": {
+      "tp": 1,
+      "fn": 3,
+      "fp": 0,
+      "tn": 11,
+      "ie": 0,
+      "recall": 0.25,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_drop|IE=neg": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 12,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_drop|IE=flag": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 12,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_need|IE=neg": {
+      "tp": 11,
+      "fn": 0,
+      "fp": 4,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_need|IE=flag": {
+      "tp": 11,
+      "fn": 0,
+      "fp": 4,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_cum|IE=neg": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax|G_cum|IE=flag": {
+      "tp": 4,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_drop|IE=neg": {
+      "tp": 1,
+      "fn": 2,
+      "fp": 0,
+      "tn": 12,
+      "ie": 0,
+      "recall": 0.3333333333333333,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_drop|IE=flag": {
+      "tp": 1,
+      "fn": 2,
+      "fp": 0,
+      "tn": 12,
+      "ie": 0,
+      "recall": 0.3333333333333333,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_need|IE=neg": {
+      "tp": 1,
+      "fn": 10,
+      "fp": 0,
+      "tn": 4,
+      "ie": 0,
+      "recall": 0.09090909090909091,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_need|IE=flag": {
+      "tp": 1,
+      "fn": 10,
+      "fp": 0,
+      "tn": 4,
+      "ie": 0,
+      "recall": 0.09090909090909091,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_cum|IE=neg": {
+      "tp": 1,
+      "fn": 3,
+      "fp": 0,
+      "tn": 11,
+      "ie": 0,
+      "recall": 0.25,
+      "fpr": 0.0,
+      "n": 15
+    },
+    "V2probes+rule2_subsetmax[DEGRADED-only]|G_cum|IE=flag": {
+      "tp": 1,
+      "fn": 3,
+      "fp": 0,
+      "tn": 11,
+      "ie": 0,
+      "recall": 0.25,
+      "fpr": 0.0,
+      "n": 15
+    }
+  },
+  "v1_raw_everything": {
+    "G_drop": {
+      "tp": 5,
+      "fn": 0,
+      "fp": 1,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.1,
+      "n": 15
+    },
+    "G_need": {
+      "tp": 5,
+      "fn": 8,
+      "fp": 1,
+      "tn": 1,
+      "ie": 0,
+      "recall": 0.38461538461538464,
+      "fpr": 0.5,
+      "n": 15
+    },
+    "G_cum": {
+      "tp": 2,
+      "fn": 0,
+      "fp": 4,
+      "tn": 9,
+      "ie": 0,
+      "recall": 1.0,
+      "fpr": 0.3076923076923077,
+      "n": 15
+    }
+  },
+  "costs": {
+    "v1": {
+      "episodes": 720,
+      "input_tokens": 409796,
+      "output_tokens": 37925,
+      "seconds": 419.27999999999986,
+      "checks": 12,
+      "per_check": {
+        "episodes": 60.0,
+        "input_tokens": 34149.666666666664,
+        "output_tokens": 3160.4166666666665,
+        "seconds": 34.93999999999999
+      }
+    },
+    "v2": {
+      "episodes": 960,
+      "input_tokens": 557542,
+      "output_tokens": 53789,
+      "seconds": 420.84,
+      "checks": 12,
+      "per_check": {
+        "episodes": 80.0,
+        "input_tokens": 46461.833333333336,
+        "output_tokens": 4482.416666666667,
+        "seconds": 35.07
+      }
+    }
+  },
+  "round2_rescore": {
+    "A|start": {
+      "old_macro_raw": 0.48148148148148145,
+      "old_macro_fixed": 0.40740740740740744,
+      "file_fixed": 0.22222222222222224,
+      "file_fixed_by_seed": [
+        0.13333333333333333,
+        0.13333333333333333,
+        0.4
+      ]
+    },
+    "A|none": {
+      "old_macro_raw": 0.2111111111111111,
+      "old_macro_fixed": 0.34074074074074073,
+      "file_fixed": 0.3888888888888889,
+      "file_fixed_by_seed": [
+        0.06666666666666667,
+        0.43333333333333335,
+        0.6666666666666666
+      ]
+    },
+    "A|uniform": {
+      "old_macro_raw": 0.2037037037037037,
+      "old_macro_fixed": 0.35185185185185186,
+      "file_fixed": 0.4444444444444444,
+      "file_fixed_by_seed": [
+        0.3333333333333333,
+        0.26666666666666666,
+        0.7333333333333333
+      ]
+    },
+    "A|targeted": {
+      "old_macro_raw": 0.6407407407407407,
+      "old_macro_fixed": 0.8222222222222222,
+      "file_fixed": 0.5444444444444445,
+      "file_fixed_by_seed": [
+        0.8333333333333334,
+        0.3333333333333333,
+        0.4666666666666667
+      ]
+    },
+    "A|adaptive": {
+      "old_macro_raw": 0.362962962962963,
+      "old_macro_fixed": 0.5,
+      "file_fixed": 0.4222222222222222,
+      "file_fixed_by_seed": [
+        0.7333333333333333,
+        0.03333333333333333,
+        0.5
+      ]
+    },
+    "C|start": {
+      "old_macro_raw": 0.14444444444444443,
+      "old_macro_fixed": 0.5388888888888889,
+      "file_fixed": 0.788888888888889,
+      "file_fixed_by_seed": [
+        0.7666666666666667,
+        0.8,
+        0.8
+      ]
+    },
+    "C|none": {
+      "old_macro_raw": 0.16666666666666666,
+      "old_macro_fixed": 0.5111111111111112,
+      "file_fixed": 0.6888888888888889,
+      "file_fixed_by_seed": [
+        0.8333333333333334,
+        0.4,
+        0.8333333333333334
+      ]
+    },
+    "C|uniform": {
+      "old_macro_raw": 0.3055555555555556,
+      "old_macro_fixed": 0.6,
+      "file_fixed": 0.5888888888888889,
+      "file_fixed_by_seed": [
+        0.8333333333333334,
+        0.23333333333333334,
+        0.7
+      ]
+    },
+    "C|targeted": {
+      "old_macro_raw": 0.5277777777777778,
+      "old_macro_fixed": 0.6388888888888888,
+      "file_fixed": 0.2777777777777778,
+      "file_fixed_by_seed": [
+        0.26666666666666666,
+        0.36666666666666664,
+        0.2
+      ]
+    },
+    "C|adaptive": {
+      "old_macro_raw": 0.3055555555555556,
+      "old_macro_fixed": 0.6,
+      "file_fixed": 0.5888888888888889,
+      "file_fixed_by_seed": [
+        0.8,
+        0.23333333333333334,
+        0.7333333333333333
+      ]
+    }
+  }
+}

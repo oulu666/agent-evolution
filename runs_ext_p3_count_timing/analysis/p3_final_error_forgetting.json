@@ -1,0 +1,7127 @@
+{
+ "forgetting_rows": [
+  {
+   "src": "p1",
+   "arm": "stage_02_database",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 29,
+    "tool": 30,
+    "args": 29,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_02_database",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 19,
+    "tool": 19,
+    "args": 19,
+    "final": 24,
+    "fails": [
+     [
+      "None {}",
+      11
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_02_database",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_03_python",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 29,
+    "tool": 30,
+    "args": 29,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_03_python",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 28,
+    "args": 28,
+    "final": 28,
+    "fails": [
+     [
+      "stats_percentile {\"values\": [13, 10, 30, 99, 96, 26, 19], \"percentile\": 3}",
+      1
+     ],
+     [
+      "stats_percentile {\"values\": [14, 67, 100, 86, 73, 17, 72], \"percentile\": 3}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_03_python",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_04_calendar",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 15,
+    "tool": 17,
+    "args": 27,
+    "final": 17,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 12, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_04_calendar",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 1,
+    "tool": 1,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "stage_04_calendar",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": null,
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "none",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 20,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 14,
+    "tool": 14,
+    "args": 29,
+    "final": 15,
+    "fails": [
+     [
+      "stats_sorted {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [93, 96, 97, 48, 74, 99, 65]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "none",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 20,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "none",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 20,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 24,
+    "tool": 30,
+    "args": 24,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal10",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 13,
+    "tool": 14,
+    "args": 28,
+    "final": 14,
+    "fails": [
+     [
+      "stats_sorted {\"values\": [32, 12, 26, 56, 91, 11, 68]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal10",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal10",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 23,
+    "tool": 30,
+    "args": 23,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [48, 65, 74, 93, 96, 97, 99]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal20",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 7,
+    "tool": 7,
+    "args": 28,
+    "final": 10,
+    "fails": [
+     [
+      "stats_sorted {\"values\": [32, 12, 26, 56, 91, 11, 68]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal20",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "ctrl_cal20",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 23,
+    "tool": 30,
+    "args": 23,
+    "final": 28,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [24, 48, 49, 73, 86, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf00",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-006",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "db_list_tables-002",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "db_list_tables-002",
+      "pos": 143,
+      "after": 4
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 95,
+      "after": 11
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 7,
+    "tool": 7,
+    "args": 29,
+    "final": 8,
+    "fails": [
+     [
+      "stats_sorted {\"values\": [32, 12, 26, 56, 91, 11, 68]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [16, 22, 26, 75, 80, 60]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf00",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 87,
+      "after": 13
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-026",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 1,
+    "tool": 1,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf00",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 24,
+    "tool": 30,
+    "args": 24,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf25",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 119,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-009",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-023",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf25",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 87,
+      "after": 13
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-011",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf25",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "target_median_natural-026",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf50",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 87,
+      "after": 12
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 60, 75, 80, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf50",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 87,
+      "after": 13
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "stats_median-011",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "tf50",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-006",
+      "pos": 111,
+      "after": 9
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 119,
+      "after": 8
+     },
+     {
+      "id": "target_median_natural-022",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-021",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 135,
+      "after": 5
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "b20_tf50",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-006",
+      "pos": 103,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-002",
+      "pos": 119,
+      "after": 9
+     },
+     {
+      "id": "db_list_tables-007",
+      "pos": 159,
+      "after": 1
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 103,
+      "after": 12
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 127,
+      "after": 7
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 143,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "b20_tf50",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 119,
+      "after": 9
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-014",
+      "pos": 135,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-022",
+      "pos": 143,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 159,
+      "after": 2
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 159,
+      "after": 2
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 1,
+    "tool": 1,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "b20_tf50",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 111,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 135,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-022",
+      "pos": 135,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-026",
+      "pos": 143,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-015",
+      "pos": 151,
+      "after": 3
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 26,
+    "tool": 30,
+    "args": 26,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [27, 77, 36, 72, 49, 92, 16], \"percentile\": 50}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [15, 89, 36, 19, 51, 98, 37], \"percentile\": 50}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [53, 19, 60, 40, 12, 44, 18], \"percentile\": 50}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db0",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 143,
+      "after": 3
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 159,
+      "after": 1
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db0",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 13
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 159,
+      "after": 1
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db0",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-005",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-000",
+      "pos": 151,
+      "after": 2
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 159,
+      "after": 1
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db1",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-001",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "db_list_tables-001",
+      "pos": 127,
+      "after": 6
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db1",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db1",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-005",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-009",
+      "pos": 143,
+      "after": 3
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db6",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 135,
+      "after": 5
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 29,
+    "tool": 30,
+    "args": 29,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db6",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-008",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "dose_db6",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_other",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 87,
+      "after": 13
+     },
+     {
+      "id": "stats_median-009",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 21,
+    "tool": 23,
+    "args": 28,
+    "final": 24,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [13, 10, 30, 99, 96, 26, 19]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_other",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-002",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "stats_median-002",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-010",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "stats_median-011",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_other",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 23,
+    "tool": 30,
+    "args": 23,
+    "final": 28,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [24, 48, 49, 73, 86, 11]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_dbbg",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-004",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 26,
+    "tool": 28,
+    "args": 28,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [13, 10, 30, 99, 96, 26, 19]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_dbbg",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "db_list_tables-007",
+      "pos": 119,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "stats_median-011",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-010",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 1,
+    "tool": 1,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p1",
+   "arm": "e3b2_A_target_dbbg",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-001",
+      "pos": 119,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-011",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 1,
+    "tool": 1,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 25,
+    "tool": 30,
+    "args": 25,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [27, 36, 49, 72, 77, 92, 16]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "dose_db1_pos143",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-001",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "db_list_tables-001",
+      "pos": 127,
+      "after": 6
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 60, 75, 80, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "dose_db1_pos143",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "dose_db1_pos143",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-005",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-009",
+      "pos": 159,
+      "after": 1
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "target_other_pos143",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-012",
+      "pos": 87,
+      "after": 13
+     },
+     {
+      "id": "stats_median-009",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 20,
+    "tool": 22,
+    "args": 28,
+    "final": 22,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [24, 86, 49, 13, 48, 73, 11]}",
+      1
+     ],
+     [
+      "stats_sorted {\"values\": [13, 10, 30, 99, 96, 26, 19]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "target_other_pos143",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-002",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "stats_median-002",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-010",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "stats_median-011",
+      "pos": 151,
+      "after": 2
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "timing",
+   "arm": "target_other_pos143",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 24,
+    "tool": 30,
+    "args": 24,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos127",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-001",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "db_list_tables-001",
+      "pos": 159,
+      "after": 1
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 60, 75, 80, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos127",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos127",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-005",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-009",
+      "pos": 143,
+      "after": 3
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db4_late",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db4_late",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-008",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 127,
+      "after": 6
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db4_late",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos95",
+   "seed": 20261108,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-001",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "db_list_tables-001",
+      "pos": 127,
+      "after": 6
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-004",
+      "pos": 119,
+      "after": 7
+     },
+     {
+      "id": "stats_median-001",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos95",
+   "seed": 20261109,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 95,
+      "after": 11
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-018",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "p3",
+   "arm": "dose_db1_pos95",
+   "seed": 20261110,
+   "protocol": "B1",
+   "replay": {
+    "total_steps": 23,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "db_list_tables-005",
+      "pos": 103,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-009",
+      "pos": 143,
+      "after": 3
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 111,
+      "after": 9
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 2,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [72, 84, 89, 70, 80, 91, 80]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf00",
+   "seed": 20261108,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 103,
+      "after": 9
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-020",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "stats_median-012",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 159,
+      "after": 1
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 29,
+    "tool": 30,
+    "args": 29,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf00",
+   "seed": 20261109,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 103,
+      "after": 9
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-024",
+      "pos": 95,
+      "after": 10
+     },
+     {
+      "id": "stats_median-008",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf00",
+   "seed": 20261110,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-006",
+      "pos": 143,
+      "after": 4
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-007",
+      "pos": 95,
+      "after": 10
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 24,
+    "tool": 30,
+    "args": 24,
+    "final": 29,
+    "fails": [
+     [
+      "stats_median {\"values\": [11, 26, 32, 56, 68, 91]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf25",
+   "seed": 20261108,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 119,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 3
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 4,
+    "tool": 4,
+    "args": 5,
+    "final": 4,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 29,
+    "tool": 30,
+    "args": 29,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 60, 18]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf25",
+   "seed": 20261109,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-010",
+      "pos": 95,
+      "after": 10
+     },
+     {
+      "id": "db_list_tables-000",
+      "pos": 135,
+      "after": 5
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-001",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf25",
+   "seed": 20261110,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 111,
+      "after": 8
+     },
+     {
+      "id": "target_median_natural-022",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 75, 80, 18, 60]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf50",
+   "seed": 20261108,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [],
+    "median": [
+     {
+      "id": "stats_median-013",
+      "pos": 87,
+      "after": 12
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-023",
+      "pos": 143,
+      "after": 4
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf50",
+   "seed": 20261109,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-003",
+      "pos": 95,
+      "after": 10
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-020",
+      "pos": 135,
+      "after": 5
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 0,
+    "tool": 0,
+    "args": 5,
+    "final": 1,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [76, 83, 82, 94, 75, 98, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b05_tf50",
+   "seed": 20261110,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 22,
+    "list_tables": [
+     {
+      "id": "db_list_tables-006",
+      "pos": 119,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-003",
+      "pos": 95,
+      "after": 10
+     },
+     {
+      "id": "target_median_natural-026",
+      "pos": 135,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-016",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf00",
+   "seed": 20261108,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 95,
+      "after": 14
+     },
+     {
+      "id": "db_list_tables-006",
+      "pos": 103,
+      "after": 12
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-013",
+      "pos": 95,
+      "after": 14
+     },
+     {
+      "id": "target_median_natural-023",
+      "pos": 119,
+      "after": 9
+     },
+     {
+      "id": "stats_median-003",
+      "pos": 119,
+      "after": 9
+     },
+     {
+      "id": "target_median_natural-019",
+      "pos": 159,
+      "after": 2
+     },
+     {
+      "id": "stats_median-013",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf00",
+   "seed": 20261109,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-008",
+      "pos": 159,
+      "after": 1
+     }
+    ],
+    "median": []
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 0,
+    "tool": 6,
+    "args": 0,
+    "final": 6,
+    "fails": [
+     [
+      "db_list_tables {\"database\": \"read-only\"}",
+      6
+     ]
+    ]
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 3,
+    "tool": 3,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf00",
+   "seed": 20261110,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 135,
+      "after": 6
+     },
+     {
+      "id": "db_list_tables-003",
+      "pos": 151,
+      "after": 3
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-017",
+      "pos": 87,
+      "after": 15
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 143,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-025",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf25",
+   "seed": 20261108,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-002",
+      "pos": 111,
+      "after": 11
+     },
+     {
+      "id": "db_list_tables-006",
+      "pos": 135,
+      "after": 6
+     }
+    ],
+    "median": [
+     {
+      "id": "stats_median-013",
+      "pos": 127,
+      "after": 8
+     },
+     {
+      "id": "target_median_natural-020",
+      "pos": 151,
+      "after": 3
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 28,
+    "tool": 30,
+    "args": 28,
+    "final": 30,
+    "fails": [
+     [
+      "stats_median {\"values\": [16, 22, 26, 60, 75, 80, 18]}",
+      1
+     ],
+     [
+      "stats_median {\"values\": [21, 30, 41, 65, 74, 76, 87]}",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf25",
+   "seed": 20261109,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-001",
+      "pos": 127,
+      "after": 8
+     },
+     {
+      "id": "db_list_tables-008",
+      "pos": 127,
+      "after": 8
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-016",
+      "pos": 151,
+      "after": 3
+     },
+     {
+      "id": "target_median_natural-027",
+      "pos": 159,
+      "after": 2
+     },
+     {
+      "id": "target_median_natural-023",
+      "pos": 159,
+      "after": 1
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 2,
+    "tool": 2,
+    "args": 5,
+    "final": 3,
+    "fails": [
+     [
+      "stats_mean {\"values\": [94, 74, 87, 89, 75, 84, 96]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [86, 89, 83, 78, 92, 75, 97]}",
+      1
+     ],
+     [
+      "stats_mean {\"values\": [97, 91, 94, 79, 88, 89, 99]}",
+      1
+     ]
+    ]
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  },
+  {
+   "src": "b32",
+   "arm": "b20_tf25",
+   "seed": 20261110,
+   "protocol": "B32",
+   "replay": {
+    "total_steps": 26,
+    "list_tables": [
+     {
+      "id": "db_list_tables-009",
+      "pos": 119,
+      "after": 9
+     },
+     {
+      "id": "db_list_tables-003",
+      "pos": 127,
+      "after": 7
+     }
+    ],
+    "median": [
+     {
+      "id": "target_median_natural-022",
+      "pos": 143,
+      "after": 5
+     },
+     {
+      "id": "target_median_natural-021",
+      "pos": 143,
+      "after": 4
+     },
+     {
+      "id": "target_median_natural-014",
+      "pos": 151,
+      "after": 3
+     }
+    ]
+   },
+   "list_tables": {
+    "n": 6,
+    "k": 6,
+    "tool": 6,
+    "args": 6,
+    "final": 6,
+    "fails": []
+   },
+   "median_prose": {
+    "n": 5,
+    "k": 5,
+    "tool": 5,
+    "args": 5,
+    "final": 5,
+    "fails": []
+   },
+   "median_nat": {
+    "n": 30,
+    "k": 30,
+    "tool": 30,
+    "args": 30,
+    "final": 30,
+    "fails": []
+   }
+  }
+ ],
+ "pool_inventory": {
+  "db_list_tables": {
+   "family": "database",
+   "n_pool": 11,
+   "in_phase2_train_by_id": 11,
+   "in_phase2_by_prompt": 11,
+   "template_ids": [
+    "db_list_tables"
+   ],
+   "example_prompt": "List every table name in the database. Return a JSON list.",
+   "example_tool": "db_list_tables",
+   "example_args": {},
+   "ids": [
+    "db_list_tables-000",
+    "db_list_tables-001",
+    "db_list_tables-002",
+    "db_list_tables-003",
+    "db_list_tables-004",
+    "db_list_tables-005",
+    "db_list_tables-006",
+    "db_list_tables-007",
+    "db_list_tables-008",
+    "db_list_tables-009",
+    "db_list_tables-010"
+   ]
+  },
+  "stats_median": {
+   "family": "python",
+   "n_pool": 14,
+   "in_phase2_train_by_id": 14,
+   "in_phase2_by_prompt": 14,
+   "template_ids": [
+    "stats_median"
+   ],
+   "example_prompt": "Compute the median of the numbers [16, 18, 14, 27, 37, 31, 35].",
+   "example_tool": "stats_median",
+   "example_args": {
+    "values": [
+     16,
+     18,
+     14,
+     27,
+     37,
+     31,
+     35
+    ]
+   },
+   "ids": [
+    "stats_median-000",
+    "stats_median-001",
+    "stats_median-002",
+    "stats_median-003",
+    "stats_median-004",
+    "stats_median-005",
+    "stats_median-006",
+    "stats_median-007",
+    "stats_median-008",
+    "stats_median-009",
+    "stats_median-010",
+    "stats_median-011",
+    "stats_median-012",
+    "stats_median-013"
+   ]
+  },
+  "target_median_natural": {
+   "family": "python",
+   "n_pool": 14,
+   "in_phase2_train_by_id": 0,
+   "in_phase2_by_prompt": 0,
+   "template_ids": [
+    "target_median_natural"
+   ],
+   "example_prompt": "The observations are 16, 18, 14, 27, 37, 31, 35. After ordering them from smallest to largest, what is the value in the middle position?",
+   "example_tool": "stats_median",
+   "example_args": {
+    "values": [
+     16,
+     18,
+     14,
+     27,
+     37,
+     31,
+     35
+    ]
+   },
+   "ids": [
+    "target_median_natural-014",
+    "target_median_natural-015",
+    "target_median_natural-016",
+    "target_median_natural-017",
+    "target_median_natural-018",
+    "target_median_natural-019",
+    "target_median_natural-020",
+    "target_median_natural-021",
+    "target_median_natural-022",
+    "target_median_natural-023",
+    "target_median_natural-024",
+    "target_median_natural-025",
+    "target_median_natural-026",
+    "target_median_natural-027"
+   ]
+  }
+ },
+ "final_errors": {
+  "cases": [
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261108,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261108,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261108,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261108,
+    "id": "025",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261108,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "001",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM employees WHERE age > 44 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Frank"
+    ],
+    "answer": [
+     "Frank",
+     "Morgan",
+     "Smith"
+    ],
+    "expected": [
+     "Frank"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "025",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261109,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "025",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos127",
+    "seed": 20261110,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4_late",
+    "seed": 20261108,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4_late",
+    "seed": 20261108,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db4_late",
+    "seed": 20261110,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4_late",
+    "seed": 20261110,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "005",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ],
+    "answer": [
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "017",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 105000.0 ORDER BY salary DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ],
+    "answer": [
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "025",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Grace",
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261108,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "001",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM employees WHERE age > 44 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Frank"
+    ],
+    "answer": [
+     "Frank",
+     "Morgan",
+     "Hendry"
+    ],
+    "expected": [
+     "Frank"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "025",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Grace",
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261109,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "001",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM employees WHERE age > 44 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Frank"
+    ],
+    "answer": [
+     "Frank",
+     "Morgan",
+     "Henderson"
+    ],
+    "expected": [
+     "Frank"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "005",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ],
+    "answer": [
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "017",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 105000.0 ORDER BY salary DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ],
+    "answer": [
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "022",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE stock > 140 ORDER BY stock DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 3,
+    "observation_rows": [
+     "Cable",
+     "Doohickey",
+     "Adapter"
+    ],
+    "answer": [
+     "Cable",
+     "Doohickey",
+     "Adapter",
+     "Cable"
+    ],
+    "expected": [
+     "Cable",
+     "Doohickey",
+     "Adapter"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "025",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Grace",
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos95",
+    "seed": 20261110,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261108,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261109,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261109,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261110,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261110,
+    "id": "022",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE stock > 140 ORDER BY stock DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 3,
+    "observation_rows": [
+     "Cable",
+     "Doohickey",
+     "Adapter"
+    ],
+    "answer": [
+     "Cable",
+     "Doohickey",
+     "Adapter",
+     "Cable"
+    ],
+    "expected": [
+     "Cable",
+     "Doohickey",
+     "Adapter"
+    ]
+   },
+   {
+    "arm": "dose_db4",
+    "seed": 20261110,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "002",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "025",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261108,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "001",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM employees WHERE age > 44 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Frank"
+    ],
+    "answer": [
+     "Frank",
+     "Morgan",
+     "Hendry"
+    ],
+    "expected": [
+     "Frank"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "003",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE age > 26 ORDER BY age DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 3,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "008",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ],
+    "answer": [
+     "Carol",
+     "Frank",
+     "Mallory",
+     "Judy"
+    ],
+    "expected": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "009",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Suite"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "011",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 91000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "023",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "025",
+    "cat": "顺序改写（其它）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Grace",
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "026",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 76000.0 ORDER BY salary DESC, id ASC LIMIT 2",
+    "limit": 2,
+    "n_rows": 2,
+    "observation_rows": [
+     "Mallory",
+     "Carol"
+    ],
+    "answer": [
+     "Carol",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261109,
+    "id": "028",
+    "cat": "多出条目（补到 LIMIT）",
+    "sql": "SELECT name FROM products WHERE price > 79.0 ORDER BY price DESC, id ASC LIMIT 3",
+    "limit": 3,
+    "n_rows": 1,
+    "observation_rows": [
+     "Pro Suite"
+    ],
+    "answer": [
+     "Pro Suite",
+     "Pro Kit",
+     "Pro Set"
+    ],
+    "expected": [
+     "Pro Suite"
+    ]
+   },
+   {
+    "arm": "dose_db1_pos143",
+    "seed": 20261110,
+    "id": "025",
+    "cat": "顺序改写（字母序）",
+    "sql": "SELECT name FROM employees WHERE salary > 72000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "limit": 4,
+    "n_rows": 4,
+    "observation_rows": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ],
+    "answer": [
+     "Alice",
+     "Carol",
+     "Grace",
+     "Mallory"
+    ],
+    "expected": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   }
+  ],
+  "by_arm": {
+   "dose_db1_pos127": {
+    "n_args_ok_final_wrong": 23,
+    "categories": {
+     "多出条目（补到 LIMIT）": 6,
+     "顺序改写（字母序）": 15,
+     "顺序改写（其它）": 2
+    }
+   },
+   "dose_db4_late": {
+    "n_args_ok_final_wrong": 4,
+    "categories": {
+     "多出条目（补到 LIMIT）": 3,
+     "顺序改写（字母序）": 1
+    }
+   },
+   "dose_db1_pos95": {
+    "n_args_ok_final_wrong": 34,
+    "categories": {
+     "顺序改写（字母序）": 19,
+     "顺序改写（其它）": 6,
+     "多出条目（补到 LIMIT）": 9
+    }
+   },
+   "dose_db4": {
+    "n_args_ok_final_wrong": 6,
+    "categories": {
+     "顺序改写（字母序）": 1,
+     "多出条目（补到 LIMIT）": 5
+    }
+   },
+   "dose_db1_pos143": {
+    "n_args_ok_final_wrong": 16,
+    "categories": {
+     "顺序改写（字母序）": 11,
+     "多出条目（补到 LIMIT）": 3,
+     "顺序改写（其它）": 2
+    }
+   }
+  },
+  "test_structure": {
+   "n": 30,
+   "rows_lt_limit": 5,
+   "multi": 26,
+   "multi_order_ne_alpha": 17
+  },
+  "target_pool_structure": {
+   "n": 11,
+   "multi": 10,
+   "multi_order_ne_alpha": 9,
+   "rows_lt_limit": 2
+  },
+  "target_pool_items": [
+   {
+    "id": "000",
+    "sql": "SELECT name FROM products WHERE price > 19.99 ORDER BY price DESC, id ASC LIMIT 4",
+    "answer": [
+     "Pro Suite",
+     "Data Pack",
+     "Starter Kit",
+     "Gadget"
+    ]
+   },
+   {
+    "id": "001",
+    "sql": "SELECT name FROM products WHERE price > 12.0 ORDER BY price DESC, id ASC LIMIT 4",
+    "answer": [
+     "Pro Suite",
+     "Data Pack",
+     "Starter Kit",
+     "Gadget"
+    ]
+   },
+   {
+    "id": "002",
+    "sql": "SELECT name FROM employees WHERE salary > 99000.0 ORDER BY salary DESC, id ASC LIMIT 3",
+    "answer": [
+     "Mallory",
+     "Carol",
+     "Grace"
+    ]
+   },
+   {
+    "id": "003",
+    "sql": "SELECT name FROM employees WHERE age > 44 ORDER BY age DESC, id ASC LIMIT 4",
+    "answer": [
+     "Frank"
+    ]
+   },
+   {
+    "id": "004",
+    "sql": "SELECT name FROM employees WHERE age > 28 ORDER BY age DESC, id ASC LIMIT 4",
+    "answer": [
+     "Frank",
+     "Mallory",
+     "Carol",
+     "Judy"
+    ]
+   },
+   {
+    "id": "005",
+    "sql": "SELECT name FROM employees WHERE salary > 128000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "answer": [
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "id": "006",
+    "sql": "SELECT name FROM employees WHERE salary > 68000.0 ORDER BY salary DESC, id ASC LIMIT 4",
+    "answer": [
+     "Mallory",
+     "Carol",
+     "Grace",
+     "Alice"
+    ]
+   },
+   {
+    "id": "007",
+    "sql": "SELECT name FROM employees WHERE age > 29 ORDER BY age DESC, id ASC LIMIT 3",
+    "answer": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   },
+   {
+    "id": "008",
+    "sql": "SELECT name FROM employees WHERE age > 39 ORDER BY age DESC, id ASC LIMIT 2",
+    "answer": [
+     "Frank",
+     "Mallory"
+    ]
+   },
+   {
+    "id": "009",
+    "sql": "SELECT name FROM products WHERE stock > 60 ORDER BY stock DESC, id ASC LIMIT 4",
+    "answer": [
+     "Cable",
+     "Doohickey",
+     "Adapter",
+     "Widget"
+    ]
+   },
+   {
+    "id": "010",
+    "sql": "SELECT name FROM employees WHERE age > 31 ORDER BY age DESC, id ASC LIMIT 3",
+    "answer": [
+     "Frank",
+     "Mallory",
+     "Carol"
+    ]
+   }
+  ],
+  "other_db_multi_answers_alpha": {
+   "db_top_n|alpha=True": 9,
+   "db_top_n|alpha=False": 2,
+   "db_list_tables|alpha=True": 11
+  }
+ }
+}

@@ -1,0 +1,1271 @@
+{
+  "hashes": {
+    "final_v2_combined": "5dcc7d786fd60556e97d4e2ebefe143fdd9e96e9aa9052877a1317758b15a8f6",
+    "final_v2_files_ok": true,
+    "calendar_v3_combined": "2b203ab5123620b99fb64c06afb1e89a388596eade154012e331bb4a27b3633a",
+    "calendar_v3_files_ok": true,
+    "e4_pool": {
+      "file": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+      "database": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+      "python": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62"
+    },
+    "e4_manifest": "534c3d2f62a2e1933b75a5fa87a170c6599c6b55ce3119505768414a80c9d260",
+    "calendar_train": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "probes": {
+      "file": "44dba480ce54d169532ca799ead69358ce525728c7174040fb7f421c6e6a44a1",
+      "database": "7d35dcd5a670dcaab1cb71232f9a357af20f981a70d81985a03da1a5af382f35",
+      "python": "2b2fe5b448381cf8106c1774be1bd4754716dea14d7215b7fcc2f6a2d0c1a52b"
+    },
+    "e4_prefix_state": {
+      "20261108": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+      "20261109": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+      "20261110": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb"
+    }
+  },
+  "final_v2_hash_ok": true,
+  "calendar_v3_hash_ok": true,
+  "leakage": {
+    "calendar_v3": {
+      "sig_overlap": 0,
+      "msg_overlap": 0
+    },
+    "final_v2": {
+      "sig_overlap": 0,
+      "msg_overlap": 0
+    },
+    "ok": true
+  },
+  "prefix_metadata_equals_e4": {
+    "20261108": true,
+    "20261109": true,
+    "20261110": true
+  },
+  "plans": {
+    "20261108 ctrl_cal05": {
+      "budget": 3747,
+      "actual": 3746,
+      "items": 10,
+      "optimizer_steps_expected": 22,
+      "tf25_steps": 22,
+      "reference_counts": {
+        "uniform": 11,
+        "tf00": 11,
+        "tf25": 10,
+        "tf50": 11,
+        "adaptive@tf25": 10,
+        "adaptive@tf50": 11,
+        "adaptive@tf00": 11
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 3746
+      }
+    },
+    "20261108 ctrl_cal10": {
+      "budget": 7494,
+      "actual": 7490,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 7490
+      }
+    },
+    "20261108 ctrl_cal20": {
+      "budget": 14988,
+      "actual": 14945,
+      "items": 42,
+      "optimizer_steps_expected": 26,
+      "tf25_steps": 26,
+      "reference_counts": {
+        "uniform": 44,
+        "tf00": 44,
+        "tf25": 45,
+        "tf50": 44,
+        "adaptive@tf25": 44,
+        "adaptive@tf50": 43,
+        "adaptive@tf00": 44
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 14945
+      }
+    },
+    "20261108 dose_db0": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 0,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 0,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 9,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose_db1": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 350,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose_db2": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 698,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose_db3": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 1038,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 7,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose_db4": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 1378,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose_db6": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 2030,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose2_db1": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 333,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose2_db2": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 676,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose2_db3": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 1016,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose2_db4": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 1344,
+      "db_replay_tokens": 3061,
+      "db_unique_samples": 7,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3061,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261108 dose2_db6": {
+      "budget": 7494,
+      "actual": 7491,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 23,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 1
+      },
+      "db_target_tokens": 2027,
+      "db_replay_tokens": 3058,
+      "db_unique_samples": 8,
+      "fp_tokens": 4433,
+      "tokens_by_family": {
+        "database": 3058,
+        "file": 2214,
+        "python": 2219
+      }
+    },
+    "20261109 ctrl_cal05": {
+      "budget": 3747,
+      "actual": 3712,
+      "items": 11,
+      "optimizer_steps_expected": 22,
+      "tf25_steps": 22,
+      "reference_counts": {
+        "uniform": 11,
+        "tf00": 11,
+        "tf25": 11,
+        "tf50": 11,
+        "adaptive@tf25": 11,
+        "adaptive@tf50": 11,
+        "adaptive@tf00": 11
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 3712
+      }
+    },
+    "20261109 ctrl_cal10": {
+      "budget": 7494,
+      "actual": 7481,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 7481
+      }
+    },
+    "20261109 ctrl_cal20": {
+      "budget": 14988,
+      "actual": 14987,
+      "items": 42,
+      "optimizer_steps_expected": 26,
+      "tf25_steps": 26,
+      "reference_counts": {
+        "uniform": 44,
+        "tf00": 44,
+        "tf25": 45,
+        "tf50": 44,
+        "adaptive@tf25": 45,
+        "adaptive@tf50": 43,
+        "adaptive@tf00": 44
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 14987
+      }
+    },
+    "20261109 dose_db0": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 0,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 0,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 5,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose_db1": {
+      "budget": 7494,
+      "actual": 7493,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 348,
+      "db_replay_tokens": 2691,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2691,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose_db2": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 688,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose_db3": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1036,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose_db4": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1364,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose_db6": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 2033,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose2_db1": {
+      "budget": 7494,
+      "actual": 7493,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 348,
+      "db_replay_tokens": 2691,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2691,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose2_db2": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 698,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose2_db3": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1031,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 7,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose2_db4": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1371,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261109 dose2_db6": {
+      "budget": 7494,
+      "actual": 7493,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 2039,
+      "db_replay_tokens": 2691,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2691,
+        "file": 2313,
+        "python": 2489
+      }
+    },
+    "20261110 ctrl_cal05": {
+      "budget": 3747,
+      "actual": 3713,
+      "items": 11,
+      "optimizer_steps_expected": 22,
+      "tf25_steps": 22,
+      "reference_counts": {
+        "uniform": 11,
+        "tf00": 11,
+        "tf25": 11,
+        "tf50": 11,
+        "adaptive@tf25": 11,
+        "adaptive@tf50": 12,
+        "adaptive@tf00": 11
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 3713
+      }
+    },
+    "20261110 ctrl_cal10": {
+      "budget": 7494,
+      "actual": 7451,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 7451
+      }
+    },
+    "20261110 ctrl_cal20": {
+      "budget": 14988,
+      "actual": 14938,
+      "items": 42,
+      "optimizer_steps_expected": 26,
+      "tf25_steps": 26,
+      "reference_counts": {
+        "uniform": 44,
+        "tf00": 44,
+        "tf25": 44,
+        "tf50": 44,
+        "adaptive@tf25": 44,
+        "adaptive@tf50": 43,
+        "adaptive@tf00": 44
+      },
+      "target_samples_by_family": {
+        "calendar": 0
+      },
+      "db_target_tokens": null,
+      "db_replay_tokens": null,
+      "db_unique_samples": null,
+      "fp_tokens": null,
+      "tokens_by_family": {
+        "calendar": 14938
+      }
+    },
+    "20261110 dose_db0": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 0,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 0,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 9,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose_db1": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 348,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose_db2": {
+      "budget": 7494,
+      "actual": 7492,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 688,
+      "db_replay_tokens": 2690,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2690,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose_db3": {
+      "budget": 7494,
+      "actual": 7492,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1021,
+      "db_replay_tokens": 2690,
+      "db_unique_samples": 5,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2690,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose_db4": {
+      "budget": 7494,
+      "actual": 7490,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1364,
+      "db_replay_tokens": 2688,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2688,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose_db6": {
+      "budget": 7494,
+      "actual": 7476,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 2040,
+      "db_replay_tokens": 2674,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2674,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose2_db1": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 1,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 333,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose2_db2": {
+      "budget": 7494,
+      "actual": 7494,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 2,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 652,
+      "db_replay_tokens": 2692,
+      "db_unique_samples": 7,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2692,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose2_db3": {
+      "budget": 7494,
+      "actual": 7493,
+      "items": 23,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 3,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1002,
+      "db_replay_tokens": 2691,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2691,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose2_db4": {
+      "budget": 7494,
+      "actual": 7476,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 4,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 1350,
+      "db_replay_tokens": 2674,
+      "db_unique_samples": 6,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2674,
+        "file": 2969,
+        "python": 1833
+      }
+    },
+    "20261110 dose2_db6": {
+      "budget": 7494,
+      "actual": 7467,
+      "items": 22,
+      "optimizer_steps_expected": 23,
+      "tf25_steps": 23,
+      "reference_counts": {
+        "uniform": 22,
+        "tf00": 22,
+        "tf25": 22,
+        "tf50": 22,
+        "adaptive@tf25": 22,
+        "adaptive@tf50": 22,
+        "adaptive@tf00": 22
+      },
+      "target_samples_by_family": {
+        "database": 6,
+        "file": 1,
+        "python": 2
+      },
+      "db_target_tokens": 2031,
+      "db_replay_tokens": 2665,
+      "db_unique_samples": 8,
+      "fp_tokens": 4802,
+      "tokens_by_family": {
+        "database": 2665,
+        "file": 2969,
+        "python": 1833
+      }
+    }
+  },
+  "plan_problems": [],
+  "ok": true
+}

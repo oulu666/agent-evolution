@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_start",
+  "family": "file",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.53125,
+    "argument_accuracy": 0.46875,
+    "execution_success_rate": 0.46875,
+    "final_task_success_rate": 0.0625,
+    "joint_success_rate": 0.03125,
+    "conditional_argument_accuracy": 0.882353,
+    "conditional_argument_numerator": 15,
+    "conditional_argument_denominator": 17
+  },
+  "skill_metrics": {
+    "file_search": {
+      "n": 32,
+      "tool_selection_accuracy": 0.53125,
+      "argument_accuracy": 0.46875,
+      "execution_success_rate": 0.46875,
+      "final_task_success_rate": 0.0625,
+      "joint_success_rate": 0.03125,
+      "conditional_argument_accuracy": 0.882353,
+      "conditional_argument_numerator": 15,
+      "conditional_argument_denominator": 17
+    },
+    "line_index": {
+      "n": 32,
+      "tool_selection_accuracy": 0.53125,
+      "argument_accuracy": 0.46875,
+      "execution_success_rate": 0.46875,
+      "final_task_success_rate": 0.0625,
+      "joint_success_rate": 0.03125,
+      "conditional_argument_accuracy": 0.882353,
+      "conditional_argument_numerator": 15,
+      "conditional_argument_denominator": 17
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 18379,
+    "output_tokens": 1920,
+    "total_tokens": 20299,
+    "generation_seconds": 23.973024,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 18379,
+      "output_tokens": 1920,
+      "total_tokens": 20299,
+      "generation_seconds": 23.973024
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 24.36
+  },
+  "peak_gpu_gb": 4.456,
+  "duration_seconds": 24.36,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": null
+}

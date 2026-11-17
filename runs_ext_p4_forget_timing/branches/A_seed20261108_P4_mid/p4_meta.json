@@ -1,0 +1,61 @@
+{
+  "arm": "P4_mid",
+  "seed": 20261108,
+  "plan_sha256": "4b0b0686e4e8385913bf038fe6651f224196986189d8c0cd5926dd0d571c0faf",
+  "prefix_state_sha256": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+  "optimizer_steps": 23,
+  "replay_input_tokens": 7455,
+  "tracked_timing": {
+    "tracked": [
+      {
+        "kind": "list_tables",
+        "id": "db_list_tables-000",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "median_nat",
+        "id": "target_median_natural-027",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-009",
+        "position": 143,
+        "after": 4
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-001",
+        "position": 151,
+        "after": 2
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-004",
+        "position": 151,
+        "after": 2
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-000",
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "total_steps": 23,
+    "sum_after": {
+      "filter": 9,
+      "list_tables": 6,
+      "median_nat": 6
+    },
+    "n": {
+      "filter": 4,
+      "list_tables": 1,
+      "median_nat": 1
+    },
+    "mom_filter": 0.8239
+  },
+  "finished": "2026-11-14 14:29:44 +0800"
+}

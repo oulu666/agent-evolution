@@ -1,0 +1,65 @@
+{
+  "created": "2026-11-15 03:59:30 +0800",
+  "stage": "pre-score freeze, not an experimental result",
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "arms": [
+    "balanced_uniform",
+    "balanced_early",
+    "devgrad_uniform"
+  ],
+  "skills": [
+    "db.list_tables",
+    "db.filter_cmp_top",
+    "file.search_last",
+    "py.median"
+  ],
+  "files": {
+    "data_ext_p6_devplan/background.json": "b379de41d4854e684155861dabfea5ca97bd923f80f69ccca89ced150f375bfd",
+    "data_ext_p6_devplan/candidates.json": "0372932f02698c18a9395ce56a0c8561e0dd878ba2e691b6f838a0b8cc4ad73f",
+    "data_ext_p6_devplan/cpu_data_checks.json": "38b7c6aefd44b3a4c6aec9d88a7d7827ac4fe3e33c9cc0606877bd592583c7bd",
+    "data_ext_p6_devplan/dev/rows.jsonl": "a593a11cbddc53b1b08f8f50b386f0dc58c79e10dd0489cfdecf29fab3788abd",
+    "data_ext_p6_devplan/fixtures/dev.sqlite": "81ff8c35efab16cedf004480846dccdff33559b820ca9b55287793dfd46fa390",
+    "data_ext_p6_devplan/fixtures/holdout.sqlite": "c532f728ba823399a60142fb1b3a29371ec79be2d5f796f80cefbe7f4da76176",
+    "data_ext_p6_devplan/holdout/rows.jsonl": "43b9a16b0f27d971cf9da14aff0c32613df1bc3f2c9a53838506db23927b3bf2"
+  },
+  "references": {
+    "P6_PREREG_20261115_devplan_ZH.md": "d40a0aa0331e31fc5aab1b7974ebefdd6936fc02f1f81223156db53b61583ca9",
+    "fac_tinyagent/p6_devplan.py": "4d52b3a978957276194854361790622151de5d7770693affb5abf88a41cf94d7",
+    "scripts/run_p6_20261115.py": "7b0320dbe154333174a27a3736d62ece71d93b7dbcbb9d6d0b56dd206d717e8b",
+    "scripts/launch_p6_20261115.sh": "ae9e44c2b73d79706403a559d8cc8a2075a7c4180348cadf5af17b8366e02714",
+    "data_ext_e4/pool/database.jsonl": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+    "data_ext_e4/pool/file.jsonl": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+    "data_ext_e4/pool/python.jsonl": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62",
+    "runs_ext_e4/prefixes/A_seed20261108/training_state.pt": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+    "runs_ext_e4/prefixes/A_seed20261109/training_state.pt": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+    "runs_ext_e4/prefixes/A_seed20261110/training_state.pt": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb",
+    "runs_phase2/A_seed20261108/config.json": "8a8d5600b193d6fde89ebcae518dfda4a750f1094e54bcbe4f4a3e50f5f47d77",
+    "runs_phase2/A_seed20261109/config.json": "2424ab2436df4244379fccdbfa4577552289f81b18aa1d0a9138a10f01f1f101",
+    "runs_phase2/A_seed20261110/config.json": "7b6a2254db5b2cae0b9e3acc2042540cc8ea6ebda16f02bab22177947bfc6113",
+    "runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_model.safetensors": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "runs_phase2/A_seed20261109/checkpoints/stage_03_python/adapter_model.safetensors": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+    "runs_phase2/A_seed20261110/checkpoints/stage_03_python/adapter_model.safetensors": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5",
+    "fac_tinyagent/e3_train.py": "79788b28e0e1c402d36efad63e5848cad23ca3666f53de1299cc36ae06be8c3e",
+    "fac_tinyagent/p5_file_timing.py": "42f95a6dd35ac45a50a017dec377ac53914c9c023195fe24b02cf8cf28e0666c",
+    "fac_tinyagent/p4_forget_timing.py": "1fe27eeaf41636ccd9918dd31d8b286623b3a299d272f4a472ee36d0d114c193",
+    "fac_tinyagent/replay_train.py": "761027c760800bc054725aefbef74476fe5acbed970d209f232d4a3948ce74a0"
+  },
+  "checks": {
+    "candidate_distinct_counts": {
+      "db.list_tables": 1,
+      "db.filter_cmp_top": 8,
+      "file.search_last": 8,
+      "py.median": 8
+    },
+    "dev": 16,
+    "holdout": 48,
+    "dev_test_prompts_disjoint": true,
+    "median_value_sets_disjoint": true,
+    "database_schema_entities_disjoint": true,
+    "file_entities_disjoint": true
+  }
+}

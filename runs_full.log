@@ -1,0 +1,101 @@
+M0 evaluation on all families
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:20, 14.72it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:22, 13.78it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 404.80it/s]Loading weights:  70%|███████   | 219/311 [00:00<00:00, 631.80it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 541.82it/s]
+eval stage_00_base file n 30
+eval stage_00_base file 10
+eval stage_00_base file 20
+eval stage_00_base file 30
+eval done stage_00_base file final 0.0 peak_gpu_gb 0.592
+eval stage_00_base database n 30
+eval stage_00_base database 10
+eval stage_00_base database 20
+eval stage_00_base database 30
+eval done stage_00_base database final 0.0 peak_gpu_gb 0.586
+eval stage_00_base python n 30
+eval stage_00_base python 10
+eval stage_00_base python 20
+eval stage_00_base python 30
+eval done stage_00_base python final 0.333333 peak_gpu_gb 0.621
+M0 done
+stage start stage_01_file family file
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 16.06it/s]Loading weights:  40%|████      | 125/311 [00:00<00:00, 663.21it/s]Loading weights:  73%|███████▎  | 226/311 [00:00<00:00, 809.46it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 803.57it/s]
+train stage_01_file family file samples 80 val 20
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(compute_dtype == torch.float16))
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+train done stage_01_file val_loss 0.02551151524704998 peak_gpu_gb 2.092 seconds 112.76
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.89it/s]Loading weights:  27%|██▋       | 84/311 [00:00<00:00, 489.02it/s]Loading weights:  63%|██████▎   | 197/311 [00:00<00:00, 780.62it/s]Loading weights: 100%|█████████▉| 310/311 [00:00<00:00, 915.02it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 771.95it/s]
+eval stage_01_file file n 30
+eval stage_01_file file 10
+eval stage_01_file file 20
+eval stage_01_file file 30
+eval done stage_01_file file final 0.466667 peak_gpu_gb 0.604
+stage done stage_01_file
+stage start stage_02_database family database
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.38it/s]Loading weights:  37%|███▋      | 114/311 [00:00<00:00, 640.20it/s]Loading weights:  75%|███████▍  | 232/311 [00:00<00:00, 877.28it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 825.55it/s]
+train stage_02_database family database samples 80 val 20
+train done stage_02_database val_loss 0.00035648365155793726 peak_gpu_gb 1.855 seconds 113.02
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:16, 18.82it/s]Loading weights:  24%|██▍       | 75/311 [00:00<00:00, 426.20it/s]Loading weights:  49%|████▉     | 152/311 [00:00<00:00, 578.87it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 807.43it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 691.10it/s]
+eval stage_02_database file n 30
+eval stage_02_database file 10
+eval stage_02_database file 20
+eval stage_02_database file 30
+eval done stage_02_database file final 0.6 peak_gpu_gb 0.605
+eval stage_02_database database n 30
+eval stage_02_database database 10
+eval stage_02_database database 20
+eval stage_02_database database 30
+eval done stage_02_database database final 0.566667 peak_gpu_gb 0.602
+stage done stage_02_database
+stage start stage_03_python family python
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 98.95it/s]Loading weights:  46%|████▋     | 144/311 [00:00<00:00, 824.54it/s]Loading weights:  85%|████████▌ | 265/311 [00:00<00:00, 995.55it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 914.47it/s]
+train stage_03_python family python samples 80 val 20
+train done stage_03_python val_loss 9.305973613723448e-05 peak_gpu_gb 2.096 seconds 104.13
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.71it/s]Loading weights:  29%|██▉       | 90/311 [00:00<00:00, 501.95it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 734.91it/s]Loading weights:  98%|█████████▊| 305/311 [00:00<00:00, 890.28it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 762.99it/s]
+eval stage_03_python file n 30
+eval stage_03_python file 10
+eval stage_03_python file 20
+eval stage_03_python file 30
+eval done stage_03_python file final 0.466667 peak_gpu_gb 0.613
+eval stage_03_python database n 30
+eval stage_03_python database 10
+eval stage_03_python database 20
+eval stage_03_python database 30
+eval done stage_03_python database final 0.366667 peak_gpu_gb 0.603
+eval stage_03_python python n 30
+eval stage_03_python python 10
+eval stage_03_python python 20
+eval stage_03_python python 30
+eval done stage_03_python python final 1.0 peak_gpu_gb 0.616
+stage done stage_03_python
+run complete: 20261108_204539_seed20261108
+[
+  {
+    "stage_index": 0,
+    "stage_name": "stage_00_base",
+    "database": 0.0,
+    "file": 0.0,
+    "python": 0.333333
+  },
+  {
+    "stage_index": 1,
+    "stage_name": "stage_01_file",
+    "database": null,
+    "file": 0.466667,
+    "python": null
+  },
+  {
+    "stage_index": 2,
+    "stage_name": "stage_02_database",
+    "database": 0.566667,
+    "file": 0.6,
+    "python": null
+  },
+  {
+    "stage_index": 3,
+    "stage_name": "stage_03_python",
+    "database": 0.366667,
+    "file": 0.466667,
+    "python": 1.0
+  }
+]

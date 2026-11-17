@@ -1,0 +1,14 @@
+{
+  "reason": "Apex watchdog at 2026-11-15 16:42:34 +0800",
+  "user_authorized_resume_when_game_exits": true,
+  "costs": {
+    "optimizer_steps": 4,
+    "training_backward": 32,
+    "training_input_tokens": 14291,
+    "nll_forward": 120,
+    "generation_episodes": 20,
+    "diagnostic_backward": 18,
+    "restorations": 5
+  },
+  "accounting_note": "18 backward =16 dev + filter candidate + file candidate; interruption occurred after their 4 optimizer receipts during file generation. Any additional unfinished generation cost is unrecorded, not zero."
+}

@@ -1,0 +1,45 @@
+2026-11-10 19:33:02 PHASE 1 trajectory A_seed20261108 stage_01-03 default mmlu
+2026-11-10 19:33:02 START q06b_A108_stage01_mmlu_full rem=14400s est=600s
+2026-11-10 19:33:02 FAIL q06b_A108_stage01_mmlu_full rc=3 wall=0s
+2026-11-10 19:33:02 START q06b_A108_stage02_mmlu_full rem=14400s est=600s
+2026-11-10 19:33:02 FAIL q06b_A108_stage02_mmlu_full rc=3 wall=0s
+2026-11-10 19:33:02 START q06b_A108_stage03_mmlu_full rem=14400s est=600s
+2026-11-10 19:33:02 FAIL q06b_A108_stage03_mmlu_full rc=3 wall=0s
+2026-11-10 19:33:02 PHASE 3a chat-template default mmlu (base + stage_04)
+2026-11-10 19:33:02 START q06b_base_mmlu_full_chat rem=14400s est=600s
+2026-11-10 19:33:02 FAIL q06b_base_mmlu_full_chat rc=3 wall=0s
+2026-11-10 19:33:02 PREFETCH cais/mmlu (temporary online)
+===== LAUNCH Tue Nov 10 19:34:30 CST 2026 =====
+2026-11-10 19:34:30 PHASE 1 trajectory A_seed20261108 stage_01-03 default mmlu
+2026-11-10 19:34:30 START q06b_A108_stage01_mmlu_full rem=14400s est=600s
+2026-11-10 19:41:40 DONE q06b_A108_stage01_mmlu_full rc=0 wall=430s
+2026-11-10 19:41:40 START q06b_A108_stage02_mmlu_full rem=13970s est=430s
+2026-11-10 19:48:55 DONE q06b_A108_stage02_mmlu_full rc=0 wall=435s
+2026-11-10 19:48:55 START q06b_A108_stage03_mmlu_full rem=13535s est=435s
+2026-11-10 19:55:48 DONE q06b_A108_stage03_mmlu_full rc=0 wall=413s
+2026-11-10 19:55:48 PHASE 3a chat-template default mmlu (base + stage_04)
+2026-11-10 19:55:48 START q06b_base_mmlu_full_chat rem=13122s est=413s
+2026-11-10 20:01:38 DONE q06b_base_mmlu_full_chat rc=0 wall=350s
+2026-11-10 20:01:38 START q06b_A108_stage04_mmlu_full_chat rem=12772s est=350s
+2026-11-10 20:09:06 DONE q06b_A108_stage04_mmlu_full_chat rc=0 wall=448s
+2026-11-10 20:09:06 PHASE 3b mmlu_continuation (choice-text loglikelihood, base + stage_04)
+2026-11-10 20:09:06 START q06b_base_mmlu_continuation_full rem=12324s est=448s
+2026-11-10 20:19:37 DONE q06b_base_mmlu_continuation_full rc=0 wall=631s
+2026-11-10 20:19:38 START q06b_A108_stage04_mmlu_continuation_full rem=11693s est=631s
+2026-11-10 20:32:41 DONE q06b_A108_stage04_mmlu_continuation_full rc=0 wall=783s
+2026-11-10 20:32:41 PHASE 3c mmlu_generative (same limit for base and adapter)
+2026-11-10 20:32:41 START q06b_base_mmlu_generative_l1 rem=10909s est=600s
+2026-11-10 20:33:02 DONE q06b_base_mmlu_generative_l1 rc=0 wall=21s
+2026-11-10 20:33:02 GEN_LIMIT=15 TIME_L1=18s rem=10888s reserve=2349s
+2026-11-10 20:33:02 START q06b_base_mmlu_generative_l15 rem=10888s est=1470s
+2026-11-10 20:34:48 DONE q06b_base_mmlu_generative_l15 rc=0 wall=106s
+2026-11-10 20:34:48 START q06b_A108_stage04_mmlu_generative_l15 rem=10782s est=1470s
+2026-11-10 20:36:44 DONE q06b_A108_stage04_mmlu_generative_l15 rc=0 wall=116s
+2026-11-10 20:36:44 PHASE 2 other seeds/orders final adapters
+2026-11-10 20:36:44 START q06b_A109_stage04_mmlu_full rem=10666s est=116s
+2026-11-10 20:43:22 DONE q06b_A109_stage04_mmlu_full rc=0 wall=398s
+2026-11-10 20:43:22 START q06b_B108_stage04_mmlu_full rem=10268s est=116s
+2026-11-10 20:50:01 DONE q06b_B108_stage04_mmlu_full rc=0 wall=399s
+2026-11-10 20:50:01 START q06b_A110_stage04_mmlu_full rem=9869s est=116s
+2026-11-10 20:56:38 DONE q06b_A110_stage04_mmlu_full rc=0 wall=397s
+2026-11-10 20:56:38 ALL_DONE rem=9472s est_full_ll=116s

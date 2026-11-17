@@ -1,0 +1,67 @@
+{
+  "stage_index": 4,
+  "stage_name": "P6_B1_A_seed20261108_balanced_early",
+  "family": "python",
+  "metrics": {
+    "n": 12,
+    "tool_selection_accuracy": 0.833333,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 0.833333,
+    "final_task_success_rate": 0.833333,
+    "joint_success_rate": 0.833333,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 10,
+    "conditional_argument_denominator": 10
+  },
+  "skill_metrics": {
+    "py.median": {
+      "n": 12,
+      "tool_selection_accuracy": 0.833333,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 0.833333,
+      "final_task_success_rate": 0.833333,
+      "joint_success_rate": 0.833333,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 24,
+    "input_tokens": 7490,
+    "output_tokens": 676,
+    "total_tokens": 8166,
+    "generation_seconds": 51.769306,
+    "n": 12,
+    "generation_batches": 24,
+    "usage_coverage": {
+      "inference_calls": 12,
+      "input_tokens": 12,
+      "output_tokens": 12,
+      "total_tokens": 12,
+      "generation_seconds": 12
+    },
+    "recorded_totals": {
+      "inference_calls": 24,
+      "input_tokens": 7490,
+      "output_tokens": 676,
+      "total_tokens": 8166,
+      "generation_seconds": 51.769306
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 51.86
+  },
+  "peak_gpu_gb": 0.604,
+  "duration_seconds": 51.86,
+  "evaluation_protocol": {
+    "batch_size": 1,
+    "do_sample": false,
+    "use_cache": "model_default",
+    "padding_side": "single_sequence",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p6_devplan_attempt2/branches/A_seed20261108_balanced_early/checkpoint"
+}

@@ -1,0 +1,186 @@
+{
+  "generated": "2026-11-11 20:08:35",
+  "runs": [
+    {
+      "seed": 20261108,
+      "arm": "dose_db2",
+      "kind": "dose",
+      "mode": "targeted",
+      "replay_ratio": 0.3,
+      "budget_input_tokens": 2418,
+      "replay_input_tokens": 2417,
+      "replay_supervised_tokens": 391,
+      "quota_target_input_tokens": 1059,
+      "actual_target_fraction_input": 0.4381464625568887,
+      "replay_samples": 7,
+      "replay_unique": 7,
+      "max_exposures_per_sample": 1,
+      "repeated_samples": {},
+      "replay_new_positions": [
+        15,
+        15
+      ],
+      "n_insertion_positions": 1,
+      "new_input_tokens": 8060,
+      "train_tokens_total": 10477,
+      "optimizer_steps": 3,
+      "microsteps": 23,
+      "train_elapsed_seconds": 71.097,
+      "peak_gpu_gb": 2.252,
+      "prefix_state_sha256": "5ab22428595276f10a94ebf876054d194b361b228bc3d4ada06fb13635c6134a",
+      "db_dose": 2,
+      "by_family": {
+        "file": {
+          "samples": 1,
+          "unique": 1,
+          "input_tokens": 307,
+          "supervised_tokens": 46,
+          "mean_input_tokens_per_sample": 307.0,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        },
+        "database": {
+          "samples": 4,
+          "unique": 4,
+          "input_tokens": 1332,
+          "supervised_tokens": 195,
+          "mean_input_tokens_per_sample": 333.0,
+          "quota_target_samples": 2,
+          "quota_target_input_tokens": 698,
+          "content_target_samples": 2,
+          "content_target_input_tokens": 698,
+          "quota_target_ids": [
+            "database-train-target_db_filter_top-000",
+            "database-train-target_db_filter_top-001"
+          ]
+        },
+        "python": {
+          "samples": 2,
+          "unique": 2,
+          "input_tokens": 778,
+          "supervised_tokens": 150,
+          "mean_input_tokens_per_sample": 389.0,
+          "quota_target_samples": 1,
+          "quota_target_input_tokens": 361,
+          "content_target_samples": 1,
+          "content_target_input_tokens": 361,
+          "quota_target_ids": [
+            "python-train-target_median_natural-014"
+          ]
+        },
+        "calendar": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        }
+      },
+      "checks": {
+        "log_replay_tokens_eq_summary": true,
+        "log_replay_tokens_eq_plan": true,
+        "plan_items_eq_log_multiset": true,
+        "summary_train_tokens_eq_new_plus_replay": true,
+        "plan_target_flag_eq_target_id": true
+      }
+    },
+    {
+      "seed": 20261108,
+      "arm": "ctrl_cal10",
+      "kind": "control",
+      "mode": "targeted",
+      "replay_ratio": 0.3,
+      "budget_input_tokens": 2418,
+      "replay_input_tokens": 2372,
+      "replay_supervised_tokens": 247,
+      "quota_target_input_tokens": 0,
+      "actual_target_fraction_input": 0.0,
+      "replay_samples": 7,
+      "replay_unique": 3,
+      "max_exposures_per_sample": 5,
+      "repeated_samples": {
+        "calendar-train-calendar_count_month-001": 5
+      },
+      "replay_new_positions": [
+        15,
+        15
+      ],
+      "n_insertion_positions": 1,
+      "new_input_tokens": 8060,
+      "train_tokens_total": 10432,
+      "optimizer_steps": 3,
+      "microsteps": 23,
+      "train_elapsed_seconds": 9.455,
+      "peak_gpu_gb": 2.252,
+      "prefix_state_sha256": "5ab22428595276f10a94ebf876054d194b361b228bc3d4ada06fb13635c6134a",
+      "db_dose": null,
+      "by_family": {
+        "file": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        },
+        "database": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        },
+        "python": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        },
+        "calendar": {
+          "samples": 7,
+          "unique": 3,
+          "input_tokens": 2372,
+          "supervised_tokens": 247,
+          "mean_input_tokens_per_sample": 338.85714285714283,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "quota_target_ids": []
+        }
+      },
+      "checks": {
+        "log_replay_tokens_eq_summary": true,
+        "log_replay_tokens_eq_plan": true,
+        "plan_items_eq_log_multiset": true,
+        "summary_train_tokens_eq_new_plus_replay": true,
+        "plan_target_flag_eq_target_id": true
+      }
+    }
+  ],
+  "all_checks_ok": true,
+  "failed": []
+}

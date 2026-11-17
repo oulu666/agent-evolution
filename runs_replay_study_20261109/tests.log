@@ -1,0 +1,42 @@
+test_assistant_masking (test_cpu.DataTests.test_assistant_masking) ... ok
+test_generate_and_verify (test_cpu.DataTests.test_generate_and_verify) ... ok
+test_answers_equal (test_cpu.MetricTests.test_answers_equal) ... ok
+test_forgetting_formula (test_cpu.MetricTests.test_forgetting_formula) ... ok
+test_forgetting_peak_is_prior_max (test_cpu.MetricTests.test_forgetting_peak_is_prior_max) ... ok
+test_weighted_forgetting (test_cpu.MetricTests.test_weighted_forgetting) ... ok
+test_database_read_only (test_cpu.ToolTests.test_database_read_only) ... ok
+test_file_sandbox (test_cpu.ToolTests.test_file_sandbox) ... ok
+test_stats (test_cpu.ToolTests.test_stats) ... ok
+test_joint_failure_with_correct_answer (test_replay_study.PairingTests.test_joint_failure_with_correct_answer) ... ok
+test_missing_ids_rejected (test_replay_study.PairingTests.test_missing_ids_rejected) ... ok
+test_offsetting_losses_and_gains_are_visible (test_replay_study.PairingTests.test_offsetting_losses_and_gains_are_visible) ... ok
+test_both_arms_have_exact_same_insertion_times (test_replay_train.ReplayTests.test_both_arms_have_exact_same_insertion_times) ... ok
+test_complete_episodes_hard_budget_and_audit (test_replay_train.ReplayTests.test_complete_episodes_hard_budget_and_audit) ... ok
+test_invalid_inputs_fail_before_sampling (test_replay_train.ReplayTests.test_invalid_inputs_fail_before_sampling) ... ok
+test_new_exposure_is_exact_and_independent_of_global_rng (test_replay_train.ReplayTests.test_new_exposure_is_exact_and_independent_of_global_rng) ... ok
+test_positive_drop_and_uniform_floor (test_replay_train.ReplayTests.test_positive_drop_and_uniform_floor) ... ok
+test_repeated_rows_allowed_without_manufacturing_examples (test_replay_train.ReplayTests.test_repeated_rows_allowed_without_manufacturing_examples) ... ok
+test_small_budget_never_truncates_and_unfillable_is_explicit (test_replay_train.ReplayTests.test_small_budget_never_truncates_and_unfillable_is_explicit) ... ok
+test_zero_drop_exactly_matches_uniform (test_replay_train.ReplayTests.test_zero_drop_exactly_matches_uniform) ... ok
+test_reproducible_tasks_and_refuse_overwrite (test_research_data.ResearchDataTests.test_reproducible_tasks_and_refuse_overwrite) ... ok
+test_sealed_hash_detects_edit (test_research_data.ResearchDataTests.test_sealed_hash_detects_edit) ... ok
+test_unique_isolated_coverage_and_executable_gold (test_research_data.ResearchDataTests.test_unique_isolated_coverage_and_executable_gold) ... ok
+eval test_stage python n 3
+eval done test_stage python final 1.0 peak_gpu_gb 0
+eval test_stage python n 3
+eval done test_stage python final 1.0 peak_gpu_gb 0
+test_single_and_batch_use_real_observations_and_charge_both_generations (test_research_metrics.EvaluationIsolationTests.test_single_and_batch_use_real_observations_and_charge_both_generations) ... ok
+test_batch_counts_exclude_left_padding_and_post_eos_padding (test_research_metrics.GenerationUsageTests.test_batch_counts_exclude_left_padding_and_post_eos_padding) ... ok
+test_single_generation_keeps_decoding_options_and_text_api (test_research_metrics.GenerationUsageTests.test_single_generation_keeps_decoding_options_and_text_api) ... ok
+test_eligible_runs_label_does_not_claim_positive_forgetting (test_research_metrics.ReportLabelTests.test_eligible_runs_label_does_not_claim_positive_forgetting) ... ok
+test_conditional_arguments_uses_only_correct_tools (test_research_metrics.ResearchMetricTests.test_conditional_arguments_uses_only_correct_tools) ... ok
+test_conditional_zero_denominator_is_null (test_research_metrics.ResearchMetricTests.test_conditional_zero_denominator_is_null) ... ok
+test_joint_requires_every_component_and_ignores_stale_derived_field (test_research_metrics.ResearchMetricTests.test_joint_requires_every_component_and_ignores_stale_derived_field) ... ok
+test_legacy_usage_is_unknown_except_recoverable_call_count (test_research_metrics.ResearchMetricTests.test_legacy_usage_is_unknown_except_recoverable_call_count) ... ok
+test_offline_summary_preserves_source_and_groups_families (test_research_metrics.ResearchMetricTests.test_offline_summary_preserves_source_and_groups_families) ... ok
+test_partial_usage_does_not_underreport_as_complete (test_research_metrics.ResearchMetricTests.test_partial_usage_does_not_underreport_as_complete) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.112s
+
+OK

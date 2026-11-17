@@ -1,0 +1,96 @@
+{
+  "stage": "stage_04_calendar",
+  "family": "calendar",
+  "mode": "targeted",
+  "seed": 20261108,
+  "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+  "epochs": 1,
+  "train_samples": 16,
+  "new_order_sha256": "733e88c5d91914980afa6112e720e3c836955890fac921f93d632db4370f6c2e",
+  "new_data_sha256": "c3e6ffeabda3a89cb8bfe16cc05b646dfbabcc639409c8b3b21149ac02b22848",
+  "probe_data_sha256": {
+    "file": "ea09361522f4d829cc4e9900ef27b635832a88cb17d40ac7db620a5233643518",
+    "database": "6a7a258605c5eca470c51bbd76f718a60107a710185fe30faa742f07804fe811",
+    "python": "8941eb62c1b6b62db9b6a8da41f93fc0028e9d1f878e3ed9c33cde6063170914"
+  },
+  "start_trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+  "midpoint_trainable_state_sha256": "3dca2b74a745adfd49ae0dd17bcbf63172564cf839f91458e86a3e039a37ab78",
+  "train_tokens": 10432,
+  "steps": 23,
+  "last_loss": 0.007259037811309099,
+  "microsteps": 23,
+  "optimizer_steps": 3,
+  "new_samples": 16,
+  "replay_samples": 7,
+  "new_input_tokens": 8060,
+  "replay_input_tokens": 2372,
+  "new_supervised_tokens": 588,
+  "replay_supervised_tokens": 247,
+  "replay_ratio_requested": 0.3,
+  "replay_ratio_actual": 0.29429280397022334,
+  "budget_input_tokens": 2418,
+  "budget_unused_input_tokens": 46,
+  "quota_error_tokens_by_family": {
+    "calendar": 0
+  },
+  "within_one_percent_of_budget": false,
+  "actual_replay_tokens_by_family": {
+    "calendar": 2372
+  },
+  "adaptive_triggered": false,
+  "target_fraction": 0.0,
+  "target_family_weights": {},
+  "target_samples_by_family": {
+    "calendar": 0
+  },
+  "target_actual_input_tokens": 0,
+  "uniform_actual_input_tokens": 2372,
+  "peak_gpu_gb": 2.252,
+  "compute_dtype": "torch.bfloat16",
+  "duration_seconds": 70.969,
+  "probe_duration_seconds": 57.187,
+  "actual_elapsed_seconds": 9.455,
+  "prefix_reused": true,
+  "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e3_smoke/prefixes/A_seed20261108",
+  "shared_prefix_state_sha256": "5ab22428595276f10a94ebf876054d194b361b228bc3d4ada06fb13635c6134a",
+  "actual_probe_duration_seconds": 0.0,
+  "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+  "training_and_overhead_seconds": 13.782,
+  "probe_input_tokens": 14059,
+  "probe_generated_tokens": 1695,
+  "probe_episodes": 24,
+  "probes": {
+    "start": {
+      "scores": {
+        "database": 0.25,
+        "file": 0.0,
+        "python": 0.5
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 27.486,
+      "episodes": 12,
+      "trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+      "generation_calls": 6,
+      "logical_generation_requests": 24,
+      "input_tokens": 7015,
+      "generated_tokens": 865
+    },
+    "midpoint": {
+      "scores": {
+        "database": 0.25,
+        "file": 0.0,
+        "python": 0.5
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 29.701,
+      "episodes": 12,
+      "trainable_state_sha256": "3dca2b74a745adfd49ae0dd17bcbf63172564cf839f91458e86a3e039a37ab78",
+      "generation_calls": 6,
+      "logical_generation_requests": 24,
+      "input_tokens": 7044,
+      "generated_tokens": 830
+    }
+  },
+  "partial_accumulation_microsteps": 7,
+  "completed": true
+}

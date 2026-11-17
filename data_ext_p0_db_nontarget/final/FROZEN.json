@@ -1,0 +1,42 @@
+{
+  "version": "database_nontarget_v1",
+  "frozen_at": "2026-11-12 09:16:35 +0800",
+  "files": {
+    "database_nontarget": {
+      "path": "final/database_nontarget.jsonl",
+      "count": 40,
+      "sha256": "1a8566dc7b9f6ee7b07858d95837ddb7ca6a91ba4aecab15ced58e43712db7f2"
+    }
+  },
+  "fixture": {
+    "path": "data_phase2/fixtures/toolbench.db",
+    "sha256": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "note": "same Database fixture as training and nat v2; read-only"
+  },
+  "combined_sha256": "9c3b7ea0effa2e88d4e3c882206ecb6d9040c931763c494836cab90eec2aa58d",
+  "types": {
+    "nontarget_filter_count": 8,
+    "nontarget_filter_mean": 8,
+    "nontarget_group_count_filter": 8,
+    "nontarget_min_max": 8,
+    "nontarget_multi_filter_count": 8
+  },
+  "seeds": {
+    "tasks": 20261143
+  },
+  "scoring": "joint success (tool, exact SQL arguments, execution on toolbench.db, exact answer via project_answer / answers_equal); report overall and per band",
+  "rationale": "Non-target Database exam for E3-B: if scores do not rise with independent target_db_filter_top count k, downgrade the S-curve to template coverage.",
+  "bands": [
+    "filter_count",
+    "filter_mean",
+    "group_count_filter",
+    "min_max",
+    "multi_filter_count"
+  ],
+  "pilot_note": "P0 2026-11-12: non-target Database exam for E3-B transfer vs template coverage.",
+  "rules": [
+    "Evaluation only; never a training, replay, probe or selection input.",
+    "Not a rewrite of target_db_filter_top; no ORDER BY+LIMIT name lists.",
+    "Any change requires a new version string and hashes."
+  ]
+}

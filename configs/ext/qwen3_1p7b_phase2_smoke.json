@@ -1,0 +1,22 @@
+{
+  "_comment": "[ext-paper 2026-11-10] phase2_smoke.json with Qwen3-1.7B; data read-only, outputs to runs_smoke_1p7b",
+  "model_name_or_path": "/home/egret/models/Qwen3-1.7B",
+  "seed": 20261108,
+  "split_seed": 20261108,
+  "data_root": "data_phase2_smoke",
+  "output_root": "runs_smoke_1p7b",
+  "data": {
+    "families": ["file", "database", "python", "calendar"],
+    "train_per_family": 8,
+    "val_per_family": 2,
+    "test_per_family": 6
+  },
+  "evaluation": {"all_families": true, "test_limit": 3},
+  "stages": [
+    {"name": "stage_00_base", "family": null},
+    {"name": "stage_01_file", "family": "file"},
+    {"name": "stage_02_database", "family": "database"},
+    {"name": "stage_03_python", "family": "python"},
+    {"name": "stage_04_calendar", "family": "calendar"}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "finished": "2026-11-10T13:42:53+08:00",
+  "wall_seconds": 557.9,
+  "model_name_or_path": "/home/egret/models/Qwen3-1.7B",
+  "train_peak_gpu_gb_max": 4.013,
+  "stages": [
+    {
+      "stage": "stage_01_file",
+      "peak_gpu_gb": 3.474,
+      "duration_seconds": 14.35,
+      "train_tokens": 5786,
+      "val_loss": 1.1462808660714023,
+      "compute_dtype": "torch.bfloat16"
+    },
+    {
+      "stage": "stage_02_database",
+      "peak_gpu_gb": 3.261,
+      "duration_seconds": 17.02,
+      "train_tokens": 4816,
+      "val_loss": 0.9965291023254395,
+      "compute_dtype": "torch.bfloat16"
+    },
+    {
+      "stage": "stage_03_python",
+      "peak_gpu_gb": 3.515,
+      "duration_seconds": 11.54,
+      "train_tokens": 5986,
+      "val_loss": 0.13725279601382429,
+      "compute_dtype": "torch.bfloat16"
+    },
+    {
+      "stage": "stage_04_calendar",
+      "peak_gpu_gb": 4.013,
+      "duration_seconds": 12.37,
+      "train_tokens": 7326,
+      "val_loss": 0.04410459121896161,
+      "compute_dtype": "torch.bfloat16"
+    }
+  ]
+}

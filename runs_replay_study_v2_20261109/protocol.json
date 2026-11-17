@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-11-09T20:42:53+08:00",
+  "version": 2,
+  "order": "A",
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "modes": [
+    "none",
+    "uniform",
+    "adaptive"
+  ],
+  "shared_prefix": "One measured prefix per seed; every arm restores the same persisted midpoint adapter, optimizer, scaler, and RNG state.",
+  "v1_invalidated_reason": "Midpoint parameters differed across arms before any replay; no efficacy claims from v1.",
+  "branch_stage": 3,
+  "new_stage": 4,
+  "replay_ratio_to_new_input_tokens": 0.1,
+  "uniform_floor": 0.2,
+  "monitor_at_new_exposure_fractions": [
+    0,
+    0.5
+  ],
+  "replay_only_after_midpoint": true,
+  "evaluation_batch_size": 32,
+  "primary_outcome": "macro-average joint success on three old tools",
+  "secondary_outcomes": [
+    "new-tool joint success",
+    "answer success",
+    "paired loss/gain",
+    "cost"
+  ],
+  "probe_signal": "nonnegative decrease of joint success from branch start to midpoint",
+  "sealed_test_used_for_policy_selection": false,
+  "transition_selection": "Historical tests only; this is an exploratory pilot.",
+  "source_sha256": {
+    "fac_tinyagent/replay_train.py": "ce2113d68a2eb76e1ad9d5781defcb54f59255ef8e2e5ffd1e8d70a2b220b1c8",
+    "fac_tinyagent/research_data.py": "80162383df5c893c61d6e90aecba9162f2b58ddffe3b5a84907986524fd6f609",
+    "fac_tinyagent/sft/evaluate.py": "d4e7311c472a194bd4f742c6da491d74181cb861f929a8dbbf00d5c7af5ca964",
+    "fac_tinyagent/metrics.py": "9558a5b9c4befbaf2a605a3efab7d3af95502ed8f640d30318ac51330a92fdf0"
+  },
+  "starting_adapter_sha256": {
+    "20261108": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "20261109": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+    "20261110": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5"
+  },
+  "data_manifest_sha256": "ff924681a9d614808a96399d9bde3238555d76807410d238016972cfb2b7d98e",
+  "data_sha256": {
+    "calendar/probe.jsonl": "151947936898ffc5c091b25aac8ec91fb0a8033b2c31daabd6d787fb8c5404a6",
+    "calendar/sealed_test.jsonl": "87e78639ecc4b97717a894f34bd4c110920a2f1c255f85b602e3237efa48ab04",
+    "database/probe.jsonl": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+    "database/sealed_test.jsonl": "d26e91bbe03eaf9aed1b761fe6c258b43f5f2be8712e2766247d4b87c767223f",
+    "file/probe.jsonl": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+    "file/sealed_test.jsonl": "f9ab646b610ce32182af7d0612d112f3e1de9ea8526bb9aba4b89bb4a62d3e0c",
+    "python/probe.jsonl": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909",
+    "python/sealed_test.jsonl": "1055953f4c83268c64d3f00fa0f760255bebe597b401fa9e6e24c937c59a1f4e"
+  },
+  "limitations": [
+    "one model, three seeds, simulated tool functions",
+    "family provided; no cross-family routing",
+    "held-out instances/wording, not proven structural OOD"
+  ]
+}

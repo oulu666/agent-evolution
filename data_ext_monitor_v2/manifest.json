@@ -1,0 +1,39 @@
+{
+  "seed": 20261111,
+  "checked": 96,
+  "families": {
+    "file": {
+      "count": 32,
+      "subsets": {
+        "first_para": 8,
+        "last_canon": 12,
+        "last_para": 12
+      },
+      "sha256": "44dba480ce54d169532ca799ead69358ce525728c7174040fb7f421c6e6a44a1"
+    },
+    "database": {
+      "count": 32,
+      "subsets": {
+        "filter_mean_nat": 8,
+        "filter_top_canon": 12,
+        "filter_top_para": 12
+      },
+      "sha256": "7d35dcd5a670dcaab1cb71232f9a357af20f981a70d81985a03da1a5af382f35"
+    },
+    "python": {
+      "count": 32,
+      "subsets": {
+        "explicit": 8,
+        "natural_canon": 8,
+        "sort_para": 16
+      },
+      "sha256": "2b2fe5b448381cf8106c1774be1bd4754716dea14d7215b7fcc2f6a2d0c1a52b"
+    }
+  },
+  "leakage_guards": [
+    "task_signature vs data_phase2/data_replay_study/data_round2",
+    "tool-call signature (database/python)",
+    "median value-set (sorted) exclusion",
+    "new file roots mv2_*"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "version": "natural_final_v2",
+  "frozen_at": "2026-11-11 11:07:05 +0800",
+  "combined_sha256": "5dcc7d786fd60556e97d4e2ebefe143fdd9e96e9aa9052877a1317758b15a8f6",
+  "files": {
+    "file": {
+      "path": "final_v2/file.jsonl",
+      "count": 30,
+      "sha256": "b99cfe7e011f01163c883befb8cac8349354264df6fe29a6cb3da0d4a7467194"
+    },
+    "database": {
+      "path": "final_v2/database.jsonl",
+      "count": 30,
+      "sha256": "bca808bf154af5d687416b74be871b5903d3c4b32ffc07496af39a67ded828e1"
+    },
+    "python": {
+      "path": "final_v2/python.jsonl",
+      "count": 30,
+      "sha256": "d7ea0e8e24616f32b3ca7596e6dec0e65363056da8fa640788391cb1748bbeb3"
+    },
+    "calendar": {
+      "path": "final_v2/calendar.jsonl",
+      "count": 30,
+      "sha256": "afd58cc81c06fb25b777b119678cc3c6fb78f1d5c38774b512d408e38ec2b24e"
+    }
+  },
+  "provenance": {
+    "database": "byte-identical copy of data_round2/final/database.jsonl (sha256 bca808bf154af5d687416b74be871b5903d3c4b32ffc07496af39a67ded828e1)",
+    "python": "byte-identical copy of data_round2/final/python.jsonl (sha256 d7ea0e8e24616f32b3ca7596e6dec0e65363056da8fa640788391cb1748bbeb3)",
+    "file": "same 30 instances as data_round2/final/file.jsonl (sha256 f6da9d2945ec77bbe04cbae4463935c22ca7f21914bea8309c0ea9b4d1764261); gold relabeled to the executed last matching line; episode_id prefixed nf2-",
+    "calendar": "new: 6 trained Calendar skills x 5, natural wording (3 paraphrases per skill), seed 20261122, gold by execution and re-derived from the fixture JSON"
+  },
+  "scoring": {
+    "default": "joint success (tool, arguments, execution, exact answer via metrics.answers_equal)",
+    "file": "file: joint (tool, arguments, execution) AND final answer equals the last matching line; strict = exact string; official v2 = ext_rescore lenient rule (exact line text, or body after 'line N: ', or {line,text} with matching line)."
+  },
+  "fixtures": {
+    "toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974"
+  },
+  "calendar_call_overlap": {
+    "cal_nl_count_date": {
+      "n": 5,
+      "calls_also_in_calendar_train": 1,
+      "calls_also_in_calendar_val_test": 3,
+      "distinct_calls": 5
+    },
+    "cal_nl_count_month": {
+      "n": 5,
+      "calls_also_in_calendar_train": 5,
+      "calls_also_in_calendar_val_test": 5,
+      "distinct_calls": 3
+    },
+    "cal_nl_list_titles": {
+      "n": 5,
+      "calls_also_in_calendar_train": 1,
+      "calls_also_in_calendar_val_test": 3,
+      "distinct_calls": 5
+    },
+    "cal_nl_search_dates": {
+      "n": 5,
+      "calls_also_in_calendar_train": 0,
+      "calls_also_in_calendar_val_test": 1,
+      "distinct_calls": 5
+    },
+    "cal_nl_attendees": {
+      "n": 5,
+      "calls_also_in_calendar_train": 0,
+      "calls_also_in_calendar_val_test": 0,
+      "distinct_calls": 5
+    },
+    "cal_nl_free_first": {
+      "n": 5,
+      "calls_also_in_calendar_train": 0,
+      "calls_also_in_calendar_val_test": 0,
+      "distinct_calls": 5
+    }
+  },
+  "rules": [
+    "Evaluation only: never a training, replay, probe or selection input.",
+    "Methods/thresholds are not chosen on final_v2; it is scored once per finished run.",
+    "Any change requires a new version string and new hashes."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "arm": "P4_LT2mid",
+  "seed": 20261109,
+  "plan_sha256": "880635b6a8802c7d976ca07b04e53fbfb732246f9a81038b0b00472bc03aeea2",
+  "prefix_state_sha256": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+  "optimizer_steps": 23,
+  "replay_input_tokens": 7396,
+  "tracked_timing": {
+    "tracked": [
+      {
+        "kind": "list_tables",
+        "id": "db_list_tables-000",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "list_tables",
+        "id": "db_list_tables-001",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "median_nat",
+        "id": "target_median_natural-014",
+        "position": 135,
+        "after": 5
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-005",
+        "position": 143,
+        "after": 4
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-001",
+        "position": 143,
+        "after": 4
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-006",
+        "position": 151,
+        "after": 2
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-008",
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "total_steps": 23,
+    "sum_after": {
+      "filter": 11,
+      "list_tables": 12,
+      "median_nat": 5
+    },
+    "n": {
+      "filter": 4,
+      "list_tables": 2,
+      "median_nat": 1
+    },
+    "mom_filter": 0.9778
+  },
+  "finished": "2026-11-14 15:38:50 +0800"
+}

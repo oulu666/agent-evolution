@@ -1,0 +1,16 @@
+from pathlib import Path
+import sys,json,shutil,ast,hashlib,time
+R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R));A=R/'runs_ext_p7_statefix_20261115';B=R/'runs_ext_p7_statefix_v2_20261115';assert not B.exists()
+s=(R/'fac_tinyagent/p7_fullstate_20261115.py').read_text();start=s.index(' # Reinstate stored tensor dtypes explicitly;');end=s.index(" for n,v in s['optimizer_attrs'].items()",start);s=s[:start]+" # Native optimizer loader must unwrap its own FSDP serialization; do not overwrite runtime state with serialized dictionaries.\n"+s[end:];(R/'fac_tinyagent/p7_fullstate_v2_20261115.py').write_text(s)
+for source,target in [('fac_tinyagent/p7_statefix_20261115.py','fac_tinyagent/p7_statefix_v2_20261115.py'),('fac_tinyagent/p7_statefix_report_20261115.py','fac_tinyagent/p7_statefix_report_v2_20261115.py'),('scripts/run_p7_statefix_20261115.py','scripts/run_p7_statefix_v2_20261115.py'),('scripts/p7_analyze_statefix_20261115.py','scripts/p7_analyze_statefix_v2_20261115.py'),('scripts/test_p7_statefix_20261115.py','scripts/test_p7_statefix_v2_20261115.py')]:
+ s=(R/source).read_text().replace('p7_statefix_report_20261115','p7_statefix_report_v2_20261115').replace('p7_fullstate_20261115','p7_fullstate_v2_20261115').replace('p7_statefix_20261115','p7_statefix_v2_20261115').replace('p7_analyze_statefix_20261115','p7_analyze_statefix_v2_20261115').replace('p7_statefix_ZH','p7_statefix_v2_ZH').replace('P7_STATEFIX_CORE_ALGORITHM','P7_STATEFIX_V2_CORE_ALGORITHM')
+ if 'report_' in target:
+  s=s.replace("'minimum_physical_optimizer_steps_including_old_work':33", "'minimum_physical_optimizer_steps_including_old_work':34").replace("'known_discarded_or_failed_reconstruction_steps':3", "'known_discarded_or_failed_reconstruction_steps':4").replace('至少3次，累计物理更新至少33','至少4次，累计物理更新至少34')
+ (R/target).write_text(s);ast.parse(s)
+(B/'logs').mkdir(parents=True)
+for seed in ['seed20261108','seed20261109']:shutil.copytree(A/seed,B/seed,ignore=shutil.ignore_patterns('full_state.pt','full_state_receipt.json','state_binding.json','file.search_last_1'))
+# Only original completed DB pair and baseline are present in seed09; failed new File is explicitly excluded.
+for name in ['audit.json','sql_counterfactual.json','sql_tie_counterexample.json']:
+ if (A/name).exists():shutil.copyfile(A/name,B/name)
+p=R/'scripts/test_p7_statefix_v2_20261115.py';s=p.read_text();s += '''\n# Exercise the real bnb serialized FSDP wrapper contract on CPU, without GPU or optimizer updates.\nfrom bitsandbytes.optim import PagedAdamW8bit\nmm=torch.nn.Linear(4,1,bias=False);oo=PagedAdamW8bit(mm.parameters(),lr=1e-4);pp=next(mm.parameters())\noo.state[pp]={'step':1,'state1':torch.zeros_like(pp,dtype=torch.uint8),'state2':torch.ones_like(pp,dtype=torch.uint8)}\naa=F.capture(mm,oo,sc);F.restore(aa,mm,oo,sc);assert oo.state[pp]['state1'].dtype==torch.uint8\noo.prefetch_state(pp)\ndata=json.loads((out/'acceptance.json').read_text());data['actual_bnb_FSDP_wrapped_state_native_roundtrip_prefetch']=True;(out/'acceptance.json').write_text(json.dumps(data));print('BNB SERIALIZED/RUNTIME CONTRACT PASS')\n''';p.write_text(s)
+print('V2 prepared without modifying any previous attempt: preserve native bnb load_state_dict unwrapping')

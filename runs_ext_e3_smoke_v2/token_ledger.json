@@ -1,0 +1,211 @@
+{
+  "generated": "2026-11-11 20:20:02",
+  "runs": [
+    {
+      "seed": 20261108,
+      "arm": "ctrl_cal10",
+      "kind": "control",
+      "mode": "targeted",
+      "replay_ratio": 0.3,
+      "budget_input_tokens": 2418,
+      "replay_input_tokens": 2372,
+      "replay_supervised_tokens": 247,
+      "quota_target_input_tokens": 0,
+      "actual_target_fraction_input": 0.0,
+      "replay_samples": 7,
+      "replay_unique": 3,
+      "max_exposures_per_sample": 5,
+      "repeated_samples": {
+        "calendar-train-calendar_count_month-001": 5
+      },
+      "replay_new_positions": [
+        15,
+        15
+      ],
+      "n_insertion_positions": 1,
+      "insertion_positions": [
+        15
+      ],
+      "group": "E3-A",
+      "new_input_tokens": 8060,
+      "train_tokens_total": 10432,
+      "optimizer_steps": 3,
+      "microsteps": 23,
+      "train_elapsed_seconds": 8.922,
+      "peak_gpu_gb": 2.252,
+      "prefix_state_sha256": "827e3ea7947d60e4f81423498a18efb644b9de1b82e7450e4e11903e8c33f37e",
+      "db_dose": null,
+      "by_family": {
+        "file": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 0,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        },
+        "database": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 0,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        },
+        "python": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 0,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        },
+        "calendar": {
+          "samples": 7,
+          "unique": 3,
+          "input_tokens": 2372,
+          "supervised_tokens": 247,
+          "mean_input_tokens_per_sample": 338.85714285714283,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 4,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        }
+      },
+      "checks": {
+        "log_replay_tokens_eq_summary": true,
+        "log_replay_tokens_eq_plan": true,
+        "plan_items_eq_log_multiset": true,
+        "summary_train_tokens_eq_new_plus_replay": true,
+        "plan_target_flag_eq_target_id": true
+      }
+    },
+    {
+      "seed": 20261108,
+      "arm": "dose_db2",
+      "kind": "dose",
+      "mode": "targeted",
+      "replay_ratio": 0.3,
+      "budget_input_tokens": 2418,
+      "replay_input_tokens": 2266,
+      "replay_supervised_tokens": 437,
+      "quota_target_input_tokens": 1059,
+      "actual_target_fraction_input": 0.4673433362753751,
+      "replay_samples": 6,
+      "replay_unique": 6,
+      "max_exposures_per_sample": 1,
+      "repeated_samples": {},
+      "replay_new_positions": [
+        15,
+        15
+      ],
+      "n_insertion_positions": 1,
+      "insertion_positions": [
+        15
+      ],
+      "group": "E3-B",
+      "new_input_tokens": 8060,
+      "train_tokens_total": 10326,
+      "optimizer_steps": 3,
+      "microsteps": 22,
+      "train_elapsed_seconds": 69.71,
+      "peak_gpu_gb": 2.252,
+      "prefix_state_sha256": "827e3ea7947d60e4f81423498a18efb644b9de1b82e7450e4e11903e8c33f37e",
+      "db_dose": 2,
+      "by_family": {
+        "file": {
+          "samples": 2,
+          "unique": 2,
+          "input_tokens": 747,
+          "supervised_tokens": 143,
+          "mean_input_tokens_per_sample": 373.5,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 0,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        },
+        "database": {
+          "samples": 2,
+          "unique": 2,
+          "input_tokens": 698,
+          "supervised_tokens": 127,
+          "mean_input_tokens_per_sample": 349.0,
+          "quota_target_samples": 2,
+          "quota_target_input_tokens": 698,
+          "content_target_samples": 2,
+          "content_target_input_tokens": 698,
+          "repeats": 0,
+          "quota_target_unique": 2,
+          "quota_target_ids": [
+            "database-train-target_db_filter_top-000",
+            "database-train-target_db_filter_top-001"
+          ]
+        },
+        "python": {
+          "samples": 2,
+          "unique": 2,
+          "input_tokens": 821,
+          "supervised_tokens": 167,
+          "mean_input_tokens_per_sample": 410.5,
+          "quota_target_samples": 1,
+          "quota_target_input_tokens": 361,
+          "content_target_samples": 1,
+          "content_target_input_tokens": 361,
+          "repeats": 0,
+          "quota_target_unique": 1,
+          "quota_target_ids": [
+            "python-train-target_median_natural-014"
+          ]
+        },
+        "calendar": {
+          "samples": 0,
+          "unique": 0,
+          "input_tokens": 0,
+          "supervised_tokens": 0,
+          "mean_input_tokens_per_sample": null,
+          "quota_target_samples": 0,
+          "quota_target_input_tokens": 0,
+          "content_target_samples": 0,
+          "content_target_input_tokens": 0,
+          "repeats": 0,
+          "quota_target_unique": 0,
+          "quota_target_ids": []
+        }
+      },
+      "checks": {
+        "log_replay_tokens_eq_summary": true,
+        "log_replay_tokens_eq_plan": true,
+        "plan_items_eq_log_multiset": true,
+        "summary_train_tokens_eq_new_plus_replay": true,
+        "plan_target_flag_eq_target_id": true
+      }
+    }
+  ],
+  "all_checks_ok": true,
+  "failed": [],
+  "invariant_deviations": []
+}

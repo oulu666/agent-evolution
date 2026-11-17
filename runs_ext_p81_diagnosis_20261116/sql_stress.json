@@ -1,0 +1,1115 @@
+{
+  "posthoc": true,
+  "changes_original_metrics": false,
+  "model_calls": 0,
+  "variants_per_query": 3,
+  "n_queries": 72,
+  "cells": {
+    "20261108/natural/sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261108/natural/filter": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261108/natural/filter_sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261108/natural/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261108/structured/sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261108/structured/filter": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261108/structured/filter_sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261108/structured/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261109/natural/sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261109/natural/filter": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261109/natural/filter_sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261109/natural/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261109/structured/sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261109/structured/filter": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261109/structured/filter_sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261109/structured/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/natural/sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/natural/filter": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/natural/filter_sort": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261110/natural/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 0
+    },
+    "20261110/structured/sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/structured/filter": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/structured/filter_sort": {
+      "n": 3,
+      "robust_rate": 1
+    },
+    "20261110/structured/filter_sort_tie": {
+      "n": 3,
+      "robust_rate": 1
+    }
+  },
+  "details": [
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY name ASC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-zero-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-few-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261108,
+      "id": "p81-db-ties-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": ""
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY name ASC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name AS v FROM p81_few ORDER BY v DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name AS v FROM p81_zero ORDER BY v DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-few-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name AS v FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-ties-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261109,
+      "id": "p81-db-zero-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        false,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY name ASC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter-structured",
+      "wording": "structured",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter-natural",
+      "wording": "natural",
+      "operation": "filter",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter_sort_tie-structured",
+      "wording": "structured",
+      "operation": "filter_sort_tie",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties WHERE score > 50 ORDER BY score DESC, id LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter_sort-structured",
+      "wording": "structured",
+      "operation": "filter_sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_zero WHERE score > 50 ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-zero-filter_sort-natural",
+      "wording": "natural",
+      "operation": "filter_sort",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_zero ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-sort-natural",
+      "wording": "natural",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-ties-filter_sort_tie-natural",
+      "wording": "natural",
+      "operation": "filter_sort_tie",
+      "original_semantic": false,
+      "variants": [
+        false,
+        true,
+        false
+      ],
+      "robust": false,
+      "sql": "SELECT name FROM p81_ties ORDER BY score DESC LIMIT 4"
+    },
+    {
+      "seed": 20261110,
+      "id": "p81-db-few-sort-structured",
+      "wording": "structured",
+      "operation": "sort",
+      "original_semantic": true,
+      "variants": [
+        true,
+        true,
+        true
+      ],
+      "robust": true,
+      "sql": "SELECT name FROM p81_few ORDER BY score DESC LIMIT 4"
+    }
+  ]
+}

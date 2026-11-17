@@ -1,0 +1,99 @@
+# fac_tinyagent 上传准备用 .gitignore
+# 只排除不应进入 GitHub 的内容；轻量实验结果、训练数据与 SQLite 夹具予以保留。
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+env/
+
+# Python / 工具缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.cache/
+wandb/
+lightning_logs/
+.huggingface/
+
+# 模型权重与大体积训练状态
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.tflite
+*.gguf
+*.ggml
+*.npz
+*.joblib
+*.msgpack
+
+# 检查点中可从模型恢复的 Hugging Face 附属文件（体积大或大量重复）
+**/tokenizer.json
+**/checkpoint/tokenizer_config.json
+**/checkpoints/**/tokenizer_config.json
+**/checkpoint/config.json
+**/checkpoints/**/config.json
+**/checkpoint/generation_config.json
+**/checkpoints/**/generation_config.json
+**/checkpoint/chat_template.jinja
+**/checkpoints/**/chat_template.jinja
+
+# 重复 / 已替代的备份目录
+backup_before_ext_20261110/
+data_ext_e3_superseded_v1_20261111/
+data_round2_failed_001/
+
+# 凭据与私钥（若后续出现也不应提交）
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.kdbx
+.git-credentials
+.netrc
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# 运行锁与进程号
+*.lock
+.run.lock
+*.pid
+
+# 临时辅助文件与截图
+**/_tmp*
+
+# 超大 MMLU 原始 samples 转储（同目录下较小的 samples 与指标/摘要仍保留）
+runs_ext_eval/q06b_A109_stage04_mmlu_full/samples.json
+runs_ext_eval/q06b_A108_stage03_mmlu_full/samples.json
+runs_ext_eval/q06b_A108_stage02_mmlu_full/samples.json
+runs_ext_eval/q06b_B108_stage04_mmlu_full/samples.json
+runs_ext_eval/q06b_A110_stage04_mmlu_full/samples.json
+runs_ext_eval/q06b_A108_stage01_mmlu_full/samples.json
+runs_ext_eval/q06b_base_mmlu_continuation_full/samples.json
+runs_ext_eval/q06b_A108_stage04_mmlu_continuation_full/samples.json
+runs_ext_eval/q06b_A108_stage04_mmlu_full_chat/samples.json
+runs_ext_eval/q06b_base_mmlu_full_chat/samples.json
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store

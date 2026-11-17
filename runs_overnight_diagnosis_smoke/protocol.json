@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "profile": "full",
+  "smoke": true,
+  "n_pairs": 2,
+  "batch_size": 32,
+  "training": false,
+  "purpose": "development diagnosis; paired tasks are not a final policy test",
+  "states": [
+    {
+      "id": "A_seed20261108_v2_midpoint",
+      "order": "A",
+      "seed": 20261108,
+      "index": 3,
+      "kind": "midpoint",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+      "prefix": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108",
+      "stage": {
+        "name": "A_seed20261108_v2_midpoint",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    }
+  ],
+  "dataset_counts": {
+    "paired/python": 4,
+    "historical/file": 2,
+    "historical/database": 2,
+    "historical/python": 2,
+    "historical/calendar": 2,
+    "probe/file": 2,
+    "probe/database": 2,
+    "probe/python": 2
+  },
+  "input_sha256": {
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/test.jsonl": "ea59377e110c03cb9fea3e5e326fa54697f7481d67bd6b4cd3fef1bc62b436ca",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/train.jsonl": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/val.jsonl": "f696f08dfb77fe761b4413c9ed3ec533346101c35c31c2bda13463da129d97e1",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/test.jsonl": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/train.jsonl": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/val.jsonl": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/test.jsonl": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/train.jsonl": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/val.jsonl": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/fixtures/toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/test.jsonl": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/train.jsonl": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/val.jsonl": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/calendar/probe.jsonl": "151947936898ffc5c091b25aac8ec91fb0a8033b2c31daabd6d787fb8c5404a6",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/calendar/sealed_test.jsonl": "87e78639ecc4b97717a894f34bd4c110920a2f1c255f85b602e3237efa48ab04",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/database/probe.jsonl": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/database/sealed_test.jsonl": "d26e91bbe03eaf9aed1b761fe6c258b43f5f2be8712e2766247d4b87c767223f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/file/probe.jsonl": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/file/sealed_test.jsonl": "f9ab646b610ce32182af7d0612d112f3e1de9ea8526bb9aba4b89bb4a62d3e0c",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/fixtures/toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/python/probe.jsonl": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/python/sealed_test.jsonl": "1055953f4c83268c64d3f00fa0f760255bebe597b401fa9e6e24c937c59a1f4e",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/config.py": "5760231e1eef1ef233b2e149c576953a7c706da3309766ea626f3cfe84d12d86",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/data/generate.py": "cd0794d9d5bb8f23105c166f61389a0dfdc71c777a0fbd0a17ecab28f5a6d135",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/data/templates.py": "8be5b6a092708ca93e3582d374c47734011d428535e7fffdf257a3d10bd68b4f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/metrics.py": "9558a5b9c4befbaf2a605a3efab7d3af95502ed8f640d30318ac51330a92fdf0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/overnight_diagnosis.py": "f3c663263d702a1bd0cfb25f5aaa744bb7e94d3431bcfb6f205bd22c9b9ddbf8",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/paired_median_data.py": "5bf8643f0badbbab8d0e03311c98d0547180894ca7498d76b16837d6870fe133",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_study.py": "4a13cf746e6df456fbf28dc8a28281eaea92741f8f1c1bf811720ed925bc5ee4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/research_data.py": "80162383df5c893c61d6e90aecba9162f2b58ddffe3b5a84907986524fd6f609",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/dataset.py": "253ef011111e45aa032858056415b4bcacc57df4acb2646aaa9b2885ac80852e",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/evaluate.py": "d4e7311c472a194bd4f742c6da491d74181cb861f929a8dbbf00d5c7af5ca964",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py": "e73d7bdddb4a504e71dbb6845e82bba4b058514398d5a9437b0ef1e827f7493d",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/__init__.py": "fa793bf3bc8d798edb8c0bc5cbd2b5025632600f62ab65fbc01132c419c51ec0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/base.py": "b2a49cec62f1b08a384106723f1a6c204e7705ccae82a9b2fe99ae6a3ae8f754",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/calendar_tools.py": "62c24104472942173289553dcb9886a2dce9e1c9532eea1667bbffca3196938b",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/db_tools.py": "04b5692cb6d44e521a67588637cf61d9d2c78338b5e94c6c33a689469ad1eccc",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/file_tools.py": "9be515ba4bc9faf050fd8ce43afdaa8291645f0a7b37dfc313bd15bf35e1b006",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/stats_tools.py": "085eadd2d91fbdfcce248585f7f8d21c5d12acb3d427f0890bfbaa46a2e8389c",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/utils.py": "613095c40cd69ae18039c372b068b8e17429b1428fbe5da8191bbd6424bbfd2a",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_overnight_diagnosis_smoke/data/paired_median.jsonl": "0db08ae22d0f498661f1478ce23a2abce0291e5abf628d6e0bf40d59adfb20a2",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_model.safetensors": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108/manifest.json": "86dad73fe0cfa535d914d22a6a70c701a286d5b42753e7d224c78db2827bc851",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108/training_state.pt": "ea45d3cd6d45d403f41a9ab0007f501edbf131274d8931b3dbd4732888092381"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "run_name": "A_seed20261110",
+  "run_dir": "runs_phase2/A_seed20261110",
+  "final_stage": {
+    "name": "stage_04_calendar",
+    "family": "calendar"
+  },
+  "final_index": 4,
+  "adapter": "runs_phase2/A_seed20261110/checkpoints/stage_04_calendar",
+  "test_per_family": "all",
+  "reports": [
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_calendar_full",
+      "family": "file",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.466667
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        },
+        "file_write": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.0
+        }
+      },
+      "peak_gpu_gb": 0.603,
+      "duration_seconds": 138.73,
+      "adapter": "runs_phase2/A_seed20261110/checkpoints/stage_04_calendar"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_calendar_full",
+      "family": "database",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.366667,
+        "execution_success_rate": 0.566667,
+        "final_task_success_rate": 0.566667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.416667,
+          "execution_success_rate": 0.416667,
+          "final_task_success_rate": 0.416667
+        },
+        "sql_filter": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.416667,
+          "execution_success_rate": 0.416667,
+          "final_task_success_rate": 0.416667
+        },
+        "sql_group": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "tool_selection": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.601,
+      "duration_seconds": 104.74,
+      "adapter": "runs_phase2/A_seed20261110/checkpoints/stage_04_calendar"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_calendar_full",
+      "family": "python",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 0.966667,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 0.966667,
+        "final_task_success_rate": 0.966667
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 30,
+          "tool_selection_accuracy": 0.966667,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.966667,
+          "final_task_success_rate": 0.966667
+        },
+        "stat_correlation": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_mean": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 5,
+          "tool_selection_accuracy": 0.8,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 0.8,
+          "final_task_success_rate": 0.8
+        },
+        "stat_percentile": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.614,
+      "duration_seconds": 198.96,
+      "adapter": "runs_phase2/A_seed20261110/checkpoints/stage_04_calendar"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_calendar_full",
+      "family": "calendar",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.533333
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.2
+        },
+        "calendar_count": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.2
+        },
+        "calendar_free": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_list": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.4
+        },
+        "calendar_time": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.628,
+      "duration_seconds": 131.36,
+      "adapter": "runs_phase2/A_seed20261110/checkpoints/stage_04_calendar"
+    }
+  ]
+}

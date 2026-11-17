@@ -1,0 +1,92 @@
+2026-11-11 20:00:57 START .venv/bin/python -m fac_tinyagent.e3_run --phase prep
+prefix 20261108 copied + verified 5702cc7ef0e9
+prefix 20261109 copied + verified ed04911abc5b
+prefix 20261110 copied + verified 0c036c353474
+PREP_OK
+2026-11-11 20:01:00 END rc=0 wall=3s :: .venv/bin/python -m fac_tinyagent.e3_run --phase prep
+2026-11-11 20:01:00 START .venv/bin/python -m fac_tinyagent.e3_run --phase train --seed 20261108 --arm dose_db2 --smoke
+train A_seed20261108_dose_db2 {'kind': 'dose', 'ratio': 0.1, 'k': 2} ratio 0.3
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:14,  4.14it/s]Loading weights:   1%|          | 2/311 [00:00<01:24,  3.67it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:50,  6.09it/s]Loading weights:   8%|▊         | 25/311 [00:00<00:05, 48.49it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:04, 64.42it/s]Loading weights:  23%|██▎       | 71/311 [00:01<00:01, 131.51it/s]Loading weights:  37%|███▋      | 115/311 [00:01<00:00, 205.27it/s]Loading weights:  47%|████▋     | 147/311 [00:01<00:00, 233.80it/s]Loading weights:  58%|█████▊    | 181/311 [00:01<00:00, 256.28it/s]Loading weights:  72%|███████▏  | 225/311 [00:01<00:00, 304.43it/s]Loading weights:  85%|████████▌ | 265/311 [00:01<00:00, 330.72it/s]Loading weights:  97%|█████████▋| 302/311 [00:01<00:00, 341.01it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 184.19it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/e3_train.py:117: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 4
+eval done probe_start database final 0.25 peak_gpu_gb 1.204
+eval probe_start file n 4
+eval done probe_start file final 0.0 peak_gpu_gb 1.212
+eval probe_start python n 4
+eval done probe_start python final 0.5 peak_gpu_gb 1.213
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 4
+eval done probe_midpoint database final 0.25 peak_gpu_gb 1.214
+eval probe_midpoint file n 4
+eval done probe_midpoint file final 0.0 peak_gpu_gb 1.239
+eval probe_midpoint python n 4
+eval done probe_midpoint python final 0.5 peak_gpu_gb 1.223
+E3 plan dose_db2 db_dose tokens 2417 / 2418 targets {'database': 2, 'file': 0, 'python': 1}
+replay train done targeted new tokens 8060 replay tokens 2417 seconds 71.1
+TRAIN_OK 20261108 dose_db2 71.097
+2026-11-11 20:03:18 END rc=0 wall=138s :: .venv/bin/python -m fac_tinyagent.e3_run --phase train --seed 20261108 --arm dose_db2 --smoke
+2026-11-11 20:03:18 START .venv/bin/python -m fac_tinyagent.e3_run --phase eval --seed 20261108 --arm dose_db2 --smoke
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:19, 15.97it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:20, 15.33it/s]Loading weights:  34%|███▍      | 105/311 [00:00<00:00, 404.16it/s]Loading weights:  69%|██████▉   | 214/311 [00:00<00:00, 648.65it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 556.30it/s]
+eval E3_A_seed20261108_dose_db2 file n 3
+eval done E3_A_seed20261108_dose_db2 file final 0.0 peak_gpu_gb 0.704
+eval E3_A_seed20261108_dose_db2 database n 3
+eval done E3_A_seed20261108_dose_db2 database final 0.666667 peak_gpu_gb 0.683
+eval E3_A_seed20261108_dose_db2 python n 3
+eval done E3_A_seed20261108_dose_db2 python final 1.0 peak_gpu_gb 0.699
+eval E3_A_seed20261108_dose_db2 calendar n 3
+eval done E3_A_seed20261108_dose_db2 calendar final 0.0 peak_gpu_gb 0.78
+eval E3_A_seed20261108_dose_db2 file n 3
+eval done E3_A_seed20261108_dose_db2 file final 0.0 peak_gpu_gb 0.696
+eval E3_A_seed20261108_dose_db2 database n 3
+eval done E3_A_seed20261108_dose_db2 database final 0.333333 peak_gpu_gb 0.69
+eval E3_A_seed20261108_dose_db2 python n 3
+eval done E3_A_seed20261108_dose_db2 python final 1.0 peak_gpu_gb 0.701
+eval E3_A_seed20261108_dose_db2 calendar n 3
+eval done E3_A_seed20261108_dose_db2 calendar final 1.0 peak_gpu_gb 0.783
+eval E3_A_seed20261108_dose_db2 calendar n 5
+eval done E3_A_seed20261108_dose_db2 calendar final 0.6 peak_gpu_gb 0.962
+EVAL_OK 20261108 dose_db2
+2026-11-11 20:05:22 END rc=0 wall=124s :: .venv/bin/python -m fac_tinyagent.e3_run --phase eval --seed 20261108 --arm dose_db2 --smoke
+2026-11-11 20:05:22 START .venv/bin/python -m fac_tinyagent.e3_run --phase train --seed 20261108 --arm ctrl_cal10 --smoke
+train A_seed20261108_ctrl_cal10 {'kind': 'control', 'ratio': 0.1} ratio 0.3
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:36,  8.40it/s]Loading weights:   1%|          | 2/311 [00:00<00:42,  7.27it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:29, 10.38it/s]Loading weights:  19%|█▉        | 59/311 [00:00<00:01, 179.20it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 294.85it/s]Loading weights:  56%|█████▋    | 175/311 [00:00<00:00, 387.22it/s]Loading weights:  77%|███████▋  | 240/311 [00:00<00:00, 465.45it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 472.59it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 324.84it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/e3_train.py:117: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+E3 plan ctrl_cal10 calendar_only_control tokens 2372 / 2418 targets {'calendar': 0}
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 8060 replay tokens 2372 seconds 70.97
+TRAIN_OK 20261108 ctrl_cal10 9.455
+2026-11-11 20:06:33 END rc=0 wall=71s :: .venv/bin/python -m fac_tinyagent.e3_run --phase train --seed 20261108 --arm ctrl_cal10 --smoke
+2026-11-11 20:06:33 START .venv/bin/python -m fac_tinyagent.e3_run --phase eval --seed 20261108 --arm ctrl_cal10 --smoke
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:22, 13.94it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:22, 13.92it/s]Loading weights:  33%|███▎      | 103/311 [00:00<00:00, 372.16it/s]Loading weights:  66%|██████▌   | 204/311 [00:00<00:00, 591.45it/s]Loading weights:  97%|█████████▋| 303/311 [00:00<00:00, 722.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 521.77it/s]
+eval E3_A_seed20261108_ctrl_cal10 file n 3
+eval done E3_A_seed20261108_ctrl_cal10 file final 0.0 peak_gpu_gb 0.704
+eval E3_A_seed20261108_ctrl_cal10 database n 3
+eval done E3_A_seed20261108_ctrl_cal10 database final 0.666667 peak_gpu_gb 0.683
+eval E3_A_seed20261108_ctrl_cal10 python n 3
+eval done E3_A_seed20261108_ctrl_cal10 python final 1.0 peak_gpu_gb 0.699
+eval E3_A_seed20261108_ctrl_cal10 calendar n 3
+eval done E3_A_seed20261108_ctrl_cal10 calendar final 0.0 peak_gpu_gb 0.78
+eval E3_A_seed20261108_ctrl_cal10 file n 3
+eval done E3_A_seed20261108_ctrl_cal10 file final 0.0 peak_gpu_gb 0.686
+eval E3_A_seed20261108_ctrl_cal10 database n 3
+eval done E3_A_seed20261108_ctrl_cal10 database final 0.0 peak_gpu_gb 0.69
+eval E3_A_seed20261108_ctrl_cal10 python n 3
+eval done E3_A_seed20261108_ctrl_cal10 python final 1.0 peak_gpu_gb 0.701
+eval E3_A_seed20261108_ctrl_cal10 calendar n 3
+eval done E3_A_seed20261108_ctrl_cal10 calendar final 1.0 peak_gpu_gb 0.783
+eval E3_A_seed20261108_ctrl_cal10 calendar n 5
+eval done E3_A_seed20261108_ctrl_cal10 calendar final 0.6 peak_gpu_gb 0.94
+EVAL_OK 20261108 ctrl_cal10
+2026-11-11 20:08:35 END rc=0 wall=122s :: .venv/bin/python -m fac_tinyagent.e3_run --phase eval --seed 20261108 --arm ctrl_cal10 --smoke
+2026-11-11 20:08:35 START .venv/bin/python -m fac_tinyagent.e3_run --phase check-smoke --seed 20261108 --smoke
+dose_db2 replay 2417 / 2418 targets {'database': 2, 'file': 0, 'python': 1} by_family {'database': 1332, 'file': 307, 'python': 778} train_s 71.097
+ctrl_cal10 replay 2372 / 2418 targets {'calendar': 0} by_family {'calendar': 2372} train_s 9.455
+SMOKE_OK
+report: /mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e3_smoke/report.md
+2026-11-11 20:08:35 END rc=0 wall=0s :: .venv/bin/python -m fac_tinyagent.e3_run --phase check-smoke --seed 20261108 --smoke
+SMOKE_PASSED
+TOTAL 458s

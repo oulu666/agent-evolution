@@ -1,0 +1,148 @@
+{
+  "gold_reexec_mismatch": [],
+  "gold_project_mismatch": [],
+  "message_answer_mismatch": [],
+  "n_existing_files_scanned": 77,
+  "overlap_task_signature": [],
+  "overlap_prompt": [],
+  "overlap_call": [],
+  "overlap_sql": [],
+  "n_rows": 40,
+  "types": {
+    "nontarget_filter_count": 8,
+    "nontarget_filter_mean": 8,
+    "nontarget_group_count_filter": 8,
+    "nontarget_min_max": 8,
+    "nontarget_multi_filter_count": 8
+  },
+  "internal_call_dups": 0,
+  "internal_sql_dups": 0,
+  "filter_top_sql_markers": [],
+  "db_sha256": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+  "ok": true,
+  "task_stats": {
+    "existing_files": 77,
+    "raw": {
+      "filter_count": 49,
+      "filter_mean": 87,
+      "group_count_filter": 49,
+      "min_max": 108,
+      "multi_filter_count": 84
+    },
+    "filter_count": {
+      "n": 8,
+      "answer_preview": [
+        "10",
+        "1",
+        "5",
+        "10",
+        "1",
+        "4",
+        "5",
+        "4"
+      ],
+      "sql": [
+        "SELECT COUNT(*) AS n FROM employees WHERE age > 28",
+        "SELECT COUNT(*) AS n FROM products WHERE stock > 200",
+        "SELECT COUNT(*) AS n FROM sales WHERE amount > 980.25",
+        "SELECT COUNT(*) AS n FROM employees WHERE salary > 72000",
+        "SELECT COUNT(*) AS n FROM employees WHERE age > 44",
+        "SELECT COUNT(*) AS n FROM sales WHERE amount > 1100",
+        "SELECT COUNT(*) AS n FROM employees WHERE salary > 99000",
+        "SELECT COUNT(*) AS n FROM employees WHERE age > 37"
+      ]
+    },
+    "filter_mean": {
+      "n": 8,
+      "answer_preview": [
+        "140.0",
+        "39.42857142857143",
+        "1149.0",
+        "42.5",
+        "37.875",
+        "7.125",
+        "135000.0",
+        "38.57142857142857"
+      ],
+      "sql": [
+        "SELECT AVG(stock) AS v FROM products WHERE stock > 40",
+        "SELECT AVG(age) AS v FROM employees WHERE age > 33",
+        "SELECT AVG(amount) AS v FROM sales WHERE amount > 720",
+        "SELECT AVG(age) AS v FROM employees WHERE salary > 128000",
+        "SELECT AVG(age) AS v FROM employees WHERE salary > 82000",
+        "SELECT AVG(price) AS v FROM products WHERE stock > 150",
+        "SELECT AVG(salary) AS v FROM employees WHERE salary > 120000",
+        "SELECT AVG(age) AS v FROM employees WHERE salary > 88000"
+      ]
+    },
+    "group_count_filter": {
+      "n": 8,
+      "answer_preview": [
+        "{\"East\":3,\"North\":3,\"South\":3,\"West\":2}",
+        "{\"Engineering\":4,\"Finance\":2,\"Sales\":3}",
+        "{\"Software\":2}",
+        "{\"Accessories\":1,\"Hardware\":1}",
+        "{\"Engineering\":4}",
+        "{\"Engineering\":4,\"Finance\":2,\"Sales\":4}",
+        "{\"Hardware\":4,\"Software\":3}",
+        "{\"Accessories\":1,\"Hardware\":5,\"Software\":3}"
+      ],
+      "sql": [
+        "SELECT region, COUNT(*) AS n FROM sales WHERE amount > 420 GROUP BY region ORDER BY region",
+        "SELECT department, COUNT(*) AS n FROM employees WHERE salary > 76000 GROUP BY department ORDER BY department",
+        "SELECT category, COUNT(*) AS n FROM products WHERE price > 49 GROUP BY category ORDER BY category",
+        "SELECT category, COUNT(*) AS n FROM products WHERE stock > 150 GROUP BY category ORDER BY category",
+        "SELECT department, COUNT(*) AS n FROM employees WHERE salary > 105000 GROUP BY department ORDER BY department",
+        "SELECT department, COUNT(*) AS n FROM employees WHERE salary > 72000 GROUP BY department ORDER BY department",
+        "SELECT category, COUNT(*) AS n FROM products WHERE price > 12 GROUP BY category ORDER BY category",
+        "SELECT category, COUNT(*) AS n FROM products WHERE price > 4.5 GROUP BY category ORDER BY category"
+      ]
+    },
+    "min_max": {
+      "n": 8,
+      "answer_preview": [
+        "45",
+        "300",
+        "860.0",
+        "199.0",
+        "142000.0",
+        "45",
+        "45",
+        "300"
+      ],
+      "sql": [
+        "SELECT MAX(age) AS v FROM employees WHERE age > 41",
+        "SELECT MAX(stock) AS v FROM products WHERE stock > 120",
+        "SELECT MIN(amount) AS v FROM sales WHERE amount > 800",
+        "SELECT MAX(price) AS v FROM products WHERE price > 19.99",
+        "SELECT MAX(salary) AS v FROM employees",
+        "SELECT MAX(age) AS v FROM employees WHERE age > 31",
+        "SELECT MAX(age) AS v FROM employees WHERE age > 29",
+        "SELECT MIN(stock) AS v FROM products WHERE stock > 200"
+      ]
+    },
+    "multi_filter_count": {
+      "n": 8,
+      "answer_preview": [
+        "2",
+        "3",
+        "0",
+        "2",
+        "1",
+        "0",
+        "2",
+        "1"
+      ],
+      "sql": [
+        "SELECT COUNT(*) AS n FROM products WHERE category = 'Software' AND stock > 25",
+        "SELECT COUNT(*) AS n FROM employees WHERE department = 'Sales' AND salary > 76000",
+        "SELECT COUNT(*) AS n FROM employees WHERE department = 'HR' AND salary > 72000",
+        "SELECT COUNT(*) AS n FROM sales WHERE region = 'East' AND amount > 720",
+        "SELECT COUNT(*) AS n FROM employees WHERE department = 'HR' AND age > 29",
+        "SELECT COUNT(*) AS n FROM sales WHERE product = 'Doohickey' AND amount > 720",
+        "SELECT COUNT(*) AS n FROM products WHERE category = 'Accessories' AND stock > 70",
+        "SELECT COUNT(*) AS n FROM employees WHERE department = 'HR' AND salary > 68000"
+      ]
+    }
+  }
+}

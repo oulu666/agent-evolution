@@ -1,0 +1,638 @@
+HISTORICAL SUMMARY [{'order': 'A', 'seeds': [{'seed': 20261108, 'old_net_drop': 0.022222222222222223, 'old_answer_net_drop': 0.022222222222222223}, {'seed': 20261109, 'old_net_drop': 0.044444444444444446, 'old_answer_net_drop': 0.03333333333333333}, {'seed': 20261110, 'old_net_drop': 0.08888888888888889, 'old_answer_net_drop': 0.08888888888888889}], 'mean_old_net_drop': 0.05185185185185186, 'positive_seeds': 3}, {'order': 'C', 'seeds': [{'seed': 20261108, 'old_net_drop': 0.04444444444444444, 'old_answer_net_drop': 0.03333333333333333}, {'seed': 20261109, 'old_net_drop': 0.011111111111111112, 'old_answer_net_drop': 0.011111111111111112}, {'seed': 20261110, 'old_net_drop': 0.08888888888888889, 'old_answer_net_drop': 0.12222222222222222}], 'mean_old_net_drop': 0.04814814814814815, 'positive_seeds': 3}]
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<01:11,  4.34it/s]
+Loading weights:   1%|          | 2/311 [00:00<01:08,  4.50it/s]
+Loading weights:   1%|▏         | 4/311 [00:00<00:43,  7.08it/s]
+Loading weights:  10%|█         | 32/311 [00:00<00:03, 71.81it/s]
+Loading weights:  22%|██▏       | 67/311 [00:00<00:01, 139.99it/s]
+Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 228.29it/s]
+Loading weights:  51%|█████     | 158/311 [00:01<00:00, 276.33it/s]
+Loading weights:  64%|██████▍   | 199/311 [00:01<00:00, 309.85it/s]
+Loading weights:  79%|███████▉  | 247/311 [00:01<00:00, 356.21it/s]
+Loading weights:  92%|█████████▏| 286/311 [00:01<00:00, 361.92it/s]
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 221.20it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_train.py:443: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+eval probe_start database n 24
+eval probe_start database 10
+eval probe_start database 20
+eval done probe_start database final 0.375 peak_gpu_gb 3.364
+eval probe_start file n 24
+eval probe_start file 10
+eval probe_start file 20
+eval done probe_start file final 0.166667 peak_gpu_gb 3.344
+eval probe_start python n 24
+eval probe_start python 10
+eval probe_start python 20
+eval done probe_start python final 1.0 peak_gpu_gb 3.686
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+eval probe_midpoint database n 24
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval done probe_midpoint database final 0.625 peak_gpu_gb 3.093
+eval probe_midpoint file n 24
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval done probe_midpoint file final 0.291667 peak_gpu_gb 3.354
+eval probe_midpoint python n 24
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval done probe_midpoint python final 1.0 peak_gpu_gb 3.696
+replay train done none new tokens 74944 replay tokens 0 seconds 238.71
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:23, 13.43it/s]
+Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 448.69it/s]
+Loading weights:  60%|██████    | 188/311 [00:00<00:00, 651.83it/s]
+Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 744.08it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 641.42it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.183333 peak_gpu_gb 2.397
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.616667 peak_gpu_gb 2.108
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.393
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.651
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:16, 18.46it/s]
+Loading weights:  34%|███▍      | 105/311 [00:00<00:00, 593.47it/s]
+Loading weights:  70%|███████   | 219/311 [00:00<00:00, 834.71it/s]
+Loading weights:  98%|█████████▊| 304/311 [00:00<00:00, 758.34it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 700.52it/s]
+replay train done uniform new tokens 74944 replay tokens 7494 seconds 238.41
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:24, 12.56it/s]
+Loading weights:  32%|███▏      | 101/311 [00:00<00:00, 473.65it/s]
+Loading weights:  64%|██████▎   | 198/311 [00:00<00:00, 673.21it/s]
+Loading weights:  88%|████████▊ | 275/311 [00:00<00:00, 668.92it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 591.34it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.2 peak_gpu_gb 2.392
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.6 peak_gpu_gb 2.102
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.388
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.649
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:34,  9.11it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:32,  9.42it/s]
+Loading weights:  26%|██▋       | 82/311 [00:00<00:00, 356.59it/s]
+Loading weights:  51%|█████     | 159/311 [00:00<00:00, 513.95it/s]
+Loading weights:  68%|██████▊   | 212/311 [00:00<00:00, 478.16it/s]
+Loading weights:  84%|████████▍ | 261/311 [00:00<00:00, 395.15it/s]
+Loading weights:  98%|█████████▊| 304/311 [00:00<00:00, 303.57it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 328.78it/s]
+replay train done adaptive new tokens 74944 replay tokens 7494 seconds 237.25
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 3/311 [00:00<00:10, 29.94it/s]
+Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 568.54it/s]
+Loading weights:  64%|██████▎   | 198/311 [00:00<00:00, 764.87it/s]
+Loading weights:  95%|█████████▍| 295/311 [00:00<00:00, 845.40it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 745.72it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.2 peak_gpu_gb 2.392
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.6 peak_gpu_gb 2.102
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.388
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.649
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|▏         | 4/311 [00:00<00:07, 39.69it/s]
+Loading weights:  41%|████      | 126/311 [00:00<00:00, 727.13it/s]
+Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 946.69it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 877.78it/s]
+eval stage_03_python file n 60
+eval stage_03_python file 10
+eval stage_03_python file 20
+eval stage_03_python file 30
+eval stage_03_python file 40
+eval stage_03_python file 50
+eval stage_03_python file 60
+eval done stage_03_python file final 0.166667 peak_gpu_gb 2.392
+eval stage_03_python database n 60
+eval stage_03_python database 10
+eval stage_03_python database 20
+eval stage_03_python database 30
+eval stage_03_python database 40
+eval stage_03_python database 50
+eval stage_03_python database 60
+eval done stage_03_python database final 0.4 peak_gpu_gb 2.15
+eval stage_03_python python n 60
+eval stage_03_python python 10
+eval stage_03_python python 20
+eval stage_03_python python 30
+eval stage_03_python python 40
+eval stage_03_python python 50
+eval stage_03_python python 60
+eval done stage_03_python python final 1.0 peak_gpu_gb 2.386
+eval stage_03_python calendar n 60
+eval stage_03_python calendar 10
+eval stage_03_python calendar 20
+eval stage_03_python calendar 30
+eval stage_03_python calendar 40
+eval stage_03_python calendar 50
+eval stage_03_python calendar 60
+eval done stage_03_python calendar final 0.166667 peak_gpu_gb 3.65
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.80it/s]
+Loading weights:  42%|████▏     | 131/311 [00:00<00:00, 743.03it/s]
+Loading weights:  83%|████████▎ | 257/311 [00:00<00:00, 974.48it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 888.11it/s]
+eval probe_start database n 24
+eval probe_start database 10
+eval probe_start database 20
+eval done probe_start database final 0.416667 peak_gpu_gb 3.364
+eval probe_start file n 24
+eval probe_start file 10
+eval probe_start file 20
+eval done probe_start file final 0.166667 peak_gpu_gb 3.344
+eval probe_start python n 24
+eval probe_start python 10
+eval probe_start python 20
+eval done probe_start python final 1.0 peak_gpu_gb 3.686
+eval probe_midpoint database n 24
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval done probe_midpoint database final 0.583333 peak_gpu_gb 3.093
+eval probe_midpoint file n 24
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval done probe_midpoint file final 0.333333 peak_gpu_gb 3.354
+eval probe_midpoint python n 24
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval done probe_midpoint python final 1.0 peak_gpu_gb 3.696
+replay train done none new tokens 74944 replay tokens 0 seconds 202.81
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:39,  7.94it/s]
+Loading weights:   5%|▍         | 15/311 [00:00<00:03, 77.58it/s]
+Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 494.95it/s]
+Loading weights:  61%|██████    | 189/311 [00:00<00:00, 567.75it/s]
+Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 408.07it/s]
+Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 310.06it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 325.80it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.216667 peak_gpu_gb 2.397
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.633333 peak_gpu_gb 2.119
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.393
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.651
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:21, 14.42it/s]
+Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 492.10it/s]
+Loading weights:  66%|██████▌   | 204/311 [00:00<00:00, 725.80it/s]
+Loading weights:  91%|█████████ | 283/311 [00:00<00:00, 692.89it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 604.81it/s]
+replay train done uniform new tokens 74944 replay tokens 7494 seconds 211.71
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:16, 18.56it/s]
+Loading weights:  30%|███       | 94/311 [00:00<00:00, 529.88it/s]
+Loading weights:  67%|██████▋   | 207/311 [00:00<00:00, 797.91it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 814.08it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.233333 peak_gpu_gb 2.394
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.683333 peak_gpu_gb 2.133
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.388
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.651
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:16, 18.86it/s]
+Loading weights:  31%|███       | 97/311 [00:00<00:00, 550.74it/s]
+Loading weights:  64%|██████▍   | 199/311 [00:00<00:00, 759.75it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 764.76it/s]
+replay train done adaptive new tokens 74944 replay tokens 7494 seconds 213.39
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:17, 17.87it/s]
+Loading weights:  25%|██▌       | 79/311 [00:00<00:00, 436.54it/s]
+Loading weights:  53%|█████▎    | 164/311 [00:00<00:00, 616.71it/s]
+Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 810.38it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 704.22it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.216667 peak_gpu_gb 2.394
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.65 peak_gpu_gb 2.133
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.388
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.651
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:15, 19.95it/s]
+Loading weights:  33%|███▎      | 103/311 [00:00<00:00, 599.83it/s]
+Loading weights:  69%|██████▉   | 215/311 [00:00<00:00, 834.01it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 808.29it/s]
+eval stage_03_python file n 60
+eval stage_03_python file 10
+eval stage_03_python file 20
+eval stage_03_python file 30
+eval stage_03_python file 40
+eval stage_03_python file 50
+eval stage_03_python file 60
+eval done stage_03_python file final 0.166667 peak_gpu_gb 2.401
+eval stage_03_python database n 60
+eval stage_03_python database 10
+eval stage_03_python database 20
+eval stage_03_python database 30
+eval stage_03_python database 40
+eval stage_03_python database 50
+eval stage_03_python database 60
+eval done stage_03_python database final 0.466667 peak_gpu_gb 2.134
+eval stage_03_python python n 60
+eval stage_03_python python 10
+eval stage_03_python python 20
+eval stage_03_python python 30
+eval stage_03_python python 40
+eval stage_03_python python 50
+eval stage_03_python python 60
+eval done stage_03_python python final 1.0 peak_gpu_gb 2.386
+eval stage_03_python calendar n 60
+eval stage_03_python calendar 10
+eval stage_03_python calendar 20
+eval stage_03_python calendar 30
+eval stage_03_python calendar 40
+eval stage_03_python calendar 50
+eval stage_03_python calendar 60
+eval done stage_03_python calendar final 0.416667 peak_gpu_gb 3.65
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:20, 14.92it/s]
+Loading weights:  31%|███       | 97/311 [00:00<00:00, 496.92it/s]
+Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 684.75it/s]
+Loading weights:  86%|████████▌ | 266/311 [00:00<00:00, 700.72it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 601.28it/s]
+eval probe_start database n 24
+eval probe_start database 10
+eval probe_start database 20
+eval done probe_start database final 0.458333 peak_gpu_gb 3.408
+eval probe_start file n 24
+eval probe_start file 10
+eval probe_start file 20
+eval done probe_start file final 0.166667 peak_gpu_gb 3.344
+eval probe_start python n 24
+eval probe_start python 10
+eval probe_start python 20
+eval done probe_start python final 1.0 peak_gpu_gb 3.686
+eval probe_midpoint database n 24
+eval probe_midpoint database 10
+eval probe_midpoint database 20
+eval done probe_midpoint database final 0.625 peak_gpu_gb 3.368
+eval probe_midpoint file n 24
+eval probe_midpoint file 10
+eval probe_midpoint file 20
+eval done probe_midpoint file final 0.375 peak_gpu_gb 4.022
+eval probe_midpoint python n 24
+eval probe_midpoint python 10
+eval probe_midpoint python 20
+eval done probe_midpoint python final 1.0 peak_gpu_gb 3.696
+replay train done none new tokens 74944 replay tokens 0 seconds 251.12
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:17, 18.05it/s]
+Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 751.21it/s]
+Loading weights:  75%|███████▍  | 233/311 [00:00<00:00, 855.32it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 788.97it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.3 peak_gpu_gb 2.396
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.616667 peak_gpu_gb 2.109
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.392
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.651
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:15, 19.49it/s]
+Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 691.14it/s]
+Loading weights:  72%|███████▏  | 224/311 [00:00<00:00, 848.69it/s]
+Loading weights: 100%|█████████▉| 310/311 [00:00<00:00, 825.66it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 754.11it/s]
+replay train done uniform new tokens 74944 replay tokens 7484 seconds 257.89
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:17, 17.62it/s]
+Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 664.06it/s]
+Loading weights:  75%|███████▍  | 232/311 [00:00<00:00, 861.26it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 810.32it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.3 peak_gpu_gb 2.392
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.616667 peak_gpu_gb 2.106
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.387
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.649
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:53,  5.84it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:47,  6.49it/s]
+Loading weights:  12%|█▏        | 38/311 [00:00<00:02, 130.26it/s]
+Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 258.50it/s]
+Loading weights:  40%|███▉      | 123/311 [00:00<00:00, 238.09it/s]
+Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 300.28it/s]
+Loading weights:  66%|██████▌   | 204/311 [00:00<00:00, 310.95it/s]
+Loading weights:  77%|███████▋  | 241/311 [00:00<00:00, 324.13it/s]
+Loading weights:  88%|████████▊ | 275/311 [00:01<00:00, 314.34it/s]
+Loading weights:  99%|█████████▉| 308/311 [00:01<00:00, 301.99it/s]
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 254.56it/s]
+replay train done adaptive new tokens 74944 replay tokens 7484 seconds 257.88
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:58,  5.26it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:50,  6.15it/s]
+Loading weights:  13%|█▎        | 39/311 [00:00<00:02, 128.94it/s]
+Loading weights:  30%|██▉       | 92/311 [00:00<00:00, 254.11it/s]
+Loading weights:  39%|███▉      | 122/311 [00:00<00:00, 227.07it/s]
+Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 296.05it/s]
+Loading weights:  67%|██████▋   | 207/311 [00:00<00:00, 315.28it/s]
+Loading weights:  78%|███████▊  | 242/311 [00:01<00:00, 321.35it/s]
+Loading weights:  89%|████████▉ | 277/311 [00:01<00:00, 315.79it/s]
+Loading weights: 100%|█████████▉| 310/311 [00:01<00:00, 303.98it/s]
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 250.53it/s]
+eval stage_04_calendar file n 60
+eval stage_04_calendar file 10
+eval stage_04_calendar file 20
+eval stage_04_calendar file 30
+eval stage_04_calendar file 40
+eval stage_04_calendar file 50
+eval stage_04_calendar file 60
+eval done stage_04_calendar file final 0.3 peak_gpu_gb 2.392
+eval stage_04_calendar database n 60
+eval stage_04_calendar database 10
+eval stage_04_calendar database 20
+eval stage_04_calendar database 30
+eval stage_04_calendar database 40
+eval stage_04_calendar database 50
+eval stage_04_calendar database 60
+eval done stage_04_calendar database final 0.616667 peak_gpu_gb 2.106
+eval stage_04_calendar python n 60
+eval stage_04_calendar python 10
+eval stage_04_calendar python 20
+eval stage_04_calendar python 30
+eval stage_04_calendar python 40
+eval stage_04_calendar python 50
+eval stage_04_calendar python 60
+eval done stage_04_calendar python final 1.0 peak_gpu_gb 2.387
+eval stage_04_calendar calendar n 60
+eval stage_04_calendar calendar 10
+eval stage_04_calendar calendar 20
+eval stage_04_calendar calendar 30
+eval stage_04_calendar calendar 40
+eval stage_04_calendar calendar 50
+eval stage_04_calendar calendar 60
+eval done stage_04_calendar calendar final 0.916667 peak_gpu_gb 3.649
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:41,  7.55it/s]
+Loading weights:   1%|          | 2/311 [00:00<00:36,  8.38it/s]
+Loading weights:  18%|█▊        | 56/311 [00:00<00:01, 221.97it/s]
+Loading weights:  33%|███▎      | 104/311 [00:00<00:00, 302.75it/s]
+Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 350.57it/s]
+Loading weights:  65%|██████▌   | 203/311 [00:00<00:00, 407.08it/s]
+Loading weights:  79%|███████▉  | 246/311 [00:00<00:00, 407.93it/s]
+Loading weights:  93%|█████████▎| 288/311 [00:00<00:00, 396.76it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 330.79it/s]
+eval stage_03_python file n 60
+eval stage_03_python file 10
+eval stage_03_python file 20
+eval stage_03_python file 30
+eval stage_03_python file 40
+eval stage_03_python file 50
+eval stage_03_python file 60
+eval done stage_03_python file final 0.166667 peak_gpu_gb 2.392
+eval stage_03_python database n 60
+eval stage_03_python database 10
+eval stage_03_python database 20
+eval stage_03_python database 30
+eval stage_03_python database 40
+eval stage_03_python database 50
+eval stage_03_python database 60
+eval done stage_03_python database final 0.483333 peak_gpu_gb 2.133
+eval stage_03_python python n 60
+eval stage_03_python python 10
+eval stage_03_python python 20
+eval stage_03_python python 30
+eval stage_03_python python 40
+eval stage_03_python python 50
+eval stage_03_python python 60
+eval done stage_03_python python final 1.0 peak_gpu_gb 2.386
+eval stage_03_python calendar n 60
+eval stage_03_python calendar 10
+eval stage_03_python calendar 20
+eval stage_03_python calendar 30
+eval stage_03_python calendar 40
+eval stage_03_python calendar 50
+eval stage_03_python calendar 60
+eval done stage_03_python calendar final 0.5 peak_gpu_gb 3.65
+STUDY AGGREGATES [{'mode': 'none', 'n_seeds': 3, 'old_joint': {'mean': 0.5425925925925926, 'std': 0.017858612520357323}, 'old_answer': {'mean': 0.6185185185185185, 'std': 0.019510469912690242}, 'new_joint': {'mean': 0.9166666666666666, 'std': 0.0}, 'new_answer': {'mean': 0.9166666666666666, 'std': 0.0}}, {'mode': 'uniform', 'n_seeds': 3, 'old_joint': {'mean': 0.55, 'std': 0.014698618394803293}, 'old_answer': {'mean': 0.6259259259259259, 'std': 0.02245251046848543}, 'new_joint': {'mean': 0.9166666666666666, 'std': 0.0}, 'new_answer': {'mean': 0.9166666666666666, 'std': 0.0}}, {'mode': 'adaptive', 'n_seeds': 3, 'old_joint': {'mean': 0.5462962962962963, 'std': 0.011564811108145202}, 'old_answer': {'mean': 0.6203703703703703, 'std': 0.019510469912690245}, 'new_joint': {'mean': 0.9166666666666666, 'std': 0.0}, 'new_answer': {'mean': 0.9166666666666666, 'std': 0.0}}]

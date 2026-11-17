@@ -1,0 +1,2195 @@
+{
+  "protocol": {
+    "created_at": "2026-11-09T20:42:53+08:00",
+    "version": 2,
+    "order": "A",
+    "seeds": [
+      20261108,
+      20261109,
+      20261110
+    ],
+    "modes": [
+      "none",
+      "uniform",
+      "adaptive"
+    ],
+    "shared_prefix": "One measured prefix per seed; every arm restores the same persisted midpoint adapter, optimizer, scaler, and RNG state.",
+    "v1_invalidated_reason": "Midpoint parameters differed across arms before any replay; no efficacy claims from v1.",
+    "branch_stage": 3,
+    "new_stage": 4,
+    "replay_ratio_to_new_input_tokens": 0.1,
+    "uniform_floor": 0.2,
+    "monitor_at_new_exposure_fractions": [
+      0,
+      0.5
+    ],
+    "replay_only_after_midpoint": true,
+    "evaluation_batch_size": 32,
+    "primary_outcome": "macro-average joint success on three old tools",
+    "secondary_outcomes": [
+      "new-tool joint success",
+      "answer success",
+      "paired loss/gain",
+      "cost"
+    ],
+    "probe_signal": "nonnegative decrease of joint success from branch start to midpoint",
+    "sealed_test_used_for_policy_selection": false,
+    "transition_selection": "Historical tests only; this is an exploratory pilot.",
+    "source_sha256": {
+      "fac_tinyagent/replay_train.py": "ce2113d68a2eb76e1ad9d5781defcb54f59255ef8e2e5ffd1e8d70a2b220b1c8",
+      "fac_tinyagent/research_data.py": "80162383df5c893c61d6e90aecba9162f2b58ddffe3b5a84907986524fd6f609",
+      "fac_tinyagent/sft/evaluate.py": "d4e7311c472a194bd4f742c6da491d74181cb861f929a8dbbf00d5c7af5ca964",
+      "fac_tinyagent/metrics.py": "9558a5b9c4befbaf2a605a3efab7d3af95502ed8f640d30318ac51330a92fdf0"
+    },
+    "starting_adapter_sha256": {
+      "20261108": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+      "20261109": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+      "20261110": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5"
+    },
+    "data_manifest_sha256": "ff924681a9d614808a96399d9bde3238555d76807410d238016972cfb2b7d98e",
+    "data_sha256": {
+      "calendar/probe.jsonl": "151947936898ffc5c091b25aac8ec91fb0a8033b2c31daabd6d787fb8c5404a6",
+      "calendar/sealed_test.jsonl": "87e78639ecc4b97717a894f34bd4c110920a2f1c255f85b602e3237efa48ab04",
+      "database/probe.jsonl": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+      "database/sealed_test.jsonl": "d26e91bbe03eaf9aed1b761fe6c258b43f5f2be8712e2766247d4b87c767223f",
+      "file/probe.jsonl": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+      "file/sealed_test.jsonl": "f9ab646b610ce32182af7d0612d112f3e1de9ea8526bb9aba4b89bb4a62d3e0c",
+      "python/probe.jsonl": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909",
+      "python/sealed_test.jsonl": "1055953f4c83268c64d3f00fa0f760255bebe597b401fa9e6e24c937c59a1f4e"
+    },
+    "limitations": [
+      "one model, three seeds, simulated tool functions",
+      "family provided; no cross-family routing",
+      "held-out instances/wording, not proven structural OOD"
+    ]
+  },
+  "rows": [
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5222222222222223,
+      "old_answer_before": 0.5222222222222223,
+      "old_answer": 0.6,
+      "new_joint_before": 0.16666666666666666,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.16666666666666666,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 1,
+      "old_gained": 1
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5333333333333333,
+      "old_answer_before": 0.5222222222222223,
+      "old_answer": 0.6,
+      "new_joint_before": 0.16666666666666666,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.16666666666666666,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 1,
+      "old_gained": 3
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5333333333333333,
+      "old_answer_before": 0.5222222222222223,
+      "old_answer": 0.6,
+      "new_joint_before": 0.16666666666666666,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.16666666666666666,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 2,
+      "old_gained": 4
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.55,
+      "old_answer_before": 0.5444444444444444,
+      "old_answer": 0.6166666666666667,
+      "new_joint_before": 0.4166666666666667,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.4166666666666667,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 0,
+      "old_gained": 5
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5611111111111111,
+      "old_answer_before": 0.5444444444444444,
+      "old_answer": 0.6388888888888888,
+      "new_joint_before": 0.4166666666666667,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.4166666666666667,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 0,
+      "old_gained": 7
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.55,
+      "old_answer_before": 0.5444444444444444,
+      "old_answer": 0.6222222222222222,
+      "new_joint_before": 0.4166666666666667,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.4166666666666667,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 0,
+      "old_gained": 5
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5555555555555556,
+      "old_answer_before": 0.55,
+      "old_answer": 0.6388888888888888,
+      "new_joint_before": 0.5,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.5,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 2,
+      "old_gained": 8
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5555555555555556,
+      "old_answer_before": 0.55,
+      "old_answer": 0.6388888888888888,
+      "new_joint_before": 0.5,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.5,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 2,
+      "old_gained": 8
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "old_joint_before": 0.5222222222222223,
+      "old_joint": 0.5555555555555556,
+      "old_answer_before": 0.55,
+      "old_answer": 0.6388888888888888,
+      "new_joint_before": 0.5,
+      "new_joint": 0.9166666666666666,
+      "new_answer_before": 0.5,
+      "new_answer": 0.9166666666666666,
+      "old_lost": 2,
+      "old_gained": 8
+    }
+  ],
+  "aggregates": [
+    {
+      "mode": "none",
+      "n_seeds": 3,
+      "old_joint": {
+        "mean": 0.5425925925925926,
+        "std": 0.017858612520357323
+      },
+      "old_answer": {
+        "mean": 0.6185185185185185,
+        "std": 0.019510469912690242
+      },
+      "new_joint": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      },
+      "new_answer": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      }
+    },
+    {
+      "mode": "uniform",
+      "n_seeds": 3,
+      "old_joint": {
+        "mean": 0.55,
+        "std": 0.014698618394803293
+      },
+      "old_answer": {
+        "mean": 0.6259259259259259,
+        "std": 0.02245251046848543
+      },
+      "new_joint": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      },
+      "new_answer": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      }
+    },
+    {
+      "mode": "adaptive",
+      "n_seeds": 3,
+      "old_joint": {
+        "mean": 0.5462962962962963,
+        "std": 0.011564811108145202
+      },
+      "old_answer": {
+        "mean": 0.6203703703703703,
+        "std": 0.019510469912690245
+      },
+      "new_joint": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      },
+      "new_answer": {
+        "mean": 0.9166666666666666,
+        "std": 0.0
+      }
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "seed": 20261108,
+      "uniform_minus_none_old_joint": 0.011111111111111072,
+      "adaptive_minus_none_old_joint": 0.011111111111111072,
+      "adaptive_minus_uniform_old_joint": 0.0,
+      "uniform_minus_none_old_answer": 0.0,
+      "adaptive_minus_none_old_answer": 0.0,
+      "adaptive_minus_uniform_old_answer": 0.0,
+      "adaptive_minus_uniform_new_joint": 0.0,
+      "adaptive_minus_uniform_new_answer": 0.0
+    },
+    {
+      "seed": 20261109,
+      "uniform_minus_none_old_joint": 0.011111111111111072,
+      "adaptive_minus_none_old_joint": 0.0,
+      "adaptive_minus_uniform_old_joint": -0.011111111111111072,
+      "uniform_minus_none_old_answer": 0.022222222222222143,
+      "adaptive_minus_none_old_answer": 0.005555555555555536,
+      "adaptive_minus_uniform_old_answer": -0.016666666666666607,
+      "adaptive_minus_uniform_new_joint": 0.0,
+      "adaptive_minus_uniform_new_answer": 0.0
+    },
+    {
+      "seed": 20261110,
+      "uniform_minus_none_old_joint": 0.0,
+      "adaptive_minus_none_old_joint": 0.0,
+      "adaptive_minus_uniform_old_joint": 0.0,
+      "uniform_minus_none_old_answer": 0.0,
+      "adaptive_minus_none_old_answer": 0.0,
+      "adaptive_minus_uniform_old_answer": 0.0,
+      "adaptive_minus_uniform_new_joint": 0.0,
+      "adaptive_minus_uniform_new_answer": 0.0
+    }
+  ],
+  "details": [
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.18333333333333332,
+        "lost": 0,
+        "gained": 1,
+        "net_drop": -0.016666666666666666
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.18333333333333332,
+        "lost": 0,
+        "gained": 1,
+        "net_drop": -0.016666666666666666
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.6166666666666667,
+        "lost": 1,
+        "gained": 14,
+        "net_drop": -0.21666666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.38333333333333336,
+        "lost": 1,
+        "gained": 0,
+        "net_drop": 0.016666666666666666
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.2,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.2,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.6,
+        "lost": 1,
+        "gained": 13,
+        "net_drop": -0.2
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.4,
+        "lost": 1,
+        "gained": 1,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.2,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.2,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.6,
+        "lost": 2,
+        "gained": 14,
+        "net_drop": -0.2
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.4,
+        "lost": 2,
+        "gained": 2,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 45,
+        "net_drop": -0.75
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.21666666666666667,
+        "lost": 0,
+        "gained": 3,
+        "net_drop": -0.05
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.21666666666666667,
+        "lost": 0,
+        "gained": 3,
+        "net_drop": -0.05
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4666666666666667,
+        "after": 0.6333333333333333,
+        "lost": 2,
+        "gained": 12,
+        "net_drop": -0.16666666666666666
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.43333333333333335,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.23333333333333334,
+        "lost": 0,
+        "gained": 4,
+        "net_drop": -0.06666666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.23333333333333334,
+        "lost": 0,
+        "gained": 4,
+        "net_drop": -0.06666666666666667
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4666666666666667,
+        "after": 0.6833333333333333,
+        "lost": 2,
+        "gained": 15,
+        "net_drop": -0.21666666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.45,
+        "lost": 0,
+        "gained": 3,
+        "net_drop": -0.05
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.21666666666666667,
+        "lost": 0,
+        "gained": 3,
+        "net_drop": -0.05
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.21666666666666667,
+        "lost": 0,
+        "gained": 3,
+        "net_drop": -0.05
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.4666666666666667,
+        "after": 0.65,
+        "lost": 2,
+        "gained": 13,
+        "net_drop": -0.18333333333333332
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.43333333333333335,
+        "lost": 0,
+        "gained": 2,
+        "net_drop": -0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4166666666666667,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 30,
+        "net_drop": -0.5
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.48333333333333334,
+        "after": 0.6166666666666667,
+        "lost": 4,
+        "gained": 12,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.36666666666666664,
+        "lost": 2,
+        "gained": 0,
+        "net_drop": 0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.48333333333333334,
+        "after": 0.6166666666666667,
+        "lost": 4,
+        "gained": 12,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.36666666666666664,
+        "lost": 2,
+        "gained": 0,
+        "net_drop": 0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "family": "file",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.16666666666666666,
+        "after": 0.3,
+        "lost": 0,
+        "gained": 8,
+        "net_drop": -0.13333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "family": "database",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 0.48333333333333334,
+        "after": 0.6166666666666667,
+        "lost": 4,
+        "gained": 12,
+        "net_drop": -0.13333333333333333
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.4,
+        "after": 0.36666666666666664,
+        "lost": 2,
+        "gained": 0,
+        "net_drop": 0.03333333333333333
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "family": "python",
+      "is_old": true,
+      "final": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      },
+      "joint": {
+        "n": 60,
+        "before": 1,
+        "after": 1,
+        "lost": 0,
+        "gained": 0,
+        "net_drop": 0.0
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "family": "calendar",
+      "is_old": false,
+      "final": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      },
+      "joint": {
+        "n": 60,
+        "before": 0.5,
+        "after": 0.9166666666666666,
+        "lost": 0,
+        "gained": 25,
+        "net_drop": -0.4166666666666667
+      }
+    }
+  ],
+  "costs": [
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "none",
+        "seed": 20261108,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4d5ef1f2ac0060fca472069896a69d3ec57c0854bc20b8a0398e5a8ae235e349",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+        "midpoint_trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+        "train_tokens": 74944,
+        "steps": 160,
+        "last_loss": 0.0004623756685759872,
+        "microsteps": 160,
+        "optimizer_steps": 20,
+        "new_samples": 160,
+        "replay_samples": 0,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 0,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 0,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.0,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 7494,
+        "quota_error_tokens_by_family": {
+          "database": 0.0,
+          "file": 0.0,
+          "python": 0.0
+        },
+        "within_one_percent_of_budget": null,
+        "actual_replay_tokens_by_family": {
+          "database": 0,
+          "file": 0,
+          "python": 0
+        },
+        "peak_gpu_gb": 3.696,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 238.706,
+        "probe_duration_seconds": 114.484,
+        "actual_elapsed_seconds": 238.706,
+        "prefix_reused": false,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108",
+        "shared_prefix_state_sha256": "ea45d3cd6d45d403f41a9ab0007f501edbf131274d8931b3dbd4732888092381",
+        "actual_probe_duration_seconds": 114.484,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 124.222,
+        "probe_input_tokens": 84593,
+        "probe_generated_tokens": 9013,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 61.037,
+            "episodes": 72,
+            "trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42327,
+            "generated_tokens": 4943
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.291667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 53.447,
+            "episodes": 72,
+            "trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42266,
+            "generated_tokens": 4070
+          }
+        },
+        "partial_accumulation_microsteps": 0,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "uniform",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "uniform",
+        "seed": 20261108,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4d5ef1f2ac0060fca472069896a69d3ec57c0854bc20b8a0398e5a8ae235e349",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+        "midpoint_trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+        "train_tokens": 82438,
+        "steps": 182,
+        "last_loss": 0.0004504403914324939,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7494,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1255,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09999466268146882,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 0,
+        "quota_error_tokens_by_family": {
+          "database": 150.0,
+          "file": 367.0,
+          "python": -517.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2648,
+          "file": 2865,
+          "python": 1981
+        },
+        "peak_gpu_gb": 3.651,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 238.411,
+        "probe_duration_seconds": 114.484,
+        "actual_elapsed_seconds": 62.044,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108",
+        "shared_prefix_state_sha256": "ea45d3cd6d45d403f41a9ab0007f501edbf131274d8931b3dbd4732888092381",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 123.927,
+        "probe_input_tokens": 84593,
+        "probe_generated_tokens": 9013,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 61.037,
+            "episodes": 72,
+            "trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42327,
+            "generated_tokens": 4943
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.291667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 53.447,
+            "episodes": 72,
+            "trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42266,
+            "generated_tokens": 4070
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261108,
+      "mode": "adaptive",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "adaptive",
+        "seed": 20261108,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4d5ef1f2ac0060fca472069896a69d3ec57c0854bc20b8a0398e5a8ae235e349",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+        "midpoint_trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+        "train_tokens": 82438,
+        "steps": 182,
+        "last_loss": 0.00042943053995259106,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7494,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1255,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09999466268146882,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 0,
+        "quota_error_tokens_by_family": {
+          "database": 150.0,
+          "file": 367.0,
+          "python": -517.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2648,
+          "file": 2865,
+          "python": 1981
+        },
+        "peak_gpu_gb": 3.649,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 237.248,
+        "probe_duration_seconds": 114.484,
+        "actual_elapsed_seconds": 60.881,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108",
+        "shared_prefix_state_sha256": "ea45d3cd6d45d403f41a9ab0007f501edbf131274d8931b3dbd4732888092381",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 122.764,
+        "probe_input_tokens": 84593,
+        "probe_generated_tokens": 9013,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 61.037,
+            "episodes": 72,
+            "trainable_state_sha256": "34cc6eee034480fb42f67047d625b25c86e805a3330a371ba8950b1efaec3ce4",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42327,
+            "generated_tokens": 4943
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.291667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 53.447,
+            "episodes": 72,
+            "trainable_state_sha256": "75967c645f562d11d6ab19286603a1a95df7d5b0fc38665e89fd4d527e1de3ea",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42266,
+            "generated_tokens": 4070
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "none",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "none",
+        "seed": 20261109,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "2c1709727d8f4c3c6a12c4e67af5e459bd281bb81d0d0abb418a0ecaffbecbdf",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+        "midpoint_trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+        "train_tokens": 74944,
+        "steps": 160,
+        "last_loss": 0.0001518238423159346,
+        "microsteps": 160,
+        "optimizer_steps": 20,
+        "new_samples": 160,
+        "replay_samples": 0,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 0,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 0,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.0,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 7494,
+        "quota_error_tokens_by_family": {
+          "database": 0.0,
+          "file": 0.0,
+          "python": 0.0
+        },
+        "within_one_percent_of_budget": null,
+        "actual_replay_tokens_by_family": {
+          "database": 0,
+          "file": 0,
+          "python": 0
+        },
+        "peak_gpu_gb": 3.696,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 202.809,
+        "probe_duration_seconds": 102.769,
+        "actual_elapsed_seconds": 202.809,
+        "prefix_reused": false,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109",
+        "shared_prefix_state_sha256": "aeaed6d1a6bfb9691eeafd826357d92a23bb972dcc95358260fa825fdc8e4f84",
+        "actual_probe_duration_seconds": 102.769,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 100.04,
+        "probe_input_tokens": 84713,
+        "probe_generated_tokens": 9025,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 57.206,
+            "episodes": 72,
+            "trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42357,
+            "generated_tokens": 4901
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.333333,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 45.563,
+            "episodes": 72,
+            "trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42356,
+            "generated_tokens": 4124
+          }
+        },
+        "partial_accumulation_microsteps": 0,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "uniform",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "uniform",
+        "seed": 20261109,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "2c1709727d8f4c3c6a12c4e67af5e459bd281bb81d0d0abb418a0ecaffbecbdf",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+        "midpoint_trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+        "train_tokens": 82438,
+        "steps": 182,
+        "last_loss": 0.0001257972908206284,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7494,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1139,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09999466268146882,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 0,
+        "quota_error_tokens_by_family": {
+          "database": -2.0,
+          "file": 490.0,
+          "python": -488.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2496,
+          "file": 2988,
+          "python": 2010
+        },
+        "peak_gpu_gb": 3.651,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 211.713,
+        "probe_duration_seconds": 102.769,
+        "actual_elapsed_seconds": 58.431,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109",
+        "shared_prefix_state_sha256": "aeaed6d1a6bfb9691eeafd826357d92a23bb972dcc95358260fa825fdc8e4f84",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 108.944,
+        "probe_input_tokens": 84713,
+        "probe_generated_tokens": 9025,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 57.206,
+            "episodes": 72,
+            "trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42357,
+            "generated_tokens": 4901
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.333333,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 45.563,
+            "episodes": 72,
+            "trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42356,
+            "generated_tokens": 4124
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261109,
+      "mode": "adaptive",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "adaptive",
+        "seed": 20261109,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "2c1709727d8f4c3c6a12c4e67af5e459bd281bb81d0d0abb418a0ecaffbecbdf",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+        "midpoint_trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+        "train_tokens": 82438,
+        "steps": 182,
+        "last_loss": 0.0001374159473925829,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7494,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1139,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09999466268146882,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 0,
+        "quota_error_tokens_by_family": {
+          "database": -2.0,
+          "file": 490.0,
+          "python": -488.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2496,
+          "file": 2988,
+          "python": 2010
+        },
+        "peak_gpu_gb": 3.651,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 213.388,
+        "probe_duration_seconds": 102.769,
+        "actual_elapsed_seconds": 60.106,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109",
+        "shared_prefix_state_sha256": "aeaed6d1a6bfb9691eeafd826357d92a23bb972dcc95358260fa825fdc8e4f84",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 110.619,
+        "probe_input_tokens": 84713,
+        "probe_generated_tokens": 9025,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 57.206,
+            "episodes": 72,
+            "trainable_state_sha256": "afcc2cc8114b55e05c88a09df3e859873ec43ba4205cc111098f7b4fd47451c3",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42357,
+            "generated_tokens": 4901
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.333333,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 45.563,
+            "episodes": 72,
+            "trainable_state_sha256": "01fbfdd51aa18964c16e7f91918217d15cb0880f9d0b6467a27194a9570584d7",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42356,
+            "generated_tokens": 4124
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "none",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "none",
+        "seed": 20261110,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4e5d6055b1aab8938befdf23fe59a660979766bef079e383196fbeacbb25279e",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+        "midpoint_trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+        "train_tokens": 74944,
+        "steps": 160,
+        "last_loss": 0.006627934984862804,
+        "microsteps": 160,
+        "optimizer_steps": 20,
+        "new_samples": 160,
+        "replay_samples": 0,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 0,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 0,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.0,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 7494,
+        "quota_error_tokens_by_family": {
+          "database": 0.0,
+          "file": 0.0,
+          "python": 0.0
+        },
+        "within_one_percent_of_budget": null,
+        "actual_replay_tokens_by_family": {
+          "database": 0,
+          "file": 0,
+          "python": 0
+        },
+        "peak_gpu_gb": 3.696,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 251.116,
+        "probe_duration_seconds": 145.544,
+        "actual_elapsed_seconds": 251.116,
+        "prefix_reused": false,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110",
+        "shared_prefix_state_sha256": "028114cb86dd260ce755b2ef672646d819febe83eac77b47ead0f441623be2b6",
+        "actual_probe_duration_seconds": 145.544,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 105.572,
+        "probe_input_tokens": 85173,
+        "probe_generated_tokens": 9702,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 62.158,
+            "episodes": 72,
+            "trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42418,
+            "generated_tokens": 5038
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.375,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 83.386,
+            "episodes": 72,
+            "trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42755,
+            "generated_tokens": 4664
+          }
+        },
+        "partial_accumulation_microsteps": 0,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "uniform",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "uniform",
+        "seed": 20261110,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4e5d6055b1aab8938befdf23fe59a660979766bef079e383196fbeacbb25279e",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+        "midpoint_trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+        "train_tokens": 82428,
+        "steps": 182,
+        "last_loss": 0.00644301250576973,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7484,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1180,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09986122971818959,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 10,
+        "quota_error_tokens_by_family": {
+          "database": -243.0,
+          "file": -28.0,
+          "python": 261.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2255,
+          "file": 2470,
+          "python": 2759
+        },
+        "peak_gpu_gb": 3.651,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 257.888,
+        "probe_duration_seconds": 145.544,
+        "actual_elapsed_seconds": 59.8,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110",
+        "shared_prefix_state_sha256": "028114cb86dd260ce755b2ef672646d819febe83eac77b47ead0f441623be2b6",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 112.344,
+        "probe_input_tokens": 85173,
+        "probe_generated_tokens": 9702,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 62.158,
+            "episodes": 72,
+            "trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42418,
+            "generated_tokens": 5038
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.375,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 83.386,
+            "episodes": 72,
+            "trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42755,
+            "generated_tokens": 4664
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    },
+    {
+      "seed": 20261110,
+      "mode": "adaptive",
+      "summary": {
+        "stage": "stage_04_calendar",
+        "family": "calendar",
+        "mode": "adaptive",
+        "seed": 20261110,
+        "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+        "epochs": 2,
+        "train_samples": 80,
+        "new_order_sha256": "4e5d6055b1aab8938befdf23fe59a660979766bef079e383196fbeacbb25279e",
+        "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+        "probe_data_sha256": {
+          "file": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+          "database": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+          "python": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909"
+        },
+        "start_trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+        "midpoint_trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+        "train_tokens": 82428,
+        "steps": 182,
+        "last_loss": 0.006641575135290623,
+        "microsteps": 182,
+        "optimizer_steps": 23,
+        "new_samples": 160,
+        "replay_samples": 22,
+        "new_input_tokens": 74944,
+        "replay_input_tokens": 7484,
+        "new_supervised_tokens": 8542,
+        "replay_supervised_tokens": 1180,
+        "replay_ratio_requested": 0.1,
+        "replay_ratio_actual": 0.09986122971818959,
+        "budget_input_tokens": 7494,
+        "budget_unused_input_tokens": 10,
+        "quota_error_tokens_by_family": {
+          "database": -243.0,
+          "file": -28.0,
+          "python": 261.0
+        },
+        "within_one_percent_of_budget": true,
+        "actual_replay_tokens_by_family": {
+          "database": 2255,
+          "file": 2470,
+          "python": 2759
+        },
+        "peak_gpu_gb": 3.649,
+        "compute_dtype": "torch.bfloat16",
+        "duration_seconds": 257.877,
+        "probe_duration_seconds": 145.544,
+        "actual_elapsed_seconds": 59.789,
+        "prefix_reused": true,
+        "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110",
+        "shared_prefix_state_sha256": "028114cb86dd260ce755b2ef672646d819febe83eac77b47ead0f441623be2b6",
+        "actual_probe_duration_seconds": 0.0,
+        "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+        "training_and_overhead_seconds": 112.333,
+        "probe_input_tokens": 85173,
+        "probe_generated_tokens": 9702,
+        "probe_episodes": 144,
+        "probes": {
+          "start": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.166667,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 62.158,
+            "episodes": 72,
+            "trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42418,
+            "generated_tokens": 5038
+          },
+          "midpoint": {
+            "scores": {
+              "database": 0.333333,
+              "file": 0.375,
+              "python": 1.0
+            },
+            "score_metric": "joint_success_rate",
+            "duration_seconds": 83.386,
+            "episodes": 72,
+            "trainable_state_sha256": "546463d234539689f64f8615de5b17caf191aaa74137ad7e0030b265347d4543",
+            "generation_calls": 6,
+            "logical_generation_requests": 144,
+            "input_tokens": 42755,
+            "generated_tokens": 4664
+          }
+        },
+        "partial_accumulation_microsteps": 6,
+        "completed": true
+      }
+    }
+  ],
+  "cost_summary": [
+    {
+      "mode": "none",
+      "new_input_tokens": 74944,
+      "replay_input_tokens": 0,
+      "new_supervised_tokens": 8542,
+      "replay_supervised_tokens": 0,
+      "probe_input_tokens": 84826.33333333333,
+      "probe_generated_tokens": 9246.666666666666,
+      "training_and_overhead_seconds": 109.94466666666666,
+      "probe_duration_seconds": 120.93233333333333,
+      "optimizer_steps": 20,
+      "reference_full_flow_seconds": 230.877,
+      "actual_branch_seconds": 230.877,
+      "shared_prefix_reference_seconds": 0.0,
+      "reference_probe_seconds": 120.93233333333333,
+      "actual_probe_seconds": 120.93233333333333,
+      "actual_training_seconds": 109.94466666666668,
+      "actual_experiment_seconds": 230.877,
+      "algorithm_required_monitor_seconds": 0.0
+    },
+    {
+      "mode": "uniform",
+      "new_input_tokens": 74944,
+      "replay_input_tokens": 7490.666666666667,
+      "new_supervised_tokens": 8542,
+      "replay_supervised_tokens": 1191.3333333333333,
+      "probe_input_tokens": 84826.33333333333,
+      "probe_generated_tokens": 9246.666666666666,
+      "training_and_overhead_seconds": 115.07166666666667,
+      "probe_duration_seconds": 120.93233333333333,
+      "optimizer_steps": 23,
+      "reference_full_flow_seconds": 236.004,
+      "actual_branch_seconds": 60.09166666666666,
+      "shared_prefix_reference_seconds": 175.91233333333332,
+      "reference_probe_seconds": 120.93233333333333,
+      "actual_probe_seconds": 0.0,
+      "actual_training_seconds": 60.09166666666666,
+      "actual_experiment_seconds": 60.09166666666666,
+      "algorithm_required_monitor_seconds": 0.0
+    },
+    {
+      "mode": "adaptive",
+      "new_input_tokens": 74944,
+      "replay_input_tokens": 7490.666666666667,
+      "new_supervised_tokens": 8542,
+      "replay_supervised_tokens": 1191.3333333333333,
+      "probe_input_tokens": 84826.33333333333,
+      "probe_generated_tokens": 9246.666666666666,
+      "training_and_overhead_seconds": 115.23866666666666,
+      "probe_duration_seconds": 120.93233333333333,
+      "optimizer_steps": 23,
+      "reference_full_flow_seconds": 236.171,
+      "actual_branch_seconds": 60.25866666666667,
+      "shared_prefix_reference_seconds": 175.91233333333335,
+      "reference_probe_seconds": 120.93233333333333,
+      "actual_probe_seconds": 0.0,
+      "actual_training_seconds": 60.25866666666667,
+      "actual_experiment_seconds": 60.25866666666667,
+      "algorithm_required_monitor_seconds": 120.93233333333333
+    }
+  ],
+  "invariant_audit": [
+    {
+      "seed": 20261108,
+      "invariants": {
+        "new_order_sha256": true,
+        "start_trainable_state_sha256": true,
+        "midpoint_trainable_state_sha256": true,
+        "new_input_tokens": true,
+        "new_samples": true
+      },
+      "all_invariants_pass": true,
+      "replay_input_token_gap": 0,
+      "replay_gap_fraction_of_budget": 0.0
+    },
+    {
+      "seed": 20261109,
+      "invariants": {
+        "new_order_sha256": true,
+        "start_trainable_state_sha256": true,
+        "midpoint_trainable_state_sha256": true,
+        "new_input_tokens": true,
+        "new_samples": true
+      },
+      "all_invariants_pass": true,
+      "replay_input_token_gap": 0,
+      "replay_gap_fraction_of_budget": 0.0
+    },
+    {
+      "seed": 20261110,
+      "invariants": {
+        "new_order_sha256": true,
+        "start_trainable_state_sha256": true,
+        "midpoint_trainable_state_sha256": true,
+        "new_input_tokens": true,
+        "new_samples": true
+      },
+      "all_invariants_pass": true,
+      "replay_input_token_gap": 0,
+      "replay_gap_fraction_of_budget": 0.0
+    }
+  ],
+  "adaptive_allocations": [
+    {
+      "seed": 20261108,
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "baseline": {
+        "database": 0.333333,
+        "file": 0.166667,
+        "python": 1.0
+      },
+      "midpoint": {
+        "database": 0.333333,
+        "file": 0.291667,
+        "python": 1.0
+      },
+      "drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "targeting_triggered": false,
+      "tokens_by_family": {
+        "database": 2648,
+        "file": 2865,
+        "python": 1981
+      }
+    },
+    {
+      "seed": 20261109,
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "baseline": {
+        "database": 0.333333,
+        "file": 0.166667,
+        "python": 1.0
+      },
+      "midpoint": {
+        "database": 0.333333,
+        "file": 0.333333,
+        "python": 1.0
+      },
+      "drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "targeting_triggered": false,
+      "tokens_by_family": {
+        "database": 2496,
+        "file": 2988,
+        "python": 2010
+      }
+    },
+    {
+      "seed": 20261110,
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "baseline": {
+        "database": 0.333333,
+        "file": 0.166667,
+        "python": 1.0
+      },
+      "midpoint": {
+        "database": 0.333333,
+        "file": 0.375,
+        "python": 1.0
+      },
+      "drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "targeting_triggered": false,
+      "tokens_by_family": {
+        "database": 2255,
+        "file": 2470,
+        "python": 2759
+      }
+    }
+  ],
+  "detection": [
+    {
+      "seed": 20261108,
+      "targeting_triggered": false,
+      "positive_drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "adaptive_equals_uniform_weights": true
+    },
+    {
+      "seed": 20261109,
+      "targeting_triggered": false,
+      "positive_drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "adaptive_equals_uniform_weights": true
+    },
+    {
+      "seed": 20261110,
+      "targeting_triggered": false,
+      "positive_drops": {
+        "database": 0.0,
+        "file": 0.0,
+        "python": 0.0
+      },
+      "weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "adaptive_equals_uniform_weights": true
+    }
+  ],
+  "detection_summary": {
+    "seeds_total": 3,
+    "seeds_targeting": 0,
+    "all_adaptive_equal_uniform": true
+  }
+}

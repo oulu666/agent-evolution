@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "synthetic_cpu_contract": true,
+  "real_trainer_control_flow": true,
+  "real_runner_plan_train_summary_checkpoint_boundary": true,
+  "mocked_evaluator_B1_and_partial_complete_finalize": true,
+  "actual_suffix_optimizer_calls": 13,
+  "prefix_steps": 10,
+  "total_steps": 23,
+  "tail_microsteps": 6,
+  "tiny_model_weight": 0.9974032044410706,
+  "analytic_13_step_weight": 0.9974031177131438,
+  "all_required_plan_fields": [
+    "actual_input_tokens",
+    "actual_tokens_by_family",
+    "items",
+    "quota_error_tokens_by_family",
+    "within_one_percent_of_budget"
+  ],
+  "old_round_step_evidence": [
+    {
+      "run": "runs_ext_p4_forget_timing",
+      "last_microstep": 182,
+      "last_logged_optimizer_steps": 22,
+      "final_summary_steps": 23,
+      "tail": 6
+    },
+    {
+      "run": "runs_ext_p5_file_timing",
+      "last_microstep": 182,
+      "last_logged_optimizer_steps": 22,
+      "final_summary_steps": 23,
+      "tail": 6
+    }
+  ],
+  "gpu_started": false
+}

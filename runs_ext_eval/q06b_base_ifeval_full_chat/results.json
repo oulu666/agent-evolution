@@ -1,0 +1,68 @@
+{
+  "model": "/home/egret/models/Qwen3-0.6B",
+  "adapter": null,
+  "precision": "4bit",
+  "compute_dtype": "torch.bfloat16",
+  "tasks": "ifeval",
+  "limit": null,
+  "chat_template": true,
+  "max_gen_toks": null,
+  "seed": 1234,
+  "wall_seconds": 4506.3,
+  "peak_gpu_gb": 3.538,
+  "lm_eval_version": "0.4.13",
+  "results": {
+    "ifeval": {
+      "name": "ifeval",
+      "alias": "ifeval",
+      "sample_len": 541,
+      "prompt_level_strict_acc,none": 0.4731977818853974,
+      "prompt_level_strict_acc_stderr,none": 0.021485638661938006,
+      "inst_level_strict_acc,none": 0.5875299760191847,
+      "inst_level_strict_acc_stderr,none": "N/A",
+      "prompt_level_loose_acc,none": 0.5360443622920518,
+      "prompt_level_loose_acc_stderr,none": 0.02146059282373674,
+      "inst_level_loose_acc,none": 0.6438848920863309,
+      "inst_level_loose_acc_stderr,none": "N/A"
+    }
+  },
+  "n_samples": {
+    "ifeval": {
+      "original": 541,
+      "effective": 541
+    }
+  },
+  "configs": {
+    "ifeval": {
+      "num_fewshot": 0,
+      "generation_kwargs": {
+        "until": [],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 1280
+      },
+      "metric_list": [
+        {
+          "metric": "prompt_level_strict_acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "inst_level_strict_acc",
+          "aggregation": "def agg_inst_level_acc(items):\n    flat_items = [item for sublist in items for item in sublist]\n    inst_level_acc = sum(flat_items) / len(flat_items)\n    return inst_level_acc\n",
+          "higher_is_better": true
+        },
+        {
+          "metric": "prompt_level_loose_acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "inst_level_loose_acc",
+          "aggregation": "def agg_inst_level_acc(items):\n    flat_items = [item for sublist in items for item in sublist]\n    inst_level_acc = sum(flat_items) / len(flat_items)\n    return inst_level_acc\n",
+          "higher_is_better": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "stage_index": 4,
+  "stage_name": "P8_seed20261108_decision",
+  "family": "file",
+  "metrics": {
+    "n": 16,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "execution_success_rate": 1.0,
+    "final_task_success_rate": 0.25,
+    "joint_success_rate": 0.25,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 16,
+    "conditional_argument_denominator": 16
+  },
+  "skill_metrics": {
+    "file.search_first": {
+      "n": 4,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 4,
+      "conditional_argument_denominator": 4
+    },
+    "file.search_last": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 12,
+      "conditional_argument_denominator": 12
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 32,
+    "input_tokens": 9754,
+    "output_tokens": 1118,
+    "total_tokens": 10872,
+    "generation_seconds": 90.599163,
+    "n": 16,
+    "generation_batches": 32,
+    "usage_coverage": {
+      "inference_calls": 16,
+      "input_tokens": 16,
+      "output_tokens": 16,
+      "total_tokens": 16,
+      "generation_seconds": 16
+    },
+    "recorded_totals": {
+      "inference_calls": 32,
+      "input_tokens": 9754,
+      "output_tokens": 1118,
+      "total_tokens": 10872,
+      "generation_seconds": 90.599163
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}

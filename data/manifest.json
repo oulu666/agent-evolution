@@ -1,0 +1,151 @@
+{
+  "created": "2026-11-08T20:23:34+08:00",
+  "split_seed": 20261108,
+  "model_name_or_path": "Qwen/Qwen3-0.6B",
+  "families": {
+    "file": {
+      "templates": {
+        "train": [
+          "file_read_exact",
+          "file_count_lines",
+          "file_search_first",
+          "file_list_count",
+          "file_write_report"
+        ],
+        "val": [
+          "file_search_count",
+          "file_read_line"
+        ],
+        "test": [
+          "file_word_count",
+          "file_last_match",
+          "file_list_all",
+          "file_write_test"
+        ]
+      },
+      "counts": {
+        "train": 80,
+        "val": 20,
+        "test": 30
+      },
+      "files": {
+        "train": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\file\\train.jsonl",
+          "sha256": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42"
+        },
+        "val": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\file\\val.jsonl",
+          "sha256": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196"
+        },
+        "test": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\file\\test.jsonl",
+          "sha256": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66"
+        }
+      },
+      "unique_signatures": {
+        "train": 80,
+        "val": 20,
+        "test": 30
+      }
+    },
+    "database": {
+      "templates": {
+        "train": [
+          "db_count",
+          "db_filter_count",
+          "db_average",
+          "db_group_count",
+          "db_top_n",
+          "db_schema_count",
+          "db_list_tables"
+        ],
+        "val": [
+          "db_schema_count_val"
+        ],
+        "test": [
+          "db_filter_average",
+          "db_filter_top",
+          "db_group_average",
+          "db_schema_test",
+          "db_list_tables_test"
+        ]
+      },
+      "counts": {
+        "train": 80,
+        "val": 20,
+        "test": 30
+      },
+      "files": {
+        "train": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\database\\train.jsonl",
+          "sha256": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b"
+        },
+        "val": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\database\\val.jsonl",
+          "sha256": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767"
+        },
+        "test": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\database\\test.jsonl",
+          "sha256": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2"
+        }
+      },
+      "unique_signatures": {
+        "train": 21,
+        "val": 1,
+        "test": 17
+      }
+    },
+    "python": {
+      "templates": {
+        "train": [
+          "stats_mean",
+          "stats_median",
+          "stats_std",
+          "stats_percentile",
+          "stats_correlation",
+          "stats_regression"
+        ],
+        "val": [
+          "stats_median_wording",
+          "stats_percentile_wording"
+        ],
+        "test": [
+          "stats_mean_prose",
+          "stats_correlation_prose",
+          "stats_regression_prose",
+          "stats_median_prose",
+          "stats_std_prose",
+          "stats_percentile_prose"
+        ]
+      },
+      "counts": {
+        "train": 80,
+        "val": 20,
+        "test": 30
+      },
+      "files": {
+        "train": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\python\\train.jsonl",
+          "sha256": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7"
+        },
+        "val": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\python\\val.jsonl",
+          "sha256": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f"
+        },
+        "test": {
+          "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\python\\test.jsonl",
+          "sha256": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747"
+        }
+      },
+      "unique_signatures": {
+        "train": 80,
+        "val": 20,
+        "test": 30
+      }
+    }
+  },
+  "db_fixture": {
+    "path": "C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent\\data\\fixtures\\toolbench.db",
+    "sha256": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4"
+  }
+}

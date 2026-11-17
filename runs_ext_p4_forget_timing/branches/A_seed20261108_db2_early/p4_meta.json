@@ -1,0 +1,55 @@
+{
+  "arm": "db2_early",
+  "seed": 20261108,
+  "plan_sha256": "2b02314625c1bfe00ed0fd381570453f39cb1801fe9138d1a2a097f8ac2fbbd3",
+  "prefix_state_sha256": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+  "optimizer_steps": 23,
+  "replay_input_tokens": 7494,
+  "tracked_timing": {
+    "tracked": [
+      {
+        "kind": "list_tables",
+        "id": "db_list_tables-001",
+        "position": 95,
+        "after": 11
+      },
+      {
+        "kind": "list_tables",
+        "id": "db_list_tables-001",
+        "position": 119,
+        "after": 7
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-001",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "filter",
+        "id": "target_db_filter_top-000",
+        "position": 127,
+        "after": 6
+      },
+      {
+        "kind": "median_nat",
+        "id": "target_median_natural-027",
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "total_steps": 23,
+    "sum_after": {
+      "filter": 12,
+      "list_tables": 18,
+      "median_nat": 1
+    },
+    "n": {
+      "filter": 2,
+      "list_tables": 2,
+      "median_nat": 1
+    },
+    "mom_filter": 0.9371
+  },
+  "finished": "2026-11-14 16:31:17 +0800"
+}

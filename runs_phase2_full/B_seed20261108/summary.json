@@ -1,0 +1,270 @@
+{
+  "run_name": "B_seed20261108",
+  "run_dir": "runs_phase2/B_seed20261108",
+  "final_stage": {
+    "name": "stage_04_file",
+    "family": "file"
+  },
+  "final_index": 4,
+  "adapter": "runs_phase2/B_seed20261108/checkpoints/stage_04_file",
+  "test_per_family": "all",
+  "reports": [
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_file_full",
+      "family": "calendar",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 0.8
+      },
+      "skill_metrics": {
+        "calendar_attendees": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_count": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_free": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "calendar_list": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.4
+        },
+        "calendar_time": {
+          "n": 10,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.628,
+      "duration_seconds": 125.67,
+      "adapter": "runs_phase2/B_seed20261108/checkpoints/stage_04_file"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_file_full",
+      "family": "python",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 1.0,
+        "execution_success_rate": 1.0,
+        "final_task_success_rate": 1.0
+      },
+      "skill_metrics": {
+        "numeric_input": {
+          "n": 30,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_correlation": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_mean": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_median": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_percentile": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_regression": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "stat_std": {
+          "n": 5,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.614,
+      "duration_seconds": 199.16,
+      "adapter": "runs_phase2/B_seed20261108/checkpoints/stage_04_file"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_file_full",
+      "family": "database",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 1.0,
+        "argument_accuracy": 0.666667,
+        "execution_success_rate": 0.666667,
+        "final_task_success_rate": 0.666667
+      },
+      "skill_metrics": {
+        "counting": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "schema_reading": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "sql_aggregation": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.416667,
+          "execution_success_rate": 0.416667,
+          "final_task_success_rate": 0.416667
+        },
+        "sql_filter": {
+          "n": 12,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.666667,
+          "execution_success_rate": 0.666667,
+          "final_task_success_rate": 0.666667
+        },
+        "sql_group": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.0,
+          "execution_success_rate": 0.0,
+          "final_task_success_rate": 0.0
+        },
+        "sql_order": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 0.5,
+          "execution_success_rate": 0.5,
+          "final_task_success_rate": 0.5
+        },
+        "tool_selection": {
+          "n": 6,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        }
+      },
+      "peak_gpu_gb": 0.601,
+      "duration_seconds": 103.04,
+      "adapter": "runs_phase2/B_seed20261108/checkpoints/stage_04_file"
+    },
+    {
+      "stage_index": 4,
+      "stage_name": "stage_04_file_full",
+      "family": "file",
+      "metrics": {
+        "n": 30,
+        "tool_selection_accuracy": 0.8,
+        "argument_accuracy": 0.8,
+        "execution_success_rate": 0.8,
+        "final_task_success_rate": 0.6
+      },
+      "skill_metrics": {
+        "character_count": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "counting": {
+          "n": 8,
+          "tool_selection_accuracy": 0.25,
+          "argument_accuracy": 0.25,
+          "execution_success_rate": 0.25,
+          "final_task_success_rate": 0.0
+        },
+        "file_list": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "file_read": {
+          "n": 8,
+          "tool_selection_accuracy": 0.25,
+          "argument_accuracy": 0.25,
+          "execution_success_rate": 0.25,
+          "final_task_success_rate": 0.0
+        },
+        "file_search": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        },
+        "file_write": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "final_formatting": {
+          "n": 7,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 1.0
+        },
+        "line_index": {
+          "n": 8,
+          "tool_selection_accuracy": 1.0,
+          "argument_accuracy": 1.0,
+          "execution_success_rate": 1.0,
+          "final_task_success_rate": 0.5
+        }
+      },
+      "peak_gpu_gb": 0.611,
+      "duration_seconds": 128.31,
+      "adapter": "runs_phase2/B_seed20261108/checkpoints/stage_04_file"
+    }
+  ]
+}

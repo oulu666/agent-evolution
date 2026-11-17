@@ -1,0 +1,27 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:07,  4.63it/s]Loading weights:   1%|          | 2/311 [00:00<01:03,  4.90it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:46,  6.62it/s]Loading weights:  10%|█         | 32/311 [00:00<00:04, 67.87it/s]Loading weights:  19%|█▉        | 60/311 [00:00<00:02, 117.16it/s]Loading weights:  31%|███       | 97/311 [00:00<00:01, 181.28it/s]Loading weights:  44%|████▍     | 137/311 [00:01<00:00, 238.67it/s]Loading weights:  56%|█████▋    | 175/311 [00:01<00:00, 277.07it/s]Loading weights:  72%|███████▏  | 225/311 [00:01<00:00, 333.24it/s]Loading weights:  86%|████████▌ | 266/311 [00:01<00:00, 354.48it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 211.24it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/2251 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 188755.84 examples/s]
+Generating test split:   0%|          | 0/2376 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 2376/2376 [00:00<00:00, 216423.79 examples/s]
+Generating validation split:   0%|          | 0/570 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 570/570 [00:00<00:00, 182277.62 examples/s]
+  0%|          | 0/5 [00:00<?, ?it/s]100%|██████████| 5/5 [00:00<00:00, 969.96it/s]
+Tokenizing inputs:   0%|          | 0/20 [00:00<?, ?it/s]Tokenizing inputs: 100%|██████████| 20/20 [00:00<00:00, 9382.18it/s]
+Running loglikelihood requests:   0%|          | 0/20 [00:00<?, ?it/s]Running loglikelihood requests:   5%|▌         | 1/20 [00:00<00:14,  1.31it/s]Running loglikelihood requests:  85%|████████▌ | 17/20 [00:00<00:00, 22.26it/s]Running loglikelihood requests: 100%|██████████| 20/20 [00:00<00:00, 20.38it/s]
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+{
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 5,
+      "acc,none": 0.4,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.4,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "wall_seconds": 35.3,
+  "peak_gpu_gb": 0.937
+}

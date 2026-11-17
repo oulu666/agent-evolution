@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "seed": 20261108,
+    "training": {
+      "learning_rate": 0.0001,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "num_epochs": 1,
+      "max_seq_length": 1024,
+      "gradient_checkpointing": true,
+      "optimizer": "paged_adamw_8bit",
+      "logging_steps": 1
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "auto"
+    },
+    "adapter_sha256": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "new_sha256": "c3e6ffeabda3a89cb8bfe16cc05b646dfbabcc639409c8b3b21149ac02b22848",
+    "old_sha256": {
+      "file": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+      "database": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+      "python": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62"
+    },
+    "probe_sha256": {
+      "file": "ea09361522f4d829cc4e9900ef27b635832a88cb17d40ac7db620a5233643518",
+      "database": "6a7a258605c5eca470c51bbd76f718a60107a710185fe30faa742f07804fe811",
+      "python": "8941eb62c1b6b62db9b6a8da41f93fc0028e9d1f878e3ed9c33cde6063170914"
+    },
+    "order": [
+      5,
+      2,
+      1,
+      12,
+      14,
+      13,
+      9,
+      11,
+      15,
+      0,
+      8,
+      6,
+      4,
+      3,
+      7,
+      10
+    ],
+    "midpoint": 8
+  },
+  "state_sha256": "5ab22428595276f10a94ebf876054d194b361b228bc3d4ada06fb13635c6134a",
+  "parameter_hash": "3dca2b74a745adfd49ae0dd17bcbf63172564cf839f91458e86a3e039a37ab78"
+}

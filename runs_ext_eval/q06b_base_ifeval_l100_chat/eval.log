@@ -1,0 +1,80 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:14, 20.73it/s]Loading weights:  34%|███▍      | 105/311 [00:00<00:00, 441.53it/s]Loading weights:  70%|███████   | 219/311 [00:00<00:00, 703.05it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 655.09it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[nltk_data] Error loading punkt_tab: Security Violation
+[nltk_data]     [pathsec.urlopen]: SSRF attempt to restricted IP
+[nltk_data]     198.18.0.21
+Downloaded punkt_tab on rank 0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 541 examples [00:00, 57087.61 examples/s]
+  0%|          | 0/100 [00:00<?, ?it/s]100%|██████████| 100/100 [00:00<00:00, 7509.41it/s]
+Running generate_until requests:   0%|          | 0/100 [00:00<?, ?it/s]Running generate_until requests:   1%|          | 1/100 [00:29<48:55, 29.65s/it]Running generate_until requests:  17%|█▋        | 17/100 [02:35<12:10,  8.80s/it]Running generate_until requests:  33%|███▎      | 33/100 [04:33<08:52,  7.95s/it]Running generate_until requests:  49%|████▉     | 49/100 [06:35<06:38,  7.81s/it]Running generate_until requests:  65%|██████▌   | 65/100 [08:35<04:29,  7.70s/it]Running generate_until requests:  81%|████████  | 81/100 [11:05<02:37,  8.30s/it]Running generate_until requests:  97%|█████████▋| 97/100 [11:18<00:17,  5.76s/it]Running generate_until requests: 100%|██████████| 100/100 [11:18<00:00,  6.79s/it]
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 103, in <module>
+    main()
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/scripts/eval_general.py", line 82, in main
+    results = lm_eval.simple_evaluate(**eval_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/utils.py", line 580, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/evaluator.py", line 363, in simple_evaluate
+    results = evaluate(
+              ^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/utils.py", line 580, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/evaluator.py", line 639, in evaluate
+    metrics = task.process_results(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/api/task.py", line 1457, in process_results
+    return self.config.process_results(doc, results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/ifeval/utils.py", line 120, in process_results
+    out_strict = test_instruction_following_strict(inp, response)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/ifeval/utils.py", line 43, in test_instruction_following_strict
+    if response.strip() and instruction.check_following(response):
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/lm_eval/tasks/ifeval/instructions.py", line 1587, in check_following
+    words = instructions_util.nltk.word_tokenize(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/tokenize/__init__.py", line 166, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/tokenize/__init__.py", line 143, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/tokenize/__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/tokenize/punkt.py", line 1812, in __init__
+    self.load_lang(lang)
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/tokenize/punkt.py", line 1821, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/venvs/fac-eval/lib/python3.12/site-packages/nltk/data.py", line 1636, in find
+    raise exc
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - '/home/egret/nltk_data'
+    - '/home/egret/venvs/fac-eval/nltk_data'
+    - '/home/egret/venvs/fac-eval/share/nltk_data'
+    - '/home/egret/venvs/fac-eval/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+

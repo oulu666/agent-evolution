@@ -1,0 +1,465 @@
+===== LAUNCH 2026-11-13 19:43:07 +0800 args: queue =====
+2026-11-13 19:43:08 +0800 PREFLIGHT ok game=no power_cap=128W other_gpu_procs=none 273 MiB, 1 %
+2026-11-13 19:43:08 +0800 START queue
+2026-11-13 19:43:10 TRAIN A_seed20261108_target_other_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:56,  5.53it/s]Loading weights:   1%|          | 2/311 [00:00<00:52,  5.89it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:31,  9.67it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:02, 103.86it/s]Loading weights:  29%|██▊       | 89/311 [00:00<00:00, 224.54it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 328.26it/s]Loading weights:  64%|██████▍   | 199/311 [00:00<00:00, 378.14it/s]Loading weights:  82%|████████▏ | 255/311 [00:00<00:00, 427.71it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 286.09it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/e3_train.py:117: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+2026-11-13 19:44:07 timing plan target_other_pos143 items 21 target database-train-target_db_filter_top-000 -> index 15
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 196.19
+2026-11-13 19:44:51 TRAIN done A_seed20261108_target_other_pos143 steps=23 replay_tokens=7494
+2026-11-13 19:44:52 EVAL A_seed20261108_target_other_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 9/311 [00:00<00:03, 89.81it/s]Loading weights:  34%|███▍      | 105/311 [00:00<00:00, 599.35it/s]Loading weights:  69%|██████▉   | 214/311 [00:00<00:00, 820.38it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 814.60it/s]
+eval TIMING_B1_A_seed20261108_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 database final 0.666667 peak_gpu_gb 0.601
+2026-11-13 19:46:52   done A_seed20261108_target_other_pos143 natv2_database n=30 118.4s
+eval TIMING_B1_A_seed20261108_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 file final 0.233333 peak_gpu_gb 0.604
+2026-11-13 19:48:41   done A_seed20261108_target_other_pos143 natv2_file n=30 107.8s
+eval TIMING_B1_A_seed20261108_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 python final 0.733333 peak_gpu_gb 0.604
+2026-11-13 19:50:48   done A_seed20261108_target_other_pos143 natv2_python n=30 126.4s
+eval TIMING_B1_A_seed20261108_target_other_pos143 database n 40
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 40
+eval done TIMING_B1_A_seed20261108_target_other_pos143 database final 0.775 peak_gpu_gb 0.615
+2026-11-13 19:53:15   done A_seed20261108_target_other_pos143 db_nontarget n=40 145.7s
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 calendar final 0.3 peak_gpu_gb 0.924
+2026-11-13 19:54:28   done A_seed20261108_target_other_pos143 v3fix n=30 72.9s
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar n 150
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 40
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 50
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 60
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 70
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 80
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 90
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 100
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 110
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 120
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 130
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 140
+eval TIMING_B1_A_seed20261108_target_other_pos143 calendar 150
+eval done TIMING_B1_A_seed20261108_target_other_pos143 calendar final 0.486667 peak_gpu_gb 0.693
+2026-11-13 20:02:20   done A_seed20261108_target_other_pos143 calendar_v3 n=150 470.9s
+eval TIMING_B1_A_seed20261108_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 file final 0.466667 peak_gpu_gb 0.604
+2026-11-13 20:04:16   done A_seed20261108_target_other_pos143 p2_file n=30 115.4s
+eval TIMING_B1_A_seed20261108_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 python final 0.933333 peak_gpu_gb 0.615
+2026-11-13 20:07:13   done A_seed20261108_target_other_pos143 p2_python n=30 177.0s
+eval TIMING_B1_A_seed20261108_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261108_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261108_target_other_pos143 database final 0.6 peak_gpu_gb 0.602
+2026-11-13 20:08:47   done A_seed20261108_target_other_pos143 p2_database n=30 93.0s
+2026-11-13 20:08:47 EVAL done A_seed20261108_target_other_pos143 in 1435.1s
+2026-11-13 20:08:49 summary written
+2026-11-13 20:08:50 TRAIN A_seed20261108_dose_db1_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 209.13it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 789.93it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 942.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 908.60it/s]
+2026-11-13 20:08:53 timing plan dose_db1_pos143 items 23 target database-train-target_db_filter_top-000 -> index 17
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 196.22
+2026-11-13 20:09:37 TRAIN done A_seed20261108_dose_db1_pos143 steps=23 replay_tokens=7494
+2026-11-13 20:09:38 EVAL A_seed20261108_dose_db1_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 309.17it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 814.93it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1108.29it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 979.93it/s] 
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 database final 0.633333 peak_gpu_gb 0.601
+2026-11-13 20:11:38   done A_seed20261108_dose_db1_pos143 natv2_database n=30 118.7s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 file final 0.566667 peak_gpu_gb 0.604
+2026-11-13 20:13:29   done A_seed20261108_dose_db1_pos143 natv2_file n=30 110.0s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 python final 1.0 peak_gpu_gb 0.603
+2026-11-13 20:15:40   done A_seed20261108_dose_db1_pos143 natv2_python n=30 130.4s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database n 40
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 40
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 database final 0.575 peak_gpu_gb 0.599
+2026-11-13 20:17:43   done A_seed20261108_dose_db1_pos143 db_nontarget n=40 122.2s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 calendar final 0.3 peak_gpu_gb 0.924
+2026-11-13 20:18:56   done A_seed20261108_dose_db1_pos143 v3fix n=30 71.8s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar n 150
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 40
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 50
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 60
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 70
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 80
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 90
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 100
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 110
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 120
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 130
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 140
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 calendar 150
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 calendar final 0.446667 peak_gpu_gb 0.693
+2026-11-13 20:27:05   done A_seed20261108_dose_db1_pos143 calendar_v3 n=150 488.3s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 file final 0.566667 peak_gpu_gb 0.604
+2026-11-13 20:28:49   done A_seed20261108_dose_db1_pos143 p2_file n=30 103.6s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 python final 0.966667 peak_gpu_gb 0.615
+2026-11-13 20:31:37   done A_seed20261108_dose_db1_pos143 p2_python n=30 167.5s
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261108_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261108_dose_db1_pos143 database final 0.566667 peak_gpu_gb 0.602
+2026-11-13 20:32:59   done A_seed20261108_dose_db1_pos143 p2_database n=30 80.9s
+2026-11-13 20:32:59 EVAL done A_seed20261108_dose_db1_pos143 in 1401.5s
+2026-11-13 20:33:01 summary written
+2026-11-13 20:33:02 TRAIN A_seed20261109_target_other_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/311 [00:00<00:05, 59.71it/s]Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 693.77it/s]Loading weights:  78%|███████▊  | 243/311 [00:00<00:00, 935.06it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 885.22it/s]
+2026-11-13 20:33:05 timing plan target_other_pos143 items 21 target database-train-target_db_filter_top-001 -> index 15
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 208.19
+2026-11-13 20:33:44 TRAIN done A_seed20261109_target_other_pos143 steps=23 replay_tokens=7494
+2026-11-13 20:33:45 EVAL A_seed20261109_target_other_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|▉         | 31/311 [00:00<00:00, 307.05it/s]Loading weights:  42%|████▏     | 130/311 [00:00<00:00, 705.86it/s]Loading weights:  85%|████████▍ | 263/311 [00:00<00:00, 987.01it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 890.94it/s]
+eval TIMING_B1_A_seed20261109_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 database final 0.666667 peak_gpu_gb 0.601
+2026-11-13 20:35:41   done A_seed20261109_target_other_pos143 natv2_database n=30 114.1s
+eval TIMING_B1_A_seed20261109_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 file final 0.533333 peak_gpu_gb 0.605
+2026-11-13 20:37:26   done A_seed20261109_target_other_pos143 natv2_file n=30 104.5s
+eval TIMING_B1_A_seed20261109_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 python final 1.0 peak_gpu_gb 0.604
+2026-11-13 20:39:25   done A_seed20261109_target_other_pos143 natv2_python n=30 117.8s
+eval TIMING_B1_A_seed20261109_target_other_pos143 database n 40
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 40
+eval done TIMING_B1_A_seed20261109_target_other_pos143 database final 0.775 peak_gpu_gb 0.605
+2026-11-13 20:41:36   done A_seed20261109_target_other_pos143 db_nontarget n=40 129.8s
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 calendar final 0.366667 peak_gpu_gb 0.924
+2026-11-13 20:42:44   done A_seed20261109_target_other_pos143 v3fix n=30 67.3s
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar n 150
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 40
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 50
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 60
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 70
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 80
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 90
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 100
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 110
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 120
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 130
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 140
+eval TIMING_B1_A_seed20261109_target_other_pos143 calendar 150
+eval done TIMING_B1_A_seed20261109_target_other_pos143 calendar final 0.5 peak_gpu_gb 0.693
+2026-11-13 20:49:28   done A_seed20261109_target_other_pos143 calendar_v3 n=150 404.1s
+eval TIMING_B1_A_seed20261109_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 file final 0.5 peak_gpu_gb 0.605
+2026-11-13 20:51:01   done A_seed20261109_target_other_pos143 p2_file n=30 92.0s
+eval TIMING_B1_A_seed20261109_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 python final 0.866667 peak_gpu_gb 0.616
+2026-11-13 20:53:34   done A_seed20261109_target_other_pos143 p2_python n=30 152.1s
+eval TIMING_B1_A_seed20261109_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261109_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261109_target_other_pos143 database final 0.633333 peak_gpu_gb 0.602
+2026-11-13 20:54:53   done A_seed20261109_target_other_pos143 p2_database n=30 78.0s
+2026-11-13 20:54:54 EVAL done A_seed20261109_target_other_pos143 in 1269.1s
+2026-11-13 20:54:56 summary written
+2026-11-13 20:54:57 TRAIN A_seed20261109_dose_db1_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 41/311 [00:00<00:00, 409.71it/s]Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 918.39it/s]Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 994.11it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 934.55it/s]
+2026-11-13 20:54:59 timing plan dose_db1_pos143 items 22 target database-train-target_db_filter_top-001 -> index 16
+replay train done targeted new tokens 74944 replay tokens 7493 seconds 207.9
+2026-11-13 20:55:38 TRAIN done A_seed20261109_dose_db1_pos143 steps=23 replay_tokens=7493
+2026-11-13 20:55:39 EVAL A_seed20261109_dose_db1_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:01, 149.08it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 898.96it/s]Loading weights:  97%|█████████▋| 303/311 [00:00<00:00, 1144.02it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1013.57it/s]
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 database final 0.666667 peak_gpu_gb 0.601
+2026-11-13 20:57:34   done A_seed20261109_dose_db1_pos143 natv2_database n=30 113.4s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 file final 0.733333 peak_gpu_gb 0.605
+2026-11-13 20:59:18   done A_seed20261109_dose_db1_pos143 natv2_file n=30 103.5s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 python final 1.0 peak_gpu_gb 0.604
+2026-11-13 21:01:12   done A_seed20261109_dose_db1_pos143 natv2_python n=30 112.8s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database n 40
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 40
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 database final 0.775 peak_gpu_gb 0.605
+2026-11-13 21:03:18   done A_seed20261109_dose_db1_pos143 db_nontarget n=40 125.7s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 calendar final 0.366667 peak_gpu_gb 0.924
+2026-11-13 21:04:25   done A_seed20261109_dose_db1_pos143 v3fix n=30 66.6s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar n 150
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 40
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 50
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 60
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 70
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 80
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 90
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 100
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 110
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 120
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 130
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 140
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 calendar 150
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 calendar final 0.533333 peak_gpu_gb 0.693
+2026-11-13 21:11:23   done A_seed20261109_dose_db1_pos143 calendar_v3 n=150 417.4s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 file final 0.533333 peak_gpu_gb 0.605
+2026-11-13 21:13:03   done A_seed20261109_dose_db1_pos143 p2_file n=30 98.5s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 python final 0.866667 peak_gpu_gb 0.616
+2026-11-13 21:15:41   done A_seed20261109_dose_db1_pos143 p2_python n=30 157.3s
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261109_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261109_dose_db1_pos143 database final 0.666667 peak_gpu_gb 0.602
+2026-11-13 21:17:03   done A_seed20261109_dose_db1_pos143 p2_database n=30 81.3s
+2026-11-13 21:17:03 EVAL done A_seed20261109_dose_db1_pos143 in 1284.2s
+2026-11-13 21:17:05 summary written
+2026-11-13 21:17:06 TRAIN A_seed20261110_target_other_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/311 [00:00<00:06, 49.27it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 860.49it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1137.16it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 984.22it/s] 
+2026-11-13 21:17:09 timing plan target_other_pos143 items 21 target database-train-target_db_filter_top-001 -> index 15
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 278.19
+2026-11-13 21:17:49 TRAIN done A_seed20261110_target_other_pos143 steps=23 replay_tokens=7494
+2026-11-13 21:17:50 EVAL A_seed20261110_target_other_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 377.13it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 994.91it/s]Loading weights:  99%|█████████▉| 309/311 [00:00<00:00, 1114.32it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1020.27it/s]
+eval TIMING_B1_A_seed20261110_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 database final 0.5 peak_gpu_gb 0.603
+2026-11-13 21:19:45   done A_seed20261110_target_other_pos143 natv2_database n=30 113.2s
+eval TIMING_B1_A_seed20261110_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 file final 0.766667 peak_gpu_gb 0.605
+2026-11-13 21:21:30   done A_seed20261110_target_other_pos143 natv2_file n=30 103.9s
+eval TIMING_B1_A_seed20261110_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 python final 0.966667 peak_gpu_gb 0.604
+2026-11-13 21:23:24   done A_seed20261110_target_other_pos143 natv2_python n=30 113.7s
+eval TIMING_B1_A_seed20261110_target_other_pos143 database n 40
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 40
+eval done TIMING_B1_A_seed20261110_target_other_pos143 database final 0.75 peak_gpu_gb 0.615
+2026-11-13 21:25:32   done A_seed20261110_target_other_pos143 db_nontarget n=40 127.5s
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 calendar final 0.366667 peak_gpu_gb 0.925
+2026-11-13 21:26:36   done A_seed20261110_target_other_pos143 v3fix n=30 62.4s
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar n 150
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 40
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 50
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 60
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 70
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 80
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 90
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 100
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 110
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 120
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 130
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 140
+eval TIMING_B1_A_seed20261110_target_other_pos143 calendar 150
+eval done TIMING_B1_A_seed20261110_target_other_pos143 calendar final 0.573333 peak_gpu_gb 0.694
+2026-11-13 21:33:42   done A_seed20261110_target_other_pos143 calendar_v3 n=150 426.2s
+eval TIMING_B1_A_seed20261110_target_other_pos143 file n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 file 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 file final 0.566667 peak_gpu_gb 0.605
+2026-11-13 21:35:19   done A_seed20261110_target_other_pos143 p2_file n=30 96.3s
+eval TIMING_B1_A_seed20261110_target_other_pos143 python n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 python 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 python final 0.966667 peak_gpu_gb 0.616
+2026-11-13 21:37:55   done A_seed20261110_target_other_pos143 p2_python n=30 154.9s
+eval TIMING_B1_A_seed20261110_target_other_pos143 database n 30
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 10
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 20
+eval TIMING_B1_A_seed20261110_target_other_pos143 database 30
+eval done TIMING_B1_A_seed20261110_target_other_pos143 database final 0.633333 peak_gpu_gb 0.602
+2026-11-13 21:39:15   done A_seed20261110_target_other_pos143 p2_database n=30 79.1s
+2026-11-13 21:39:16 EVAL done A_seed20261110_target_other_pos143 in 1285.8s
+2026-11-13 21:39:17 summary written
+2026-11-13 21:39:18 TRAIN A_seed20261110_dose_db1_pos143
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 99.63it/s]Loading weights:  50%|█████     | 156/311 [00:00<00:00, 895.54it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1123.90it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 992.12it/s] 
+2026-11-13 21:39:21 timing plan dose_db1_pos143 items 23 target database-train-target_db_filter_top-001 -> index 17
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 277.93
+2026-11-13 21:40:01 TRAIN done A_seed20261110_dose_db1_pos143 steps=23 replay_tokens=7494
+2026-11-13 21:40:02 EVAL A_seed20261110_dose_db1_pos143 suites=['natv2_database', 'natv2_file', 'natv2_python', 'db_nontarget', 'v3fix', 'calendar_v3', 'p2_file', 'p2_python', 'p2_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 267.32it/s]Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 817.94it/s]Loading weights:  89%|████████▉ | 278/311 [00:00<00:00, 1037.01it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 953.25it/s] 
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 database final 0.433333 peak_gpu_gb 0.603
+2026-11-13 21:41:54   done A_seed20261110_dose_db1_pos143 natv2_database n=30 110.5s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 file final 0.766667 peak_gpu_gb 0.605
+2026-11-13 21:43:38   done A_seed20261110_dose_db1_pos143 natv2_file n=30 102.5s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 python final 1.0 peak_gpu_gb 0.604
+2026-11-13 21:45:31   done A_seed20261110_dose_db1_pos143 natv2_python n=30 112.4s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database n 40
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 40
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 database final 0.65 peak_gpu_gb 0.615
+2026-11-13 21:47:36   done A_seed20261110_dose_db1_pos143 db_nontarget n=40 124.9s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 calendar final 0.4 peak_gpu_gb 0.925
+2026-11-13 21:48:46   done A_seed20261110_dose_db1_pos143 v3fix n=30 68.7s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar n 150
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 40
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 50
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 60
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 70
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 80
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 90
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 100
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 110
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 120
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 130
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 140
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 calendar 150
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 calendar final 0.58 peak_gpu_gb 0.694
+2026-11-13 21:55:39   done A_seed20261110_dose_db1_pos143 calendar_v3 n=150 412.6s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 file 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 file final 0.533333 peak_gpu_gb 0.605
+2026-11-13 21:57:19   done A_seed20261110_dose_db1_pos143 p2_file n=30 99.3s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 python 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 python final 0.933333 peak_gpu_gb 0.616
+2026-11-13 21:59:57   done A_seed20261110_dose_db1_pos143 p2_python n=30 157.2s
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database n 30
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 10
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 20
+eval TIMING_B1_A_seed20261110_dose_db1_pos143 database 30
+eval done TIMING_B1_A_seed20261110_dose_db1_pos143 database final 0.633333 peak_gpu_gb 0.602
+2026-11-13 22:01:15   done A_seed20261110_dose_db1_pos143 p2_database n=30 77.6s
+2026-11-13 22:01:16 EVAL done A_seed20261110_dose_db1_pos143 in 1274.1s
+2026-11-13 22:01:18 summary written
+2026-11-13 22:01:18 QUEUE COMPLETE
+2026-11-13 22:01:19 +0800 END queue rc=0

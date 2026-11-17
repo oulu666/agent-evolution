@@ -1,0 +1,144 @@
+{
+  "stage_index": 4,
+  "stage_name": "stage_04_calendar",
+  "family": "file",
+  "metrics": {
+    "n": 60,
+    "tool_selection_accuracy": 1.0,
+    "argument_accuracy": 0.766667,
+    "execution_success_rate": 0.766667,
+    "final_task_success_rate": 0.3,
+    "joint_success_rate": 0.3,
+    "conditional_argument_accuracy": 0.766667,
+    "conditional_argument_numerator": 46,
+    "conditional_argument_denominator": 60
+  },
+  "skill_metrics": {
+    "character_count": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    },
+    "counting": {
+      "n": 20,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.1,
+      "joint_success_rate": 0.1,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 20,
+      "conditional_argument_denominator": 20
+    },
+    "file_list": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.6,
+      "joint_success_rate": 0.6,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    },
+    "file_read": {
+      "n": 20,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.1,
+      "joint_success_rate": 0.1,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 20,
+      "conditional_argument_denominator": 20
+    },
+    "file_search": {
+      "n": 20,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.3,
+      "execution_success_rate": 0.3,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.3,
+      "conditional_argument_numerator": 6,
+      "conditional_argument_denominator": 20
+    },
+    "file_write": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    },
+    "final_formatting": {
+      "n": 10,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.6,
+      "joint_success_rate": 0.6,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 10,
+      "conditional_argument_denominator": 10
+    },
+    "line_index": {
+      "n": 20,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.3,
+      "execution_success_rate": 0.3,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.3,
+      "conditional_argument_numerator": 6,
+      "conditional_argument_denominator": 20
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 120,
+    "input_tokens": 35229,
+    "output_tokens": 4242,
+    "total_tokens": 39471,
+    "generation_seconds": 40.975558,
+    "n": 60,
+    "generation_batches": 4,
+    "usage_coverage": {
+      "inference_calls": 60,
+      "input_tokens": 60,
+      "output_tokens": 60,
+      "total_tokens": 60,
+      "generation_seconds": 60
+    },
+    "recorded_totals": {
+      "inference_calls": 120,
+      "input_tokens": 35229,
+      "output_tokens": 4242,
+      "total_tokens": 39471,
+      "generation_seconds": 40.975558
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 41.61
+  },
+  "peak_gpu_gb": 2.392,
+  "duration_seconds": 41.61,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261110_uniform/checkpoint"
+}

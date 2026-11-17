@@ -1,0 +1,724 @@
+{
+  "20261108": [
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-000",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_zero(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_zero WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+      "expected_final_answer": [],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_zero(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_zero WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": []}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "zero"
+    },
+    {
+      "episode_id": "p8-train-file.search_first-006",
+      "tool_family": "file",
+      "skill": "file.search_first",
+      "skill_labels": [
+        "file.search_first"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_first",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full first matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_6.txt": "record 1: p8trainmark6 item train_6_1\nrecord 2: p8trainmark6 item train_6_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_6.txt",
+        "pattern": "p8trainmark6"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}",
+      "expected_final_answer": "record 1: p8trainmark6 item train_6_1",
+      "answer_spec": {
+        "kind": "match",
+        "index": 0
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full first matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_6.txt\", \"pattern\": \"p8trainmark6\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 1: p8trainmark6 item train_6_1\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "first",
+      "pair": 6
+    },
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-007",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_few(id, name, score), keep score > 50; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_few WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}",
+      "expected_final_answer": [
+        "train_item_1_2",
+        "train_item_1_5"
+      ],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_few(id, name, score), keep score > 50; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_few WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"train_item_1_2\", \"train_item_1_5\"]}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "few"
+    },
+    {
+      "episode_id": "p8-train-file.search_last-006",
+      "tool_family": "file",
+      "skill": "file.search_last",
+      "skill_labels": [
+        "file.search_last"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_last",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_6.txt": "record 1: p8trainmark6 item train_6_1\nrecord 2: p8trainmark6 item train_6_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_6.txt",
+        "pattern": "p8trainmark6"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}",
+      "expected_final_answer": "record 2: p8trainmark6 item train_6_2",
+      "answer_spec": {
+        "kind": "match",
+        "index": -1
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_6.txt\", \"pattern\": \"p8trainmark6\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 2: p8trainmark6 item train_6_2\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "last",
+      "pair": 6
+    }
+  ],
+  "20261109": [
+    {
+      "episode_id": "p8-train-file.search_first-003",
+      "tool_family": "file",
+      "skill": "file.search_first",
+      "skill_labels": [
+        "file.search_first"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_first",
+      "prompt": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full first matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_3.txt": "record 1: p8trainmark3 item train_3_1\nrecord 2: p8trainmark3 item train_3_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_3.txt",
+        "pattern": "p8trainmark3"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark3 item train_3_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark3 item train_3_2\"}]}",
+      "expected_final_answer": "record 1: p8trainmark3 item train_3_1",
+      "answer_spec": {
+        "kind": "match",
+        "index": 0
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full first matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_3.txt\", \"pattern\": \"p8trainmark3\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark3 item train_3_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark3 item train_3_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 1: p8trainmark3 item train_3_1\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "first",
+      "pair": 3
+    },
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-001",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_few(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_few WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}",
+      "expected_final_answer": [
+        "train_item_1_2",
+        "train_item_1_5"
+      ],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_few(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_few WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"train_item_1_2\", \"train_item_1_5\"]}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "few"
+    },
+    {
+      "episode_id": "p8-train-file.search_last-003",
+      "tool_family": "file",
+      "skill": "file.search_last",
+      "skill_labels": [
+        "file.search_last"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_last",
+      "prompt": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full last matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_3.txt": "record 1: p8trainmark3 item train_3_1\nrecord 2: p8trainmark3 item train_3_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_3.txt",
+        "pattern": "p8trainmark3"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark3 item train_3_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark3 item train_3_2\"}]}",
+      "expected_final_answer": "record 2: p8trainmark3 item train_3_2",
+      "answer_spec": {
+        "kind": "match",
+        "index": -1
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_3.txt, search for 'p8trainmark3'. Return the full last matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_3.txt\", \"pattern\": \"p8trainmark3\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark3 item train_3_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark3 item train_3_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 2: p8trainmark3 item train_3_2\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "last",
+      "pair": 3
+    },
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-006",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_zero(id, name, score), keep score > 50; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+      "expected_final_answer": [],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_zero(id, name, score), keep score > 50; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_zero WHERE score > 50 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": []}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "zero"
+    },
+    {
+      "episode_id": "p8-train-file.search_last-006",
+      "tool_family": "file",
+      "skill": "file.search_last",
+      "skill_labels": [
+        "file.search_last"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_last",
+      "prompt": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_6.txt": "record 1: p8trainmark6 item train_6_1\nrecord 2: p8trainmark6 item train_6_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_6.txt",
+        "pattern": "p8trainmark6"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}",
+      "expected_final_answer": "record 2: p8trainmark6 item train_6_2",
+      "answer_spec": {
+        "kind": "match",
+        "index": -1
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_6.txt, search for 'p8trainmark6'. Return the full last matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_6.txt\", \"pattern\": \"p8trainmark6\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark6 item train_6_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark6 item train_6_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 2: p8trainmark6 item train_6_2\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "last",
+      "pair": 6
+    }
+  ],
+  "20261110": [
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-000",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_zero(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_zero WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+      "expected_final_answer": [],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_zero(id, name, score), keep score > 40; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_zero WHERE score > 40 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": []}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "zero"
+    },
+    {
+      "episode_id": "p8-train-file.search_first-000",
+      "tool_family": "file",
+      "skill": "file.search_first",
+      "skill_labels": [
+        "file.search_first"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_first",
+      "prompt": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full first matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_0.txt": "record 1: p8trainmark0 item train_0_1\nrecord 2: p8trainmark0 item train_0_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_0.txt",
+        "pattern": "p8trainmark0"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark0 item train_0_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark0 item train_0_2\"}]}",
+      "expected_final_answer": "record 1: p8trainmark0 item train_0_1",
+      "answer_spec": {
+        "kind": "match",
+        "index": 0
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full first matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_0.txt\", \"pattern\": \"p8trainmark0\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark0 item train_0_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark0 item train_0_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 1: p8trainmark0 item train_0_1\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "first",
+      "pair": 0
+    },
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-004",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_few(id, name, score), keep score > 45; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_few WHERE score > 45 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}",
+      "expected_final_answer": [
+        "train_item_1_2",
+        "train_item_1_5"
+      ],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_few(id, name, score), keep score > 45; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_few WHERE score > 45 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[[\"train_item_1_2\"],[\"train_item_1_5\"]],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"train_item_1_2\", \"train_item_1_5\"]}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "few"
+    },
+    {
+      "episode_id": "p8-train-file.search_last-000",
+      "tool_family": "file",
+      "skill": "file.search_last",
+      "skill_labels": [
+        "file.search_last"
+      ],
+      "split": "train",
+      "template_id": "p8_train_file.search_last",
+      "prompt": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full last matching line, not the other matches.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {
+        "files": {
+          "p8_train/trace_0.txt": "record 1: p8trainmark0 item train_0_1\nrecord 2: p8trainmark0 item train_0_2\nrecord 3: ordinary entry\n"
+        }
+      },
+      "expected_tool": "file_search",
+      "expected_arguments": {
+        "path": "p8_train/trace_0.txt",
+        "pattern": "p8trainmark0"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark0 item train_0_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark0 item train_0_2\"}]}",
+      "expected_final_answer": "record 2: p8trainmark0 item train_0_2",
+      "answer_spec": {
+        "kind": "match",
+        "index": -1
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8_train/trace_0.txt, search for 'p8trainmark0'. Return the full last matching line, not the other matches."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"file_search\", \"arguments\": {\"path\": \"p8_train/trace_0.txt\", \"pattern\": \"p8trainmark0\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":1,\"text\":\"record 1: p8trainmark0 item train_0_1\"},{\"line\":2,\"text\":\"record 2: p8trainmark0 item train_0_2\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": \"record 2: p8trainmark0 item train_0_2\"}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "last",
+      "pair": 0
+    },
+    {
+      "episode_id": "p8-train-db.filter_cmp_top-009",
+      "tool_family": "database",
+      "skill": "db.filter_cmp_top",
+      "skill_labels": [
+        "db.filter_cmp_top"
+      ],
+      "split": "train",
+      "template_id": "p8_train_db.filter_cmp_top",
+      "prompt": "In p8t_zero(id, name, score), keep score > 55; order score descending and id ascending on ties. Return up to 4 names in a JSON list.",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "expected_tool": "db_query",
+      "expected_arguments": {
+        "sql": "SELECT name FROM p8t_zero WHERE score > 55 ORDER BY score DESC, id ASC LIMIT 4"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}",
+      "expected_final_answer": [],
+      "answer_spec": {
+        "kind": "rows_first"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- db_list_tables(): List the table names in the read-only test database.\n- db_schema(table: string): Return the columns of one table in the read-only test database.\n- db_query(sql: string): Run one read-only SELECT or WITH query and return columns and up to 100 rows.\n\nDATABASE (read-only):\nemployees(id INTEGER, name TEXT, department TEXT, salary REAL, age INTEGER)\nsales(id INTEGER, product TEXT, region TEXT, amount REAL, month TEXT)\nproducts(id INTEGER, name TEXT, category TEXT, price REAL, stock INTEGER)\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "In p8t_zero(id, name, score), keep score > 55; order score descending and id ascending on ties. Return up to 4 names in a JSON list."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"db_query\", \"arguments\": {\"sql\": \"SELECT name FROM p8t_zero WHERE score > 55 ORDER BY score DESC, id ASC LIMIT 4\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":{\"columns\":[\"name\"],\"rows\":[],\"truncated\":false}}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": []}"
+        }
+      ],
+      "evaluation_only": false,
+      "selection_allowed": true,
+      "case": "zero"
+    }
+  ]
+}

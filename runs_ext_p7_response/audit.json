@@ -1,0 +1,224 @@
+{
+  "gold_checks": 56,
+  "scoring_rows_checked": 432,
+  "counts": {
+    "db.list_tables": {
+      "n": 108,
+      "tool_correct": 82,
+      "arguments_correct": 95,
+      "execution_success": 82,
+      "final_correct": 80,
+      "joint_success": 80,
+      "tool:db_list_tables": 82,
+      "tool:None": 13,
+      "tool:db_query": 13
+    },
+    "db.filter_cmp_top": {
+      "n": 108,
+      "tool_correct": 108,
+      "arguments_correct": 13,
+      "execution_success": 79,
+      "final_correct": 79,
+      "joint_success": 13,
+      "tool:db_query": 108
+    },
+    "file.search_last": {
+      "n": 108,
+      "tool_correct": 108,
+      "arguments_correct": 108,
+      "execution_success": 108,
+      "final_correct": 0,
+      "joint_success": 0,
+      "tool:file_search": 108,
+      "first_match_answer": 108,
+      "last_match_answer": 0
+    },
+    "py.median": {
+      "n": 108,
+      "tool_correct": 10,
+      "arguments_correct": 108,
+      "execution_success": 10,
+      "final_correct": 10,
+      "joint_success": 10,
+      "tool:stats_median": 10,
+      "tool:stats_sorted": 98
+    }
+  },
+  "cross_gradients": {
+    "20261108": {
+      "negative_cross_pairs": 5,
+      "total_cross_pairs": 12,
+      "calibration": {
+        "seed": 20261108,
+        "benefit": {
+          "db.list_tables": 0.7716303308081806,
+          "db.filter_cmp_top": 0.2645842699162005,
+          "file.search_last": 0.5424135917258885,
+          "py.median": 0.3312098826592124
+        },
+        "dev_nll": {
+          "db.list_tables": 0.1753448285162449,
+          "db.filter_cmp_top": 0.07398954685777426,
+          "file.search_last": 0.06674272147938609,
+          "py.median": 0.05794549733400345
+        },
+        "candidate_gradient_norm": {
+          "db.list_tables": 4.5188117027282715,
+          "db.filter_cmp_top": 2.4315989017486572,
+          "file.search_last": 1.649759292602539,
+          "py.median": 2.77205228805542
+        },
+        "dotmatrix": {
+          "db.list_tables": {
+            "db.list_tables": 14.46850872039795,
+            "db.filter_cmp_top": -0.1533336043357849,
+            "file.search_last": -0.18514235317707062,
+            "py.median": -0.18274450302124023
+          },
+          "db.filter_cmp_top": {
+            "db.list_tables": -0.1617136001586914,
+            "db.filter_cmp_top": 2.6102652549743652,
+            "file.search_last": -0.03626854345202446,
+            "py.median": 0.16116558015346527
+          },
+          "file.search_last": {
+            "db.list_tables": 0.10572940856218338,
+            "db.filter_cmp_top": 0.08716340363025665,
+            "file.search_last": 3.0963854789733887,
+            "py.median": 0.29012617468833923
+          },
+          "py.median": {
+            "db.list_tables": 0.20033247768878937,
+            "db.filter_cmp_top": 0.12573790550231934,
+            "file.search_last": 0.3471421003341675,
+            "py.median": 2.9993112087249756
+          }
+        },
+        "forward_backward_pairs": 41,
+        "optimizer_steps": 0,
+        "prefix_parameter_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82",
+        "parameter_hash_unchanged": true,
+        "seconds": 24.801015853881836,
+        "formal_holdout_loaded": false,
+        "created": "2026-11-15 04:05:10 +0800"
+      }
+    },
+    "20261109": {
+      "negative_cross_pairs": 4,
+      "total_cross_pairs": 12,
+      "calibration": {
+        "seed": 20261109,
+        "benefit": {
+          "db.list_tables": 0.42733665222274936,
+          "db.filter_cmp_top": 0.18325258973336658,
+          "file.search_last": 0.6798667344722966,
+          "py.median": 0.4862109999810877
+        },
+        "dev_nll": {
+          "db.list_tables": 0.044940195977687836,
+          "db.filter_cmp_top": 0.052118840627372265,
+          "file.search_last": 0.0716615947894752,
+          "py.median": 0.056743199005723
+        },
+        "candidate_gradient_norm": {
+          "db.list_tables": 2.3989198207855225,
+          "db.filter_cmp_top": 1.990079402923584,
+          "file.search_last": 2.288336992263794,
+          "py.median": 1.525885820388794
+        },
+        "dotmatrix": {
+          "db.list_tables": {
+            "db.list_tables": 4.474397659301758,
+            "db.filter_cmp_top": -0.0416896753013134,
+            "file.search_last": -0.4037984609603882,
+            "py.median": 0.07163557410240173
+          },
+          "db.filter_cmp_top": {
+            "db.list_tables": -0.0772409662604332,
+            "db.filter_cmp_top": 1.1374541521072388,
+            "file.search_last": 0.2880781292915344,
+            "py.median": 0.11045722663402557
+          },
+          "file.search_last": {
+            "db.list_tables": -0.1458679586648941,
+            "db.filter_cmp_top": 0.17813606560230255,
+            "file.search_last": 5.496180057525635,
+            "py.median": 0.6945984959602356
+          },
+          "py.median": {
+            "db.list_tables": 0.009516448713839054,
+            "db.filter_cmp_top": 0.030691001564264297,
+            "file.search_last": 0.550020694732666,
+            "py.median": 2.3773791790008545
+          }
+        },
+        "forward_backward_pairs": 41,
+        "optimizer_steps": 0,
+        "prefix_parameter_hash": "96d181c0faf7d986e9b97034b6c20ec4f3cf204a13c42d3b1eba7af0ad1bffba",
+        "parameter_hash_unchanged": true,
+        "seconds": 23.322938442230225,
+        "formal_holdout_loaded": false,
+        "created": "2026-11-15 04:05:36 +0800"
+      }
+    },
+    "20261110": {
+      "negative_cross_pairs": 8,
+      "total_cross_pairs": 12,
+      "calibration": {
+        "seed": 20261110,
+        "benefit": {
+          "db.list_tables": 0.8114614684777524,
+          "db.filter_cmp_top": 0.12835796391951984,
+          "file.search_last": 0.4057083525029535,
+          "py.median": 0.1367185680598386
+        },
+        "dev_nll": {
+          "db.list_tables": 0.1528046727180481,
+          "db.filter_cmp_top": 0.059193902648985386,
+          "file.search_last": 0.04598128888756037,
+          "py.median": 0.03404022753238678
+        },
+        "candidate_gradient_norm": {
+          "db.list_tables": 4.799362659454346,
+          "db.filter_cmp_top": 2.117354393005371,
+          "file.search_last": 1.2359368801116943,
+          "py.median": 2.5031135082244873
+        },
+        "dotmatrix": {
+          "db.list_tables": {
+            "db.list_tables": 16.057065963745117,
+            "db.filter_cmp_top": -0.199540376663208,
+            "file.search_last": -0.2715219557285309,
+            "py.median": -0.008136484771966934
+          },
+          "db.filter_cmp_top": {
+            "db.list_tables": -0.325090229511261,
+            "db.filter_cmp_top": 1.4330029487609863,
+            "file.search_last": -0.01635812595486641,
+            "py.median": -0.004439016804099083
+          },
+          "file.search_last": {
+            "db.list_tables": -0.12078671902418137,
+            "db.filter_cmp_top": 0.01807592436671257,
+            "file.search_last": 1.9045175313949585,
+            "py.median": 0.20390883088111877
+          },
+          "py.median": {
+            "db.list_tables": 0.25377729535102844,
+            "db.filter_cmp_top": -0.011406036093831062,
+            "file.search_last": 0.15482300519943237,
+            "py.median": 0.97169429063797
+          }
+        },
+        "forward_backward_pairs": 41,
+        "optimizer_steps": 0,
+        "prefix_parameter_hash": "f0209acabd8fedc0b0762b6e519a685e1834a2fe99b1d6601fac7098aa44e898",
+        "parameter_hash_unchanged": true,
+        "seconds": 24.20942783355713,
+        "formal_holdout_loaded": false,
+        "created": "2026-11-15 04:06:03 +0800"
+      }
+    }
+  },
+  "scoring_mismatches": 0
+}

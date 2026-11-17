@@ -1,0 +1,31 @@
+{
+  "version": "calendar_title_count_v3fix",
+  "frozen_at": "2026-11-12 09:16:29 +0800",
+  "files": {
+    "title_count_v3fix": {
+      "path": "final/title_count_v3fix.jsonl",
+      "count": 30,
+      "sha256": "84c2e5173142a839dda97a7a20f3cc6309ccb022d1b3e8da93db388f797b305c"
+    }
+  },
+  "fixture": {
+    "path": "../data_ext_cal_v3/fixtures/calendar_v3.json",
+    "sha256": "3289868b4a22ccb2770f3a4a3b72723f30fb0a11c44b823fa6055f88d1f2b04d",
+    "note": "read-only reuse of frozen Calendar v3 fixture; not modified"
+  },
+  "combined_sha256": "944be6ce5a5eb8801957b074dc17430982a4ef9f8bc3a44109ffe8cc00ce5e9f",
+  "types": {
+    "cv3fix_day_count": 30
+  },
+  "seeds": {
+    "tasks": 20261142
+  },
+  "scoring": "joint success (tool, exact arguments, execution on calendar_v3.json, exact answer); report overall and per band (global_count, day_count)",
+  "rationale": "Fixes v3 search_count's zero discrimination by replacing long global title searches (gold 6–10, systematically undercounted) with 30 short-list day_count items (calendar_list on one day, gold 1–3, not equal to the day total). Not Calendar v4 (multi-instance).",
+  "pilot_note": "P0 2026-11-12: short-list day_count fix for v3 search_count; not v4.",
+  "rules": [
+    "Evaluation only; never a training, replay, probe or selection input.",
+    "Does not replace frozen Calendar v3.",
+    "Any change requires a new version string and hashes."
+  ]
+}

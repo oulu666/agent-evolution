@@ -1,0 +1,1082 @@
+{
+  "seeds": {
+    "20261108": {
+      "baseline": {
+        "db.list_tables": {
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "execution_success": 1.0,
+          "final_correct": 1.0
+        },
+        "db.filter_cmp_top": {
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "execution_success": 1.0,
+          "final_correct": 1.0
+        },
+        "file.search_last": {
+          "joint_success": 0.5,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "execution_success": 1.0,
+          "final_correct": 0.5
+        },
+        "py.median": {
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "execution_success": 0.0,
+          "final_correct": 0.5
+        }
+      },
+      "actions": {
+        "db.list_tables_1": {
+          "dose": 1,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "db.list_tables",
+            "dose": 1,
+            "actual_optimizer_steps": 1,
+            "replay_input_tokens": 272,
+            "delta_norm": 0.06618113815784454,
+            "linear_predicted_dev_drop": 0.00838165171444416,
+            "common_calendar_ids": [
+              "calendar-train-calendar_search_dates-011",
+              "calendar-train-calendar_count_date-006",
+              "calendar-train-calendar_count_month-002",
+              "calendar-train-calendar_list_titles-007",
+              "calendar-train-calendar_count_date-009",
+              "calendar-train-calendar_search_dates-007",
+              "calendar-train-calendar_count_month-003"
+            ],
+            "replay_id": "database-train-db_list_tables-000",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.7716303308081806,
+          "p6_norm": 4.5188117027282715,
+          "actual_candidate": {
+            "single_gradient_norm": 4.5188117027282715,
+            "single_raw_dot": 3.4865591526031494,
+            "single_unit_dot": 0.7715654969215393,
+            "input_tokens": [
+              272,
+              272
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.00842969212681055,
+              "gain_vs_background": 0.009648283245041966,
+              "own_skill_gain_vs_background": 0.036205682903528214,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.036205682903528214,
+                "db.filter_cmp_top": 0.0001394404098391533,
+                "file.search_last": 0.0009338641539216042,
+                "py.median": 0.0013141455128788948
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.024312622379511595,
+              "gain_vs_background": 0.026517359307035804,
+              "own_skill_gain_vs_background": 0.10351889580488205,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.10351889580488205,
+                "db.filter_cmp_top": 0.00024616532027721405,
+                "file.search_last": 0.0013604629784822464,
+                "py.median": 0.0009439131245017052
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0004882981338596437,
+              "gain_vs_background": 0.0007323675672523677,
+              "own_skill_gain_vs_background": -3.990535333286971e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -3.990535333286971e-05,
+                "db.filter_cmp_top": 0.0002629000664455816,
+                "file.search_last": 0.0002551805227994919,
+                "py.median": 0.002451295033097267
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": 0.009322121972218156,
+              "gain_vs_background": 0.011317027732729912,
+              "own_skill_gain_vs_background": 0.044990174472332,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.044990174472332,
+                "db.filter_cmp_top": -0.0007089003920555115,
+                "file.search_last": 0.0008528344333171844,
+                "py.median": 0.0001340024173259735
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.027070990410720697,
+              "gain_vs_background": 0.029535098554333672,
+              "own_skill_gain_vs_background": 0.11881011724472046,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.11881011724472046,
+                "db.filter_cmp_top": -0.0009626522660255432,
+                "file.search_last": 7.309368811547756e-06,
+                "py.median": 0.0002856198698282242
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.002726258331676945,
+              "gain_vs_background": 0.0005228485824773088,
+              "own_skill_gain_vs_background": 5.629414226859808e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 5.629414226859808e-05,
+                "db.filter_cmp_top": 3.544322680681944e-06,
+                "file.search_last": 0.002402961254119873,
+                "py.median": -0.00037140538915991783
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.03547162957736017,
+          "check_gain_per_1k_tokens": 0.041606719605624676
+        },
+        "db.filter_cmp_top_1": {
+          "dose": 1,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "db.filter_cmp_top",
+            "dose": 1,
+            "actual_optimizer_steps": 1,
+            "replay_input_tokens": 343,
+            "delta_norm": 0.06508773565292358,
+            "linear_predicted_dev_drop": 0.001342116273008287,
+            "common_calendar_ids": [
+              "calendar-train-calendar_search_dates-011",
+              "calendar-train-calendar_count_date-006",
+              "calendar-train-calendar_count_month-002",
+              "calendar-train-calendar_list_titles-007",
+              "calendar-train-calendar_count_date-009",
+              "calendar-train-calendar_search_dates-007",
+              "calendar-train-calendar_count_month-003"
+            ],
+            "replay_id": "database-train-target_db_filter_top-002",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.2645842699162005,
+          "p6_norm": 2.4315989017486572,
+          "actual_candidate": {
+            "single_gradient_norm": 2.8304028511047363,
+            "single_raw_dot": 0.645305335521698,
+            "single_unit_dot": 0.22799062728881836,
+            "input_tokens": [
+              343,
+              348
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.0006404019659385085,
+              "gain_vs_background": 0.0018589930841699243,
+              "own_skill_gain_vs_background": 0.008031870238482952,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.001627270132303238,
+                "db.filter_cmp_top": 0.008031870238482952,
+                "file.search_last": 0.000542027410119772,
+                "py.median": 0.0004893448203802109
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.0004229330224916339,
+              "gain_vs_background": 0.002627669950015843,
+              "own_skill_gain_vs_background": 0.012345589697360992,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.004798002541065216,
+                "db.filter_cmp_top": 0.012345589697360992,
+                "file.search_last": 0.0013328692875802517,
+                "py.median": 0.0016302233561873436
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0021236824159132084,
+              "gain_vs_background": -0.0009030167148011969,
+              "own_skill_gain_vs_background": 3.8808204408269376e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 8.002971298992634e-05,
+                "db.filter_cmp_top": 3.8808204408269376e-05,
+                "file.search_last": -0.0007161279208958149,
+                "py.median": -0.0030147768557071686
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.0007928486447781324,
+              "gain_vs_background": 0.0012020571157336235,
+              "own_skill_gain_vs_background": 0.0032492727041244507,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0002092123031616211,
+                "db.filter_cmp_top": 0.0032492727041244507,
+                "file.search_last": 0.0012781433761119843,
+                "py.median": 0.0004900246858596802
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0012669589123106562,
+              "gain_vs_background": 0.001197149231302319,
+              "own_skill_gain_vs_background": 0.004759445786476135,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0006833821535110474,
+                "db.filter_cmp_top": 0.004759445786476135,
+                "file.search_last": 2.8815862606279552e-05,
+                "py.median": 0.0006837174296379089
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0023509018355980515,
+              "gain_vs_background": 0.0008982050785562024,
+              "own_skill_gain_vs_background": 0.00010047754039987922,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 7.938290946185589e-05,
+                "db.filter_cmp_top": 0.00010047754039987922,
+                "file.search_last": 0.0035685747861862183,
+                "py.median": -0.00015561492182314396
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.0054198049101163975,
+          "check_gain_per_1k_tokens": 0.0035045396960163952
+        },
+        "file.search_last_1": {
+          "dose": 1,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "file.search_last",
+            "dose": 1,
+            "actual_optimizer_steps": 1,
+            "replay_input_tokens": 342,
+            "delta_norm": 0.06418367475271225,
+            "linear_predicted_dev_drop": 0.0006331175100058317,
+            "common_calendar_ids": [
+              "calendar-train-calendar_search_dates-011",
+              "calendar-train-calendar_count_date-006",
+              "calendar-train-calendar_count_month-002",
+              "calendar-train-calendar_list_titles-007",
+              "calendar-train-calendar_count_date-009",
+              "calendar-train-calendar_search_dates-007",
+              "calendar-train-calendar_count_month-003"
+            ],
+            "replay_id": "file-train-e4_last_match-000",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.5424135917258885,
+          "p6_norm": 1.649759292602539,
+          "actual_candidate": {
+            "single_gradient_norm": 1.3625905513763428,
+            "single_raw_dot": 0.5470175743103027,
+            "single_unit_dot": 0.4014541208744049,
+            "input_tokens": [
+              342,
+              350
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.00030705786775797606,
+              "gain_vs_background": 0.0015256489859893918,
+              "own_skill_gain_vs_background": 0.006618137005716562,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0010797269642353058,
+                "db.filter_cmp_top": 0.0012015048414468765,
+                "file.search_last": 0.006618137005716562,
+                "py.median": -0.0006373189389705658
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0004212283529341221,
+              "gain_vs_background": 0.001783508574590087,
+              "own_skill_gain_vs_background": 0.009264005348086357,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0029813051223754883,
+                "db.filter_cmp_top": 0.0016940440982580185,
+                "file.search_last": 0.009264005348086357,
+                "py.median": -0.0008427100256085396
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0005168745756236603,
+              "gain_vs_background": 0.0007037911254883511,
+              "own_skill_gain_vs_background": 0.0024087964557111263,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -5.581272125709802e-05,
+                "db.filter_cmp_top": 0.0004686553220381029,
+                "file.search_last": 0.0024087964557111263,
+                "py.median": -6.474554538726807e-06
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.0006076057907193899,
+              "gain_vs_background": 0.001387299969792366,
+              "own_skill_gain_vs_background": 0.004123993217945099,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.0008533298969268799,
+                "db.filter_cmp_top": 0.0008526816964149475,
+                "file.search_last": 0.004123993217945099,
+                "py.median": -0.00028080493211746216
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0016911757502384717,
+              "gain_vs_background": 0.0007729323933745036,
+              "own_skill_gain_vs_background": 6.840876449132338e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00210416316986084,
+                "db.filter_cmp_top": 0.0012585371732711792,
+                "file.search_last": 6.840876449132338e-05,
+                "py.median": -0.00033937953412532806
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.00033986810012720525,
+              "gain_vs_background": 0.0029092388140270486,
+              "own_skill_gain_vs_background": 0.011559229344129562,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 9.195238817483187e-05,
+                "db.filter_cmp_top": 7.134053157642484e-05,
+                "file.search_last": 0.011559229344129562,
+                "py.median": -8.556700777262449e-05
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.004460961947337403,
+          "check_gain_per_1k_tokens": 0.004056432660211597
+        },
+        "py.median_1": {
+          "dose": 1,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "py.median",
+            "dose": 1,
+            "actual_optimizer_steps": 1,
+            "replay_input_tokens": 361,
+            "delta_norm": 0.06798847764730453,
+            "linear_predicted_dev_drop": 0.001389718847349286,
+            "common_calendar_ids": [
+              "calendar-train-calendar_search_dates-011",
+              "calendar-train-calendar_count_date-006",
+              "calendar-train-calendar_count_month-002",
+              "calendar-train-calendar_list_titles-007",
+              "calendar-train-calendar_count_date-009",
+              "calendar-train-calendar_search_dates-007",
+              "calendar-train-calendar_count_month-003"
+            ],
+            "replay_id": "python-train-target_median_natural-016",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.3312098826592124,
+          "p6_norm": 2.77205228805542,
+          "actual_candidate": {
+            "single_gradient_norm": 5.965964317321777,
+            "single_raw_dot": 1.1171886920928955,
+            "single_unit_dot": 0.18726037442684174,
+            "input_tokens": [
+              361,
+              361
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.0009089033119380474,
+              "gain_vs_background": 0.002127494430169463,
+              "own_skill_gain_vs_background": 0.005884629674255848,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0007829219102859497,
+                "db.filter_cmp_top": 0.0003644227981567383,
+                "file.search_last": 0.003043847158551216,
+                "py.median": 0.005884629674255848
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0009163981303572655,
+              "gain_vs_background": 0.0012883387971669436,
+              "own_skill_gain_vs_background": 0.004295870661735535,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0025640055537223816,
+                "db.filter_cmp_top": 0.000257786363363266,
+                "file.search_last": 0.003163703717291355,
+                "py.median": 0.004295870661735535
+              }
+            },
+            "final_nll": {
+              "absolute_drop": 0.0023452154546248494,
+              "gain_vs_background": 0.003565881155736861,
+              "own_skill_gain_vs_background": 0.010764384642243385,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00017610660142963752,
+                "db.filter_cmp_top": 0.00046987498353701085,
+                "file.search_last": 0.0028531583957374096,
+                "py.median": 0.010764384642243385
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.0010532545857131481,
+              "gain_vs_background": 0.0009416511747986078,
+              "own_skill_gain_vs_background": 0.002824106253683567,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.0015354156494140625,
+                "db.filter_cmp_top": 0.0013269633054733276,
+                "file.search_last": 0.0011509507894515991,
+                "py.median": 0.002824106253683567
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.002234125495306216,
+              "gain_vs_background": 0.00022998264830675907,
+              "own_skill_gain_vs_background": 0.003495762124657631,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.004291653633117676,
+                "db.filter_cmp_top": 0.001718774437904358,
+                "file.search_last": -2.952336217276752e-06,
+                "py.median": 0.003495762124657631
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0022204324341146275,
+              "gain_vs_background": 0.0010286744800396264,
+              "own_skill_gain_vs_background": 0.0005852426402270794,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00014226388884708285,
+                "db.filter_cmp_top": 0.00012075254926458001,
+                "file.search_last": 0.003266438841819763,
+                "py.median": 0.0005852426402270794
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.0058933363716605625,
+          "check_gain_per_1k_tokens": 0.0026084520077523763
+        },
+        "db.list_tables_2": {
+          "dose": 2,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "db.list_tables",
+            "dose": 2,
+            "actual_optimizer_steps": 2,
+            "replay_input_tokens": 544,
+            "delta_norm": 0.132633775472641,
+            "linear_predicted_dev_drop": 0.02287432737648487,
+            "common_calendar_ids": [
+              "calendar-train-calendar_count_month-004",
+              "calendar-train-calendar_free_slot-008",
+              "calendar-train-calendar_attendees-008",
+              "calendar-train-calendar_free_slot-006",
+              "calendar-train-calendar_count_month-011",
+              "calendar-train-calendar_count_date-000",
+              "calendar-train-calendar_list_titles-002"
+            ],
+            "replay_id": "database-train-db_list_tables-000",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.7716303308081806,
+          "p6_norm": 4.5188117027282715,
+          "actual_candidate": {
+            "single_gradient_norm": 4.5188117027282715,
+            "single_raw_dot": 3.4865591526031494,
+            "single_unit_dot": 0.7715654969215393,
+            "input_tokens": [
+              272,
+              272
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.0211289991857484,
+              "gain_vs_background": 0.023800693918019533,
+              "own_skill_gain_vs_background": 0.09609228745102882,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.09609228745102882,
+                "db.filter_cmp_top": -0.0018521547317504883,
+                "file.search_last": 0.0016296524554491043,
+                "py.median": -0.0006670095026493073
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.06189198873471469,
+              "gain_vs_background": 0.06789921293966472,
+              "own_skill_gain_vs_background": 0.27412598952651024,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.27412598952651024,
+                "db.filter_cmp_top": -0.003010343760251999,
+                "file.search_last": 0.0016877111047506332,
+                "py.median": -0.001206505112349987
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0006436431303882273,
+              "gain_vs_background": 0.0007853483784856508,
+              "own_skill_gain_vs_background": 0.00022801055456511676,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00022801055456511676,
+                "db.filter_cmp_top": 0.0003860887445625849,
+                "file.search_last": 0.0015372964553534985,
+                "py.median": 0.000989997759461403
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": 0.0235540266148746,
+              "gain_vs_background": 0.027644476620480418,
+              "own_skill_gain_vs_background": 0.10812448710203171,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.10812448710203171,
+                "db.filter_cmp_top": 0.000498652458190918,
+                "file.search_last": 0.0021009063348174095,
+                "py.median": -0.00014613941311836243
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.06554207226872677,
+              "gain_vs_background": 0.07143712813194725,
+              "own_skill_gain_vs_background": 0.28532590717077255,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.28532590717077255,
+                "db.filter_cmp_top": 0.0007271766662597656,
+                "file.search_last": -3.0779774533584714e-06,
+                "py.median": -0.0003014933317899704
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.003950693091610447,
+              "gain_vs_background": 0.001646015836740844,
+              "own_skill_gain_vs_background": 0.00026276748394593596,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00026276748394593596,
+                "db.filter_cmp_top": -8.606119081377983e-06,
+                "file.search_last": 0.005958206951618195,
+                "py.median": 0.00037169503048062325
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.04375127558459473,
+          "check_gain_per_1k_tokens": 0.05081705261117724,
+          "scores": {
+            "db.list_tables": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "db.filter_cmp_top": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "file.search_last": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 1.0,
+              "execution_success": 1.0,
+              "final_correct": 0.0
+            },
+            "py.median": {
+              "joint_success": 0.0,
+              "tool_correct": 0.0,
+              "arguments_correct": 1.0,
+              "execution_success": 0.0,
+              "final_correct": 0.0
+            }
+          }
+        },
+        "db.filter_cmp_top_2": {
+          "dose": 2,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "db.filter_cmp_top",
+            "dose": 2,
+            "actual_optimizer_steps": 2,
+            "replay_input_tokens": 691,
+            "delta_norm": 0.1267360895872116,
+            "linear_predicted_dev_drop": 0.003950105514377356,
+            "common_calendar_ids": [
+              "calendar-train-calendar_count_month-004",
+              "calendar-train-calendar_free_slot-008",
+              "calendar-train-calendar_attendees-008",
+              "calendar-train-calendar_free_slot-006",
+              "calendar-train-calendar_count_month-011",
+              "calendar-train-calendar_count_date-000",
+              "calendar-train-calendar_list_titles-002"
+            ],
+            "replay_id": "database-train-target_db_filter_top-001",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.2645842699162005,
+          "p6_norm": 2.4315989017486572,
+          "actual_candidate": {
+            "single_gradient_norm": 2.8304028511047363,
+            "single_raw_dot": 0.645305335521698,
+            "single_unit_dot": 0.22799062728881836,
+            "input_tokens": [
+              343,
+              348
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.002108644344843924,
+              "gain_vs_background": 0.004780339077115059,
+              "own_skill_gain_vs_background": 0.016215553507208824,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.001327216625213623,
+                "db.filter_cmp_top": 0.016215553507208824,
+                "file.search_last": 0.0015298034995794296,
+                "py.median": 0.002703215926885605
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -2.7151545509696007e-06,
+              "gain_vs_background": 0.006004509050399065,
+              "own_skill_gain_vs_background": 0.02481185458600521,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.004163973033428192,
+                "db.filter_cmp_top": 0.02481185458600521,
+                "file.search_last": 0.0005865078419446945,
+                "py.median": 0.002783646807074547
+              }
+            },
+            "final_nll": {
+              "absolute_drop": 0.0001630602237128187,
+              "gain_vs_background": 0.0015920517325866967,
+              "own_skill_gain_vs_background": 0.0006812446590629406,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.000200287664483767,
+                "db.filter_cmp_top": 0.0006812446590629406,
+                "file.search_last": 0.0030305050313472748,
+                "py.median": 0.0024561695754528046
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.002633857075124979,
+              "gain_vs_background": 0.0014565929304808378,
+              "own_skill_gain_vs_background": 0.005084507167339325,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 5.056709051132202e-05,
+                "db.filter_cmp_top": 0.005084507167339325,
+                "file.search_last": -0.0004384787753224373,
+                "py.median": 0.0011297762393951416
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0036866995797026902,
+              "gain_vs_background": 0.0022083562835177872,
+              "own_skill_gain_vs_background": 0.00771602988243103,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": -0.00018215179443359375,
+                "db.filter_cmp_top": 0.00771602988243103,
+                "file.search_last": 7.141396054066718e-06,
+                "py.median": 0.0012924056500196457
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0057182545569958165,
+              "gain_vs_background": -0.000121545628644526,
+              "own_skill_gain_vs_background": -1.0601477697491646e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.0001922039082273841,
+                "db.filter_cmp_top": -1.0601477697491646e-05,
+                "file.search_last": -0.0012554526329040527,
+                "py.median": 0.0005876676877960563
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.00691800155877722,
+          "check_gain_per_1k_tokens": 0.0021079492481632964,
+          "scores": {
+            "db.list_tables": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "db.filter_cmp_top": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "file.search_last": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 1.0,
+              "execution_success": 1.0,
+              "final_correct": 0.0
+            },
+            "py.median": {
+              "joint_success": 0.0,
+              "tool_correct": 0.0,
+              "arguments_correct": 1.0,
+              "execution_success": 0.0,
+              "final_correct": 0.0
+            }
+          }
+        },
+        "file.search_last_2": {
+          "dose": 2,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "file.search_last",
+            "dose": 2,
+            "actual_optimizer_steps": 2,
+            "replay_input_tokens": 692,
+            "delta_norm": 0.1219082847237587,
+            "linear_predicted_dev_drop": 0.002717107068747282,
+            "common_calendar_ids": [
+              "calendar-train-calendar_count_month-004",
+              "calendar-train-calendar_free_slot-008",
+              "calendar-train-calendar_attendees-008",
+              "calendar-train-calendar_free_slot-006",
+              "calendar-train-calendar_count_month-011",
+              "calendar-train-calendar_count_date-000",
+              "calendar-train-calendar_list_titles-002"
+            ],
+            "replay_id": "file-train-e4_last_match-005",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.5424135917258885,
+          "p6_norm": 1.649759292602539,
+          "actual_candidate": {
+            "single_gradient_norm": 1.3625905513763428,
+            "single_raw_dot": 0.5470175743103027,
+            "single_unit_dot": 0.4014541208744049,
+            "input_tokens": [
+              342,
+              350
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.001871723448857665,
+              "gain_vs_background": 0.0045434181811288,
+              "own_skill_gain_vs_background": 0.01610461389645934,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.0019822679460048676,
+                "db.filter_cmp_top": -0.0005627861246466637,
+                "file.search_last": 0.01610461389645934,
+                "py.median": 0.0006495770066976547
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": 0.00012837164103984833,
+              "gain_vs_background": 0.006135595845989883,
+              "own_skill_gain_vs_background": 0.019246188458055258,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.005627185106277466,
+                "db.filter_cmp_top": -0.0012972988188266754,
+                "file.search_last": 0.019246188458055258,
+                "py.median": 0.0009663086384534836
+              }
+            },
+            "final_nll": {
+              "absolute_drop": 0.001413149442669237,
+              "gain_vs_background": 0.002842140951543115,
+              "own_skill_gain_vs_background": 0.011106675956398249,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 1.961852831300348e-05,
+                "db.filter_cmp_top": 0.0005655164859490469,
+                "file.search_last": 0.011106675956398249,
+                "py.median": -0.00032324716448783875
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.0013742586597800255,
+              "gain_vs_background": 0.0027161913458257914,
+              "own_skill_gain_vs_background": 0.0073506636545062065,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.0018291175365447998,
+                "db.filter_cmp_top": 0.0001346394419670105,
+                "file.search_last": 0.0073506636545062065,
+                "py.median": 0.0015503447502851486
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0042404558589623775,
+              "gain_vs_background": 0.0016546000042581,
+              "own_skill_gain_vs_background": 8.049505413509905e-05,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.004538208246231079,
+                "db.filter_cmp_top": 0.00015126913785934448,
+                "file.search_last": 8.049505413509905e-05,
+                "py.median": 0.0018484275788068771
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.0002447378064971417,
+              "gain_vs_background": 0.005351971121854149,
+              "own_skill_gain_vs_background": 0.020679302513599396,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00018008536426350474,
+                "db.filter_cmp_top": -8.231028914451599e-06,
+                "file.search_last": 0.020679302513599396,
+                "py.median": 0.0005567276384681463
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.006565633209723699,
+          "check_gain_per_1k_tokens": 0.003925132002638427,
+          "scores": {
+            "db.list_tables": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "db.filter_cmp_top": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "file.search_last": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 1.0,
+              "execution_success": 1.0,
+              "final_correct": 0.0
+            },
+            "py.median": {
+              "joint_success": 0.0,
+              "tool_correct": 0.0,
+              "arguments_correct": 1.0,
+              "execution_success": 0.0,
+              "final_correct": 0.0
+            }
+          }
+        },
+        "py.median_2": {
+          "dose": 2,
+          "receipt": {
+            "seed": 20261108,
+            "arm": "py.median",
+            "dose": 2,
+            "actual_optimizer_steps": 2,
+            "replay_input_tokens": 722,
+            "delta_norm": 0.13079650700092316,
+            "linear_predicted_dev_drop": 0.003341968636959791,
+            "common_calendar_ids": [
+              "calendar-train-calendar_count_month-004",
+              "calendar-train-calendar_free_slot-008",
+              "calendar-train-calendar_attendees-008",
+              "calendar-train-calendar_free_slot-006",
+              "calendar-train-calendar_count_month-011",
+              "calendar-train-calendar_count_date-000",
+              "calendar-train-calendar_list_titles-002"
+            ],
+            "replay_id": "python-train-target_median_natural-014",
+            "prefix_hash": "2ddde89f2cefca2b15360e994db7628a8409f981b0d02e2e56f5cab4d1dd7c82"
+          },
+          "p6_B": 0.3312098826592124,
+          "p6_norm": 2.77205228805542,
+          "actual_candidate": {
+            "single_gradient_norm": 5.965964317321777,
+            "single_raw_dot": 1.1171886920928955,
+            "single_unit_dot": 0.18726037442684174,
+            "input_tokens": [
+              361,
+              361
+            ]
+          },
+          "dev": {
+            "nll": {
+              "absolute_drop": 0.0019573912722989917,
+              "gain_vs_background": 0.0046290860045701265,
+              "own_skill_gain_vs_background": 0.01583860907703638,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.002670861780643463,
+                "db.filter_cmp_top": -0.0006101634353399277,
+                "file.search_last": 0.0006170365959405899,
+                "py.median": 0.01583860907703638
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0009263636311516166,
+              "gain_vs_background": 0.005080860573798418,
+              "own_skill_gain_vs_background": 0.013126356061547995,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.006955362856388092,
+                "db.filter_cmp_top": -0.0016881134361028671,
+                "file.search_last": 0.0019298368133604527,
+                "py.median": 0.013126356061547995
+              }
+            },
+            "final_nll": {
+              "absolute_drop": 0.004591368311594124,
+              "gain_vs_background": 0.006020359820468002,
+              "own_skill_gain_vs_background": 0.024169089272618294,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00036384767008712515,
+                "db.filter_cmp_top": 0.0010200003889622167,
+                "file.search_last": -0.0014714980497956276,
+                "py.median": 0.024169089272618294
+              }
+            }
+          },
+          "check": {
+            "nll": {
+              "absolute_drop": -0.0013471569400280714,
+              "gain_vs_background": 0.0027432930655777454,
+              "own_skill_gain_vs_background": 0.008005930110812187,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.004140868782997131,
+                "db.filter_cmp_top": 0.0005830526351928711,
+                "file.search_last": -0.0017566792666912079,
+                "py.median": 0.008005930110812187
+              }
+            },
+            "tool_nll": {
+              "absolute_drop": -0.0006289927514444571,
+              "gain_vs_background": 0.00526606311177602,
+              "own_skill_gain_vs_background": 0.009822670370340347,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.01037144660949707,
+                "db.filter_cmp_top": 0.0008812099695205688,
+                "file.search_last": -1.1074502253904939e-05,
+                "py.median": 0.009822670370340347
+              }
+            },
+            "final_nll": {
+              "absolute_drop": -0.006237970519578084,
+              "gain_vs_background": -0.0006412615912267938,
+              "own_skill_gain_vs_background": 0.0019501186907291412,
+              "by_skill_gain_vs_background": {
+                "db.list_tables": 0.00034835649421438575,
+                "db.filter_cmp_top": 9.343912824988365e-05,
+                "file.search_last": -0.004956960678100586,
+                "py.median": 0.0019501186907291412
+              }
+            }
+          },
+          "dev_gain_per_1k_tokens": 0.006411476460623444,
+          "check_gain_per_1k_tokens": 0.0037995748830716696,
+          "scores": {
+            "db.list_tables": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "db.filter_cmp_top": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 0.0,
+              "execution_success": 1.0,
+              "final_correct": 1.0
+            },
+            "file.search_last": {
+              "joint_success": 0.0,
+              "tool_correct": 1.0,
+              "arguments_correct": 1.0,
+              "execution_success": 1.0,
+              "final_correct": 0.0
+            },
+            "py.median": {
+              "joint_success": 0.0,
+              "tool_correct": 0.0,
+              "arguments_correct": 1.0,
+              "execution_success": 0.0,
+              "final_correct": 0.0
+            }
+          }
+        }
+      },
+      "cost": {
+        "seed": 20261108,
+        "costs": {
+          "restorations": 12,
+          "nll_forward": 264,
+          "generation_episodes": 48,
+          "diagnostic_backward": 21,
+          "training_backward": 80,
+          "training_input_tokens": 35663,
+          "optimizer_steps": 10
+        },
+        "seconds": 295.3693063259125,
+        "prefix_restored": true,
+        "frozen_inputs_unchanged": true
+      },
+      "choices": {
+        "1": {
+          "p6_proxy": "db.list_tables",
+          "measured_dev": "db.list_tables",
+          "check_oracle": "db.list_tables",
+          "spearman_proxy_to_check": 0.8,
+          "spearman_dev_to_check": 0.2,
+          "spearman_norm_to_check": 0.2,
+          "check_gain_per_1k_tokens": {
+            "db.list_tables": 0.041606719605624676,
+            "db.filter_cmp_top": 0.0035045396960163952,
+            "file.search_last": 0.004056432660211597,
+            "py.median": 0.0026084520077523763
+          }
+        },
+        "2": {
+          "p6_proxy": "db.list_tables",
+          "measured_dev": "db.list_tables",
+          "check_oracle": "db.list_tables",
+          "spearman_proxy_to_check": 1.0,
+          "spearman_dev_to_check": 0.4,
+          "spearman_norm_to_check": 0.4,
+          "check_gain_per_1k_tokens": {
+            "db.list_tables": 0.05081705261117724,
+            "db.filter_cmp_top": 0.0021079492481632964,
+            "file.search_last": 0.003925132002638427,
+            "py.median": 0.0037995748830716696
+          }
+        }
+      },
+      "background_scores": {
+        "db.list_tables": {
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "execution_success": 1.0,
+          "final_correct": 1.0
+        },
+        "db.filter_cmp_top": {
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 0.0,
+          "execution_success": 1.0,
+          "final_correct": 1.0
+        },
+        "file.search_last": {
+          "joint_success": 0.0,
+          "tool_correct": 1.0,
+          "arguments_correct": 1.0,
+          "execution_success": 1.0,
+          "final_correct": 0.0
+        },
+        "py.median": {
+          "joint_success": 0.0,
+          "tool_correct": 0.0,
+          "arguments_correct": 1.0,
+          "execution_success": 0.0,
+          "final_correct": 0.0
+        }
+      }
+    }
+  },
+  "complete": false
+}

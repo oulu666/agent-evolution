@@ -1,0 +1,712 @@
+{
+  "created": "2026-11-15 04:06:04 +0800",
+  "policy_frozen_before_any_formal_test": true,
+  "plans": {
+    "data_ext_p6_devplan/plans/A_seed20261108_balanced_uniform.json": "4f41847e7db08218e6f38d4e2f57e2a18a6b5ec2f44f8ef3580e5bc7c1d8de26",
+    "data_ext_p6_devplan/plans/A_seed20261108_balanced_early.json": "faf54b1ef082cfa0d20caeccacb0f0c1b23d3771478bbe765fc6659e67735a18",
+    "data_ext_p6_devplan/plans/A_seed20261108_devgrad_uniform.json": "e505efa62d84fbf7458193c2c8009fdc7a563f49b8e6f2022578112cbc1a5258",
+    "data_ext_p6_devplan/plans/A_seed20261109_balanced_uniform.json": "162fbf8ff814d4da2507fd38971371ea8ef9df38168af1bcd09e03934076b0ec",
+    "data_ext_p6_devplan/plans/A_seed20261109_balanced_early.json": "cb354ce03ae3b0a211caa95b961d3a61d8adb299658514fd27841706a3b17fb6",
+    "data_ext_p6_devplan/plans/A_seed20261109_devgrad_uniform.json": "0ddf14ade1568091f67a0e42b964fe9d42b2563c452153356a79052d4819ada3",
+    "data_ext_p6_devplan/plans/A_seed20261110_balanced_uniform.json": "0def4b68b9cf5e89256d2d0f25792dd954053a19e2229c6437d95901cf92dc7b",
+    "data_ext_p6_devplan/plans/A_seed20261110_balanced_early.json": "833fa802d444fbfa33ca164e738d114b748cb591f0111e03b9f1d41e009669cc",
+    "data_ext_p6_devplan/plans/A_seed20261110_devgrad_uniform.json": "c535f8ef3d1c96361d493dbf4eb0841041c1c4ebe274f34e464726aee95d7eb3"
+  },
+  "calibration": {
+    "runs_ext_p6_devplan/calibration/A_seed20261108.json": "e134bdf65aa7c442d10728c6fc1973cc271e291b0ecf11294560a42259d946d9",
+    "runs_ext_p6_devplan/calibration/A_seed20261109.json": "beaecff797f160f962f2f24d649895cf804ec14ece387913cf3f7bec62534e57",
+    "runs_ext_p6_devplan/calibration/A_seed20261110.json": "e3dd73444fc75fb3d706d24d0b8277006a8aae849e3076512706399bd062c866"
+  },
+  "summary": {
+    "A_seed20261108_balanced_uniform": {
+      "arm": "balanced_uniform",
+      "counts": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-target_db_filter_top-002",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "file-train-e4_last_match-000",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "python-train-target_median_natural-014",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "database-train-target_db_filter_top-001",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "python-train-target_median_natural-017",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261108_balanced_early": {
+      "arm": "balanced_early",
+      "counts": {
+        "py.median": 3,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 2,
+        "file.search_last": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 1,
+          "position": 87,
+          "after": 12
+        },
+        {
+          "id": "database-train-target_db_filter_top-002",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "file-train-e4_last_match-000",
+          "index": 3,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "python-train-target_median_natural-014",
+          "index": 4,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-target_db_filter_top-001",
+          "index": 6,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "python-train-target_median_natural-017",
+          "index": 8,
+          "position": 119,
+          "after": 8
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261108_devgrad_uniform": {
+      "arm": "devgrad_uniform",
+      "counts": {
+        "py.median": 1,
+        "db.list_tables": 5,
+        "db.filter_cmp_top": 1,
+        "file.search_last": 3
+      },
+      "benefit": {
+        "db.list_tables": 0.7716303308081806,
+        "db.filter_cmp_top": 0.2645842699162005,
+        "file.search_last": 0.5424135917258885,
+        "py.median": 0.3312098826592124
+      },
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-target_db_filter_top-002",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "file-train-e4_last_match-000",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "file-train-e4_last_match-001",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261109_balanced_uniform": {
+      "arm": "balanced_uniform",
+      "counts": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "file-train-e4_last_match-001",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "python-train-target_median_natural-014",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-target_db_filter_top-004",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "python-train-target_median_natural-015",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "database-train-target_db_filter_top-002",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "file-train-e4_last_match-003",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "python-train-target_median_natural-020",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261109_balanced_early": {
+      "arm": "balanced_early",
+      "counts": {
+        "file.search_last": 3,
+        "py.median": 3,
+        "db.list_tables": 2,
+        "db.filter_cmp_top": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "file-train-e4_last_match-001",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "python-train-target_median_natural-014",
+          "index": 1,
+          "position": 87,
+          "after": 12
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-target_db_filter_top-004",
+          "index": 3,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 4,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "python-train-target_median_natural-015",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 6,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "database-train-target_db_filter_top-002",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "file-train-e4_last_match-003",
+          "index": 8,
+          "position": 119,
+          "after": 8
+        },
+        {
+          "id": "python-train-target_median_natural-020",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261109_devgrad_uniform": {
+      "arm": "devgrad_uniform",
+      "counts": {
+        "file.search_last": 4,
+        "py.median": 2,
+        "db.list_tables": 3,
+        "db.filter_cmp_top": 1
+      },
+      "benefit": {
+        "db.list_tables": 0.42733665222274936,
+        "db.filter_cmp_top": 0.18325258973336658,
+        "file.search_last": 0.6798667344722966,
+        "py.median": 0.4862109999810877
+      },
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "file-train-e4_last_match-001",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "python-train-target_median_natural-014",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-target_db_filter_top-004",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "file-train-e4_last_match-005",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "python-train-target_median_natural-015",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "file-train-e4_last_match-003",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "file-train-e4_last_match-006",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261110_balanced_uniform": {
+      "arm": "balanced_uniform",
+      "counts": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "database-train-target_db_filter_top-007",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "file-train-e4_last_match-002",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "database-train-target_db_filter_top-005",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "python-train-target_median_natural-017",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "file-train-e4_last_match-004",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "database-train-target_db_filter_top-003",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261110_balanced_early": {
+      "arm": "balanced_early",
+      "counts": {
+        "db.filter_cmp_top": 3,
+        "db.list_tables": 3,
+        "py.median": 2,
+        "file.search_last": 2
+      },
+      "benefit": null,
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "database-train-target_db_filter_top-007",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 1,
+          "position": 87,
+          "after": 12
+        },
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "file-train-e4_last_match-002",
+          "index": 3,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "database-train-target_db_filter_top-005",
+          "index": 4,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "python-train-target_median_natural-017",
+          "index": 6,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "file-train-e4_last_match-004",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "database-train-target_db_filter_top-003",
+          "index": 8,
+          "position": 119,
+          "after": 8
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    },
+    "A_seed20261110_devgrad_uniform": {
+      "arm": "devgrad_uniform",
+      "counts": {
+        "db.filter_cmp_top": 1,
+        "db.list_tables": 6,
+        "py.median": 1,
+        "file.search_last": 2
+      },
+      "benefit": {
+        "db.list_tables": 0.8114614684777524,
+        "db.filter_cmp_top": 0.12835796391951984,
+        "file.search_last": 0.4057083525029535,
+        "py.median": 0.1367185680598386
+      },
+      "budget_deviation": 0,
+      "target_timing": [
+        {
+          "id": "database-train-target_db_filter_top-007",
+          "index": 0,
+          "position": 87,
+          "after": 13
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 2,
+          "position": 95,
+          "after": 11
+        },
+        {
+          "id": "python-train-target_median_natural-016",
+          "index": 5,
+          "position": 103,
+          "after": 10
+        },
+        {
+          "id": "file-train-e4_last_match-002",
+          "index": 7,
+          "position": 111,
+          "after": 9
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 9,
+          "position": 119,
+          "after": 7
+        },
+        {
+          "id": "file-train-e4_last_match-004",
+          "index": 12,
+          "position": 127,
+          "after": 6
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 14,
+          "position": 135,
+          "after": 5
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 16,
+          "position": 143,
+          "after": 4
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 19,
+          "position": 159,
+          "after": 1
+        },
+        {
+          "id": "database-train-db_list_tables-000",
+          "index": 21,
+          "position": 159,
+          "after": 1
+        }
+      ],
+      "planner": "one-shot development gradient proxy; no observed response-speed measurement",
+      "background_rule": "same 4/family token-residual filler, no dev/test score"
+    }
+  }
+}

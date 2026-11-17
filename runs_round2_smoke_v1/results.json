@@ -1,0 +1,221 @@
+{
+  "rows": [
+    {
+      "seed": 20261108,
+      "mode": "start",
+      "suite": "historical",
+      "old_joint": 0.6222223333333333,
+      "old_answer": 0.688889,
+      "new_joint": 0.0,
+      "new_answer": 0.0
+    },
+    {
+      "seed": 20261108,
+      "mode": "start",
+      "suite": "natural_final",
+      "old_joint": 0.5111113333333334,
+      "old_answer": 0.5333333333333333,
+      "new_joint": null,
+      "new_answer": null
+    },
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "suite": "historical",
+      "old_joint": 0.6,
+      "old_answer": 0.6666666666666666,
+      "new_joint": 0.6,
+      "new_answer": 0.6
+    },
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "suite": "natural_final",
+      "old_joint": 0.2333333333333333,
+      "old_answer": 0.42222233333333337,
+      "new_joint": null,
+      "new_answer": null
+    },
+    {
+      "seed": 20261108,
+      "mode": "targeted",
+      "suite": "historical",
+      "old_joint": 0.6333333333333333,
+      "old_answer": 0.7,
+      "new_joint": 0.366667,
+      "new_answer": 0.366667
+    },
+    {
+      "seed": 20261108,
+      "mode": "targeted",
+      "suite": "natural_final",
+      "old_joint": 0.6555556666666666,
+      "old_answer": 0.6666666666666666,
+      "new_joint": null,
+      "new_answer": null
+    }
+  ],
+  "aggregates": {
+    "historical": [
+      {
+        "mode": "start",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.6222223333333333,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.688889,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "new_answer": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      {
+        "mode": "none",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.6,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.6666666666666666,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": 0.6,
+          "std": 0.0
+        },
+        "new_answer": {
+          "mean": 0.6,
+          "std": 0.0
+        }
+      },
+      {
+        "mode": "targeted",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.6333333333333333,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.7,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": 0.366667,
+          "std": 0.0
+        },
+        "new_answer": {
+          "mean": 0.366667,
+          "std": 0.0
+        }
+      }
+    ],
+    "natural_final": [
+      {
+        "mode": "start",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.5111113333333334,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.5333333333333333,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": null,
+          "std": null
+        },
+        "new_answer": {
+          "mean": null,
+          "std": null
+        }
+      },
+      {
+        "mode": "none",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.2333333333333333,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.42222233333333337,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": null,
+          "std": null
+        },
+        "new_answer": {
+          "mean": null,
+          "std": null
+        }
+      },
+      {
+        "mode": "targeted",
+        "n_seeds": 1,
+        "old_joint": {
+          "mean": 0.6555556666666666,
+          "std": 0.0
+        },
+        "old_answer": {
+          "mean": 0.6666666666666666,
+          "std": 0.0
+        },
+        "new_joint": {
+          "mean": null,
+          "std": null
+        },
+        "new_answer": {
+          "mean": null,
+          "std": null
+        }
+      }
+    ]
+  },
+  "comparisons": [],
+  "costs": [
+    {
+      "seed": 20261108,
+      "mode": "none",
+      "new_input_tokens": 74944,
+      "replay_input_tokens": 0,
+      "replay_supervised_tokens": 0,
+      "target_fraction": 0.0,
+      "adaptive_triggered": false,
+      "target_family_weights": {},
+      "target_samples_by_family": {},
+      "duration_seconds": 212.666,
+      "actual_elapsed_seconds": 212.666
+    },
+    {
+      "seed": 20261108,
+      "mode": "targeted",
+      "new_input_tokens": 74944,
+      "replay_input_tokens": 5752,
+      "replay_supervised_tokens": 1009,
+      "target_fraction": 0.5,
+      "adaptive_triggered": false,
+      "target_family_weights": {
+        "database": 0.3333333333333333,
+        "file": 0.3333333333333333,
+        "python": 0.3333333333333333
+      },
+      "target_samples_by_family": {
+        "database": 7,
+        "file": 3,
+        "python": 1
+      },
+      "duration_seconds": 212.851,
+      "actual_elapsed_seconds": 70.531
+    }
+  ]
+}

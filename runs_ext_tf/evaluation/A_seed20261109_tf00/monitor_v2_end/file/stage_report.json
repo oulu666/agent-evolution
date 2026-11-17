@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "A_seed20261109_tf00_eval",
+  "family": "file",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.84375,
+    "argument_accuracy": 0.84375,
+    "execution_success_rate": 0.84375,
+    "final_task_success_rate": 0.0,
+    "joint_success_rate": 0.0,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 27,
+    "conditional_argument_denominator": 27
+  },
+  "skill_metrics": {
+    "file_search": {
+      "n": 32,
+      "tool_selection_accuracy": 0.84375,
+      "argument_accuracy": 0.84375,
+      "execution_success_rate": 0.84375,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 27,
+      "conditional_argument_denominator": 27
+    },
+    "line_index": {
+      "n": 32,
+      "tool_selection_accuracy": 0.84375,
+      "argument_accuracy": 0.84375,
+      "execution_success_rate": 0.84375,
+      "final_task_success_rate": 0.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 27,
+      "conditional_argument_denominator": 27
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 18171,
+    "output_tokens": 1823,
+    "total_tokens": 19994,
+    "generation_seconds": 10.723584,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 18171,
+      "output_tokens": 1823,
+      "total_tokens": 19994,
+      "generation_seconds": 10.723584
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 11.02
+  },
+  "peak_gpu_gb": 2.411,
+  "duration_seconds": 11.02,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_tf/branches/A_seed20261109_tf00/checkpoint"
+}

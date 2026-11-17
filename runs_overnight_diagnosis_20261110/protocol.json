@@ -1,0 +1,4692 @@
+{
+  "version": 1,
+  "profile": "full",
+  "smoke": false,
+  "n_pairs": 96,
+  "batch_size": 32,
+  "training": false,
+  "purpose": "development diagnosis; paired tasks are not a final policy test",
+  "states": [
+    {
+      "id": "A_seed20261108_stage_03_python",
+      "order": "A",
+      "seed": 20261108,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261108_stage_03_python",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261108_v2_midpoint",
+      "order": "A",
+      "seed": 20261108,
+      "index": 3,
+      "kind": "midpoint",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python",
+      "prefix": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108",
+      "stage": {
+        "name": "A_seed20261108_v2_midpoint",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261108_v2_none_final",
+      "order": "A",
+      "seed": 20261108,
+      "index": 4,
+      "kind": "none",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261108_none/checkpoint",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261108_v2_none_final",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261108_none/checkpoint"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261108_stage_04_calendar",
+      "order": "A",
+      "seed": 20261108,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_04_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261108_stage_04_calendar",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_04_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261109_stage_03_python",
+      "order": "A",
+      "seed": 20261109,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261109_stage_03_python",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261109_v2_midpoint",
+      "order": "A",
+      "seed": 20261109,
+      "index": 3,
+      "kind": "midpoint",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python",
+      "prefix": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109",
+      "stage": {
+        "name": "A_seed20261109_v2_midpoint",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261109_v2_none_final",
+      "order": "A",
+      "seed": 20261109,
+      "index": 4,
+      "kind": "none",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261109_none/checkpoint",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261109_v2_none_final",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261109_none/checkpoint"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261109_stage_04_calendar",
+      "order": "A",
+      "seed": 20261109,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_04_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261109_stage_04_calendar",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_04_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261110_stage_03_python",
+      "order": "A",
+      "seed": 20261110,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261110_stage_03_python",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261110_v2_midpoint",
+      "order": "A",
+      "seed": 20261110,
+      "index": 3,
+      "kind": "midpoint",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+      "prefix": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110",
+      "stage": {
+        "name": "A_seed20261110_v2_midpoint",
+        "family": "python",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261110_v2_none_final",
+      "order": "A",
+      "seed": 20261110,
+      "index": 4,
+      "kind": "none",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261110_none/checkpoint",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261110_v2_none_final",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261110_none/checkpoint"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261110_stage_04_calendar",
+      "order": "A",
+      "seed": 20261110,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_04_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261110_stage_04_calendar",
+        "family": "calendar",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_04_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar",
+        "probe/file",
+        "probe/database",
+        "probe/python",
+        "paired/python"
+      ]
+    },
+    {
+      "id": "A_seed20261108_stage_01_file",
+      "order": "A",
+      "seed": 20261108,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_01_file",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261108_stage_01_file",
+        "family": "file",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_01_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "A_seed20261108_stage_02_database",
+      "order": "A",
+      "seed": 20261108,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_02_database",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261108_stage_02_database",
+        "family": "database",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_02_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "A_seed20261109_stage_01_file",
+      "order": "A",
+      "seed": 20261109,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_01_file",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261109_stage_01_file",
+        "family": "file",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_01_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "A_seed20261109_stage_02_database",
+      "order": "A",
+      "seed": 20261109,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_02_database",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261109_stage_02_database",
+        "family": "database",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_02_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "A_seed20261110_stage_01_file",
+      "order": "A",
+      "seed": 20261110,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_01_file",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261110_stage_01_file",
+        "family": "file",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_01_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "A_seed20261110_stage_02_database",
+      "order": "A",
+      "seed": 20261110,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_02_database",
+      "prefix": null,
+      "stage": {
+        "name": "A_seed20261110_stage_02_database",
+        "family": "database",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_02_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "file",
+            "database",
+            "python",
+            "calendar"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_02_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_03_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_04_calendar",
+            "family": "calendar"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "A_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261108_stage_01_calendar",
+      "order": "B",
+      "seed": 20261108,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261108_stage_01_calendar",
+        "family": "calendar",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261108_stage_02_python",
+      "order": "B",
+      "seed": 20261108,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_02_python",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261108_stage_02_python",
+        "family": "python",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_02_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261108_stage_03_database",
+      "order": "B",
+      "seed": 20261108,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_03_database",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261108_stage_03_database",
+        "family": "database",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_03_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261108_stage_04_file",
+      "order": "B",
+      "seed": 20261108,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_04_file",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261108_stage_04_file",
+        "family": "file",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_04_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261109_stage_01_calendar",
+      "order": "B",
+      "seed": 20261109,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_01_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261109_stage_01_calendar",
+        "family": "calendar",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_01_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261109_stage_02_python",
+      "order": "B",
+      "seed": 20261109,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_02_python",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261109_stage_02_python",
+        "family": "python",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_02_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261109_stage_03_database",
+      "order": "B",
+      "seed": 20261109,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_03_database",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261109_stage_03_database",
+        "family": "database",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_03_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261109_stage_04_file",
+      "order": "B",
+      "seed": 20261109,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_04_file",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261109_stage_04_file",
+        "family": "file",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_04_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261110_stage_01_calendar",
+      "order": "B",
+      "seed": 20261110,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_01_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261110_stage_01_calendar",
+        "family": "calendar",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_01_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261110_stage_02_python",
+      "order": "B",
+      "seed": 20261110,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_02_python",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261110_stage_02_python",
+        "family": "python",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_02_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261110_stage_03_database",
+      "order": "B",
+      "seed": 20261110,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_03_database",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261110_stage_03_database",
+        "family": "database",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_03_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "B_seed20261110_stage_04_file",
+      "order": "B",
+      "seed": 20261110,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_04_file",
+      "prefix": null,
+      "stage": {
+        "name": "B_seed20261110_stage_04_file",
+        "family": "file",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_04_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "calendar",
+            "python",
+            "database",
+            "file"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_02_python",
+            "family": "python"
+          },
+          {
+            "name": "stage_03_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_04_file",
+            "family": "file"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "B_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261108_stage_01_database",
+      "order": "C",
+      "seed": 20261108,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261108_stage_01_database",
+        "family": "database",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261108_stage_02_file",
+      "order": "C",
+      "seed": 20261108,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261108_stage_02_file",
+        "family": "file",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261108_stage_03_calendar",
+      "order": "C",
+      "seed": 20261108,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261108_stage_03_calendar",
+        "family": "calendar",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261108_stage_04_python",
+      "order": "C",
+      "seed": 20261108,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261108_stage_04_python",
+        "family": "python",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261108,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261108"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261109_stage_01_database",
+      "order": "C",
+      "seed": 20261109,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_01_database",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261109_stage_01_database",
+        "family": "database",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_01_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261109_stage_02_file",
+      "order": "C",
+      "seed": 20261109,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261109_stage_02_file",
+        "family": "file",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261109_stage_03_calendar",
+      "order": "C",
+      "seed": 20261109,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_03_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261109_stage_03_calendar",
+        "family": "calendar",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_03_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261109_stage_04_python",
+      "order": "C",
+      "seed": 20261109,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_04_python",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261109_stage_04_python",
+        "family": "python",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_04_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261109,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261109"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261110_stage_01_database",
+      "order": "C",
+      "seed": 20261110,
+      "index": 1,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_01_database",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261110_stage_01_database",
+        "family": "database",
+        "index": 1,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_01_database"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261110_stage_02_file",
+      "order": "C",
+      "seed": 20261110,
+      "index": 2,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_02_file",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261110_stage_02_file",
+        "family": "file",
+        "index": 2,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_02_file"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261110_stage_03_calendar",
+      "order": "C",
+      "seed": 20261110,
+      "index": 3,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_03_calendar",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261110_stage_03_calendar",
+        "family": "calendar",
+        "index": 3,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_03_calendar"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    },
+    {
+      "id": "C_seed20261110_stage_04_python",
+      "order": "C",
+      "seed": 20261110,
+      "index": 4,
+      "kind": "historical",
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_04_python",
+      "prefix": null,
+      "stage": {
+        "name": "C_seed20261110_stage_04_python",
+        "family": "python",
+        "index": 4,
+        "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_04_python"
+      },
+      "config": {
+        "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+        "seed": 20261110,
+        "split_seed": 20261108,
+        "data_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2",
+        "output_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2",
+        "device": "cuda",
+        "dtype": "auto",
+        "trust_remote_code": true,
+        "quantization": {
+          "load_in_4bit": true,
+          "bnb_4bit_quant_type": "nf4",
+          "bnb_4bit_use_double_quant": true,
+          "bnb_4bit_compute_dtype": "auto"
+        },
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ]
+        },
+        "training": {
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+          "gradient_accumulation_steps": 8,
+          "num_epochs": 2,
+          "max_seq_length": 1024,
+          "gradient_checkpointing": true,
+          "optimizer": "paged_adamw_8bit",
+          "logging_steps": 1
+        },
+        "evaluation": {
+          "batch_size": 32,
+          "max_new_tokens_tool": 128,
+          "max_new_tokens_answer": 128,
+          "do_sample": false,
+          "temperature": 0.0,
+          "all_families": true,
+          "test_limit": null
+        },
+        "data": {
+          "families": [
+            "database",
+            "file",
+            "calendar",
+            "python"
+          ],
+          "train_per_family": 80,
+          "val_per_family": 20,
+          "test_per_family": 30
+        },
+        "stages": [
+          {
+            "name": "stage_00_base",
+            "family": null
+          },
+          {
+            "name": "stage_01_database",
+            "family": "database"
+          },
+          {
+            "name": "stage_02_file",
+            "family": "file"
+          },
+          {
+            "name": "stage_03_calendar",
+            "family": "calendar"
+          },
+          {
+            "name": "stage_04_python",
+            "family": "python"
+          }
+        ],
+        "oom_advice": true,
+        "_config_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/configs/phase2_base.json",
+        "_project_root": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+        "run_name": "C_seed20261110"
+      },
+      "units": [
+        "historical/file",
+        "historical/database",
+        "historical/python",
+        "historical/calendar"
+      ]
+    }
+  ],
+  "dataset_counts": {
+    "paired/python": 192,
+    "historical/file": 30,
+    "historical/database": 30,
+    "historical/python": 30,
+    "historical/calendar": 30,
+    "probe/file": 24,
+    "probe/database": 24,
+    "probe/python": 24
+  },
+  "input_sha256": {
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/test.jsonl": "ea59377e110c03cb9fea3e5e326fa54697f7481d67bd6b4cd3fef1bc62b436ca",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/train.jsonl": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/calendar/val.jsonl": "f696f08dfb77fe761b4413c9ed3ec533346101c35c31c2bda13463da129d97e1",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/test.jsonl": "9a29366492ec7b8a653da7dfa34f2688ca757fe0e6227f55d871646d4876d5e2",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/train.jsonl": "8622dbafd9ebed874e04a1e6873a8f9f4c388831dc6c82220e5892357ed98e4b",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/database/val.jsonl": "41da84c4c714f22249b6ff02bc589693f52969f27a3dab2682abefede4ce3767",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/test.jsonl": "3b85ca683c441b45d38e525e1d644df7254bd15bbb3d26fb1a2318388db19c66",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/train.jsonl": "24ed54e22517833aa33b3f9e7d08a8dbf0be1c0cd7376ed4f80291357ba14e42",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/file/val.jsonl": "8542d4b9b19e3b07a4f88f7265afcc7dfebedc6df78841ca40822176c02da196",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/fixtures/toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/test.jsonl": "48fa28570bc0ecacd3b140a467a9e8611030225be53ace5dbdc12849163af747",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/train.jsonl": "c5b9438954123d199933fd996b04270a19074f593aff6ee4f5728e73c4c422c7",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_phase2/python/val.jsonl": "df16bc4bbbf502e17351178464246b2d43108ceb78ab53d876a05e0bf4fb2d2f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/calendar/probe.jsonl": "151947936898ffc5c091b25aac8ec91fb0a8033b2c31daabd6d787fb8c5404a6",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/calendar/sealed_test.jsonl": "87e78639ecc4b97717a894f34bd4c110920a2f1c255f85b602e3237efa48ab04",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/database/probe.jsonl": "8df58c89c00d1943a00530ca6f131e08799d12a9d48814c0deb3504caa406cc3",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/database/sealed_test.jsonl": "d26e91bbe03eaf9aed1b761fe6c258b43f5f2be8712e2766247d4b87c767223f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/file/probe.jsonl": "7a9ab998cb36cd01e7b0b6b0c3c52b5a66b68d22815599c95ff69806d474986a",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/file/sealed_test.jsonl": "f9ab646b610ce32182af7d0612d112f3e1de9ea8526bb9aba4b89bb4a62d3e0c",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/fixtures/toolbench.db": "82b8a0409326ca7633a124cd6279157da49b4bf129ba1fc394b9f4e5cadc8fe4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/python/probe.jsonl": "3009df8297dc2ef471a73825842ae9b759ec62764a9640cca2a7a10323c0c909",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_replay_study/python/sealed_test.jsonl": "1055953f4c83268c64d3f00fa0f760255bebe597b401fa9e6e24c937c59a1f4e",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/config.py": "5760231e1eef1ef233b2e149c576953a7c706da3309766ea626f3cfe84d12d86",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/data/generate.py": "cd0794d9d5bb8f23105c166f61389a0dfdc71c777a0fbd0a17ecab28f5a6d135",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/data/templates.py": "8be5b6a092708ca93e3582d374c47734011d428535e7fffdf257a3d10bd68b4f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/metrics.py": "9558a5b9c4befbaf2a605a3efab7d3af95502ed8f640d30318ac51330a92fdf0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/overnight_diagnosis.py": "f3c663263d702a1bd0cfb25f5aaa744bb7e94d3431bcfb6f205bd22c9b9ddbf8",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/paired_median_data.py": "5bf8643f0badbbab8d0e03311c98d0547180894ca7498d76b16837d6870fe133",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/replay_study.py": "4a13cf746e6df456fbf28dc8a28281eaea92741f8f1c1bf811720ed925bc5ee4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/research_data.py": "80162383df5c893c61d6e90aecba9162f2b58ddffe3b5a84907986524fd6f609",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/dataset.py": "253ef011111e45aa032858056415b4bcacc57df4acb2646aaa9b2885ac80852e",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/evaluate.py": "d4e7311c472a194bd4f742c6da491d74181cb861f929a8dbbf00d5c7af5ca964",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/sft/train.py": "e73d7bdddb4a504e71dbb6845e82bba4b058514398d5a9437b0ef1e827f7493d",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/__init__.py": "fa793bf3bc8d798edb8c0bc5cbd2b5025632600f62ab65fbc01132c419c51ec0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/base.py": "b2a49cec62f1b08a384106723f1a6c204e7705ccae82a9b2fe99ae6a3ae8f754",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/calendar_tools.py": "62c24104472942173289553dcb9886a2dce9e1c9532eea1667bbffca3196938b",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/db_tools.py": "04b5692cb6d44e521a67588637cf61d9d2c78338b5e94c6c33a689469ad1eccc",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/file_tools.py": "9be515ba4bc9faf050fd8ce43afdaa8291645f0a7b37dfc313bd15bf35e1b006",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/tools/stats_tools.py": "085eadd2d91fbdfcce248585f7f8d21c5d12acb3d427f0890bfbaa46a2e8389c",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/utils.py": "613095c40cd69ae18039c372b068b8e17429b1428fbe5da8191bbd6424bbfd2a",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_overnight_diagnosis_20261110/data/paired_median.jsonl": "121daad203b4e24089ec4874a8701df778565ca5419490b4396cc6a0f49bf784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_01_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_01_file/adapter_model.safetensors": "434325921e4bdf292153b2310a9edbbb43240d4486c987911f1c8793ec0db404",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_02_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_02_database/adapter_model.safetensors": "961bd043a0b243de67b7cd51d3e9127b7ccfe8ccc5f769da6bc55462cd2fe4cd",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_model.safetensors": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_04_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261108/checkpoints/stage_04_calendar/adapter_model.safetensors": "d147cd1041643d0200fc2d5b399b8d0d5ae330465d32c0c5b1c7ffa2ae7eb772",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_01_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_01_file/adapter_model.safetensors": "28e22b660cfe9b5272b2e73398ca0286fcd9a4f0cf231760aac5610a0a980e6c",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_02_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_02_database/adapter_model.safetensors": "7564c9aaf4e7865be9e57bf5d4bfa85054969aa1f0ab1a0d466a045ef1f680c0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_03_python/adapter_model.safetensors": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_04_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261109/checkpoints/stage_04_calendar/adapter_model.safetensors": "3b36d0faf578ec46e319fc44e1f3d76e272f61d7b4b193c20725f28162c26b97",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_01_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_01_file/adapter_model.safetensors": "107cde4fd717c762f0634a5895dae1293f5d70e7e65ec02256c073ab32f205eb",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_02_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_02_database/adapter_model.safetensors": "ee7f7d3387e2a5a61d15093afdf20db5f2a3cc79bdb9d0d67fbdea9dc696b9d5",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python/adapter_model.safetensors": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_04_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_04_calendar/adapter_model.safetensors": "c32c1e5a90dcec80a2a07e4f92c07b70bc60e30c9bb66f90b47a558ac6f9ffc6",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_01_calendar/adapter_model.safetensors": "2aa55397c09e89ec60ddfb683388ea1641df12be2746379a4e7c1175135f2910",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_02_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_02_python/adapter_model.safetensors": "8076ca7a69859b65dd4d5ade65ec97ab23c74a3c1463339a03467ec9761949d5",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_03_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_03_database/adapter_model.safetensors": "8f9f2580d15c7b9e6c52a4bf360924f108a536f29f36e279211dd61bb9dd5892",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_04_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261108/checkpoints/stage_04_file/adapter_model.safetensors": "0be56f8b9db30d9c038fdeb6525284ec5aa4ae0b6b149ebc7b6c41f539348e0f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_01_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_01_calendar/adapter_model.safetensors": "6a377785c945e3c4e2c9bd13d6df538d2e86c35532570fdef03e47bafc8ffd86",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_02_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_02_python/adapter_model.safetensors": "26a881e6a4c1a5d8c11a4447ae5cb259b6d8f2982e48582868f58d7396b419a6",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_03_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_03_database/adapter_model.safetensors": "14ad9be10a29f1b726f0e069f8fc5660d7a318170084dbf0e81b8a6d14e04967",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_04_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261109/checkpoints/stage_04_file/adapter_model.safetensors": "d55051d8ded29319d87fcf704b85fe0a3bc684bacf5e0ffd7d2996753d8f5fce",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_01_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_01_calendar/adapter_model.safetensors": "6616080e3404f65f4fef208969037b3f5118c03947e41c43809d2521599581b5",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_02_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_02_python/adapter_model.safetensors": "85a0e71ef0a28efa3c8da34b77b0ee80c43d5611addddd0995e7a31d7d16d0e2",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_03_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_03_database/adapter_model.safetensors": "76aade42b7c4ce40e6d9272d9d006f576a88aea5c693b8a3badfd86a49a3ed6a",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_04_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/B_seed20261110/checkpoints/stage_04_file/adapter_model.safetensors": "8f9b92c056fdc85459ecb42f6fd679f21932a4c4b27bbd7fdfcb268fdb8aa0e5",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_01_database/adapter_model.safetensors": "e5097bd8790dfe391e8d44216702df4716cdc565c3330a2bd833518dee5df1ec",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_02_file/adapter_model.safetensors": "2084107c64c955af61aa3c52bb5d42b4418f5c691ab0c7c0bd8dec375783bca2",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_03_calendar/adapter_model.safetensors": "e62ef169834e4d1abb8832dd9eece799f115e2f06bd9f697f8822dd67c45a4c4",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261108/checkpoints/stage_04_python/adapter_model.safetensors": "6f63d1306f7fd2e1c52ff8663b2fbddf551ca3ad494ff410cc359314f7ee4b15",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_01_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_01_database/adapter_model.safetensors": "c93d2bca233502fdf6cabe25cf9070c995063affecde41c8c8e16d74921cff92",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_02_file/adapter_model.safetensors": "9e69798885493fe492dfcf331546c4ecfaf3493cc2b298be83fca2d0ca845088",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_03_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_03_calendar/adapter_model.safetensors": "d571d7f06564122f8bea9145200fcda37555f5fd206c287b33221395cd1055ec",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_04_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261109/checkpoints/stage_04_python/adapter_model.safetensors": "86ab6c0ea110a37473ddb75113ec5371353322e0863762e91cfbdc140207dbaa",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_01_database/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_01_database/adapter_model.safetensors": "2a49a769a957886e748f62981c79994e8b3254b84bc3e96e6e2de077e8e9a416",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_02_file/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_02_file/adapter_model.safetensors": "055ea1bd54beb33386b3780ba63187d069a115288efc7a9981c43cd28d516a2e",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_03_calendar/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_03_calendar/adapter_model.safetensors": "8a938b9531ce12f4d857c892770e89080193b0b4ddb413ce254a45108a2997fe",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_04_python/adapter_config.json": "3f4c304f256e4097ee1fce78a31153fe2df29451f116ee8217788cbed9cbe784",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/C_seed20261110/checkpoints/stage_04_python/adapter_model.safetensors": "63bad5944641e6998ce8491ee879b981609ab5af21241141c53648076df0006d",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261108_none/checkpoint/adapter_config.json": "ff4cadead8722022a45046f8408ac1686b8c50f7b0343d38135bcdb20de95647",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261108_none/checkpoint/adapter_model.safetensors": "8c445406f896e41961bc624e4232d2b619243cb9942b1dcfaf670153cbb5c7aa",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261109_none/checkpoint/adapter_config.json": "ff4cadead8722022a45046f8408ac1686b8c50f7b0343d38135bcdb20de95647",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261109_none/checkpoint/adapter_model.safetensors": "807d3d3792bf7dec5639f0e7ea61d3362bccff5a480f3384fd8c705e8c069bc0",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261110_none/checkpoint/adapter_config.json": "ff4cadead8722022a45046f8408ac1686b8c50f7b0343d38135bcdb20de95647",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/branches/A_seed20261110_none/checkpoint/adapter_model.safetensors": "b8d3580d843b1d9187922ae07f4ab444f239ce658a910f30aec3902bccbc2f29",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108/manifest.json": "86dad73fe0cfa535d914d22a6a70c701a286d5b42753e7d224c78db2827bc851",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261108/training_state.pt": "ea45d3cd6d45d403f41a9ab0007f501edbf131274d8931b3dbd4732888092381",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109/manifest.json": "5adef2d97c4ac32f0c40ba33b36b045b6c1aa38999b9b173b8fee9bfb754412f",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261109/training_state.pt": "aeaed6d1a6bfb9691eeafd826357d92a23bb972dcc95358260fa825fdc8e4f84",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110/manifest.json": "de717135b32a104ba9328b330d413f0c693b03a8ab7222ca219ab544da392da6",
+    "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_replay_study_v2_20261109/prefixes/A_seed20261110/training_state.pt": "028114cb86dd260ce755b2ef672646d819febe83eac77b47ead0f441623be2b6"
+  }
+}

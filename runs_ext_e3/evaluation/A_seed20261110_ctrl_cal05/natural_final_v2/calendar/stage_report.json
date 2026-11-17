@@ -1,0 +1,155 @@
+{
+  "stage_index": 4,
+  "stage_name": "E3_A_seed20261110_ctrl_cal05",
+  "family": "calendar",
+  "metrics": {
+    "n": 30,
+    "tool_selection_accuracy": 0.833333,
+    "argument_accuracy": 0.8,
+    "execution_success_rate": 0.8,
+    "final_task_success_rate": 0.733333,
+    "joint_success_rate": 0.733333,
+    "conditional_argument_accuracy": 0.96,
+    "conditional_argument_numerator": 24,
+    "conditional_argument_denominator": 25
+  },
+  "skill_metrics": {
+    "calendar_attendees": {
+      "n": 5,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 5,
+      "conditional_argument_denominator": 5
+    },
+    "calendar_count": {
+      "n": 10,
+      "tool_selection_accuracy": 0.8,
+      "argument_accuracy": 0.7,
+      "execution_success_rate": 0.7,
+      "final_task_success_rate": 0.7,
+      "joint_success_rate": 0.7,
+      "conditional_argument_accuracy": 0.875,
+      "conditional_argument_numerator": 7,
+      "conditional_argument_denominator": 8
+    },
+    "calendar_date": {
+      "n": 15,
+      "tool_selection_accuracy": 0.8,
+      "argument_accuracy": 0.8,
+      "execution_success_rate": 0.8,
+      "final_task_success_rate": 0.666667,
+      "joint_success_rate": 0.666667,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 12,
+      "conditional_argument_denominator": 12
+    },
+    "calendar_event": {
+      "n": 5,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 5,
+      "conditional_argument_denominator": 5
+    },
+    "calendar_free": {
+      "n": 5,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 5,
+      "conditional_argument_denominator": 5
+    },
+    "calendar_list": {
+      "n": 5,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.6,
+      "joint_success_rate": 0.6,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 5,
+      "conditional_argument_denominator": 5
+    },
+    "calendar_month": {
+      "n": 5,
+      "tool_selection_accuracy": 0.6,
+      "argument_accuracy": 0.4,
+      "execution_success_rate": 0.4,
+      "final_task_success_rate": 0.4,
+      "joint_success_rate": 0.4,
+      "conditional_argument_accuracy": 0.666667,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 3
+    },
+    "calendar_search": {
+      "n": 5,
+      "tool_selection_accuracy": 0.4,
+      "argument_accuracy": 0.4,
+      "execution_success_rate": 0.4,
+      "final_task_success_rate": 0.4,
+      "joint_success_rate": 0.4,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 2,
+      "conditional_argument_denominator": 2
+    },
+    "calendar_time": {
+      "n": 5,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 1.0,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 5,
+      "conditional_argument_denominator": 5
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 60,
+    "input_tokens": 20635,
+    "output_tokens": 1349,
+    "total_tokens": 21984,
+    "generation_seconds": 16.153012,
+    "n": 30,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 30,
+      "input_tokens": 30,
+      "output_tokens": 30,
+      "total_tokens": 30,
+      "generation_seconds": 30
+    },
+    "recorded_totals": {
+      "inference_calls": 60,
+      "input_tokens": 20635,
+      "output_tokens": 1349,
+      "total_tokens": 21984,
+      "generation_seconds": 16.153012
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 16.53
+  },
+  "peak_gpu_gb": 3.513,
+  "duration_seconds": 16.53,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e3/branches/A_seed20261110_ctrl_cal05/checkpoint"
+}

@@ -1,0 +1,78 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_start",
+  "family": "python",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.71875,
+    "argument_accuracy": 0.875,
+    "execution_success_rate": 0.84375,
+    "final_task_success_rate": 0.84375,
+    "joint_success_rate": 0.71875,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 23,
+    "conditional_argument_denominator": 23
+  },
+  "skill_metrics": {
+    "numeric_input": {
+      "n": 32,
+      "tool_selection_accuracy": 0.71875,
+      "argument_accuracy": 0.875,
+      "execution_success_rate": 0.84375,
+      "final_task_success_rate": 0.84375,
+      "joint_success_rate": 0.71875,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 23,
+      "conditional_argument_denominator": 23
+    },
+    "stat_median": {
+      "n": 32,
+      "tool_selection_accuracy": 0.71875,
+      "argument_accuracy": 0.875,
+      "execution_success_rate": 0.84375,
+      "final_task_success_rate": 0.84375,
+      "joint_success_rate": 0.71875,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 23,
+      "conditional_argument_denominator": 23
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 20054,
+    "output_tokens": 1813,
+    "total_tokens": 21867,
+    "generation_seconds": 17.182867,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 20054,
+      "output_tokens": 1813,
+      "total_tokens": 21867,
+      "generation_seconds": 17.182867
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally",
+    "duration_seconds": 17.57
+  },
+  "peak_gpu_gb": 3.982,
+  "duration_seconds": 17.57,
+  "evaluation_protocol": {
+    "batch_size": 32,
+    "do_sample": false,
+    "use_cache": true,
+    "padding_side": "left",
+    "output_token_count_includes_eos": true,
+    "output_token_count_excludes_post_eos_padding": true
+  },
+  "adapter": null
+}

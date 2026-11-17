@@ -1,0 +1,66 @@
+{
+  "stage_index": 4,
+  "stage_name": "probe_start",
+  "family": "file",
+  "metrics": {
+    "n": 32,
+    "tool_selection_accuracy": 0.84375,
+    "argument_accuracy": 0.78125,
+    "execution_success_rate": 0.78125,
+    "final_task_success_rate": 0.03125,
+    "joint_success_rate": 0.03125,
+    "conditional_argument_accuracy": 0.925926,
+    "conditional_argument_numerator": 25,
+    "conditional_argument_denominator": 27
+  },
+  "skill_metrics": {
+    "file_search": {
+      "n": 32,
+      "tool_selection_accuracy": 0.84375,
+      "argument_accuracy": 0.78125,
+      "execution_success_rate": 0.78125,
+      "final_task_success_rate": 0.03125,
+      "joint_success_rate": 0.03125,
+      "conditional_argument_accuracy": 0.925926,
+      "conditional_argument_numerator": 25,
+      "conditional_argument_denominator": 27
+    },
+    "line_index": {
+      "n": 32,
+      "tool_selection_accuracy": 0.84375,
+      "argument_accuracy": 0.78125,
+      "execution_success_rate": 0.78125,
+      "final_task_success_rate": 0.03125,
+      "joint_success_rate": 0.03125,
+      "conditional_argument_accuracy": 0.925926,
+      "conditional_argument_numerator": 25,
+      "conditional_argument_denominator": 27
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 64,
+    "input_tokens": 18093,
+    "output_tokens": 2381,
+    "total_tokens": 20474,
+    "generation_seconds": 24.426931,
+    "n": 32,
+    "generation_batches": 2,
+    "usage_coverage": {
+      "inference_calls": 32,
+      "input_tokens": 32,
+      "output_tokens": 32,
+      "total_tokens": 32,
+      "generation_seconds": 32
+    },
+    "recorded_totals": {
+      "inference_calls": 64,
+      "input_tokens": 18093,
+      "output_tokens": 2381,
+      "total_tokens": 20474,
+      "generation_seconds": 24.426931
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}

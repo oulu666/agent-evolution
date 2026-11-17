@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "checkpoint": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/branches/A_seed20261108_tf50/checkpoint",
+    "seed": 20261108,
+    "n_items": 44,
+    "batch_sizes": [
+      1,
+      2,
+      4,
+      32
+    ],
+    "started": "2026-11-12 09:17:00 +0800"
+  },
+  "runs": {
+    "1": {
+      "duration_seconds": 236.81,
+      "batch_size": 1,
+      "reports": {
+        "natv2_file": {
+          "duration_seconds": 36.67,
+          "peak_gpu_gb": 0.601,
+          "evaluation_protocol": {
+            "batch_size": 1,
+            "do_sample": false,
+            "use_cache": "model_default",
+            "padding_side": "single_sequence",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.875,
+            "joint_success_rate": 0.875,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_database": {
+          "duration_seconds": 36.39,
+          "peak_gpu_gb": 0.599,
+          "evaluation_protocol": {
+            "batch_size": 1,
+            "do_sample": false,
+            "use_cache": "model_default",
+            "padding_side": "single_sequence",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_python": {
+          "duration_seconds": 39.46,
+          "peak_gpu_gb": 0.603,
+          "evaluation_protocol": {
+            "batch_size": 1,
+            "do_sample": false,
+            "use_cache": "model_default",
+            "padding_side": "single_sequence",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "calendar_v3": {
+          "duration_seconds": 70.65,
+          "peak_gpu_gb": 0.658,
+          "evaluation_protocol": {
+            "batch_size": 1,
+            "do_sample": false,
+            "use_cache": "model_default",
+            "padding_side": "single_sequence",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 20,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.5,
+            "joint_success_rate": 0.5,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 20,
+            "conditional_argument_denominator": 20
+          }
+        }
+      }
+    },
+    "2": {
+      "duration_seconds": 109.04,
+      "batch_size": 2,
+      "reports": {
+        "natv2_file": {
+          "duration_seconds": 18.37,
+          "peak_gpu_gb": 0.649,
+          "evaluation_protocol": {
+            "batch_size": 2,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.875,
+            "joint_success_rate": 0.875,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_database": {
+          "duration_seconds": 19.23,
+          "peak_gpu_gb": 0.646,
+          "evaluation_protocol": {
+            "batch_size": 2,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_python": {
+          "duration_seconds": 19.71,
+          "peak_gpu_gb": 0.653,
+          "evaluation_protocol": {
+            "batch_size": 2,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "calendar_v3": {
+          "duration_seconds": 50.21,
+          "peak_gpu_gb": 0.764,
+          "evaluation_protocol": {
+            "batch_size": 2,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 20,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.5,
+            "joint_success_rate": 0.5,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 20,
+            "conditional_argument_denominator": 20
+          }
+        }
+      }
+    },
+    "4": {
+      "duration_seconds": 51.6,
+      "batch_size": 4,
+      "reports": {
+        "natv2_file": {
+          "duration_seconds": 8.0,
+          "peak_gpu_gb": 0.746,
+          "evaluation_protocol": {
+            "batch_size": 4,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.875,
+            "joint_success_rate": 0.875,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_database": {
+          "duration_seconds": 10.94,
+          "peak_gpu_gb": 0.737,
+          "evaluation_protocol": {
+            "batch_size": 4,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_python": {
+          "duration_seconds": 8.48,
+          "peak_gpu_gb": 0.752,
+          "evaluation_protocol": {
+            "batch_size": 4,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "calendar_v3": {
+          "duration_seconds": 22.55,
+          "peak_gpu_gb": 0.977,
+          "evaluation_protocol": {
+            "batch_size": 4,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 20,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.55,
+            "joint_success_rate": 0.55,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 20,
+            "conditional_argument_denominator": 20
+          }
+        }
+      }
+    },
+    "32": {
+      "duration_seconds": 40.45,
+      "batch_size": 32,
+      "reports": {
+        "natv2_file": {
+          "duration_seconds": 7.74,
+          "peak_gpu_gb": 0.94,
+          "evaluation_protocol": {
+            "batch_size": 32,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.875,
+            "joint_success_rate": 0.875,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_database": {
+          "duration_seconds": 10.1,
+          "peak_gpu_gb": 0.923,
+          "evaluation_protocol": {
+            "batch_size": 32,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "natv2_python": {
+          "duration_seconds": 7.44,
+          "peak_gpu_gb": 0.953,
+          "evaluation_protocol": {
+            "batch_size": 32,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 8,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 1.0,
+            "joint_success_rate": 1.0,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 8,
+            "conditional_argument_denominator": 8
+          }
+        },
+        "calendar_v3": {
+          "duration_seconds": 12.88,
+          "peak_gpu_gb": 2.804,
+          "evaluation_protocol": {
+            "batch_size": 32,
+            "do_sample": false,
+            "use_cache": true,
+            "padding_side": "left",
+            "output_token_count_includes_eos": true,
+            "output_token_count_excludes_post_eos_padding": true
+          },
+          "metrics": {
+            "n": 20,
+            "tool_selection_accuracy": 1.0,
+            "argument_accuracy": 1.0,
+            "execution_success_rate": 1.0,
+            "final_task_success_rate": 0.55,
+            "joint_success_rate": 0.55,
+            "conditional_argument_accuracy": 1.0,
+            "conditional_argument_numerator": 20,
+            "conditional_argument_denominator": 20
+          }
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "label": "bs2_vs_bs1",
+      "n": 44,
+      "missing": [],
+      "extra": [],
+      "n_mismatch_any": 0,
+      "n_text_mismatch": 0,
+      "n_score_mismatch": 0,
+      "text_agree": 1.0,
+      "score_agree": 1.0,
+      "exact_agree": 1.0,
+      "examples": [],
+      "mismatch_ids": []
+    },
+    {
+      "label": "bs4_vs_bs1",
+      "n": 44,
+      "missing": [],
+      "extra": [],
+      "n_mismatch_any": 1,
+      "n_text_mismatch": 1,
+      "n_score_mismatch": 1,
+      "text_agree": 0.9772727272727273,
+      "score_agree": 0.9772727272727273,
+      "exact_agree": 0.9772727272727273,
+      "examples": [
+        {
+          "episode_id": "calv3-final-last_end-008",
+          "diff_fields": [
+            "answer_raw",
+            "final_correct",
+            "joint_success",
+            "predicted_answer"
+          ],
+          "diff": {
+            "answer_raw": {
+              "ref": "{\"answer\": \"10:30\"}",
+              "other": "{\"answer\": \"17:00\"}"
+            },
+            "joint_success": {
+              "ref": false,
+              "other": true
+            },
+            "final_correct": {
+              "ref": false,
+              "other": true
+            },
+            "predicted_answer": {
+              "ref": "10:30",
+              "other": "17:00"
+            }
+          },
+          "source": "calendar_v3/last_end"
+        }
+      ],
+      "mismatch_ids": [
+        "calv3-final-last_end-008"
+      ]
+    },
+    {
+      "label": "bs32_vs_bs1",
+      "n": 44,
+      "missing": [],
+      "extra": [],
+      "n_mismatch_any": 1,
+      "n_text_mismatch": 1,
+      "n_score_mismatch": 1,
+      "text_agree": 0.9772727272727273,
+      "score_agree": 0.9772727272727273,
+      "exact_agree": 0.9772727272727273,
+      "examples": [
+        {
+          "episode_id": "calv3-final-last_end-024",
+          "diff_fields": [
+            "answer_raw",
+            "final_correct",
+            "joint_success",
+            "predicted_answer"
+          ],
+          "diff": {
+            "answer_raw": {
+              "ref": "{\"answer\": \"11:15\"}",
+              "other": "{\"answer\": \"16:45\"}"
+            },
+            "joint_success": {
+              "ref": false,
+              "other": true
+            },
+            "final_correct": {
+              "ref": false,
+              "other": true
+            },
+            "predicted_answer": {
+              "ref": "11:15",
+              "other": "16:45"
+            }
+          },
+          "source": "calendar_v3/last_end"
+        }
+      ],
+      "mismatch_ids": [
+        "calv3-final-last_end-024"
+      ]
+    },
+    {
+      "label": "bs1_vs_historical_e4_tf50",
+      "n": 44,
+      "missing": [],
+      "extra": [],
+      "n_mismatch_any": 2,
+      "n_text_mismatch": 2,
+      "n_score_mismatch": 2,
+      "text_agree": 0.9545454545454546,
+      "score_agree": 0.9545454545454546,
+      "exact_agree": 0.9545454545454546,
+      "examples": [
+        {
+          "episode_id": "calv3-final-last_end-008",
+          "diff_fields": [
+            "answer_raw",
+            "final_correct",
+            "joint_success",
+            "predicted_answer"
+          ],
+          "diff": {
+            "answer_raw": {
+              "ref": "{\"answer\": \"17:00\"}",
+              "other": "{\"answer\": \"10:30\"}"
+            },
+            "joint_success": {
+              "ref": true,
+              "other": false
+            },
+            "final_correct": {
+              "ref": true,
+              "other": false
+            },
+            "predicted_answer": {
+              "ref": "17:00",
+              "other": "10:30"
+            }
+          },
+          "source": [
+            "calendar_list",
+            "calendar_time"
+          ]
+        },
+        {
+          "episode_id": "calv3-final-last_end-024",
+          "diff_fields": [
+            "answer_raw",
+            "final_correct",
+            "joint_success",
+            "predicted_answer"
+          ],
+          "diff": {
+            "answer_raw": {
+              "ref": "{\"answer\": \"16:45\"}",
+              "other": "{\"answer\": \"11:15\"}"
+            },
+            "joint_success": {
+              "ref": true,
+              "other": false
+            },
+            "final_correct": {
+              "ref": true,
+              "other": false
+            },
+            "predicted_answer": {
+              "ref": "16:45",
+              "other": "11:15"
+            }
+          },
+          "source": [
+            "calendar_list",
+            "calendar_time"
+          ]
+        }
+      ],
+      "mismatch_ids": [
+        "calv3-final-last_end-008",
+        "calv3-final-last_end-024"
+      ]
+    },
+    {
+      "label": "bs32_vs_historical_e4_tf50",
+      "n": 44,
+      "missing": [],
+      "extra": [],
+      "n_mismatch_any": 1,
+      "n_text_mismatch": 1,
+      "n_score_mismatch": 1,
+      "text_agree": 0.9772727272727273,
+      "score_agree": 0.9772727272727273,
+      "exact_agree": 0.9772727272727273,
+      "examples": [
+        {
+          "episode_id": "calv3-final-last_end-008",
+          "diff_fields": [
+            "answer_raw",
+            "final_correct",
+            "joint_success",
+            "predicted_answer"
+          ],
+          "diff": {
+            "answer_raw": {
+              "ref": "{\"answer\": \"17:00\"}",
+              "other": "{\"answer\": \"10:30\"}"
+            },
+            "joint_success": {
+              "ref": true,
+              "other": false
+            },
+            "final_correct": {
+              "ref": true,
+              "other": false
+            },
+            "predicted_answer": {
+              "ref": "17:00",
+              "other": "10:30"
+            }
+          },
+          "source": [
+            "calendar_list",
+            "calendar_time"
+          ]
+        }
+      ],
+      "mismatch_ids": [
+        "calv3-final-last_end-008"
+      ]
+    }
+  ],
+  "finished": "2026-11-12 09:24:40 +0800"
+}

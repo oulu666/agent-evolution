@@ -1,0 +1,251 @@
+2026-11-15 11:19:27 +0800 P6_A2 TRAIN A_seed20261108_balanced_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:55,  5.62it/s]Loading weights:   1%|          | 2/311 [00:00<00:51,  5.96it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:31,  9.62it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:02, 101.99it/s]Loading weights:  26%|██▋       | 82/311 [00:00<00:01, 207.27it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 305.00it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 356.71it/s]Loading weights:  78%|███████▊  | 243/311 [00:00<00:00, 415.43it/s]Loading weights:  94%|█████████▍| 292/311 [00:01<00:00, 437.18it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 279.34it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p6_e3_train_attempt2.py:119: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 199.68
+2026-11-15 11:21:07 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261108_balanced_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 11:21:08 +0800 P6_A2 EVAL A_seed20261108_balanced_uniform suites=['p6_database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 386.13it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 736.56it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 999.64it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 921.13it/s]
+eval P6_B1_A_seed20261108_balanced_uniform database n 24
+eval P6_B1_A_seed20261108_balanced_uniform database 10
+eval P6_B1_A_seed20261108_balanced_uniform database 20
+eval done P6_B1_A_seed20261108_balanced_uniform database final 0.75 peak_gpu_gb 0.647
+2026-11-15 11:23:14 +0800 P6_A2 E2E GATE PASS: first train summary + actual steps + first B1 suite; remaining 8 arms released
+2026-11-15 11:23:15 +0800 P6_A2 EVAL A_seed20261108_balanced_uniform suites=['p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 98.55it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 901.39it/s]Loading weights:  97%|█████████▋| 303/311 [00:00<00:00, 1146.96it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1007.24it/s]
+eval P6_B1_A_seed20261108_balanced_uniform file n 12
+eval P6_B1_A_seed20261108_balanced_uniform file 10
+eval done P6_B1_A_seed20261108_balanced_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261108_balanced_uniform python n 12
+eval P6_B1_A_seed20261108_balanced_uniform python 10
+eval done P6_B1_A_seed20261108_balanced_uniform python final 0.0 peak_gpu_gb 0.603
+eval P6_B1_A_seed20261108_balanced_uniform calendar n 30
+eval P6_B1_A_seed20261108_balanced_uniform calendar 10
+eval P6_B1_A_seed20261108_balanced_uniform calendar 20
+eval P6_B1_A_seed20261108_balanced_uniform calendar 30
+eval done P6_B1_A_seed20261108_balanced_uniform calendar final 0.3 peak_gpu_gb 0.923
+eval P6_B1_A_seed20261108_balanced_uniform file n 30
+eval P6_B1_A_seed20261108_balanced_uniform file 10
+eval P6_B1_A_seed20261108_balanced_uniform file 20
+eval P6_B1_A_seed20261108_balanced_uniform file 30
+eval done P6_B1_A_seed20261108_balanced_uniform file final 0.6 peak_gpu_gb 0.604
+2026-11-15 11:29:27 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 11:29:29 +0800 P6_A2 TRAIN A_seed20261109_balanced_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 44/311 [00:00<00:00, 439.88it/s]Loading weights:  62%|██████▏   | 193/311 [00:00<00:00, 1051.09it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 1008.73it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 974.91it/s] 
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 228.81
+2026-11-15 11:30:33 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261109_balanced_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 11:30:34 +0800 P6_A2 EVAL A_seed20261109_balanced_uniform suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▎        | 42/311 [00:00<00:00, 418.34it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 1048.02it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1110.51it/s]
+eval P6_B1_A_seed20261109_balanced_uniform database n 24
+eval P6_B1_A_seed20261109_balanced_uniform database 10
+eval P6_B1_A_seed20261109_balanced_uniform database 20
+eval done P6_B1_A_seed20261109_balanced_uniform database final 0.791667 peak_gpu_gb 0.649
+eval P6_B1_A_seed20261109_balanced_uniform file n 12
+eval P6_B1_A_seed20261109_balanced_uniform file 10
+eval done P6_B1_A_seed20261109_balanced_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_balanced_uniform python n 12
+eval P6_B1_A_seed20261109_balanced_uniform python 10
+eval done P6_B1_A_seed20261109_balanced_uniform python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_balanced_uniform calendar n 30
+eval P6_B1_A_seed20261109_balanced_uniform calendar 10
+eval P6_B1_A_seed20261109_balanced_uniform calendar 20
+eval P6_B1_A_seed20261109_balanced_uniform calendar 30
+eval done P6_B1_A_seed20261109_balanced_uniform calendar final 0.4 peak_gpu_gb 0.924
+eval P6_B1_A_seed20261109_balanced_uniform file n 30
+eval P6_B1_A_seed20261109_balanced_uniform file 10
+eval P6_B1_A_seed20261109_balanced_uniform file 20
+eval P6_B1_A_seed20261109_balanced_uniform file 30
+eval done P6_B1_A_seed20261109_balanced_uniform file final 0.7 peak_gpu_gb 0.605
+2026-11-15 11:38:04 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 11:38:05 +0800 P6_A2 TRAIN A_seed20261110_balanced_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 366.25it/s]Loading weights:  60%|██████    | 188/311 [00:00<00:00, 1031.55it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1094.68it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 284.09
+2026-11-15 11:38:55 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261110_balanced_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 11:38:56 +0800 P6_A2 EVAL A_seed20261110_balanced_uniform suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 259.00it/s]Loading weights:  49%|████▊     | 151/311 [00:00<00:00, 840.65it/s]Loading weights:  91%|█████████ | 282/311 [00:00<00:00, 1054.18it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 971.09it/s] 
+eval P6_B1_A_seed20261110_balanced_uniform database n 24
+eval P6_B1_A_seed20261110_balanced_uniform database 10
+eval P6_B1_A_seed20261110_balanced_uniform database 20
+eval done P6_B1_A_seed20261110_balanced_uniform database final 0.708333 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261110_balanced_uniform file n 12
+eval P6_B1_A_seed20261110_balanced_uniform file 10
+eval done P6_B1_A_seed20261110_balanced_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_balanced_uniform python n 12
+eval P6_B1_A_seed20261110_balanced_uniform python 10
+eval done P6_B1_A_seed20261110_balanced_uniform python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_balanced_uniform calendar n 30
+eval P6_B1_A_seed20261110_balanced_uniform calendar 10
+eval P6_B1_A_seed20261110_balanced_uniform calendar 20
+eval P6_B1_A_seed20261110_balanced_uniform calendar 30
+eval done P6_B1_A_seed20261110_balanced_uniform calendar final 0.4 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261110_balanced_uniform file n 30
+eval P6_B1_A_seed20261110_balanced_uniform file 10
+eval P6_B1_A_seed20261110_balanced_uniform file 20
+eval P6_B1_A_seed20261110_balanced_uniform file 30
+eval done P6_B1_A_seed20261110_balanced_uniform file final 0.566667 peak_gpu_gb 0.605
+2026-11-15 11:46:16 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 11:46:18 +0800 P6_A2 TRAIN A_seed20261108_balanced_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▍         | 12/311 [00:00<00:02, 119.17it/s]Loading weights:  35%|███▌      | 109/311 [00:00<00:00, 616.44it/s]Loading weights:  72%|███████▏  | 224/311 [00:00<00:00, 857.00it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 843.44it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 194.15
+2026-11-15 11:47:04 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261108_balanced_early actual_steps=23 suffix=13 tokens=7494
+2026-11-15 11:47:05 +0800 P6_A2 EVAL A_seed20261108_balanced_early suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 375.77it/s]Loading weights:  51%|█████▏    | 160/311 [00:00<00:00, 868.35it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 961.09it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 935.29it/s]
+eval P6_B1_A_seed20261108_balanced_early database n 24
+eval P6_B1_A_seed20261108_balanced_early database 10
+eval P6_B1_A_seed20261108_balanced_early database 20
+eval done P6_B1_A_seed20261108_balanced_early database final 0.666667 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261108_balanced_early file n 12
+eval P6_B1_A_seed20261108_balanced_early file 10
+eval done P6_B1_A_seed20261108_balanced_early file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261108_balanced_early python n 12
+eval P6_B1_A_seed20261108_balanced_early python 10
+eval done P6_B1_A_seed20261108_balanced_early python final 0.833333 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261108_balanced_early calendar n 30
+eval P6_B1_A_seed20261108_balanced_early calendar 10
+eval P6_B1_A_seed20261108_balanced_early calendar 20
+eval P6_B1_A_seed20261108_balanced_early calendar 30
+eval done P6_B1_A_seed20261108_balanced_early calendar final 0.333333 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261108_balanced_early file n 30
+eval P6_B1_A_seed20261108_balanced_early file 10
+eval P6_B1_A_seed20261108_balanced_early file 20
+eval P6_B1_A_seed20261108_balanced_early file 30
+eval done P6_B1_A_seed20261108_balanced_early file final 0.566667 peak_gpu_gb 0.612
+2026-11-15 11:53:59 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 11:54:01 +0800 P6_A2 TRAIN A_seed20261109_balanced_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 9/311 [00:00<00:03, 89.07it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 879.99it/s]Loading weights:  83%|████████▎ | 259/311 [00:00<00:00, 959.79it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 925.31it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 217.6
+2026-11-15 11:54:53 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261109_balanced_early actual_steps=23 suffix=13 tokens=7494
+2026-11-15 11:54:54 +0800 P6_A2 EVAL A_seed20261109_balanced_early suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:01, 268.73it/s]Loading weights:  56%|█████▌    | 174/311 [00:00<00:00, 971.20it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1049.88it/s]
+eval P6_B1_A_seed20261109_balanced_early database n 24
+eval P6_B1_A_seed20261109_balanced_early database 10
+eval P6_B1_A_seed20261109_balanced_early database 20
+eval done P6_B1_A_seed20261109_balanced_early database final 0.708333 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261109_balanced_early file n 12
+eval P6_B1_A_seed20261109_balanced_early file 10
+eval done P6_B1_A_seed20261109_balanced_early file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_balanced_early python n 12
+eval P6_B1_A_seed20261109_balanced_early python 10
+eval done P6_B1_A_seed20261109_balanced_early python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_balanced_early calendar n 30
+eval P6_B1_A_seed20261109_balanced_early calendar 10
+eval P6_B1_A_seed20261109_balanced_early calendar 20
+eval P6_B1_A_seed20261109_balanced_early calendar 30
+eval done P6_B1_A_seed20261109_balanced_early calendar final 0.333333 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261109_balanced_early file n 30
+eval P6_B1_A_seed20261109_balanced_early file 10
+eval P6_B1_A_seed20261109_balanced_early file 20
+eval P6_B1_A_seed20261109_balanced_early file 30
+eval done P6_B1_A_seed20261109_balanced_early file final 0.666667 peak_gpu_gb 0.612
+2026-11-15 12:02:57 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 12:03:00 +0800 P6_A2 TRAIN A_seed20261110_balanced_early
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 368.04it/s]Loading weights:  54%|█████▍    | 169/311 [00:00<00:00, 918.92it/s]Loading weights:  95%|█████████▍| 295/311 [00:00<00:00, 1070.70it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 974.66it/s] 
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 289.94
+2026-11-15 12:03:55 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261110_balanced_early actual_steps=23 suffix=13 tokens=7494
+2026-11-15 12:03:57 +0800 P6_A2 EVAL A_seed20261110_balanced_early suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 8/311 [00:00<00:03, 79.96it/s]Loading weights:  33%|███▎      | 102/311 [00:00<00:00, 585.46it/s]Loading weights:  65%|██████▍   | 202/311 [00:00<00:00, 774.24it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 819.62it/s]
+eval P6_B1_A_seed20261110_balanced_early database n 24
+eval P6_B1_A_seed20261110_balanced_early database 10
+eval P6_B1_A_seed20261110_balanced_early database 20
+eval done P6_B1_A_seed20261110_balanced_early database final 0.708333 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261110_balanced_early file n 12
+eval P6_B1_A_seed20261110_balanced_early file 10
+eval done P6_B1_A_seed20261110_balanced_early file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_balanced_early python n 12
+eval P6_B1_A_seed20261110_balanced_early python 10
+eval done P6_B1_A_seed20261110_balanced_early python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_balanced_early calendar n 30
+eval P6_B1_A_seed20261110_balanced_early calendar 10
+eval P6_B1_A_seed20261110_balanced_early calendar 20
+eval P6_B1_A_seed20261110_balanced_early calendar 30
+eval done P6_B1_A_seed20261110_balanced_early calendar final 0.433333 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261110_balanced_early file n 30
+eval P6_B1_A_seed20261110_balanced_early file 10
+eval P6_B1_A_seed20261110_balanced_early file 20
+eval P6_B1_A_seed20261110_balanced_early file 30
+eval done P6_B1_A_seed20261110_balanced_early file final 0.566667 peak_gpu_gb 0.612
+2026-11-15 12:11:54 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 12:11:56 +0800 P6_A2 TRAIN A_seed20261108_devgrad_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 8/311 [00:00<00:03, 79.94it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 785.60it/s]Loading weights:  82%|████████▏ | 254/311 [00:00<00:00, 963.98it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 856.14it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 195.93
+2026-11-15 12:12:44 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261108_devgrad_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 12:12:46 +0800 P6_A2 EVAL A_seed20261108_devgrad_uniform suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   7%|▋         | 21/311 [00:00<00:01, 208.30it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 939.66it/s]Loading weights:  86%|████████▌ | 268/311 [00:00<00:00, 963.00it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 891.73it/s]
+eval P6_B1_A_seed20261108_devgrad_uniform database n 24
+eval P6_B1_A_seed20261108_devgrad_uniform database 10
+eval P6_B1_A_seed20261108_devgrad_uniform database 20
+eval done P6_B1_A_seed20261108_devgrad_uniform database final 0.75 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261108_devgrad_uniform file n 12
+eval P6_B1_A_seed20261108_devgrad_uniform file 10
+eval done P6_B1_A_seed20261108_devgrad_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261108_devgrad_uniform python n 12
+eval P6_B1_A_seed20261108_devgrad_uniform python 10
+eval done P6_B1_A_seed20261108_devgrad_uniform python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261108_devgrad_uniform calendar n 30
+eval P6_B1_A_seed20261108_devgrad_uniform calendar 10
+eval P6_B1_A_seed20261108_devgrad_uniform calendar 20
+eval P6_B1_A_seed20261108_devgrad_uniform calendar 30
+eval done P6_B1_A_seed20261108_devgrad_uniform calendar final 0.266667 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261108_devgrad_uniform file n 30
+eval P6_B1_A_seed20261108_devgrad_uniform file 10
+eval P6_B1_A_seed20261108_devgrad_uniform file 20
+eval P6_B1_A_seed20261108_devgrad_uniform file 30
+eval done P6_B1_A_seed20261108_devgrad_uniform file final 0.6 peak_gpu_gb 0.612
+2026-11-15 12:20:43 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 12:20:45 +0800 P6_A2 TRAIN A_seed20261109_devgrad_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 347.55it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 743.29it/s]Loading weights:  76%|███████▌  | 237/311 [00:00<00:00, 851.20it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 829.28it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 218.43
+2026-11-15 12:21:38 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261109_devgrad_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 12:21:40 +0800 P6_A2 EVAL A_seed20261109_devgrad_uniform suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 388.79it/s]Loading weights:  45%|████▌     | 141/311 [00:00<00:00, 757.18it/s]Loading weights:  86%|████████▌ | 266/311 [00:00<00:00, 980.65it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 933.68it/s]
+eval P6_B1_A_seed20261109_devgrad_uniform database n 24
+eval P6_B1_A_seed20261109_devgrad_uniform database 10
+eval P6_B1_A_seed20261109_devgrad_uniform database 20
+eval done P6_B1_A_seed20261109_devgrad_uniform database final 0.875 peak_gpu_gb 0.603
+eval P6_B1_A_seed20261109_devgrad_uniform file n 12
+eval P6_B1_A_seed20261109_devgrad_uniform file 10
+eval done P6_B1_A_seed20261109_devgrad_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_devgrad_uniform python n 12
+eval P6_B1_A_seed20261109_devgrad_uniform python 10
+eval done P6_B1_A_seed20261109_devgrad_uniform python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261109_devgrad_uniform calendar n 30
+eval P6_B1_A_seed20261109_devgrad_uniform calendar 10
+eval P6_B1_A_seed20261109_devgrad_uniform calendar 20
+eval P6_B1_A_seed20261109_devgrad_uniform calendar 30
+eval done P6_B1_A_seed20261109_devgrad_uniform calendar final 0.366667 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261109_devgrad_uniform file n 30
+eval P6_B1_A_seed20261109_devgrad_uniform file 10
+eval P6_B1_A_seed20261109_devgrad_uniform file 20
+eval P6_B1_A_seed20261109_devgrad_uniform file 30
+eval done P6_B1_A_seed20261109_devgrad_uniform file final 0.7 peak_gpu_gb 0.605
+2026-11-15 12:28:03 +0800 P6_A2 SUMMARY complete=False
+2026-11-15 12:28:05 +0800 P6_A2 TRAIN A_seed20261110_devgrad_uniform
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 387.19it/s]Loading weights:  61%|██████    | 189/311 [00:00<00:00, 1036.82it/s]Loading weights:  94%|█████████▍| 293/311 [00:00<00:00, 1007.80it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 972.99it/s] 
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 288.86
+2026-11-15 12:29:00 +0800 P6_A2 TRAIN AUDIT PASS A_seed20261110_devgrad_uniform actual_steps=23 suffix=13 tokens=7494
+2026-11-15 12:29:01 +0800 P6_A2 EVAL A_seed20261110_devgrad_uniform suites=['p6_database', 'p6_file', 'p6_python', 'v3fix', 'p2_file']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 348.53it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 916.89it/s]Loading weights:  86%|████████▋ | 269/311 [00:00<00:00, 961.03it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 908.19it/s]
+eval P6_B1_A_seed20261110_devgrad_uniform database n 24
+eval P6_B1_A_seed20261110_devgrad_uniform database 10
+eval P6_B1_A_seed20261110_devgrad_uniform database 20
+eval done P6_B1_A_seed20261110_devgrad_uniform database final 0.666667 peak_gpu_gb 0.646
+eval P6_B1_A_seed20261110_devgrad_uniform file n 12
+eval P6_B1_A_seed20261110_devgrad_uniform file 10
+eval done P6_B1_A_seed20261110_devgrad_uniform file final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_devgrad_uniform python n 12
+eval P6_B1_A_seed20261110_devgrad_uniform python 10
+eval done P6_B1_A_seed20261110_devgrad_uniform python final 0.0 peak_gpu_gb 0.604
+eval P6_B1_A_seed20261110_devgrad_uniform calendar n 30
+eval P6_B1_A_seed20261110_devgrad_uniform calendar 10
+eval P6_B1_A_seed20261110_devgrad_uniform calendar 20
+eval P6_B1_A_seed20261110_devgrad_uniform calendar 30
+eval done P6_B1_A_seed20261110_devgrad_uniform calendar final 0.4 peak_gpu_gb 0.925
+eval P6_B1_A_seed20261110_devgrad_uniform file n 30
+eval P6_B1_A_seed20261110_devgrad_uniform file 10
+eval P6_B1_A_seed20261110_devgrad_uniform file 20
+eval P6_B1_A_seed20261110_devgrad_uniform file 30
+eval done P6_B1_A_seed20261110_devgrad_uniform file final 0.6 peak_gpu_gb 0.605
+2026-11-15 12:37:30 +0800 P6_A2 SUMMARY complete=True
+2026-11-15 12:37:30 +0800 P6_A2 QUEUE COMPLETE

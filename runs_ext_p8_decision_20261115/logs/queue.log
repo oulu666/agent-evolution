@@ -1,0 +1,164 @@
+2026-11-15 23:59:24 +0800 P8 TRAIN seed20261108_decision
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:55,  5.60it/s]Loading weights:   1%|          | 2/311 [00:00<00:55,  5.54it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:36,  8.37it/s]Loading weights:  10%|█         | 32/311 [00:00<00:03, 80.83it/s]Loading weights:  22%|██▏       | 67/311 [00:00<00:01, 153.92it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 239.90it/s]Loading weights:  51%|█████     | 159/311 [00:00<00:00, 296.02it/s]Loading weights:  65%|██████▌   | 203/311 [00:01<00:00, 330.75it/s]Loading weights:  82%|████████▏ | 255/311 [00:01<00:00, 383.73it/s]Loading weights:  96%|█████████▌| 299/311 [00:01<00:00, 399.79it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 245.85it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p8_train_20261115.py:123: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7521 seconds 205.59
+2026-11-16 00:01:18 +0800 P8 TRAIN AUDIT PASS 20261108 total23 new13 exact_fullstate=PASS
+2026-11-16 00:01:20 +0800 P8 EVAL seed20261108_decision ['database']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:00, 359.85it/s]Loading weights:  54%|█████▎    | 167/311 [00:00<00:00, 916.66it/s]Loading weights: 100%|█████████▉| 310/311 [00:00<00:00, 1148.36it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1030.75it/s]
+eval P8_seed20261108_decision database n 24
+eval P8_seed20261108_decision database 10
+eval P8_seed20261108_decision database 20
+eval done P8_seed20261108_decision database final 0.458333 peak_gpu_gb 0.598
+2026-11-16 00:03:16 +0800 P8 E2E GATE PASS: real full training summary + actual 23 + exact fullstate + first B1; release remaining comparisons
+2026-11-16 00:03:18 +0800 P8 EVAL seed20261108_decision ['file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:02, 133.88it/s]Loading weights:  20%|█▉        | 61/311 [00:00<00:00, 313.18it/s]Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 404.74it/s]Loading weights:  69%|██████▉   | 214/311 [00:00<00:00, 627.68it/s]Loading weights:  92%|█████████▏| 285/311 [00:00<00:00, 653.61it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 565.24it/s]
+eval P8_seed20261108_decision file n 16
+eval P8_seed20261108_decision file 10
+eval done P8_seed20261108_decision file final 0.25 peak_gpu_gb 0.61
+eval P8_seed20261108_decision python n 16
+eval P8_seed20261108_decision python 10
+eval done P8_seed20261108_decision python final 1.0 peak_gpu_gb 0.603
+eval P8_seed20261108_decision calendar n 30
+eval P8_seed20261108_decision calendar 10
+eval P8_seed20261108_decision calendar 20
+eval P8_seed20261108_decision calendar 30
+eval done P8_seed20261108_decision calendar final 0.333333 peak_gpu_gb 0.923
+eval P8_seed20261108_decision database n 4
+eval done P8_seed20261108_decision database final 0.75 peak_gpu_gb 0.602
+eval P8_seed20261108_decision file n 4
+eval done P8_seed20261108_decision file final 0.75 peak_gpu_gb 0.6
+eval P8_seed20261108_decision python n 4
+eval done P8_seed20261108_decision python final 1.0 peak_gpu_gb 0.614
+2026-11-16 00:07:59 +0800 P8 SUMMARY complete=False
+2026-11-16 00:08:01 +0800 P8 EVAL seed20261108_original ['database', 'file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▍         | 15/311 [00:00<00:02, 140.32it/s]Loading weights:  21%|██        | 64/311 [00:00<00:00, 337.76it/s]Loading weights:  37%|███▋      | 114/311 [00:00<00:00, 408.41it/s]Loading weights:  66%|██████▌   | 205/311 [00:00<00:00, 603.30it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 717.60it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 595.40it/s]
+eval P8_seed20261108_original database n 24
+eval P8_seed20261108_original database 10
+eval P8_seed20261108_original database 20
+eval done P8_seed20261108_original database final 0.583333 peak_gpu_gb 0.612
+eval P8_seed20261108_original file n 16
+eval P8_seed20261108_original file 10
+eval done P8_seed20261108_original file final 0.0625 peak_gpu_gb 0.61
+eval P8_seed20261108_original python n 16
+eval P8_seed20261108_original python 10
+eval done P8_seed20261108_original python final 1.0 peak_gpu_gb 0.603
+eval P8_seed20261108_original calendar n 30
+eval P8_seed20261108_original calendar 10
+eval P8_seed20261108_original calendar 20
+eval P8_seed20261108_original calendar 30
+eval done P8_seed20261108_original calendar final 0.3 peak_gpu_gb 0.923
+eval P8_seed20261108_original database n 4
+eval done P8_seed20261108_original database final 0.75 peak_gpu_gb 0.602
+eval P8_seed20261108_original file n 4
+eval done P8_seed20261108_original file final 0.75 peak_gpu_gb 0.6
+eval P8_seed20261108_original python n 4
+eval done P8_seed20261108_original python final 1.0 peak_gpu_gb 0.614
+2026-11-16 00:14:47 +0800 P8 SUMMARY complete=False
+2026-11-16 00:14:49 +0800 P8 TRAIN seed20261109_decision
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 99.96it/s]Loading weights:  23%|██▎       | 71/311 [00:00<00:00, 397.79it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 561.18it/s]Loading weights:  78%|███████▊  | 244/311 [00:00<00:00, 721.47it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 671.50it/s]
+replay train done targeted new tokens 74944 replay tokens 7538 seconds 216.38
+2026-11-16 00:15:40 +0800 P8 TRAIN AUDIT PASS 20261109 total23 new13 exact_fullstate=PASS
+2026-11-16 00:15:42 +0800 P8 EVAL seed20261109_decision ['database', 'file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:07, 39.75it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 853.64it/s]Loading weights:  90%|█████████ | 281/311 [00:00<00:00, 1069.20it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 962.86it/s] 
+eval P8_seed20261109_decision database n 24
+eval P8_seed20261109_decision database 10
+eval P8_seed20261109_decision database 20
+eval done P8_seed20261109_decision database final 0.541667 peak_gpu_gb 0.613
+eval P8_seed20261109_decision file n 16
+eval P8_seed20261109_decision file 10
+eval done P8_seed20261109_decision file final 0.25 peak_gpu_gb 0.611
+eval P8_seed20261109_decision python n 16
+eval P8_seed20261109_decision python 10
+eval done P8_seed20261109_decision python final 1.0 peak_gpu_gb 0.604
+eval P8_seed20261109_decision calendar n 30
+eval P8_seed20261109_decision calendar 10
+eval P8_seed20261109_decision calendar 20
+eval P8_seed20261109_decision calendar 30
+eval done P8_seed20261109_decision calendar final 0.366667 peak_gpu_gb 0.924
+eval P8_seed20261109_decision database n 4
+eval done P8_seed20261109_decision database final 0.75 peak_gpu_gb 0.602
+eval P8_seed20261109_decision file n 4
+eval done P8_seed20261109_decision file final 0.75 peak_gpu_gb 0.601
+eval P8_seed20261109_decision python n 4
+eval done P8_seed20261109_decision python final 1.0 peak_gpu_gb 0.615
+2026-11-16 00:22:15 +0800 P8 SUMMARY complete=False
+2026-11-16 00:22:16 +0800 P8 EVAL seed20261109_original ['database', 'file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 159.45it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 514.15it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 725.98it/s]Loading weights:  96%|█████████▌| 298/311 [00:00<00:00, 853.63it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 747.32it/s]
+eval P8_seed20261109_original database n 24
+eval P8_seed20261109_original database 10
+eval P8_seed20261109_original database 20
+eval done P8_seed20261109_original database final 0.458333 peak_gpu_gb 0.612
+eval P8_seed20261109_original file n 16
+eval P8_seed20261109_original file 10
+eval done P8_seed20261109_original file final 0.0 peak_gpu_gb 0.611
+eval P8_seed20261109_original python n 16
+eval P8_seed20261109_original python 10
+eval done P8_seed20261109_original python final 1.0 peak_gpu_gb 0.604
+eval P8_seed20261109_original calendar n 30
+eval P8_seed20261109_original calendar 10
+eval P8_seed20261109_original calendar 20
+eval P8_seed20261109_original calendar 30
+eval done P8_seed20261109_original calendar final 0.4 peak_gpu_gb 0.924
+eval P8_seed20261109_original database n 4
+eval done P8_seed20261109_original database final 0.5 peak_gpu_gb 0.597
+eval P8_seed20261109_original file n 4
+eval done P8_seed20261109_original file final 0.75 peak_gpu_gb 0.601
+eval P8_seed20261109_original python n 4
+eval done P8_seed20261109_original python final 1.0 peak_gpu_gb 0.615
+2026-11-16 00:29:10 +0800 P8 SUMMARY complete=False
+2026-11-16 00:29:12 +0800 P8 TRAIN seed20261110_decision
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/311 [00:00<00:01, 151.53it/s]Loading weights:  19%|█▉        | 60/311 [00:00<00:00, 310.22it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 311.66it/s]Loading weights:  43%|████▎     | 133/311 [00:00<00:00, 344.03it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 407.78it/s]Loading weights:  73%|███████▎  | 227/311 [00:00<00:00, 372.62it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 419.49it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 392.28it/s]
+replay train done targeted new tokens 74944 replay tokens 7556 seconds 286.93
+2026-11-16 00:30:05 +0800 P8 TRAIN AUDIT PASS 20261110 total23 new13 exact_fullstate=PASS
+2026-11-16 00:30:07 +0800 P8 EVAL seed20261110_decision ['database', 'file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 367.34it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 995.89it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1076.05it/s]
+eval P8_seed20261110_decision database n 24
+eval P8_seed20261110_decision database 10
+eval P8_seed20261110_decision database 20
+eval done P8_seed20261110_decision database final 0.583333 peak_gpu_gb 0.606
+eval P8_seed20261110_decision file n 16
+eval P8_seed20261110_decision file 10
+eval done P8_seed20261110_decision file final 0.25 peak_gpu_gb 0.611
+eval P8_seed20261110_decision python n 16
+eval P8_seed20261110_decision python 10
+eval done P8_seed20261110_decision python final 1.0 peak_gpu_gb 0.604
+eval P8_seed20261110_decision calendar n 30
+eval P8_seed20261110_decision calendar 10
+eval P8_seed20261110_decision calendar 20
+eval P8_seed20261110_decision calendar 30
+eval done P8_seed20261110_decision calendar final 0.4 peak_gpu_gb 0.925
+eval P8_seed20261110_decision database n 4
+eval done P8_seed20261110_decision database final 0.75 peak_gpu_gb 0.602
+eval P8_seed20261110_decision file n 4
+eval done P8_seed20261110_decision file final 0.75 peak_gpu_gb 0.601
+eval P8_seed20261110_decision python n 4
+eval done P8_seed20261110_decision python final 1.0 peak_gpu_gb 0.615
+2026-11-16 00:37:03 +0800 P8 SUMMARY complete=False
+2026-11-16 00:37:04 +0800 P8 EVAL seed20261110_original ['database', 'file', 'python', 'calendar', 'nontarget_database', 'nontarget_file', 'nontarget_python']
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:07, 39.44it/s]Loading weights:  43%|████▎     | 133/311 [00:00<00:00, 768.43it/s]Loading weights:  71%|███████▏  | 222/311 [00:00<00:00, 821.47it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 836.00it/s]
+eval P8_seed20261110_original database n 24
+eval P8_seed20261110_original database 10
+eval P8_seed20261110_original database 20
+eval done P8_seed20261110_original database final 0.458333 peak_gpu_gb 0.613
+eval P8_seed20261110_original file n 16
+eval P8_seed20261110_original file 10
+eval done P8_seed20261110_original file final 0.25 peak_gpu_gb 0.611
+eval P8_seed20261110_original python n 16
+eval P8_seed20261110_original python 10
+eval done P8_seed20261110_original python final 1.0 peak_gpu_gb 0.604
+eval P8_seed20261110_original calendar n 30
+eval P8_seed20261110_original calendar 10
+eval P8_seed20261110_original calendar 20
+eval P8_seed20261110_original calendar 30
+eval done P8_seed20261110_original calendar final 0.4 peak_gpu_gb 0.926
+eval P8_seed20261110_original database n 4
+eval done P8_seed20261110_original database final 0.5 peak_gpu_gb 0.597
+eval P8_seed20261110_original file n 4
+eval done P8_seed20261110_original file final 0.75 peak_gpu_gb 0.601
+eval P8_seed20261110_original python n 4
+eval done P8_seed20261110_original python final 1.0 peak_gpu_gb 0.615
+2026-11-16 00:44:43 +0800 P8 SUMMARY complete=True
+2026-11-16 00:44:43 +0800 P8 QUEUE COMPLETE

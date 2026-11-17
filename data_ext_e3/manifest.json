@@ -1,0 +1,250 @@
+{
+  "created_by": "fac_tinyagent/e3_data.py",
+  "created": "2026-11-11 20:10:57 +0800",
+  "arms": {
+    "b05_tf00": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.05,
+      "tf": 0.0
+    },
+    "b05_tf25": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.05,
+      "tf": 0.25
+    },
+    "b05_tf50": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.05,
+      "tf": 0.5
+    },
+    "b20_tf00": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.2,
+      "tf": 0.0
+    },
+    "b20_tf25": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.2,
+      "tf": 0.25
+    },
+    "b20_tf50": {
+      "kind": "sweep",
+      "group": "E3-A",
+      "ratio": 0.2,
+      "tf": 0.5
+    },
+    "ctrl_cal05": {
+      "kind": "control",
+      "group": "E3-A",
+      "ratio": 0.05
+    },
+    "ctrl_cal10": {
+      "kind": "control",
+      "group": "E3-A",
+      "ratio": 0.1
+    },
+    "ctrl_cal20": {
+      "kind": "control",
+      "group": "E3-A",
+      "ratio": 0.2
+    },
+    "dose_db0": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 0,
+      "draw": 1
+    },
+    "dose_db1": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 1,
+      "draw": 1
+    },
+    "dose_db2": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 2,
+      "draw": 1
+    },
+    "dose_db3": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 3,
+      "draw": 1
+    },
+    "dose_db4": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 4,
+      "draw": 1
+    },
+    "dose_db6": {
+      "kind": "dose",
+      "group": "E3-B",
+      "ratio": 0.1,
+      "k": 6,
+      "draw": 1
+    },
+    "dose2_db1": {
+      "kind": "dose",
+      "group": "E3-B2(optional)",
+      "ratio": 0.1,
+      "k": 1,
+      "draw": 2
+    },
+    "dose2_db2": {
+      "kind": "dose",
+      "group": "E3-B2(optional)",
+      "ratio": 0.1,
+      "k": 2,
+      "draw": 2
+    },
+    "dose2_db3": {
+      "kind": "dose",
+      "group": "E3-B2(optional)",
+      "ratio": 0.1,
+      "k": 3,
+      "draw": 2
+    },
+    "dose2_db4": {
+      "kind": "dose",
+      "group": "E3-B2(optional)",
+      "ratio": 0.1,
+      "k": 4,
+      "draw": 2
+    },
+    "dose2_db6": {
+      "kind": "dose",
+      "group": "E3-B2(optional)",
+      "ratio": 0.1,
+      "k": 6,
+      "draw": 2
+    }
+  },
+  "reused_from_e4": {
+    "b10_tf00": "tf00",
+    "b10_tf25": "tf25",
+    "b10_tf50": "tf50",
+    "none": "none"
+  },
+  "job_order_e3a_per_seed": [
+    "b05_tf25",
+    "b20_tf25",
+    "b05_tf50",
+    "b20_tf50",
+    "ctrl_cal10",
+    "ctrl_cal05",
+    "ctrl_cal20",
+    "b05_tf00",
+    "b20_tf00"
+  ],
+  "job_order_e3b_per_seed": [
+    "dose_db0",
+    "dose_db6",
+    "dose_db2",
+    "dose_db4",
+    "dose_db1",
+    "dose_db3"
+  ],
+  "job_order_e3b2_optional_per_seed": [
+    "dose2_db6",
+    "dose2_db2",
+    "dose2_db4",
+    "dose2_db1",
+    "dose2_db3"
+  ],
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "chain_order": "E3-A seed 08 -> 09 -> 10, then E3-B seed 08 -> 09 -> 10 (E3-B2 only if E3_WITH_DRAW2=1)",
+  "doses": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "dose_unit": "1 distinct Database target-type episode (E4 target_ids['database'], template target_db_filter_top), executed once; nested per seed",
+  "inputs": {
+    "final_v2_combined": "5dcc7d786fd60556e97d4e2ebefe143fdd9e96e9aa9052877a1317758b15a8f6",
+    "final_v2_files_ok": true,
+    "calendar_v3_combined": "2b203ab5123620b99fb64c06afb1e89a388596eade154012e331bb4a27b3633a",
+    "calendar_v3_files_ok": true,
+    "e4_pool": {
+      "file": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+      "database": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+      "python": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62"
+    },
+    "e4_manifest": "534c3d2f62a2e1933b75a5fa87a170c6599c6b55ce3119505768414a80c9d260",
+    "calendar_train": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "probes": {
+      "file": "44dba480ce54d169532ca799ead69358ce525728c7174040fb7f421c6e6a44a1",
+      "database": "7d35dcd5a670dcaab1cb71232f9a357af20f981a70d81985a03da1a5af382f35",
+      "python": "2b2fe5b448381cf8106c1774be1bd4754716dea14d7215b7fcc2f6a2d0c1a52b"
+    },
+    "e4_prefix_state": {
+      "20261108": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+      "20261109": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+      "20261110": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb"
+    }
+  },
+  "plans_dir": "plans/",
+  "checks_ok": true,
+  "plan_files": {
+    "A_seed20261108_ctrl_cal05.json": "0ae4d5f538be1b293f08ed4d7e03a59e28b7efaa003c528ef0a75c127f7d11cc",
+    "A_seed20261108_ctrl_cal10.json": "5ee1c407c75d44e9915f7a519794655d8bf1c296933d1a4d0709bf347a227da0",
+    "A_seed20261108_ctrl_cal20.json": "46ebbb22b3c5d09e3291e201dc8b3d8eda400e810463c139480cdf0f21603448",
+    "A_seed20261108_dose2_db1.json": "7ce87dafd8fdaba4196754bb4ee88f97ed3cd45ff93d3129f8c9784ad3ee8bfe",
+    "A_seed20261108_dose2_db2.json": "8e953359cd36e459cf975067c04986eb66576865c8663d47b8327da596b106f5",
+    "A_seed20261108_dose2_db3.json": "7521841565d7fc38966422d29c8aee2a88fc335ecca0b1338ff1307e4bdf6b79",
+    "A_seed20261108_dose2_db4.json": "7aa6e50b5de939d9b1b295b126080393f0262a433cf97fe5cce15a8438e06bae",
+    "A_seed20261108_dose2_db6.json": "4962f9ed75f0a1d0fc77aa4fa896939462fd7a378d71b9554aa3eb0af7c37f00",
+    "A_seed20261108_dose_db0.json": "09e78ee433a5f6e85bb9e4a908ec78727c23311cf13e92193dc472647cf78954",
+    "A_seed20261108_dose_db1.json": "466ecf3b1a1d45a6d9bd12d01b8445303f1d07f6219e28eb51d438c561588e2f",
+    "A_seed20261108_dose_db2.json": "ad1394c2ba7d5c73c17ccb574382dbd0e3458deb2720260085201c88b2f43125",
+    "A_seed20261108_dose_db3.json": "76724fdf396fa0929568713a48140f2569bb2f11b6795dda79f7aaf87f572360",
+    "A_seed20261108_dose_db4.json": "25f74f7aeb427bdb416428bbe2e1f890f367a3beb707ebb0db14b37e1755e9ea",
+    "A_seed20261108_dose_db6.json": "810d280c588cfcc763a5d24b1b179846298b30763bc2cc87a4acf64a99633023",
+    "A_seed20261109_ctrl_cal05.json": "7aefbb3e6d2fcd4ca200f70e24b38d1611b84a79f6b13ec2596aee08448bc28e",
+    "A_seed20261109_ctrl_cal10.json": "889c6e45407e0053ecad065e18b8aaa3fbccc75cd14b76e57d5b70b8d99b3aa4",
+    "A_seed20261109_ctrl_cal20.json": "dab58a33610e3f058a384f26953c9d71c1eeaad1d77567fbe23acb869c0beac4",
+    "A_seed20261109_dose2_db1.json": "bdf04074d4d22e30ba9fb05f0085e6252795e6e216031efa478117882f5b3571",
+    "A_seed20261109_dose2_db2.json": "2e1db0ef321de1f5d5672e5de603d05f587f9f4354f235a4302c7e45901da4e9",
+    "A_seed20261109_dose2_db3.json": "99dc60826f20ac44e1cd5e050f85c07ece708ea6f733c5f5711b476f36cf0093",
+    "A_seed20261109_dose2_db4.json": "1d11cedb8e17e304a810574d9462b18256aa5ecd872f498ce0842a9191581bef",
+    "A_seed20261109_dose2_db6.json": "2b9b2b74c2214990db2a859117c8e60ac6ac3e12e3dec635a30d137920978d58",
+    "A_seed20261109_dose_db0.json": "84101c38951744026614f6a22e1e89d3c8815dfb3fa8cbb4b828034864f9b9bc",
+    "A_seed20261109_dose_db1.json": "b261da27659f79ed2190464108671dd85c82a4fdacc46a99bf213579eaaf5d4a",
+    "A_seed20261109_dose_db2.json": "6d3ad5a717b5cf79d4e02e70475028b68d01958e23432ac55605e0ccd9e0edee",
+    "A_seed20261109_dose_db3.json": "3c6b7bc3919aef6c6d6f488cb2b9af4bfcd1b5ecf1e75b64077a0907431d2733",
+    "A_seed20261109_dose_db4.json": "cf45d3a8dc8e0c3703cfebd0b0cba0d926d9b9ab46de5f2106bc687358311246",
+    "A_seed20261109_dose_db6.json": "3f1b74f937ea2e2f131d3b37d5fca47f87ca731f9c006fb4f5baad3a0f35d8c8",
+    "A_seed20261110_ctrl_cal05.json": "6611785b1e7e84a4be18c8a3104528ad6aac640bba95ff8df7496886118b95e7",
+    "A_seed20261110_ctrl_cal10.json": "4438881ad74cabfa0e5580aed61c08d313f1c1a14c3924173f710562df60aec9",
+    "A_seed20261110_ctrl_cal20.json": "2800606eb0c3bfba224eb45cd833975de43d34c8a62d3fabbfd3628a3b0a3fb3",
+    "A_seed20261110_dose2_db1.json": "548397c0e7922d9807b2c61876f48340033844ad7288e83c2c7d9b83fde49a26",
+    "A_seed20261110_dose2_db2.json": "116bd679e2398d1a4f8e621d305501cea8d910fed7680848c5d86acb3d7b633d",
+    "A_seed20261110_dose2_db3.json": "c1f72443778aba1ee51ba21d102cb49fa4a47768758ec26816d228a7ee636ec0",
+    "A_seed20261110_dose2_db4.json": "c773fe3c502a2dead92ff3ff8768ccc3aabe44465d4be0464569ab2474785c84",
+    "A_seed20261110_dose2_db6.json": "5019082014f456c15bb2b518cd544c851b002ebb8b182335162a542b0bb2d6af",
+    "A_seed20261110_dose_db0.json": "8a509f87b9f70639034284260a6d9be8bf7652519e76929241ba4c7a82506af1",
+    "A_seed20261110_dose_db1.json": "f1e7cced1cf0e031c6e6b8afa057af507a183ebf118703a96bbd66b1f33423ec",
+    "A_seed20261110_dose_db2.json": "ffa77498148d15315a2818ef9ed46d8eee4024374c4ad66062223916a23d4f31",
+    "A_seed20261110_dose_db3.json": "aafa236cb70d34a95cc4be13d72047ce633c7870bccad0f6fdec37c34525697e",
+    "A_seed20261110_dose_db4.json": "4aa2d2966d757872df29f00c03a9ecff73e05cb47e0e172430f7db053ab8da0b",
+    "A_seed20261110_dose_db6.json": "0cc29f41b13e4b5f50ba874e2eb9430cb1c6cbafbdfccd269bc1b064936d4e1f"
+  }
+}
