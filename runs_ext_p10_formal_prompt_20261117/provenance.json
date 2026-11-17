@@ -1,0 +1,16 @@
+{
+  "frozen_created": "2026-11-17 15:41:35 +0800",
+  "prior_run_jsonl_scanned": 3131,
+  "existing_formal_outputs": [],
+  "prior_dev_model_sources": [
+    "dev.jsonl only:72 calls",
+    "dev.jsonl cached prefixes only:48 clarification answers"
+  ],
+  "gold_CPU_verification_not_model_output": true,
+  "formal_used_to_select_prompt": false,
+  "paths_markers_exact_prompts_disjoint": true,
+  "wording": "4 train-style new-entity files +8 paraphrase files;not fully template disjoint",
+  "counts": "train/dev2,3,4;formal2,3,4,5;5 only OOD",
+  "clarification": "Output-field clarification: In the answer field, return the complete value of the selected matching item's text field, not its line field and not only a number extracted from its text. Keep the task's original selection instruction unchanged.",
+  "formal_opened_for_model": false
+}

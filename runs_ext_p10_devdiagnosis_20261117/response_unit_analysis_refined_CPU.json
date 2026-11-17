@@ -1,0 +1,766 @@
+{
+  "scope": "posthoc CPU explanation of explicit line number/line: number and numeric payload. No official score changed, no inference-time answer mapping, no extra model calls. Conservative first-pass classification is preserved separately.",
+  "rules": {
+    "line_number_regex": "(?i)^(?:line\\s*:?\\s*)?([0-9]+)$",
+    "payload_only": "Exact numeric suffix uniquely identifies one displayed text; only used when no original line number matches."
+  },
+  "details": [
+    {
+      "seed": 20261108,
+      "case": 0,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 0,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": true,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 1,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 7,
+      "gold_original_line": 7,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 1,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 16,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 7,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 7,
+      "gold_original_line": 16,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 2,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 8,
+      "gold_original_line": 8,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 2,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 14,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 8,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 14,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 3,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 3,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261108,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261108,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "payload_value_only",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 0,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 0,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 1,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 7,
+      "gold_original_line": 7,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 1,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 16,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 7,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 7,
+      "gold_original_line": 16,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 2,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 8,
+      "gold_original_line": 8,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 2,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 14,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 8,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 11,
+      "gold_original_line": 14,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "interior"
+    },
+    {
+      "seed": 20261109,
+      "case": 3,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 3,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261109,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261109,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 0,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 0,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": true,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 0,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 1,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 7,
+      "gold_original_line": 7,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 1,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 16,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 16,
+      "gold_original_line": 7,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 1,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 7,
+      "gold_original_line": 16,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 2,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 8,
+      "gold_original_line": 8,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 2,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 14,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 14,
+      "gold_original_line": 8,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 2,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 8,
+      "gold_original_line": 14,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 3,
+      "kind": "normal",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 9,
+      "gold_original_line": 9,
+      "item_selection_correct": true,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 3,
+      "kind": "normal",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 12,
+      "gold_original_line": 12,
+      "item_selection_correct": true,
+      "strict_final_correct": true,
+      "selected_display_position": "last"
+    },
+    {
+      "seed": 20261110,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "first",
+      "response_unit": "original_line_number_only",
+      "selected_original_line": 12,
+      "gold_original_line": 9,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "first"
+    },
+    {
+      "seed": 20261110,
+      "case": 3,
+      "kind": "reversed",
+      "intent": "last",
+      "response_unit": "full_line_text",
+      "selected_original_line": 9,
+      "gold_original_line": 12,
+      "item_selection_correct": false,
+      "strict_final_correct": false,
+      "selected_display_position": "last"
+    }
+  ],
+  "cells": [
+    {
+      "seed": 20261108,
+      "kind": "normal",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261108,
+      "kind": "normal",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "full_line_text": 1,
+        "original_line_number_only": 3
+      },
+      "selected_display_position": {
+        "last": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 1
+    },
+    {
+      "seed": 20261108,
+      "kind": "reversed",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 0,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261108,
+      "kind": "reversed",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "full_line_text": 1,
+        "original_line_number_only": 2,
+        "payload_value_only": 1
+      },
+      "selected_display_position": {
+        "last": 3,
+        "first": 1
+      },
+      "item_selection_correct": 1,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261109,
+      "kind": "normal",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261109,
+      "kind": "normal",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "last": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261109,
+      "kind": "reversed",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 0,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261109,
+      "kind": "reversed",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "last": 3,
+        "interior": 1
+      },
+      "item_selection_correct": 0,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261110,
+      "kind": "normal",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261110,
+      "kind": "normal",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "full_line_text": 2,
+        "original_line_number_only": 2
+      },
+      "selected_display_position": {
+        "last": 4
+      },
+      "item_selection_correct": 4,
+      "strict_final_correct": 2
+    },
+    {
+      "seed": 20261110,
+      "kind": "reversed",
+      "intent": "first",
+      "n": 4,
+      "response_units": {
+        "original_line_number_only": 4
+      },
+      "selected_display_position": {
+        "first": 4
+      },
+      "item_selection_correct": 0,
+      "strict_final_correct": 0
+    },
+    {
+      "seed": 20261110,
+      "kind": "reversed",
+      "intent": "last",
+      "n": 4,
+      "response_units": {
+        "full_line_text": 4
+      },
+      "selected_display_position": {
+        "last": 4
+      },
+      "item_selection_correct": 0,
+      "strict_final_correct": 0
+    }
+  ],
+  "global_units": {
+    "original_line_number_only": 39,
+    "full_line_text": 8,
+    "payload_value_only": 1
+  }
+}
