@@ -1,0 +1,818 @@
+[
+  {
+    "family": "calendar",
+    "row_index": 10000,
+    "episode_id": "p11-train-cal.list_locations-000",
+    "input_tokens": 451,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "f8fca077aaedda27897d69e2f3911631b0023ffcc0de5ced0b0205b5c9482ad9",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "List the distinct locations of events on 2027-01-10, sorted alphabetically, as a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-10\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Toma\",\"Omar\",\"Rafi\"],\"date\":\"2027-01-10\",\"end\":\"10:00\",\"id\":\"P11E021\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Intake Sync 21\"},{\"attendees\":[\"Pia\",\"Suki\",\"Toma\"],\"date\":\"2027-01-10\",\"end\":\"12:00\",\"id\":\"P11E022\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Dock Audit 22\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10001,
+    "episode_id": "p11-train-cal.list_locations-001",
+    "input_tokens": 512,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "7196d852265fcc633731f50b6916b275f5913806a6b751c69e3bdb13a48b7c71",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-01-07, return a sorted JSON array of unique event locations."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-07\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Quinn\",\"Omar\",\"Pia\"],\"date\":\"2027-01-07\",\"end\":\"10:00\",\"id\":\"P11E011\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Sketch Lab 11\"},{\"attendees\":[\"Omar\",\"Pia\",\"Quinn\"],\"date\":\"2027-01-07\",\"end\":\"12:00\",\"id\":\"P11E012\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Intake Sync 12\"},{\"attendees\":[\"Suki\",\"Omar\",\"Rafi\"],\"date\":\"2027-01-07\",\"end\":\"14:00\",\"id\":\"P11E013\",\"location\":\"Dock 7\",\"start\":\"13:00\",\"title\":\"Night Handoff 13\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10002,
+    "episode_id": "p11-train-cal.list_locations-002",
+    "input_tokens": 449,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9991e9862a445e75d182b87a2d959069e3c92451d70058b0343e0f14037af29f",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Give the distinct locations for events dated 2027-02-13, sorted, in a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-13\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Toma\",\"Nia\",\"Quinn\"],\"date\":\"2027-02-13\",\"end\":\"10:00\",\"id\":\"P11E096\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Material Check 96\"},{\"attendees\":[\"Suki\",\"Quinn\",\"Nia\"],\"date\":\"2027-02-13\",\"end\":\"12:00\",\"id\":\"P11E097\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Night Handoff 97\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10003,
+    "episode_id": "p11-train-cal.list_locations-003",
+    "input_tokens": 521,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "04af1c9f2c91742c1e2901c93e8d35dd2549d413309274a3d5a3edf20495695a",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Collect unique event locations on 2027-02-09, sort them, and return a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-09\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Quinn\",\"Rafi\",\"Omar\"],\"date\":\"2027-02-09\",\"end\":\"10:00\",\"id\":\"P11E083\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Pilot Brief 83\"},{\"attendees\":[\"Suki\",\"Pia\",\"Rafi\"],\"date\":\"2027-02-09\",\"end\":\"12:00\",\"id\":\"P11E084\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Intake Sync 84\"},{\"attendees\":[\"Toma\",\"Nia\",\"Quinn\"],\"date\":\"2027-02-09\",\"end\":\"14:00\",\"id\":\"P11E085\",\"location\":\"Loft K\",\"start\":\"13:00\",\"title\":\"Intake Sync 85\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\", \"Loft K\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10004,
+    "episode_id": "p11-train-cal.list_locations-004",
+    "input_tokens": 458,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "955282c7747de6556ce26e964881853ec05c162382bf8004b97ae272a3e4454e",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "List the distinct locations of events on 2027-01-12, sorted alphabetically, as a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-12\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Omar\",\"Toma\",\"Suki\"],\"date\":\"2027-01-12\",\"end\":\"10:00\",\"id\":\"P11E026\",\"location\":\"Atrium 2\",\"start\":\"09:00\",\"title\":\"Intake Sync 26\"},{\"attendees\":[\"Pia\",\"Suki\",\"Nia\"],\"date\":\"2027-01-12\",\"end\":\"12:00\",\"id\":\"P11E027\",\"location\":\"Atrium 2\",\"start\":\"11:00\",\"title\":\"Harbor Review 27\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Atrium 2\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10005,
+    "episode_id": "p11-train-cal.list_locations-005",
+    "input_tokens": 515,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9d2951fa8ad4a3b52883103f55dd24dda619c488a9534e4b424dfe35dd05f9dd",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-02-05, return a sorted JSON array of unique event locations."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-05\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Pia\",\"Suki\",\"Omar\"],\"date\":\"2027-02-05\",\"end\":\"10:00\",\"id\":\"P11E073\",\"location\":\"Bay 9\",\"start\":\"09:00\",\"title\":\"Material Check 73\"},{\"attendees\":[\"Nia\",\"Toma\",\"Rafi\"],\"date\":\"2027-02-05\",\"end\":\"12:00\",\"id\":\"P11E074\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Sketch Lab 74\"},{\"attendees\":[\"Nia\",\"Pia\",\"Omar\"],\"date\":\"2027-02-05\",\"end\":\"14:00\",\"id\":\"P11E075\",\"location\":\"Bay 9\",\"start\":\"13:00\",\"title\":\"Material Check 75\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Bay 9\", \"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10006,
+    "episode_id": "p11-train-cal.list_locations-006",
+    "input_tokens": 452,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "28f283752354278436e2457a56acd73349ee23e6e413c13d4912f61302c6d0a5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Give the distinct locations for events dated 2027-03-03, sorted, in a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-03-03\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Pia\",\"Toma\",\"Quinn\"],\"date\":\"2027-03-03\",\"end\":\"10:00\",\"id\":\"P11E146\",\"location\":\"Studio 1\",\"start\":\"09:00\",\"title\":\"Intake Sync 146\"},{\"attendees\":[\"Omar\",\"Toma\",\"Pia\"],\"date\":\"2027-03-03\",\"end\":\"12:00\",\"id\":\"P11E147\",\"location\":\"Studio 1\",\"start\":\"11:00\",\"title\":\"Night Handoff 147\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Studio 1\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10007,
+    "episode_id": "p11-train-cal.list_locations-007",
+    "input_tokens": 517,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "fa6ba5540d96574c9a11048360203d39003bd006121e9ea6bee2dbf64d884249",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Collect unique event locations on 2027-03-02, sort them, and return a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-03-02\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Nia\",\"Quinn\",\"Pia\"],\"date\":\"2027-03-02\",\"end\":\"10:00\",\"id\":\"P11E143\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Pilot Brief 143\"},{\"attendees\":[\"Quinn\",\"Toma\",\"Omar\"],\"date\":\"2027-03-02\",\"end\":\"12:00\",\"id\":\"P11E144\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Material Check 144\"},{\"attendees\":[\"Pia\",\"Rafi\",\"Quinn\"],\"date\":\"2027-03-02\",\"end\":\"14:00\",\"id\":\"P11E145\",\"location\":\"Dock 7\",\"start\":\"13:00\",\"title\":\"Sketch Lab 145\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10008,
+    "episode_id": "p11-train-cal.list_locations-008",
+    "input_tokens": 451,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "295207c0b370729d78ae51c43ec7b5a73fb3d18b2cc582de571af4d0b5e56d16",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "List the distinct locations of events on 2027-02-10, sorted alphabetically, as a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-10\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Toma\",\"Rafi\",\"Pia\"],\"date\":\"2027-02-10\",\"end\":\"10:00\",\"id\":\"P11E086\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Night Handoff 86\"},{\"attendees\":[\"Quinn\",\"Nia\",\"Toma\"],\"date\":\"2027-02-10\",\"end\":\"12:00\",\"id\":\"P11E087\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Material Check 87\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10009,
+    "episode_id": "p11-train-cal.list_locations-009",
+    "input_tokens": 448,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "c58b224567de3b15d98bb631724b637c7fc81953fdb2d423e290ecd8002083b9",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-02-18, return a sorted JSON array of unique event locations."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-18\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Suki\",\"Omar\",\"Rafi\"],\"date\":\"2027-02-18\",\"end\":\"10:00\",\"id\":\"P11E110\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Sketch Lab 110\"},{\"attendees\":[\"Omar\",\"Rafi\",\"Suki\"],\"date\":\"2027-02-18\",\"end\":\"12:00\",\"id\":\"P11E111\",\"location\":\"Loft K\",\"start\":\"11:00\",\"title\":\"Harbor Review 111\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Loft K\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10010,
+    "episode_id": "p11-train-cal.list_locations-010",
+    "input_tokens": 449,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9febf34ee77c39b08babe1ccc90c344943d8d581be0f3690bebec6d9bcfcc841",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Give the distinct locations for events dated 2027-01-21, sorted, in a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-21\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Rafi\",\"Toma\",\"Omar\"],\"date\":\"2027-01-21\",\"end\":\"10:00\",\"id\":\"P11E044\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Harbor Review 44\"},{\"attendees\":[\"Omar\",\"Suki\",\"Quinn\"],\"date\":\"2027-01-21\",\"end\":\"12:00\",\"id\":\"P11E045\",\"location\":\"Dock 7\",\"start\":\"11:00\",\"title\":\"Material Check 45\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10011,
+    "episode_id": "p11-train-cal.list_locations-011",
+    "input_tokens": 447,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "ec87117c4fae68dea866fc89719a05fc00124911183c0105211674e930cb1d64",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Collect unique event locations on 2027-01-05, sort them, and return a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-05\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Quinn\",\"Nia\",\"Suki\"],\"date\":\"2027-01-05\",\"end\":\"10:00\",\"id\":\"P11E007\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Harbor Review 7\"},{\"attendees\":[\"Rafi\",\"Nia\",\"Toma\"],\"date\":\"2027-01-05\",\"end\":\"12:00\",\"id\":\"P11E008\",\"location\":\"Loft K\",\"start\":\"11:00\",\"title\":\"Material Check 8\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Loft K\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10012,
+    "episode_id": "p11-train-cal.list_locations-012",
+    "input_tokens": 524,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "3f0276871c3e867f0167788284310aa9413eaba5e8a7e6eceaebc321760b7914",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "List the distinct locations of events on 2027-02-22, sorted alphabetically, as a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-22\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Omar\",\"Quinn\",\"Toma\"],\"date\":\"2027-02-22\",\"end\":\"10:00\",\"id\":\"P11E121\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Dock Audit 121\"},{\"attendees\":[\"Pia\",\"Suki\",\"Nia\"],\"date\":\"2027-02-22\",\"end\":\"12:00\",\"id\":\"P11E122\",\"location\":\"Loft K\",\"start\":\"11:00\",\"title\":\"Night Handoff 122\"},{\"attendees\":[\"Suki\",\"Rafi\",\"Omar\"],\"date\":\"2027-02-22\",\"end\":\"14:00\",\"id\":\"P11E123\",\"location\":\"Dock 7\",\"start\":\"13:00\",\"title\":\"Material Check 123\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Dock 7\", \"Loft K\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10013,
+    "episode_id": "p11-train-cal.list_locations-013",
+    "input_tokens": 455,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "fdd0f21569c6ca823b7c2245c27616ef87e1459c351b141519d03c39197f2b07",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-02-19, return a sorted JSON array of unique event locations."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-19\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Omar\",\"Pia\",\"Toma\"],\"date\":\"2027-02-19\",\"end\":\"10:00\",\"id\":\"P11E112\",\"location\":\"Atrium 2\",\"start\":\"09:00\",\"title\":\"Intake Sync 112\"},{\"attendees\":[\"Toma\",\"Omar\",\"Quinn\"],\"date\":\"2027-02-19\",\"end\":\"12:00\",\"id\":\"P11E113\",\"location\":\"Atrium 2\",\"start\":\"11:00\",\"title\":\"Pilot Brief 113\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Atrium 2\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10014,
+    "episode_id": "p11-train-cal.list_locations-014",
+    "input_tokens": 523,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "add0cf00ee701243f3da611dce4dd38bd584c4ed94e7c20774bf7e97d558df42",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Give the distinct locations for events dated 2027-02-28, sorted, in a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-28\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Pia\",\"Toma\",\"Nia\"],\"date\":\"2027-02-28\",\"end\":\"10:00\",\"id\":\"P11E139\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Night Handoff 139\"},{\"attendees\":[\"Suki\",\"Quinn\",\"Nia\"],\"date\":\"2027-02-28\",\"end\":\"12:00\",\"id\":\"P11E140\",\"location\":\"Bay 9\",\"start\":\"11:00\",\"title\":\"Harbor Review 140\"},{\"attendees\":[\"Suki\",\"Pia\",\"Toma\"],\"date\":\"2027-02-28\",\"end\":\"14:00\",\"id\":\"P11E141\",\"location\":\"Loft K\",\"start\":\"13:00\",\"title\":\"Dock Audit 141\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Bay 9\", \"Loft K\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 10015,
+    "episode_id": "p11-train-cal.list_locations-015",
+    "input_tokens": 524,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "ddb317516db027538f32d5938179352c03bd61e92e2febb206fc84ec636ebe02",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Collect unique event locations on 2027-01-22, sort them, and return a JSON array."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-22\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Quinn\",\"Rafi\",\"Omar\"],\"date\":\"2027-01-22\",\"end\":\"10:00\",\"id\":\"P11E046\",\"location\":\"Atrium 2\",\"start\":\"09:00\",\"title\":\"Night Handoff 46\"},{\"attendees\":[\"Suki\",\"Omar\",\"Toma\"],\"date\":\"2027-01-22\",\"end\":\"12:00\",\"id\":\"P11E047\",\"location\":\"Atrium 2\",\"start\":\"11:00\",\"title\":\"Harbor Review 47\"},{\"attendees\":[\"Rafi\",\"Nia\",\"Omar\"],\"date\":\"2027-01-22\",\"end\":\"14:00\",\"id\":\"P11E048\",\"location\":\"Atrium 2\",\"start\":\"13:00\",\"title\":\"Harbor Review 48\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": [\"Atrium 2\"]}"
+      }
+    ],
+    "source": "p11_new"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20000,
+    "episode_id": "p11-train-cal.count_date-000",
+    "input_tokens": 378,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "9c1a94879527367a5541c9f9eeecb2fe861a0c6d904d9281f7cc240cc6a34395",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "How many events occur on 2027-03-01? Return a single integer."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-03-01\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Suki\",\"Toma\",\"Quinn\"],\"date\":\"2027-03-01\",\"end\":\"10:00\",\"id\":\"P11E142\",\"location\":\"Dock 7\",\"start\":\"09:00\",\"title\":\"Sketch Lab 142\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 1}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20001,
+    "episode_id": "p11-train-cal.count_date-001",
+    "input_tokens": 376,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "138f42463c41045c9305a8c48b0a5b5371f265d30b9099219caac69243cd3064",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Count the events dated 2027-01-18 and answer with one integer."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-18\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Toma\",\"Pia\",\"Nia\"],\"date\":\"2027-01-18\",\"end\":\"10:00\",\"id\":\"P11E041\",\"location\":\"Bay 9\",\"start\":\"09:00\",\"title\":\"Material Check 41\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 1}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20002,
+    "episode_id": "p11-train-cal.count_date-002",
+    "input_tokens": 382,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "cdfab72b4bd0510cb038c346f6015f893052b1ed1dbbf1f97ec96ab73125fff5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-01-27, what is the number of events? Give an integer only."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-27\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Suki\",\"Quinn\",\"Nia\"],\"date\":\"2027-01-27\",\"end\":\"10:00\",\"id\":\"P11E058\",\"location\":\"Atrium 2\",\"start\":\"09:00\",\"title\":\"Sketch Lab 58\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 1}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20003,
+    "episode_id": "p11-train-cal.count_date-003",
+    "input_tokens": 379,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "544fa52dea70c2818843b3971be92645370abdd3be665bd600d34728b4e74478",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Return the integer count of events that take place on 2027-03-04."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-03-04\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Suki\",\"Nia\",\"Pia\"],\"date\":\"2027-03-04\",\"end\":\"10:00\",\"id\":\"P11E148\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Intake Sync 148\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 1}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20004,
+    "episode_id": "p11-train-cal.count_date-004",
+    "input_tokens": 443,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "230c9d57d43cf91062cf9df4eb255d2d72d0f7e15ea55a46e660c0ea3bc1be38",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "How many events occur on 2027-02-04? Return a single integer."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-04\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Omar\",\"Quinn\",\"Rafi\"],\"date\":\"2027-02-04\",\"end\":\"10:00\",\"id\":\"P11E071\",\"location\":\"Loft K\",\"start\":\"09:00\",\"title\":\"Sketch Lab 71\"},{\"attendees\":[\"Rafi\",\"Pia\",\"Nia\"],\"date\":\"2027-02-04\",\"end\":\"12:00\",\"id\":\"P11E072\",\"location\":\"Bay 9\",\"start\":\"11:00\",\"title\":\"Harbor Review 72\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 2}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20005,
+    "episode_id": "p11-train-cal.count_date-005",
+    "input_tokens": 376,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "0bac8d00b3d4633758ea094f242034bf54a4d2915c733c23e0cfc7f880d1c2b6",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Count the events dated 2027-01-19 and answer with one integer."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-19\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Suki\",\"Toma\",\"Nia\"],\"date\":\"2027-01-19\",\"end\":\"10:00\",\"id\":\"P11E042\",\"location\":\"Annex Q\",\"start\":\"09:00\",\"title\":\"Dock Audit 42\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 1}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20006,
+    "episode_id": "p11-train-cal.count_date-006",
+    "input_tokens": 448,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "8c4aed9be1f70df4205c0687f30f2a6f1b340d6bd8f370d9ff15386c627341bd",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "On 2027-02-02, what is the number of events? Give an integer only."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-02-02\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Pia\",\"Suki\",\"Nia\"],\"date\":\"2027-02-02\",\"end\":\"10:00\",\"id\":\"P11E067\",\"location\":\"Annex Q\",\"start\":\"09:00\",\"title\":\"Material Check 67\"},{\"attendees\":[\"Nia\",\"Rafi\",\"Quinn\"],\"date\":\"2027-02-02\",\"end\":\"12:00\",\"id\":\"P11E068\",\"location\":\"Atrium 2\",\"start\":\"11:00\",\"title\":\"Intake Sync 68\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 2}"
+      }
+    ],
+    "source": "p11_new_count"
+  },
+  {
+    "family": "calendar",
+    "row_index": 20007,
+    "episode_id": "p11-train-cal.count_date-007",
+    "input_tokens": 445,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": false,
+    "skill": "cal.count_date",
+    "message_hash": "04c4e9e34ae539eb5a915171605804ad3b15fb9ca11468b9a72507ca63007616",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+      },
+      {
+        "role": "user",
+        "content": "Return the integer count of events that take place on 2027-01-13."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2027-01-13\"}}"
+      },
+      {
+        "role": "user",
+        "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Pia\",\"Rafi\",\"Suki\"],\"date\":\"2027-01-13\",\"end\":\"10:00\",\"id\":\"P11E028\",\"location\":\"Atrium 2\",\"start\":\"09:00\",\"title\":\"Pilot Brief 28\"},{\"attendees\":[\"Suki\",\"Nia\",\"Omar\"],\"date\":\"2027-01-13\",\"end\":\"12:00\",\"id\":\"P11E029\",\"location\":\"Studio 1\",\"start\":\"11:00\",\"title\":\"Material Check 29\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"answer\": 2}"
+      }
+    ],
+    "source": "p11_new_count"
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "created": "2026-11-18 02:50:59 +0800",
+  "stage": "CPU freeze of data, rules, and Uniform/FixedEarly plans; EAAR plans pending independent dev probes",
+  "seeds": [
+    20261108,
+    20261109,
+    20261110
+  ],
+  "arms": [
+    "uniform",
+    "fixed_early",
+    "eaar_v1"
+  ],
+  "skills": [
+    "cal.count_date",
+    "cal.list_locations",
+    "db.list_tables",
+    "db.filter_cmp_top",
+    "file.search_last",
+    "py.median"
+  ],
+  "old_skills": [
+    "cal.count_date",
+    "cal.list_locations"
+  ],
+  "new_skills": [
+    "db.list_tables",
+    "db.filter_cmp_top",
+    "file.search_last",
+    "py.median"
+  ],
+  "budget_input_tokens": 7494,
+  "updates": "prefix10+suffix13=23",
+  "formal_opened": false,
+  "files": {
+    "data_ext_p11_eaar_v1/background.json": "2b16664a7b418cc1d39ce591101bdfeb805df653a79e5ecbb8b98f51a80ac6d9",
+    "data_ext_p11_eaar_v1/candidates.json": "85ec0a8c52731c848ae23223c8cc2f79be187c2e6593b67c1481fc524da275c8",
+    "data_ext_p11_eaar_v1/cpu_data_checks.json": "a4887e34d93b74aba2c1faf1838de7485c896e8bb3fbef891a3008ac752db922",
+    "data_ext_p11_eaar_v1/prefix_coverage.json": "38af5a31411ea74759656de33d4afaaa1812fe2bd105d813866d891001473592",
+    "data_ext_p11_eaar_v1/source_after.json": "c307c3229431612a7087aeab54da1ad30f1c731650f81cb8a2ed65201b8c5eeb",
+    "data_ext_p11_eaar_v1/dev/rows.jsonl": "9337ce9b6f8c8cc1ec490f7e37c62ef38f501899e2a3551188b338fbf73f3d89",
+    "data_ext_p11_eaar_v1/fixtures/calendar.json": "8f9f66a2efb7f4810894d0db1834dfc73d5a457b305a9132a610844dcde0a5d5",
+    "data_ext_p11_eaar_v1/fixtures/dev.sqlite": "58f6b9852530a5ec68e222fc90558360b2ce09d3e21a42aee72593ee59d4028f",
+    "data_ext_p11_eaar_v1/fixtures/holdout.sqlite": "583db2096481b905b146098497c410022f4ce07a14339d740b0ed834546398de",
+    "data_ext_p11_eaar_v1/holdout/rows.jsonl": "0aaf330ee0a975f7ec3fff004bd188239daec26d5aaf715ca0b480ac45e13720",
+    "data_ext_p11_eaar_v1/plans/A_seed20261108_fixed_early.json": "7e0bb18e0fdfd209379423a2e904a89546041b0cb54232c8921adcebf881ff91",
+    "data_ext_p11_eaar_v1/plans/A_seed20261108_uniform.json": "2270a407fe14bb807920ea131d524b2a4a83b067d573eb11557bf842c548f9f3",
+    "data_ext_p11_eaar_v1/plans/A_seed20261109_fixed_early.json": "38481badd3af349ed51f7b404be1c9d88a7b654f7455fa47d7e9521960571c33",
+    "data_ext_p11_eaar_v1/plans/A_seed20261109_uniform.json": "963a9631d2a8eaab9dc8c25f6c8f259862d3edfaaa057402cc4e7056a10eccfb",
+    "data_ext_p11_eaar_v1/plans/A_seed20261110_fixed_early.json": "7b577fa943302e62effe13b996f11a6f4c961ed5be83d7bfa1dc3d6baf13a718",
+    "data_ext_p11_eaar_v1/plans/A_seed20261110_uniform.json": "50043465966fc4e2ab236b98efda8021dcc1121ab1279f9d497e37efe46e0adc",
+    "data_ext_p11_eaar_v1/train/calendar_extra.jsonl": "e2b6aed514ba846ea7cb60b684b693ff32246e96fcdab38cc9640f70ec3dbb56",
+    "data_ext_p11_eaar_v1/train/calendar_extra_features.json": "3bb4b16dcbcb0eec1752bfba1ce96ea619d584b9428e5fa4c0df4efcc85d06f9",
+    "data_ext_p11_eaar_v1/train/calendar_extra_meta.json": "5207626855c8cf3eb5d21589c8ccb36ce6c69bcddf5670ec108636d8210ee213",
+    "data_ext_p11_eaar_v1/train/rows.jsonl": "ba69c9dce7083571f0ed8fd004331b54c7ce02de7c7fa5ce6a0b098ae9349603"
+  },
+  "references": {
+    "P11_PREREG_20261118_EAAR_V1_ZH.md": "3591022e6e5f673aa60090032ce01849627e0cc09fa9619fdb311efddf729059",
+    "fac_tinyagent/p11_eaar_v1_20261118.py": "32caab433108f5fd6a904e96ebbd5f337926b48123d8e47b4b4515ce4e058f02",
+    "fac_tinyagent/p11_e3_train_compat_20261118.py": "df40ce37f653a490259a10166e9572221034c230193f6dff47a09ec7491b8df6",
+    "fac_tinyagent/p6_e3_train_attempt2.py": "9e7f966fa9a4f12d0523f0692a7a818cb2c522efefd4105224986acdf0090b3f",
+    "fac_tinyagent/p6_attempt2.py": "95878bf207406b2becb679271dd13d1c4a39a4a75d4ada219d4d8f85bc6ee7a8",
+    "fac_tinyagent/p6_devplan.py": "4d52b3a978957276194854361790622151de5d7770693affb5abf88a41cf94d7",
+    "data_ext_e4/pool/database.jsonl": "5acae634c6e521e001b64802a75b1ccc49b72d543cbc392414614f78897cf755",
+    "data_ext_e4/pool/file.jsonl": "99784427ea61dc7d75489d273d171055b1eeaa89a15723dfefc6dbcb4191c887",
+    "data_ext_e4/pool/python.jsonl": "585bf4bbd54508664077e62eba9b6b58bc81fbc2e617350a8b021b1cec1ccf62",
+    "runs_ext_e4/prefixes/A_seed20261108/training_state.pt": "5702cc7ef0e9b9dec5c4025b1b593d0a497088cb17dbdfa840b4353f7efa86d9",
+    "runs_ext_e4/prefixes/A_seed20261109/training_state.pt": "ed04911abc5b7f7357c45f71e045ffd8edbed6d2b53b0a7c2dac38a9c053e558",
+    "runs_ext_e4/prefixes/A_seed20261110/training_state.pt": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb",
+    "runs_ext_e4/prefixes/A_seed20261108/manifest.json": "844c1ccfa152f2588e5203885e1ba1e277fbbc1c7697884d9fae2d4861324e52",
+    "runs_ext_e4/prefixes/A_seed20261109/manifest.json": "150b5c1fa7866d5db44e9be1d2a63bbe09274132cad2aa8323e1f62a076cf382",
+    "runs_ext_e4/prefixes/A_seed20261110/manifest.json": "33607f704e1ab1c6b1e7de0215a2cc755b127085f080af17ac700bad61dfecd7",
+    "runs_phase2/A_seed20261108/config.json": "8a8d5600b193d6fde89ebcae518dfda4a750f1094e54bcbe4f4a3e50f5f47d77",
+    "runs_phase2/A_seed20261109/config.json": "2424ab2436df4244379fccdbfa4577552289f81b18aa1d0a9138a10f01f1f101",
+    "runs_phase2/A_seed20261110/config.json": "7b6a2254db5b2cae0b9e3acc2042540cc8ea6ebda16f02bab22177947bfc6113",
+    "runs_phase2/A_seed20261108/checkpoints/stage_03_python/adapter_model.safetensors": "fe578ed0f868f1ccb1bd84b905f42d8726455fc3f166773e8a9627b7324f7e53",
+    "runs_phase2/A_seed20261109/checkpoints/stage_03_python/adapter_model.safetensors": "294b0435a469f77aa303658f702cd76f464133676f95e45a549bdd5c551e2b71",
+    "runs_phase2/A_seed20261110/checkpoints/stage_03_python/adapter_model.safetensors": "a44dbd59d5e09ce86363b9e7bcc1c027741b2d945fe3ce68f50f11ef2cc2d0b5",
+    "data_phase2/calendar/train.jsonl": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+    "data_phase2/fixtures/calendar.json": "98959c74ee71def5c96f47677181551d4efecee1701cb8371c89f180b7865974"
+  },
+  "checks": {
+    "dev": 24,
+    "holdout": 72,
+    "train_new_calendar": 24,
+    "candidate_counts": {
+      "cal.count_date": 8,
+      "cal.list_locations": 8,
+      "db.list_tables": 1,
+      "db.filter_cmp_top": 8,
+      "file.search_last": 8,
+      "py.median": 8
+    },
+    "dev_holdout_prompts_disjoint": true,
+    "messages_disjoint_from_train_pools": true,
+    "python_value_sets_disjoint": true,
+    "calendar_dates_disjoint": true,
+    "calendar_dates_disjoint_from_phase2": true,
+    "database_schema_entities_disjoint": true,
+    "uniform_fixed_early_tokens": 7494
+  },
+  "notes": "EAAR plans are not written until GPU dev probes finish and are frozen before formal scores",
+  "planner_hash_update": {
+    "reason": "cpu_accept bugfix: sum(ns.values()) for reserved dose; data/plans unchanged",
+    "files": [
+      "fac_tinyagent/p11_eaar_v1_20261118.py"
+    ]
+  }
+}

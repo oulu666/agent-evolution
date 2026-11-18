@@ -1,0 +1,14 @@
+2026-11-18 02:52:39 +0800 PROBE T0 20261108
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:06,  4.64it/s]Loading weights:   1%|          | 2/311 [00:00<01:01,  5.02it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:38,  7.92it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:03, 86.38it/s]Loading weights:  24%|██▍       | 76/311 [00:00<00:01, 166.55it/s]Loading weights:  41%|████      | 127/311 [00:00<00:00, 258.22it/s]Loading weights:  57%|█████▋    | 178/311 [00:00<00:00, 327.64it/s]Loading weights:  73%|███████▎  | 226/311 [00:01<00:00, 370.52it/s]Loading weights:  87%|████████▋ | 270/311 [00:01<00:00, 381.51it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 244.82it/s]
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p11_queue_20261118.py", line 336, in <module>
+    sys.exit({'supervise':supervise,'worker':worker}[a.mode]())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p11_queue_20261118.py", line 285, in worker
+    probe_seed(seed)
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p11_queue_20261118.py", line 146, in probe_seed
+    log('PROBE T0 '+str(seed));model,tok=load_eval_model(cfg,str(start_adapter(seed)));ph=restore_t0(model,seed)
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p11_queue_20261118.py", line 113, in restore_t0
+    raise ValueError('T0 parameter names mismatch')
+ValueError: T0 parameter names mismatch

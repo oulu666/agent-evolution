@@ -1,0 +1,118 @@
+{
+  "stage": "stage_04_calendar",
+  "family": "calendar",
+  "mode": "targeted",
+  "seed": 20261110,
+  "previous_adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_phase2/A_seed20261110/checkpoints/stage_03_python",
+  "epochs": 2,
+  "train_samples": 80,
+  "new_order_sha256": "4e5d6055b1aab8938befdf23fe59a660979766bef079e383196fbeacbb25279e",
+  "new_data_sha256": "aa1d14b83a8f2646f82c9ca22d756a248462b06d161bb2d0d4e364c4be04e2d0",
+  "probe_data_sha256": {
+    "file": "44dba480ce54d169532ca799ead69358ce525728c7174040fb7f421c6e6a44a1",
+    "database": "7d35dcd5a670dcaab1cb71232f9a357af20f981a70d81985a03da1a5af382f35",
+    "python": "2b2fe5b448381cf8106c1774be1bd4754716dea14d7215b7fcc2f6a2d0c1a52b"
+  },
+  "start_trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+  "midpoint_trainable_state_sha256": "f0209acabd8fedc0b0762b6e519a685e1834a2fe99b1d6601fac7098aa44e898",
+  "train_tokens": 82438,
+  "steps": 182,
+  "last_loss": 0.007899503223598003,
+  "microsteps": 182,
+  "optimizer_steps": 23,
+  "new_samples": 160,
+  "replay_samples": 22,
+  "new_input_tokens": 74944,
+  "replay_input_tokens": 7494,
+  "new_supervised_tokens": 8542,
+  "replay_supervised_tokens": 1090,
+  "replay_ratio_requested": 0.1,
+  "replay_ratio_actual": 0.09999466268146882,
+  "budget_input_tokens": 7494,
+  "budget_unused_input_tokens": 0,
+  "quota_error_tokens_by_family": {
+    "calendar": 896.0,
+    "database": -211.0,
+    "file": -593.0,
+    "python": -92.0
+  },
+  "within_one_percent_of_budget": true,
+  "actual_replay_tokens_by_family": {
+    "calendar": 896,
+    "database": 2287,
+    "file": 1905,
+    "python": 2406
+  },
+  "adaptive_triggered": false,
+  "target_fraction": 0.25,
+  "target_family_weights": {
+    "file": 0.3333333333333333,
+    "python": 0.3333333333333333,
+    "database": "fixed_count"
+  },
+  "target_samples_by_family": {
+    "calendar": 2,
+    "database": 4,
+    "file": 2,
+    "python": 2
+  },
+  "target_actual_input_tokens": 3436,
+  "uniform_actual_input_tokens": 4058,
+  "peak_gpu_gb": 2.607,
+  "compute_dtype": "torch.bfloat16",
+  "duration_seconds": 284.179,
+  "probe_duration_seconds": 165.538,
+  "actual_elapsed_seconds": 47.052,
+  "prefix_reused": true,
+  "shared_prefix_path": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_e4/prefixes/A_seed20261110",
+  "shared_prefix_state_sha256": "0c036c3534747a999342009da2416e22c2f0bafe796d7ccc002695cb39acabfb",
+  "actual_probe_duration_seconds": 0.0,
+  "probe_cost_basis": "reference cost of common prefix; actual elapsed/probe time recorded separately",
+  "training_and_overhead_seconds": 118.641,
+  "probe_input_tokens": 112189,
+  "probe_generated_tokens": 10444,
+  "probe_episodes": 192,
+  "probes": {
+    "start": {
+      "scores": {
+        "database": 0.25,
+        "file": 0.0,
+        "python": 0.65625
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 64.849,
+      "episodes": 96,
+      "trainable_state_sha256": "68868c3ff747a66fd6ee0f194c9b9ea181d4114fd47bf2431bbd2cb8b6f6ad92",
+      "generation_calls": 6,
+      "logical_generation_requests": 192,
+      "input_tokens": 56078,
+      "generated_tokens": 5603
+    },
+    "midpoint": {
+      "scores": {
+        "database": 0.21875,
+        "file": 0.21875,
+        "python": 0.625
+      },
+      "score_metric": "joint_success_rate",
+      "duration_seconds": 100.689,
+      "episodes": 96,
+      "trainable_state_sha256": "f0209acabd8fedc0b0762b6e519a685e1834a2fe99b1d6601fac7098aa44e898",
+      "generation_calls": 6,
+      "logical_generation_requests": 192,
+      "input_tokens": 56111,
+      "generated_tokens": 4841
+    }
+  },
+  "partial_accumulation_microsteps": 6,
+  "optimizer_step_audit": {
+    "prefix_updates": 10,
+    "prefix_microsteps": 80,
+    "suffix_actual_optimizer_steps": 13,
+    "total_actual_optimizer_steps": 23,
+    "suffix_microsteps": 102,
+    "tail_microsteps": 6,
+    "tail_actual_steps": 1
+  },
+  "completed": true
+}

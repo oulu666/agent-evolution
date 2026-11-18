@@ -1,0 +1,66 @@
+{
+  "stage_index": 4,
+  "stage_name": "P11_B1_p11_database",
+  "family": "database",
+  "metrics": {
+    "n": 24,
+    "tool_selection_accuracy": 0.916667,
+    "argument_accuracy": 0.125,
+    "execution_success_rate": 0.916667,
+    "final_task_success_rate": 0.916667,
+    "joint_success_rate": 0.125,
+    "conditional_argument_accuracy": 0.136364,
+    "conditional_argument_numerator": 3,
+    "conditional_argument_denominator": 22
+  },
+  "skill_metrics": {
+    "db.filter_cmp_top": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 1.0,
+      "joint_success_rate": 0.0,
+      "conditional_argument_accuracy": 0.0,
+      "conditional_argument_numerator": 0,
+      "conditional_argument_denominator": 12
+    },
+    "db.list_tables": {
+      "n": 12,
+      "tool_selection_accuracy": 0.833333,
+      "argument_accuracy": 0.25,
+      "execution_success_rate": 0.833333,
+      "final_task_success_rate": 0.833333,
+      "joint_success_rate": 0.25,
+      "conditional_argument_accuracy": 0.3,
+      "conditional_argument_numerator": 3,
+      "conditional_argument_denominator": 10
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 48,
+    "input_tokens": 12889,
+    "output_tokens": 1269,
+    "total_tokens": 14158,
+    "generation_seconds": 95.467855,
+    "n": 24,
+    "generation_batches": 48,
+    "usage_coverage": {
+      "inference_calls": 24,
+      "input_tokens": 24,
+      "output_tokens": 24,
+      "total_tokens": 24,
+      "generation_seconds": 24
+    },
+    "recorded_totals": {
+      "inference_calls": 48,
+      "input_tokens": 12889,
+      "output_tokens": 1269,
+      "total_tokens": 14158,
+      "generation_seconds": 95.467855
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}

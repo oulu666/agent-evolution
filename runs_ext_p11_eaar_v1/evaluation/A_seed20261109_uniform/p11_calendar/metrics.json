@@ -1,0 +1,66 @@
+{
+  "stage_index": 4,
+  "stage_name": "P11_B1_p11_calendar",
+  "family": "calendar",
+  "metrics": {
+    "n": 24,
+    "tool_selection_accuracy": 0.875,
+    "argument_accuracy": 0.875,
+    "execution_success_rate": 0.875,
+    "final_task_success_rate": 0.583333,
+    "joint_success_rate": 0.583333,
+    "conditional_argument_accuracy": 1.0,
+    "conditional_argument_numerator": 21,
+    "conditional_argument_denominator": 21
+  },
+  "skill_metrics": {
+    "cal.count_date": {
+      "n": 12,
+      "tool_selection_accuracy": 0.75,
+      "argument_accuracy": 0.75,
+      "execution_success_rate": 0.75,
+      "final_task_success_rate": 0.75,
+      "joint_success_rate": 0.75,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 9,
+      "conditional_argument_denominator": 9
+    },
+    "cal.list_locations": {
+      "n": 12,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "execution_success_rate": 1.0,
+      "final_task_success_rate": 0.416667,
+      "joint_success_rate": 0.416667,
+      "conditional_argument_accuracy": 1.0,
+      "conditional_argument_numerator": 12,
+      "conditional_argument_denominator": 12
+    }
+  },
+  "inference_usage": {
+    "inference_calls": 48,
+    "input_tokens": 17624,
+    "output_tokens": 1002,
+    "total_tokens": 18626,
+    "generation_seconds": 82.71923,
+    "n": 24,
+    "generation_batches": 48,
+    "usage_coverage": {
+      "inference_calls": 24,
+      "input_tokens": 24,
+      "output_tokens": 24,
+      "total_tokens": 24,
+      "generation_seconds": 24
+    },
+    "recorded_totals": {
+      "inference_calls": 48,
+      "input_tokens": 17624,
+      "output_tokens": 1002,
+      "total_tokens": 18626,
+      "generation_seconds": 82.71923
+    },
+    "inferred_inference_call_episodes": 0,
+    "inference_calls_definition": "logical generation requests; two per episode",
+    "generation_seconds_definition": "generation wall time; batch time apportioned equally"
+  }
+}
