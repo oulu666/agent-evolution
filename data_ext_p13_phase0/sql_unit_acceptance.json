@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "gold_sql": "SELECT name FROM p13_marks WHERE score > 80 ORDER BY score DESC, id ASC LIMIT 3",
+      "gold_result": [
+        [
+          "P13_A"
+        ]
+      ],
+      "omitted_where_sql": "SELECT name FROM p13_marks ORDER BY score DESC, id ASC LIMIT 3",
+      "omitted_result": [
+        [
+          "P13_A"
+        ],
+        [
+          "P13_B"
+        ],
+        [
+          "P13_C"
+        ]
+      ],
+      "omitted_strict": false,
+      "omitted_semantic": false,
+      "equivalent_sql": "SELECT p13_marks.name FROM p13_marks WHERE score > 80 ORDER BY score DESC, id ASC LIMIT 3",
+      "equivalent_strict": false,
+      "equivalent_semantic": true
+    },
+    {
+      "gold_sql": "SELECT name FROM p13_marks WHERE score > 99 ORDER BY score DESC, id ASC LIMIT 3",
+      "gold_result": [],
+      "omitted_where_sql": "SELECT name FROM p13_marks ORDER BY score DESC, id ASC LIMIT 3",
+      "omitted_result": [
+        [
+          "P13_A"
+        ],
+        [
+          "P13_B"
+        ],
+        [
+          "P13_C"
+        ]
+      ],
+      "omitted_strict": false,
+      "omitted_semantic": false,
+      "equivalent_sql": "SELECT p13_marks.name FROM p13_marks WHERE score > 99 ORDER BY score DESC, id ASC LIMIT 3",
+      "equivalent_strict": false,
+      "equivalent_semantic": true
+    },
+    {
+      "gold_sql": "SELECT name FROM p13_marks WHERE score >= 80 ORDER BY score DESC, id ASC LIMIT 3",
+      "gold_result": [
+        [
+          "P13_A"
+        ],
+        [
+          "P13_B"
+        ]
+      ],
+      "omitted_where_sql": "SELECT name FROM p13_marks ORDER BY score DESC, id ASC LIMIT 3",
+      "omitted_result": [
+        [
+          "P13_A"
+        ],
+        [
+          "P13_B"
+        ],
+        [
+          "P13_C"
+        ]
+      ],
+      "omitted_strict": false,
+      "omitted_semantic": false,
+      "equivalent_sql": "SELECT p13_marks.name FROM p13_marks WHERE score >= 80 ORDER BY score DESC, id ASC LIMIT 3",
+      "equivalent_strict": false,
+      "equivalent_semantic": true
+    },
+    {
+      "gold_sql": "SELECT name FROM p13_marks WHERE score < 40 ORDER BY score DESC, id ASC LIMIT 3",
+      "gold_result": [
+        [
+          "P13_D"
+        ]
+      ],
+      "omitted_where_sql": "SELECT name FROM p13_marks ORDER BY score DESC, id ASC LIMIT 3",
+      "omitted_result": [
+        [
+          "P13_A"
+        ],
+        [
+          "P13_B"
+        ],
+        [
+          "P13_C"
+        ]
+      ],
+      "omitted_strict": false,
+      "omitted_semantic": false,
+      "equivalent_sql": "SELECT p13_marks.name FROM p13_marks WHERE score < 40 ORDER BY score DESC, id ASC LIMIT 3",
+      "equivalent_strict": false,
+      "equivalent_semantic": true
+    }
+  ],
+  "metrics": [
+    "exact_SQL_parameter",
+    "execution_semantics"
+  ],
+  "no_historical_blind_change": true
+}

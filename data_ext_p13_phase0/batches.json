@@ -1,0 +1,723 @@
+[
+  [
+    {
+      "episode_id": "calendar-train-calendar_search_dates-011",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_search",
+        "calendar_date"
+      ],
+      "prompt": "Find events whose title contains 'Planning' and list their dates, sorted.",
+      "expected_tool": "calendar_search",
+      "expected_arguments": {
+        "title": "Planning"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-03-02\",\"end\":\"12:00\",\"id\":\"E002\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\"],\"date\":\"2026-03-04\",\"end\":\"16:00\",\"id\":\"E012\",\"location\":\"Room A\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-04-02\",\"end\":\"12:00\",\"id\":\"E022\",\"location\":\"Room B\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-04-04\",\"end\":\"16:00\",\"id\":\"E032\",\"location\":\"Room C\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\"],\"date\":\"2026-05-02\",\"end\":\"12:00\",\"id\":\"E042\",\"location\":\"Room A\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}",
+      "expected_final_answer": [
+        "2026-03-02",
+        "2026-03-04",
+        "2026-04-02",
+        "2026-04-04",
+        "2026-05-02",
+        "2026-05-04"
+      ],
+      "split": "train",
+      "template_id": "calendar_search_dates",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "Find events whose title contains 'Planning' and list their dates, sorted."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_search\", \"arguments\": {\"title\": \"Planning\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-03-02\",\"end\":\"12:00\",\"id\":\"E002\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\"],\"date\":\"2026-03-04\",\"end\":\"16:00\",\"id\":\"E012\",\"location\":\"Room A\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-04-02\",\"end\":\"12:00\",\"id\":\"E022\",\"location\":\"Room B\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-04-04\",\"end\":\"16:00\",\"id\":\"E032\",\"location\":\"Room C\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\"],\"date\":\"2026-05-02\",\"end\":\"12:00\",\"id\":\"E042\",\"location\":\"Room A\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"2026-03-02\", \"2026-03-04\", \"2026-04-02\", \"2026-04-04\", \"2026-05-02\", \"2026-05-04\"]}"
+        }
+      ],
+      "data_signature": "32b540b8b85d8635311e0e8cb4b97d91e73619cfa7961bcd6818d476ba597b2a"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_date-006",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_date",
+        "calendar_count"
+      ],
+      "prompt": "How many events are scheduled on 2026-05-06?",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-05-06"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-05-06\",\"end\":\"10:00\",\"id\":\"E057\",\"location\":\"Room A\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-05-06\",\"end\":\"12:00\",\"id\":\"E058\",\"location\":\"Room B\",\"start\":\"11:00\",\"title\":\"Retrospective\"},{\"attendees\":[\"Judy\",\"Alice\",\"Bob\",\"Carol\"],\"date\":\"2026-05-06\",\"end\":\"14:00\",\"id\":\"E059\",\"location\":\"Room C\",\"start\":\"13:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\"],\"date\":\"2026-05-06\",\"end\":\"16:00\",\"id\":\"E060\",\"location\":\"Room A\",\"start\":\"15:00\",\"title\":\"Demo\"}]}",
+      "expected_final_answer": 4,
+      "split": "train",
+      "template_id": "calendar_count_date",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are scheduled on 2026-05-06?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-05-06\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-05-06\",\"end\":\"10:00\",\"id\":\"E057\",\"location\":\"Room A\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-05-06\",\"end\":\"12:00\",\"id\":\"E058\",\"location\":\"Room B\",\"start\":\"11:00\",\"title\":\"Retrospective\"},{\"attendees\":[\"Judy\",\"Alice\",\"Bob\",\"Carol\"],\"date\":\"2026-05-06\",\"end\":\"14:00\",\"id\":\"E059\",\"location\":\"Room C\",\"start\":\"13:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\"],\"date\":\"2026-05-06\",\"end\":\"16:00\",\"id\":\"E060\",\"location\":\"Room A\",\"start\":\"15:00\",\"title\":\"Demo\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 4}"
+        }
+      ],
+      "data_signature": "79949bdb6f9da8828f3413c69647c81f740118eccfb2761a92a450598eb263fd"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_month-002",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_month",
+        "calendar_count"
+      ],
+      "prompt": "How many events are in the calendar month 2026-04?",
+      "expected_tool": "calendar_count",
+      "expected_arguments": {
+        "month": "2026-04"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":20}",
+      "expected_final_answer": 20,
+      "split": "train",
+      "template_id": "calendar_count_month",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are in the calendar month 2026-04?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2026-04\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":20}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 20}"
+        }
+      ],
+      "data_signature": "98eb5c52382a1aad13d4f563480a204f70f9f84c816c9c4916c5033862337a9e"
+    },
+    {
+      "episode_id": "calendar-train-calendar_list_titles-007",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_list",
+        "calendar_date"
+      ],
+      "prompt": "List the titles of all events on 2026-05-04, sorted alphabetically.",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-05-04"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Judy\",\"Alice\",\"Bob\"],\"date\":\"2026-05-04\",\"end\":\"10:00\",\"id\":\"E049\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-05-04\",\"end\":\"12:00\",\"id\":\"E050\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Demo\"},{\"attendees\":[\"Bob\",\"Carol\"],\"date\":\"2026-05-04\",\"end\":\"14:00\",\"id\":\"E051\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}",
+      "expected_final_answer": [
+        "1:1",
+        "Demo",
+        "Design Review",
+        "Sprint Planning"
+      ],
+      "split": "train",
+      "template_id": "calendar_list_titles",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "List the titles of all events on 2026-05-04, sorted alphabetically."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-05-04\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Judy\",\"Alice\",\"Bob\"],\"date\":\"2026-05-04\",\"end\":\"10:00\",\"id\":\"E049\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-05-04\",\"end\":\"12:00\",\"id\":\"E050\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Demo\"},{\"attendees\":[\"Bob\",\"Carol\"],\"date\":\"2026-05-04\",\"end\":\"14:00\",\"id\":\"E051\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"1:1\", \"Demo\", \"Design Review\", \"Sprint Planning\"]}"
+        }
+      ],
+      "data_signature": "9283c1056f417047565e1f5bb3c992289042f588696163ecee97a3fcb4887ad4"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_date-009",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_date",
+        "calendar_count"
+      ],
+      "prompt": "How many events are scheduled on 2026-04-03?",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-04-03"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Frank\",\"Grace\",\"Heidi\"],\"date\":\"2026-04-03\",\"end\":\"10:00\",\"id\":\"E025\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Customer Call\"},{\"attendees\":[\"Grace\",\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-03\",\"end\":\"12:00\",\"id\":\"E026\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Interview\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-04-03\",\"end\":\"16:00\",\"id\":\"E028\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Retrospective\"}]}",
+      "expected_final_answer": 4,
+      "split": "train",
+      "template_id": "calendar_count_date",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are scheduled on 2026-04-03?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-04-03\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Frank\",\"Grace\",\"Heidi\"],\"date\":\"2026-04-03\",\"end\":\"10:00\",\"id\":\"E025\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Customer Call\"},{\"attendees\":[\"Grace\",\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-03\",\"end\":\"12:00\",\"id\":\"E026\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Interview\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-04-03\",\"end\":\"16:00\",\"id\":\"E028\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Retrospective\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 4}"
+        }
+      ],
+      "data_signature": "7b873607f56e8a5e463c9c4d5f177abb1a22a84e51986ee318b9303010288d96"
+    },
+    {
+      "episode_id": "calendar-train-calendar_search_dates-007",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_search",
+        "calendar_date"
+      ],
+      "prompt": "Find events whose title contains 'Training' and list their dates, sorted.",
+      "expected_tool": "calendar_search",
+      "expected_arguments": {
+        "title": "Training"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-03-03\",\"end\":\"14:00\",\"id\":\"E007\",\"location\":\"Room B\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-03-06\",\"end\":\"10:00\",\"id\":\"E017\",\"location\":\"Room C\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-06\",\"end\":\"10:00\",\"id\":\"E037\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-05-03\",\"end\":\"14:00\",\"id\":\"E047\",\"location\":\"Room C\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-05-06\",\"end\":\"10:00\",\"id\":\"E057\",\"location\":\"Room A\",\"start\":\"09:00\",\"title\":\"Training\"}]}",
+      "expected_final_answer": [
+        "2026-03-03",
+        "2026-03-06",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-05-03",
+        "2026-05-06"
+      ],
+      "split": "train",
+      "template_id": "calendar_search_dates",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "Find events whose title contains 'Training' and list their dates, sorted."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_search\", \"arguments\": {\"title\": \"Training\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-03-03\",\"end\":\"14:00\",\"id\":\"E007\",\"location\":\"Room B\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-03-06\",\"end\":\"10:00\",\"id\":\"E017\",\"location\":\"Room C\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-06\",\"end\":\"10:00\",\"id\":\"E037\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-05-03\",\"end\":\"14:00\",\"id\":\"E047\",\"location\":\"Room C\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-05-06\",\"end\":\"10:00\",\"id\":\"E057\",\"location\":\"Room A\",\"start\":\"09:00\",\"title\":\"Training\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"2026-03-03\", \"2026-03-06\", \"2026-04-03\", \"2026-04-06\", \"2026-05-03\", \"2026-05-06\"]}"
+        }
+      ],
+      "data_signature": "f03500f554020b8960902825d7c37940a912e08236e61f3f37682ead30b2fd2e"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_month-003",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_month",
+        "calendar_count"
+      ],
+      "prompt": "How many events are in the calendar month 2026-05?",
+      "expected_tool": "calendar_count",
+      "expected_arguments": {
+        "month": "2026-05"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":20}",
+      "expected_final_answer": 20,
+      "split": "train",
+      "template_id": "calendar_count_month",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are in the calendar month 2026-05?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2026-05\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":20}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 20}"
+        }
+      ],
+      "data_signature": "4122a0b50e27d1840b16afc9aae51f3daa8a0a4c41e59fd7ed7acafd6968b1a6"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_month-004",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_month",
+        "calendar_count"
+      ],
+      "prompt": "How many events are in the calendar month 2026-05?",
+      "expected_tool": "calendar_count",
+      "expected_arguments": {
+        "month": "2026-05"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":20}",
+      "expected_final_answer": 20,
+      "split": "train",
+      "template_id": "calendar_count_month",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are in the calendar month 2026-05?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2026-05\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":20}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 20}"
+        }
+      ],
+      "data_signature": "4122a0b50e27d1840b16afc9aae51f3daa8a0a4c41e59fd7ed7acafd6968b1a6"
+    }
+  ],
+  [
+    {
+      "episode_id": "calendar-train-calendar_free_slot-008",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_time",
+        "calendar_free"
+      ],
+      "prompt": "Find the first free 60-minute slot on 2026-03-03 between 09:00 and 17:00. Return start and end.",
+      "expected_tool": "calendar_free_slots",
+      "expected_arguments": {
+        "date": "2026-03-03",
+        "duration_minutes": 60
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"end\":\"11:00\",\"start\":\"10:00\"},{\"end\":\"13:00\",\"start\":\"12:00\"},{\"end\":\"15:00\",\"start\":\"14:00\"},{\"end\":\"17:00\",\"start\":\"16:00\"}]}",
+      "expected_final_answer": {
+        "end": "11:00",
+        "start": "10:00"
+      },
+      "split": "train",
+      "template_id": "calendar_free_slot",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "Find the first free 60-minute slot on 2026-03-03 between 09:00 and 17:00. Return start and end."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_free_slots\", \"arguments\": {\"date\": \"2026-03-03\", \"duration_minutes\": 60}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"end\":\"11:00\",\"start\":\"10:00\"},{\"end\":\"13:00\",\"start\":\"12:00\"},{\"end\":\"15:00\",\"start\":\"14:00\"},{\"end\":\"17:00\",\"start\":\"16:00\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": {\"end\": \"11:00\", \"start\": \"10:00\"}}"
+        }
+      ],
+      "data_signature": "fadfaf4d1ed40d38e73a2e0784cfeaf590e343bbf7a73c52dba6b434565e762e"
+    },
+    {
+      "episode_id": "calendar-train-calendar_attendees-008",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_attendees",
+        "calendar_event"
+      ],
+      "prompt": "List the attendees of event E049.",
+      "expected_tool": "calendar_attendees",
+      "expected_arguments": {
+        "event_id": "E049"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[\"Judy\",\"Alice\",\"Bob\"]}",
+      "expected_final_answer": [
+        "Judy",
+        "Alice",
+        "Bob"
+      ],
+      "split": "train",
+      "template_id": "calendar_attendees",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "List the attendees of event E049."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_attendees\", \"arguments\": {\"event_id\": \"E049\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[\"Judy\",\"Alice\",\"Bob\"]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"Judy\", \"Alice\", \"Bob\"]}"
+        }
+      ],
+      "data_signature": "5a71364b1e9527db6fb874857bae6a8ebc73a6c7b4e19d4165e168c4502e118f"
+    },
+    {
+      "episode_id": "calendar-train-calendar_free_slot-006",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_time",
+        "calendar_free"
+      ],
+      "prompt": "Find the first free 60-minute slot on 2026-04-03 between 09:00 and 17:00. Return start and end.",
+      "expected_tool": "calendar_free_slots",
+      "expected_arguments": {
+        "date": "2026-04-03",
+        "duration_minutes": 60
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"end\":\"11:00\",\"start\":\"10:00\"},{\"end\":\"13:00\",\"start\":\"12:00\"},{\"end\":\"15:00\",\"start\":\"14:00\"},{\"end\":\"17:00\",\"start\":\"16:00\"}]}",
+      "expected_final_answer": {
+        "end": "11:00",
+        "start": "10:00"
+      },
+      "split": "train",
+      "template_id": "calendar_free_slot",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "Find the first free 60-minute slot on 2026-04-03 between 09:00 and 17:00. Return start and end."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_free_slots\", \"arguments\": {\"date\": \"2026-04-03\", \"duration_minutes\": 60}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"end\":\"11:00\",\"start\":\"10:00\"},{\"end\":\"13:00\",\"start\":\"12:00\"},{\"end\":\"15:00\",\"start\":\"14:00\"},{\"end\":\"17:00\",\"start\":\"16:00\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": {\"end\": \"11:00\", \"start\": \"10:00\"}}"
+        }
+      ],
+      "data_signature": "5dfb97eba5d167d0f2d9d936d561cbf47bac226c03fe12ad82500bdcc86ebc6d"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_month-011",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_month",
+        "calendar_count"
+      ],
+      "prompt": "How many events are in the calendar month 2026-03?",
+      "expected_tool": "calendar_count",
+      "expected_arguments": {
+        "month": "2026-03"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":20}",
+      "expected_final_answer": 20,
+      "split": "train",
+      "template_id": "calendar_count_month",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are in the calendar month 2026-03?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2026-03\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":20}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 20}"
+        }
+      ],
+      "data_signature": "b5bcc7829917ed2c2e0e04373bc1713e2426c316b500017ee099e0d7355b9a89"
+    },
+    {
+      "episode_id": "calendar-train-calendar_count_date-000",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_date",
+        "calendar_count"
+      ],
+      "prompt": "How many events are scheduled on 2026-03-02?",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-03-02"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-03-02\",\"end\":\"10:00\",\"id\":\"E001\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-03-02\",\"end\":\"12:00\",\"id\":\"E002\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"David\",\"Eve\"],\"date\":\"2026-03-02\",\"end\":\"14:00\",\"id\":\"E003\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Standup\"},{\"attendees\":[\"Eve\",\"Frank\",\"Grace\"],\"date\":\"2026-03-02\",\"end\":\"16:00\",\"id\":\"E004\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Budget Sync\"}]}",
+      "expected_final_answer": 4,
+      "split": "train",
+      "template_id": "calendar_count_date",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "How many events are scheduled on 2026-03-02?"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-03-02\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-03-02\",\"end\":\"10:00\",\"id\":\"E001\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\",\"Frank\"],\"date\":\"2026-03-02\",\"end\":\"12:00\",\"id\":\"E002\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Sprint Planning\"},{\"attendees\":[\"David\",\"Eve\"],\"date\":\"2026-03-02\",\"end\":\"14:00\",\"id\":\"E003\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Standup\"},{\"attendees\":[\"Eve\",\"Frank\",\"Grace\"],\"date\":\"2026-03-02\",\"end\":\"16:00\",\"id\":\"E004\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Budget Sync\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": 4}"
+        }
+      ],
+      "data_signature": "c8e11953172f8f2a5b55463bb8b26e26efecf0622bdd654279a91a12bb82d0a1"
+    },
+    {
+      "episode_id": "calendar-train-calendar_list_titles-002",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_list",
+        "calendar_date"
+      ],
+      "prompt": "List the titles of all events on 2026-04-03, sorted alphabetically.",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-04-03"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Frank\",\"Grace\",\"Heidi\"],\"date\":\"2026-04-03\",\"end\":\"10:00\",\"id\":\"E025\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Customer Call\"},{\"attendees\":[\"Grace\",\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-03\",\"end\":\"12:00\",\"id\":\"E026\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Interview\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-04-03\",\"end\":\"16:00\",\"id\":\"E028\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Retrospective\"}]}",
+      "expected_final_answer": [
+        "Customer Call",
+        "Interview",
+        "Retrospective",
+        "Training"
+      ],
+      "split": "train",
+      "template_id": "calendar_list_titles",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "List the titles of all events on 2026-04-03, sorted alphabetically."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-04-03\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Frank\",\"Grace\",\"Heidi\"],\"date\":\"2026-04-03\",\"end\":\"10:00\",\"id\":\"E025\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"Customer Call\"},{\"attendees\":[\"Grace\",\"Heidi\",\"Ivan\",\"Judy\"],\"date\":\"2026-04-03\",\"end\":\"12:00\",\"id\":\"E026\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Interview\"},{\"attendees\":[\"Heidi\",\"Ivan\"],\"date\":\"2026-04-03\",\"end\":\"14:00\",\"id\":\"E027\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Training\"},{\"attendees\":[\"Ivan\",\"Judy\",\"Alice\"],\"date\":\"2026-04-03\",\"end\":\"16:00\",\"id\":\"E028\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Retrospective\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"Customer Call\", \"Interview\", \"Retrospective\", \"Training\"]}"
+        }
+      ],
+      "data_signature": "0b6cef802d95aad60c4db76348e9f5e91860cd971f6b82987c8ac9ca6a9909c8"
+    },
+    {
+      "episode_id": "calendar-train-calendar_attendees-002",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_attendees",
+        "calendar_event"
+      ],
+      "prompt": "List the attendees of event E013.",
+      "expected_tool": "calendar_attendees",
+      "expected_arguments": {
+        "event_id": "E013"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[\"David\",\"Eve\",\"Frank\"]}",
+      "expected_final_answer": [
+        "David",
+        "Eve",
+        "Frank"
+      ],
+      "split": "train",
+      "template_id": "calendar_attendees",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "List the attendees of event E013."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_attendees\", \"arguments\": {\"event_id\": \"E013\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[\"David\",\"Eve\",\"Frank\"]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"David\", \"Eve\", \"Frank\"]}"
+        }
+      ],
+      "data_signature": "f3681d402927f7c09d90262be5b81313fbcb181c592f275af94fb0f169f2ffab"
+    },
+    {
+      "episode_id": "calendar-train-calendar_list_titles-004",
+      "tool_family": "calendar",
+      "skill_labels": [
+        "calendar_list",
+        "calendar_date"
+      ],
+      "prompt": "List the titles of all events on 2026-05-04, sorted alphabetically.",
+      "expected_tool": "calendar_list",
+      "expected_arguments": {
+        "date": "2026-05-04"
+      },
+      "expected_observation": "{\"ok\":true,\"result\":[{\"attendees\":[\"Judy\",\"Alice\",\"Bob\"],\"date\":\"2026-05-04\",\"end\":\"10:00\",\"id\":\"E049\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-05-04\",\"end\":\"12:00\",\"id\":\"E050\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Demo\"},{\"attendees\":[\"Bob\",\"Carol\"],\"date\":\"2026-05-04\",\"end\":\"14:00\",\"id\":\"E051\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}",
+      "expected_final_answer": [
+        "1:1",
+        "Demo",
+        "Design Review",
+        "Sprint Planning"
+      ],
+      "split": "train",
+      "template_id": "calendar_list_titles",
+      "system": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n",
+      "environment": {},
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a deterministic tool-using assistant.\nTools:\n- calendar_list(date: string): List the events on one date, sorted by start time.\n- calendar_search(title: string): Find events whose title contains a case-insensitive substring.\n- calendar_count(month: string): Count events in a month given as YYYY-MM.\n- calendar_free_slots(date: string, duration_minutes: integer): List free workday slots (09:00-17:00) of at least a given duration.\n- calendar_attendees(event_id: string): Return the attendee list of one event id.\n\nCalendar data is read-only. Dates are YYYY-MM-DD, times HH:MM, and the workday is 09:00-17:00.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+        },
+        {
+          "role": "user",
+          "content": "List the titles of all events on 2026-05-04, sorted alphabetically."
+        },
+        {
+          "role": "assistant",
+          "content": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2026-05-04\"}}"
+        },
+        {
+          "role": "user",
+          "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"attendees\":[\"Judy\",\"Alice\",\"Bob\"],\"date\":\"2026-05-04\",\"end\":\"10:00\",\"id\":\"E049\",\"location\":\"Room B\",\"start\":\"09:00\",\"title\":\"1:1\"},{\"attendees\":[\"Alice\",\"Bob\",\"Carol\",\"David\"],\"date\":\"2026-05-04\",\"end\":\"12:00\",\"id\":\"E050\",\"location\":\"Room C\",\"start\":\"11:00\",\"title\":\"Demo\"},{\"attendees\":[\"Bob\",\"Carol\"],\"date\":\"2026-05-04\",\"end\":\"14:00\",\"id\":\"E051\",\"location\":\"Room A\",\"start\":\"13:00\",\"title\":\"Design Review\"},{\"attendees\":[\"Carol\",\"David\",\"Eve\"],\"date\":\"2026-05-04\",\"end\":\"16:00\",\"id\":\"E052\",\"location\":\"Room B\",\"start\":\"15:00\",\"title\":\"Sprint Planning\"}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"answer\": [\"1:1\", \"Demo\", \"Design Review\", \"Sprint Planning\"]}"
+        }
+      ],
+      "data_signature": "9283c1056f417047565e1f5bb3c992289042f588696163ecee97a3fcb4887ad4"
+    }
+  ]
+]

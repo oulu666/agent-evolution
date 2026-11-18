@@ -1,0 +1,1371 @@
+{
+  "time": "2026-11-18 20:09:00 +0800",
+  "gates": {
+    "engineering": true,
+    "candidate_ranking": true,
+    "at_least_3_joint_losses": false,
+    "predictive_signal": false
+  },
+  "decision": "UNIDENTIFIABLE_no_expansion",
+  "correct_to_wrong": 0,
+  "wrong_to_correct": 0,
+  "eligible_pairs": 30,
+  "paired_transitions": 48,
+  "unique_dev_probes": 24,
+  "AUROC": {
+    "MIR": null,
+    "old_nll": null,
+    "cost": null
+  },
+  "top_quartile_loss_rate": 0.0,
+  "remaining_loss_rate": 0.0,
+  "candidate_ranking": [
+    {
+      "batch": 1,
+      "nondegenerate": true,
+      "positive": 5,
+      "unique_rounded": 6,
+      "top4_MIR": [
+        "p13-candidate-cal.list_locations-001",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-009",
+        "p13-candidate-cal.list_locations-015"
+      ],
+      "top4_NLL": [
+        "p13-candidate-cal.list_locations-005",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-013",
+        "p13-candidate-cal.list_locations-015"
+      ],
+      "top4_cost": [
+        "p13-candidate-cal.count_date-006",
+        "p13-candidate-cal.count_date-014",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-015"
+      ],
+      "scores": [
+        {
+          "episode_id": "p13-candidate-cal.count_date-000",
+          "delta_nll": -6.905104964971542e-05,
+          "MIR": 0,
+          "old_nll": 0.0022615320049226284,
+          "cost": 389
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-001",
+          "delta_nll": 0.0008496074005961418,
+          "MIR": 0.0008496074005961418,
+          "old_nll": 0.00849088467657566,
+          "cost": 404
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-002",
+          "delta_nll": -0.00016538728959858418,
+          "MIR": 0,
+          "old_nll": 0.002268002601340413,
+          "cost": 465
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-003",
+          "delta_nll": -0.0037028342485427856,
+          "MIR": 0,
+          "old_nll": 0.030680526047945023,
+          "cost": 488
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-004",
+          "delta_nll": -0.0004178771050646901,
+          "MIR": 0,
+          "old_nll": 0.0015713241882622242,
+          "cost": 546
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-005",
+          "delta_nll": 0.00019354745745658875,
+          "MIR": 0.00019354745745658875,
+          "old_nll": 0.039959363639354706,
+          "cost": 568
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-006",
+          "delta_nll": -0.0007010523695498705,
+          "MIR": 0,
+          "old_nll": 0.0028911479748785496,
+          "cost": 620
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-007",
+          "delta_nll": 0.0024789348244667053,
+          "MIR": 0.0024789348244667053,
+          "old_nll": 0.07028304785490036,
+          "cost": 657
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-008",
+          "delta_nll": -0.00030482024885714054,
+          "MIR": 0,
+          "old_nll": 0.002206896897405386,
+          "cost": 389
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-009",
+          "delta_nll": 0.001679183915257454,
+          "MIR": 0.001679183915257454,
+          "old_nll": 0.008072744123637676,
+          "cost": 404
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-010",
+          "delta_nll": -0.0003941846080124378,
+          "MIR": 0,
+          "old_nll": 0.002984617603942752,
+          "cost": 467
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-011",
+          "delta_nll": -0.001238284632563591,
+          "MIR": 0,
+          "old_nll": 0.03225893899798393,
+          "cost": 490
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-012",
+          "delta_nll": -0.0004952767631039023,
+          "MIR": 0,
+          "old_nll": 0.00214340235106647,
+          "cost": 549
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-013",
+          "delta_nll": -0.0027083083987236023,
+          "MIR": 0,
+          "old_nll": 0.07862851768732071,
+          "cost": 571
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-014",
+          "delta_nll": -0.0003365222364664078,
+          "MIR": 0,
+          "old_nll": 0.002265769289806485,
+          "cost": 624
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-015",
+          "delta_nll": 0.009343758225440979,
+          "MIR": 0.009343758225440979,
+          "old_nll": 0.08627041429281235,
+          "cost": 661
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "nondegenerate": true,
+      "positive": 4,
+      "unique_rounded": 5,
+      "top4_MIR": [
+        "p13-candidate-cal.list_locations-001",
+        "p13-candidate-cal.list_locations-003",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-009"
+      ],
+      "top4_NLL": [
+        "p13-candidate-cal.list_locations-005",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-013",
+        "p13-candidate-cal.list_locations-015"
+      ],
+      "top4_cost": [
+        "p13-candidate-cal.count_date-006",
+        "p13-candidate-cal.count_date-014",
+        "p13-candidate-cal.list_locations-007",
+        "p13-candidate-cal.list_locations-015"
+      ],
+      "scores": [
+        {
+          "episode_id": "p13-candidate-cal.count_date-000",
+          "delta_nll": -0.0004412727430462837,
+          "MIR": 0,
+          "old_nll": 0.002192480955272913,
+          "cost": 389
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-001",
+          "delta_nll": 0.0031543662771582603,
+          "MIR": 0.0031543662771582603,
+          "old_nll": 0.009340492077171803,
+          "cost": 404
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-002",
+          "delta_nll": -0.00022980151697993279,
+          "MIR": 0,
+          "old_nll": 0.002102615311741829,
+          "cost": 465
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-003",
+          "delta_nll": 0.0014473982155323029,
+          "MIR": 0.0014473982155323029,
+          "old_nll": 0.026977691799402237,
+          "cost": 488
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-004",
+          "delta_nll": -0.00016184768173843622,
+          "MIR": 0,
+          "old_nll": 0.001153447083197534,
+          "cost": 546
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-005",
+          "delta_nll": -0.0013049021363258362,
+          "MIR": 0,
+          "old_nll": 0.040152911096811295,
+          "cost": 568
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-006",
+          "delta_nll": -0.00035674532409757376,
+          "MIR": 0,
+          "old_nll": 0.002190095605328679,
+          "cost": 620
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-007",
+          "delta_nll": 0.004880234599113464,
+          "MIR": 0.004880234599113464,
+          "old_nll": 0.07276198267936707,
+          "cost": 657
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-008",
+          "delta_nll": -0.00033098424319177866,
+          "MIR": 0,
+          "old_nll": 0.0019020766485482454,
+          "cost": 389
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-009",
+          "delta_nll": 0.0020266417413949966,
+          "MIR": 0.0020266417413949966,
+          "old_nll": 0.00975192803889513,
+          "cost": 404
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-010",
+          "delta_nll": -0.000276144128292799,
+          "MIR": 0,
+          "old_nll": 0.002590432995930314,
+          "cost": 467
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-011",
+          "delta_nll": -0.0018411781638860703,
+          "MIR": 0,
+          "old_nll": 0.03102065436542034,
+          "cost": 490
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-012",
+          "delta_nll": -0.0002886882284656167,
+          "MIR": 0,
+          "old_nll": 0.0016481255879625678,
+          "cost": 549
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-013",
+          "delta_nll": -0.003538563847541809,
+          "MIR": 0,
+          "old_nll": 0.0759202092885971,
+          "cost": 571
+        },
+        {
+          "episode_id": "p13-candidate-cal.count_date-014",
+          "delta_nll": -0.0001349998638033867,
+          "MIR": 0,
+          "old_nll": 0.0019292470533400774,
+          "cost": 624
+        },
+        {
+          "episode_id": "p13-candidate-cal.list_locations-015",
+          "delta_nll": -0.008130781352519989,
+          "MIR": 0,
+          "old_nll": 0.09561417251825333,
+          "cost": 661
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-016",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.002491225954145193,
+      "cost": 390,
+      "delta_nll": -0.00018157693557441235,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-17"
+      },
+      "after_args": {
+        "date": "2031-01-17"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-017",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.002719238866120577,
+      "old_nll": 0.0061242287047207355,
+      "cost": 405,
+      "delta_nll": 0.002719238866120577,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-18"
+      },
+      "after_args": {
+        "date": "2031-01-18"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-018",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.004069280344992876,
+      "cost": 467,
+      "delta_nll": -0.0004735938273370266,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-19"
+      },
+      "after_args": {
+        "date": "2031-01-19"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-019",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.03718362748622894,
+      "cost": 490,
+      "delta_nll": -0.0028847865760326385,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-20"
+      },
+      "after_args": {
+        "date": "2031-01-20"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-020",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0014830094296485186,
+      "cost": 549,
+      "delta_nll": -0.00041404319927096367,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-21"
+      },
+      "after_args": {
+        "date": "2031-01-21"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-021",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.004841119050979614,
+      "old_nll": 0.08104360848665237,
+      "cost": 571,
+      "delta_nll": 0.004841119050979614,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-22"
+      },
+      "after_args": {
+        "date": "2031-01-22"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-022",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0025827332865446806,
+      "cost": 624,
+      "delta_nll": -0.0004905043169856071,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-23"
+      },
+      "after_args": {
+        "date": "2031-01-23"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-023",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.006337836384773254,
+      "old_nll": 0.10723607242107391,
+      "cost": 661,
+      "delta_nll": 0.006337836384773254,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-24"
+      },
+      "after_args": {
+        "date": "2031-01-24"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-024",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0003454661928117275,
+      "old_nll": 0.002238329965621233,
+      "cost": 390,
+      "delta_nll": 0.0003454661928117275,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-25"
+      },
+      "after_args": {
+        "date": "2031-01-25"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-025",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0001692250370979309,
+      "old_nll": 0.006609111558645964,
+      "cost": 405,
+      "delta_nll": 0.0001692250370979309,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-26"
+      },
+      "after_args": {
+        "date": "2031-01-26"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-026",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.00011353939771652222,
+      "old_nll": 0.0029657490085810423,
+      "cost": 467,
+      "delta_nll": 0.00011353939771652222,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-27"
+      },
+      "after_args": {
+        "date": "2031-01-27"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-027",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.03153926134109497,
+      "cost": 490,
+      "delta_nll": -0.0038322675973176956,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-28"
+      },
+      "after_args": {
+        "date": "2031-01-28"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-028",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0015364432474598289,
+      "cost": 549,
+      "delta_nll": -0.0005222248146310449,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-01"
+      },
+      "after_args": {
+        "date": "2031-02-01"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-029",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.07053122669458389,
+      "cost": 571,
+      "delta_nll": -0.0004069507122039795,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-02"
+      },
+      "after_args": {
+        "date": "2031-02-02"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-030",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0020539460238069296,
+      "cost": 624,
+      "delta_nll": -0.00018618209287524223,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-03"
+      },
+      "after_args": {
+        "date": "2031-02-03"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-031",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.07281490415334702,
+      "cost": 661,
+      "delta_nll": -0.006566554307937622,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-04"
+      },
+      "after_args": {
+        "date": "2031-02-04"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-032",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0021398565731942654,
+      "cost": 390,
+      "delta_nll": -0.0003197526093572378,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-05"
+      },
+      "after_args": {
+        "date": "2031-02-05"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-033",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0008071372285485268,
+      "old_nll": 0.007231901399791241,
+      "cost": 405,
+      "delta_nll": 0.0008071372285485268,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-06"
+      },
+      "after_args": {
+        "date": "2031-02-06"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-034",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.003050639759749174,
+      "cost": 467,
+      "delta_nll": -0.00036102975718677044,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-07"
+      },
+      "after_args": {
+        "date": "2031-02-07"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-035",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.026362000033259392,
+      "cost": 490,
+      "delta_nll": -0.0022710151970386505,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-08"
+      },
+      "after_args": {
+        "date": "2031-02-08"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-036",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0015800247201696038,
+      "cost": 549,
+      "delta_nll": -0.0004605567082762718,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-09"
+      },
+      "after_args": {
+        "date": "2031-02-09"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-037",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 4.2147934436798096e-05,
+      "old_nll": 0.07411105930805206,
+      "cost": 571,
+      "delta_nll": 4.2147934436798096e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-10"
+      },
+      "after_args": {
+        "date": "2031-02-10"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.count_date-038",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0019060757476836443,
+      "cost": 624,
+      "delta_nll": -6.992125418037176e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-11"
+      },
+      "after_args": {
+        "date": "2031-02-11"
+      }
+    },
+    {
+      "batch": 1,
+      "episode_id": "p13-dev-cal.list_locations-039",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.07164256274700165,
+      "cost": 661,
+      "delta_nll": -0.005049087107181549,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-12"
+      },
+      "after_args": {
+        "date": "2031-02-12"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-016",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0023096490185707808,
+      "cost": 390,
+      "delta_nll": -7.598660886287689e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-17"
+      },
+      "after_args": {
+        "date": "2031-01-17"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-017",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0009806621819734573,
+      "old_nll": 0.008843467570841312,
+      "cost": 405,
+      "delta_nll": 0.0009806621819734573,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-18"
+      },
+      "after_args": {
+        "date": "2031-01-18"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-018",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0035956865176558495,
+      "cost": 467,
+      "delta_nll": -4.59717120975256e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-19"
+      },
+      "after_args": {
+        "date": "2031-01-19"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-019",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.034298840910196304,
+      "cost": 490,
+      "delta_nll": -0.0013257861137390137,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-20"
+      },
+      "after_args": {
+        "date": "2031-01-20"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-020",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.001068966230377555,
+      "cost": 549,
+      "delta_nll": -6.0082762502133846e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-21"
+      },
+      "after_args": {
+        "date": "2031-01-21"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-021",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.08588472753763199,
+      "cost": 571,
+      "delta_nll": -0.009411901235580444,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-22"
+      },
+      "after_args": {
+        "date": "2031-01-22"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-022",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0020922289695590734,
+      "cost": 624,
+      "delta_nll": -0.00026965944562107325,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-23"
+      },
+      "after_args": {
+        "date": "2031-01-23"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-023",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.005979061126708984,
+      "old_nll": 0.11357390880584717,
+      "cost": 661,
+      "delta_nll": 0.005979061126708984,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-24"
+      },
+      "after_args": {
+        "date": "2031-01-24"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-024",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0025837961584329605,
+      "cost": 390,
+      "delta_nll": -0.00053784204646945,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-25"
+      },
+      "after_args": {
+        "date": "2031-01-25"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-025",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0012905574403703213,
+      "old_nll": 0.006778336595743895,
+      "cost": 405,
+      "delta_nll": 0.0012905574403703213,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-26"
+      },
+      "after_args": {
+        "date": "2031-01-26"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-026",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0030792884062975645,
+      "cost": 467,
+      "delta_nll": -0.0005341109354048967,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-27"
+      },
+      "after_args": {
+        "date": "2031-01-27"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-027",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.027706993743777275,
+      "cost": 490,
+      "delta_nll": -0.00018464773893356323,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-01-28"
+      },
+      "after_args": {
+        "date": "2031-01-28"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-028",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.001014218432828784,
+      "cost": 549,
+      "delta_nll": -0.00014330365229398012,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-01"
+      },
+      "after_args": {
+        "date": "2031-02-01"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-029",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0005929023027420044,
+      "old_nll": 0.07012427598237991,
+      "cost": 571,
+      "delta_nll": 0.0005929023027420044,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-02"
+      },
+      "after_args": {
+        "date": "2031-02-02"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-030",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0018677639309316874,
+      "cost": 624,
+      "delta_nll": -8.893071208149195e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-03"
+      },
+      "after_args": {
+        "date": "2031-02-03"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-031",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0076401010155677795,
+      "old_nll": 0.0662483498454094,
+      "cost": 661,
+      "delta_nll": 0.0076401010155677795,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-04"
+      },
+      "after_args": {
+        "date": "2031-02-04"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-032",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0018201039638370275,
+      "cost": 390,
+      "delta_nll": -0.00019455526489764452,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-05"
+      },
+      "after_args": {
+        "date": "2031-02-05"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-033",
+      "skill": "cal.list_locations",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0017941426485776901,
+      "old_nll": 0.008039038628339767,
+      "cost": 405,
+      "delta_nll": 0.0017941426485776901,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-06"
+      },
+      "after_args": {
+        "date": "2031-02-06"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-034",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.0001424555666744709,
+      "old_nll": 0.0026896100025624037,
+      "cost": 467,
+      "delta_nll": 0.0001424555666744709,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-07"
+      },
+      "after_args": {
+        "date": "2031-02-07"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-035",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.002069903537631035,
+      "old_nll": 0.02409098483622074,
+      "cost": 490,
+      "delta_nll": 0.002069903537631035,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-08"
+      },
+      "after_args": {
+        "date": "2031-02-08"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-036",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.001119468011893332,
+      "cost": 549,
+      "delta_nll": -9.11615788936615e-05,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-09"
+      },
+      "after_args": {
+        "date": "2031-02-09"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-037",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.00023937970399856567,
+      "old_nll": 0.07415320724248886,
+      "cost": 571,
+      "delta_nll": 0.00023937970399856567,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-10"
+      },
+      "after_args": {
+        "date": "2031-02-10"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.count_date-038",
+      "skill": "cal.count_date",
+      "before_joint": true,
+      "after_joint": true,
+      "lost": false,
+      "gained": false,
+      "MIR": 0,
+      "old_nll": 0.0018361544935032725,
+      "cost": 624,
+      "delta_nll": -0.0002155649708583951,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-11"
+      },
+      "after_args": {
+        "date": "2031-02-11"
+      }
+    },
+    {
+      "batch": 2,
+      "episode_id": "p13-dev-cal.list_locations-039",
+      "skill": "cal.list_locations",
+      "before_joint": false,
+      "after_joint": false,
+      "lost": false,
+      "gained": false,
+      "MIR": 0.008827760815620422,
+      "old_nll": 0.0665934756398201,
+      "cost": 661,
+      "delta_nll": 0.008827760815620422,
+      "before_tool": "calendar_list",
+      "after_tool": "calendar_list",
+      "before_args": {
+        "date": "2031-02-12"
+      },
+      "after_args": {
+        "date": "2031-02-12"
+      }
+    }
+  ],
+  "stage_joint": [
+    {
+      "cal.count_date": 12,
+      "cal.list_locations": 3
+    },
+    {
+      "cal.count_date": 12,
+      "cal.list_locations": 3
+    },
+    {
+      "cal.count_date": 12,
+      "cal.list_locations": 3
+    }
+  ],
+  "cost": {
+    "counts": {
+      "diversity_actual_model_forward_calls": 8,
+      "diversity_backward": 8,
+      "diversity_input_tokens": 4137,
+      "nll_actual_model_forward_calls": 120,
+      "teacher_forced_NLL_forwards": 120,
+      "teacher_forced_input_tokens": 62289,
+      "generation_episodes": 72,
+      "generation_inference_calls": 144,
+      "generation_input_tokens": 54738,
+      "generation_output_tokens": 3288,
+      "virtual_update_actual_model_forward_calls": 16,
+      "virtual_backward": 16,
+      "virtual_input_tokens": 7350,
+      "virtual_optimizer_steps": 2,
+      "peak_allocated_GPU_bytes": 1075841536,
+      "peak_reserved_GPU_bytes": 11205083136,
+      "elapsed_seconds": 367.20574269300005
+    },
+    "timings_seconds": {
+      "diversity_seconds": 9.644105287000002,
+      "stage0_nll_seconds": 8.35550198300001,
+      "stage0_generation_seconds": 89.23286493799998,
+      "virtual_update1_seconds": 5.549569434000034,
+      "stage1_nll_seconds": 8.313922450000007,
+      "stage1_generation_seconds": 94.941916623,
+      "virtual_update2_seconds": 4.296210744000064,
+      "stage2_nll_seconds": 10.975406916999987,
+      "stage2_generation_seconds": 93.54050240799995
+    },
+    "all_cost_is_extra_diagnostic": true,
+    "production_optimizer_steps": 0
+  },
+  "restoration": {
+    "before": "f7fbb2e0040cc4b02bb3d5a5fb061686ef532aa310db574f5051424fd0eebc08",
+    "after": "f7fbb2e0040cc4b02bb3d5a5fb061686ef532aa310db574f5051424fd0eebc08",
+    "exact": true,
+    "LoRA_before": "c5d0bcba13e968ae663cb98944b63a1686e33206d5bfe6777a77db2929845459",
+    "LoRA_after": "c5d0bcba13e968ae663cb98944b63a1686e33206d5bfe6777a77db2929845459",
+    "optimizer_before": "43b9d0a718129c10761dd77bef2f82e69c05e5c41e12891902ba98b40340c25f",
+    "optimizer_after": "43b9d0a718129c10761dd77bef2f82e69c05e5c41e12891902ba98b40340c25f",
+    "prefix_file_unchanged": true
+  },
+  "not_independent_repeated_probes": true,
+  "formal_training_steps": 0,
+  "virtual_updates": 2
+}

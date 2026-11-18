@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "time": "2026-11-18 20:09:54 +0800",
+  "guards_checked": 97,
+  "all_guards_safe": true,
+  "two_turn_scoring_checks": 72,
+  "paired_losses": [],
+  "paired_gains": [],
+  "SQL_omission_counterexamples": 4,
+  "SQL_semantic_equivalence_checks": 4,
+  "all_historical_data_rows_entity_scanned": 4201,
+  "entity_collisions": [],
+  "complete_state_restore": {
+    "before": "f7fbb2e0040cc4b02bb3d5a5fb061686ef532aa310db574f5051424fd0eebc08",
+    "after": "f7fbb2e0040cc4b02bb3d5a5fb061686ef532aa310db574f5051424fd0eebc08",
+    "exact": true,
+    "LoRA_before": "c5d0bcba13e968ae663cb98944b63a1686e33206d5bfe6777a77db2929845459",
+    "LoRA_after": "c5d0bcba13e968ae663cb98944b63a1686e33206d5bfe6777a77db2929845459",
+    "optimizer_before": "43b9d0a718129c10761dd77bef2f82e69c05e5c41e12891902ba98b40340c25f",
+    "optimizer_after": "43b9d0a718129c10761dd77bef2f82e69c05e5c41e12891902ba98b40340c25f",
+    "prefix_file_unchanged": true
+  },
+  "diagnostic_forward_episodes_excluding_generation_internal_decode": 144,
+  "diagnostic_backward_episodes": 24,
+  "generation_calls": 144,
+  "generation_output_tokens": 3288,
+  "cosine_offdiagonal_min": -0.06951776891946793,
+  "cosine_offdiagonal_max": 0.3347928822040558,
+  "cosine_offdiagonal_mean": 0.07673660009251242,
+  "memory_measurement_caveat": "evaluate_family resets PyTorch peak counters: cost.json peak_allocated_GPU_bytes is final evaluation interval only, NOT whole-job allocated peak. peak_reserved also must not be claimed global. External nvidia-smi observed 7914 MiB at 20:03 Beijing; observed whole-device lower bound, not instrumented global peak. Generation calls/tokens recorded exactly; internal decoding/checkpoint recomputation forward calls not individually instrumented.",
+  "source_sha256": "31408ef40b3700f6df53e0f037a9be9c40e158aac267ea18474318d429e7205b"
+}
