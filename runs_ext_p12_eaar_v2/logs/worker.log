@@ -1,0 +1,432 @@
+2026-11-18 13:28:04 +0800 TRAIN A_seed20261108_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:56,  5.53it/s]Loading weights:   1%|          | 2/311 [00:00<00:52,  5.88it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:34,  8.86it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:02, 96.42it/s]Loading weights:  25%|██▌       | 78/311 [00:00<00:01, 188.32it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 294.29it/s]Loading weights:  60%|█████▉    | 186/311 [00:00<00:00, 356.14it/s]Loading weights:  78%|███████▊  | 243/311 [00:01<00:00, 417.53it/s]Loading weights:  95%|█████████▌| 296/311 [00:01<00:00, 440.91it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 274.58it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p11_e3_train_compat_20261118.py:132: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=dtype == torch.float16)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 201.29
+2026-11-18 13:30:00 +0800 TRAIN AUDIT PASS A_seed20261108_floor_random
+2026-11-18 13:30:01 +0800 TRAIN A_seed20261109_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 366.05it/s]Loading weights:  58%|█████▊    | 180/311 [00:00<00:00, 982.36it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1057.16it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 215.21
+2026-11-18 13:30:50 +0800 TRAIN AUDIT PASS A_seed20261109_floor_random
+2026-11-18 13:30:52 +0800 TRAIN A_seed20261109_floor_rules
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 369.76it/s]Loading weights:  56%|█████▋    | 175/311 [00:00<00:00, 959.15it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1037.50it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 212.27
+2026-11-18 13:31:38 +0800 TRAIN AUDIT PASS A_seed20261109_floor_rules
+2026-11-18 13:31:39 +0800 TRAIN A_seed20261110_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▎        | 42/311 [00:00<00:00, 417.18it/s]Loading weights:  62%|██████▏   | 193/311 [00:00<00:00, 1051.35it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1088.63it/s]
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 281.02
+2026-11-18 13:32:24 +0800 TRAIN AUDIT PASS A_seed20261110_floor_random
+2026-11-18 13:32:26 +0800 TRAIN A_seed20261110_floor_rules
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 348.87it/s]Loading weights:  49%|████▉     | 153/311 [00:00<00:00, 836.39it/s]Loading weights:  88%|████████▊ | 274/311 [00:00<00:00, 1004.67it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 925.95it/s] 
+replay train done targeted new tokens 74944 replay tokens 7494 seconds 281.51
+2026-11-18 13:33:12 +0800 TRAIN AUDIT PASS A_seed20261110_floor_rules
+2026-11-18 13:33:13 +0800 P12 EVAL A_seed20261108_t0
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/311 [00:00<00:03, 99.23it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 783.98it/s]Loading weights:  86%|████████▌ | 268/311 [00:00<00:00, 1013.21it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 915.46it/s] 
+eval P12_B1_20261108_t0_00 calendar n 24
+eval P12_B1_20261108_t0_00 calendar 10
+eval P12_B1_20261108_t0_00 calendar 20
+eval done P12_B1_20261108_t0_00 calendar final 0.625 peak_gpu_gb 0.646
+eval P12_B1_20261108_t0_01 database n 2
+eval done P12_B1_20261108_t0_01 database final 0.5 peak_gpu_gb 0.63
+eval P12_B1_20261108_t0_02 database n 2
+eval done P12_B1_20261108_t0_02 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_t0_03 database n 2
+eval done P12_B1_20261108_t0_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_t0_04 database n 2
+eval done P12_B1_20261108_t0_04 database final 0.5 peak_gpu_gb 0.63
+eval P12_B1_20261108_t0_05 database n 2
+eval done P12_B1_20261108_t0_05 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_t0_06 database n 2
+eval done P12_B1_20261108_t0_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_t0_07 database n 2
+eval done P12_B1_20261108_t0_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_t0_08 database n 2
+eval done P12_B1_20261108_t0_08 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_t0_09 database n 2
+eval done P12_B1_20261108_t0_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_t0_10 database n 2
+eval done P12_B1_20261108_t0_10 database final 0.5 peak_gpu_gb 0.63
+eval P12_B1_20261108_t0_11 database n 2
+eval done P12_B1_20261108_t0_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_t0_12 database n 2
+eval done P12_B1_20261108_t0_12 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_t0_13 file n 12
+eval P12_B1_20261108_t0_13 file 10
+eval done P12_B1_20261108_t0_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_t0_14 python n 12
+eval P12_B1_20261108_t0_14 python 10
+eval done P12_B1_20261108_t0_14 python final 0.916667 peak_gpu_gb 0.606
+2026-11-18 13:38:16 +0800 P12 EVAL COMPLETE A_seed20261108_t0
+2026-11-18 13:38:16 +0800 P12 EVAL A_seed20261108_v1
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 379.60it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 743.88it/s]Loading weights:  85%|████████▍ | 263/311 [00:00<00:00, 967.60it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 870.37it/s]
+eval P12_B1_20261108_v1_00 calendar n 24
+eval P12_B1_20261108_v1_00 calendar 10
+eval P12_B1_20261108_v1_00 calendar 20
+eval done P12_B1_20261108_v1_00 calendar final 0.583333 peak_gpu_gb 0.646
+eval P12_B1_20261108_v1_01 database n 2
+eval done P12_B1_20261108_v1_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_v1_02 database n 2
+eval done P12_B1_20261108_v1_02 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_v1_03 database n 2
+eval done P12_B1_20261108_v1_03 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261108_v1_04 database n 2
+eval done P12_B1_20261108_v1_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261108_v1_05 database n 2
+eval done P12_B1_20261108_v1_05 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_v1_06 database n 2
+eval done P12_B1_20261108_v1_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_v1_07 database n 2
+eval done P12_B1_20261108_v1_07 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261108_v1_08 database n 2
+eval done P12_B1_20261108_v1_08 database final 0.5 peak_gpu_gb 0.604
+eval P12_B1_20261108_v1_09 database n 2
+eval done P12_B1_20261108_v1_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_v1_10 database n 2
+eval done P12_B1_20261108_v1_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_v1_11 database n 2
+eval done P12_B1_20261108_v1_11 database final 0.5 peak_gpu_gb 0.604
+eval P12_B1_20261108_v1_12 database n 2
+eval done P12_B1_20261108_v1_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261108_v1_13 file n 12
+eval P12_B1_20261108_v1_13 file 10
+eval done P12_B1_20261108_v1_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_v1_14 python n 12
+eval P12_B1_20261108_v1_14 python 10
+eval done P12_B1_20261108_v1_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 13:42:45 +0800 P12 EVAL COMPLETE A_seed20261108_v1
+2026-11-18 13:42:45 +0800 P12 EVAL A_seed20261108_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 386.49it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 1050.80it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1056.50it/s]
+eval P12_B1_20261108_floor_random_00 calendar n 24
+eval P12_B1_20261108_floor_random_00 calendar 10
+eval P12_B1_20261108_floor_random_00 calendar 20
+eval done P12_B1_20261108_floor_random_00 calendar final 0.625 peak_gpu_gb 0.646
+eval P12_B1_20261108_floor_random_01 database n 2
+eval done P12_B1_20261108_floor_random_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_floor_random_02 database n 2
+eval done P12_B1_20261108_floor_random_02 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_floor_random_03 database n 2
+eval done P12_B1_20261108_floor_random_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_floor_random_04 database n 2
+eval done P12_B1_20261108_floor_random_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261108_floor_random_05 database n 2
+eval done P12_B1_20261108_floor_random_05 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_floor_random_06 database n 2
+eval done P12_B1_20261108_floor_random_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_floor_random_07 database n 2
+eval done P12_B1_20261108_floor_random_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_floor_random_08 database n 2
+eval done P12_B1_20261108_floor_random_08 database final 0.5 peak_gpu_gb 0.604
+eval P12_B1_20261108_floor_random_09 database n 2
+eval done P12_B1_20261108_floor_random_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_floor_random_10 database n 2
+eval done P12_B1_20261108_floor_random_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261108_floor_random_11 database n 2
+eval done P12_B1_20261108_floor_random_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261108_floor_random_12 database n 2
+eval done P12_B1_20261108_floor_random_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261108_floor_random_13 file n 12
+eval P12_B1_20261108_floor_random_13 file 10
+eval done P12_B1_20261108_floor_random_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261108_floor_random_14 python n 12
+eval P12_B1_20261108_floor_random_14 python 10
+eval done P12_B1_20261108_floor_random_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 13:47:28 +0800 P12 EVAL COMPLETE A_seed20261108_floor_random
+2026-11-18 13:47:29 +0800 P12 EVAL A_seed20261109_t0
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 384.74it/s]Loading weights:  58%|█████▊    | 181/311 [00:00<00:00, 985.94it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1081.33it/s]
+eval P12_B1_20261109_t0_00 calendar n 24
+eval P12_B1_20261109_t0_00 calendar 10
+eval P12_B1_20261109_t0_00 calendar 20
+eval done P12_B1_20261109_t0_00 calendar final 0.458333 peak_gpu_gb 0.646
+eval P12_B1_20261109_t0_01 database n 2
+eval done P12_B1_20261109_t0_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_t0_02 database n 2
+eval done P12_B1_20261109_t0_02 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261109_t0_03 database n 2
+eval done P12_B1_20261109_t0_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_t0_04 database n 2
+eval done P12_B1_20261109_t0_04 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_t0_05 database n 2
+eval done P12_B1_20261109_t0_05 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261109_t0_06 database n 2
+eval done P12_B1_20261109_t0_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_t0_07 database n 2
+eval done P12_B1_20261109_t0_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_t0_08 database n 2
+eval done P12_B1_20261109_t0_08 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261109_t0_09 database n 2
+eval done P12_B1_20261109_t0_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_t0_10 database n 2
+eval done P12_B1_20261109_t0_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_t0_11 database n 2
+eval done P12_B1_20261109_t0_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261109_t0_12 database n 2
+eval done P12_B1_20261109_t0_12 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_t0_13 file n 12
+eval P12_B1_20261109_t0_13 file 10
+eval done P12_B1_20261109_t0_13 file final 0.833333 peak_gpu_gb 0.605
+eval P12_B1_20261109_t0_14 python n 12
+eval P12_B1_20261109_t0_14 python 10
+eval done P12_B1_20261109_t0_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 13:52:24 +0800 P12 EVAL COMPLETE A_seed20261109_t0
+2026-11-18 13:52:25 +0800 P12 EVAL A_seed20261109_v1
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 378.08it/s]Loading weights:  60%|██████    | 188/311 [00:00<00:00, 1036.31it/s]Loading weights:  95%|█████████▌| 296/311 [00:00<00:00, 1052.95it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 997.64it/s] 
+eval P12_B1_20261109_v1_00 calendar n 24
+eval P12_B1_20261109_v1_00 calendar 10
+eval P12_B1_20261109_v1_00 calendar 20
+eval done P12_B1_20261109_v1_00 calendar final 0.458333 peak_gpu_gb 0.638
+eval P12_B1_20261109_v1_01 database n 2
+eval done P12_B1_20261109_v1_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_v1_02 database n 2
+eval done P12_B1_20261109_v1_02 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_v1_03 database n 2
+eval done P12_B1_20261109_v1_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_v1_04 database n 2
+eval done P12_B1_20261109_v1_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_v1_05 database n 2
+eval done P12_B1_20261109_v1_05 database final 0.5 peak_gpu_gb 0.6
+eval P12_B1_20261109_v1_06 database n 2
+eval done P12_B1_20261109_v1_06 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_v1_07 database n 2
+eval done P12_B1_20261109_v1_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_v1_08 database n 2
+eval done P12_B1_20261109_v1_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_v1_09 database n 2
+eval done P12_B1_20261109_v1_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_v1_10 database n 2
+eval done P12_B1_20261109_v1_10 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_v1_11 database n 2
+eval done P12_B1_20261109_v1_11 database final 0.5 peak_gpu_gb 0.6
+eval P12_B1_20261109_v1_12 database n 2
+eval done P12_B1_20261109_v1_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_v1_13 file n 12
+eval P12_B1_20261109_v1_13 file 10
+eval done P12_B1_20261109_v1_13 file final 0.833333 peak_gpu_gb 0.605
+eval P12_B1_20261109_v1_14 python n 12
+eval P12_B1_20261109_v1_14 python 10
+eval done P12_B1_20261109_v1_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 13:57:20 +0800 P12 EVAL COMPLETE A_seed20261109_v1
+2026-11-18 13:57:21 +0800 P12 EVAL A_seed20261109_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/311 [00:00<00:00, 316.86it/s]Loading weights:  58%|█████▊    | 180/311 [00:00<00:00, 992.77it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1052.32it/s]
+eval P12_B1_20261109_floor_random_00 calendar n 24
+eval P12_B1_20261109_floor_random_00 calendar 10
+eval P12_B1_20261109_floor_random_00 calendar 20
+eval done P12_B1_20261109_floor_random_00 calendar final 0.5 peak_gpu_gb 0.638
+eval P12_B1_20261109_floor_random_01 database n 2
+eval done P12_B1_20261109_floor_random_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_random_02 database n 2
+eval done P12_B1_20261109_floor_random_02 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_floor_random_03 database n 2
+eval done P12_B1_20261109_floor_random_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_random_04 database n 2
+eval done P12_B1_20261109_floor_random_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_random_05 database n 2
+eval done P12_B1_20261109_floor_random_05 database final 0.5 peak_gpu_gb 0.599
+eval P12_B1_20261109_floor_random_06 database n 2
+eval done P12_B1_20261109_floor_random_06 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_random_07 database n 2
+eval done P12_B1_20261109_floor_random_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_random_08 database n 2
+eval done P12_B1_20261109_floor_random_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_floor_random_09 database n 2
+eval done P12_B1_20261109_floor_random_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_random_10 database n 2
+eval done P12_B1_20261109_floor_random_10 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_random_11 database n 2
+eval done P12_B1_20261109_floor_random_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261109_floor_random_12 database n 2
+eval done P12_B1_20261109_floor_random_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_random_13 file n 12
+eval P12_B1_20261109_floor_random_13 file 10
+eval done P12_B1_20261109_floor_random_13 file final 0.833333 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_random_14 python n 12
+eval P12_B1_20261109_floor_random_14 python 10
+eval done P12_B1_20261109_floor_random_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:02:07 +0800 P12 EVAL COMPLETE A_seed20261109_floor_random
+2026-11-18 14:02:08 +0800 P12 EVAL A_seed20261109_floor_rules
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▎        | 42/311 [00:00<00:00, 417.87it/s]Loading weights:  57%|█████▋    | 178/311 [00:00<00:00, 968.88it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1083.44it/s]
+eval P12_B1_20261109_floor_rules_00 calendar n 24
+eval P12_B1_20261109_floor_rules_00 calendar 10
+eval P12_B1_20261109_floor_rules_00 calendar 20
+eval done P12_B1_20261109_floor_rules_00 calendar final 0.5 peak_gpu_gb 0.638
+eval P12_B1_20261109_floor_rules_01 database n 2
+eval done P12_B1_20261109_floor_rules_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_rules_02 database n 2
+eval done P12_B1_20261109_floor_rules_02 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_floor_rules_03 database n 2
+eval done P12_B1_20261109_floor_rules_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_rules_04 database n 2
+eval done P12_B1_20261109_floor_rules_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_rules_05 database n 2
+eval done P12_B1_20261109_floor_rules_05 database final 0.5 peak_gpu_gb 0.599
+eval P12_B1_20261109_floor_rules_06 database n 2
+eval done P12_B1_20261109_floor_rules_06 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_rules_07 database n 2
+eval done P12_B1_20261109_floor_rules_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_rules_08 database n 2
+eval done P12_B1_20261109_floor_rules_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261109_floor_rules_09 database n 2
+eval done P12_B1_20261109_floor_rules_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_rules_10 database n 2
+eval done P12_B1_20261109_floor_rules_10 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261109_floor_rules_11 database n 2
+eval done P12_B1_20261109_floor_rules_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261109_floor_rules_12 database n 2
+eval done P12_B1_20261109_floor_rules_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_rules_13 file n 12
+eval P12_B1_20261109_floor_rules_13 file 10
+eval done P12_B1_20261109_floor_rules_13 file final 0.833333 peak_gpu_gb 0.605
+eval P12_B1_20261109_floor_rules_14 python n 12
+eval P12_B1_20261109_floor_rules_14 python 10
+eval done P12_B1_20261109_floor_rules_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:07:13 +0800 P12 EVAL COMPLETE A_seed20261109_floor_rules
+2026-11-18 14:07:13 +0800 P12 EVAL A_seed20261110_t0
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 34/311 [00:00<00:00, 339.60it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 1008.82it/s]Loading weights:  92%|█████████▏| 287/311 [00:00<00:00, 1026.57it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 982.47it/s] 
+eval P12_B1_20261110_t0_00 calendar n 24
+eval P12_B1_20261110_t0_00 calendar 10
+eval P12_B1_20261110_t0_00 calendar 20
+eval done P12_B1_20261110_t0_00 calendar final 0.541667 peak_gpu_gb 0.646
+eval P12_B1_20261110_t0_01 database n 2
+eval done P12_B1_20261110_t0_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_t0_02 database n 2
+eval done P12_B1_20261110_t0_02 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_t0_03 database n 2
+eval done P12_B1_20261110_t0_03 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_t0_04 database n 2
+eval done P12_B1_20261110_t0_04 database final 0.5 peak_gpu_gb 0.63
+eval P12_B1_20261110_t0_05 database n 2
+eval done P12_B1_20261110_t0_05 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_t0_06 database n 2
+eval done P12_B1_20261110_t0_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_t0_07 database n 2
+eval done P12_B1_20261110_t0_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_t0_08 database n 2
+eval done P12_B1_20261110_t0_08 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_t0_09 database n 2
+eval done P12_B1_20261110_t0_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_t0_10 database n 2
+eval done P12_B1_20261110_t0_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_t0_11 database n 2
+eval done P12_B1_20261110_t0_11 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_t0_12 database n 2
+eval done P12_B1_20261110_t0_12 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_t0_13 file n 12
+eval P12_B1_20261110_t0_13 file 10
+eval done P12_B1_20261110_t0_13 file final 0.75 peak_gpu_gb 0.605
+eval P12_B1_20261110_t0_14 python n 12
+eval P12_B1_20261110_t0_14 python 10
+eval done P12_B1_20261110_t0_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:12:22 +0800 P12 EVAL COMPLETE A_seed20261110_t0
+2026-11-18 14:12:23 +0800 P12 EVAL A_seed20261110_v1
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/311 [00:00<00:00, 388.19it/s]Loading weights:  56%|█████▋    | 175/311 [00:00<00:00, 957.75it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 996.07it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 967.47it/s]
+eval P12_B1_20261110_v1_00 calendar n 24
+eval P12_B1_20261110_v1_00 calendar 10
+eval P12_B1_20261110_v1_00 calendar 20
+eval done P12_B1_20261110_v1_00 calendar final 0.625 peak_gpu_gb 0.646
+eval P12_B1_20261110_v1_01 database n 2
+eval done P12_B1_20261110_v1_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_v1_02 database n 2
+eval done P12_B1_20261110_v1_02 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_v1_03 database n 2
+eval done P12_B1_20261110_v1_03 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_v1_04 database n 2
+eval done P12_B1_20261110_v1_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261110_v1_05 database n 2
+eval done P12_B1_20261110_v1_05 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_v1_06 database n 2
+eval done P12_B1_20261110_v1_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_v1_07 database n 2
+eval done P12_B1_20261110_v1_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_v1_08 database n 2
+eval done P12_B1_20261110_v1_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261110_v1_09 database n 2
+eval done P12_B1_20261110_v1_09 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_v1_10 database n 2
+eval done P12_B1_20261110_v1_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_v1_11 database n 2
+eval done P12_B1_20261110_v1_11 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_v1_12 database n 2
+eval done P12_B1_20261110_v1_12 database final 0.5 peak_gpu_gb 0.604
+eval P12_B1_20261110_v1_13 file n 12
+eval P12_B1_20261110_v1_13 file 10
+eval done P12_B1_20261110_v1_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_v1_14 python n 12
+eval P12_B1_20261110_v1_14 python 10
+eval done P12_B1_20261110_v1_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:17:01 +0800 P12 EVAL COMPLETE A_seed20261110_v1
+2026-11-18 14:17:02 +0800 P12 EVAL A_seed20261110_floor_random
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:15, 19.78it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 867.70it/s]Loading weights:  96%|█████████▋| 300/311 [00:00<00:00, 1159.70it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1001.53it/s]
+eval P12_B1_20261110_floor_random_00 calendar n 24
+eval P12_B1_20261110_floor_random_00 calendar 10
+eval P12_B1_20261110_floor_random_00 calendar 20
+eval done P12_B1_20261110_floor_random_00 calendar final 0.625 peak_gpu_gb 0.646
+eval P12_B1_20261110_floor_random_01 database n 2
+eval done P12_B1_20261110_floor_random_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_random_02 database n 2
+eval done P12_B1_20261110_floor_random_02 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_random_03 database n 2
+eval done P12_B1_20261110_floor_random_03 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_floor_random_04 database n 2
+eval done P12_B1_20261110_floor_random_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_random_05 database n 2
+eval done P12_B1_20261110_floor_random_05 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_random_06 database n 2
+eval done P12_B1_20261110_floor_random_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_random_07 database n 2
+eval done P12_B1_20261110_floor_random_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_random_08 database n 2
+eval done P12_B1_20261110_floor_random_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_random_09 database n 2
+eval done P12_B1_20261110_floor_random_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_random_10 database n 2
+eval done P12_B1_20261110_floor_random_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_random_11 database n 2
+eval done P12_B1_20261110_floor_random_11 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_random_12 database n 2
+eval done P12_B1_20261110_floor_random_12 database final 0.5 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_random_13 file n 12
+eval P12_B1_20261110_floor_random_13 file 10
+eval done P12_B1_20261110_floor_random_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_random_14 python n 12
+eval P12_B1_20261110_floor_random_14 python 10
+eval done P12_B1_20261110_floor_random_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:22:11 +0800 P12 EVAL COMPLETE A_seed20261110_floor_random
+2026-11-18 14:22:12 +0800 P12 EVAL A_seed20261110_floor_rules
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   4%|▎         | 11/311 [00:00<00:02, 109.90it/s]Loading weights:  50%|█████     | 156/311 [00:00<00:00, 897.59it/s]Loading weights:  83%|████████▎ | 257/311 [00:00<00:00, 944.78it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 913.17it/s]
+eval P12_B1_20261110_floor_rules_00 calendar n 24
+eval P12_B1_20261110_floor_rules_00 calendar 10
+eval P12_B1_20261110_floor_rules_00 calendar 20
+eval done P12_B1_20261110_floor_rules_00 calendar final 0.625 peak_gpu_gb 0.646
+eval P12_B1_20261110_floor_rules_01 database n 2
+eval done P12_B1_20261110_floor_rules_01 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_rules_02 database n 2
+eval done P12_B1_20261110_floor_rules_02 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_rules_03 database n 2
+eval done P12_B1_20261110_floor_rules_03 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_floor_rules_04 database n 2
+eval done P12_B1_20261110_floor_rules_04 database final 0.5 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_rules_05 database n 2
+eval done P12_B1_20261110_floor_rules_05 database final 1.0 peak_gpu_gb 0.604
+eval P12_B1_20261110_floor_rules_06 database n 2
+eval done P12_B1_20261110_floor_rules_06 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_rules_07 database n 2
+eval done P12_B1_20261110_floor_rules_07 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_rules_08 database n 2
+eval done P12_B1_20261110_floor_rules_08 database final 0.5 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_rules_09 database n 2
+eval done P12_B1_20261110_floor_rules_09 database final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_rules_10 database n 2
+eval done P12_B1_20261110_floor_rules_10 database final 1.0 peak_gpu_gb 0.602
+eval P12_B1_20261110_floor_rules_11 database n 2
+eval done P12_B1_20261110_floor_rules_11 database final 1.0 peak_gpu_gb 0.603
+eval P12_B1_20261110_floor_rules_12 database n 2
+eval done P12_B1_20261110_floor_rules_12 database final 0.5 peak_gpu_gb 0.604
+eval P12_B1_20261110_floor_rules_13 file n 12
+eval P12_B1_20261110_floor_rules_13 file 10
+eval done P12_B1_20261110_floor_rules_13 file final 1.0 peak_gpu_gb 0.605
+eval P12_B1_20261110_floor_rules_14 python n 12
+eval P12_B1_20261110_floor_rules_14 python 10
+eval done P12_B1_20261110_floor_rules_14 python final 1.0 peak_gpu_gb 0.605
+2026-11-18 14:27:19 +0800 P12 EVAL COMPLETE A_seed20261110_floor_rules
+2026-11-18 14:27:20 +0800 P12 COMPLETE; NO NEXT EXPERIMENT

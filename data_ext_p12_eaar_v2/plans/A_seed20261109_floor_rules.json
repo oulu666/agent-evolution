@@ -1,0 +1,743 @@
+{
+  "items": [
+    {
+      "family": "database",
+      "row_index": 69,
+      "episode_id": "database-train-db_list_tables-000",
+      "input_tokens": 272,
+      "supervised_tokens": 31,
+      "truncated": false,
+      "target": true,
+      "skill": "db.list_tables",
+      "message_hash": "d4a8b9362dd6de44b3400288358fbd490e2b2abd8257bcda0b9c519a9d3f1e59"
+    },
+    {
+      "family": "database",
+      "row_index": 0,
+      "episode_id": "database-train-db_count-000",
+      "input_tokens": 282,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "b365670b96cb2e7645de1da0d6f7605d36efb9cf3cc608d557c626a3d0aacfaa"
+    },
+    {
+      "family": "calendar",
+      "row_index": 30041,
+      "episode_id": "p12-train-cal.count_date-017",
+      "input_tokens": 444,
+      "supervised_tokens": 37,
+      "truncated": false,
+      "target": true,
+      "skill": "cal.count_date",
+      "message_hash": "0be2aba5720dc1722e15a1014ef35386985a8949563aaa5df971ff188d6094a7",
+      "rule_coverage": {
+        "excluded_rules": [
+          "day_as_month",
+          "first_only",
+          "distinct_location_count"
+        ],
+        "denominator": 3,
+        "integer_weighted_score": 15,
+        "rules": [
+          {
+            "name": "day_as_month",
+            "tool": "calendar_count",
+            "arguments": {
+              "month": "2027-02-18"
+            },
+            "answer": null
+          },
+          {
+            "name": "first_only",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-18"
+            },
+            "answer": 1
+          },
+          {
+            "name": "distinct_location_count",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-18"
+            },
+            "answer": 1
+          }
+        ]
+      }
+    },
+    {
+      "family": "database",
+      "row_index": 0,
+      "episode_id": "database-train-db_count-000",
+      "input_tokens": 282,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "b365670b96cb2e7645de1da0d6f7605d36efb9cf3cc608d557c626a3d0aacfaa"
+    },
+    {
+      "family": "database",
+      "row_index": 0,
+      "episode_id": "database-train-db_count-000",
+      "input_tokens": 282,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "b365670b96cb2e7645de1da0d6f7605d36efb9cf3cc608d557c626a3d0aacfaa"
+    },
+    {
+      "family": "calendar",
+      "row_index": 30022,
+      "episode_id": "p11-train-cal.list_locations-014",
+      "input_tokens": 523,
+      "supervised_tokens": 44,
+      "truncated": false,
+      "target": true,
+      "skill": "cal.list_locations",
+      "message_hash": "add0cf00ee701243f3da611dce4dd38bd584c4ed94e7c20774bf7e97d558df42",
+      "rule_coverage": {
+        "excluded_rules": [
+          "first_location",
+          "keep_duplicates",
+          "first_occurrence_order",
+          "titles",
+          "start_times"
+        ],
+        "denominator": 5,
+        "integer_weighted_score": 15,
+        "rules": [
+          {
+            "name": "first_location",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-28"
+            },
+            "answer": [
+              "Loft K"
+            ]
+          },
+          {
+            "name": "keep_duplicates",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-28"
+            },
+            "answer": [
+              "Bay 9",
+              "Loft K",
+              "Loft K"
+            ]
+          },
+          {
+            "name": "first_occurrence_order",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-28"
+            },
+            "answer": [
+              "Loft K",
+              "Bay 9"
+            ]
+          },
+          {
+            "name": "titles",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-28"
+            },
+            "answer": [
+              "Dock Audit 141",
+              "Harbor Review 140",
+              "Night Handoff 139"
+            ]
+          },
+          {
+            "name": "start_times",
+            "tool": "calendar_list",
+            "arguments": {
+              "date": "2027-02-28"
+            },
+            "answer": [
+              "09:00",
+              "11:00",
+              "13:00"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "family": "database",
+      "row_index": 0,
+      "episode_id": "database-train-db_count-000",
+      "input_tokens": 282,
+      "supervised_tokens": 35,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "b365670b96cb2e7645de1da0d6f7605d36efb9cf3cc608d557c626a3d0aacfaa"
+    },
+    {
+      "family": "python",
+      "row_index": 80,
+      "episode_id": "python-train-target_median_natural-014",
+      "input_tokens": 361,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": true,
+      "skill": "py.median",
+      "message_hash": "5d2e97a84e35005e33aceab084f126a197d623040224c7c0600cd7cbd45743f9"
+    },
+    {
+      "family": "file",
+      "row_index": 48,
+      "episode_id": "file-train-file_list_count-000",
+      "input_tokens": 307,
+      "supervised_tokens": 32,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "d97e6963f7dfb2a6dc8ccf87d9b554997619ed5f85d7adcdfae29728a5563379"
+    },
+    {
+      "family": "file",
+      "row_index": 91,
+      "episode_id": "file-train-e4_last_match-011",
+      "input_tokens": 326,
+      "supervised_tokens": 51,
+      "truncated": false,
+      "target": true,
+      "skill": "file.search_last",
+      "message_hash": "055e1d292deb80244c9cde8632f36813af939e68be334e06b8df60fdbabecc23"
+    },
+    {
+      "family": "file",
+      "row_index": 48,
+      "episode_id": "file-train-file_list_count-000",
+      "input_tokens": 307,
+      "supervised_tokens": 32,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "d97e6963f7dfb2a6dc8ccf87d9b554997619ed5f85d7adcdfae29728a5563379"
+    },
+    {
+      "family": "file",
+      "row_index": 48,
+      "episode_id": "file-train-file_list_count-000",
+      "input_tokens": 307,
+      "supervised_tokens": 32,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "d97e6963f7dfb2a6dc8ccf87d9b554997619ed5f85d7adcdfae29728a5563379"
+    },
+    {
+      "family": "database",
+      "row_index": 84,
+      "episode_id": "database-train-target_db_filter_top-004",
+      "input_tokens": 340,
+      "supervised_tokens": 59,
+      "truncated": false,
+      "target": true,
+      "skill": "db.filter_cmp_top",
+      "message_hash": "3eef106ab6c7eacd790018fa7222df03e8f62c7edf913804452d7c43578c60d2"
+    },
+    {
+      "family": "file",
+      "row_index": 17,
+      "episode_id": "file-train-file_count_lines-001",
+      "input_tokens": 334,
+      "supervised_tokens": 34,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "ed6965fc139a6b09176d0a916b809ede7e05156299dd957c3ce700e8d9864216"
+    },
+    {
+      "family": "database",
+      "row_index": 69,
+      "episode_id": "database-train-db_list_tables-000",
+      "input_tokens": 272,
+      "supervised_tokens": 31,
+      "truncated": false,
+      "target": true,
+      "skill": "db.list_tables",
+      "message_hash": "d4a8b9362dd6de44b3400288358fbd490e2b2abd8257bcda0b9c519a9d3f1e59"
+    },
+    {
+      "family": "python",
+      "row_index": 1,
+      "episode_id": "python-train-stats_mean-001",
+      "input_tokens": 347,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "e82e142f4599c8d40737e630544d210dfb8759febd4f892229c8e70ee1f15413"
+    },
+    {
+      "family": "python",
+      "row_index": 81,
+      "episode_id": "python-train-target_median_natural-015",
+      "input_tokens": 361,
+      "supervised_tokens": 57,
+      "truncated": false,
+      "target": true,
+      "skill": "py.median",
+      "message_hash": "3ee3c4179d759f08e297a353a7e559c34e927432bbce5c69f9182db0b762d2d7"
+    },
+    {
+      "family": "python",
+      "row_index": 54,
+      "episode_id": "python-train-stats_correlation-000",
+      "input_tokens": 417,
+      "supervised_tokens": 93,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "82a6182f22fa05fad10456aca37f1ea1cfb4e1c85a1ee75719d7da0cb340baba"
+    },
+    {
+      "family": "python",
+      "row_index": 54,
+      "episode_id": "python-train-stats_correlation-000",
+      "input_tokens": 417,
+      "supervised_tokens": 93,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "82a6182f22fa05fad10456aca37f1ea1cfb4e1c85a1ee75719d7da0cb340baba"
+    },
+    {
+      "family": "file",
+      "row_index": 80,
+      "episode_id": "file-train-e4_last_match-000",
+      "input_tokens": 342,
+      "supervised_tokens": 51,
+      "truncated": false,
+      "target": true,
+      "skill": "file.search_last",
+      "message_hash": "fd2af6cb758c5cdce049992f8abcd604ea9bd22c4eb2a90a708dee178ef7164f"
+    },
+    {
+      "family": "python",
+      "row_index": 54,
+      "episode_id": "python-train-stats_correlation-000",
+      "input_tokens": 417,
+      "supervised_tokens": 93,
+      "truncated": false,
+      "target": false,
+      "skill": null,
+      "message_hash": "82a6182f22fa05fad10456aca37f1ea1cfb4e1c85a1ee75719d7da0cb340baba"
+    },
+    {
+      "family": "database",
+      "row_index": 69,
+      "episode_id": "database-train-db_list_tables-000",
+      "input_tokens": 272,
+      "supervised_tokens": 31,
+      "truncated": false,
+      "target": true,
+      "skill": "db.list_tables",
+      "message_hash": "d4a8b9362dd6de44b3400288358fbd490e2b2abd8257bcda0b9c519a9d3f1e59"
+    }
+  ],
+  "budget_input_tokens": 7494,
+  "actual_input_tokens": 7494,
+  "actual_supervised_tokens": 1055,
+  "weights": {
+    "file": 0.3333333333333333,
+    "database": 0.3333333333333333,
+    "python": 0.3333333333333333
+  },
+  "target_family_weights": {
+    "file": 0.3333333333333333,
+    "python": 0.3333333333333333,
+    "database": "fixed_count"
+  },
+  "target_fraction": 0.25,
+  "actual_target_fraction": 0.4687750200160128,
+  "uniform_actual_input_tokens": 3981,
+  "target_actual_input_tokens": 3513,
+  "actual_tokens_by_family": {
+    "calendar": 967,
+    "database": 2284,
+    "file": 1923,
+    "python": 2320
+  },
+  "target_samples_by_family": {
+    "calendar": 2,
+    "database": 4,
+    "file": 2,
+    "python": 2
+  },
+  "samples_by_family": {
+    "calendar": 2,
+    "database": 8,
+    "file": 6,
+    "python": 6
+  },
+  "unused_input_tokens": 0,
+  "unused_fraction": 0.0,
+  "within_one_percent_of_budget": true,
+  "e3_total_new_input_tokens": 74944,
+  "p11": {
+    "arm": "floor_rules",
+    "counts": {
+      "cal.count_date": 1,
+      "cal.list_locations": 1,
+      "db.list_tables": 3,
+      "db.filter_cmp_top": 1,
+      "file.search_last": 2,
+      "py.median": 2
+    },
+    "timing": "scattered",
+    "budget_deviation": 0,
+    "target_timing": [
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 0,
+        "position": 87,
+        "after": 13
+      },
+      {
+        "id": "p12-train-cal.count_date-017",
+        "index": 2,
+        "position": 95,
+        "after": 11
+      },
+      {
+        "id": "p11-train-cal.list_locations-014",
+        "index": 5,
+        "position": 103,
+        "after": 10
+      },
+      {
+        "id": "python-train-target_median_natural-014",
+        "index": 7,
+        "position": 111,
+        "after": 9
+      },
+      {
+        "id": "file-train-e4_last_match-011",
+        "index": 9,
+        "position": 119,
+        "after": 7
+      },
+      {
+        "id": "database-train-target_db_filter_top-004",
+        "index": 12,
+        "position": 127,
+        "after": 6
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 14,
+        "position": 135,
+        "after": 5
+      },
+      {
+        "id": "python-train-target_median_natural-015",
+        "index": 16,
+        "position": 143,
+        "after": 4
+      },
+      {
+        "id": "file-train-e4_last_match-000",
+        "index": 19,
+        "position": 159,
+        "after": 1
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 21,
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "planner": "P12 retention floor; exact cost-stratum A random vs B fixed-rule ranking",
+    "background_rule": "same 4/family token-residual filler; no formal score"
+  },
+  "p6": {
+    "arm": "floor_rules",
+    "counts": {
+      "cal.count_date": 1,
+      "cal.list_locations": 1,
+      "db.list_tables": 3,
+      "db.filter_cmp_top": 1,
+      "file.search_last": 2,
+      "py.median": 2
+    },
+    "benefit": null,
+    "budget_deviation": 0,
+    "target_timing": [
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 0,
+        "position": 87,
+        "after": 13
+      },
+      {
+        "id": "p12-train-cal.count_date-017",
+        "index": 2,
+        "position": 95,
+        "after": 11
+      },
+      {
+        "id": "p11-train-cal.list_locations-014",
+        "index": 5,
+        "position": 103,
+        "after": 10
+      },
+      {
+        "id": "python-train-target_median_natural-014",
+        "index": 7,
+        "position": 111,
+        "after": 9
+      },
+      {
+        "id": "file-train-e4_last_match-011",
+        "index": 9,
+        "position": 119,
+        "after": 7
+      },
+      {
+        "id": "database-train-target_db_filter_top-004",
+        "index": 12,
+        "position": 127,
+        "after": 6
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 14,
+        "position": 135,
+        "after": 5
+      },
+      {
+        "id": "python-train-target_median_natural-015",
+        "index": 16,
+        "position": 143,
+        "after": 4
+      },
+      {
+        "id": "file-train-e4_last_match-000",
+        "index": 19,
+        "position": 159,
+        "after": 1
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 21,
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "planner": "P12 retention floor; exact cost-stratum A random vs B fixed-rule ranking",
+    "background_rule": "same 4/family token-residual filler; no formal score"
+  },
+  "p5": {
+    "target_timing": [
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 0,
+        "position": 87,
+        "after": 13
+      },
+      {
+        "id": "p12-train-cal.count_date-017",
+        "index": 2,
+        "position": 95,
+        "after": 11
+      },
+      {
+        "id": "p11-train-cal.list_locations-014",
+        "index": 5,
+        "position": 103,
+        "after": 10
+      },
+      {
+        "id": "python-train-target_median_natural-014",
+        "index": 7,
+        "position": 111,
+        "after": 9
+      },
+      {
+        "id": "file-train-e4_last_match-011",
+        "index": 9,
+        "position": 119,
+        "after": 7
+      },
+      {
+        "id": "database-train-target_db_filter_top-004",
+        "index": 12,
+        "position": 127,
+        "after": 6
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 14,
+        "position": 135,
+        "after": 5
+      },
+      {
+        "id": "python-train-target_median_natural-015",
+        "index": 16,
+        "position": 143,
+        "after": 4
+      },
+      {
+        "id": "file-train-e4_last_match-000",
+        "index": 19,
+        "position": 159,
+        "after": 1
+      },
+      {
+        "id": "database-train-db_list_tables-000",
+        "index": 21,
+        "position": 159,
+        "after": 1
+      }
+    ],
+    "note": "read-only P5 trainer interface compatibility; policy in p11"
+  },
+  "p12": {
+    "input_supervised_cost_layer": [
+      967,
+      81
+    ],
+    "score_units": "integer/15, equal skill weights",
+    "layer_rank": [
+      30,
+      8,
+      8
+    ],
+    "n_feasible_layers": 68,
+    "n_combinations_in_layer": 8,
+    "A_score": 2.0,
+    "B_score": 2.0,
+    "priorities": {
+      "cal.count_date": {
+        "skill": "cal.count_date",
+        "priority": 0,
+        "kind": "saturated",
+        "coverage_gap": false,
+        "saturated": true,
+        "true_forgetting_prior": false,
+        "output_operator_fail": false,
+        "dev_joint": 0.75,
+        "dev_tool": 0.75,
+        "dev_args": 0.75,
+        "dev_execution": 0.75,
+        "dev_final": 0.75,
+        "prefix_count": 14
+      },
+      "cal.list_locations": {
+        "skill": "cal.list_locations",
+        "priority": 5,
+        "kind": "coverage_gap",
+        "coverage_gap": true,
+        "saturated": false,
+        "true_forgetting_prior": false,
+        "output_operator_fail": true,
+        "dev_joint": 0.25,
+        "dev_tool": 1.0,
+        "dev_args": 1.0,
+        "dev_execution": 1.0,
+        "dev_final": 0.25,
+        "prefix_count": 0
+      },
+      "db.list_tables": {
+        "skill": "db.list_tables",
+        "priority": 5,
+        "kind": "coverage_gap",
+        "coverage_gap": true,
+        "saturated": false,
+        "true_forgetting_prior": false,
+        "output_operator_fail": false,
+        "dev_joint": 0.0,
+        "dev_tool": 1.0,
+        "dev_args": 0.0,
+        "dev_execution": 1.0,
+        "dev_final": 1.0,
+        "prefix_count": 0
+      },
+      "db.filter_cmp_top": {
+        "skill": "db.filter_cmp_top",
+        "priority": 2,
+        "kind": "coverage_gap",
+        "coverage_gap": true,
+        "saturated": true,
+        "true_forgetting_prior": false,
+        "output_operator_fail": false,
+        "dev_joint": 0.75,
+        "dev_tool": 1.0,
+        "dev_args": 0.75,
+        "dev_execution": 0.75,
+        "dev_final": 0.75,
+        "prefix_count": 0
+      },
+      "file.search_last": {
+        "skill": "file.search_last",
+        "priority": 5,
+        "kind": "coverage_gap",
+        "coverage_gap": true,
+        "saturated": false,
+        "true_forgetting_prior": false,
+        "output_operator_fail": false,
+        "dev_joint": 0.0,
+        "dev_tool": 0.0,
+        "dev_args": 0.0,
+        "dev_execution": 0.0,
+        "dev_final": 0.0,
+        "prefix_count": 0
+      },
+      "py.median": {
+        "skill": "py.median",
+        "priority": 5,
+        "kind": "coverage_gap",
+        "coverage_gap": true,
+        "saturated": false,
+        "true_forgetting_prior": false,
+        "output_operator_fail": false,
+        "dev_joint": 0.0,
+        "dev_tool": 0.0,
+        "dev_args": 1.0,
+        "dev_execution": 0.0,
+        "dev_final": 0.25,
+        "prefix_count": 0
+      }
+    },
+    "counts": {
+      "cal.count_date": 1,
+      "cal.list_locations": 1,
+      "db.list_tables": 3,
+      "db.filter_cmp_top": 1,
+      "file.search_last": 2,
+      "py.median": 2
+    },
+    "arm": "floor_rules"
+  },
+  "quota_error_tokens_by_family": {
+    "calendar": 967.0,
+    "database": -214.0,
+    "file": -575.0,
+    "python": -178.0
+  },
+  "attempt2_contract": {
+    "quota_reference": "Legacy nominal family weights only, not an enforced P6 token quota; diagnostic residual, never used to train/select.",
+    "required_keys": [
+      "actual_input_tokens",
+      "actual_tokens_by_family",
+      "items",
+      "quota_error_tokens_by_family",
+      "within_one_percent_of_budget"
+    ],
+    "schedule_loss_updates_unchanged": true
+  }
+}

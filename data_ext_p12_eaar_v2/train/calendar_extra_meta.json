@@ -1,0 +1,2908 @@
+[
+  {
+    "family": "calendar",
+    "row_index": 30000,
+    "episode_id": "p11-train-cal.count_date-000",
+    "input_tokens": 378,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "9c1a94879527367a5541c9f9eeecb2fe861a0c6d904d9281f7cc240cc6a34395",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 5,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-03-01"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30001,
+    "episode_id": "p11-train-cal.count_date-001",
+    "input_tokens": 376,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "138f42463c41045c9305a8c48b0a5b5371f265d30b9099219caac69243cd3064",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 5,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-18"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30002,
+    "episode_id": "p11-train-cal.count_date-002",
+    "input_tokens": 382,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "cdfab72b4bd0510cb038c346f6015f893052b1ed1dbbf1f97ec96ab73125fff5",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 5,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-27"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30003,
+    "episode_id": "p11-train-cal.count_date-003",
+    "input_tokens": 379,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "544fa52dea70c2818843b3971be92645370abdd3be665bd600d34728b4e74478",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 5,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-03-04"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30004,
+    "episode_id": "p11-train-cal.count_date-004",
+    "input_tokens": 443,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "230c9d57d43cf91062cf9df4eb255d2d72d0f7e15ea55a46e660c0ea3bc1be38",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 10,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-04"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30005,
+    "episode_id": "p11-train-cal.count_date-005",
+    "input_tokens": 376,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "0bac8d00b3d4633758ea094f242034bf54a4d2915c733c23e0cfc7f880d1c2b6",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 5,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-19"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30006,
+    "episode_id": "p11-train-cal.count_date-006",
+    "input_tokens": 448,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "8c4aed9be1f70df4205c0687f30f2a6f1b340d6bd8f370d9ff15386c627341bd",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 10,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-02"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30007,
+    "episode_id": "p11-train-cal.count_date-007",
+    "input_tokens": 445,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "04c4e9e34ae539eb5a915171605804ad3b15fb9ca11468b9a72507ca63007616",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 10,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-13"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30008,
+    "episode_id": "p11-train-cal.list_locations-000",
+    "input_tokens": 451,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "f8fca077aaedda27897d69e2f3911631b0023ffcc0de5ced0b0205b5c9482ad9",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": [
+            "Dock Audit 22",
+            "Intake Sync 21"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30009,
+    "episode_id": "p11-train-cal.list_locations-001",
+    "input_tokens": 512,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "7196d852265fcc633731f50b6916b275f5913806a6b751c69e3bdb13a48b7c71",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": [
+            "Intake Sync 12",
+            "Night Handoff 13",
+            "Sketch Lab 11"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30010,
+    "episode_id": "p11-train-cal.list_locations-002",
+    "input_tokens": 449,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9991e9862a445e75d182b87a2d959069e3c92451d70058b0343e0f14037af29f",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": [
+            "Material Check 96",
+            "Night Handoff 97"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30011,
+    "episode_id": "p11-train-cal.list_locations-003",
+    "input_tokens": 521,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "04af1c9f2c91742c1e2901c93e8d35dd2549d413309274a3d5a3edf20495695a",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "keep_duplicates",
+        "first_occurrence_order",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": [
+            "Dock 7",
+            "Loft K",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": [
+            "Loft K",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": [
+            "Intake Sync 84",
+            "Intake Sync 85",
+            "Pilot Brief 83"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30012,
+    "episode_id": "p11-train-cal.list_locations-004",
+    "input_tokens": 458,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "955282c7747de6556ce26e964881853ec05c162382bf8004b97ae272a3e4454e",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": [
+            "Atrium 2",
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": [
+            "Harbor Review 27",
+            "Intake Sync 26"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30013,
+    "episode_id": "p11-train-cal.list_locations-005",
+    "input_tokens": 515,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9d2951fa8ad4a3b52883103f55dd24dda619c488a9534e4b424dfe35dd05f9dd",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 12,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": [
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": [
+            "Bay 9",
+            "Bay 9",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": [
+            "Bay 9",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": [
+            "Material Check 73",
+            "Material Check 75",
+            "Sketch Lab 74"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30014,
+    "episode_id": "p11-train-cal.list_locations-006",
+    "input_tokens": 452,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "28f283752354278436e2457a56acd73349ee23e6e413c13d4912f61302c6d0a5",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": [
+            "Studio 1"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": [
+            "Studio 1",
+            "Studio 1"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": [
+            "Studio 1"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": [
+            "Intake Sync 146",
+            "Night Handoff 147"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30015,
+    "episode_id": "p11-train-cal.list_locations-007",
+    "input_tokens": 517,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "fa6ba5540d96574c9a11048360203d39003bd006121e9ea6bee2dbf64d884249",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": [
+            "Material Check 144",
+            "Pilot Brief 143",
+            "Sketch Lab 145"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30016,
+    "episode_id": "p11-train-cal.list_locations-008",
+    "input_tokens": 451,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "295207c0b370729d78ae51c43ec7b5a73fb3d18b2cc582de571af4d0b5e56d16",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": [
+            "Material Check 87",
+            "Night Handoff 86"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30017,
+    "episode_id": "p11-train-cal.list_locations-009",
+    "input_tokens": 448,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "c58b224567de3b15d98bb631724b637c7fc81953fdb2d423e290ecd8002083b9",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": [
+            "Loft K",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": [
+            "Harbor Review 111",
+            "Sketch Lab 110"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30018,
+    "episode_id": "p11-train-cal.list_locations-010",
+    "input_tokens": 449,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "9febf34ee77c39b08babe1ccc90c344943d8d581be0f3690bebec6d9bcfcc841",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": [
+            "Harbor Review 44",
+            "Material Check 45"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30019,
+    "episode_id": "p11-train-cal.list_locations-011",
+    "input_tokens": 447,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "ec87117c4fae68dea866fc89719a05fc00124911183c0105211674e930cb1d64",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": [
+            "Loft K",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": [
+            "Harbor Review 7",
+            "Material Check 8"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30020,
+    "episode_id": "p11-train-cal.list_locations-012",
+    "input_tokens": 524,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "3f0276871c3e867f0167788284310aa9413eaba5e8a7e6eceaebc321760b7914",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 12,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": [
+            "Dock 7",
+            "Dock 7",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": [
+            "Dock 7",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": [
+            "Dock Audit 121",
+            "Material Check 123",
+            "Night Handoff 122"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30021,
+    "episode_id": "p11-train-cal.list_locations-013",
+    "input_tokens": 455,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "fdd0f21569c6ca823b7c2245c27616ef87e1459c351b141519d03c39197f2b07",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": [
+            "Atrium 2",
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": [
+            "Intake Sync 112",
+            "Pilot Brief 113"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30022,
+    "episode_id": "p11-train-cal.list_locations-014",
+    "input_tokens": 523,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "add0cf00ee701243f3da611dce4dd38bd584c4ed94e7c20774bf7e97d558df42",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "keep_duplicates",
+        "first_occurrence_order",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": [
+            "Bay 9",
+            "Loft K",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": [
+            "Loft K",
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": [
+            "Dock Audit 141",
+            "Harbor Review 140",
+            "Night Handoff 139"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30023,
+    "episode_id": "p11-train-cal.list_locations-015",
+    "input_tokens": 524,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "ddb317516db027538f32d5938179352c03bd61e92e2febb206fc84ec636ebe02",
+    "rule_coverage": {
+      "excluded_rules": [
+        "keep_duplicates",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": [
+            "Atrium 2",
+            "Atrium 2",
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": [
+            "Harbor Review 47",
+            "Harbor Review 48",
+            "Night Handoff 46"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": [
+            "09:00",
+            "11:00",
+            "13:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30024,
+    "episode_id": "p12-train-cal.list_locations-000",
+    "input_tokens": 386,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "8363f9c5e7d1941981903fd1d0ad14aaa2e5586ec1931e0beaeab7e32cd71eaf",
+    "rule_coverage": {
+      "excluded_rules": [
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 6,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": [
+            "Dock 7"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": [
+            "Sketch Lab 142"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-01"
+          },
+          "answer": [
+            "09:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30025,
+    "episode_id": "p12-train-cal.list_locations-001",
+    "input_tokens": 380,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "6c74b6c777649220c1d6824e21fd760318e5c60bc20272910aa20f6323cee200",
+    "rule_coverage": {
+      "excluded_rules": [
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 6,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": [
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": [
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": [
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": [
+            "Material Check 41"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-18"
+          },
+          "answer": [
+            "09:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30026,
+    "episode_id": "p12-train-cal.list_locations-002",
+    "input_tokens": 387,
+    "supervised_tokens": 41,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "c3e5390513d340f62e15b9f037dcdc84a1121949c2f7a05bf4741a0008298fa4",
+    "rule_coverage": {
+      "excluded_rules": [
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 6,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": [
+            "Sketch Lab 58"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-27"
+          },
+          "answer": [
+            "09:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30027,
+    "episode_id": "p12-train-cal.list_locations-003",
+    "input_tokens": 385,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "e9573280e863e9df71b4340847618d0d08770ede2feb44686ccb2d7ffa3cde60",
+    "rule_coverage": {
+      "excluded_rules": [
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 6,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": [
+            "Intake Sync 148"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-04"
+          },
+          "answer": [
+            "09:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30028,
+    "episode_id": "p12-train-cal.list_locations-004",
+    "input_tokens": 456,
+    "supervised_tokens": 44,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "1b498ad01da7e9a877b4846d7b508db965f8bd56121e696a98050b68e6a64c24",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "first_occurrence_order",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 12,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": [
+            "Loft K"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": [
+            "Bay 9",
+            "Loft K"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": [
+            "Loft K",
+            "Bay 9"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": [
+            "Harbor Review 72",
+            "Sketch Lab 71"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-04"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30029,
+    "episode_id": "p12-train-cal.list_locations-005",
+    "input_tokens": 380,
+    "supervised_tokens": 39,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "52ffc7860cb000f0047af85d5005d29aef1486f450015163cd454d0de15a9036",
+    "rule_coverage": {
+      "excluded_rules": [
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 6,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": [
+            "Annex Q"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": [
+            "Annex Q"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": [
+            "Annex Q"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": [
+            "Dock Audit 42"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-19"
+          },
+          "answer": [
+            "09:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30030,
+    "episode_id": "p12-train-cal.list_locations-006",
+    "input_tokens": 458,
+    "supervised_tokens": 46,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "50d7d9dd22d719c746455cf930790e1cbbb563bb098640989e591772515d5f7a",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": [
+            "Annex Q"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": [
+            "Annex Q",
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": [
+            "Annex Q",
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": [
+            "Intake Sync 68",
+            "Material Check 67"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-02"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30031,
+    "episode_id": "p12-train-cal.list_locations-007",
+    "input_tokens": 458,
+    "supervised_tokens": 46,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.list_locations",
+    "message_hash": "643176e24e4295038749acf1d85f0fc68511b8a5d3bf6d96c23988cc57fb1b40",
+    "rule_coverage": {
+      "excluded_rules": [
+        "first_location",
+        "titles",
+        "start_times"
+      ],
+      "denominator": 5,
+      "integer_weighted_score": 9,
+      "rules": [
+        {
+          "name": "first_location",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": [
+            "Atrium 2"
+          ]
+        },
+        {
+          "name": "keep_duplicates",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": [
+            "Atrium 2",
+            "Studio 1"
+          ]
+        },
+        {
+          "name": "first_occurrence_order",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": [
+            "Atrium 2",
+            "Studio 1"
+          ]
+        },
+        {
+          "name": "titles",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": [
+            "Material Check 29",
+            "Pilot Brief 28"
+          ]
+        },
+        {
+          "name": "start_times",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-13"
+          },
+          "answer": [
+            "09:00",
+            "11:00"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30032,
+    "episode_id": "p12-train-cal.count_date-008",
+    "input_tokens": 443,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "7da7da71cf96606ecd13eb15ca78a79a707e0b15f6db521367175286db564748",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-10"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-10"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30033,
+    "episode_id": "p12-train-cal.count_date-009",
+    "input_tokens": 508,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "f85dc93f44b606ebeca3198c9a6b8d039ddbe26714ff86e5d8e5dac5defc2832",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-07"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-07"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30034,
+    "episode_id": "p12-train-cal.count_date-010",
+    "input_tokens": 446,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "30c785af5bdae1909d74910d3dc850f62a3bc93e1ca3062de420498aa1d80830",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-13"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-13"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30035,
+    "episode_id": "p12-train-cal.count_date-011",
+    "input_tokens": 510,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "f193e80123ea7eb18960bc1e390f0f8229fe2d6b21d26910019b254888ef74fb",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-09"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-09"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30036,
+    "episode_id": "p12-train-cal.count_date-012",
+    "input_tokens": 448,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "62669e15f4924e609dfd7781cabe0764727941454144fd83354477853c1a7f62",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-12"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-12"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30037,
+    "episode_id": "p12-train-cal.count_date-013",
+    "input_tokens": 506,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "c7e653261bc539fe5b1dedc9cb352a56db79970c9a4ad658c8d426ba09a3cbff",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-05"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-05"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30038,
+    "episode_id": "p12-train-cal.count_date-014",
+    "input_tokens": 449,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "de6e1a4735b15e14148190cdc4f5e87db0d22c06971a8b15b45c05b806148cce",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-03-03"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-03"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30039,
+    "episode_id": "p12-train-cal.count_date-015",
+    "input_tokens": 511,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "8fc1efc1a37b07b8bc23e1e59292eda4fd1862d0258703303e0e0da2344bed25",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-03-02"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-03-02"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30040,
+    "episode_id": "p12-train-cal.count_date-016",
+    "input_tokens": 443,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "18771d52fd8f2c8f1c09bcf4295f3eee6173c0aab2ba582f7b099ee8c05d9cbc",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-10"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-10"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30041,
+    "episode_id": "p12-train-cal.count_date-017",
+    "input_tokens": 444,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "0be2aba5720dc1722e15a1014ef35386985a8949563aaa5df971ff188d6094a7",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-18"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-18"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30042,
+    "episode_id": "p12-train-cal.count_date-018",
+    "input_tokens": 446,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "cc64e8475cc7c6eda17a9990d56a988e16df4ec7ecee09e7add3ed66b849ebe4",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-21"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-21"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30043,
+    "episode_id": "p12-train-cal.count_date-019",
+    "input_tokens": 441,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "8c50322efa3b62a5ddf96b2abf0a4553abf8aa008482df174754e3f9776e6001",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-05"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-05"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30044,
+    "episode_id": "p12-train-cal.count_date-020",
+    "input_tokens": 511,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "14a09f8c88cdc2d137acce91506b87e8b94f869e27b3d1caae72877deac84468",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-22"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-22"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30045,
+    "episode_id": "p12-train-cal.count_date-021",
+    "input_tokens": 449,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "2a75634c18586b56198ba47a0cb6f1e66c4d1b2e20994b4ddee1fa4d6e0af582",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-19"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-19"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30046,
+    "episode_id": "p12-train-cal.count_date-022",
+    "input_tokens": 515,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "b00a5c536972e902711d0b30aa8e05ea804e7045f0e640ee5190da43494df9e2",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-02-28"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-02-28"
+          },
+          "answer": 2
+        }
+      ]
+    }
+  },
+  {
+    "family": "calendar",
+    "row_index": 30047,
+    "episode_id": "p12-train-cal.count_date-023",
+    "input_tokens": 516,
+    "supervised_tokens": 37,
+    "truncated": false,
+    "target": true,
+    "skill": "cal.count_date",
+    "message_hash": "318eadc46c3bdad573c7de1d0cc311a387e0500e25422e2e9c79f91dde374e0b",
+    "rule_coverage": {
+      "excluded_rules": [
+        "day_as_month",
+        "first_only",
+        "distinct_location_count"
+      ],
+      "denominator": 3,
+      "integer_weighted_score": 15,
+      "rules": [
+        {
+          "name": "day_as_month",
+          "tool": "calendar_count",
+          "arguments": {
+            "month": "2027-01-22"
+          },
+          "answer": null
+        },
+        {
+          "name": "first_only",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": 1
+        },
+        {
+          "name": "distinct_location_count",
+          "tool": "calendar_list",
+          "arguments": {
+            "date": "2027-01-22"
+          },
+          "answer": 1
+        }
+      ]
+    }
+  }
+]
