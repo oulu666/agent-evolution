@@ -1,0 +1,55 @@
+{
+  "diagnostic_updates": [
+    0,
+    64
+  ],
+  "generation": {
+    "answer_max_new_tokens": 256,
+    "batch_size": 1,
+    "do_sample": false,
+    "tool_max_new_tokens": 128
+  },
+  "gradient_normalization": "new and replay label-token sums divided by their combined actual supervised tokens at each optimizer update",
+  "lora": {
+    "alpha": 16,
+    "dropout": 0.0,
+    "r": 8,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "max_sequence_length_no_truncation": 4096,
+  "method_hyperparameters": {
+    "absolute_error_mix": 0.25,
+    "component_tie": "both",
+    "priority_gain": 2.0,
+    "uniform_floor": 0.25
+  },
+  "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+  "new_caps_per_update": [
+    8192,
+    1024
+  ],
+  "optimizer": "torch.optim.AdamW trainable adapter only, fp32 parameters/moments; betas=(.9,.999),eps=1e-8,weight_decay=0",
+  "optional_full_replay": "not in default cohort; all old rows once at EACH optimizer update, no replay caps",
+  "quantization": {
+    "bnb_4bit_compute_dtype": "fp16"
+  },
+  "replay_caps_per_update": [
+    4096,
+    512
+  ],
+  "stage_optimizer": "persist across all three stages; no optimizer recreation; no scheduler",
+  "steps_per_stage": 128,
+  "training": {
+    "gradient_checkpointing": true,
+    "learning_rate": 0.0001
+  },
+  "trust_remote_code": false
+}

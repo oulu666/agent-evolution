@@ -1,0 +1,427 @@
+{
+  "budget_kind": {
+    "full_replay": "optional resource-intensive reference; not performance upper bound",
+    "new_stream": "exact matched within each order/seed across all methods; caps across groups; actual tokens NOT all equal",
+    "optimizer_updates": "exact 128/stage, 384/trajectory",
+    "replay": "dual HARD CAPS per update; actual chosen rows/masks and utilization logged at runtime; no truncation or semantic/answer clipping",
+    "seqft": "NO replay, so NOT matched total supervision to replay arms",
+    "tolerance": "none silently applied; cap != exact. Cross-stage residual label-ratio/length utilization confounds reported."
+  },
+  "corpus_tokenized": {
+    "dev": {
+      "input_tokens": 268376,
+      "max_sequence": 1057,
+      "rows": 348,
+      "supervised_tokens": 21864
+    },
+    "test": {
+      "input_tokens": 268020,
+      "max_sequence": 1054,
+      "rows": 348,
+      "supervised_tokens": 21864
+    },
+    "train": {
+      "input_tokens": 550144,
+      "max_sequence": 1091,
+      "rows": 696,
+      "supervised_tokens": 45312
+    }
+  },
+  "dev_checkpoints_per_trajectory": 4,
+  "dev_episodes": 150336,
+  "dev_generation_requests": 451008,
+  "diagnostic_dev_episodes_additional_cap": 12672,
+  "diagnostic_dev_generation_requests_cap": 38016,
+  "diagnostic_extra_backward": 0,
+  "diagnostic_extra_optimizer_updates": 0,
+  "disk_adapter_optimizer_payload_estimate_bytes": 21799895040,
+  "disk_conservative_reserve_bytes": 45599790080,
+  "disk_free_bytes_measured_now": 57390706688,
+  "disk_strategy": "one base model in existing model dir; 4 adapter checkpoints + 3 optimizer/RNG states/trajectory, no per-step model copies; prediction JSONL stores IDs/raw answers/usages, not repeated prompts/logits. No old files deleted. Emergency snapshots add cost.",
+  "eval_prompt_tokens": {
+    "dev": {
+      "gold_final_prompt_tokens_exact": 255176,
+      "real_final_prompt_tokens_unknown": true,
+      "tool_prompt_tokens_exact": 112136
+    },
+    "test": {
+      "gold_final_prompt_tokens_exact": 254820,
+      "real_final_prompt_tokens_unknown": true,
+      "tool_prompt_tokens_exact": 111780
+    },
+    "train": {
+      "gold_final_prompt_tokens_exact": 522160,
+      "real_final_prompt_tokens_unknown": true,
+      "tool_prompt_tokens_exact": 223880
+    }
+  },
+  "full_replay_in_default_cohort": false,
+  "full_replay_optional_exact_costs": [
+    {
+      "extra_replay_input_exact": 69014528,
+      "extra_replay_supervision_exact": 5299200,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "locations",
+        "fields"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 69014528,
+      "extra_replay_supervision_exact": 5299200,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "locations",
+        "fields"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 69014528,
+      "extra_replay_supervision_exact": 5299200,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "locations",
+        "fields"
+      ],
+      "seed": 43
+    },
+    {
+      "extra_replay_input_exact": 29134848,
+      "extra_replay_supervision_exact": 1947648,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "fields",
+        "locations"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 29134848,
+      "extra_replay_supervision_exact": 1947648,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "fields",
+        "locations"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 29134848,
+      "extra_replay_supervision_exact": 1947648,
+      "optimizer_updates": 384,
+      "order": [
+        "counts",
+        "fields",
+        "locations"
+      ],
+      "seed": 43
+    },
+    {
+      "extra_replay_input_exact": 110298112,
+      "extra_replay_supervision_exact": 9151488,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "counts",
+        "fields"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 110298112,
+      "extra_replay_supervision_exact": 9151488,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "counts",
+        "fields"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 110298112,
+      "extra_replay_supervision_exact": 9151488,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "counts",
+        "fields"
+      ],
+      "seed": 43
+    },
+    {
+      "extra_replay_input_exact": 111702016,
+      "extra_replay_supervision_exact": 9652224,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "fields",
+        "counts"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 111702016,
+      "extra_replay_supervision_exact": 9652224,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "fields",
+        "counts"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 111702016,
+      "extra_replay_supervision_exact": 9652224,
+      "optimizer_updates": 384,
+      "order": [
+        "locations",
+        "fields",
+        "counts"
+      ],
+      "seed": 43
+    },
+    {
+      "extra_replay_input_exact": 30538752,
+      "extra_replay_supervision_exact": 2448384,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "counts",
+        "locations"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 30538752,
+      "extra_replay_supervision_exact": 2448384,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "counts",
+        "locations"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 30538752,
+      "extra_replay_supervision_exact": 2448384,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "counts",
+        "locations"
+      ],
+      "seed": 43
+    },
+    {
+      "extra_replay_input_exact": 71822336,
+      "extra_replay_supervision_exact": 6300672,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "locations",
+        "counts"
+      ],
+      "seed": 17
+    },
+    {
+      "extra_replay_input_exact": 71822336,
+      "extra_replay_supervision_exact": 6300672,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "locations",
+        "counts"
+      ],
+      "seed": 29
+    },
+    {
+      "extra_replay_input_exact": 71822336,
+      "extra_replay_supervision_exact": 6300672,
+      "optimizer_updates": 384,
+      "order": [
+        "fields",
+        "locations",
+        "counts"
+      ],
+      "seed": 43
+    }
+  ],
+  "full_replay_optional_trajectories": 18,
+  "generation_output_cap_tokens_each_episode": 640,
+  "lora_parameter_note": "architecture arithmetic from local config; actual trainable numel must equal at GPU startup; not measured GPU allocation",
+  "lora_trainable_parameters_structure_estimate": 5046272,
+  "new_data_ledger": {
+    "17": {
+      "counts": {
+        "input_utilization": 0.9605512619018555,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 1007211,
+        "new_rows_actual": 1672,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 52505,
+        "pool_once_input_tokens": 72216,
+        "pool_once_supervised_tokens": 3768,
+        "pool_rows": 120,
+        "supervision_utilization": 0.40058135986328125,
+        "unique_new_ids": 120,
+        "updates_exact": 128
+      },
+      "fields": {
+        "input_utilization": 0.95196533203125,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 998208,
+        "new_rows_actual": 1152,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 92160,
+        "pool_once_input_tokens": 83184,
+        "pool_once_supervised_tokens": 7680,
+        "pool_rows": 96,
+        "supervision_utilization": 0.703125,
+        "unique_new_ids": 96,
+        "updates_exact": 128
+      },
+      "locations": {
+        "input_utilization": 0.9450616836547852,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 990969,
+        "new_rows_actual": 1205,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 85084,
+        "pool_once_input_tokens": 394744,
+        "pool_once_supervised_tokens": 33864,
+        "pool_rows": 480,
+        "supervision_utilization": 0.649139404296875,
+        "unique_new_ids": 480,
+        "updates_exact": 128
+      }
+    },
+    "29": {
+      "counts": {
+        "input_utilization": 0.9599590301513672,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 1006590,
+        "new_rows_actual": 1673,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 52534,
+        "pool_once_input_tokens": 72216,
+        "pool_once_supervised_tokens": 3768,
+        "pool_rows": 120,
+        "supervision_utilization": 0.4008026123046875,
+        "unique_new_ids": 120,
+        "updates_exact": 128
+      },
+      "fields": {
+        "input_utilization": 0.95196533203125,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 998208,
+        "new_rows_actual": 1152,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 92160,
+        "pool_once_input_tokens": 83184,
+        "pool_once_supervised_tokens": 7680,
+        "pool_rows": 96,
+        "supervision_utilization": 0.703125,
+        "unique_new_ids": 96,
+        "updates_exact": 128
+      },
+      "locations": {
+        "input_utilization": 0.9489889144897461,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 995087,
+        "new_rows_actual": 1211,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 85408,
+        "pool_once_input_tokens": 394744,
+        "pool_once_supervised_tokens": 33864,
+        "pool_rows": 480,
+        "supervision_utilization": 0.651611328125,
+        "unique_new_ids": 480,
+        "updates_exact": 128
+      }
+    },
+    "43": {
+      "counts": {
+        "input_utilization": 0.95623779296875,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 1002688,
+        "new_rows_actual": 1666,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 52313,
+        "pool_once_input_tokens": 72216,
+        "pool_once_supervised_tokens": 3768,
+        "pool_rows": 120,
+        "supervision_utilization": 0.39911651611328125,
+        "unique_new_ids": 120,
+        "updates_exact": 128
+      },
+      "fields": {
+        "input_utilization": 0.95196533203125,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 998208,
+        "new_rows_actual": 1152,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 92160,
+        "pool_once_input_tokens": 83184,
+        "pool_once_supervised_tokens": 7680,
+        "pool_rows": 96,
+        "supervision_utilization": 0.703125,
+        "unique_new_ids": 96,
+        "updates_exact": 128
+      },
+      "locations": {
+        "input_utilization": 0.9477548599243164,
+        "new_input_cap": 1048576,
+        "new_input_tokens_actual": 993793,
+        "new_rows_actual": 1209,
+        "new_supervised_cap": 131072,
+        "new_supervised_tokens_actual": 85249,
+        "pool_once_input_tokens": 394744,
+        "pool_once_supervised_tokens": 33864,
+        "pool_rows": 480,
+        "supervision_utilization": 0.6503982543945312,
+        "unique_new_ids": 480,
+        "updates_exact": 128
+      }
+    }
+  },
+  "new_input_tokens_required_exact": 323674632,
+  "new_supervised_tokens_required_exact": 24824628,
+  "optimizer_updates_required_exact": 41472,
+  "orders": 6,
+  "replay_input_tokens_required_cap": 94371840,
+  "replay_supervised_tokens_required_cap": 11796480,
+  "required_generation_output_tokens_cap": 200540160,
+  "required_methods": [
+    "seqft",
+    "uniform",
+    "p11_priority",
+    "layer_replay",
+    "no_priority",
+    "no_layer"
+  ],
+  "required_trajectories": 108,
+  "runtime_wall_time_GPU_hours": null,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "teacher_forced_train_probe_forward_sequences": 6048,
+  "test_checkpoints_per_trajectory": 4,
+  "test_episodes": 150336,
+  "test_generation_requests": 451008,
+  "tokenizer_cpu_elapsed_seconds_measured_first_prepare": 2.573,
+  "trajectories_per_method": 18,
+  "virtual_update_or_gradient_conflict_runs": 0,
+  "wall_time_note": "NO GPU timing measured; do not extrapolate invented hours. Per-call wall/forward/backward counts will be logged."
+}

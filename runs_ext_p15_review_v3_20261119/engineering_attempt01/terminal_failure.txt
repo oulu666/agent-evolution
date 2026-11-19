@@ -1,0 +1,61 @@
+---
+pid: 47732
+cwd: "C:\\Users\\Egret"
+command: "wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B p15_review_v3_20261119/engineering.py --execute"
+title: "执行唯一一次有界4bit/AMP工程验收，最多三物理更新与六次train/dev生成"
+status: failed   
+started_at: 2026-11-19T12:39:51.426Z
+running_for_ms: 201425   
+---
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:17, 18.10it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:21, 14.06it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 338.06it/s]Loading weights:  59%|█████▉    | 183/311 [00:00<00:00, 532.32it/s]Loading weights:  90%|█████████ | 280/311 [00:00<00:00, 673.39it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 510.37it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_review_v3_20261119/model_v3.py:16: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler=torch.cuda.amp.GradScaler(enabled=True)
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:20, 15.37it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 479.78it/s]Loading weights:  62%|██████▏   | 192/311 [00:00<00:00, 696.79it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 801.69it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 677.60it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_review_v3_20261119/model_v3.py:16: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler=torch.cuda.amp.GradScaler(enabled=True)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_review_v3_20261119/engineering.py", line 83, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--execute',action='store_true');run(p.parse_args().execute)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_review_v3_20261119/engineering.py", line 77, in run
+    report['disk_after']=disk_check(reconcile=True);atomic_json(out/'RESULT.json',report)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_review_v3_20261119/common.py", line 41, in atomic_json
+    def atomic_json(p,x):atomic_bytes(p,(cj(x)+'\n').encode())
+                                         ^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/p15_stageaware_20261119/core.py", line 24, in cj
+    def cj(x):return json.dumps(x,sort_keys=True,ensure_ascii=False,separators=(',',':'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type dtype is not JSON serializable
+
+---
+exit_code: 1
+elapsed_ms: 201425
+ended_at: 2026-11-19T12:43:12.855Z
+---

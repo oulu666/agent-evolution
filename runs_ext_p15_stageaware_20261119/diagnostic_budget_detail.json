@@ -1,0 +1,307 @@
+{
+  "adaptive_methods": [
+    "p11_priority",
+    "layer_replay",
+    "no_priority",
+    "no_layer"
+  ],
+  "fixed_dev_subset_rows": 88,
+  "no_actual_GPU_wall_measurement": true,
+  "optional_full_extra_dev_requests": 75168,
+  "optional_full_extra_disk_payload_estimate_bytes": 3633315840,
+  "optional_full_extra_teacher_forced_sequences": 1008,
+  "optional_full_extra_test_requests": 75168,
+  "per_order": [
+    {
+      "order": [
+        "counts",
+        "locations",
+        "fields"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "counts",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 120,
+          "extra_gold_final_prompt_tokens_exact": 15236,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 12724,
+          "new_group": "locations",
+          "old_dev_subset_rows": 20,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 240,
+          "extra_gold_final_prompt_tokens_exact": 45626,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 25644,
+          "new_group": "fields",
+          "old_dev_subset_rows": 40,
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "order": [
+        "counts",
+        "fields",
+        "locations"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "counts",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 120,
+          "extra_gold_final_prompt_tokens_exact": 15236,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 12724,
+          "new_group": "fields",
+          "old_dev_subset_rows": 20,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 408,
+          "extra_gold_final_prompt_tokens_exact": 91156,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 44196,
+          "new_group": "locations",
+          "old_dev_subset_rows": 68,
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "order": [
+        "locations",
+        "counts",
+        "fields"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "locations",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 120,
+          "extra_gold_final_prompt_tokens_exact": 30390,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 12920,
+          "new_group": "counts",
+          "old_dev_subset_rows": 20,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 240,
+          "extra_gold_final_prompt_tokens_exact": 45626,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 25644,
+          "new_group": "fields",
+          "old_dev_subset_rows": 40,
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "order": [
+        "locations",
+        "fields",
+        "counts"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "locations",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 120,
+          "extra_gold_final_prompt_tokens_exact": 30390,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 12920,
+          "new_group": "fields",
+          "old_dev_subset_rows": 20,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 408,
+          "extra_gold_final_prompt_tokens_exact": 106310,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 44392,
+          "new_group": "counts",
+          "old_dev_subset_rows": 68,
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "order": [
+        "fields",
+        "counts",
+        "locations"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "fields",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 288,
+          "extra_gold_final_prompt_tokens_exact": 75920,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 31472,
+          "new_group": "counts",
+          "old_dev_subset_rows": 48,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 408,
+          "extra_gold_final_prompt_tokens_exact": 91156,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 44196,
+          "new_group": "locations",
+          "old_dev_subset_rows": 68,
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "order": [
+        "fields",
+        "locations",
+        "counts"
+      ],
+      "per_adaptive_trajectory_stages": [
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 0,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 0,
+          "extra_gold_final_prompt_tokens_exact": 0,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 0,
+          "new_group": "fields",
+          "old_dev_subset_rows": 0,
+          "stage": 1
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 288,
+          "extra_gold_final_prompt_tokens_exact": 75920,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 31472,
+          "new_group": "locations",
+          "old_dev_subset_rows": 48,
+          "stage": 2
+        },
+        {
+          "GPU_wall_seconds": null,
+          "diagnostic_refreshes": 2,
+          "extra_backward": 0,
+          "extra_generate_requests_cap": 408,
+          "extra_gold_final_prompt_tokens_exact": 106310,
+          "extra_optimizer_updates": 0,
+          "extra_real_final_prompt_tokens": "unknown until predicted tool executes; context ceiling 4096 incl output",
+          "extra_tool_prompt_tokens_exact": 44392,
+          "new_group": "counts",
+          "old_dev_subset_rows": 68,
+          "stage": 3
+        }
+      ]
+    }
+  ],
+  "train_loss_backward": 0,
+  "train_loss_forward_tokens_required_exact": 3986928,
+  "train_loss_probe_rows_per_node": 14
+}

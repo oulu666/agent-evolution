@@ -1,0 +1,16 @@
+---
+pid: 47956
+cwd: "C:\\Users\\Egret"
+command: "$p='C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent'; Expand-Archive -LiteralPath \"$p\\p15_stageaware_20261119\\implementation_bundle.zip\" -DestinationPath \"$p\\p15_stageaware_20261119\" -Force; wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B p15_stageaware_20261119/cpu_tests.py"
+title: "在笔记本执行新增代码的 CPU 全量工程验收，不加载预训练模型"
+status: succeeded
+started_at: 2026-11-19T12:01:04.846Z
+running_for_ms: 52139    
+---
+{"CPU_only":true,"checks":{"B1_truth_table":16,"BWT_FWT_at_risk_denominators":true,"CUDA_initialized":false,"STOP_Apex_low_power_gpu_AC_project_cases":7,"algorithm_two_modules_and_two_ablations":true,"default_no_GPU_launch":true,"dev_candidate_negative_test":true,"exact_CPU_gradient_optimizer_RNG_restore_continuation":true,"mask_partition_rows":1392,"month_entity_closure_rows":48,"paired_unit_and_Holm":true,"pretrained_model_or_weights_loaded":false,"reproducible_new_streams_seed_group":9,"six_review_counts_templates_confirmed":true,"v2_entity_split_overlap":0,"v2_execution_gold_rows":1392,"whole_row_replay_dual_cap_cases":300,"wrong_fixture_negative_cases":12},"limits":"CPU toy update/restoration tested; actual 4-bit GPU model path, VRAM, CUDA AMP and throughput NOT run. No automatic mid-stage recovery is promised; incomplete runs fail closed pending separately audited recovery.","protected_old_files_unchanged":598,"scientific_algorithm_effectiveness_claim":false,"status":"PASS"}
+
+---
+exit_code: 0
+elapsed_ms: 52139
+ended_at: 2026-11-19T12:01:56.988Z
+---

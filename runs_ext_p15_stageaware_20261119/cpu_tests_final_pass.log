@@ -1,0 +1,16 @@
+---
+pid: 42712
+cwd: "C:\\Users\\Egret"
+command: "$p='C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent'; Move-Item \"$p\\runs_ext_p15_stageaware_20261119\\cpu_tests.json\" \"$p\\runs_ext_p15_stageaware_20261119\\cpu_tests_pre_freeze_pass02.json\"; Copy-Item 'C:\\Users\\Egret\\terminals\\1121.txt' \"$p\\runs_ext_p15_stageaware_20261119\\prepare_repeat_and_tests_pass02.log\"; Expand-Archive -LiteralPath \"$p\\p15_stageaware_20261119\\implementation_bundle.zip\" -DestinationPath \"$p\\p15_stageaware_20261119\" -Force; wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B p15_stageaware_20261119/cpu_tests.py"
+title: "执行最终源码绑定的 CPU 验收，仍不批准 GPU"
+status: succeeded
+started_at: 2026-11-19T12:10:53.544Z
+running_for_ms: 46931    
+---
+{"CPU_only":true,"checks":{"B1_truth_table":16,"BWT_FWT_at_risk_denominators":true,"CUDA_initialized":false,"STOP_Apex_low_power_gpu_AC_project_cases":7,"algorithm_two_modules_and_two_ablations":true,"cohort_108_plus_optional_18":true,"default_no_GPU_launch":true,"dev_candidate_negative_test":true,"exact_CPU_gradient_optimizer_RNG_restore_continuation":true,"mask_partition_rows":1392,"month_entity_closure_rows":48,"paired_unit_and_Holm":true,"per_skill_acquisition_retention_transitions":true,"pretrained_model_or_weights_loaded":false,"reproducible_new_streams_seed_group":9,"six_review_counts_templates_confirmed":true,"statistics_JSON_roundtrip":true,"v2_entity_split_overlap":0,"v2_execution_gold_rows":1392,"whole_row_replay_dual_cap_cases":300,"wrong_fixture_negative_cases":12},"limits":"CPU toy update/restoration tested; actual 4-bit GPU model path, VRAM, CUDA AMP and throughput NOT run. No automatic mid-stage recovery is promised; incomplete runs fail closed pending separately audited recovery.","protected_old_files_unchanged":598,"scientific_algorithm_effectiveness_claim":false,"status":"PASS","tested_source_hashes":{"analyze.py":"ca994c0892db07b50dae878c7cd24faaf25fe907f041418c53d7321418d76673","core.py":"c68ea49901bdef70aa73a121fa8087e77d036bb0a2d1b2be977a017db1da47e5","cpu_tests.py":"53dd8e595d549eb2998022e1da422b8c6c96f58e4bf2093ecd842a9f018aa750","guards.py":"b38269d95d0077782f493679ea32eb68ade82eacdcded4a7223a23e437ca91a8","optimization.py":"c880ce8fe351bddd58dd18495bbf288da450c15219db00060457896318c6c141","prepare.py":"8610efe36d274a5e04f35e025e12f50139c66b0b2970f6916cea7e3692d960ee","runner.py":"3a2ab29bd26f9107231186e9ea8e6b2bd2ae3a359174b9ac538dede28299a089"}}
+
+---
+exit_code: 0
+elapsed_ms: 46930
+ended_at: 2026-11-19T12:11:40.478Z
+---

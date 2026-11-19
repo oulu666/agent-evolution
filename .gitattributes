@@ -1,0 +1,19 @@
+# New P14v2/P15 delivery only: preserve frozen bytes under Windows core.autocrlf=true.
+/.gitattributes -text
+/data_ext_p14_eval_protocol_v2/** -text
+/p15_stageaware_20261119/** -text
+/p15_review_v3_20261119/** -text
+/p15_cpu_closeout_20261119/** -text
+/runs_ext_p15_stageaware_20261119/** -text
+/runs_ext_p15_review_v3_20261119/** -text
+/runs_ext_p15_cpu_closeout_20261119/** -text
+/P14_V2_REVISION_20261119_ZH.md -text
+/P15_*.md -text
+/EXT_HANDOVER_20261119_p15*.md -text
+/EXT_REPORT_20261119_p15*.md -text
+/EXT_REPORT_20261119_p14v2*.md -text
+/EXT_HANDOVER_20261119_P14v2_P15_FINAL_BLOCKED_ZH.md -text
+/EXT_REPORT_20261119_P14v2_P15_FINAL_BLOCKED_ZH.md -text
+# Preserve raw terminal CR/progress/trailing bytes; do not lint historical evidence as source diffs.
+/runs_ext_p15_stageaware_20261119/*.log -diff
+/runs_ext_p15_review_v3_20261119/engineering_attempt01/terminal_failure.txt -diff

@@ -1,0 +1,50 @@
+{
+  "deterministic_backend": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "torch_use_deterministic_algorithms": true
+  },
+  "dev_logical_generation_requests": 152064,
+  "dev_node_episodes": 38016,
+  "dev_refresh_episodes": 12672,
+  "disk": {
+    "free_reserve_bytes": 8589934592,
+    "hard_run_bytes": 34359738368,
+    "node_storage": "four trainable-only generation states, base/quant/buffer blobs content-addressed; no duplicate adapter packages",
+    "rolling_slots": 2
+  },
+  "fairness": {
+    "branch_weights_when_replay": {
+      "new": 0.5,
+      "replay": 0.5
+    },
+    "new_only_weight": 1.0,
+    "normalization": "each branch effective supervised tokens separately",
+    "not_equal_compute_or_supervision": true,
+    "scope": "method-paired same order/seed new stream; not cross-stage equal intensity or pure interference causality"
+  },
+  "full_replay": "deferred; NOT seventh arm",
+  "logical_updates": 41472,
+  "methods": [
+    "seqft",
+    "uniform",
+    "p11_priority",
+    "layer_replay",
+    "no_priority",
+    "no_layer"
+  ],
+  "new_budget_ledger_source": "runs_ext_p15_stageaware_20261119/budget_ledger.json",
+  "new_stream_sha256": "329387c29f1326e8d66b4a831543142f0a87481c4fcf6023543c4884a3fc5d9b",
+  "new_stream_source": "runs_ext_p15_stageaware_20261119/new_streams.json",
+  "per_method": 18,
+  "potential_same_checkpoint_update0_reuse_requests": 19008,
+  "real_gold_prompt_reuse": "additional only after exact prompt bytes/model/data/generation key equality; no assumed hit rate",
+  "request_cap_after_update0_exact_cache_if_all_bindings_match": 584064,
+  "stage1_shared_states": false,
+  "test_during_training": false,
+  "test_episodes": 150336,
+  "test_logical_generation_requests": 451008,
+  "total_logical_generation_requests": 603072,
+  "trajectories": 108
+}

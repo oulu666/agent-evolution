@@ -1,0 +1,18 @@
+---
+pid: 44224
+cwd: "C:\\Users\\Egret"
+command: "$p='C:\\Users\\Egret\\Desktop\\oulu\\Agent Self-Evolution\\fac_tinyagent'; $r=Get-Content -Raw \"$p\\runs_ext_p15_stageaware_20261119\\cpu_tests.json\" | ConvertFrom-Json; foreach ($entry in $r.tested_source_hashes.PSObject.Properties) { if ((Get-FileHash -Algorithm SHA256 (Join-Path \"$p\\p15_stageaware_20261119\" $entry.Name)).Hash.ToLower() -ne $entry.Value) { throw 'CPU tested source changed' } }; Copy-Item 'C:\\Users\\Egret\\terminals\\1122.txt' \"$p\\runs_ext_p15_stageaware_20261119\\cpu_tests_final_pass.log\"; wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B p15_stageaware_20261119/prepare.py --finalize; if ($LASTEXITCODE -ne 0) { throw 'Runtime freeze failed' }; wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- bash -lc '.venv/bin/python -B p15_stageaware_20261119/runner.py guard > runs_ext_p15_stageaware_20261119/guard_read_only_20261119.json'; if ($LASTEXITCODE -ne 0) { throw 'Read-only guard check unavailable; do not launch GPU' }; Get-Content -Raw \"$p\\runs_ext_p15_stageaware_20261119\\guard_read_only_20261119.json\""
+title: "绑定被测源码冻结 P15 manifest，并只读检查 GPU 启动前置条件；不创建启动批准"
+status: succeeded
+started_at: 2026-11-19T12:12:25.711Z
+running_for_ms: 6607     
+---
+{"GPU_started":false,"P15_RUNTIME_FROZEN":"7fdcf44f6e80cc4150c7203765a7416ba37bbb447d2d813ac4b589e9fb27bb6e"}
+{"AC_not_discharging":true,"STOP":[],"other_compute":[],"other_project_python":[{"argv":"bash -lc .venv/bin/python -B p15_stageaware_20261119/runner.py guard > runs_ext_p15_stageaware_20261119/guard_read_only_20261119.json ","pid":465}],"power_limit_W":90.0,"safe":false,"windows":{"battery_status":[2],"game":false,"process_count":358}}
+
+
+---
+exit_code: 0
+elapsed_ms: 6607
+ended_at: 2026-11-19T12:12:32.318Z
+---

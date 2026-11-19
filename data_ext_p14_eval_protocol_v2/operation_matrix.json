@@ -1,0 +1,33 @@
+{
+  "hypotheses": [
+    {
+      "a": "cal.count_month",
+      "b": "cal.extract_title_sorted",
+      "hypothesis": "low_hypothesis",
+      "id": "month_extract",
+      "observed_strength": null
+    },
+    {
+      "a": "cal.count_date",
+      "b": "cal.extract_title_sorted",
+      "hypothesis": "medium_hypothesis",
+      "id": "date_extract",
+      "observed_strength": null
+    },
+    {
+      "a": "cal.list_locations",
+      "b": "cal.extract_location_sorted",
+      "hypothesis": "high_hypothesis",
+      "id": "unique_retain",
+      "observed_strength": null
+    },
+    {
+      "a": "cal.count_date",
+      "b": "cal.count_month",
+      "hypothesis": "routing_separate_hypothesis",
+      "id": "day_month",
+      "observed_strength": null
+    }
+  ],
+  "six_coarse_orders_do_not_identify_pure_interference": true
+}

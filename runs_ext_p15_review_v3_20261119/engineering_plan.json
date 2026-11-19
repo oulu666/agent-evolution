@@ -1,0 +1,59 @@
+{
+  "failure_policy": "one attempt only; retain evidence; no automatic extra updates/attempts",
+  "generation_calls_by_mode_cap": {
+    "gold_final": 2,
+    "real_final": 2,
+    "tool": 2
+  },
+  "generation_ids": [
+    "P14-train-0097",
+    "P14-dev-0325"
+  ],
+  "new_object_reconstruction": true,
+  "non_scientific": true,
+  "per_logical_update_input_tokens": [
+    2488,
+    2086
+  ],
+  "physical_input_token_total": 6660,
+  "physical_update_cap": 3,
+  "same_process_only": true,
+  "seed": 17,
+  "unique_logical_updates": 2,
+  "updates": [
+    [
+      [
+        "P14-train-0649",
+        "both",
+        "new"
+      ],
+      [
+        "P14-train-0601",
+        "both",
+        "new"
+      ],
+      [
+        "P14-train-0313",
+        "final",
+        "replay"
+      ]
+    ],
+    [
+      [
+        "P14-train-0625",
+        "both",
+        "new"
+      ],
+      [
+        "P14-train-0673",
+        "both",
+        "new"
+      ],
+      [
+        "P14-train-0001",
+        "call",
+        "replay"
+      ]
+    ]
+  ]
+}
