@@ -1,0 +1,26 @@
+---
+pid: 96560
+cwd: "C:\\Users\\Egret"
+command: "wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B data_ext_p14_eval_protocol/p14_cpu_freeze.py"
+title: "修订后执行本地 CPU 全量覆盖与执行验收"
+status: failed   
+started_at: 2026-11-19T02:57:44.373Z
+running_for_ms: 9722     
+---
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_ext_p14_eval_protocol/p14_cpu_freeze.py", line 306, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_ext_p14_eval_protocol/p14_cpu_freeze.py", line 285, in main
+    audit=historical_audit();install(RUN/'historical_audit.json',packed(audit))
+          ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_ext_p14_eval_protocol/p14_cpu_freeze.py", line 171, in historical_audit
+    r=lookup[c['episode_id']];o=reg.execute(r['expected_tool'],r['expected_arguments']); assert o['ok']
+                                            ~^^^^^^^^^^^^^^^^^
+KeyError: 'expected_tool'
+
+---
+exit_code: 1
+elapsed_ms: 9722
+ended_at: 2026-11-19T02:57:54.094Z
+---

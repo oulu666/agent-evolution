@@ -1,0 +1,48 @@
+{
+  "assembly_requirements": "Factors are annotations/specifications only. Actual order/mixture sampling and matched budgets must be approved and frozen before any run; no causal interference claim from labels.",
+  "interference_levels": {
+    "high": "Shared calendar_list with location-vs-other-field or day/month routing conflicts.",
+    "low": "Different tool/output stage pairs (month count vs extraction), matched stage size.",
+    "medium": "Shared calendar_list with count vs field output."
+  },
+  "new_old_assignments": "At each stage, current group=new; groups already trained=old; unexposed=unlearned, not forgotten.",
+  "seed_ids_reserved": [
+    17,
+    29,
+    43
+  ],
+  "stage_orders": [
+    [
+      "counts",
+      "locations",
+      "fields"
+    ],
+    [
+      "counts",
+      "fields",
+      "locations"
+    ],
+    [
+      "locations",
+      "counts",
+      "fields"
+    ],
+    [
+      "locations",
+      "fields",
+      "counts"
+    ],
+    [
+      "fields",
+      "counts",
+      "locations"
+    ],
+    [
+      "fields",
+      "locations",
+      "counts"
+    ]
+  ],
+  "status": "NOT_STARTED",
+  "training_performed": false
+}

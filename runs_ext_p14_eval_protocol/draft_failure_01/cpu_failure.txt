@@ -1,0 +1,23 @@
+---
+pid: 100628
+cwd: "C:\\Users\\Egret"
+command: "wsl.exe -d Ubuntu --cd '/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent' -- .venv/bin/python -B data_ext_p14_eval_protocol/p14_cpu_freeze.py"
+title: "本地 CPU 生成、夹具执行与拆分隔离验收"
+status: failed   
+started_at: 2026-11-19T02:56:28.499Z
+running_for_ms: 9363     
+---
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_ext_p14_eval_protocol/p14_cpu_freeze.py", line 304, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/data_ext_p14_eval_protocol/p14_cpu_freeze.py", line 253, in main
+    assert len(isolates[split]['query'])==len(rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+---
+exit_code: 1
+elapsed_ms: 9363
+ended_at: 2026-11-19T02:56:37.861Z
+---
