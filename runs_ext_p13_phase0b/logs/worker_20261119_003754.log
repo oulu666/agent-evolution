@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:08,  4.56it/s]Loading weights:   1%|          | 2/311 [00:00<01:03,  4.83it/s]Loading weights:   1%|▏         | 4/311 [00:00<00:42,  7.27it/s]Loading weights:   9%|▊         | 27/311 [00:00<00:04, 61.64it/s]Loading weights:  19%|█▉        | 59/311 [00:00<00:01, 128.00it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:01, 197.80it/s]Loading weights:  46%|████▋     | 144/311 [00:01<00:00, 269.35it/s]Loading weights:  58%|█████▊    | 181/311 [00:01<00:00, 296.69it/s]Loading weights:  74%|███████▎  | 229/311 [00:01<00:00, 349.21it/s]Loading weights:  86%|████████▌ | 268/311 [00:01<00:00, 356.47it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 219.22it/s]
+/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+2026-11-19 00:40:23 +0800 20261108 predictor_virtual step 1 complete
+Traceback (most recent call last):
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p13_phase0b_20261118.py", line 349, in <module>
+    v={'build':build,'supervise':supervise,'worker':worker,'analyze':analyze}[a.mode]();sys.exit(v if isinstance(v,int) else 0)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p13_phase0b_20261118.py", line 320, in worker
+    for seed in SEEDS:run_seed(seed)
+                      ^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/fac_tinyagent/p13_phase0b_20261118.py", line 239, in run_seed
+    if previous and (previous[-1]/'prediction.json').exists():assert prior['rows']==pred,'nondeterministic forecast reconstruction'
+                                                                     ^^^^^^^^^^^^^^^^^^^
+AssertionError: nondeterministic forecast reconstruction

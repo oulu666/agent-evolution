@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-19 00:40:49 +0800",
+  "counts": {
+    "NLL_causalLM_forward_calls": 192,
+    "NLL_forward_samples": 192,
+    "NLL_input_tokens": 91160,
+    "predictor_virtual_causalLM_forward_calls": 8,
+    "predictor_virtual_backward_samples": 8,
+    "predictor_virtual_input_tokens": 3947,
+    "predictor_virtual_optimizer_steps": 1,
+    "peak_allocated_GPU_bytes_over_all_segments": 2585268224,
+    "peak_reserved_GPU_bytes_over_all_segments": 9659482112,
+    "elapsed_seconds": 108.69743177299998
+  },
+  "timings_seconds": {
+    "nll_prefix_seconds": 25.043861221000014,
+    "predictor_virtual_1_seconds": 7.481248768,
+    "nll_predictor_virtual1_seconds": 23.946812514000015
+  },
+  "production_optimizer_steps": 0,
+  "all_extra_diagnostic_cost": true,
+  "forward_counter": "CausalLM invocation, includes token decode; internal layer checkpoint recomputation not separate CausalLM invocation"
+}

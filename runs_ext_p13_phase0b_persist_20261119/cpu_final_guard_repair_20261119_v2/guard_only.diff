@@ -1,0 +1,15 @@
+--- frozen:independent_cpu_checks
++++ new CPU wrapper:repaired_independent_cpu_checks
+@@ -1,10 +1,10 @@
+-def independent_cpu_checks():
++def repaired_independent_cpu_checks():
+     # No model construction, CUDA tensors or project worker may run here.
+     import torch
+     from . import p7_fullstate_v2_20261115 as FS
+     assert read_json(RUN/'supervisor_end.json')['rc']==0
+     active=read_json(RUN/'active.json')
+-    for pid in [active['supervisor_pid'],active['worker_pid']]:assert not Path('/proc',str(pid)).exists(),'GPU session still running'
++    cpu_identity_guard(active)
+     a=RUN/'engineering_A';assert read_json(a/'nll_primary8.json')['rows']==read_json(a/'nll_restored8.json')['rows']
+     count=read_json(a/'cost.json')['counts'];assert count['NLL_forward_samples']==32 and count['engineering_primary_optimizer_steps']==1 and count['engineering_control_optimizer_steps']==1 and count.get('generation_episodes',0)==0
+     receipts=list(RUN.rglob('*.receipt.json'));base_seen=set()

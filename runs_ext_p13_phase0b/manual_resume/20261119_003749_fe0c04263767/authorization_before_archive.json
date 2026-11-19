@@ -1,0 +1,119 @@
+{
+  "time": "2026-11-19 00:37:49 +0800",
+  "authorization_quote": "允许归档并解除本次游戏触发的STOP，继续完成同一轮测评。",
+  "authorization_time_Beijing": "2026-11-19 00:35 +0800",
+  "scope": "Only exact historical Apex STOP below; no future STOP authorization; same frozen Phase0B; no change to data/method/gates",
+  "original_STOP_path": "runs_ext_p13_phase0b/logs/STOP",
+  "original_STOP_sha256": "2aa5dbf9caef93164fd0db60f169e69fe13cd6e486b1e5369d3e84da4cfca0de",
+  "original_STOP_content": {
+    "time": "2026-11-18 22:58:35 +0800",
+    "reason": {
+      "time": "2026-11-18 22:58:34 +0800",
+      "windows": {
+        "process_count": 405,
+        "game": false
+      },
+      "power_limit_W": 105.0,
+      "compute": [
+        {
+          "pid": "495",
+          "process": "[Not Found]"
+        }
+      ],
+      "other_compute": [],
+      "other_project_python": [],
+      "STOP": [],
+      "safe": false,
+      "all_apex_process_count": 1,
+      "observed_GPU_memory_MiB": 7868.0
+    }
+  },
+  "original_STOP_text": "{\n  \"time\": \"2026-11-18 22:58:35 +0800\",\n  \"reason\": {\n    \"time\": \"2026-11-18 22:58:34 +0800\",\n    \"windows\": {\n      \"process_count\": 405,\n      \"game\": false\n    },\n    \"power_limit_W\": 105.0,\n    \"compute\": [\n      {\n        \"pid\": \"495\",\n        \"process\": \"[Not Found]\"\n      }\n    ],\n    \"other_compute\": [],\n    \"other_project_python\": [],\n    \"STOP\": [],\n    \"safe\": false,\n    \"all_apex_process_count\": 1,\n    \"observed_GPU_memory_MiB\": 7868.0\n  }\n}",
+  "original_STOP_mtime_ns": 1795013915689737800,
+  "original_STOP_mtime_Beijing": "2026-11-18T22:58:35.689738+08:00",
+  "archive_path": "runs_ext_p13_phase0b/logs/STOP.apex_20261118_225835.authorized_20261119_003749_fe0c04263767",
+  "fresh_preflight_before_unlatch": {
+    "time": "2026-11-19 00:37:48 +0800",
+    "windows": {
+      "process_count": 373,
+      "game": false
+    },
+    "power_limit_W": 90.0,
+    "compute": [],
+    "other_compute": [],
+    "other_project_python": [],
+    "STOP": [
+      "runs_ext_p13_phase0b/logs/STOP"
+    ],
+    "safe": false,
+    "all_apex_process_count": 0,
+    "observed_GPU_memory_MiB": 1230.0
+  },
+  "frozen_manifest_sha256": "52daa1b9958d7e5f498042579ca88e58b4464beefacc9ca4ffe5418cbe5efa31",
+  "formal_freeze_sha256": "6fe5281dba201c90d4ecc8de1765fa9331b98fdaf35bf85c1a45d36395e8e051",
+  "reused_complete_calibrations": [
+    {
+      "seed": 20261108,
+      "calibration_n": 8,
+      "COMPLETE_sha256": "7e3747be90efc049c81d8cea8081a2f2da47ee6aa3fcefabb46d740798e3d3f3"
+    },
+    {
+      "seed": 20261109,
+      "calibration_n": 8,
+      "COMPLETE_sha256": "72978b541f235ecb153a60babb492b957a201c9e3af6d52e835c9582d401cd83"
+    },
+    {
+      "seed": 20261110,
+      "calibration_n": 8,
+      "COMPLETE_sha256": "133315cd7663d6d2ecefcc6aa5d45ea21196a6ba33bf036e4a660fbfd1797e05"
+    }
+  ],
+  "attempts_before_resume": {
+    "20261108": [
+      "runs_ext_p13_phase0b/seeds/seed20261108/attempt01"
+    ],
+    "20261109": [],
+    "20261110": []
+  },
+  "partial_node00_rows_preserved_not_reused_as_complete": 25,
+  "prior_interrupted_cost": {
+    "time": "2026-11-18 22:58:37 +0800",
+    "counts": {
+      "NLL_causalLM_forward_calls": 192,
+      "NLL_forward_samples": 192,
+      "NLL_input_tokens": 91160,
+      "predictor_virtual_causalLM_forward_calls": 8,
+      "predictor_virtual_backward_samples": 8,
+      "predictor_virtual_input_tokens": 3947,
+      "predictor_virtual_optimizer_steps": 1,
+      "generation_causalLM_forward_calls": 913,
+      "generation_inference_calls": 50,
+      "generation_input_tokens": 17240,
+      "generation_output_tokens": 895,
+      "generation_episodes": 25,
+      "peak_allocated_GPU_bytes_over_all_segments": 2583431168,
+      "peak_reserved_GPU_bytes_over_all_segments": 9625927680,
+      "elapsed_seconds": 110.66967361299999
+    },
+    "timings_seconds": {
+      "nll_prefix_seconds": 13.35263205800004,
+      "predictor_virtual_1_seconds": 4.46456175000003,
+      "nll_predictor_virtual1_seconds": 12.110547273000009,
+      "node00_seconds": 75.76178286100003
+    },
+    "production_optimizer_steps": 0,
+    "all_extra_diagnostic_cost": true,
+    "forward_counter": "CausalLM invocation, includes token decode; internal layer checkpoint recomputation not separate CausalLM invocation"
+  },
+  "reconstruction_plan": {
+    "seed08_attempt02_only_remaining_attempt": true,
+    "recompute_NLL_forward_samples": 192,
+    "recompute_predictor_virtual_backward_samples": 8,
+    "recompute_predictor_virtual_steps": 1,
+    "compare_full_prefix_hash_and_prediction_rows_exactly": true,
+    "partial_node00_completed_episodes_to_repeat": 25,
+    "reuse_complete_calibration_episodes": 24,
+    "no_completed_suffix_nodes_available": true,
+    "not_a_new_independent_experiment": true
+  }
+}

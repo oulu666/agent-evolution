@@ -1,0 +1,102 @@
+{
+  "time": "2026-11-19 02:45:31 +0800",
+  "boot_id": "af5b2f6f-cfab-4dc5-ae2a-b5dbe0aa47f5",
+  "self": {
+    "pid": 354,
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "-m",
+      "fac_tinyagent.p13_phase0b_cpu_final_guard_v2_20261119"
+    ],
+    "exe": "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/bin/python3.12",
+    "cwd": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+    "start_ticks_since_boot": "5500",
+    "state": "R"
+  },
+  "historical_recorded_numeric_PIDs_current_identity": {
+    "365": null,
+    "470": null
+  },
+  "current_project_python": [
+    {
+      "pid": 208,
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/bin/networkd-dispatcher",
+        "--run-startup-triggers"
+      ],
+      "exe": "",
+      "cwd": "",
+      "start_ticks_since_boot": "5431",
+      "state": "S"
+    },
+    {
+      "pid": 254,
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/share/unattended-upgrades/unattended-upgrade-shutdown",
+        "--wait-for-signal"
+      ],
+      "exe": "",
+      "cwd": "",
+      "start_ticks_since_boot": "5438",
+      "state": "S"
+    },
+    {
+      "pid": 354,
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "fac_tinyagent.p13_phase0b_cpu_final_guard_v2_20261119"
+      ],
+      "exe": "/home/egret/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/bin/python3.12",
+      "cwd": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent",
+      "start_ticks_since_boot": "5500",
+      "state": "R"
+    }
+  ],
+  "blocking_project_python": [
+    {
+      "pid": 208,
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/bin/networkd-dispatcher",
+        "--run-startup-triggers"
+      ],
+      "exe": "",
+      "cwd": "",
+      "start_ticks_since_boot": "5431",
+      "state": "S"
+    },
+    {
+      "pid": 254,
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/share/unattended-upgrades/unattended-upgrade-shutdown",
+        "--wait-for-signal"
+      ],
+      "exe": "",
+      "cwd": "",
+      "start_ticks_since_boot": "5438",
+      "state": "S"
+    }
+  ],
+  "read_only_GPU_and_Windows_check": {
+    "time": "2026-11-19 02:45:30 +0800",
+    "windows": {
+      "process_count": 359,
+      "game": false
+    },
+    "power_limit_W": 90.0,
+    "compute": [],
+    "other_compute": [],
+    "other_project_python": [],
+    "STOP": [],
+    "safe": true,
+    "all_apex_process_count": 0,
+    "observed_GPU_memory_MiB": 445.0
+  },
+  "rule": "Require rc0, GPU_COMPLETE and all nodes; block actual project Python or any GPU compute, not unrelated reused numeric PID."
+}

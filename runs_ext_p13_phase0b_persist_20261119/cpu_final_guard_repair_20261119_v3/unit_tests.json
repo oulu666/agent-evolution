@@ -1,0 +1,42 @@
+{
+  "time": "2026-11-19 02:46:24 +0800",
+  "passed": true,
+  "cases": [
+    {
+      "case": "pid_absent",
+      "expected_block": false,
+      "actual_block": false,
+      "passed": true
+    },
+    {
+      "case": "unrelated_pid_reuse",
+      "expected_block": false,
+      "actual_block": false,
+      "passed": true
+    },
+    {
+      "case": "real_experiment_alive",
+      "expected_block": true,
+      "actual_block": true,
+      "passed": true
+    },
+    {
+      "case": "same_module_different_PID",
+      "expected_block": true,
+      "actual_block": true,
+      "passed": true
+    },
+    {
+      "case": "verified_system_python_unreadable_cwd",
+      "expected_block": false,
+      "actual_block": false,
+      "passed": true
+    },
+    {
+      "case": "unknown_python_unreadable_cwd",
+      "expected_block": true,
+      "actual_block": true,
+      "passed": true
+    }
+  ]
+}

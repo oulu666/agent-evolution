@@ -1,0 +1,2005 @@
+{
+  "time": "2026-11-19 00:49:39 +0800",
+  "scope": "one CPU-only JSON and static-code investigation; zero GPU model loads/updates/generation; no new attempt/threshold changes",
+  "file_level_vs_payload_comparison": {
+    "nll_prefix.json": {
+      "file_bytes_equal": false,
+      "top_level_time_equal": false,
+      "state_hash_equal": true,
+      "row_payload_equal": true
+    },
+    "nll_predictor_virtual1.json": {
+      "file_bytes_equal": false,
+      "top_level_time_equal": false,
+      "state_hash_equal": false,
+      "row_payload_equal": false
+    }
+  },
+  "NLL_segment_difference_stats": {
+    "nll_prefix.json": {
+      "call": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      },
+      "tool_name": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      },
+      "args": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      },
+      "call_other": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      },
+      "final": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      },
+      "all": {
+        "n": 96,
+        "different": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "median_abs": 0.0,
+        "max_symmetric_relative": 0.0
+      }
+    },
+    "nll_predictor_virtual1.json": {
+      "call": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 0.008372440934181213,
+        "mean_abs": 0.0005545318762566845,
+        "median_abs": 2.059858525171876e-05,
+        "max_symmetric_relative": 0.23898082202574283
+      },
+      "tool_name": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 0.0007964600808918476,
+        "mean_abs": 7.594485866017446e-05,
+        "median_abs": 2.4333668989129364e-05,
+        "max_symmetric_relative": 0.17360039040130826
+      },
+      "args": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 0.014477308839559555,
+        "mean_abs": 0.0009507352995494026,
+        "median_abs": 1.629778853384778e-05,
+        "max_symmetric_relative": 0.2475823594681557
+      },
+      "call_other": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 8.295374573208392e-05,
+        "mean_abs": 1.5869762895211654e-05,
+        "median_abs": 1.1839780199807137e-05,
+        "max_symmetric_relative": 0.16084902792443384
+      },
+      "final": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 0.024555861949920654,
+        "mean_abs": 0.0028751369094000743,
+        "median_abs": 0.0006675769109278917,
+        "max_symmetric_relative": 0.23907762835873514
+      },
+      "all": {
+        "n": 96,
+        "different": 96,
+        "max_abs": 0.012944459915161133,
+        "mean_abs": 0.0015229971359076444,
+        "median_abs": 0.00032846094109117985,
+        "max_symmetric_relative": 0.2354686460922006
+      }
+    }
+  },
+  "prediction_difference_stats": {
+    "initial": {
+      "candidates": {
+        "call": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "args": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "call_other": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "final": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "all": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        }
+      },
+      "probes": {
+        "call": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "args": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "call_other": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "final": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "all": {
+          "n": 48,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        }
+      },
+      "all": {
+        "call": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "tool_name": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "args": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "call_other": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "final": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        },
+        "all": {
+          "n": 96,
+          "different": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 0.0
+        }
+      }
+    },
+    "delta": {
+      "candidates": {
+        "call": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.008334176614880562,
+          "mean_abs": 0.0005583436606381534,
+          "median_abs": 2.059858525171876e-05,
+          "max_symmetric_relative": 1.757245830628613
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.0003988523967564106,
+          "mean_abs": 7.08676135824741e-05,
+          "median_abs": 2.7430301997810602e-05,
+          "max_symmetric_relative": 1.3268510338990556
+        },
+        "args": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.014438524842262268,
+          "mean_abs": 0.0009613317596025203,
+          "median_abs": 1.4893026673235e-05,
+          "max_symmetric_relative": 1.9148007510368792
+        },
+        "call_other": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 5.199376028031111e-05,
+          "mean_abs": 1.285354755964363e-05,
+          "median_abs": 8.407514542341232e-06,
+          "max_symmetric_relative": 1.633197042990627
+        },
+        "final": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.024555861949920654,
+          "mean_abs": 0.003125291523853472,
+          "median_abs": 0.0008455407805740833,
+          "max_symmetric_relative": 1.6461009835645404
+        },
+        "all": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.012944459915161133,
+          "mean_abs": 0.001598212672737039,
+          "median_abs": 0.0004798190202564001,
+          "max_symmetric_relative": 1.9985056181979324
+        }
+      },
+      "probes": {
+        "call": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.008372440934181213,
+          "mean_abs": 0.0005507200918752156,
+          "median_abs": 2.2322041331790388e-05,
+          "max_symmetric_relative": 1.9522277097343002
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.0007964600808918476,
+          "mean_abs": 8.102210373787481e-05,
+          "median_abs": 2.2883177734911442e-05,
+          "max_symmetric_relative": 1.1256761576983214
+        },
+        "args": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.014477308839559555,
+          "mean_abs": 0.0009401388394962851,
+          "median_abs": 1.685143797658384e-05,
+          "max_symmetric_relative": 1.96222269412961
+        },
+        "call_other": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 8.295374573208392e-05,
+          "mean_abs": 1.888597823077968e-05,
+          "median_abs": 1.4450124581344426e-05,
+          "max_symmetric_relative": 1.6604079683268296
+        },
+        "final": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.020941853523254395,
+          "mean_abs": 0.002624982294946676,
+          "median_abs": 0.000623081810772419,
+          "max_symmetric_relative": 1.9383522866269196
+        },
+        "all": {
+          "n": 48,
+          "different": 48,
+          "max_abs": 0.011028587818145752,
+          "mean_abs": 0.0014477815990782499,
+          "median_abs": 0.0002302753273397684,
+          "max_symmetric_relative": 1.9746127171816856
+        }
+      },
+      "all": {
+        "call": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 0.008372440934181213,
+          "mean_abs": 0.0005545318762566845,
+          "median_abs": 2.059858525171876e-05,
+          "max_symmetric_relative": 1.9522277097343002
+        },
+        "tool_name": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 0.0007964600808918476,
+          "mean_abs": 7.594485866017446e-05,
+          "median_abs": 2.4333668989129364e-05,
+          "max_symmetric_relative": 1.3268510338990556
+        },
+        "args": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 0.014477308839559555,
+          "mean_abs": 0.0009507352995494026,
+          "median_abs": 1.629778853384778e-05,
+          "max_symmetric_relative": 1.96222269412961
+        },
+        "call_other": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 8.295374573208392e-05,
+          "mean_abs": 1.5869762895211654e-05,
+          "median_abs": 1.1839780199807137e-05,
+          "max_symmetric_relative": 1.6604079683268296
+        },
+        "final": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 0.024555861949920654,
+          "mean_abs": 0.0028751369094000743,
+          "median_abs": 0.0006675769109278917,
+          "max_symmetric_relative": 1.9383522866269196
+        },
+        "all": {
+          "n": 96,
+          "different": 96,
+          "max_abs": 0.012944459915161133,
+          "mean_abs": 0.0015229971359076444,
+          "median_abs": 0.00032846094109117985,
+          "max_symmetric_relative": 1.9985056181979324
+        }
+      }
+    },
+    "risk": {
+      "candidates": {
+        "call": {
+          "n": 48,
+          "different": 33,
+          "max_abs": 0.003193426877260208,
+          "mean_abs": 0.00018204370280727744,
+          "median_abs": 4.87941360916011e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 46,
+          "max_abs": 0.0003988523967564106,
+          "mean_abs": 7.048331652489044e-05,
+          "median_abs": 2.7430301997810602e-05,
+          "max_symmetric_relative": 1.0
+        },
+        "args": {
+          "n": 48,
+          "different": 32,
+          "max_abs": 0.005528256297111511,
+          "mean_abs": 0.0003090170724438697,
+          "median_abs": 2.110609784722328e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "call_other": {
+          "n": 48,
+          "different": 25,
+          "max_abs": 3.488638321869075e-05,
+          "mean_abs": 5.838524884893559e-06,
+          "median_abs": 1.292231900151819e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "final": {
+          "n": 48,
+          "different": 17,
+          "max_abs": 0.00784999132156372,
+          "mean_abs": 0.0009085925582136648,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        },
+        "all": {
+          "n": 48,
+          "different": 17,
+          "max_abs": 0.0027498677372932434,
+          "mean_abs": 0.00033351359161315486,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        }
+      },
+      "probes": {
+        "call": {
+          "n": 48,
+          "different": 35,
+          "max_abs": 0.002939842641353607,
+          "mean_abs": 0.00022787075461868275,
+          "median_abs": 6.928145012352616e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "tool_name": {
+          "n": 48,
+          "different": 47,
+          "max_abs": 0.0007964600808918476,
+          "mean_abs": 8.080744267620806e-05,
+          "median_abs": 2.2883177734911442e-05,
+          "max_symmetric_relative": 1.0
+        },
+        "args": {
+          "n": 48,
+          "different": 30,
+          "max_abs": 0.005057722330093384,
+          "mean_abs": 0.00038136303070738603,
+          "median_abs": 1.8948812794405967e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "call_other": {
+          "n": 48,
+          "different": 23,
+          "max_abs": 5.603019963018596e-05,
+          "mean_abs": 6.283602488110773e-06,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        },
+        "final": {
+          "n": 48,
+          "different": 19,
+          "max_abs": 0.01469498872756958,
+          "mean_abs": 0.000997257118190949,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        },
+        "all": {
+          "n": 48,
+          "different": 25,
+          "max_abs": 0.007749766111373901,
+          "mean_abs": 0.0005329163468559273,
+          "median_abs": 4.839617758989334e-06,
+          "max_symmetric_relative": 1.0
+        }
+      },
+      "all": {
+        "call": {
+          "n": 96,
+          "different": 68,
+          "max_abs": 0.003193426877260208,
+          "mean_abs": 0.00020495722871298008,
+          "median_abs": 5.469362804433331e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "tool_name": {
+          "n": 96,
+          "different": 93,
+          "max_abs": 0.0007964600808918476,
+          "mean_abs": 7.564537960054925e-05,
+          "median_abs": 2.4333668989129364e-05,
+          "max_symmetric_relative": 1.0
+        },
+        "args": {
+          "n": 96,
+          "different": 62,
+          "max_abs": 0.005528256297111511,
+          "mean_abs": 0.0003451900515756279,
+          "median_abs": 1.9516264728736132e-06,
+          "max_symmetric_relative": 1.0
+        },
+        "call_other": {
+          "n": 96,
+          "different": 48,
+          "max_abs": 5.603019963018596e-05,
+          "mean_abs": 6.061063686502166e-06,
+          "median_abs": 6.157279131002724e-07,
+          "max_symmetric_relative": 1.0
+        },
+        "final": {
+          "n": 96,
+          "different": 36,
+          "max_abs": 0.01469498872756958,
+          "mean_abs": 0.000952924838202307,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        },
+        "all": {
+          "n": 96,
+          "different": 42,
+          "max_abs": 0.007749766111373901,
+          "mean_abs": 0.00043321496923454106,
+          "median_abs": 0.0,
+          "max_symmetric_relative": 1.0
+        }
+      }
+    }
+  },
+  "risk_rankings": {
+    "candidates": {
+      "call": {
+        "spearman_with_average_ties": 0.5521768313458789,
+        "strict_pairwise_rank_inversions": 170,
+        "tie_relationships_changed": 237,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 2,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.list_locations-15"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-21"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.list_locations-15",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-09"
+            ]
+          }
+        }
+      },
+      "tool_name": {
+        "spearman_with_average_ties": 0.9101373851540688,
+        "strict_pairwise_rank_inversions": 146,
+        "tie_relationships_changed": 7,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 2,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-09"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-03"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-22",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-14"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-15",
+              "p13b-candidate-cal.list_locations-10",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-14"
+            ]
+          },
+          "12": {
+            "intersection": 9,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-22",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-14",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-15"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-15",
+              "p13b-candidate-cal.list_locations-10",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-14",
+              "p13b-candidate-cal.list_locations-22",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-08"
+            ]
+          }
+        }
+      },
+      "args": {
+        "spearman_with_average_ties": 0.5227995149027583,
+        "strict_pairwise_rank_inversions": 152,
+        "tie_relationships_changed": 313,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 2,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.count_date-22"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.count_date-22",
+              "p13b-candidate-cal.list_locations-10"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-19",
+              "p13b-candidate-cal.count_date-22",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-12",
+              "p13b-candidate-cal.count_date-06"
+            ]
+          }
+        }
+      },
+      "final": {
+        "spearman_with_average_ties": 0.8759171468174862,
+        "strict_pairwise_rank_inversions": 19,
+        "tie_relationships_changed": 127,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00"
+            ]
+          },
+          "8": {
+            "intersection": 7,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-05"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-02"
+            ]
+          },
+          "12": {
+            "intersection": 11,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-05",
+              "p13b-candidate-cal.count_date-23",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-10",
+              "p13b-candidate-cal.list_locations-09"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-05",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-10",
+              "p13b-candidate-cal.count_date-20"
+            ]
+          }
+        }
+      },
+      "all": {
+        "spearman_with_average_ties": 0.8138185191069577,
+        "strict_pairwise_rank_inversions": 26,
+        "tie_relationships_changed": 165,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-00"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-07"
+            ]
+          },
+          "8": {
+            "intersection": 6,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.list_locations-03"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-04"
+            ]
+          },
+          "12": {
+            "intersection": 9,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.count_date-23",
+              "p13b-candidate-cal.list_locations-05"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-04",
+              "p13b-candidate-cal.list_locations-05",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-10",
+              "p13b-candidate-cal.list_locations-06"
+            ]
+          }
+        }
+      }
+    },
+    "probes": {
+      "call": {
+        "spearman_with_average_ties": 0.5792896018332856,
+        "strict_pairwise_rank_inversions": 199,
+        "tie_relationships_changed": 150,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16",
+              "p13b-dev-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-01"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.count_date-22",
+              "p13b-dev-cal.list_locations-03"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.count_date-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.count_date-22"
+            ]
+          }
+        }
+      },
+      "tool_name": {
+        "spearman_with_average_ties": 0.9198577906608985,
+        "strict_pairwise_rank_inversions": 125,
+        "tie_relationships_changed": 1,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-16"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13"
+            ]
+          },
+          "8": {
+            "intersection": 6,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-19",
+              "p13b-dev-cal.list_locations-08"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-21",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-19"
+            ]
+          },
+          "12": {
+            "intersection": 10,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-19",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-06",
+              "p13b-dev-cal.list_locations-22"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-21",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-19",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-10",
+              "p13b-dev-cal.list_locations-22"
+            ]
+          }
+        }
+      },
+      "args": {
+        "spearman_with_average_ties": 0.5612598676463252,
+        "strict_pairwise_rank_inversions": 151,
+        "tie_relationships_changed": 250,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16",
+              "p13b-dev-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-01"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.count_date-22",
+              "p13b-dev-cal.count_date-23"
+            ],
+            "new": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.count_date-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.count_date-22",
+              "p13b-dev-cal.list_locations-04"
+            ]
+          }
+        }
+      },
+      "final": {
+        "spearman_with_average_ties": 0.8986021122783547,
+        "strict_pairwise_rank_inversions": 26,
+        "tie_relationships_changed": 122,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-01"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01"
+            ]
+          },
+          "8": {
+            "intersection": 7,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-03"
+            ]
+          },
+          "12": {
+            "intersection": 10,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-05",
+              "p13b-dev-cal.list_locations-04"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-04",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-06"
+            ]
+          }
+        }
+      },
+      "all": {
+        "spearman_with_average_ties": 0.8042726986539142,
+        "strict_pairwise_rank_inversions": 75,
+        "tie_relationships_changed": 145,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-08"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-00"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-02"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-13"
+            ]
+          },
+          "12": {
+            "intersection": 10,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.count_date-14",
+              "p13b-dev-cal.list_locations-03"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.count_date-02"
+            ]
+          }
+        }
+      }
+    },
+    "all": {
+      "call": {
+        "spearman_with_average_ties": 0.5529285749142638,
+        "strict_pairwise_rank_inversions": 779,
+        "tie_relationships_changed": 771,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-dev-cal.count_date-14",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-dev-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-dev-cal.count_date-14",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-dev-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-02"
+            ]
+          }
+        }
+      },
+      "tool_name": {
+        "spearman_with_average_ties": 0.9185863519196853,
+        "strict_pairwise_rank_inversions": 550,
+        "tie_relationships_changed": 14,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 2,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13"
+            ]
+          },
+          "8": {
+            "intersection": 4,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21"
+            ]
+          },
+          "12": {
+            "intersection": 7,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-16",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-22"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-15",
+              "p13b-dev-cal.list_locations-09",
+              "p13b-dev-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-16",
+              "p13b-dev-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-09",
+              "p13b-candidate-cal.list_locations-21",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-15",
+              "p13b-candidate-cal.list_locations-10"
+            ]
+          }
+        }
+      },
+      "args": {
+        "spearman_with_average_ties": 0.5400551462562562,
+        "strict_pairwise_rank_inversions": 611,
+        "tie_relationships_changed": 1143,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-dev-cal.count_date-14",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-dev-cal.count_date-01"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-08",
+              "p13b-dev-cal.count_date-14",
+              "p13b-candidate-cal.count_date-01",
+              "p13b-dev-cal.count_date-01",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-16"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-20",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.count_date-04",
+              "p13b-dev-cal.count_date-04",
+              "p13b-dev-cal.count_date-02",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-dev-cal.count_date-19",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-candidate-cal.list_locations-02"
+            ]
+          }
+        }
+      },
+      "final": {
+        "spearman_with_average_ties": 0.8883601423405741,
+        "strict_pairwise_rank_inversions": 94,
+        "tie_relationships_changed": 501,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 3,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-01"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00"
+            ]
+          },
+          "8": {
+            "intersection": 6,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00"
+            ]
+          },
+          "12": {
+            "intersection": 10,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-02",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-07",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-dev-cal.list_locations-18"
+            ]
+          }
+        }
+      },
+      "all": {
+        "spearman_with_average_ties": 0.811011086541984,
+        "strict_pairwise_rank_inversions": 202,
+        "tie_relationships_changed": 631,
+        "full_order_identical": false,
+        "topK": {
+          "4": {
+            "intersection": 2,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.count_date-08"
+            ]
+          },
+          "8": {
+            "intersection": 5,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-dev-cal.count_date-08",
+              "p13b-candidate-cal.list_locations-00"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-08"
+            ]
+          },
+          "12": {
+            "intersection": 8,
+            "set_identical": false,
+            "order_identical": false,
+            "old": [
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-07",
+              "p13b-dev-cal.count_date-08",
+              "p13b-candidate-cal.list_locations-00",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-11",
+              "p13b-dev-cal.list_locations-20",
+              "p13b-dev-cal.list_locations-07"
+            ],
+            "new": [
+              "p13b-dev-cal.list_locations-11",
+              "p13b-candidate-cal.list_locations-01",
+              "p13b-candidate-cal.list_locations-08",
+              "p13b-dev-cal.count_date-08",
+              "p13b-dev-cal.list_locations-01",
+              "p13b-dev-cal.list_locations-00",
+              "p13b-dev-cal.count_date-01",
+              "p13b-dev-cal.list_locations-08",
+              "p13b-dev-cal.list_locations-18",
+              "p13b-candidate-cal.list_locations-03",
+              "p13b-dev-cal.list_locations-13",
+              "p13b-candidate-cal.list_locations-07"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "state_coverage": {
+    "captured_state_fields": [
+      "parameters",
+      "optimizer",
+      "scaler",
+      "python_rng",
+      "numpy_rng",
+      "torch_rng",
+      "cuda_rng",
+      "module_modes",
+      "optimizer_attrs"
+    ],
+    "covered": [
+      "all requires_grad parameters (here LoRA)",
+      "optimizer.state_dict",
+      "scaler.state_dict",
+      "Python/NumPy/torch CPU/CUDA RNG",
+      "all named module training flags",
+      "optimizer.initialized when present"
+    ],
+    "not_covered": [
+      "frozen non-LoRA weights and model buffers",
+      "bitsandbytes Params4bit quant_state/scales/codebooks and other non-trainable serialized quantization state",
+      "model.config/use_cache/attention implementation, actual autocast compute dtype",
+      "dropout p and other module attributes beyond training flags",
+      "CUDA/bitsandbytes hidden/global workspaces/optimizer manager/kernel choices",
+      "TF32/float32 matmul precision, cuDNN flags, deterministic-algorithms settings, SDPA backend policy",
+      "process environment and initialization timing such as CUBLAS_WORKSPACE_CONFIG/PYTHONHASHSEED",
+      "model loading allocation/cache history"
+    ],
+    "Engine_init_calls": [
+      "FS.capture",
+      "FS.digest",
+      "PagedAdamW8bit",
+      "_attach_adapter",
+      "_training_state_hash",
+      "collections.Counter",
+      "config_for",
+      "load_base_model",
+      "load_prefix",
+      "load_tokenizer",
+      "prefix",
+      "read_json",
+      "self.memory",
+      "self.model.get_base_model",
+      "self.model.get_base_model().register_forward_hook",
+      "self.model.parameters",
+      "start_adapter",
+      "str",
+      "time.perf_counter",
+      "torch.amp.GradScaler",
+      "torch.cuda.reset_peak_memory_stats"
+    ],
+    "load_prefix_calls": [
+      "Path",
+      "ValueError",
+      "_training_state_hash",
+      "model.named_parameters",
+      "np.random.set_state",
+      "optimizer.load_state_dict",
+      "optimizer.state.items",
+      "optimizer.zero_grad",
+      "parameter.copy_",
+      "params.items",
+      "random.setstate",
+      "read_json",
+      "required.issubset",
+      "scaler.load_state_dict",
+      "set",
+      "sha256_file",
+      "state['parameters'][name].to",
+      "torch.cuda.set_rng_state_all",
+      "torch.is_tensor",
+      "torch.load",
+      "torch.no_grad",
+      "torch.set_rng_state",
+      "value.to",
+      "values.items"
+    ],
+    "load_base_model_calls": [
+      "AutoModelForCausalLM.from_pretrained",
+      "BitsAndBytesConfig",
+      "_compute_dtype",
+      "config.get",
+      "config['quantization'].get"
+    ],
+    "note": "Static coverage check only. Does not inspect either dead process historical runtime flags or prove an operator nondeterministic."
+  },
+  "config_source": {
+    "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "auto"
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "learning_rate": 0.0001,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "num_epochs": 2,
+      "max_seq_length": 1024,
+      "gradient_checkpointing": true,
+      "optimizer": "paged_adamw_8bit",
+      "logging_steps": 1
+    },
+    "base_config_attention_dropout": 0.0,
+    "base_config_torch_dtype": "bfloat16",
+    "base_config_attn_implementation": null,
+    "base_config_sha256": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+  },
+  "same_frozen_inputs": {
+    "frozen_features_masks_sha256": "3982e8496c4a33d3a7d71cdc683d83028451ec70efe148c0654efebad208dcc7",
+    "frozen_batches_sha256": "fa92253419dcb2fb12fc8b4ed607911d50673586abb58245d40148ee55c2c1db",
+    "first_batch_episode_ids": [
+      "calendar-train-calendar_search_dates-011",
+      "calendar-train-calendar_count_date-006",
+      "calendar-train-calendar_count_month-002",
+      "calendar-train-calendar_list_titles-007",
+      "calendar-train-calendar_count_date-009",
+      "calendar-train-calendar_search_dates-007",
+      "calendar-train-calendar_count_month-003",
+      "calendar-train-calendar_count_month-004"
+    ],
+    "probe_and_candidate_order_source": "same frozen candidate.jsonl + dev.jsonl in both attempts",
+    "original_prefix_state_hash": "f7fbb2e0040cc4b02bb3d5a5fb061686ef532aa310db574f5051424fd0eebc08",
+    "input_token_lengths_equal": true,
+    "NLL_row_order_equal": true
+  },
+  "virtual_update_hashes": [
+    {
+      "time": "2026-11-18 22:57:07 +0800",
+      "seed": 20261108,
+      "step": 1,
+      "kind": "predictor_virtual",
+      "state_hash": "01d92e8be72fa9720acab7d5c630e23c11a3b424dea0e17f1a9c29295bac62db",
+      "LoRA_hash": "137632e62d605b702f8fdbbdf84dfee67b7b791e71984404112576d45b487d34",
+      "optimizer_hash": "8d88dffc69f772ad78115fdd2384a8110f001375e2c27217bab446d2aedd5d99"
+    },
+    {
+      "time": "2026-11-19 00:40:23 +0800",
+      "seed": 20261108,
+      "step": 1,
+      "kind": "predictor_virtual",
+      "state_hash": "3bcbf402959b89610e37730feb5c57cc75a1f8d38096f85f56ed25aa04481e94",
+      "LoRA_hash": "0dfeab653bed15f09def2f8fc7418aee70c699c53296db679a90d61a94c74612",
+      "optimizer_hash": "2d6933445300880c1d274914804491226438ef2101de54e9af7c528dfb8308ab"
+    }
+  ],
+  "source_hashes": {
+    "fac_tinyagent/p7_fullstate_v2_20261115.py": "5a1a92a089da538004cc4eff0cf72db6dc0d37c332f15e94409098a50f801b7a",
+    "fac_tinyagent/replay_train.py": "761027c760800bc054725aefbef74476fe5acbed970d209f232d4a3948ce74a0",
+    "fac_tinyagent/sft/train.py": "e73d7bdddb4a504e71dbb6845e82bba4b058514398d5a9437b0ef1e827f7493d",
+    "fac_tinyagent/sft/dataset.py": "253ef011111e45aa032858056415b4bcacc57df4acb2646aaa9b2885ac80852e",
+    "fac_tinyagent/utils.py": "613095c40cd69ae18039c372b068b8e17429b1428fbe5da8191bbd6424bbfd2a",
+    "fac_tinyagent/p13_phase0b_20261118.py": "3a589bf546bbeb4a7f4159b257bdd937779494cde0fc58f57afc275294a89d91"
+  },
+  "strict_row_equality_failed": true,
+  "no_complete_forecast_endpoint_available": true,
+  "attempt_budget_remaining_seed08": 0
+}

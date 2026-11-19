@@ -1,0 +1,9 @@
+# P13 Phase0B终止交接
+
+2026-11-19 00:43:36 +0800 北京时间
+
+状态ENGINEERING_STOP_RECONSTRUCTION_MISMATCH_ATTEMPT_CAP；supervisor rc1，GPUworker已退出；seed08两次attempt均已使用，不允许自动第三次。
+
+报告EXT_REPORT_20261119_p13_phase0b_resume_failure_ZH.md；机器审计runs_ext_p13_phase0b/manual_resume/20261119_003749_fe0c04263767/reconstruction_failure_audit.json；终止标记runs_ext_p13_phase0b/TERMINATED_ENGINEERING_20261119.json。原冻结代码/数据/门槛未改。不得把工程停止当MIR零事件或性能失败。
+
+完整校准已复用；自然suffix 0步，完整终点0；两个attempt前缀恢复hash通过，但虚拟更新预测不满足逐值重建。没有启动后续pilot。本授权只解除原22:58:35 Apex STOP，不适用于未来STOP。
