@@ -1,0 +1,3 @@
+# Frozen accounting pressure test
+
+The first guarded comparator charged guard and construction in two stages even when they can be fused. To avoid treating stage boundaries as method advantages, add a fused guarded DAG that, in one pass over the same group statistics, checks branch independence and prepares the stable output if it is independent. Do not change the first execution or fixture/split. Report functional equality, phase counts, arithmetic projection counts, and distinguish from timings. Any partially traversed group arithmetic remains separate from counts of complete report projections.
