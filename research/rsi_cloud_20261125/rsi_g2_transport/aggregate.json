@@ -1,0 +1,146 @@
+{
+  "pandas": "2.2.3",
+  "profiles": {
+    "[0, 1, 2, 3]": {
+      "family": "separable",
+      "source_discovered": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "[0, 1, 2]": {
+      "family": "interaction",
+      "source_discovered": [
+        0,
+        1,
+        2
+      ]
+    },
+    "[0, 1, 3]": {
+      "family": "interaction",
+      "source_discovered": [
+        0,
+        1,
+        3
+      ]
+    },
+    "[0, 1]": {
+      "family": "separable",
+      "source_discovered": [
+        0,
+        1
+      ]
+    },
+    "[0, 2, 3]": {
+      "family": "interaction",
+      "source_discovered": [
+        0,
+        2,
+        3
+      ]
+    },
+    "[0, 2]": {
+      "family": "separable",
+      "source_discovered": [
+        0,
+        2
+      ]
+    },
+    "[0, 3]": {
+      "family": "interaction",
+      "source_discovered": [
+        0,
+        3
+      ]
+    },
+    "[0]": {
+      "family": "separable",
+      "source_discovered": [
+        0
+      ]
+    }
+  },
+  "results": {
+    "interaction": {
+      "axiswise": {
+        "correct": 0,
+        "excess_matches": 120,
+        "missing_matches": 168,
+        "reports": 48
+      },
+      "canonical_ir": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      },
+      "default_sql_adapter": {
+        "correct": 0,
+        "excess_matches": 168,
+        "missing_matches": 336,
+        "reports": 48
+      },
+      "native": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      },
+      "raw_pandas": {
+        "correct": 0,
+        "excess_matches": 240,
+        "missing_matches": 120,
+        "reports": 48
+      },
+      "transport": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      }
+    },
+    "separable": {
+      "axiswise": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      },
+      "canonical_ir": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      },
+      "default_sql_adapter": {
+        "correct": 12,
+        "excess_matches": 120,
+        "missing_matches": 240,
+        "reports": 48
+      },
+      "native": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      },
+      "raw_pandas": {
+        "correct": 12,
+        "excess_matches": 336,
+        "missing_matches": 168,
+        "reports": 48
+      },
+      "transport": {
+        "correct": 48,
+        "excess_matches": 0,
+        "missing_matches": 0,
+        "reports": 48
+      }
+    }
+  },
+  "source_injected_rows": 32,
+  "source_reads": 16,
+  "sqlite": "3.53.1"
+}
