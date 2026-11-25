@@ -1,0 +1,90 @@
+{
+  "redundant": {
+    "n": 16,
+    "marginal": [
+      0.5,
+      0.5
+    ],
+    "action_cost": {
+      "accept": 0.5,
+      "rollback": 0.5,
+      "verify": 0.525
+    },
+    "selectors": {
+      "always_accept": {
+        "action": "accept",
+        "cost": 0.5,
+        "regret": 0.0
+      },
+      "always_rollback": {
+        "action": "rollback",
+        "cost": 0.5,
+        "regret": 0.0
+      },
+      "always_verify": {
+        "action": "verify",
+        "cost": 0.525,
+        "regret": 0.025
+      },
+      "overlap_independence": {
+        "action": "verify",
+        "cost": 0.525,
+        "regret": 0.025
+      },
+      "overlap_minimax": {
+        "action": "accept",
+        "cost": 0.5,
+        "regret": 0.0
+      },
+      "paired_joint": {
+        "action": "accept",
+        "cost": 0.5,
+        "regret": 0.0
+      }
+    }
+  },
+  "complementary": {
+    "n": 16,
+    "marginal": [
+      0.5,
+      0.5
+    ],
+    "action_cost": {
+      "accept": 0.5,
+      "rollback": 0.5,
+      "verify": 0.35
+    },
+    "selectors": {
+      "always_accept": {
+        "action": "accept",
+        "cost": 0.5,
+        "regret": 0.15
+      },
+      "always_rollback": {
+        "action": "rollback",
+        "cost": 0.5,
+        "regret": 0.15
+      },
+      "always_verify": {
+        "action": "verify",
+        "cost": 0.35,
+        "regret": 0.0
+      },
+      "overlap_independence": {
+        "action": "verify",
+        "cost": 0.35,
+        "regret": 0.0
+      },
+      "overlap_minimax": {
+        "action": "accept",
+        "cost": 0.5,
+        "regret": 0.15
+      },
+      "paired_joint": {
+        "action": "verify",
+        "cost": 0.35,
+        "regret": 0.0
+      }
+    }
+  }
+}
