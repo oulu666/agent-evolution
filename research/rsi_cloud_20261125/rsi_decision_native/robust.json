@@ -1,0 +1,164 @@
+{
+  "results": {
+    "composed_holdout": {
+      "by_method": {
+        "native": {
+          "committed": 8,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 5,
+          "correct": 25,
+          "engine_reject": 6,
+          "rollback_chosen": 3,
+          "unneeded_rollback": 0,
+          "verifies": 20,
+          "verify_chosen": 17,
+          "wrong_durable": 0
+        },
+        "proof_gate": {
+          "committed": 8,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 5,
+          "correct": 25,
+          "engine_reject": 6,
+          "rollback_chosen": 3,
+          "unneeded_rollback": 0,
+          "verifies": 20,
+          "verify_chosen": 17,
+          "wrong_durable": 0
+        },
+        "staging_only": {
+          "committed": 18,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 24,
+          "correct": 15,
+          "engine_reject": 6,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 0,
+          "verify_chosen": 0,
+          "wrong_durable": 10
+        },
+        "verify_all": {
+          "committed": 8,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 0,
+          "correct": 25,
+          "engine_reject": 0,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 36,
+          "verify_chosen": 24,
+          "wrong_durable": 0
+        }
+      },
+      "fixtures": 25
+    },
+    "quota": {
+      "by_method": {
+        "native": {
+          "committed": 4,
+          "common_snapshot_reads": 4,
+          "continue_chosen": 0,
+          "correct": 7,
+          "engine_reject": 0,
+          "rollback_chosen": 2,
+          "unneeded_rollback": 0,
+          "verifies": 8,
+          "verify_chosen": 5,
+          "wrong_durable": 0
+        },
+        "proof_gate": {
+          "committed": 4,
+          "common_snapshot_reads": 4,
+          "continue_chosen": 0,
+          "correct": 7,
+          "engine_reject": 0,
+          "rollback_chosen": 2,
+          "unneeded_rollback": 0,
+          "verifies": 8,
+          "verify_chosen": 5,
+          "wrong_durable": 0
+        },
+        "staging_only": {
+          "committed": 6,
+          "common_snapshot_reads": 4,
+          "continue_chosen": 6,
+          "correct": 5,
+          "engine_reject": 0,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 0,
+          "verify_chosen": 0,
+          "wrong_durable": 2
+        },
+        "verify_all": {
+          "committed": 4,
+          "common_snapshot_reads": 4,
+          "continue_chosen": 0,
+          "correct": 7,
+          "engine_reject": 0,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 12,
+          "verify_chosen": 6,
+          "wrong_durable": 0
+        }
+      },
+      "fixtures": 7
+    },
+    "reference": {
+      "by_method": {
+        "native": {
+          "committed": 12,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 12,
+          "correct": 25,
+          "engine_reject": 6,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 12,
+          "verify_chosen": 12,
+          "wrong_durable": 0
+        },
+        "proof_gate": {
+          "committed": 12,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 12,
+          "correct": 25,
+          "engine_reject": 6,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 12,
+          "verify_chosen": 12,
+          "wrong_durable": 0
+        },
+        "staging_only": {
+          "committed": 18,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 24,
+          "correct": 19,
+          "engine_reject": 6,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 0,
+          "verify_chosen": 0,
+          "wrong_durable": 6
+        },
+        "verify_all": {
+          "committed": 12,
+          "common_snapshot_reads": 13,
+          "continue_chosen": 0,
+          "correct": 25,
+          "engine_reject": 0,
+          "rollback_chosen": 1,
+          "unneeded_rollback": 0,
+          "verifies": 24,
+          "verify_chosen": 24,
+          "wrong_durable": 0
+        }
+      },
+      "fixtures": 25
+    }
+  },
+  "sqlite": "3.53.1"
+}
