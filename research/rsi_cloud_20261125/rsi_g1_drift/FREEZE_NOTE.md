@@ -1,0 +1,1 @@
+The initial execution stopped during fixture generation because lxml comments use a callable tag, not a string. The namespace-change fixture now checks the tag type first, with no changes to methods, budgets, scenarios, or scoring. No aggregate output was generated before the correction. Preserve initial source and re-lock the corrected runnable fixture.
