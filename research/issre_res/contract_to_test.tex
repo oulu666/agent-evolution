@@ -1,0 +1,199 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{url}
+\urlstyle{same}
+\title{From Documented Contracts to Executable Tests:\\Where Behavioral Evidence Is Lost in Tool Interfaces}
+\author{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A tool can return the expected value while forwarding the wrong argument to a callback. A test can also appear to pass when its generator produced no assertion. We study where documented behavior is lost between a public contract and a historical failure verdict. We link document evidence, generated assertions, path applicability, executed observations and paired repair witnesses. In a repair-informed cohort of 12 defect groups, exception checks exposed five groups on known triggering inputs; semantic checks exposed all twelve. Four subsequent repair-blind cohorts retained 30 historical commit pairs. On the six pairs in the order study, an extractor issued no verdict, while a human-specified sequence check ran on all twelve version sides and passed throughout. In a separate presentation audit, 27 ordering relations agreed with a reference trace, but only 24 retained a derivation after excluding events absent from that successful path. The ledger distinguishes loss during extraction, unsupported agreement and a valid check on an unaffected path. For the recorded cases, these distinctions identify different parts of the test system to inspect. In a six-case scoring pilot, endpoint evidence and the full ledger each yielded six reference-matched choices; final-output evidence yielded five.
+\end{abstract}
+
+\section{Introduction}
+Consider a constructor whose documentation says that it forwards its arguments to a pre-initialization callback. A caller overrides a default of 100 with 200. Reading the completed object returns 200 on both sides of an actual repair to the Python library \emph{attrs}. Recording the callback reveals that the parent revision passed 100 and the repaired revision passed 200. Leaving the argument at its default makes both implementations appear correct even at the callback. The maintainers' issue identifies the contract, and a paired execution supplies the two observations~\cite{attrsissue}. A failure count alone does not tell a test designer whether to change the input, inspect the callback or revise the expected value.
+
+A different ambiguity arises before the tool runs. Two state-machine libraries document the order in which callbacks execute. In our test, a document parser generated no executable ordering relation for either library. A human could recover both orders and observe them on all historical versions tested. A report limited to the number of detected repairs assigns zero to both methods. One method offered no check; the other checked a relevant behavioral requirement on a path that conformed. These results call for different interpretations of zero.
+
+We ask \emph{where a documented behavioral requirement loses the evidence needed to support an executable verdict}. We examine public Python interfaces that can be exercised locally on two precise revisions. Clients may inspect results, parse artifacts, register documented callbacks or control an operation sequence. The available interface and the checking budget limit what a test can establish. The oracle problem and fault propagation have long been studied~\cite{barr,ripr}. Our contribution is an empirical accounting of the steps that separate document evidence from a repair verdict in this setting.
+
+First, we define a ledger with distinct units for source clauses, order relations, executed checks and historical pairs. Second, we apply it to repair-informed witnesses and four locally sealed cohorts. Third, we compare the conclusions one can draw from the same records using detection counts, trace agreement and path-supported evidence. This last comparison requires no claim that our generators are better than existing tools. Its value depends on showing an actual change in diagnosis when an additional record is inspected.
+
+\section{Questions and measurements}
+\textbf{RQ1. Extraction.} When a requirement can be located in the prior public documentation, does the generator bind it to an executable assertion? The numerator counts supported generated clauses or relations. Estimating recall requires a reference catalogue of the same unit and scope. A method description may contain several clauses; a single ordering paragraph may entail many relations.
+
+\textbf{RQ2. Applicability.} When an inferred assertion agrees with an observed trace, does its derivation remain valid along that trace? We retain source spans and intermediate events. In the order study we audit one successful, synchronous, external transition per project. Each instrumented callback occurs once in that reference trace. For repeated event names, an order assertion would also require occurrence identities.
+
+\textbf{RQ3. Revelation.} Given an applicable check, which changes in permitted inputs, budget, observation or test selection reveal a known violation? We also ask what the document-derived checks detect when the repairs stay hidden during test design. Witness construction after disclosure answers the former question. Only checks fixed before disclosure qualify for the latter.
+
+\subsection{Verdicts and evidence}
+Let $c$ be a documented obligation, $q$ an input or sequence, $\tau_v(q)$ the trace on revision $v$, and $o$ the observer. An executable oracle specifies a predicate and the condition under which the predicate applies. We record a pass or a failure only after the observer executes and supplies the required evidence. An empty generated set gives an automatic \emph{no verdict}. A positive historical detection requires the same frozen check to fail on the parent and pass on therepaired revision, with a behavioral link to the upstream repair. A raw version difference is recorded separately until its direction can be judged. A witness authored after reading the repair retains its construction date and a separate result field.
+
+For order assertions we distinguish two measurements. Let $T$ be the set of ordered pairs of instrumented events on the reference path. Let $G$ contain the generated direct edges and their within-section transitive consequences. Endpoint agreement counts $|G\cap T|$. To audit the derivations, remove direct edges that require an absent event, recompute transitive closure \emph{within each source section}, and then count agreements. This order of operations matters. Computing closure first and filtering only the two endpoints preserves conclusions derived through an absent intermediate event. We use the trace to audit the proof afterward. This particular check establishes support within the recorded event graph; more general semantic guards may require additional evidence.
+
+\subsection{What the execution record adds}
+Four variables affect the move from an applicable requirement to a visible failure. \emph{Access} specifies which inputs and public actions a client may construct. \emph{Budget} limits operations or elapsed time. \emph{Observation} specifies which value or event the client can read and when it is sampled. \emph{Selection} identifies the test chosen from the permitted menu. We vary one dimension at a time where the paired data permit it. Several dimensions can constrain the same case. Reading a title's background, for instance, only distinguishes two versions if the test first constructs a panel with a background.
+
+A coverage claim always names its reference set. If $W$ is the subset of a fixed test menu that exposes a particular repair, selection can be assessed against $W$ when $W$ is nonempty. If all tests in the full menu produce identical observed evidence, a different ranking of that menu cannot reveal the repair under that observation. An empty $W$ says nothing about tests outside the menu.
+
+\section{Study design}
+\subsection{Controlled and repair-informed evidence}
+The controlled studies calibrate access, budget and selection under conditions where witnesses are known. The inventory service permits either querying existing records or constructing additional records. The SQLite experiment uses a real in-memory database, a reference transaction adapter and five injected adapter faults. Thirty-six initial layouts yield 180 layout--fault combinations per permission. We record a shortest exposing sequence in each finite model, replay it on other layouts, and count the failures found by the actual policy. A fault in the adapter is the experimental intervention. Layouts are repeated settings of that intervention.
+
+We next used three documented changes in released XlsxWriter and Babel versions to exercise the protocol on public software. The pilot contains 66 matched inputs across three release pairs. The subsequent repair-informed cohort sampled 40 candidate records from humanize, PrettyTable, more-itertools and Rich. The protocol stopped at 12 defect groups. Thirteen records were replayed, thirteen were outside the study scope and fourteen remained unattempted. Two related humanize records were grouped. Each replay used an ordinary input and a repair-relevant input on both revisions, yielding 52 version--input executions. The investigator consulted upstream material when constructing these witnesses. This cohort measures the visibility of a known failure under several checks. Its detection fraction is conditional on successful reproduction.
+
+\subsection{Repair-blind cohorts}
+Table~\ref{cohorts} describes four successive cohorts. The study questions changed as earlier results became available. For each cohort the selection program saved the candidate identities locally and initially disclosed counts. Test inputs, expected outcomes and plans were locked before the historical revisions were revealed to the designer. The order experiment has two locks: the parser was locked before reading the two projects' documents, and the manual reference and execution procedure were fixed before inspecting predictions. Local hashes enable integrity checks. A single operator controlled the workflow.
+
+\begin{table*}[t]
+\caption{Repair-blind cohorts. A version--input is one distinct input on one revision. Timing replicates and multiple projections of the same input do not increase that count.}\label{cohorts}
+\centering\small
+\begin{tabular}{p{.16\textwidth}p{.27\textwidth}rrp{.29\textwidth}}
+\hline
+Design & Projects with historical pairs & Pairs & Version--inputs & Main comparison\\ \hline
+Document tasks & Click, Python-Markdown, tqdm & 8 & 160 & Input-only, observer-only, sequential, joint, full observer\\
+Factorial inputs & attrs & 6 & 288 & Two single conditions versus a single and a combined condition\\
+Boundary clauses & Blinker, pluggy & 10 & 140 & Final-value checks versus callback checks on matched requests\\
+Callback order & transitions, python-statemachine & 6 & 12 & Frozen extractor and manually specified successful sequence\\ \hline
+\end{tabular}
+\end{table*}
+
+\emph{Document tasks.} We used the 2021 public documentation of three projects to specify ten tasks per project. Expected observables included callback arguments, rendered text, HTML structure and progress state. The joint selector greedily maximized additional documented field--clause combinations per unit cost. The full observer read all four predefined fields on any selected task. Five policies shared a maximum of twelve logical steps per project; a secondary comparison also used time estimated on reference versions. We evaluated the full input menu outside this budget to distinguish a selection failure from an empty witness set. The eight pairs were mechanical matches from a 2022--2024 screening window. Two Python-Markdown pairs concerned declarations or type annotations and have no separately established runtime fault in our test surface.
+
+\emph{Factorial inputs.} For each of six attrs task families we specified two binary conditions. We compared the two single-condition settings against a plan that retained one of them and added the combined setting. Each plan had twelve public target operations and the same observer. All four settings per family were also run on every revision. Six of fourteen eligible attrs commits were retained from the 2022--2025 window. The second project's primary and supplemental screening frames, both for python-dateutil, had zero eligible records. Its reference tasks contributed no historical pair.
+
+\emph{Boundary clauses.} The extractor scanned 37 public method descriptions from Blinker 1.6.2 and pluggy 1.3.0. Five manually authored patterns bound triggers, recipients and observable fields. Two project adapters produced ordinary and combined inputs. Baselines used the same API entry points as boundary checks. A fourth method selected inputs by marginal coverage of documented observer--field pairs under a budget. Each project allowed three scenarios and fifteen protocol-counted public operations per plan, with a common project-specific time limit. The full menu tested eight Blinker and six pluggy inputs. A second, earlier release of each project supplied a compatibility control. The 2023--2025 sample included two pluggy commits referring to the same issue and one concerning a type-ignore comment.
+
+\emph{Ordering.} We chose transitions 0.9.0 and python-statemachine v2.3.0 as new document sources. The project-independent parser recognizes explicit order cues in numbered lists, tables and simple precedence clauses. It records source spans and joins direct edges within a section. The human reference uses documented callbacks on one ordinary successful transition from state $a$ to state $b$. The transitions cohort retained three of fourteen mechanically eligible commits; the python-statemachine cohort retained all three. Both frames covered August 2024 through December 2025. We executed the same operation and recorded final state, event membership and event order on both sides of each pair.
+
+\subsection{Units and analysis}
+The long-form ledger records cohort, project, pair or reference identifier, phase, measure, numerator, denominator where defined, unit and source record. A blank numeric measurement is explicitly labeled unmeasured. We report counts by project and design. Repeated measurements for timing, different observer projections, and the transitive pairs implied by one sequence do not constitute independent defects. The four blind cohorts yield 30 retained commit pairs; this is a count of study units across different protocols. We do not estimate a pooled bug-detection probability. For rare outcomes we give matched case counts and a project-deletion sensitivity calculation.
+
+\section{Results}
+\subsection{A documented contract can yield no verdict}
+The frozen order parser read one eligible document from transitions and three from python-statemachine. Both projects described the successful callback sequence~\cite{transdoc,statedoc}. A manual reference specified eleven callbacks in the former and thirteen in the latter. The two reference executions followed those orders, giving 10 and 12 adjacent event pairs respectively. None of the four documents yielded a direct or derived edge under the locked parser. The automatic order verdict was undefined for every one of the six retained commit pairs. The manual sequence assertion executed on twelve version sides and passed throughout. These two observations agree on the count of discovered repairs and disagree on whether order was ever tested.
+
+The boundary cohort exhibited another outcome. The extractor matched four clauses in twelve Blinker descriptions and three in twenty-five pluggy descriptions. The investigator located supporting text for all seven matches. A full human inventory of eligible clauses was unavailable, so these counts give no recall estimate. All fourteen reference inputs executed on the held-out releases with zero observed alerts. On the ten historical pairs, the frozen observers executed and produced identical evidence on both versions for every full-menu input. Restricting either cost or the number of selected scenarios could not improve that result.
+
+Boundary checking incurred measurable cost. On pluggy, complete or truncated plan time had a median of 174.25 microseconds for the combined-input final observer and 182.40 for boundary observation. The original plans finished within the common deadline in 21 of 50 and 11 of 50 timing trials, respectively. The budgeted boundary planner completed its own plan in 24 of 50. The last overrun was charged in the wall-clock measurements and excluded from credited findings. These observations concern planning cost and deadline coverage; all four methods had zero detections. The 50 trials comprise five timing repetitions on ten version sides.
+
+\subsection{Trace agreement can overcredit a derivation}
+We changed only the representation presented to the already frozen parser after the blind comparison. The transitions table used a single quote inside each inline code label. Removing these quotes exposed callback names to the existing table grammar. The python-statemachine document introduced the callback sequence with an explicit order statement but used dash bullets. Numbering that list exposed it to the existing numbered-list rule. This presentation audit tests an explanation for the original failure on the same material.
+
+\begin{table}[t]
+\centering\small
+\caption{Order audit on one successful reference trace per project. The last three rows use the post-disclosure presentation adjustment.}\label{audit}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lrr@{}}\hline
+Measure & transitions & python-statemachine\\\hline
+Reference callbacks & 11 & 13\\
+Reference ordered pairs & 55 & 78\\
+Frozen executable relations & 0 & 0\\
+Agreeing endpoint pairs & 27 & 78\\
+With an in-path derivation & 24 & 78\\
+Supported adjacent pairs & 8/10 & 12/12\\\hline
+\end{tabular}
+\end{table}
+
+The adjusted transitions parser recovered 27 relations with the correct endpoint direction. Three lost their derivations after path filtering. An example connects the after-state-change callback to final cleanup through the exception callback. On this successful transition both endpoints occurred in the predicted order, yet the intermediate exception event never occurred. The same issue affected relations from destination entry and from the transition's after callback to final cleanup. Counting all 27 as supported would credit the extractor for three relations whose recorded reasons do not apply. Endpoint agreement covers 27 of 55 reference pairs; within-path derivation coverage is 24 of 55 on precisely the same trace. Conversely, the table also contains a non-callback row for the actual state change. Dropping that row breaks a link across source exit and destination entry, losing supported reach across the two parts of the table.
+
+In python-statemachine, the adjusted parser recovered all twelve adjacent edges and 66 additional relations by transitivity, for 78 out of 78. They are consequences of one ordered list. As a separate sensitivity diagnostic, swapping each pair of adjacent events in the reference trace preserved final state and event membership. Relations supported by the recorded path distinguished eight of ten such swaps in transitions and twelve of twelve in python-statemachine. Offline permutations test an observer's sensitivity; neither historical software nor additional independent faults were involved.
+
+\paragraph{Intervening on the real callback path}
+We retained the three disputed derivations and ran one event on a fresh transitions machine for each of five paths on releases 0.9.0 and 0.9.2. We fixed the chains, callback instrumentation, expected states, and intervention points before running the experiment. On each release, the ordinary successful path exhibited all three endpoint orders and none of their complete chains. A rejected guard and an exception before the state change placed all three comparisons outside endpoint scope. The most informative contrast moves the exception by one callback. An exception in the transition's after callback left the model in state B, called the exception handler and finalizer, and exhibited two endpoint orders. Both derivations went through the machine's after-state-change callback, which the exception bypassed. Raising inside that later callback preserved state B and both handlers, but now all three chains were observed in entry order.
+
+Across the five paths on either release, eight of fifteen relation--path observations had agreeing endpoints. Requiring the exception handler to be present retained five. Requiring every callback in the recorded derivation to have been entered in order retained three. Seven comparisons lacked an endpoint. A callback entry can precede a raise, so chain support here concerns order of entry. The second release reproduced the same pattern. These interventions assess three selected derivations and contribute no new historical-fault detections.
+
+\subsection{Correct outputs can hide an interaction violation}
+On known triggering inputs in the four-project repair-informed cohort, five of twelve groups were exposed by exception checks and twelve by the task-specific semantic check. All seven remaining groups returned normally. Five of these seven came from humanize; excluding that project leaves two of seven groups requiring finer observation. This is evidence for the phenomenon in more than one project, with substantial project concentration.
+
+\begin{table}[t]
+\centering\small
+\caption{Reproduction on known witness inputs. Cells count defect groups. The semantic observer checks completion and task-specific content.}\label{known}
+\begin{tabular}{lrrr}\hline
+Project & Groups & Exception & Semantic\\\hline
+humanize & 5 & 0 & 5\\
+PrettyTable & 4 & 3 & 4\\
+more-itertools & 2 & 2 & 2\\
+Rich & 1 & 0 & 1\\\hline
+Total & 12 & 5 & 12\\\hline
+\end{tabular}
+\end{table}
+Table~\ref{known} shows the underlying project counts. The Rich panel repair illustrates the interaction with input selection. Reading a title's text succeeds for both a plain panel and a blue panel. Checking the title's background on the plain panel also succeeds on both revisions. A blue panel paired with a background check reveals the parent's missing style~\cite{rich}. In PrettyTable, cell values survive unchanged while a border junction has the wrong glyph~\cite{pretty}. Both witnesses direct the tester to the representation consumed by the user. Merely adding a text equality check can leave the same omission in place.
+
+Table~\ref{cases} contrasts cases in which the decisive observation occurs at different points. An ordinary Click exit code masks whether a cleanup callback ran. The attrs pre-initialization case requires the explicitly supplied value and a callback argument recorder. The relevant boundary is the constructor's call to the initialization hook. A recorder attached to a later assignment would answer a different question. For pluggy, two participants can both return 9. The return list remains $[9,9]$ even when a temporary method executes outside the wrapper that should enclose it. A trace of participants and wrapper entry exposes the order change~\cite{click,plugfix}. For Blinker, changing only the sender identity to a distinct but equal integer makes the old return list empty and the repaired list contain the receiver's result~\cite{blinkfix}. Here the final observer suffices after the input changes.
+
+\begin{table*}[t]
+\caption{Witnesses reconstructed with repair information. The old and repaired values are from paired executions. These rows receive no blind discovery credit.}\label{cases}
+\centering\small
+\begin{tabular}{p{.12\textwidth}p{.29\textwidth}p{.24\textwidth}p{.22\textwidth}}\hline
+Project & Trigger & Observation held equal & Observation that changes\\\hline
+Rich & Render a panel with a blue background & Title text & Missing versus inherited title background\\
+Click & Register cleanup during eager option parsing and exit & Exit code 0 & Zero versus one cleanup invocation\\
+attrs & Supply 200 for a field with default 100 & Completed object's field is 200 & Pre-initialization argument is 100 versus 200\\
+pluggy & Add a temporary method in a wrapped call & Both participants return 9 & Temporary method precedes versus follows wrapper entry\\
+Blinker & Send with an equal, distinct integer & Equal integer values on both revisions & Empty versus populated return list\\\hline
+\end{tabular}
+\end{table*}
+
+The document-menu cohort found zero repairs across eight pairs. All 80 paired inputs in its full menu had identical raw output channels and predefined semantic fields. Only after disclosure did six pairs yield targeted behavioral witnesses, five from Click and one from tqdm. A targeted binary-buffer operation also agreed on both Python-Markdown versions. A separate type-annotation change had no established runtime oracle. In attrs, all 144 paired inputs in the factorial menu agreed. The later initialization witness explains one pair. The other five have no such causal diagnosis in this study. In particular, the six locally paired commits are not six established instances of insufficient observation.
+
+\subsection{When access and budget determine the diagnosis}
+In the inventory experiment, three queries exposed a potential witness in 177 of 300 layout--fault combinations under existing-record access. Sixty additional cases required a fourth query. Sixty-three lacked a necessary input under that interface. Permitting construction raised three-query reachability to 240. These counts distinguish asking too few questions from having no permitted query for the required condition.
+
+The SQLite adapter gives a complementary example. With the extended menu, two through five operations made 36, 72, 144 and 180 of 180 layout--fault combinations reachable. A fixed revisit policy found 48 at five operations. Every one of its 132 misses then had a legal witness. Under the basic menu, 72 combinations lacked an operation needed to expose their fault. An analyst inspecting a policy's raw detection count alone cannot recover either quantity. We establish reachability only within the specified adapter, operation alphabet and budget. These are controlled fault families, separate from the historical repairs.
+
+\section{What the ledger changes}
+\paragraph{Two different reasons a documented check can miss a fault}
+A subsequent frozen study of two formatting libraries illustrates a distinction between reaching a faulty computation and having a discriminating oracle for its output. In python-slugify, the frozen suite exercised stopword removal and custom separators separately. A repair-informed call combined the two and showed that the parent retained both occurrences of \emph{the}, whereas the repaired implementation removed them~\cite{slugjoint}. The input combination was missing. For num2words, an upstream witness for 199 produced \emph{one hundred ninety-nine} before the repair and \emph{one hundred and ninety-nine} afterwards~\cite{numand}. Comparing the default English setting to explicit English can pass even when both calls produce the same incorrect phrase. The latter check assesses argument defaulting; deciding the spelling requires a separate expectation. The six selected commit pairs included two style changes. Across them, 63 additional check instances, including 15 grounded in explicit prose, supplied no parent-fail/repair-pass detection. These supplementary observations are reported separately from the original ledger cohorts. Neither witness receives blind discovery credit.
+Reporting only detections erases the distinction between the automatic and manual order methods on six matched historical pairs. Adding the execution field establishes that the automatic order method made no checks while the manual one evaluated twelve sequence checks. Adding the evidence graph changes a second inference: endpoint-based scoring credits 27 relations in transitions, but filtering the derivations yields 24. Adding the disclosure phase changes a third: six targeted witnesses in the document-menu cohort validate the ability to reproduce those changes, while independent discovery in that cohort remains zero. Each comparison uses the same underlying observations in its two views.
+
+The resulting engineering responses are specific. Absent assertions call for examining source coverage and binding. An unsupported implication calls for preserving guards or obtaining a different derivation. Passing assertions on a documented successful transition provide a usable conformance reference; a tester seeking a historical failure must establish a relevant path. When the full menu yields identical evidence, policy optimization has no detection credit available within that menu. When an input is already correct and the terminal value conceals a divergence, instrumenting a public boundary can be sufficient. These inferences establish added diagnostic resolution. A separate scoring pilot examined the choice of the next diagnostic action.
+
+\paragraph{Pilot comparison of diagnostic choices}
+Three returned forms met the frozen scoring criteria, yielding 18 decisions on six cachetools and wcwidth cases. Each slot saw each case once and two cases per evidence condition. For a given case, different slots received the three conditions. Eligibility was self-reported. Earlier same-slot records marked for reference or lacking eligibility were excluded. The counts below describe the three scored exports; independent first-attempt provenance requires organizer confirmation.
+
+The prespecified primary contrast compared endpoint and exception evidence (B) with the addition of contract sources, intermediate paths or actual assertions (C). Both matched the reference action on all six cases. On the secondary contrast, C improved on final-output evidence (A) on one case and tied on five. In the eviction case, the A response judged the evidence insufficient to distinguish a missing trigger from missing observation. Both B and C responses selected a change to the input. No response committed to an incorrect action. Median visible response times for A, B and C were 27.36, 34.61 and 42.87 seconds. The two longest observations, both in one slot under C, were retained. These timings include time spent with the form visible. Repair duration was not measured. B already attained the scoring ceiling on this small set.
+
+\paragraph{Does the registered operation reach the repaired behavior?}
+A separate audit selected four historical revision pairs from two versioning libraries and registered one delivery task: choose the higher of two ordinary version strings. None of the four repairs was established to change this operation. One repair concerned prerelease membership in an npm-style range~\cite{npmrange}. On a repair-informed replay of five upstream inputs, the parent rejected all five. The repaired version accepted \texttt{1.2.3-alpha.0} and \texttt{1.2.3-alpha.1} within the open interval from \texttt{1.2.3-alpha} to \texttt{1.2.3-beta} and rejected the remaining three. Ranking the strings never invokes this membership check. A selection log should record the public operation, the behavior changed by the repair, and the evidence linking them before assigning a recall denominator. These four pairs remain outside the original cohorts.
+
+\section{Related work}
+The oracle problem includes the source of expected behavior and the means of judging observed executions~\cite{barr}. The RIPR model relates reachability, infection, propagation and revealability~\cite{ripr}. Our controlled witnesses instantiate those concerns under an explicit permission and cost model. The document audit adds an upstream question about whether the expected judgment was ever constructed and whether the cited intermediate events occurred.
+
+Jdoctor translates semi-structured Javadoc into executable procedure specifications and evaluates both translation and downstream testing~\cite{jdoctor}. This is direct prior work for moving from documentation to a test oracle. Our empirical question concerns evidence loss in Python callback protocols, including the case of a correct endpoint order supported by an invalid intermediate path. Work on generating tests from formal contracts derives partitions and boundary values from SPARK specifications~\cite{formal}. A natural-language order table introduces a representation and path-binding problem before an equivalent formal input exists.
+
+Gay et al.\ use mutation analysis to rank the variables that should be monitored by an expected-value oracle~\cite{oracledata}. Our matched cases show how a variable becomes observable only at a specific public interaction and for a specific input. AGORA+ learns likely invariants from REST requests and responses and turns them into executable assertions~\cite{agora}. An observed invariant and a normative public clause supply different forms of evidence. We compare the scope and provenance of these judgments. The present experiments do not provide a performance ranking against these systems on a common benchmark.
+
+\section{Validity and reproducibility}
+\emph{Selection and independence.} Keyword and module filters admit changes to declarations, related commits and compatibility fixes. A stopping rule enriched the repair-informed cohort for reproducible examples. Blind menus could reflect older documentation than the interfaces changed by the selected commit. The four blind cohorts contain eight distinct projects with historical pairs (three, one, two and two, respectively). The order study covers two related Python state-machine libraries and one success path in each. Counts of repairs in these samples do not estimate prevalence in the broader ecosystem.
+
+\emph{Construct validity.} Human review confirmed the seven matched boundary clauses but did not exhaustively annotate the 37 method descriptions. The denominator for extraction recall is unknown there. Runtime conformance of a reference release supplies evidence for a concrete operation. Normative expectations require documentation, task requirements or an upstream judgment; a version difference by itself is insufficient. A path-valid derivation in the order audit addresses event presence and precedence. It does not certify every data-dependent precondition, concurrent ordering or repeated occurrence. Fourteen clean boundary inputs on two held-out releases provide compatibility evidence with a narrow scope.
+
+\emph{Investigator and temporal effects.} The same investigator selected mechanisms, bound callbacks and audited source spans. Local hashes detect edits relative to stored copies but do not provide an independent timestamp. The ledger is a retrospective integration of sequential protocols. Only measurements specified before the corresponding reveal receive blind detection credit. The staging limits what can be attributed to test design; independent replication and annotation would be needed to assess investigator dependence.
+
+\emph{Reconstruction.} Each ledger row identifies its project, revision pair or reference, phase, unit and source record. The builder reads locally preserved observations and performs consistency checks. Where two related humanize fixes share an analysis group, per-record executions remain visible and the group-level count uses one representative. Raw output, field projections and timing repetitions are kept separate. The order artefacts preserve the frozen parser, its predictions, the two reference trajectories, and the later graph audit. Rebuilding the ledger requires no model inference, fresh package runs or access to a live API.
+
+\section{Conclusion}
+A detection total measures the end of a chain that can lose a requirement at several points. In these data, known triggering inputs exposed violations only under specific observers, a frozen generator produced no order verdict on six historical pairs, and apparently correct relations lost their supporting paths under audit. Recording the missing assertion, the executed pass and the repair-informed witness as distinct outcomes lets a reader judge where the evidence ends and which part of the test system merits attention.
+
+\begin{thebibliography}{99}
+\bibitem{npmrange} python-semanticversion maintainers, Prerelease handling in \texttt{NpmSpec}, commit da55cf1. \url{https://github.com/rbarrois/python-semanticversion/commit/da55cf1}.
+\bibitem{slugjoint} python-slugify maintainers, Stopword replacement with a custom separator, commit a1543fe. \url{https://github.com/un33k/python-slugify/commit/a1543fe}.
+\bibitem{numand} num2words maintainers, English word merge and regression test for 199, commit b1b5803. \url{https://github.com/savoirfairelinux/num2words/commit/b1b5803}.
+\bibitem{attrsissue} attrs maintainers, ``Defaults are passed to \texttt{\_\_attrs\_pre\_init\_\_} instead of the init values themselves,'' issue 1427 and repair 1428, 2025. \url{https://github.com/python-attrs/attrs/issues/1427}.
+\bibitem{barr} E. T. Barr et al., ``The oracle problem in software testing: A survey,'' \emph{IEEE Trans. Software Engineering}, 2015. doi:10.1109/TSE.2014.2372785.
+\bibitem{ripr} P. Ammann and J. Offutt, \emph{Introduction to Software Testing}, 2nd ed., Cambridge University Press, 2016, ch. 2.
+\bibitem{transdoc} transitions maintainers, ``Callback execution order,'' public documentation, release 0.9.0. \url{https://github.com/pytransitions/transitions/blob/0.9.0/README.md#execution-order}.
+\bibitem{statedoc} Python State Machine maintainers, ``Actions: Ordering,'' v2.3.0 documentation. \url{https://python-statemachine.readthedocs.io/en/v2.3.0/actions.html#ordering}.
+\bibitem{rich} Rich maintainers, Panel title background repair, PR 3718. \url{https://github.com/Textualize/rich/pull/3718}.
+\bibitem{pretty} PrettyTable maintainers, border style repair, PR 356. \url{https://github.com/prettytable/prettytable/pull/356}.
+\bibitem{click} Click maintainers, ``Fix closing of callbacks on CLI exit,'' PR 2680. \url{https://github.com/pallets/click/pull/2680}.
+\bibitem{plugfix} pluggy maintainers, \texttt{call\_extra} ordering repair, commit 443fee6. \url{https://github.com/pytest-dev/pluggy/commit/443fee6}.
+\bibitem{blinkfix} Blinker maintainers, integer and string sender identity repair, commit e27fc05. \url{https://github.com/pallets-eco/blinker/commit/e27fc05}.
+\bibitem{jdoctor} A. Blasi et al., ``Translating code comments to procedure specifications,'' \emph{ISSTA}, 2018. doi:10.1145/3213846.3213872.
+\bibitem{formal} S. J. Gil, M. I. Capel, and G. O. Olea, ``Automatic test cases generation from formal contracts,'' \emph{Information and Software Technology}, vol. 172, 2024. doi:10.1016/j.infsof.2024.107467.
+\bibitem{oracledata} G. Gay, M. Staats, M. Whalen, and M. P. E. Heimdahl, ``Automated oracle data selection support,'' \emph{IEEE Trans. Software Engineering}, vol. 41, no. 11, pp. 1119--1137, 2015.
+\bibitem{agora} J. C. Alonso, M. D. Ernst, S. Segura, and A. Ruiz-Cort\'es, ``Test oracle generation for REST APIs,'' \emph{ACM Trans. Software Engineering and Methodology}, doi:10.1145/3726524.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>工具测试独立评阅</title>
+<style>body{max-width:44rem;margin:4vh auto;padding:0 1.2rem;color:#19282a;background:#faf9f5;font:17px/1.65 "Microsoft YaHei",sans-serif}h1{font-size:1.6rem}section{background:white;padding:1.4rem;border:1px solid #d9dfd8;border-radius:8px}button,select,textarea{font:inherit;padding:.45rem;max-width:100%}button{display:block;margin-top:1rem;background:#185953;color:white;border:0;border-radius:4px;padding:.55rem 1rem}label{display:block;margin-top:1rem}textarea{width:95%}hr{border:0;border-top:1px solid #d9dfd8}</style>
+<h1>工具测试独立评阅</h1><section id="panel"><p>共六道独立案例。每题选一项首要处置，可选“证据不足”。同一项可多次使用。请按眼前材料判断并简述依据，独立完成，无须查阅资料。答完可下载匿名答卷。只保存选择、依据及本页可见期间的作答时间。</p><label><input type="checkbox" id="eligible"> 我有软件开发或测试经验，未参与本研究设计，未看过本轮题目或答案，同意本次匿名研究使用我的回答。</label><button id="begin">开始评阅</button></section>
+<script>
+const form=__DATA__, panel=document.querySelector("#panel");
+let idx=0, choices=[], elapsed=0, began=null, active=false;
+function startClock(){if(active && !document.hidden && began===null)began=performance.now()}
+function stopClock(){if(began!==null){elapsed+=performance.now()-began;began=null}}
+document.addEventListener("visibilitychange",()=>document.hidden?stopClock():startClock());
+function elem(tag,txt){const e=document.createElement(tag);e.textContent=txt;return e}
+function display(){
+ const item=form.items[idx];panel.replaceChildren(elem("h2","案例 "+(idx+1)+" / 6"),elem("p",item.task));
+ for(const line of item.evidence)panel.append(elem("p",line));
+ const select=elem("select","");select.id="action";select.append(new Option("请选择一项",""));
+ for(const [key,label] of Object.entries(form.options))select.append(new Option(label,key));
+ const notes=elem("textarea","");notes.rows=2;notes.maxLength=600;
+ const l1=elem("label","优先处置");l1.append(select);
+ const l2=elem("label","哪项证据支持你的选择，或还缺什么？");l2.append(notes);panel.append(l1,l2);
+ const next=elem("button",idx===5?"完成评阅":"记录并继续");panel.append(next);
+ elapsed=0;active=true;startClock();
+ next.onclick=()=>{if(!select.value||!notes.value.trim()){alert("请选择一项并简述依据。");return}
+ stopClock();active=false;choices.push({case:item.case,action:select.value,reason:notes.value.trim(),active_ms:Math.round(elapsed)});
+ if(++idx<form.items.length)display();else done()};
+}
+function done(){panel.replaceChildren(elem("h2","评阅完成"),elem("p","下载答卷后交给研究联系人。文件不含姓名。"));
+ const link=elem("a","下载本次答卷");link.download=form.packet+"-response.json";
+ link.href=URL.createObjectURL(new Blob([JSON.stringify({study:form.study,packet:form.packet,eligible:true,responses:choices},null,2)],{type:"application/json"}));panel.append(link);}
+document.querySelector("#begin").onclick=()=>{if(document.querySelector("#eligible").checked)display();else alert("请先确认参与条件。")};
+</script></html>

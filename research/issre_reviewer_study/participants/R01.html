@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>工具测试独立评阅</title>
+<style>body{max-width:44rem;margin:4vh auto;padding:0 1.2rem;color:#19282a;background:#faf9f5;font:17px/1.65 "Microsoft YaHei",sans-serif}h1{font-size:1.6rem}section{background:white;padding:1.4rem;border:1px solid #d9dfd8;border-radius:8px}button,select,textarea{font:inherit;padding:.45rem;max-width:100%}button{display:block;margin-top:1rem;background:#185953;color:white;border:0;border-radius:4px;padding:.55rem 1rem}label{display:block;margin-top:1rem}textarea{width:95%}hr{border:0;border-top:1px solid #d9dfd8}</style>
+<h1>工具测试独立评阅</h1><section id="panel"><p>共六道独立案例。每题选一项首要处置，可选“证据不足”。同一项可多次使用。请按眼前材料判断并简述依据，独立完成，无须查阅资料。答完可下载匿名答卷。只保存选择、依据及本页可见期间的作答时间。</p><label><input type="checkbox" id="eligible"> 我有软件开发或测试经验，未参与本研究设计，未看过本轮题目或答案，同意本次匿名研究使用我的回答。</label><button id="begin">开始评阅</button></section>
+<script>
+const form={"study": "ISSRE-review-v1", "packet": "R01", "options": {"keep": "保留当前通过结论", "extract": "修复从契约生成断言的环节", "input": "更改输入以触发目标条件", "observe": "增加能区分两种行为的观察点", "path": "复核具体推导所依赖的路径条件", "product": "记录旧构建的产品违约并保留回归检查", "unknown": "现有证据不足以选择处置"}, "items": [{"case": "K08", "task": "审核容器的容量计量检查。测试计划同时要求验证键可读、并验证按默认计量规则得出的当前容量。判断整组通过后应优先做什么。", "evidence": ["测试通过。写入 x=1，回读值为 1。", "该次运行保留了读操作的最终返回；未记录中间回调，未注册异常处理器。", "来源为 cachetools 5.5.2 的 Cache.currsize 与 getsizeof 段。夹具中一个键按默认规则占 1。任务清单含 membership、capacity；生成器的本次断言清单和执行清单都只有 membership。"]}, {"case": "K42", "task": "审核容量为 2 的先进先出容器。目标是检验空间不足时最早写入的键会被移除；判断这次通过记录是否足以覆盖该目标。", "evidence": ["测试通过。结束时可读取两个键 x、y。"]}, {"case": "K17", "task": "审核一次列宽检查。任务的显示契约规定每个可打印 ASCII 字母占一列。判断这次对 AB 的通过记录应如何处置。", "evidence": ["测试通过。两个版本返回的列宽均为 2。", "此接口仅返回一个整数。本次未配置回调或异常处理器。", "来源为宽度接口 wcswidth 的返回值说明和任务的 ASCII 约定。输入字符是 U+0041、U+0042。检查器比较了实测整数与期望整数 2。"]}, {"case": "K24", "task": "审核记忆化包装器。要求第二次以同一参数调用时复用第一次结果。选择能判断本次是否重复执行计算的最小处置。", "evidence": ["测试通过。两次调用的返回值依次为 5、5。", "两次公开调用都正常返回；未记录函数体入口，未配置异常处理器。"]}, {"case": "K35", "task": "审核一条报告中已获分的顺序推导。报告声称，本次写入的开始早于结束，依据是中间必经一次移除。请判断对这条推导的处理。", "evidence": ["测试通过。结束时记录键 x，当前容量为 1。", "写入边界为 start x → end x，先后吻合。没有注册异常处理器。"]}, {"case": "K61", "task": "一个排版任务要求 U+2640 后跟 U+FE0F 的表情形式占两列；固定 Unicode 15.0 的测量表。判断两个构建的回归结果应如何处置。", "evidence": ["旧构建失败，返回 1；新构建通过，返回 2。同一输入，任务期望 2。"]}]}, panel=document.querySelector("#panel");
+let idx=0, choices=[], elapsed=0, began=null, active=false;
+function startClock(){if(active && !document.hidden && began===null)began=performance.now()}
+function stopClock(){if(began!==null){elapsed+=performance.now()-began;began=null}}
+document.addEventListener("visibilitychange",()=>document.hidden?stopClock():startClock());
+function elem(tag,txt){const e=document.createElement(tag);e.textContent=txt;return e}
+function display(){
+ const item=form.items[idx];panel.replaceChildren(elem("h2","案例 "+(idx+1)+" / 6"),elem("p",item.task));
+ for(const line of item.evidence)panel.append(elem("p",line));
+ const select=elem("select","");select.id="action";select.append(new Option("请选择一项",""));
+ for(const [key,label] of Object.entries(form.options))select.append(new Option(label,key));
+ const notes=elem("textarea","");notes.rows=2;notes.maxLength=600;
+ const l1=elem("label","优先处置");l1.append(select);
+ const l2=elem("label","哪项证据支持你的选择，或还缺什么？");l2.append(notes);panel.append(l1,l2);
+ const next=elem("button",idx===5?"完成评阅":"记录并继续");panel.append(next);
+ elapsed=0;active=true;startClock();
+ next.onclick=()=>{if(!select.value||!notes.value.trim()){alert("请选择一项并简述依据。");return}
+ stopClock();active=false;choices.push({case:item.case,action:select.value,reason:notes.value.trim(),active_ms:Math.round(elapsed)});
+ if(++idx<form.items.length)display();else done()};
+}
+function done(){panel.replaceChildren(elem("h2","评阅完成"),elem("p","下载答卷后交给研究联系人。文件不含姓名。"));
+ const link=elem("a","下载本次答卷");link.download=form.packet+"-response.json";
+ link.href=URL.createObjectURL(new Blob([JSON.stringify({study:form.study,packet:form.packet,eligible:true,responses:choices},null,2)],{type:"application/json"}));panel.append(link);}
+document.querySelector("#begin").onclick=()=>{if(document.querySelector("#eligible").checked)display();else alert("请先确认参与条件。")};
+</script></html>
