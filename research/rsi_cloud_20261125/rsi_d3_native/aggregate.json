@@ -1,0 +1,276 @@
+{
+  "panels": {
+    "disjoint": {
+      "best_fixed_or_bundle": "audit_bundle",
+      "best_fixed_or_short": "audit_short",
+      "field_hits": {
+        "A": 24,
+        "B": 24,
+        "N": 48
+      },
+      "joint": {
+        "01": 12,
+        "10": 12
+      },
+      "mean_cost": {
+        "A": 0.5,
+        "B": 0.5,
+        "N": 0.0,
+        "audit_bundle": 0.35,
+        "audit_short": 0.2625,
+        "native_A_B_routing": 0.0
+      },
+      "outcomes": {
+        "A": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 12,
+          "deploy_report_execs": 24,
+          "milli_cost": 12000,
+          "wrong": 12
+        },
+        "B": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 12,
+          "deploy_report_execs": 24,
+          "milli_cost": 12000,
+          "wrong": 12
+        },
+        "N": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 24,
+          "deploy_report_execs": 24,
+          "milli_cost": 0,
+          "wrong": 0
+        },
+        "audit_bundle": {
+          "abstain": 0,
+          "audit_report_execs": 48,
+          "correct": 24,
+          "deploy_report_execs": 0,
+          "milli_cost": 8400,
+          "wrong": 0
+        },
+        "audit_short": {
+          "abstain": 0,
+          "audit_report_execs": 36,
+          "correct": 24,
+          "deploy_report_execs": 0,
+          "milli_cost": 6300,
+          "wrong": 0
+        },
+        "native_A_B_routing": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 24,
+          "deploy_report_execs": 24,
+          "milli_cost": 0,
+          "wrong": 0
+        }
+      },
+      "reports": 24,
+      "samples": {
+        "fallback_only": {
+          "declared": [
+            2,
+            2
+          ],
+          "expected": [
+            7,
+            7
+          ],
+          "observed": {
+            "A": [
+              6,
+              6
+            ],
+            "B": [
+              7,
+              7
+            ],
+            "N": [
+              7,
+              7
+            ]
+          },
+          "text": [
+            "job0:\u00b7",
+            "log0:\u03a9"
+          ]
+        },
+        "new_only": {
+          "declared": [
+            1,
+            1
+          ],
+          "expected": [
+            6,
+            6
+          ],
+          "observed": {
+            "A": [
+              6,
+              6
+            ],
+            "B": [
+              7,
+              7
+            ],
+            "N": [
+              6,
+              6
+            ]
+          },
+          "text": [
+            "job0:\u00b7",
+            "log0:\u03a9"
+          ]
+        }
+      },
+      "success_marginals": {
+        "A": 0.5,
+        "B": 0.5
+      }
+    },
+    "overlap": {
+      "best_fixed_or_bundle": "A",
+      "best_fixed_or_short": "audit_short",
+      "field_hits": {
+        "A": 36,
+        "B": 36,
+        "N": 48
+      },
+      "joint": {
+        "00": 12,
+        "11": 12
+      },
+      "mean_cost": {
+        "A": 0.5,
+        "B": 0.5,
+        "N": 0.0,
+        "audit_bundle": 0.525,
+        "audit_short": 0.4375,
+        "native_A_B_routing": 0.175
+      },
+      "outcomes": {
+        "A": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 12,
+          "deploy_report_execs": 24,
+          "milli_cost": 12000,
+          "wrong": 12
+        },
+        "B": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 12,
+          "deploy_report_execs": 24,
+          "milli_cost": 12000,
+          "wrong": 12
+        },
+        "N": {
+          "abstain": 0,
+          "audit_report_execs": 0,
+          "correct": 24,
+          "deploy_report_execs": 24,
+          "milli_cost": 0,
+          "wrong": 0
+        },
+        "audit_bundle": {
+          "abstain": 12,
+          "audit_report_execs": 48,
+          "correct": 12,
+          "deploy_report_execs": 0,
+          "milli_cost": 12600,
+          "wrong": 0
+        },
+        "audit_short": {
+          "abstain": 12,
+          "audit_report_execs": 36,
+          "correct": 12,
+          "deploy_report_execs": 0,
+          "milli_cost": 10500,
+          "wrong": 0
+        },
+        "native_A_B_routing": {
+          "abstain": 12,
+          "audit_report_execs": 0,
+          "correct": 12,
+          "deploy_report_execs": 12,
+          "milli_cost": 4200,
+          "wrong": 0
+        }
+      },
+      "reports": 24,
+      "samples": {
+        "both": {
+          "declared": [
+            2,
+            1
+          ],
+          "expected": [
+            6,
+            6
+          ],
+          "observed": {
+            "A": [
+              6,
+              6
+            ],
+            "B": [
+              6,
+              6
+            ],
+            "N": [
+              6,
+              6
+            ]
+          },
+          "text": [
+            "job0:x",
+            "log0:y"
+          ]
+        },
+        "neither": {
+          "declared": [
+            1,
+            2
+          ],
+          "expected": [
+            6,
+            7
+          ],
+          "observed": {
+            "A": [
+              6,
+              6
+            ],
+            "B": [
+              7,
+              7
+            ],
+            "N": [
+              6,
+              7
+            ]
+          },
+          "text": [
+            "job0:\u00b7",
+            "log0:\u03a9"
+          ]
+        }
+      },
+      "success_marginals": {
+        "A": 0.5,
+        "B": 0.5
+      }
+    }
+  },
+  "versions": [
+    "0.2.14",
+    "0.3.0"
+  ]
+}
