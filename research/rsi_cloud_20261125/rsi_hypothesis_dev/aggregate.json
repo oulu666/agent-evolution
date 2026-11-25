@@ -1,0 +1,121 @@
+{
+  "I1": {
+    "1": {
+      "endpoint_hits": 0,
+      "separate_callback_control": 0
+    },
+    "4": {
+      "endpoint_hits": 0,
+      "separate_callback_control": 2
+    },
+    "12": {
+      "endpoint_hits": 0,
+      "separate_callback_control": 9
+    }
+  },
+  "I2": {
+    "boundary": {
+      "calls": 4,
+      "endpoint_hits": 0,
+      "nondefault_requested": 4
+    },
+    "diverse": {
+      "calls": 4,
+      "endpoint_hits": 0,
+      "nondefault_requested": 4
+    },
+    "plain": {
+      "calls": 4,
+      "endpoint_hits": 0,
+      "nondefault_requested": 2
+    }
+  },
+  "O1": {
+    "post_plus_endpoint": {
+      "false_alarms": 0,
+      "hits": 0
+    },
+    "pre_plus_endpoint": {
+      "false_alarms": 0,
+      "hits": 9
+    }
+  },
+  "O2": {
+    "ablate_pre_value": 0,
+    "full": 9
+  },
+  "R1": {
+    "exact": {
+      "correct_accept": 3,
+      "correct_reject": 9,
+      "invalid_release": 0,
+      "unnecessary_reject": 0
+    },
+    "same_sign": {
+      "correct_accept": 3,
+      "correct_reject": 0,
+      "invalid_release": 9,
+      "unnecessary_reject": 0
+    },
+    "terminal": {
+      "correct_accept": 3,
+      "correct_reject": 0,
+      "invalid_release": 9,
+      "unnecessary_reject": 0
+    }
+  },
+  "R2": {
+    "exact": {
+      "endpoint": {
+        "correct_accept": 3,
+        "correct_reject": 0,
+        "invalid_release": 9,
+        "unnecessary_reject": 0
+      },
+      "exact": {
+        "correct_accept": 3,
+        "correct_reject": 9,
+        "invalid_release": 0,
+        "unnecessary_reject": 0
+      },
+      "threshold": {
+        "correct_accept": 3,
+        "correct_reject": 4,
+        "invalid_release": 5,
+        "unnecessary_reject": 0
+      }
+    },
+    "threshold": {
+      "endpoint": {
+        "correct_accept": 8,
+        "correct_reject": 0,
+        "invalid_release": 4,
+        "unnecessary_reject": 0
+      },
+      "exact": {
+        "correct_accept": 3,
+        "correct_reject": 4,
+        "invalid_release": 0,
+        "unnecessary_reject": 5
+      },
+      "threshold": {
+        "correct_accept": 8,
+        "correct_reject": 4,
+        "invalid_release": 0,
+        "unnecessary_reject": 0
+      }
+    }
+  },
+  "controls": {
+    "default_old_bad": 0,
+    "fixed_exact_bad": 0,
+    "fixed_threshold_bad": 0,
+    "rule_disagreements": 5
+  },
+  "paired_executions": 12,
+  "raw_states_published": false,
+  "versions": [
+    "25.3.0",
+    "25.4.0"
+  ]
+}
