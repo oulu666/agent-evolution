@@ -1,0 +1,153 @@
+{
+ "native_checks": 1280,
+ "native_agreements": 1280,
+ "robustness_discordances": {
+  "gain_empty": 45,
+  "gain_nonempty": 5,
+  "loss_null": 3,
+  "gain_null": 1
+ },
+ "gain_explained_by_empty_vs_null": 41,
+ "examples": {
+  "gain_empty": {
+   "table": "2-12014430-1",
+   "question": "At what location was the time 1:54:21?",
+   "original_gold": [
+    "west des moines"
+   ],
+   "audit_gold": [],
+   "audit_intervention": [],
+   "audit_outcome": [
+    null
+   ]
+  },
+  "gain_nonempty": {
+   "table": "2-16663506-1",
+   "question": "What is the name for the 2012 CN Sabadell?",
+   "original_gold": [
+    "laura ester category:articles with hcards",
+    "anna espar category:articles with hcards",
+    "matilde ortiz category:articles with hcards",
+    "jennifer pareja category:articles with hcards",
+    "pilar peña carrasco category:articles with hcards",
+    "maica garcía godoy category:articles with hcards"
+   ],
+   "audit_gold": [
+    "ona meseguer category:articles with hcards",
+    "ana copado category:articles with hcards",
+    "matilde ortiz category:articles with hcards",
+    "marta bach category:articles with hcards"
+   ],
+   "audit_intervention": [
+    "ona meseguer category:articles with hcards",
+    "ana copado category:articles with hcards",
+    "matilde ortiz category:articles with hcards",
+    "marta bach category:articles with hcards"
+   ],
+   "audit_outcome": [
+    "ona meseguer category:articles with hcards"
+   ]
+  },
+  "loss_null": {
+   "table": "2-15016356-3",
+   "question": "What number did Moño Negro peak at before 1996?",
+   "original_gold": [
+    null
+   ],
+   "audit_gold": [
+    null
+   ],
+   "audit_intervention": [],
+   "audit_outcome": [
+    null
+   ]
+  },
+  "gain_null": {
+   "table": "2-1618788-2",
+   "question": "What are the lowest points for an engine with a Dallara F303 chassis?",
+   "original_gold": [
+    110.0
+   ],
+   "audit_gold": [
+    null
+   ],
+   "audit_intervention": [
+    null
+   ],
+   "audit_outcome": [
+    null
+   ]
+  }
+ },
+ "pairs": {
+  "rules": {
+   "answer": {
+    "wins": 20,
+    "losses": 10,
+    "ties": 226
+   },
+   "both": {
+    "wins": 22,
+    "losses": 12,
+    "ties": 222
+   },
+   "exact": {
+    "wins": 19,
+    "losses": 11,
+    "ties": 226
+   }
+  },
+  "expert": {
+   "answer": {
+    "wins": 11,
+    "losses": 7,
+    "ties": 238
+   },
+   "both": {
+    "wins": 11,
+    "losses": 11,
+    "ties": 234
+   },
+   "exact": {
+    "wins": 7,
+    "losses": 12,
+    "ties": 237
+   }
+  },
+  "memory": {
+   "answer": {
+    "wins": 30,
+    "losses": 16,
+    "ties": 210
+   },
+   "both": {
+    "wins": 30,
+    "losses": 14,
+    "ties": 212
+   },
+   "exact": {
+    "wins": 27,
+    "losses": 7,
+    "ties": 222
+   }
+  },
+  "outcome": {
+   "answer": {
+    "wins": 9,
+    "losses": 8,
+    "ties": 239
+   },
+   "both": {
+    "wins": 51,
+    "losses": 3,
+    "ties": 202
+   },
+   "exact": {
+    "wins": 91,
+    "losses": 0,
+    "ties": 165
+   }
+  }
+ },
+ "any_policy_correct": 173
+}
