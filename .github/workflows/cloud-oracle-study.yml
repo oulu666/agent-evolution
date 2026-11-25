@@ -1,0 +1,31 @@
+name: Cloud oracle study
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paired-execution:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            research/cloud_oracle_20261125
+            research/issre_independent_cases.py
+            research/issre_independent_collect.py
+            research/issre_independent_replay.py
+            runs_independent_20261124/replay.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.2.6 Babel==2.17.0 wcwidth==0.2.13 markdown-it-py==3.0.0 Pygments==2.19.2
+      - run: python research/cloud_oracle_20261125/run.py cloud-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: oracle-results
+          path: cloud-results/
+          if-no-files-found: error
