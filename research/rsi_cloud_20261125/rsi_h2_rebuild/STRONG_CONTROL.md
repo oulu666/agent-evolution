@@ -1,0 +1,2 @@
+# Additional strong control (frozen during first run, before reading outputs)
+Same observed journal. J-SQL reads only distinct affected regions from SQLite, using a fixed SQL UNION of old or new published side whenever any relevant before/after cell changed. Unlike C, J-SQL does not attempt to cancel intermediate edits. Query elapsed and all writes are charged. Same correctness bar; to promote over this comparator require >=15% median elapsed reduction on at least 3/4 profiles. Confirm with disjoint seed block obtained by adding 1000 to all primary seeds, no other changes.

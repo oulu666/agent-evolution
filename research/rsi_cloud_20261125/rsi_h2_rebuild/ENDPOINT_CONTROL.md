@@ -1,0 +1,2 @@
+# Endpoint comparator extension
+Before running, freeze a further disjoint +2000 seed block; apply SQL first/last rowid per row, derive same canonical endpoints and dirty regions in SQLite, with the same run/oracle. Compare candidate versus endpoint SQL using the existing >=15% median improvement on >=3/4 rule; expect identical report counts by construction. Timings only distinguish realizations of this known grouped-endpoint idea, not independent algorithmic novelty.
