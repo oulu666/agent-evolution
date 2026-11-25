@@ -1,0 +1,64 @@
+{
+  "packaging-26.3": {
+    "evidence_class": "historical_fix_companion",
+    "issue_count": 1,
+    "result": {
+      "default": {
+        "pass": 3,
+        "wrong": 3
+      },
+      "native": {
+        "pass": 6
+      }
+    },
+    "version": "26.3"
+  },
+  "packaging-26.4": {
+    "evidence_class": "historical_fix_companion",
+    "issue_count": 1,
+    "result": {
+      "default": {
+        "pass": 6
+      },
+      "native": {
+        "pass": 6
+      }
+    },
+    "version": "26.4"
+  },
+  "pandas-3.1.0": {
+    "adapter": "standalone PathLike with read and write convenience methods",
+    "arrow": "22.0.0",
+    "evidence_class": "historical_regressions",
+    "issue_count": 3,
+    "numpy": "2.3.5",
+    "result": {
+      "default": {
+        "TypeError": 4,
+        "ValueError": 6,
+        "pass": 4,
+        "wrong": 4
+      },
+      "native": {
+        "pass": 18
+      }
+    },
+    "version": "3.1.0"
+  },
+  "pandas-3.1.1": {
+    "adapter": "standalone PathLike with read and write convenience methods",
+    "arrow": "22.0.0",
+    "evidence_class": "historical_regressions",
+    "issue_count": 3,
+    "numpy": "2.3.5",
+    "result": {
+      "default": {
+        "pass": 18
+      },
+      "native": {
+        "pass": 18
+      }
+    },
+    "version": "3.1.1"
+  }
+}

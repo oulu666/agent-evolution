@@ -1,0 +1,2 @@
+# Case lock before execution
+Select first three pandas 3.1.1 functional regression entries: #71743 timestamp source preservation, #71567 mapped values assignment, #71769 CSV path roundtrip. Skip packaging 26.4 #1485 new input contract, #1430/#1384 validation; test #1511 set union semantics as functional-defect companion, not strict regression because public VersionRange debuted in 26.3. Six benign fixtures per case; same inputs and public API permissions for old/new/default/native. Oracles: Python datetime arithmetic, exact known CSV bytes/rows, declared version membership.
