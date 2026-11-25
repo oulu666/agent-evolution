@@ -1,0 +1,284 @@
+{
+ "read": {
+  "greedy": {
+   "detected": 60,
+   "attainable": 211,
+   "adopted": 164,
+   "bad": 129,
+   "calls": 833,
+   "hits_by_fault": {
+    "backward": 15,
+    "owner_overflow": 29,
+    "quarter": 4,
+    "overlap_cache": 12
+   },
+   "missed_accessible": 151,
+   "unreachable": 29,
+   "planning_cpu_seconds": 0.0,
+   "plan_wall_ms_per_layout": 0.01049999976506418,
+   "additional_selection_ms_per_episode": 0.0035944447063229745,
+   "common_cpu_seconds": 1.28125,
+   "total_signature_evals": 397920,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7878086419753086
+  },
+  "static": {
+   "detected": 60,
+   "attainable": 211,
+   "adopted": 177,
+   "bad": 139,
+   "calls": 833,
+   "hits_by_fault": {
+    "backward": 16,
+    "owner_overflow": 28,
+    "quarter": 5,
+    "overlap_cache": 11
+   },
+   "missed_accessible": 151,
+   "unreachable": 29,
+   "planning_cpu_seconds": 0.0,
+   "plan_wall_ms_per_layout": 0.0652916664876102,
+   "additional_selection_ms_per_episode": 0.0,
+   "common_cpu_seconds": 1.28125,
+   "total_signature_evals": 397920,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7879050925925927
+  },
+  "adaptive": {
+   "detected": 60,
+   "attainable": 211,
+   "adopted": 177,
+   "bad": 139,
+   "calls": 833,
+   "hits_by_fault": {
+    "backward": 16,
+    "owner_overflow": 28,
+    "quarter": 5,
+    "overlap_cache": 11
+   },
+   "missed_accessible": 151,
+   "unreachable": 29,
+   "planning_cpu_seconds": 0.0,
+   "plan_wall_ms_per_layout": 0.04173125034867553,
+   "additional_selection_ms_per_episode": 0.002770486313844837,
+   "common_cpu_seconds": 1.28125,
+   "total_signature_evals": 397920,
+   "online_cpu_seconds": 0.03125,
+   "risk_at_50pct": 0.7879050925925927
+  },
+  "risk": {
+   "detected": 64,
+   "attainable": 211,
+   "adopted": 200,
+   "bad": 157,
+   "calls": 833,
+   "hits_by_fault": {
+    "backward": 16,
+    "owner_overflow": 30,
+    "quarter": 5,
+    "overlap_cache": 13
+   },
+   "missed_accessible": 147,
+   "unreachable": 29,
+   "planning_cpu_seconds": 0.03125,
+   "plan_wall_ms_per_layout": 0.1064937500814267,
+   "additional_selection_ms_per_episode": 0.00918958325099892,
+   "common_cpu_seconds": 1.28125,
+   "total_signature_evals": 397920,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7873263888888888
+  },
+  "oracle": {
+   "detected": 211,
+   "attainable": 211,
+   "adopted": 0,
+   "bad": 0,
+   "calls": 767,
+   "hits_by_fault": {
+    "overlap_cache": 48,
+    "reopen": 48,
+    "backward": 48,
+    "owner_overflow": 46,
+    "quarter": 21
+   },
+   "missed_accessible": 0,
+   "unreachable": 29,
+   "planning_cpu_seconds": 0,
+   "plan_wall_ms_per_layout": null,
+   "additional_selection_ms_per_episode": 0.0,
+   "common_cpu_seconds": 0,
+   "total_signature_evals": 0,
+   "online_cpu_seconds": 0.0
+  },
+  "contrast": {
+   "hit_rate_ci": [
+    -0.014285714285714285,
+    0.014084507042253521
+   ],
+   "wins": 3,
+   "losses": 3,
+   "risk_50_ci": [
+    -0.003739316239316115,
+    0.0031776094276094735
+   ],
+   "defined_bootstraps": 9121,
+   "distinct_requests": 24
+  },
+  "risk_vs_greedy": {
+   "hit_rate_ci": [
+    -0.004784688995215311,
+    0.046948356807511735
+   ],
+   "risk_50_ci": [
+    -0.004855889724310725,
+    0.00298202614379095
+   ],
+   "defined_bootstraps": 9121
+  },
+  "oracle_audit": {
+   "calls": 16320,
+   "cpu_seconds": 0.03125
+  }
+ },
+ "build": {
+  "greedy": {
+   "detected": 62,
+   "attainable": 240,
+   "adopted": 217,
+   "bad": 171,
+   "calls": 819,
+   "hits_by_fault": {
+    "backward": 17,
+    "owner_overflow": 31,
+    "quarter": 10,
+    "overlap_cache": 4
+   },
+   "missed_accessible": 178,
+   "unreachable": 0,
+   "planning_cpu_seconds": 0.0,
+   "plan_wall_ms_per_layout": 0.013591666932673737,
+   "additional_selection_ms_per_episode": 0.006267707981856397,
+   "common_cpu_seconds": 3.421875,
+   "total_signature_evals": 915168,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7978270609318997
+  },
+  "static": {
+   "detected": 62,
+   "attainable": 240,
+   "adopted": 217,
+   "bad": 171,
+   "calls": 819,
+   "hits_by_fault": {
+    "backward": 17,
+    "owner_overflow": 31,
+    "quarter": 10,
+    "overlap_cache": 4
+   },
+   "missed_accessible": 178,
+   "unreachable": 0,
+   "planning_cpu_seconds": 0.015625,
+   "plan_wall_ms_per_layout": 0.3804062501634083,
+   "additional_selection_ms_per_episode": 0.0,
+   "common_cpu_seconds": 3.421875,
+   "total_signature_evals": 915168,
+   "online_cpu_seconds": 0.015625,
+   "risk_at_50pct": 0.7978270609318997
+  },
+  "adaptive": {
+   "detected": 62,
+   "attainable": 240,
+   "adopted": 217,
+   "bad": 171,
+   "calls": 819,
+   "hits_by_fault": {
+    "backward": 17,
+    "owner_overflow": 31,
+    "quarter": 10,
+    "overlap_cache": 4
+   },
+   "missed_accessible": 178,
+   "unreachable": 0,
+   "planning_cpu_seconds": 0.015625,
+   "plan_wall_ms_per_layout": 0.18946458339996752,
+   "additional_selection_ms_per_episode": 0.005145833332183732,
+   "common_cpu_seconds": 3.421875,
+   "total_signature_evals": 915168,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7978270609318997
+  },
+  "risk": {
+   "detected": 62,
+   "attainable": 240,
+   "adopted": 226,
+   "bad": 178,
+   "calls": 819,
+   "hits_by_fault": {
+    "backward": 17,
+    "owner_overflow": 32,
+    "quarter": 9,
+    "overlap_cache": 4
+   },
+   "missed_accessible": 178,
+   "unreachable": 0,
+   "planning_cpu_seconds": 0.046875,
+   "plan_wall_ms_per_layout": 0.6083791678671938,
+   "additional_selection_ms_per_episode": 0.019381944361561584,
+   "common_cpu_seconds": 3.421875,
+   "total_signature_evals": 915168,
+   "online_cpu_seconds": 0.0,
+   "risk_at_50pct": 0.7992831541218638
+  },
+  "oracle": {
+   "detected": 240,
+   "attainable": 240,
+   "adopted": 0,
+   "bad": 0,
+   "calls": 720,
+   "hits_by_fault": {
+    "overlap_cache": 48,
+    "reopen": 48,
+    "backward": 48,
+    "owner_overflow": 48,
+    "quarter": 48
+   },
+   "missed_accessible": 0,
+   "unreachable": 0,
+   "planning_cpu_seconds": 0,
+   "plan_wall_ms_per_layout": null,
+   "additional_selection_ms_per_episode": 0.0,
+   "common_cpu_seconds": 0,
+   "total_signature_evals": 0,
+   "online_cpu_seconds": 0.0
+  },
+  "contrast": {
+   "hit_rate_ci": [
+    0.0,
+    0.0
+   ],
+   "wins": 0,
+   "losses": 0,
+   "risk_50_ci": [
+    0.0,
+    0.0
+   ],
+   "defined_bootstraps": 10000,
+   "distinct_requests": 0
+  },
+  "risk_vs_greedy": {
+   "hit_rate_ci": [
+    0.0,
+    0.0
+   ],
+   "risk_50_ci": [
+    -0.0003310640711981199,
+    0.004751461988304118
+   ],
+   "defined_bootstraps": 10000
+  },
+  "oracle_audit": {
+   "calls": 53625,
+   "cpu_seconds": 0.15625
+  }
+ }
+}

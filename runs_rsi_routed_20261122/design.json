@@ -1,0 +1,93 @@
+{
+  "checkpoint": "runs_ext_p11_eaar_v1/branches/A_seed20261108_eaar_v1/checkpoint",
+  "precision": "fp16 merged adapter",
+  "first": "cal.list_locations",
+  "transfer": "cal.extract_title_sorted",
+  "old": "cal.count_date",
+  "proposals_per_round": 2,
+  "proposal_token_cap": 96,
+  "call_cap": 96,
+  "answer_cap": 128,
+  "proposal_context_cap": 2048,
+  "accept": "target net gains > 0, zero old Joint losses",
+  "ids": {
+    "train": {
+      "cal.list_locations": [
+        "P14-train-0205",
+        "P14-train-0382",
+        "P14-train-0307",
+        "P14-train-0175",
+        "P14-train-0369",
+        "P14-train-0592"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-train-0621",
+        "P14-train-0623",
+        "P14-train-0610",
+        "P14-train-0612",
+        "P14-train-0616",
+        "P14-train-0602"
+      ],
+      "cal.count_date": [
+        "P14-train-0078",
+        "P14-train-0079",
+        "P14-train-0018",
+        "P14-train-0074",
+        "P14-train-0028",
+        "P14-train-0051"
+      ]
+    },
+    "gate": {
+      "cal.list_locations": [
+        "P14-dev-0180",
+        "P14-dev-0161",
+        "P14-dev-0201",
+        "P14-dev-0274"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-dev-0306",
+        "P14-dev-0308",
+        "P14-dev-0311",
+        "P14-dev-0303"
+      ],
+      "cal.count_date": [
+        "P14-dev-0040",
+        "P14-dev-0016",
+        "P14-dev-0030",
+        "P14-dev-0010"
+      ]
+    },
+    "blind": {
+      "cal.list_locations": [
+        "P14-train-0391",
+        "P14-train-0134",
+        "P14-train-0387",
+        "P14-train-0563",
+        "P14-train-0332",
+        "P14-train-0476",
+        "P14-train-0344",
+        "P14-train-0226"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-train-0622",
+        "P14-train-0607",
+        "P14-train-0605",
+        "P14-train-0620",
+        "P14-train-0603",
+        "P14-train-0608",
+        "P14-train-0617",
+        "P14-train-0609"
+      ],
+      "cal.count_date": [
+        "P14-train-0055",
+        "P14-train-0057",
+        "P14-train-0026",
+        "P14-train-0086",
+        "P14-train-0080",
+        "P14-train-0008",
+        "P14-train-0011",
+        "P14-train-0020"
+      ]
+    }
+  }
+}

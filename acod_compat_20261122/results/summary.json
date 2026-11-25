@@ -1,0 +1,134 @@
+{
+  "time": "2026-11-22 11:48:17 +0800",
+  "completed": true,
+  "cases": 2,
+  "models": 2,
+  "configurations": 3,
+  "attempts": 12,
+  "responses": 12,
+  "technical_retries": 0,
+  "strict_aggregates": [
+    {
+      "configuration": "A_historical_reference",
+      "n": 4,
+      "exact_answer_envelope": 4,
+      "strict_schema": 4,
+      "strict_correct": 0,
+      "at128": 0
+    },
+    {
+      "configuration": "B_v2_style",
+      "n": 4,
+      "exact_answer_envelope": 0,
+      "strict_schema": 0,
+      "strict_correct": 0,
+      "at128": 0
+    },
+    {
+      "configuration": "C_v2_system_legacy_stage",
+      "n": 4,
+      "exact_answer_envelope": 0,
+      "strict_schema": 0,
+      "strict_correct": 0,
+      "at128": 0
+    }
+  ],
+  "paired_schema_contrasts": [
+    {
+      "seed": 20261108,
+      "case_id": "historical_0_first",
+      "A_schema": true,
+      "B_schema": false,
+      "C_schema": false,
+      "stage_rescue_B_to_C": false,
+      "system_rescue_C_to_A": true
+    },
+    {
+      "seed": 20261108,
+      "case_id": "historical_1_last",
+      "A_schema": true,
+      "B_schema": false,
+      "C_schema": false,
+      "stage_rescue_B_to_C": false,
+      "system_rescue_C_to_A": true
+    },
+    {
+      "seed": 20261109,
+      "case_id": "historical_0_first",
+      "A_schema": true,
+      "B_schema": false,
+      "C_schema": false,
+      "stage_rescue_B_to_C": false,
+      "system_rescue_C_to_A": true
+    },
+    {
+      "seed": 20261109,
+      "case_id": "historical_1_last",
+      "A_schema": true,
+      "B_schema": false,
+      "C_schema": false,
+      "stage_rescue_B_to_C": false,
+      "system_rescue_C_to_A": true
+    }
+  ],
+  "A_raw_reproduces_previous": 4,
+  "usage": {
+    "input_tokens": 2728,
+    "output_tokens": 226,
+    "total_tokens": 2954,
+    "generation_seconds": 23.57407101000004
+  },
+  "supervisor": {
+    "time": "2026-11-22 11:47:08 +0800",
+    "rc": 0,
+    "wall_seconds": 146.311842551
+  },
+  "CPU_PASS": 189,
+  "CPU_FAIL": 0,
+  "protected_files_unchanged": 158,
+  "parameter_receipts": [
+    {
+      "after": "62e47b3979fe955e9c56e02f0367da1e23f57243f36158be1a0164dc040646a9",
+      "before": "62e47b3979fe955e9c56e02f0367da1e23f57243f36158be1a0164dc040646a9",
+      "generation_calls": 6,
+      "optimizer_updates": 0,
+      "parameters_unchanged": true,
+      "peak_allocated_GiB": 0.6005458831787109,
+      "seed": 20261108,
+      "time": "2026-11-22 11:46:42 +0800"
+    },
+    {
+      "after": "27b8fc0f4a959db348c272c4dee2dcd6eea63c902d2dd1ee54b84c7431a4e757",
+      "before": "27b8fc0f4a959db348c272c4dee2dcd6eea63c902d2dd1ee54b84c7431a4e757",
+      "generation_calls": 6,
+      "optimizer_updates": 0,
+      "parameters_unchanged": true,
+      "peak_allocated_GiB": 0.6005458831787109,
+      "seed": 20261109,
+      "time": "2026-11-22 11:47:02 +0800"
+    }
+  ],
+  "guard_checks": 33,
+  "sampled_power_W_range": [
+    26.7,
+    35.17
+  ],
+  "sampled_max_temperature_C": 69.7,
+  "old_STOP_hash_unchanged": true,
+  "former_run_pids_current_argv": {
+    "370": [
+      "/init"
+    ],
+    "484": []
+  },
+  "final_gpu_compute_apps": "",
+  "no_auto_followup": true,
+  "model_generation_config_use_cache_values": [
+    null,
+    null
+  ],
+  "model_config_use_cache_values": [
+    false,
+    false
+  ]
+}

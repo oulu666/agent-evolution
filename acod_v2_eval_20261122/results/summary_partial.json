@@ -1,0 +1,278 @@
+{
+  "status": "INCOMPLETE_PRELOCKED_WALL_TIMEOUT",
+  "audit_type": "completeness-gated intermediate audit, not locked full224 main analysis",
+  "analyzed": "2026-11-22 00:39:36 +0800",
+  "started": "2026-11-22 00:13:06 +0800",
+  "stopped": "2026-11-22 00:38:13 +0800",
+  "wall_seconds": 1506.795931635,
+  "rc": 75,
+  "planned_unique_responses": 224,
+  "generation_attempts": 208,
+  "completed_responses": 207,
+  "interrupted_or_failed_attempts": 1,
+  "never_attempted": 16,
+  "missing_responses": 17,
+  "complete_cases_by_checkpoint": {
+    "20261108": 16,
+    "20261109": 13
+  },
+  "completed_usage_lower_bound": {
+    "inference_calls": 207,
+    "input_tokens": 64235,
+    "output_tokens": 15603,
+    "total_tokens": 79838,
+    "generation_seconds": 1379.6617145690004
+  },
+  "inflight_token_usage_unavailable": true,
+  "startup_failures_before_model_loading": 2,
+  "layers": [
+    {
+      "seed": 20261108,
+      "family": "ALL",
+      "generations": 112,
+      "whole_json": 65,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 16,
+      "reserved_correct": 0,
+      "reserved_observed": 16,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 47,
+      "cap_and_no_exact_envelope": 47,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    },
+    {
+      "seed": 20261108,
+      "family": "H_fragment_offsets_scope",
+      "generations": 56,
+      "whole_json": 9,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 8,
+      "reserved_correct": 0,
+      "reserved_observed": 8,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 47,
+      "cap_and_no_exact_envelope": 47,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    },
+    {
+      "seed": 20261108,
+      "family": "H_multiline_record_assembly",
+      "generations": 56,
+      "whole_json": 56,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 8,
+      "reserved_correct": 0,
+      "reserved_observed": 8,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 0,
+      "cap_and_no_exact_envelope": 0,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "ALL",
+      "generations": 95,
+      "whole_json": 41,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 14,
+      "reserved_correct": 0,
+      "reserved_observed": 13,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 52,
+      "cap_and_no_exact_envelope": 52,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "H_fragment_offsets_scope",
+      "generations": 39,
+      "whole_json": 1,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 6,
+      "reserved_correct": 0,
+      "reserved_observed": 5,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 38,
+      "cap_and_no_exact_envelope": 38,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "H_multiline_record_assembly",
+      "generations": 56,
+      "whole_json": 40,
+      "exact_answer_envelope": 0,
+      "strict_schema_valid": 0,
+      "strict_answer_correct": 0,
+      "original_correct": 0,
+      "original_observed": 8,
+      "reserved_correct": 0,
+      "reserved_observed": 8,
+      "behavior_value_available": 0,
+      "at_output_token_cap": 14,
+      "cap_and_no_exact_envelope": 14,
+      "wrapper_recovered": 0,
+      "behavior_ambiguity": 0
+    }
+  ],
+  "full_pool_consistency": [
+    {
+      "seed": 20261108,
+      "family": "ALL",
+      "complete_cases": 16,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 16,
+      "reserved_covered": 0
+    },
+    {
+      "seed": 20261108,
+      "family": "H_fragment_offsets_scope",
+      "complete_cases": 8,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 8,
+      "reserved_covered": 0
+    },
+    {
+      "seed": 20261108,
+      "family": "H_multiline_record_assembly",
+      "complete_cases": 8,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 8,
+      "reserved_covered": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "ALL",
+      "complete_cases": 13,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 13,
+      "reserved_covered": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "H_fragment_offsets_scope",
+      "complete_cases": 5,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 5,
+      "reserved_covered": 0
+    },
+    {
+      "seed": 20261109,
+      "family": "H_multiline_record_assembly",
+      "complete_cases": 8,
+      "pool_fits": 0,
+      "reserved_breaks_previously_fitting_library": 0,
+      "pool_unknown": 0,
+      "pool_parse_insufficient": 8,
+      "reserved_covered": 0
+    }
+  ],
+  "GBS_IG_paths": [
+    {
+      "seed": 20261108,
+      "budget": 1,
+      "same_GBS_IG_paths": 14,
+      "complete_cases": 16
+    },
+    {
+      "seed": 20261108,
+      "budget": 2,
+      "same_GBS_IG_paths": 14,
+      "complete_cases": 16
+    },
+    {
+      "seed": 20261108,
+      "budget": 4,
+      "same_GBS_IG_paths": 10,
+      "complete_cases": 16
+    },
+    {
+      "seed": 20261109,
+      "budget": 1,
+      "same_GBS_IG_paths": 11,
+      "complete_cases": 13
+    },
+    {
+      "seed": 20261109,
+      "budget": 2,
+      "same_GBS_IG_paths": 11,
+      "complete_cases": 13
+    },
+    {
+      "seed": 20261109,
+      "budget": 4,
+      "same_GBS_IG_paths": 7,
+      "complete_cases": 13
+    }
+  ],
+  "model_receipts": [
+    {
+      "time": "2026-11-22 00:26:14 +0800",
+      "seed": 20261108,
+      "adapter_sha256": "dcf7cf52d5fadb43b66b55489420ca86773576d634c14c37d0cef249989dd73a",
+      "parameter_digest_before": "62e47b3979fe955e9c56e02f0367da1e23f57243f36158be1a0164dc040646a9",
+      "parameter_digest_after": "62e47b3979fe955e9c56e02f0367da1e23f57243f36158be1a0164dc040646a9",
+      "parameters_unchanged": true,
+      "generation_calls": 112,
+      "peak_allocated_GB": 0.607213020324707,
+      "optimizer_updates": 0
+    },
+    {
+      "time": "2026-11-22 00:38:09 +0800",
+      "seed": 20261109,
+      "adapter_sha256": "7b151a157245b9746fdb7040ac44af32bf12dd79241bdcc57799313aa8159abf",
+      "parameter_digest_before": "27b8fc0f4a959db348c272c4dee2dcd6eea63c902d2dd1ee54b84c7431a4e757",
+      "parameter_digest_after": "27b8fc0f4a959db348c272c4dee2dcd6eea63c902d2dd1ee54b84c7431a4e757",
+      "parameters_unchanged": true,
+      "generation_calls": 95,
+      "peak_allocated_GB": 0.607213020324707,
+      "optimizer_updates": 0
+    }
+  ],
+  "protected_files_unchanged": 118,
+  "guard_checks": 331,
+  "sampled_power_W_range": [
+    24.38,
+    34.37
+  ],
+  "max_temperature_C": 69.5,
+  "strict_paired_interaction_estimate": null,
+  "interaction_reason": "0 exact frozen factor quads; line view includes rotation, reserved uses reversal and also value+line. Do not treat missing design as zero interaction.",
+  "raw_outputs_now_exposed_for_v3": true,
+  "MDCS_implemented": false,
+  "new_rules": 0,
+  "new_queries": 0,
+  "optimizer_updates": 0,
+  "analysis_seconds": 1.1270671450000007,
+  "automatic_resume": false
+}

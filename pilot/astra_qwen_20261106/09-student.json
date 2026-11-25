@@ -1,0 +1,55 @@
+{
+  "id": 9,
+  "group": "student",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#....##\n#...B.#\n#.....#\n#....P#\n#....G#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: \nCurrent board:\n#######\n#....##\n#...B.#\n#.....#\n#....P#\n#....G#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 150,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 152
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#....##\n#...B.#\n#.....#\n#....P#\n#....G#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: D\nCurrent board:\n#######\n#....##\n#...P.#\n#...B.#\n#.....#\n#....G#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 152,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 154
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#....##\n#...B.#\n#.....#\n#....P#\n#....G#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: D R\nCurrent board:\n#######\n#....##\n#.....#\n#...PB#\n#.....#\n#....G#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 148,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 150
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#....##\n#...B.#\n#.....#\n#....P#\n#....G#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: D R D\nCurrent board:\n#######\n#....##\n#.....#\n#....P#\n#....B#\n#....G#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 150,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 152
+    }
+  ],
+  "actions": [
+    "D",
+    "R",
+    "D",
+    "D"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 608
+}

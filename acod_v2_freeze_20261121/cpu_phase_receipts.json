@@ -1,0 +1,24 @@
+{
+  "phases": [
+    {
+      "time": "2026-11-21 14:18:18 +0800",
+      "script": "build_data.py",
+      "argv": [
+        "generate"
+      ],
+      "rc": 0,
+      "elapsed_seconds": 2.8053809109999985,
+      "stdout": "GENERATED development=8 heldout=16 views=168; no model outputs\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-21 14:18:18 +0800",
+      "script": "validate_data.py",
+      "argv": [],
+      "rc": 0,
+      "elapsed_seconds": 0.38155026300000117,
+      "stdout": "{\"time\": \"2026-11-21 14:18:18 +0800\", \"passed\": true, \"failed\": 0, \"case_checks\": 24, \"view_checks\": 168, \"negative_checks\": 9, \"family_cases\": {\"D_flat_explicit\": 8, \"H_multiline_record_assembly\": 8, \"H_fragment_offsets_scope\": 8}, \"case_id_overlap\": 0, \"fixture_overlap\": 0, \"template_overlap\": 0, \"heldout_selector_executions\": 0, \"heldout_response_reads\": 0, \"new_model_generations\": 0, \"gold_access\": \"validator only; no selector/model prompt routes\", \"elapsed_seconds\": 0.11825453400000008, \"negative_tests\": [{\"name\": \"illegal_text_mapping\", \"passed\": true}, {\"name\": \"coordinate_receipt_mismatch\", \"passed\": true}, {\"name\": \"private_label_in_public\", \"passed\": true}, {\"name\": \"scope_mutation\", \"passed\": true}, {\"name\": \"duplicate_coordinates\", \"passed\": true}, {\"name\": \"uncertified_transform\", \"passed\": true}, {\"name\": \"wrong_gold\", \"passed\": true}, {\"name\": \"source_ancestry_mismatch\", \"passed\": true}, {\"name\": \"gold_path_loader_rejected\", \"passed\": true}]}\n",
+      "stderr": ""
+    }
+  ]
+}

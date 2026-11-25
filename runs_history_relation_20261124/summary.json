@@ -1,0 +1,749 @@
+{
+ "saved": {
+  "greedy": {
+   "hits": 17,
+   "reachable": 177,
+   "calls": 1073,
+   "resets": 360,
+   "risk_50": 0.8250728862973761,
+   "risk_curve_counts": [
+    [
+     60,
+     283
+    ],
+    [
+     60,
+     283
+    ],
+    [
+     60,
+     283
+    ],
+    [
+     60,
+     283
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 0,
+    "double_select": 0,
+    "aisle_cursor": 17,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "AAB": 30,
+    "ABB": 30
+   },
+   "selection_ms": 0.03654333316565802
+  },
+  "fixed": {
+   "hits": 14,
+   "reachable": 177,
+   "calls": 1077,
+   "resets": 360,
+   "risk_50": 0.8243961352657005,
+   "risk_curve_counts": [
+    [
+     1,
+     5
+    ],
+    [
+     11,
+     50
+    ],
+    [
+     29,
+     136
+    ],
+    [
+     49,
+     231
+    ],
+    [
+     60,
+     286
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 5,
+    "scope_price": 3,
+    "double_select": 4,
+    "aisle_cursor": 2,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "AAA": 12,
+    "ABA": 12,
+    "ABB": 12,
+    "ABC": 12,
+    "AAB": 12
+   },
+   "selection_ms": 0.019736667066657294
+  },
+  "w": {
+   "hits": 0,
+   "reachable": 177,
+   "calls": 1080,
+   "resets": 360,
+   "risk_50": 0.8333333333333334,
+   "risk_curve_counts": [
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 0,
+    "double_select": 0,
+    "aisle_cursor": 0,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 60
+   },
+   "selection_ms": 0.00491499959025532
+  },
+  "coverage": {
+   "hits": 13,
+   "reachable": 177,
+   "calls": 1079,
+   "resets": 360,
+   "risk_50": 0.825478927203065,
+   "risk_curve_counts": [
+    [
+     1,
+     5
+    ],
+    [
+     9,
+     41
+    ],
+    [
+     39,
+     185
+    ],
+    [
+     53,
+     252
+    ],
+    [
+     60,
+     287
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 2,
+    "scope_price": 3,
+    "double_select": 7,
+    "aisle_cursor": 1,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABB": 11,
+    "AAB": 13,
+    "AAA": 13,
+    "ABA": 11,
+    "ABC": 12
+   },
+   "selection_ms": 0.14037499956126945
+  },
+  "learned": {
+   "hits": 12,
+   "reachable": 177,
+   "calls": 1076,
+   "resets": 360,
+   "risk_50": 0.8258585858585858,
+   "risk_curve_counts": [
+    [
+     8,
+     34
+    ],
+    [
+     31,
+     147
+    ],
+    [
+     50,
+     238
+    ],
+    [
+     60,
+     288
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 3,
+    "scope_price": 6,
+    "double_select": 2,
+    "aisle_cursor": 1,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABA": 46,
+    "ABC": 12,
+    "AAB": 2
+   },
+   "selection_ms": 0.18633666719930866
+  },
+  "joint_uniform": {
+   "hits": 13,
+   "reachable": 177,
+   "calls": 1080,
+   "resets": 360,
+   "risk_50": 0.828968253968254,
+   "risk_curve_counts": [
+    [
+     19,
+     95
+    ],
+    [
+     49,
+     233
+    ],
+    [
+     60,
+     287
+    ],
+    [
+     60,
+     287
+    ],
+    [
+     60,
+     287
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 8,
+    "double_select": 1,
+    "aisle_cursor": 4,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 19,
+    "AAB": 15,
+    "ABB": 11,
+    "ABA": 8,
+    "AAA": 7
+   },
+   "selection_ms": 0.15217999959228715
+  },
+  "joint": {
+   "hits": 40,
+   "reachable": 177,
+   "calls": 1078,
+   "resets": 360,
+   "risk_50": 0.8112626262626262,
+   "risk_curve_counts": [
+    [
+     7,
+     35
+    ],
+    [
+     50,
+     212
+    ],
+    [
+     60,
+     260
+    ],
+    [
+     60,
+     260
+    ],
+    [
+     60,
+     260
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 35,
+    "double_select": 0,
+    "aisle_cursor": 5,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABA": 43,
+    "ABC": 13,
+    "AAB": 4
+   },
+   "selection_ms": 0.2080000006875101
+  },
+  "joint_vs": {
+   "greedy": {
+    "hit_rate_ci": [
+     0.08791208791208792,
+     0.1751412429378531
+    ],
+    "risk_50_ci": [
+     -0.019291725276827994,
+     -0.008306178143938803
+    ],
+    "defined": 10000
+   },
+   "fixed": {
+    "hit_rate_ci": [
+     0.09195402298850575,
+     0.19662921348314608
+    ],
+    "risk_50_ci": [
+     -0.02012045734115665,
+     -0.005726604443901313
+    ],
+    "defined": 10000
+   },
+   "w": {
+    "hit_rate_ci": [
+     0.18823529411764706,
+     0.2616279069767442
+    ],
+    "risk_50_ci": [
+     -0.027362124326970105,
+     -0.01650485436893201
+    ],
+    "defined": 10000
+   },
+   "coverage": {
+    "hit_rate_ci": [
+     0.10227272727272728,
+     0.20118343195266272
+    ],
+    "risk_50_ci": [
+     -0.02043893578879323,
+     -0.007909632810766625
+    ],
+    "defined": 10000
+   },
+   "learned": {
+    "hit_rate_ci": [
+     0.1111111111111111,
+     0.20454545454545456
+    ],
+    "risk_50_ci": [
+     -0.02075932804414165,
+     -0.00787413996782054
+    ],
+    "defined": 10000
+   },
+   "joint_uniform": {
+    "hit_rate_ci": [
+     0.09883720930232558,
+     0.20348837209302326
+    ],
+    "risk_50_ci": [
+     -0.023310133277892338,
+     -0.01175923897643368
+    ],
+    "defined": 10000
+   }
+  },
+  "audit": {
+   "reachable": {
+    "alias_reservation": 40,
+    "scope_price": 60,
+    "double_select": 60,
+    "aisle_cursor": 17,
+    "deferred_commit": 0
+   },
+   "budget": 60,
+   "permission": 63,
+   "exact_three_calls": 93544,
+   "exact_three_resets": 31400,
+   "exhaustive_cpu_seconds": 0.109375,
+   "cpu_all_policies": 0.109375,
+   "candidate_sequences": 6280
+  }
+ },
+ "construct": {
+  "greedy": {
+   "hits": 31,
+   "reachable": 240,
+   "calls": 1061,
+   "resets": 360,
+   "risk_50": 0.817629179331307,
+   "risk_curve_counts": [
+    [
+     60,
+     269
+    ],
+    [
+     60,
+     269
+    ],
+    [
+     60,
+     269
+    ],
+    [
+     60,
+     269
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 0,
+    "double_select": 0,
+    "aisle_cursor": 31,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 40,
+    "AAB": 11,
+    "ABB": 9
+   },
+   "selection_ms": 0.2960749996418599
+  },
+  "fixed": {
+   "hits": 23,
+   "reachable": 240,
+   "calls": 1073,
+   "resets": 360,
+   "risk_50": 0.8204301075268817,
+   "risk_curve_counts": [
+    [
+     21,
+     94
+    ],
+    [
+     48,
+     222
+    ],
+    [
+     56,
+     257
+    ],
+    [
+     60,
+     277
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 4,
+    "scope_price": 4,
+    "double_select": 6,
+    "aisle_cursor": 9,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "AAA": 12,
+    "ABA": 12,
+    "ABB": 12,
+    "ABC": 12,
+    "AAB": 12
+   },
+   "selection_ms": 0.05861166646354832
+  },
+  "w": {
+   "hits": 0,
+   "reachable": 240,
+   "calls": 1080,
+   "resets": 360,
+   "risk_50": 0.8333333333333334,
+   "risk_curve_counts": [
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ],
+    [
+     60,
+     300
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 0,
+    "double_select": 0,
+    "aisle_cursor": 0,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 60
+   },
+   "selection_ms": 0.033350000012433156
+  },
+  "coverage": {
+   "hits": 15,
+   "reachable": 240,
+   "calls": 1076,
+   "resets": 360,
+   "risk_50": 0.8238011695906433,
+   "risk_curve_counts": [
+    [
+     1,
+     5
+    ],
+    [
+     14,
+     64
+    ],
+    [
+     47,
+     221
+    ],
+    [
+     57,
+     270
+    ],
+    [
+     60,
+     285
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 2,
+    "scope_price": 4,
+    "double_select": 3,
+    "aisle_cursor": 6,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 12,
+    "ABA": 11,
+    "AAB": 13,
+    "ABB": 11,
+    "AAA": 13
+   },
+   "selection_ms": 2.1823716665191264
+  },
+  "learned": {
+   "hits": 24,
+   "reachable": 240,
+   "calls": 1066,
+   "resets": 360,
+   "risk_50": 0.8176587301587301,
+   "risk_curve_counts": [
+    [
+     8,
+     33
+    ],
+    [
+     43,
+     194
+    ],
+    [
+     60,
+     276
+    ],
+    [
+     60,
+     276
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 3,
+    "scope_price": 4,
+    "double_select": 1,
+    "aisle_cursor": 16,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABA": 46,
+    "ABC": 12,
+    "AAB": 2
+   },
+   "selection_ms": 2.4286399996829764
+  },
+  "joint_uniform": {
+   "hits": 13,
+   "reachable": 240,
+   "calls": 1080,
+   "resets": 360,
+   "risk_50": 0.8282708744247205,
+   "risk_curve_counts": [
+    [
+     16,
+     80
+    ],
+    [
+     46,
+     219
+    ],
+    [
+     60,
+     287
+    ],
+    [
+     60,
+     287
+    ],
+    [
+     60,
+     287
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 9,
+    "double_select": 2,
+    "aisle_cursor": 2,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABC": 16,
+    "AAB": 15,
+    "ABB": 12,
+    "ABA": 9,
+    "AAA": 8
+   },
+   "selection_ms": 2.099286667241055
+  },
+  "joint": {
+   "hits": 40,
+   "reachable": 240,
+   "calls": 1077,
+   "resets": 360,
+   "risk_50": 0.807843137254902,
+   "risk_curve_counts": [
+    [
+     4,
+     20
+    ],
+    [
+     44,
+     184
+    ],
+    [
+     60,
+     260
+    ],
+    [
+     60,
+     260
+    ],
+    [
+     60,
+     260
+    ]
+   ],
+   "by_fault": {
+    "alias_reservation": 0,
+    "scope_price": 33,
+    "double_select": 2,
+    "aisle_cursor": 5,
+    "deferred_commit": 0
+   },
+   "patterns": {
+    "ABA": 45,
+    "ABC": 11,
+    "AAB": 4
+   },
+   "selection_ms": 2.4985350002680207
+  },
+  "joint_vs": {
+   "greedy": {
+    "hit_rate_ci": [
+     0.0,
+     0.07916666666666666
+    ],
+    "risk_50_ci": [
+     -0.016219458316762546,
+     -0.0027671633704785662
+    ],
+    "defined": 10000
+   },
+   "fixed": {
+    "hit_rate_ci": [
+     0.029166666666666667,
+     0.1125
+    ],
+    "risk_50_ci": [
+     -0.019190205885944493,
+     -0.005666706373933037
+    ],
+    "defined": 10000
+   },
+   "w": {
+    "hit_rate_ci": [
+     0.1375,
+     0.19583333333333333
+    ],
+    "risk_50_ci": [
+     -0.0301544860368389,
+     -0.020361247947454864
+    ],
+    "defined": 10000
+   },
+   "coverage": {
+    "hit_rate_ci": [
+     0.0625,
+     0.14583333333333334
+    ],
+    "risk_50_ci": [
+     -0.02259588085929842,
+     -0.00897426159034308
+    ],
+    "defined": 10000
+   },
+   "learned": {
+    "hit_rate_ci": [
+     0.025,
+     0.10833333333333334
+    ],
+    "risk_50_ci": [
+     -0.016664104866846396,
+     -0.0024752149217804574
+    ],
+    "defined": 10000
+   },
+   "joint_uniform": {
+    "hit_rate_ci": [
+     0.07083333333333333,
+     0.15416666666666667
+    ],
+    "risk_50_ci": [
+     -0.026126205530363704,
+     -0.014017859956443899
+    ],
+    "defined": 10000
+   }
+  },
+  "audit": {
+   "reachable": {
+    "alias_reservation": 60,
+    "scope_price": 60,
+    "double_select": 60,
+    "aisle_cursor": 60,
+    "deferred_commit": 0
+   },
+   "budget": 60,
+   "permission": 0,
+   "exact_three_calls": 885600,
+   "exact_three_resets": 300000,
+   "exhaustive_cpu_seconds": 0.5,
+   "cpu_all_policies": 1.546875,
+   "candidate_sequences": 60000
+  }
+ }
+}

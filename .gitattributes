@@ -17,3 +17,21 @@
 # Preserve raw terminal CR/progress/trailing bytes; do not lint historical evidence as source diffs.
 /runs_ext_p15_stageaware_20261119/*.log -diff
 /runs_ext_p15_review_v3_20261119/engineering_attempt01/terminal_failure.txt -diff
+
+# Keep archived experiments byte-identical to local freeze manifests on all platforms.
+/pilot/** -text
+/_p11_fix_tmp/** -text
+/acod_*_2026112*/** -text
+/runs_*_2026112*/** -text
+/runs_ext_p14_eval_protocol/draft_failure_*/** -text
+/research/*.py -text
+/research/*2026112*.md -text
+/research/action_evidence_audit/** -text
+/research/ccet_20261125/** -text
+/research/complementary_release_audit/** -text
+/research/contract_synthesis_gate/** -text
+/research/dcep_manifest/** -text
+/research/dynamic_snapshot_audit/** -text
+/research/egatv_pilot/** -text
+/research/input_oracle_gate/** -text
+/research/issre_res/evidence_ledger.csv -text

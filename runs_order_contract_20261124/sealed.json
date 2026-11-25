@@ -1,0 +1,48 @@
+{
+ "transitions": {
+  "eligible": 14,
+  "selected": [
+   {
+    "commit": "bd42b38f3627e6bca7274fb4d9af2e105f75da7c",
+    "parent": "b0a50d246109e7eb74dd5ca3255693e75618439d",
+    "title": "fix: Don't raise AssertionError when model does not contain is_<state> - this fixes #716 - this issue happens when model_override=True and NestedState.separator != \"_\"",
+    "time": 1757436154
+   },
+   {
+    "commit": "b0a50d246109e7eb74dd5ca3255693e75618439d",
+    "parent": "af00abab233f98cfaf71c5497308ae56f6bd4c5b",
+    "title": "fix: _final_check should not override is_final - rename loop 'is_final' to 'child_final' - this closes #715",
+    "time": 1757406323
+   },
+   {
+    "commit": "433625298155e4b7bee519f29b139b1f34f1a404",
+    "parent": "847499125afabad1b1b601d3442de8bbe59e650a",
+    "title": "fix: only process CancellationExceptions triggered by AsyncMachine",
+    "time": 1751470598
+   }
+  ]
+ },
+ "statemachine": {
+  "eligible": 3,
+  "selected": [
+   {
+    "commit": "80547864cecc2a1c73bae09443db5178c86da46c",
+    "parent": "b0367f081696f43356c3696aec6abe1bf402d926",
+    "title": "Fix domain model bool check (#533)",
+    "time": 1750712806
+   },
+   {
+    "commit": "ff14d6293882f8b9625606bf790ea020a1401cc2",
+    "parent": "25d639228a6e92a1fee84ba61660222b9eb78c1c",
+    "title": "fix: Fix nested events inside loops leaking memory by referencing the previous 'event_data' when calling the next event on queue (#485)",
+    "time": 1730489307
+   },
+   {
+    "commit": "e4a20927803da34409c5d90fbb8e75e16dce1dca",
+    "parent": "e43c7dc8d93db637cfc0ab25f1ca00a397bc7c88",
+    "title": "fix: Fix #480, engine was not assigned on the initial callback (#481)",
+    "time": 1726086789
+   }
+  ]
+ }
+}

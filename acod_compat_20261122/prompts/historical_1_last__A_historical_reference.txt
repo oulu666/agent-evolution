@@ -1,0 +1,27 @@
+<|im_start|>system
+You are a deterministic tool-using assistant.
+Tools:
+- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.
+- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.
+- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.
+- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.
+
+All paths are relative to a sandbox directory. Use only the listed file tools.
+
+Output format:
+1. First assistant turn: exactly one JSON object {"tool": <tool_name>, "arguments": <object>}.
+2. After the user message starting with TOOL RESULT, exactly one JSON object {"answer": <value>}.
+Do not output markdown, code fences, or any other text.
+<|im_end|>
+<|im_start|>user
+Find lines containing 'kdev1z' in p9_dev/note_1.txt. Which complete matching line occurs last in the file?<|im_end|>
+<|im_start|>assistant
+{"arguments":{"path":"p9_dev/note_1.txt","pattern":"kdev1z"},"tool":"file_search"}<|im_end|>
+<|im_start|>user
+TOOL RESULT:
+{"ok":true,"result":[{"line":7,"text":"kdev1z observation 58056"},{"line":9,"text":"kdev1z observation 26308"},{"line":16,"text":"kdev1z observation 93830"}]}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

@@ -1,0 +1,1126 @@
+{
+ "probes_sha256": "bc63a23f0fa0ac91bea42ebc5581d9862a3496304c43073eb258108456491ee5",
+ "independent_count": 12,
+ "outcomes": [
+  {
+   "pr": 273,
+   "repo": "python-humanize/humanize",
+   "parent": "50a413af6b3d3e052f1f631728ecae2267df6523",
+   "fixed": "38c99686b9c9e211a3e27c5e1ad99bfdc8e82f04",
+   "parent_rows": [
+    {
+     "input": "fr_FR 1000000",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    },
+    {
+     "input": "fr_FR 1010000, one fractional digit",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 millions"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "fr_FR 1000000",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    },
+    {
+     "input": "fr_FR 1010000, one fractional digit",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 million"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 254,
+   "repo": "python-humanize/humanize",
+   "parent": "58d10b43175a22eb9ece2c6f3dcff6b6b681e2df",
+   "fixed": "0f5d2948d674a88a611f8e341c0df520767b1b80",
+   "parent_rows": [
+    {
+     "input": "60 s, zero fractional digits",
+     "expected": {
+      "ok": true,
+      "coarse": 60,
+      "fine": "1 minute"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 60.0,
+      "fine": "1 minute"
+     },
+     "steps": [
+      "format time"
+     ]
+    },
+    {
+     "input": "59.5 s, zero fractional digits",
+     "expected": {
+      "ok": true,
+      "coarse": 60,
+      "fine": "1 minute"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 60.0,
+      "fine": "60 seconds"
+     },
+     "steps": [
+      "format time"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "60 s, zero fractional digits",
+     "expected": {
+      "ok": true,
+      "coarse": 60,
+      "fine": "1 minute"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 60.0,
+      "fine": "1 minute"
+     },
+     "steps": [
+      "format time"
+     ]
+    },
+    {
+     "input": "59.5 s, zero fractional digits",
+     "expected": {
+      "ok": true,
+      "coarse": 60,
+      "fine": "1 minute"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 60.0,
+      "fine": "1 minute"
+     },
+     "steps": [
+      "format time"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 1088,
+   "repo": "more-itertools/more-itertools",
+   "parent": "55fcdd8013baff9d2f5b3ab890904a0964fb61df",
+   "fixed": "22cf656cc0458cfcee2286c0a02369da000023ad",
+   "parent_rows": [
+    {
+     "input": "[True], n=1",
+     "expected": {
+      "ok": true,
+      "coarse": true,
+      "fine": true
+     },
+     "actual": {
+      "ok": true,
+      "coarse": true,
+      "fine": true
+     },
+     "steps": [
+      "exactly_n"
+     ]
+    },
+    {
+     "input": "[True], n=-10",
+     "expected": {
+      "ok": true,
+      "coarse": false,
+      "fine": false
+     },
+     "actual": {
+      "ok": false,
+      "error": "ValueError",
+      "detail": "Indices for islice() must be None or an integer: 0 <= x <= sys.maxsize."
+     },
+     "steps": [
+      "exactly_n"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "[True], n=1",
+     "expected": {
+      "ok": true,
+      "coarse": true,
+      "fine": true
+     },
+     "actual": {
+      "ok": true,
+      "coarse": true,
+      "fine": true
+     },
+     "steps": [
+      "exactly_n"
+     ]
+    },
+    {
+     "input": "[True], n=-10",
+     "expected": {
+      "ok": true,
+      "coarse": false,
+      "fine": false
+     },
+     "actual": {
+      "ok": true,
+      "coarse": false,
+      "fine": false
+     },
+     "steps": [
+      "exactly_n"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 250,
+   "repo": "python-humanize/humanize",
+   "parent": "8059ebe1732c89177709476165f6e87cc76fe1b7",
+   "fixed": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+   "parent_rows": [
+    {
+     "input": "1 as integer",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1 Byte"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Byte"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "1 as floating point",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1 Byte"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1.0 Byte"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "1 as integer",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1 Byte"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Byte"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "1 as floating point",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1 Byte"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Byte"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 1082,
+   "repo": "more-itertools/more-itertools",
+   "parent": "aa8c480086052d4c2a64490d3214e67b7c6e674b",
+   "fixed": "5a1d64d1915df11481dcd31ffaf7165419064116",
+   "parent_rows": [
+    {
+     "input": "tuple target and pools",
+     "expected": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "steps": [
+      "product_index"
+     ]
+    },
+    {
+     "input": "one-pass iterators for target and pools",
+     "expected": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "actual": {
+      "ok": false,
+      "error": "TypeError",
+      "detail": "object of type 'str_ascii_iterator' has no len()"
+     },
+     "steps": [
+      "product_index"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "tuple target and pools",
+     "expected": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "steps": [
+      "product_index"
+     ]
+    },
+    {
+     "input": "one-pass iterators for target and pools",
+     "expected": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 3,
+      "fine": 3
+     },
+     "steps": [
+      "product_index"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 240,
+   "repo": "python-humanize/humanize",
+   "parent": "a0602c70bb6e11322107b51114333bab7adab021",
+   "fixed": "c11c08add7cfe22de4f27cd275c89a789c970dae",
+   "parent_rows": [
+    {
+     "input": "2 as integer",
+     "expected": {
+      "ok": true,
+      "coarse": 2,
+      "fine": "2 Bytes"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 2,
+      "fine": "2 Bytes"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "1.123456789 as floating point",
+     "expected": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Bytes"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1.123456789 Bytes"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "2 as integer",
+     "expected": {
+      "ok": true,
+      "coarse": 2,
+      "fine": "2 Bytes"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 2,
+      "fine": "2 Bytes"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "1.123456789 as floating point",
+     "expected": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Bytes"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": "1 Bytes"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 378,
+   "repo": "prettytable/prettytable",
+   "parent": "88915082fa543aa3cac247880b12f81e6fed983e",
+   "fixed": "b3de36f62f65d1853a8f591c1469d089549ffe73",
+   "parent_rows": [
+    {
+     "input": "one populated row",
+     "expected": {
+      "ok": true,
+      "coarse": 1,
+      "fine": [
+       [
+        "X"
+       ]
+      ]
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": [
+       [
+        "X"
+       ]
+      ]
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "read rows"
+     ]
+    },
+    {
+     "input": "empty row batch",
+     "expected": {
+      "ok": true,
+      "coarse": 0,
+      "fine": []
+     },
+     "actual": {
+      "ok": false,
+      "error": "IndexError",
+      "detail": "list index out of range"
+     },
+     "steps": [
+      "create table",
+      "add rows"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "one populated row",
+     "expected": {
+      "ok": true,
+      "coarse": 1,
+      "fine": [
+       [
+        "X"
+       ]
+      ]
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1,
+      "fine": [
+       [
+        "X"
+       ]
+      ]
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "read rows"
+     ]
+    },
+    {
+     "input": "empty row batch",
+     "expected": {
+      "ok": true,
+      "coarse": 0,
+      "fine": []
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 0,
+      "fine": []
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "read rows"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 356,
+   "repo": "prettytable/prettytable",
+   "parent": "44124c302b072f6fca30c4df3acd77154dfea9cf",
+   "fixed": "d80599bdacc93053743c47b1ee5be42404732f03",
+   "parent_rows": [
+    {
+     "input": "default border, two rows, divider after X",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "+"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "+"
+     },
+     "steps": [
+      "create table",
+      "apply style",
+      "add divided row",
+      "add row",
+      "render"
+     ]
+    },
+    {
+     "input": "single-line border, same rows and divider",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "├"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "└"
+     },
+     "steps": [
+      "create table",
+      "apply style",
+      "add divided row",
+      "add row",
+      "render"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "default border, two rows, divider after X",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "+"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "+"
+     },
+     "steps": [
+      "create table",
+      "apply style",
+      "add divided row",
+      "add row",
+      "render"
+     ]
+    },
+    {
+     "input": "single-line border, same rows and divider",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "├"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "X",
+       "Y"
+      ],
+      "fine": "├"
+     },
+     "steps": [
+      "create table",
+      "apply style",
+      "add divided row",
+      "add row",
+      "render"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 3718,
+   "repo": "Textualize/rich",
+   "parent": "7d36119f8378b36129502c3281a7faffef837e02",
+   "fixed": "21b3800894f6a81d3f68a0e34796be67e3ccd39f",
+   "parent_rows": [
+    {
+     "input": "panel with plain background",
+     "expected": {
+      "ok": true,
+      "coarse": "title",
+      "fine": null
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "title",
+      "fine": null
+     },
+     "steps": [
+      "create console",
+      "create title",
+      "create panel",
+      "render"
+     ]
+    },
+    {
+     "input": "panel with blue background, red title",
+     "expected": {
+      "ok": true,
+      "coarse": "title",
+      "fine": "blue"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "title",
+      "fine": null
+     },
+     "steps": [
+      "create console",
+      "create title",
+      "create panel",
+      "render"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "panel with plain background",
+     "expected": {
+      "ok": true,
+      "coarse": "title",
+      "fine": null
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "title",
+      "fine": null
+     },
+     "steps": [
+      "create console",
+      "create title",
+      "create panel",
+      "render"
+     ]
+    },
+    {
+     "input": "panel with blue background, red title",
+     "expected": {
+      "ok": true,
+      "coarse": "title",
+      "fine": "blue"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "title",
+      "fine": "blue"
+     },
+     "steps": [
+      "create console",
+      "create title",
+      "create panel",
+      "render"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 218,
+   "repo": "python-humanize/humanize",
+   "parent": "ae62162e221ce2b14ebcf991fc1b84f5d6f209f1",
+   "fixed": "6a705828cbdf2ba3f7b02901a54121bbf1b73b07",
+   "parent_rows": [
+    {
+     "input": "3000000 as Python integer",
+     "expected": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "3000000 as numpy.int32",
+     "expected": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "-1.3 MB"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "3000000 as Python integer",
+     "expected": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    },
+    {
+     "input": "3000000 as numpy.int32",
+     "expected": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "MB",
+      "fine": "3.0 MB"
+     },
+     "steps": [
+      "format bytes"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 355,
+   "repo": "prettytable/prettytable",
+   "parent": "d448aa14417a4eefa0d3641829be19c51c17f1f0",
+   "fixed": "44124c302b072f6fca30c4df3acd77154dfea9cf",
+   "parent_rows": [
+    {
+     "input": "insertion order z,a",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "z",
+       "a"
+      ]
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "z",
+       "a"
+      ]
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "render"
+     ]
+    },
+    {
+     "input": "request sort on field k at construction",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "a",
+       "z"
+      ]
+     },
+     "actual": {
+      "ok": false,
+      "error": "ValueError",
+      "detail": "Invalid field name: k"
+     },
+     "steps": [
+      "create table"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "insertion order z,a",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "z",
+       "a"
+      ]
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "z",
+       "a"
+      ]
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "render"
+     ]
+    },
+    {
+     "input": "request sort on field k at construction",
+     "expected": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "a",
+       "z"
+      ]
+     },
+     "actual": {
+      "ok": true,
+      "coarse": [
+       "a",
+       "z"
+      ],
+      "fine": [
+       "a",
+       "z"
+      ]
+     },
+     "steps": [
+      "create table",
+      "add rows",
+      "render"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 216,
+   "repo": "python-humanize/humanize",
+   "parent": "80fe633d70693e9a3356eda9e69c4e9d1a3e2ba2",
+   "fixed": "ae62162e221ce2b14ebcf991fc1b84f5d6f209f1",
+   "parent_rows": [
+    {
+     "input": "pt_BR 1000000",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 milhão"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 milhão"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    },
+    {
+     "input": "pt_BR 2000000000",
+     "expected": {
+      "ok": true,
+      "coarse": 2.0,
+      "fine": "2.0 bilhões"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 2.0,
+      "fine": "2.0 bilhão"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "pt_BR 1000000",
+     "expected": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 milhão"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 1.0,
+      "fine": "1.0 milhão"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    },
+    {
+     "input": "pt_BR 2000000000",
+     "expected": {
+      "ok": true,
+      "coarse": 2.0,
+      "fine": "2.0 bilhões"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": 2.0,
+      "fine": "2.0 bilhões"
+     },
+     "steps": [
+      "activate locale",
+      "format magnitude"
+     ]
+    }
+   ],
+   "confirmed": true
+  },
+  {
+   "pr": 345,
+   "repo": "prettytable/prettytable",
+   "parent": "79f5999fd5b90aea0b3324bc6fb99f48f7db5daf",
+   "fixed": "cf5b1670e56afc28bcf76142faa3bbcfedcfa85b",
+   "parent_rows": [
+    {
+     "input": "ordinary formatted HTML table",
+     "expected": {
+      "ok": true,
+      "coarse": "X",
+      "fine": "center"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "X",
+      "fine": "center"
+     },
+     "steps": [
+      "create table",
+      "add row",
+      "enable HTML formatting",
+      "render HTML"
+     ]
+    },
+    {
+     "input": "same table, automatic index added",
+     "expected": {
+      "ok": true,
+      "coarse": "1",
+      "fine": "center"
+     },
+     "actual": {
+      "ok": false,
+      "error": "TypeError",
+      "detail": "unhashable type: 'dict'"
+     },
+     "steps": [
+      "create table",
+      "add row",
+      "enable HTML formatting",
+      "add index",
+      "render HTML"
+     ]
+    }
+   ],
+   "fixed_rows": [
+    {
+     "input": "ordinary formatted HTML table",
+     "expected": {
+      "ok": true,
+      "coarse": "X",
+      "fine": "center"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "X",
+      "fine": "center"
+     },
+     "steps": [
+      "create table",
+      "add row",
+      "enable HTML formatting",
+      "render HTML"
+     ]
+    },
+    {
+     "input": "same table, automatic index added",
+     "expected": {
+      "ok": true,
+      "coarse": "1",
+      "fine": "center"
+     },
+     "actual": {
+      "ok": true,
+      "coarse": "1",
+      "fine": "center"
+     },
+     "steps": [
+      "create table",
+      "add row",
+      "enable HTML formatting",
+      "add index",
+      "render HTML"
+     ]
+    }
+   ],
+   "confirmed": true
+  }
+ ]
+}

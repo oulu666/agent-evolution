@@ -1,0 +1,56 @@
+{
+  "id": 4,
+  "actor": "astra",
+  "condition": "recovery",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#...G.#\n#.....#\n#..B..#\n#...#.#\n##P.#.#\n#######\nPreceding action: D.\nCurrent board:\n#######\n#...G.#\n#.....#\n#..P..#\n#..B#.#\n##..#.#\n#######\nActions since this trial started: \nAvailable actions: U D\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "U",
+      "input_tokens": 169,
+      "output_tokens": 64,
+      "reasoning_tokens": 57,
+      "total_tokens": 233
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#...G.#\n#.....#\n#..B..#\n#...#.#\n##P.#.#\n#######\nPreceding action: D.\nCurrent board:\n#######\n#...G.#\n#.....#\n#..B..#\n#..P#.#\n##..#.#\n#######\nActions since this trial started: U\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "U",
+      "input_tokens": 172,
+      "output_tokens": 63,
+      "reasoning_tokens": 56,
+      "total_tokens": 235
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#...G.#\n#.....#\n#..B..#\n#...#.#\n##P.#.#\n#######\nPreceding action: D.\nCurrent board:\n#######\n#...G.#\n#..B..#\n#..P..#\n#...#.#\n##..#.#\n#######\nActions since this trial started: U U\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "U",
+      "input_tokens": 174,
+      "output_tokens": 86,
+      "reasoning_tokens": 79,
+      "total_tokens": 260
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#...G.#\n#.....#\n#..B..#\n#...#.#\n##P.#.#\n#######\nPreceding action: D.\nCurrent board:\n#######\n#..BG.#\n#..P..#\n#.....#\n#...#.#\n##..#.#\n#######\nActions since this trial started: U U U\nAvailable actions: L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "R",
+      "input_tokens": 171,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "total_tokens": 176
+    }
+  ],
+  "actions": [
+    "U",
+    "U",
+    "U",
+    "R"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 904
+}

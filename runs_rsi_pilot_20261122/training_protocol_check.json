@@ -1,0 +1,330 @@
+[
+  {
+    "original": {
+      "id": "P14-train-0205",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": false,
+      "prompt": "List unique event locations on 2031-02-13, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0205-Venue-A",
+        "P14-train-0205-Venue-B"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2031-02-13\", \"2031-02-13\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0205",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2031-02-13, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0205-Venue-A",
+        "P14-train-0205-Venue-B"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0205-Venue-A\", \"P14-train-0205-Venue-B\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2031-02-13\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0382",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": false,
+      "prompt": "List unique event locations on 2032-02-02, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0382-Venue-A",
+        "P14-train-0382-Venue-B",
+        "P14-train-0382-Venue-C"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2032-02-02\", \"2032-02-02\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0382",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2032-02-02, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0382-Venue-A",
+        "P14-train-0382-Venue-B",
+        "P14-train-0382-Venue-C"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0382-Venue-A\", \"P14-train-0382-Venue-B\", \"P14-train-0382-Venue-C\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2032-02-02\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0307",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": false,
+      "prompt": "List unique event locations on 2031-09-05, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0307-Venue-A",
+        "P14-train-0307-Venue-B"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2031-09-05\", \"2031-09-05\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0307",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2031-09-05, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0307-Venue-A",
+        "P14-train-0307-Venue-B"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0307-Venue-A\", \"P14-train-0307-Venue-B\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2031-09-05\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0175",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": false,
+      "prompt": "List unique event locations on 2030-12-15, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0175-Venue-A"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2030-12-15\", \"2030-12-15\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0175",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2030-12-15, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0175-Venue-A"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0175-Venue-A\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2030-12-15\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0621",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": false,
+      "prompt": "Collect the title field from events on 2033-05-25, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0621-Agenda-W",
+        "P14-train-0621-Agenda-X",
+        "P14-train-0621-Agenda-Y",
+        "P14-train-0621-Agenda-Z"
+      ],
+      "answer": "```json\n{\"error\": \"invalid tool call\", \"ok\": false}\n```",
+      "call": "```json\n{\"answer\": [\"2033-05-25\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0621",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-05-25, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0621-Agenda-W",
+        "P14-train-0621-Agenda-X",
+        "P14-train-0621-Agenda-Y",
+        "P14-train-0621-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0621-Agenda-Z\", \"P14-train-0621-Agenda-Y\", \"P14-train-0621-Agenda-X\", \"P14-train-0621-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-25\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0623",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": false,
+      "prompt": "For 2033-05-29, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0623-Agenda-W",
+        "P14-train-0623-Agenda-X",
+        "P14-train-0623-Agenda-Y",
+        "P14-train-0623-Agenda-Z"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2033-05-29\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0623",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-05-29, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0623-Agenda-W",
+        "P14-train-0623-Agenda-X",
+        "P14-train-0623-Agenda-Y",
+        "P14-train-0623-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0623-Agenda-Z\", \"P14-train-0623-Agenda-Y\", \"P14-train-0623-Agenda-X\", \"P14-train-0623-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-29\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0610",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": false,
+      "prompt": "Extract every event title on 2033-05-03; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0610-Agenda-W",
+        "P14-train-0610-Agenda-X",
+        "P14-train-0610-Agenda-Y",
+        "P14-train-0610-Agenda-Z"
+      ],
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "```json\n{\"answer\": [\"2033-05-03\", \"2033-05-03\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0610",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Extract every event title on 2033-05-03; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0610-Agenda-W",
+        "P14-train-0610-Agenda-X",
+        "P14-train-0610-Agenda-Y",
+        "P14-train-0610-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0610-Agenda-Z\", \"P14-train-0610-Agenda-Y\", \"P14-train-0610-Agenda-X\", \"P14-train-0610-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-03\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0612",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": false,
+      "prompt": "Collect the title field from events on 2033-05-07, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0612-Agenda-W",
+        "P14-train-0612-Agenda-X",
+        "P14-train-0612-Agenda-Y",
+        "P14-train-0612-Agenda-Z"
+      ],
+      "answer": "```json\n{\"error\": \"invalid tool call\", \"ok\": false}\n```",
+      "call": "```json\n{\"answer\": [\"2033-05-07\"]}\n```"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0612",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-05-07, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0612-Agenda-W",
+        "P14-train-0612-Agenda-X",
+        "P14-train-0612-Agenda-Y",
+        "P14-train-0612-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0612-Agenda-Z\", \"P14-train-0612-Agenda-Y\", \"P14-train-0612-Agenda-X\", \"P14-train-0612-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-07\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0078",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "For the daily rather than monthly total at 2030-06-04, return the integer number of entries.",
+      "expected": 3,
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "{\"answer\": 1}"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0078",
+      "skill": "cal.count_date",
+      "joint": true,
+      "core": true,
+      "prompt": "For the daily rather than monthly total at 2030-06-04, return the integer number of entries.",
+      "expected": 3,
+      "answer": "{\"answer\": 3}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2030-06-04\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0079",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "Count only events on 2030-06-06, not the whole month; return an integer.",
+      "expected": 0,
+      "answer": "{\"answer\": 41}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2030-06\"}}"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0079",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "Count only events on 2030-06-06, not the whole month; return an integer.",
+      "expected": 0,
+      "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2030-06-06\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0018",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "For 2030-02-04, count the scheduled entries and answer numerically.",
+      "expected": 3,
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "{\"answer\": 0}"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0018",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "For 2030-02-04, count the scheduled entries and answer numerically.",
+      "expected": 3,
+      "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2030\"}}"
+    }
+  },
+  {
+    "original": {
+      "id": "P14-train-0074",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "The target is the single day 2030-05-27, not its month: how many events? Integer only.",
+      "expected": 1,
+      "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+      "call": "{\"answer\": 0}"
+    },
+    "p11_instructions": {
+      "id": "P14-train-0074",
+      "skill": "cal.count_date",
+      "joint": true,
+      "core": true,
+      "prompt": "The target is the single day 2030-05-27, not its month: how many events? Integer only.",
+      "expected": 1,
+      "answer": "{\"answer\": 1}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2030-05-27\"}}"
+    }
+  }
+]

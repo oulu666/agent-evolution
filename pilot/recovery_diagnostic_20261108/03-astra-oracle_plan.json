@@ -1,0 +1,56 @@
+{
+  "id": 3,
+  "actor": "astra",
+  "condition": "oracle_plan",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#.##..#\n##....#\n#.#.B.#\n##G...#\n#...P.#\n#######\nPreceding action: U.\nVerified feedback: the preceding action was a mistake. It increased the number of pushes still required. The current state remains solvable without a reset.\nVerified complete repair plan from this starting state: D D L L.\nCurrent board:\n#######\n#.##..#\n##..B.#\n#.#.P.#\n##G...#\n#.....#\n#######\nActions since this trial started: \nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "D",
+      "input_tokens": 214,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "total_tokens": 219
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#.##..#\n##....#\n#.#.B.#\n##G...#\n#...P.#\n#######\nPreceding action: U.\nVerified feedback: the preceding action was a mistake. It increased the number of pushes still required. The current state remains solvable without a reset.\nVerified complete repair plan from this starting state: D D L L.\nCurrent board:\n#######\n#.##..#\n##..P.#\n#.#.B.#\n##G...#\n#.....#\n#######\nActions since this trial started: D\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "D",
+      "input_tokens": 215,
+      "output_tokens": 161,
+      "reasoning_tokens": 154,
+      "total_tokens": 376
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#.##..#\n##....#\n#.#.B.#\n##G...#\n#...P.#\n#######\nPreceding action: U.\nVerified feedback: the preceding action was a mistake. It increased the number of pushes still required. The current state remains solvable without a reset.\nVerified complete repair plan from this starting state: D D L L.\nCurrent board:\n#######\n#.##..#\n##....#\n#.#.P.#\n##G.B.#\n#.....#\n#######\nActions since this trial started: D D\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "L",
+      "input_tokens": 215,
+      "output_tokens": 37,
+      "reasoning_tokens": 30,
+      "total_tokens": 252
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nBoard before the preceding action:\n#######\n#.##..#\n##....#\n#.#.B.#\n##G...#\n#...P.#\n#######\nPreceding action: U.\nVerified feedback: the preceding action was a mistake. It increased the number of pushes still required. The current state remains solvable without a reset.\nVerified complete repair plan from this starting state: D D L L.\nCurrent board:\n#######\n#.##..#\n##....#\n#.#...#\n##GBP.#\n#.....#\n#######\nActions since this trial started: D D L\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "L",
+      "input_tokens": 213,
+      "output_tokens": 31,
+      "reasoning_tokens": 24,
+      "total_tokens": 244
+    }
+  ],
+  "actions": [
+    "D",
+    "D",
+    "L",
+    "L"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 1091
+}

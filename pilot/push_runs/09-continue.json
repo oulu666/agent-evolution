@@ -1,0 +1,154 @@
+{
+  "id": 9,
+  "group": "continue",
+  "solved": false,
+  "history": [
+    "R",
+    "L",
+    "D",
+    "R",
+    "L",
+    "R",
+    "R",
+    "U"
+  ],
+  "tokens": 1630,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: \nCurrent board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 200,
+        "total_tokens": 201,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R\nCurrent board:\n#######\n#G....#\n#..PB.#\n#.....#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 200,
+        "total_tokens": 201,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L\nCurrent board:\n#######\n#G....#\n#..BP.#\n#.....#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 201,
+        "total_tokens": 202,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L D\nCurrent board:\n#######\n#G....#\n#..P..#\n#..B..#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 205,
+        "total_tokens": 206,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L D R\nCurrent board:\n#######\n#G....#\n#.....#\n#..PB.#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 203,
+        "total_tokens": 204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L D R L\nCurrent board:\n#######\n#G....#\n#.....#\n#..BP.#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 204,
+        "total_tokens": 205,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L D R L R\nCurrent board:\n#######\n#G....#\n#.....#\n#..PB.#\n#.....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 205,
+        "total_tokens": 206,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#GP...#\n#..B..#\n#.....#\n#.....#\n#.....#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nActions taken: R L D R L R R\nCurrent board:\n#######\n#G....#\n#.....#\n#...PB#\n#.....#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 204,
+        "total_tokens": 205,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

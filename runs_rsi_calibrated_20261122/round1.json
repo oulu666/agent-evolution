@@ -1,0 +1,397 @@
+{
+  "train": [
+    {
+      "id": "P14-train-0205",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2031-02-13, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0205-Venue-A",
+        "P14-train-0205-Venue-B"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0205-Venue-A\", \"P14-train-0205-Venue-B\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2031-02-13\"}}"
+    },
+    {
+      "id": "P14-train-0382",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2032-02-02, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0382-Venue-A",
+        "P14-train-0382-Venue-B",
+        "P14-train-0382-Venue-C"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0382-Venue-A\", \"P14-train-0382-Venue-B\", \"P14-train-0382-Venue-C\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2032-02-02\"}}"
+    },
+    {
+      "id": "P14-train-0307",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2031-09-05, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0307-Venue-A",
+        "P14-train-0307-Venue-B"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0307-Venue-A\", \"P14-train-0307-Venue-B\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2031-09-05\"}}"
+    },
+    {
+      "id": "P14-train-0175",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2030-12-15, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0175-Venue-A"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0175-Venue-A\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2030-12-15\"}}"
+    },
+    {
+      "id": "P14-train-0369",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect distinct venues for 2032-01-07 in alphabetical order; answer with a JSON array.",
+      "expected": [
+        "P14-train-0369-Venue-A",
+        "P14-train-0369-Venue-B",
+        "P14-train-0369-Venue-C"
+      ],
+      "answer": "```json\n[\n  {\"id\": \"P14-train-0369-Venue-C\", \"location\": \"P14-train-0369-Venue-C\"},\n  {\"id\": \"P14-train-0369-Venue-A\", \"location\": \"P14-train-0369-Venue-A\"},\n  {\"id\": \"P14-train-0369-Venue-B\", \"location\": \"P14-train-0369-Venue-B\"}\n]\n```",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2032-01-07\"}}"
+    },
+    {
+      "id": "P14-train-0592",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "List unique event locations on 2033-03-28, alphabetically sorted, as a JSON array.",
+      "expected": [
+        "P14-train-0592-Venue-A",
+        "P14-train-0592-Venue-B",
+        "P14-train-0592-Venue-C",
+        "P14-train-0592-Venue-D"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0592-Venue-A\", \"P14-train-0592-Venue-B\", \"P14-train-0592-Venue-C\", \"P14-train-0592-Venue-D\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-03-28\"}}"
+    }
+  ],
+  "before": [
+    {
+      "id": "P14-dev-0180",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": true,
+      "prompt": "Deduplicate venues among the appointments dated 2040-12-24; present an ascending JSON array.",
+      "expected": [
+        "P14-dev-0180-Venue-A",
+        "P14-dev-0180-Venue-B",
+        "P14-dev-0180-Venue-C"
+      ],
+      "answer": "{\"answer\": [\"P14-dev-0180-Venue-C\", \"P14-dev-0180-Venue-B\", \"P14-dev-0180-Venue-A\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-12-24\"}}"
+    },
+    {
+      "id": "P14-dev-0161",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "Build an alphabetic JSON array from the nonrepeated venues used on 2040-11-16.",
+      "expected": [
+        "P14-dev-0161-Venue-A",
+        "P14-dev-0161-Venue-B",
+        "P14-dev-0161-Venue-C"
+      ],
+      "answer": "{\"answer\": [\"P14-dev-0161-Venue-A\", \"P14-dev-0161-Venue-B\", \"P14-dev-0161-Venue-C\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-11-16\"}}"
+    },
+    {
+      "id": "P14-dev-0201",
+      "skill": "cal.list_locations",
+      "joint": true,
+      "core": true,
+      "prompt": "Deduplicate venues among the appointments dated 2041-02-04; present an ascending JSON array.",
+      "expected": [
+        "P14-dev-0201-Venue-A",
+        "P14-dev-0201-Venue-B",
+        "P14-dev-0201-Venue-C"
+      ],
+      "answer": "{\"answer\": [\"P14-dev-0201-Venue-A\", \"P14-dev-0201-Venue-B\", \"P14-dev-0201-Venue-C\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2041-02-04\"}}"
+    },
+    {
+      "id": "P14-dev-0274",
+      "skill": "cal.list_locations",
+      "joint": false,
+      "core": true,
+      "prompt": "Which different location strings are attached to 2041-06-30 entries? Alphabetize and emit a JSON array.",
+      "expected": [
+        "P14-dev-0274-Venue-A",
+        "P14-dev-0274-Venue-B",
+        "P14-dev-0274-Venue-C",
+        "P14-dev-0274-Venue-D"
+      ],
+      "answer": "```json\n[\n  \"P14-dev-0274-Venue-A\",\n  \"P14-dev-0274-Venue-B\",\n  \"P14-dev-0274-Venue-C\",\n  \"P14-dev-0274-Venue-D\"\n]\n```",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2041-06-30\"}}"
+    },
+    {
+      "id": "P14-dev-0040",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "Although this date contains a year and month, count only the day 2040-03-19; integer answer.",
+      "expected": 4,
+      "answer": "{\"answer\": 39}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-03\"}}"
+    },
+    {
+      "id": "P14-dev-0016",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "How many diary entries are assigned to 2040-01-31? Respond with an integer.",
+      "expected": 4,
+      "answer": "{\"answer\": 39}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-01\"}}"
+    },
+    {
+      "id": "P14-dev-0030",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "Compute the daily total of scheduled entries at 2040-02-28; give a whole number.",
+      "expected": 3,
+      "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040\"}}"
+    },
+    {
+      "id": "P14-dev-0010",
+      "skill": "cal.count_date",
+      "joint": false,
+      "core": false,
+      "prompt": "Return an integer equal to the count of appointments dated 2040-01-19.",
+      "expected": 4,
+      "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+      "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-01-19\"}}"
+    }
+  ],
+  "candidates": [
+    {
+      "proposal": "CALL| Use the calendar_list tool to determine the distinct venues for 2032-01-07 in alphabetical order.",
+      "valid": true,
+      "target_net": 0,
+      "old_lost": 0,
+      "after": [
+        {
+          "id": "P14-dev-0180",
+          "skill": "cal.list_locations",
+          "joint": false,
+          "core": true,
+          "prompt": "Deduplicate venues among the appointments dated 2040-12-24; present an ascending JSON array.",
+          "expected": [
+            "P14-dev-0180-Venue-A",
+            "P14-dev-0180-Venue-B",
+            "P14-dev-0180-Venue-C"
+          ],
+          "answer": "{\"answer\": [\"P14-dev-0180-Venue-C\", \"P14-dev-0180-Venue-B\", \"P14-dev-0180-Venue-A\"]}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-12-24\"}}"
+        },
+        {
+          "id": "P14-dev-0161",
+          "skill": "cal.list_locations",
+          "joint": true,
+          "core": true,
+          "prompt": "Build an alphabetic JSON array from the nonrepeated venues used on 2040-11-16.",
+          "expected": [
+            "P14-dev-0161-Venue-A",
+            "P14-dev-0161-Venue-B",
+            "P14-dev-0161-Venue-C"
+          ],
+          "answer": "{\"answer\": [\"P14-dev-0161-Venue-A\", \"P14-dev-0161-Venue-B\", \"P14-dev-0161-Venue-C\"]}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-11-16\"}}"
+        },
+        {
+          "id": "P14-dev-0201",
+          "skill": "cal.list_locations",
+          "joint": true,
+          "core": true,
+          "prompt": "Deduplicate venues among the appointments dated 2041-02-04; present an ascending JSON array.",
+          "expected": [
+            "P14-dev-0201-Venue-A",
+            "P14-dev-0201-Venue-B",
+            "P14-dev-0201-Venue-C"
+          ],
+          "answer": "{\"answer\": [\"P14-dev-0201-Venue-A\", \"P14-dev-0201-Venue-B\", \"P14-dev-0201-Venue-C\"]}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2041-02-04\"}}"
+        },
+        {
+          "id": "P14-dev-0274",
+          "skill": "cal.list_locations",
+          "joint": false,
+          "core": true,
+          "prompt": "Which different location strings are attached to 2041-06-30 entries? Alphabetize and emit a JSON array.",
+          "expected": [
+            "P14-dev-0274-Venue-A",
+            "P14-dev-0274-Venue-B",
+            "P14-dev-0274-Venue-C",
+            "P14-dev-0274-Venue-D"
+          ],
+          "answer": "```json\n[\n  \"P14-dev-0274-Venue-A\",\n  \"P14-dev-0274-Venue-B\",\n  \"P14-dev-0274-Venue-C\",\n  \"P14-dev-0274-Venue-D\"\n]\n```",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2041-06-30\"}}"
+        },
+        {
+          "id": "P14-dev-0040",
+          "skill": "cal.count_date",
+          "joint": true,
+          "core": true,
+          "prompt": "Although this date contains a year and month, count only the day 2040-03-19; integer answer.",
+          "expected": 4,
+          "answer": "{\"answer\": 4}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-03-19\"}}"
+        },
+        {
+          "id": "P14-dev-0016",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "How many diary entries are assigned to 2040-01-31? Respond with an integer.",
+          "expected": 4,
+          "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+          "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040\"}}"
+        },
+        {
+          "id": "P14-dev-0030",
+          "skill": "cal.count_date",
+          "joint": true,
+          "core": true,
+          "prompt": "Compute the daily total of scheduled entries at 2040-02-28; give a whole number.",
+          "expected": 3,
+          "answer": "{\"answer\": 3}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-02-28\"}}"
+        },
+        {
+          "id": "P14-dev-0010",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "Return an integer equal to the count of appointments dated 2040-01-19.",
+          "expected": 4,
+          "answer": "{\"error\": \"unknown event id: 2040-01-19\"}",
+          "call": "{\"tool\": \"calendar_attendees\", \"arguments\": {\"event_id\": \"2040-01-19\"}}"
+        }
+      ]
+    },
+    {
+      "proposal": "CALL|{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2032-01-07\"}}|",
+      "valid": true,
+      "target_net": -1,
+      "old_lost": 0,
+      "after": [
+        {
+          "id": "P14-dev-0180",
+          "skill": "cal.list_locations",
+          "joint": false,
+          "core": true,
+          "prompt": "Deduplicate venues among the appointments dated 2040-12-24; present an ascending JSON array.",
+          "expected": [
+            "P14-dev-0180-Venue-A",
+            "P14-dev-0180-Venue-B",
+            "P14-dev-0180-Venue-C"
+          ],
+          "answer": "{\"answer\": [\"P14-dev-0180-Venue-C\", \"P14-dev-0180-Venue-B\", \"P14-dev-0180-Venue-A\"]}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2040-12-24\"}}"
+        },
+        {
+          "id": "P14-dev-0161",
+          "skill": "cal.list_locations",
+          "joint": false,
+          "core": false,
+          "prompt": "Build an alphabetic JSON array from the nonrepeated venues used on 2040-11-16.",
+          "expected": [
+            "P14-dev-0161-Venue-A",
+            "P14-dev-0161-Venue-B",
+            "P14-dev-0161-Venue-C"
+          ],
+          "answer": "{\"error\": \"invalid tool call\", \"ok\": false}",
+          "call": "{\"answer\": [\"A\", \"B\", \"C\"]}"
+        },
+        {
+          "id": "P14-dev-0201",
+          "skill": "cal.list_locations",
+          "joint": true,
+          "core": true,
+          "prompt": "Deduplicate venues among the appointments dated 2041-02-04; present an ascending JSON array.",
+          "expected": [
+            "P14-dev-0201-Venue-A",
+            "P14-dev-0201-Venue-B",
+            "P14-dev-0201-Venue-C"
+          ],
+          "answer": "{\"answer\": [\"P14-dev-0201-Venue-A\", \"P14-dev-0201-Venue-B\", \"P14-dev-0201-Venue-C\"]}",
+          "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2041-02-04\"}}"
+        },
+        {
+          "id": "P14-dev-0274",
+          "skill": "cal.list_locations",
+          "joint": false,
+          "core": false,
+          "prompt": "Which different location strings are attached to 2041-06-30 entries? Alphabetize and emit a JSON array.",
+          "expected": [
+            "P14-dev-0274-Venue-A",
+            "P14-dev-0274-Venue-B",
+            "P14-dev-0274-Venue-C",
+            "P14-dev-0274-Venue-D"
+          ],
+          "answer": "{\"error\": \"unknown event id: 2041-06-30\", \"ok\": false}",
+          "call": "{\"tool\": \"calendar_attendees\", \"arguments\": {\"event_id\": \"2041-06-30\"}}"
+        },
+        {
+          "id": "P14-dev-0040",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "Although this date contains a year and month, count only the day 2040-03-19; integer answer.",
+          "expected": 4,
+          "answer": "{\"answer\": 39}",
+          "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-03\"}}"
+        },
+        {
+          "id": "P14-dev-0016",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "How many diary entries are assigned to 2040-01-31? Respond with an integer.",
+          "expected": 4,
+          "answer": "{\"answer\": 39}",
+          "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-01\"}}"
+        },
+        {
+          "id": "P14-dev-0030",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "Compute the daily total of scheduled entries at 2040-02-28; give a whole number.",
+          "expected": 3,
+          "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+          "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040\"}}"
+        },
+        {
+          "id": "P14-dev-0010",
+          "skill": "cal.count_date",
+          "joint": false,
+          "core": false,
+          "prompt": "Return an integer equal to the count of appointments dated 2040-01-19.",
+          "expected": 4,
+          "answer": "{\"error\": \"month must be YYYY-MM\", \"ok\": false}",
+          "call": "{\"tool\": \"calendar_count\", \"arguments\": {\"month\": \"2040-01-19\"}}"
+        }
+      ]
+    }
+  ],
+  "selected": []
+}

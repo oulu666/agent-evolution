@@ -1,0 +1,166 @@
+{
+  "id": 4,
+  "group": "plan_once",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "plan",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nCurrent board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [4, 5], \"box\": [3, 4]}\nAvailable actions: U D L R RESET\nActions taken: \nReason for request: Initial planning.\nGive a complete plan from the CURRENT state to the goal. Return JSON only, with steps containing action, box, and player. box and player are EXPECTED positions AFTER that action, each [row,column], 1-based including the outer walls. After a push the player occupies the box's previous square. Example schema: {\"steps\":[{\"action\":\"R\",\"box\":[2,4],\"player\":[2,3]}]}. Use at most 8 actions. The student will execute without further supervision unless the observed state diverges. Include RESET if recovery requires it.",
+      "output": "{\"steps\":[{\"action\":\"L\",\"box\":[3,3],\"player\":[3,4]},{\"action\":\"L\",\"box\":[3,2],\"player\":[3,3]},{\"action\":\"D\",\"box\":[4,2],\"player\":[3,2]}]}",
+      "input_tokens": 285,
+      "output_tokens": 163,
+      "reasoning_tokens": 102,
+      "total_tokens": 448
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nCurrent board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [4, 5], \"box\": [3, 4]}\nAvailable actions: U D L R RESET\nActions taken: \nRemaining teacher plan:\n[{\"action\": \"L\", \"box\": [3, 3], \"player\": [3, 4]}, {\"action\": \"L\", \"box\": [3, 2], \"player\": [3, 3]}, {\"action\": \"D\", \"box\": [4, 2], \"player\": [3, 2]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "L",
+      "input_tokens": 258,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 260
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nCurrent board:\n#######\n#.....#\n#.BP..#\n#G...##\n##....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [3, 4], \"box\": [3, 3]}\nAvailable actions: U D L R RESET\nActions taken: L\nRemaining teacher plan:\n[{\"action\": \"L\", \"box\": [3, 2], \"player\": [3, 3]}, {\"action\": \"D\", \"box\": [4, 2], \"player\": [3, 2]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "L",
+      "input_tokens": 233,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 235
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nCurrent board:\n#######\n#.....#\n#BP...#\n#G...##\n##....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [3, 3], \"box\": [3, 2]}\nAvailable actions: U D RESET\nActions taken: L L\nRemaining teacher plan:\n[{\"action\": \"D\", \"box\": [4, 2], \"player\": [3, 2]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "D",
+      "input_tokens": 208,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 210
+    }
+  ],
+  "actions": [
+    "L",
+    "L",
+    "D"
+  ],
+  "checks": [
+    {
+      "expected": {
+        "action": "L",
+        "box": [
+          3,
+          3
+        ],
+        "player": [
+          3,
+          4
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          4
+        ],
+        "box": [
+          3,
+          3
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "L",
+        "box": [
+          3,
+          2
+        ],
+        "player": [
+          3,
+          3
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          3
+        ],
+        "box": [
+          3,
+          2
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "D",
+        "box": [
+          4,
+          2
+        ],
+        "player": [
+          3,
+          2
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          2
+        ],
+        "box": [
+          4,
+          2
+        ]
+      },
+      "matched": true
+    }
+  ],
+  "plan": [
+    {
+      "action": "L",
+      "box": [
+        3,
+        3
+      ],
+      "player": [
+        3,
+        4
+      ]
+    },
+    {
+      "action": "L",
+      "box": [
+        3,
+        2
+      ],
+      "player": [
+        3,
+        3
+      ]
+    },
+    {
+      "action": "D",
+      "box": [
+        4,
+        2
+      ],
+      "player": [
+        3,
+        2
+      ]
+    }
+  ],
+  "cursor": 3,
+  "plans": 1,
+  "trigger": "",
+  "done": true,
+  "solved": true,
+  "tokens": 1153
+}

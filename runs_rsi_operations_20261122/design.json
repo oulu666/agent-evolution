@@ -1,0 +1,527 @@
+{
+  "checkpoint": "runs_ext_p11_eaar_v1/branches/A_seed20261108_eaar_v1/checkpoint",
+  "labels": {
+    "A": "reverse",
+    "B": "keep",
+    "C": "sort"
+  },
+  "patterns": [
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      0,
+      3,
+      1
+    ],
+    [
+      3,
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "task": "calendar_list, then postprocess only parsed list of strings in requested title-sorting scope",
+  "selector": "greedy one-token A/B/C before and after training evidence, fixed label order and policy",
+  "controls": [
+    "unmodified",
+    "before_feedback",
+    "after_feedback"
+  ],
+  "banks": {
+    "train": [
+      {
+        "id": "train-title-0",
+        "day": "2071-03-01",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-01. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Bloom",
+          "Bloom",
+          "Cedar"
+        ],
+        "source": [
+          "Bloom",
+          "Alto",
+          "Bloom",
+          "Cedar"
+        ]
+      },
+      {
+        "id": "train-title-1",
+        "day": "2071-03-02",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-02. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Alto",
+          "Bloom",
+          "Cedar"
+        ],
+        "source": [
+          "Cedar",
+          "Bloom",
+          "Alto",
+          "Alto"
+        ]
+      },
+      {
+        "id": "train-title-2",
+        "day": "2071-03-03",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-03. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Alto",
+          "Bloom",
+          "Cedar"
+        ],
+        "source": [
+          "Alto",
+          "Alto",
+          "Bloom",
+          "Cedar"
+        ]
+      },
+      {
+        "id": "train-title-3",
+        "day": "2071-03-04",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-04. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Bloom",
+          "Cedar",
+          "Delta"
+        ],
+        "source": [
+          "Cedar",
+          "Alto",
+          "Delta",
+          "Bloom"
+        ]
+      },
+      {
+        "id": "train-title-4",
+        "day": "2071-03-05",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-05. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Bloom",
+          "Cedar",
+          "Delta"
+        ],
+        "source": [
+          "Delta",
+          "Cedar",
+          "Bloom",
+          "Alto"
+        ]
+      },
+      {
+        "id": "train-title-5",
+        "day": "2071-03-06",
+        "skill": "title",
+        "prompt": "Collect every event title on 2071-03-06. Return a JSON array in ascending order, keeping duplicates.",
+        "gold": [
+          "Alto",
+          "Bloom",
+          "Cedar",
+          "Delta"
+        ],
+        "source": [
+          "Alto",
+          "Bloom",
+          "Cedar",
+          "Delta"
+        ]
+      }
+    ],
+    "holdout": [
+      {
+        "id": "holdout-title-0",
+        "day": "2073-03-01",
+        "skill": "title",
+        "prompt": "For 2073-03-01, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Elm",
+          "Kite",
+          "Kite",
+          "Navy"
+        ],
+        "source": [
+          "Kite",
+          "Elm",
+          "Kite",
+          "Navy"
+        ]
+      },
+      {
+        "id": "hold-location-0",
+        "day": "2073-03-01",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-01, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-0",
+        "day": "2073-03-01",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-01? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-1",
+        "day": "2073-03-02",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-02 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Coral",
+          "Coral",
+          "Elm",
+          "Kite"
+        ],
+        "source": [
+          "Kite",
+          "Elm",
+          "Coral",
+          "Coral"
+        ]
+      },
+      {
+        "id": "hold-location-1",
+        "day": "2073-03-02",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-02, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-1",
+        "day": "2073-03-02",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-02? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-2",
+        "day": "2073-03-03",
+        "skill": "title",
+        "prompt": "For 2073-03-03, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Birch",
+          "Birch",
+          "Kite",
+          "Slate"
+        ],
+        "source": [
+          "Birch",
+          "Birch",
+          "Kite",
+          "Slate"
+        ]
+      },
+      {
+        "id": "hold-location-2",
+        "day": "2073-03-03",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-03, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-2",
+        "day": "2073-03-03",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-03? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-3",
+        "day": "2073-03-04",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-04 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Grove",
+          "Iris",
+          "Pearl",
+          "Slate"
+        ],
+        "source": [
+          "Pearl",
+          "Grove",
+          "Slate",
+          "Iris"
+        ]
+      },
+      {
+        "id": "hold-location-3",
+        "day": "2073-03-04",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-04, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-3",
+        "day": "2073-03-04",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-04? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-4",
+        "day": "2073-03-05",
+        "skill": "title",
+        "prompt": "For 2073-03-05, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Grove",
+          "Reed",
+          "Slate",
+          "Zinc"
+        ],
+        "source": [
+          "Zinc",
+          "Slate",
+          "Reed",
+          "Grove"
+        ]
+      },
+      {
+        "id": "hold-location-4",
+        "day": "2073-03-05",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-05, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-4",
+        "day": "2073-03-05",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-05? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-5",
+        "day": "2073-03-06",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-06 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Fern",
+          "Haze",
+          "Jade",
+          "Kite"
+        ],
+        "source": [
+          "Fern",
+          "Haze",
+          "Jade",
+          "Kite"
+        ]
+      },
+      {
+        "id": "hold-location-5",
+        "day": "2073-03-06",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-06, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-5",
+        "day": "2073-03-06",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-06? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-6",
+        "day": "2073-03-07",
+        "skill": "title",
+        "prompt": "For 2073-03-07, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Amber",
+          "Jade",
+          "Jade",
+          "Kite"
+        ],
+        "source": [
+          "Jade",
+          "Amber",
+          "Jade",
+          "Kite"
+        ]
+      },
+      {
+        "id": "hold-location-6",
+        "day": "2073-03-07",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-07, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-6",
+        "day": "2073-03-07",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-07? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-7",
+        "day": "2073-03-08",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-08 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Amber",
+          "Amber",
+          "Coral",
+          "Lime"
+        ],
+        "source": [
+          "Lime",
+          "Coral",
+          "Amber",
+          "Amber"
+        ]
+      },
+      {
+        "id": "hold-location-7",
+        "day": "2073-03-08",
+        "skill": "location",
+        "prompt": "List the distinct locations on 2073-03-08, sorted alphabetically, as a JSON array.",
+        "gold": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ]
+      },
+      {
+        "id": "hold-count-7",
+        "day": "2073-03-08",
+        "skill": "count",
+        "prompt": "How many events occur on 2073-03-08? Return a single integer.",
+        "gold": 4
+      },
+      {
+        "id": "holdout-title-8",
+        "day": "2073-03-09",
+        "skill": "title",
+        "prompt": "For 2073-03-09, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Elm",
+          "Elm",
+          "Iris",
+          "Opal"
+        ],
+        "source": [
+          "Elm",
+          "Elm",
+          "Iris",
+          "Opal"
+        ]
+      },
+      {
+        "id": "holdout-title-9",
+        "day": "2073-03-10",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-10 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Coral",
+          "Dune",
+          "Kite",
+          "Vale"
+        ],
+        "source": [
+          "Kite",
+          "Coral",
+          "Vale",
+          "Dune"
+        ]
+      },
+      {
+        "id": "holdout-title-10",
+        "day": "2073-03-11",
+        "skill": "title",
+        "prompt": "For 2073-03-11, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+        "gold": [
+          "Amber",
+          "Opal",
+          "Quartz",
+          "Thyme"
+        ],
+        "source": [
+          "Thyme",
+          "Quartz",
+          "Opal",
+          "Amber"
+        ]
+      },
+      {
+        "id": "holdout-title-11",
+        "day": "2073-03-12",
+        "skill": "title",
+        "prompt": "Return the titles of all events on 2073-03-12 in A to Z order as a JSON array, including repeats.",
+        "gold": [
+          "Haze",
+          "Jade",
+          "Opal",
+          "Zinc"
+        ],
+        "source": [
+          "Haze",
+          "Jade",
+          "Opal",
+          "Zinc"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,5626 @@
+[
+  {
+    "variant": 0,
+    "truth": {
+      "key": "begins",
+      "direction": "asc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "964",
+          "977"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "190",
+          "361",
+          "888"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "901",
+        "339",
+        "161"
+      ],
+      [
+        "169",
+        "955",
+        "865"
+      ],
+      [
+        "179",
+        "903",
+        "390"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "begins",
+        "direction": "asc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161"
+          ],
+          [
+            "124",
+            "169"
+          ],
+          [
+            "179",
+            "390"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901",
+            "878"
+          ],
+          [
+            "955",
+            "865"
+          ],
+          [
+            "903",
+            "829"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "begins",
+          "direction": "asc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "901",
+            "339",
+            "161"
+          ],
+          [
+            "169",
+            "955",
+            "865"
+          ],
+          [
+            "179",
+            "903",
+            "390"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "begins",
+      "direction": "asc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "964",
+          "977"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "190",
+          "361",
+          "888",
+          "475",
+          "650"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "901",
+        "339",
+        "161",
+        "867",
+        "128"
+      ],
+      [
+        "169",
+        "955",
+        "865",
+        "567",
+        "124"
+      ],
+      [
+        "179",
+        "903",
+        "390",
+        "829"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "begins",
+        "direction": "asc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161"
+          ],
+          [
+            "124",
+            "169"
+          ],
+          [
+            "179",
+            "390"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901",
+            "878"
+          ],
+          [
+            "955",
+            "865"
+          ],
+          [
+            "903",
+            "829"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "begins",
+          "direction": "asc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "901",
+            "339",
+            "161",
+            "867",
+            "128"
+          ],
+          [
+            "169",
+            "955",
+            "865",
+            "567",
+            "124"
+          ],
+          [
+            "179",
+            "903",
+            "390",
+            "829"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "begins",
+      "direction": "desc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "977",
+          "964"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "555",
+          "297",
+          "264"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "767",
+        "770",
+        "441"
+      ],
+      [
+        "352",
+        "331",
+        "124"
+      ],
+      [
+        "829",
+        "390",
+        "903"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "begins",
+        "direction": "desc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128"
+          ],
+          [
+            "124"
+          ],
+          [
+            "179"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "begins",
+          "direction": "desc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "767",
+            "770",
+            "441"
+          ],
+          [
+            "352",
+            "331",
+            "124"
+          ],
+          [
+            "829",
+            "390",
+            "903"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "begins",
+      "direction": "desc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "977",
+          "964"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "555",
+          "297",
+          "264",
+          "650",
+          "475"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "767",
+        "770",
+        "441",
+        "376",
+        "878"
+      ],
+      [
+        "352",
+        "331",
+        "124",
+        "567",
+        "865"
+      ],
+      [
+        "829",
+        "390",
+        "903",
+        "179"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "begins",
+        "direction": "desc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "begins",
+          "direction": "desc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "767",
+            "770",
+            "441",
+            "376",
+            "878"
+          ],
+          [
+            "352",
+            "331",
+            "124",
+            "567",
+            "865"
+          ],
+          [
+            "829",
+            "390",
+            "903",
+            "179"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "created",
+      "direction": "asc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "964",
+          "977"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "297",
+          "555",
+          "650"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "901",
+        "339",
+        "161"
+      ],
+      [
+        "955",
+        "331",
+        "169"
+      ],
+      [
+        "390",
+        "829",
+        "179"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "created",
+        "direction": "asc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161"
+          ],
+          [
+            "124",
+            "169"
+          ],
+          [
+            "179",
+            "390"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901",
+            "878"
+          ],
+          [
+            "955",
+            "865"
+          ],
+          [
+            "903",
+            "829"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "created",
+          "direction": "asc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "901",
+            "339",
+            "161"
+          ],
+          [
+            "955",
+            "331",
+            "169"
+          ],
+          [
+            "390",
+            "829",
+            "179"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "created",
+      "direction": "asc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "964",
+          "977"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "297",
+          "555",
+          "650",
+          "475",
+          "264"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "901",
+        "339",
+        "161",
+        "878",
+        "770"
+      ],
+      [
+        "955",
+        "331",
+        "169",
+        "567",
+        "352"
+      ],
+      [
+        "390",
+        "829",
+        "179",
+        "903"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "created",
+        "direction": "asc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161"
+          ],
+          [
+            "124",
+            "169"
+          ],
+          [
+            "179",
+            "390"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901",
+            "878"
+          ],
+          [
+            "955",
+            "865"
+          ],
+          [
+            "903",
+            "829"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "created",
+          "direction": "asc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "901",
+            "339",
+            "161",
+            "878",
+            "770"
+          ],
+          [
+            "955",
+            "331",
+            "169",
+            "567",
+            "352"
+          ],
+          [
+            "390",
+            "829",
+            "179",
+            "903"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "created",
+      "direction": "desc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "977",
+          "964"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "888",
+          "190",
+          "361"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "767",
+        "441",
+        "128"
+      ],
+      [
+        "124",
+        "865",
+        "352"
+      ],
+      [
+        "903",
+        "179",
+        "829"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "created",
+        "direction": "desc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128"
+          ],
+          [
+            "124"
+          ],
+          [
+            "179"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "created",
+          "direction": "desc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "767",
+            "441",
+            "128"
+          ],
+          [
+            "124",
+            "865",
+            "352"
+          ],
+          [
+            "903",
+            "179",
+            "829"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 0,
+    "truth": {
+      "key": "created",
+      "direction": "desc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "964",
+            "begins": 9,
+            "created": 40
+          },
+          {
+            "id": "977",
+            "begins": 10,
+            "created": 41
+          }
+        ],
+        "returned": [
+          "977",
+          "964"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "361",
+            "begins": 10,
+            "created": 45
+          },
+          {
+            "id": "297",
+            "begins": 15,
+            "created": 40
+          },
+          {
+            "id": "264",
+            "begins": 14,
+            "created": 44
+          },
+          {
+            "id": "190",
+            "begins": 9,
+            "created": 46
+          },
+          {
+            "id": "555",
+            "begins": 16,
+            "created": 41
+          },
+          {
+            "id": "888",
+            "begins": 11,
+            "created": 47
+          },
+          {
+            "id": "650",
+            "begins": 13,
+            "created": 42
+          },
+          {
+            "id": "475",
+            "begins": 12,
+            "created": 43
+          }
+        ],
+        "returned": [
+          "888",
+          "190",
+          "361",
+          "264",
+          "475"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "770",
+          "begins": 18,
+          "created": 44
+        },
+        {
+          "id": "767",
+          "begins": 19,
+          "created": 50
+        },
+        {
+          "id": "878",
+          "begins": 15,
+          "created": 43
+        },
+        {
+          "id": "867",
+          "begins": 12,
+          "created": 45
+        },
+        {
+          "id": "222",
+          "begins": 14,
+          "created": 47
+        },
+        {
+          "id": "376",
+          "begins": 16,
+          "created": 46
+        },
+        {
+          "id": "441",
+          "begins": 17,
+          "created": 49
+        },
+        {
+          "id": "128",
+          "begins": 13,
+          "created": 48
+        },
+        {
+          "id": "901",
+          "begins": 9,
+          "created": 40
+        },
+        {
+          "id": "339",
+          "begins": 10,
+          "created": 41
+        },
+        {
+          "id": "161",
+          "begins": 11,
+          "created": 42
+        }
+      ],
+      [
+        {
+          "id": "567",
+          "begins": 12,
+          "created": 43
+        },
+        {
+          "id": "865",
+          "begins": 11,
+          "created": 45
+        },
+        {
+          "id": "955",
+          "begins": 10,
+          "created": 40
+        },
+        {
+          "id": "352",
+          "begins": 15,
+          "created": 44
+        },
+        {
+          "id": "169",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "331",
+          "begins": 14,
+          "created": 41
+        },
+        {
+          "id": "124",
+          "begins": 13,
+          "created": 46
+        }
+      ],
+      [
+        {
+          "id": "390",
+          "begins": 11,
+          "created": 40
+        },
+        {
+          "id": "179",
+          "begins": 9,
+          "created": 42
+        },
+        {
+          "id": "903",
+          "begins": 10,
+          "created": 43
+        },
+        {
+          "id": "829",
+          "begins": 12,
+          "created": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "767",
+        "441",
+        "128",
+        "222",
+        "376"
+      ],
+      [
+        "124",
+        "865",
+        "352",
+        "567",
+        "169"
+      ],
+      [
+        "903",
+        "179",
+        "829",
+        "390"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "created",
+        "direction": "desc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "128",
+            "161",
+            "222",
+            "339",
+            "376",
+            "441",
+            "767",
+            "770",
+            "867",
+            "878"
+          ],
+          [
+            "124",
+            "169",
+            "331",
+            "352",
+            "567",
+            "865",
+            "955"
+          ],
+          [
+            "179",
+            "390",
+            "829",
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "901"
+          ],
+          [
+            "955"
+          ],
+          [
+            "903"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "created",
+          "direction": "desc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "767",
+            "441",
+            "128",
+            "222",
+            "376"
+          ],
+          [
+            "124",
+            "865",
+            "352",
+            "567",
+            "169"
+          ],
+          [
+            "903",
+            "179",
+            "829",
+            "390"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "event_time",
+      "direction": "asc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "893",
+          "138"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "909",
+          "552",
+          "186"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "501",
+        "455",
+        "540"
+      ],
+      [
+        "217",
+        "126",
+        "210"
+      ],
+      [
+        "513",
+        "852",
+        "105"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "event_time",
+        "direction": "asc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "event_time",
+          "direction": "asc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "501",
+            "455",
+            "540"
+          ],
+          [
+            "217",
+            "126",
+            "210"
+          ],
+          [
+            "513",
+            "852",
+            "105"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "event_time",
+      "direction": "asc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "893",
+          "138"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "909",
+          "552",
+          "186",
+          "852",
+          "622"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "501",
+        "455",
+        "540",
+        "172",
+        "631"
+      ],
+      [
+        "217",
+        "126",
+        "210",
+        "372",
+        "406"
+      ],
+      [
+        "513",
+        "852",
+        "105",
+        "641"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "event_time",
+        "direction": "asc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "172"
+          ],
+          [
+            "126"
+          ],
+          [
+            "105"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "event_time",
+          "direction": "asc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "501",
+            "455",
+            "540",
+            "172",
+            "631"
+          ],
+          [
+            "217",
+            "126",
+            "210",
+            "372",
+            "406"
+          ],
+          [
+            "513",
+            "852",
+            "105",
+            "641"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "138",
+          "893"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "332",
+          "486",
+          "231"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "787",
+        "558",
+        "893"
+      ],
+      [
+        "620",
+        "809",
+        "406"
+      ],
+      [
+        "641",
+        "105",
+        "852"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "event_time",
+        "direction": "desc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893"
+          ],
+          [
+            "620",
+            "809",
+            "406"
+          ],
+          [
+            "641",
+            "105",
+            "852"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "138",
+          "893"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "332",
+          "486",
+          "231",
+          "622",
+          "852"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "787",
+        "558",
+        "893",
+        "709",
+        "620"
+      ],
+      [
+        "620",
+        "809",
+        "406",
+        "372",
+        "210"
+      ],
+      [
+        "641",
+        "105",
+        "852",
+        "513"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "event_time",
+        "direction": "desc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 1
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "added_at",
+      "direction": "asc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "893",
+          "138"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "552",
+          "852",
+          "231"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "558",
+        "620",
+        "287"
+      ],
+      [
+        "620",
+        "217",
+        "126"
+      ],
+      [
+        "852",
+        "641",
+        "105"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "added_at",
+        "direction": "asc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "added_at",
+          "direction": "asc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "558",
+            "620",
+            "287"
+          ],
+          [
+            "620",
+            "217",
+            "126"
+          ],
+          [
+            "852",
+            "641",
+            "105"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "added_at",
+      "direction": "asc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "893",
+          "138"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "552",
+          "852",
+          "231",
+          "332",
+          "622"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "558",
+        "620",
+        "287",
+        "172",
+        "893"
+      ],
+      [
+        "620",
+        "217",
+        "126",
+        "210",
+        "372"
+      ],
+      [
+        "852",
+        "641",
+        "105",
+        "513"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "added_at",
+        "direction": "asc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "893"
+          ],
+          [
+            "809"
+          ],
+          [
+            "852"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "172"
+          ],
+          [
+            "126"
+          ],
+          [
+            "105"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "added_at",
+          "direction": "asc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "558",
+            "620",
+            "287",
+            "172",
+            "893"
+          ],
+          [
+            "620",
+            "217",
+            "126",
+            "210",
+            "372"
+          ],
+          [
+            "852",
+            "641",
+            "105",
+            "513"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "added_at",
+      "direction": "desc",
+      "take": 3
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "138",
+          "893"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "486",
+          "186",
+          "909"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "631",
+        "709",
+        "455"
+      ],
+      [
+        "406",
+        "809",
+        "372"
+      ],
+      [
+        "513",
+        "105",
+        "641"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "added_at",
+        "direction": "desc",
+        "take": 3
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "added_at",
+          "direction": "desc",
+          "take": 3
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "631",
+            "709",
+            "455"
+          ],
+          [
+            "406",
+            "809",
+            "372"
+          ],
+          [
+            "513",
+            "105",
+            "641"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  },
+  {
+    "variant": 1,
+    "truth": {
+      "key": "added_at",
+      "direction": "desc",
+      "take": 5
+    },
+    "calibration": [
+      {
+        "records": [
+          {
+            "id": "893",
+            "event_time": 9,
+            "added_at": 40
+          },
+          {
+            "id": "138",
+            "event_time": 10,
+            "added_at": 41
+          }
+        ],
+        "returned": [
+          "138",
+          "893"
+        ]
+      },
+      {
+        "records": [
+          {
+            "id": "852",
+            "event_time": 12,
+            "added_at": 41
+          },
+          {
+            "id": "909",
+            "event_time": 9,
+            "added_at": 45
+          },
+          {
+            "id": "486",
+            "event_time": 15,
+            "added_at": 47
+          },
+          {
+            "id": "552",
+            "event_time": 10,
+            "added_at": 40
+          },
+          {
+            "id": "332",
+            "event_time": 16,
+            "added_at": 43
+          },
+          {
+            "id": "622",
+            "event_time": 13,
+            "added_at": 44
+          },
+          {
+            "id": "231",
+            "event_time": 14,
+            "added_at": 42
+          },
+          {
+            "id": "186",
+            "event_time": 11,
+            "added_at": 46
+          }
+        ],
+        "returned": [
+          "486",
+          "186",
+          "909",
+          "622",
+          "332"
+        ]
+      }
+    ],
+    "held_inputs": [
+      [
+        {
+          "id": "558",
+          "event_time": 18,
+          "added_at": 40
+        },
+        {
+          "id": "893",
+          "event_time": 17,
+          "added_at": 44
+        },
+        {
+          "id": "172",
+          "event_time": 12,
+          "added_at": 43
+        },
+        {
+          "id": "455",
+          "event_time": 10,
+          "added_at": 48
+        },
+        {
+          "id": "787",
+          "event_time": 19,
+          "added_at": 46
+        },
+        {
+          "id": "631",
+          "event_time": 13,
+          "added_at": 50
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 41
+        },
+        {
+          "id": "501",
+          "event_time": 9,
+          "added_at": 45
+        },
+        {
+          "id": "540",
+          "event_time": 11,
+          "added_at": 47
+        },
+        {
+          "id": "709",
+          "event_time": 16,
+          "added_at": 49
+        },
+        {
+          "id": "287",
+          "event_time": 14,
+          "added_at": 42
+        }
+      ],
+      [
+        {
+          "id": "406",
+          "event_time": 13,
+          "added_at": 46
+        },
+        {
+          "id": "372",
+          "event_time": 12,
+          "added_at": 44
+        },
+        {
+          "id": "217",
+          "event_time": 9,
+          "added_at": 41
+        },
+        {
+          "id": "210",
+          "event_time": 11,
+          "added_at": 43
+        },
+        {
+          "id": "126",
+          "event_time": 10,
+          "added_at": 42
+        },
+        {
+          "id": "809",
+          "event_time": 14,
+          "added_at": 45
+        },
+        {
+          "id": "620",
+          "event_time": 15,
+          "added_at": 40
+        }
+      ],
+      [
+        {
+          "id": "513",
+          "event_time": 9,
+          "added_at": 43
+        },
+        {
+          "id": "852",
+          "event_time": 10,
+          "added_at": 40
+        },
+        {
+          "id": "105",
+          "event_time": 11,
+          "added_at": 42
+        },
+        {
+          "id": "641",
+          "event_time": 12,
+          "added_at": 41
+        }
+      ]
+    ],
+    "held_returns": [
+      [
+        "631",
+        "709",
+        "455",
+        "540",
+        "787"
+      ],
+      [
+        "406",
+        "809",
+        "372",
+        "210",
+        "126"
+      ],
+      [
+        "513",
+        "105",
+        "641",
+        "852"
+      ]
+    ],
+    "consistent_rules": [
+      {
+        "key": "added_at",
+        "direction": "desc",
+        "take": 5
+      }
+    ],
+    "stages": {
+      "schema": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 10\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 10
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          true,
+          false
+        ],
+        "predictions": [
+          [
+            "787",
+            "558",
+            "893",
+            "709",
+            "620",
+            "287",
+            "631",
+            "172",
+            "540",
+            "455"
+          ],
+          [
+            "620",
+            "809",
+            "406",
+            "372",
+            "210",
+            "126",
+            "217"
+          ],
+          [
+            "641",
+            "105",
+            "852",
+            "513"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "first": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "revision": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "exact_contract": false,
+        "matches_calibration": [
+          false,
+          false
+        ],
+        "predictions": [
+          [
+            "787"
+          ],
+          [
+            "620"
+          ],
+          [
+            "641"
+          ]
+        ],
+        "held_correct": 0
+      },
+      "enumeration": {
+        "rule": {
+          "key": "added_at",
+          "direction": "desc",
+          "take": 5
+        },
+        "exact_contract": true,
+        "matches_calibration": [
+          true,
+          true
+        ],
+        "predictions": [
+          [
+            "631",
+            "709",
+            "455",
+            "540",
+            "787"
+          ],
+          [
+            "406",
+            "809",
+            "372",
+            "210",
+            "126"
+          ],
+          [
+            "513",
+            "105",
+            "641",
+            "852"
+          ]
+        ],
+        "held_correct": 3
+      }
+    }
+  }
+]

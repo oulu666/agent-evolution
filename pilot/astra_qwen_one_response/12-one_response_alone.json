@@ -1,0 +1,34 @@
+{
+  "id": 12,
+  "group": "one_response_alone",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "complete_sequence",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.P...#\n#.....#\n#...#.#\n#..#..#\n#GB...#\n#######\nInitial history: attempted to walk U twice, both blocked.\nCurrent coordinates: {\"player\": [2, 3], \"box\": [6, 3]}\nAvailable initial actions: L R RESET\nProvide the entire action sequence to solve this board in ONE response. The environment will execute the sequence without further model calls. Reply only with a JSON array of at most 8 action labels, for example [\"R\",\"U\"].",
+      "output": "[\"R\", \"D\", \"R\", \"U\", \"R\", \"U\", \"R\", \"U\"]",
+      "input_tokens": 177,
+      "output_tokens": 25,
+      "reasoning_tokens": 0,
+      "total_tokens": 202
+    }
+  ],
+  "actions": [
+    "R",
+    "INVALID(D)"
+  ],
+  "done": true,
+  "proposed_actions": [
+    "R",
+    "D",
+    "R",
+    "U",
+    "R",
+    "U",
+    "R",
+    "U"
+  ],
+  "stop_reason": "illegal_action",
+  "solved": false,
+  "tokens": 202
+}

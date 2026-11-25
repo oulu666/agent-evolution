@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "holdout-title-0",
+    "day": "2073-03-01",
+    "skill": "title",
+    "prompt": "For 2073-03-01, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Elm",
+      "Kite",
+      "Kite",
+      "Navy"
+    ],
+    "source": [
+      "Kite",
+      "Elm",
+      "Kite",
+      "Navy"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-01\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-01-0",
+          "date": "2073-03-01",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-1",
+          "date": "2073-03-01",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-2",
+          "date": "2073-03-01",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-3",
+          "date": "2073-03-01",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Navy",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Elm\", \"Kite\", \"Navy\"]}",
+    "valid": true,
+    "parsed": [
+      "Elm",
+      "Kite",
+      "Navy"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Elm",
+          "Kite",
+          "Navy"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Elm",
+          "Kite",
+          "Navy"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Elm",
+          "Kite",
+          "Navy"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-0",
+    "day": "2073-03-01",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-01, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-01\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-01-0",
+          "date": "2073-03-01",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-1",
+          "date": "2073-03-01",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-2",
+          "date": "2073-03-01",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-3",
+          "date": "2073-03-01",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Navy",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Room A\", \"Room B\", \"Room C\"]}",
+    "valid": true,
+    "parsed": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "hold-count-0",
+    "day": "2073-03-01",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-01? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-01\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-01-0",
+          "date": "2073-03-01",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-1",
+          "date": "2073-03-01",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-2",
+          "date": "2073-03-01",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-01-3",
+          "date": "2073-03-01",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Navy",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-1",
+    "day": "2073-03-02",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-02 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Coral",
+      "Coral",
+      "Elm",
+      "Kite"
+    ],
+    "source": [
+      "Kite",
+      "Elm",
+      "Coral",
+      "Coral"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-02\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-02-0",
+          "date": "2073-03-02",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-1",
+          "date": "2073-03-02",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-2",
+          "date": "2073-03-02",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Coral",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-3",
+          "date": "2073-03-02",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Coral",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  \"Coral\",\n  \"Elm\",\n  \"Kite\",\n  \"Coral\"\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-1",
+    "day": "2073-03-02",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-02, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-02\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-02-0",
+          "date": "2073-03-02",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-1",
+          "date": "2073-03-02",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-2",
+          "date": "2073-03-02",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Coral",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-3",
+          "date": "2073-03-02",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Coral",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Room A\", \"Room B\", \"Room C\"]}",
+    "valid": true,
+    "parsed": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "hold-count-1",
+    "day": "2073-03-02",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-02? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-02\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-02-0",
+          "date": "2073-03-02",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-1",
+          "date": "2073-03-02",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-2",
+          "date": "2073-03-02",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Coral",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-02-3",
+          "date": "2073-03-02",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Coral",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-2",
+    "day": "2073-03-03",
+    "skill": "title",
+    "prompt": "For 2073-03-03, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Birch",
+      "Birch",
+      "Kite",
+      "Slate"
+    ],
+    "source": [
+      "Birch",
+      "Birch",
+      "Kite",
+      "Slate"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-03\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-03-0",
+          "date": "2073-03-03",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Birch",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-1",
+          "date": "2073-03-03",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Birch",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-2",
+          "date": "2073-03-03",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-3",
+          "date": "2073-03-03",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Slate",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Birch\", \"Kite\", \"Slate\"]}",
+    "valid": true,
+    "parsed": [
+      "Birch",
+      "Kite",
+      "Slate"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Birch",
+          "Kite",
+          "Slate"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Birch",
+          "Kite",
+          "Slate"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Birch",
+          "Kite",
+          "Slate"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-2",
+    "day": "2073-03-03",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-03, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-03\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-03-0",
+          "date": "2073-03-03",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Birch",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-1",
+          "date": "2073-03-03",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Birch",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-2",
+          "date": "2073-03-03",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-3",
+          "date": "2073-03-03",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Slate",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"location\": \"A\"},\n  {\"location\": \"B\"},\n  {\"location\": \"C\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-count-2",
+    "day": "2073-03-03",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-03? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-03\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-03-0",
+          "date": "2073-03-03",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Birch",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-1",
+          "date": "2073-03-03",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Birch",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-2",
+          "date": "2073-03-03",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-03-3",
+          "date": "2073-03-03",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Slate",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-3",
+    "day": "2073-03-04",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-04 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Grove",
+      "Iris",
+      "Pearl",
+      "Slate"
+    ],
+    "source": [
+      "Pearl",
+      "Grove",
+      "Slate",
+      "Iris"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-04\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-04-0",
+          "date": "2073-03-04",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Pearl",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-1",
+          "date": "2073-03-04",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Grove",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-2",
+          "date": "2073-03-04",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Slate",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-3",
+          "date": "2073-03-04",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Iris",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  \"Grove\",\n  \"Iris\",\n  \"Pearl\",\n  \"Slate\"\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-3",
+    "day": "2073-03-04",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-04, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-04\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-04-0",
+          "date": "2073-03-04",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Pearl",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-1",
+          "date": "2073-03-04",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Grove",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-2",
+          "date": "2073-03-04",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Slate",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-3",
+          "date": "2073-03-04",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Iris",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"location\": \"A\"},\n  {\"location\": \"B\"},\n  {\"location\": \"C\"},\n  {\"location\": \"Room A\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-count-3",
+    "day": "2073-03-04",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-04? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-04\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-04-0",
+          "date": "2073-03-04",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Pearl",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-1",
+          "date": "2073-03-04",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Grove",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-2",
+          "date": "2073-03-04",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Slate",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-04-3",
+          "date": "2073-03-04",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Iris",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-4",
+    "day": "2073-03-05",
+    "skill": "title",
+    "prompt": "For 2073-03-05, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Grove",
+      "Reed",
+      "Slate",
+      "Zinc"
+    ],
+    "source": [
+      "Zinc",
+      "Slate",
+      "Reed",
+      "Grove"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-05\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-05-0",
+          "date": "2073-03-05",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Zinc",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-1",
+          "date": "2073-03-05",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Slate",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-2",
+          "date": "2073-03-05",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Reed",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-3",
+          "date": "2073-03-05",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Grove",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Zinc\", \"Slate\", \"Reed\", \"Grove\"]}",
+    "valid": true,
+    "parsed": [
+      "Zinc",
+      "Slate",
+      "Reed",
+      "Grove"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Zinc",
+          "Slate",
+          "Reed",
+          "Grove"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Zinc",
+          "Slate",
+          "Reed",
+          "Grove"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Zinc",
+          "Slate",
+          "Reed",
+          "Grove"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-4",
+    "day": "2073-03-05",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-05, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-05\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-05-0",
+          "date": "2073-03-05",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Zinc",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-1",
+          "date": "2073-03-05",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Slate",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-2",
+          "date": "2073-03-05",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Reed",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-3",
+          "date": "2073-03-05",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Grove",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"location\": \"A\"},\n  {\"location\": \"B\"},\n  {\"location\": \"C\"},\n  {\"location\": \"Room B\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-count-4",
+    "day": "2073-03-05",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-05? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-05\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-05-0",
+          "date": "2073-03-05",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Zinc",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-1",
+          "date": "2073-03-05",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Slate",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-2",
+          "date": "2073-03-05",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Reed",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-05-3",
+          "date": "2073-03-05",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Grove",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-5",
+    "day": "2073-03-06",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-06 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Fern",
+      "Haze",
+      "Jade",
+      "Kite"
+    ],
+    "source": [
+      "Fern",
+      "Haze",
+      "Jade",
+      "Kite"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-06\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-06-0",
+          "date": "2073-03-06",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Fern",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-1",
+          "date": "2073-03-06",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Haze",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-2",
+          "date": "2073-03-06",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-3",
+          "date": "2073-03-06",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  \"Fern\",\n  \"Haze\",\n  \"Jade\",\n  \"Kite\"\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-5",
+    "day": "2073-03-06",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-06, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-06\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-06-0",
+          "date": "2073-03-06",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Fern",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-1",
+          "date": "2073-03-06",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Haze",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-2",
+          "date": "2073-03-06",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-3",
+          "date": "2073-03-06",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"location\": \"A\"},\n  {\"location\": \"B\"},\n  {\"location\": \"C\"},\n  {\"location\": \"Room B\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-count-5",
+    "day": "2073-03-06",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-06? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-06\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-06-0",
+          "date": "2073-03-06",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Fern",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-1",
+          "date": "2073-03-06",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Haze",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-2",
+          "date": "2073-03-06",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-06-3",
+          "date": "2073-03-06",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-6",
+    "day": "2073-03-07",
+    "skill": "title",
+    "prompt": "For 2073-03-07, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Amber",
+      "Jade",
+      "Jade",
+      "Kite"
+    ],
+    "source": [
+      "Jade",
+      "Amber",
+      "Jade",
+      "Kite"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-07\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-07-0",
+          "date": "2073-03-07",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-1",
+          "date": "2073-03-07",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Amber",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-2",
+          "date": "2073-03-07",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-3",
+          "date": "2073-03-07",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Amber\", \"Jade\", \"Kite\"]}",
+    "valid": true,
+    "parsed": [
+      "Amber",
+      "Jade",
+      "Kite"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Amber",
+          "Jade",
+          "Kite"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Amber",
+          "Jade",
+          "Kite"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Amber",
+          "Jade",
+          "Kite"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-6",
+    "day": "2073-03-07",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-07, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-07\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-07-0",
+          "date": "2073-03-07",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-1",
+          "date": "2073-03-07",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Amber",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-2",
+          "date": "2073-03-07",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-3",
+          "date": "2073-03-07",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Room A\", \"Room B\", \"Room C\"]}",
+    "valid": true,
+    "parsed": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "hold-count-6",
+    "day": "2073-03-07",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-07? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-07\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-07-0",
+          "date": "2073-03-07",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-1",
+          "date": "2073-03-07",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Amber",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-2",
+          "date": "2073-03-07",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Jade",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-07-3",
+          "date": "2073-03-07",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Kite",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-7",
+    "day": "2073-03-08",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-08 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Amber",
+      "Amber",
+      "Coral",
+      "Lime"
+    ],
+    "source": [
+      "Lime",
+      "Coral",
+      "Amber",
+      "Amber"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-08\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-08-0",
+          "date": "2073-03-08",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Lime",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-1",
+          "date": "2073-03-08",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Coral",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-2",
+          "date": "2073-03-08",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Amber",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-3",
+          "date": "2073-03-08",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Amber",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Coral\", \"Amber\", \"Amber\", \"Lime\"]}",
+    "valid": true,
+    "parsed": [
+      "Coral",
+      "Amber",
+      "Amber",
+      "Lime"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Coral",
+          "Amber",
+          "Amber",
+          "Lime"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Coral",
+          "Amber",
+          "Amber",
+          "Lime"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Coral",
+          "Amber",
+          "Amber",
+          "Lime"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "hold-location-7",
+    "day": "2073-03-08",
+    "skill": "location",
+    "prompt": "List the distinct locations on 2073-03-08, sorted alphabetically, as a JSON array.",
+    "gold": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-08\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-08-0",
+          "date": "2073-03-08",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Lime",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-1",
+          "date": "2073-03-08",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Coral",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-2",
+          "date": "2073-03-08",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Amber",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-3",
+          "date": "2073-03-08",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Amber",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Room A\", \"Room B\", \"Room C\"]}",
+    "valid": true,
+    "parsed": [
+      "Room A",
+      "Room B",
+      "Room C"
+    ],
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Room A",
+          "Room B",
+          "Room C"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "hold-count-7",
+    "day": "2073-03-08",
+    "skill": "count",
+    "prompt": "How many events occur on 2073-03-08? Return a single integer.",
+    "gold": 4,
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-08\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-08-0",
+          "date": "2073-03-08",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Lime",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-1",
+          "date": "2073-03-08",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Coral",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-2",
+          "date": "2073-03-08",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Amber",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-08-3",
+          "date": "2073-03-08",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Amber",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": 4}",
+    "valid": true,
+    "parsed": 4,
+    "core": true,
+    "scope": false,
+    "arms": {
+      "unmodified": {
+        "answer": 4,
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": 4,
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": 4,
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-8",
+    "day": "2073-03-09",
+    "skill": "title",
+    "prompt": "For 2073-03-09, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Elm",
+      "Elm",
+      "Iris",
+      "Opal"
+    ],
+    "source": [
+      "Elm",
+      "Elm",
+      "Iris",
+      "Opal"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-09\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-09-0",
+          "date": "2073-03-09",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Elm",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-09-1",
+          "date": "2073-03-09",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Elm",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-09-2",
+          "date": "2073-03-09",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Iris",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-09-3",
+          "date": "2073-03-09",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Opal",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Elm\", \"Iris\", \"Opal\"]}",
+    "valid": true,
+    "parsed": [
+      "Elm",
+      "Iris",
+      "Opal"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Elm",
+          "Iris",
+          "Opal"
+        ],
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": [
+          "Elm",
+          "Iris",
+          "Opal"
+        ],
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": [
+          "Elm",
+          "Iris",
+          "Opal"
+        ],
+        "joint": false
+      }
+    }
+  },
+  {
+    "id": "holdout-title-9",
+    "day": "2073-03-10",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-10 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Coral",
+      "Dune",
+      "Kite",
+      "Vale"
+    ],
+    "source": [
+      "Kite",
+      "Coral",
+      "Vale",
+      "Dune"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-10\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-10-0",
+          "date": "2073-03-10",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Kite",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-10-1",
+          "date": "2073-03-10",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Coral",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-10-2",
+          "date": "2073-03-10",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Vale",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-10-3",
+          "date": "2073-03-10",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Dune",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Coral\", \"Dune\", \"Kite\", \"Vale\"]}",
+    "valid": true,
+    "parsed": [
+      "Coral",
+      "Dune",
+      "Kite",
+      "Vale"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Coral",
+          "Dune",
+          "Kite",
+          "Vale"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Coral",
+          "Dune",
+          "Kite",
+          "Vale"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Coral",
+          "Dune",
+          "Kite",
+          "Vale"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-10",
+    "day": "2073-03-11",
+    "skill": "title",
+    "prompt": "For 2073-03-11, list all event titles alphabetically in a JSON array. Keep repeated titles.",
+    "gold": [
+      "Amber",
+      "Opal",
+      "Quartz",
+      "Thyme"
+    ],
+    "source": [
+      "Thyme",
+      "Quartz",
+      "Opal",
+      "Amber"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-11\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-11-0",
+          "date": "2073-03-11",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Thyme",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-11-1",
+          "date": "2073-03-11",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Quartz",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-11-2",
+          "date": "2073-03-11",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Opal",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-11-3",
+          "date": "2073-03-11",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Amber",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "{\"answer\": [\"Amber\", \"Opal\", \"Quartz\", \"Thyme\"]}",
+    "valid": true,
+    "parsed": [
+      "Amber",
+      "Opal",
+      "Quartz",
+      "Thyme"
+    ],
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": [
+          "Amber",
+          "Opal",
+          "Quartz",
+          "Thyme"
+        ],
+        "joint": true
+      },
+      "before_feedback": {
+        "answer": [
+          "Amber",
+          "Opal",
+          "Quartz",
+          "Thyme"
+        ],
+        "joint": true
+      },
+      "after_feedback": {
+        "answer": [
+          "Amber",
+          "Opal",
+          "Quartz",
+          "Thyme"
+        ],
+        "joint": true
+      }
+    }
+  },
+  {
+    "id": "holdout-title-11",
+    "day": "2073-03-12",
+    "skill": "title",
+    "prompt": "Return the titles of all events on 2073-03-12 in A to Z order as a JSON array, including repeats.",
+    "gold": [
+      "Haze",
+      "Jade",
+      "Opal",
+      "Zinc"
+    ],
+    "source": [
+      "Haze",
+      "Jade",
+      "Opal",
+      "Zinc"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2073-03-12\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2073-03-12-0",
+          "date": "2073-03-12",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Haze",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-12-1",
+          "date": "2073-03-12",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Jade",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-12-2",
+          "date": "2073-03-12",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Opal",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2073-03-12-3",
+          "date": "2073-03-12",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Zinc",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  \"Haze\",\n  \"Jade\",\n  \"Opal\",\n  \"Zinc\"\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true,
+    "scope": true,
+    "arms": {
+      "unmodified": {
+        "answer": null,
+        "joint": false
+      },
+      "before_feedback": {
+        "answer": null,
+        "joint": false
+      },
+      "after_feedback": {
+        "answer": null,
+        "joint": false
+      }
+    }
+  }
+]

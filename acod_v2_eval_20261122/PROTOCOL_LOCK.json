@@ -1,0 +1,854 @@
+{
+  "created": "2026-11-22 00:10:47 +0800",
+  "max_generation_attempts": 224,
+  "heldout_cases": 16,
+  "development_cases_evaluated": 0,
+  "views_per_case": 7,
+  "checkpoints": 2,
+  "models": [
+    {
+      "seed": 20261108,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p9_counterfactual_20261117/branches/seed20261108_normal/checkpoint",
+      "adapter_sha256": "dcf7cf52d5fadb43b66b55489420ca86773576d634c14c37d0cef249989dd73a",
+      "adapter_config_sha256": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+      "source_config_sha256": "8a8d5600b193d6fde89ebcae518dfda4a750f1094e54bcbe4f4a3e50f5f47d77",
+      "model_name_or_path": "/home/egret/models/Qwen3-0.6B"
+    },
+    {
+      "seed": 20261109,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p9_counterfactual_20261117/branches/seed20261109_normal/checkpoint",
+      "adapter_sha256": "7b151a157245b9746fdb7040ac44af32bf12dd79241bdcc57799313aa8159abf",
+      "adapter_config_sha256": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+      "source_config_sha256": "2424ab2436df4244379fccdbfa4577552289f81b18aa1d0a9138a10f01f1f101",
+      "model_name_or_path": "/home/egret/models/Qwen3-0.6B"
+    }
+  ],
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "installed_package_versions": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "decode": {
+    "B": 1,
+    "greedy": true,
+    "use_cache": false,
+    "max_new_tokens": 128,
+    "single_call_timeout_seconds": 60,
+    "supervisor_timeout_seconds": 1500
+  },
+  "policies": [
+    "fixed",
+    "random",
+    "gbs_gini",
+    "ig_per_byte_cost"
+  ],
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "additional_query_budgets": [
+    1,
+    2,
+    4
+  ],
+  "fixed_response_table_not_online_policy_calls": true,
+  "reserved_never_enters_selector_update": true,
+  "gold_only_scorer_after_collection": true,
+  "interaction_definition": {
+    "full_pair_requirement": "shared original X, existing single views T1(X),T2(X), and reserved exactly T2(T1(X)) including row identity/content/coordinates/eligibility AND display order. Content equality alone is insufficient for display-sensitive behavior.",
+    "strict_unit_eligibility": "Only exact complete pairs; all required outputs must have exact answer envelope and valid task schema. To count singles-normal/combo-failed, base and both singles must additionally be strictly correct using their OWN independent gold, and combo must be schema-valid but strictly wrong. Unparsed/invalid-schema outputs are separately counted, not relabeled normal.",
+    "binary_interaction_contrast": "If a complete pair exists, z_v=1[strict_correct(v)], contrast=z_combo-z_T1-z_T2+z_original is descriptive per-unit only; no causal/statistical nonadditivity claim. If no complete pairs, strict interaction is NOT ESTIMABLE, not zero.",
+    "behavior_layer": "Independently evaluate full-pool compatible classes and whether parsed reserved answer belongs to their union. This is fixed-library predictive consistency, NOT a paired interaction or hidden switching mechanism.",
+    "missing_pairs": "No new queries/data/rules may be created to complete them in this run."
+  },
+  "plans": [
+    {
+      "case_id": "5b82ee97a24f02291cf2",
+      "messages_sha256": {
+        "original": "a60026f81779c3e7ff9c34eb99f4235f7f28311a25ebbb7c27830c60657179f5",
+        "reverse": "a935dca586fc1ba8b5e333e1093b4d615dd7039bbb0ad5b3b42cb5dc47103455",
+        "rotate": "0541c17454b5151b9836450bd324dd48e9efa656d1fb019ee24546d0ddb4115d",
+        "swap": "508c02ffe9562588be30e33f19ad4db633fdb99dfe3cf4a9d4509118d67e7f57",
+        "value": "3cd19ef90245208d4d4ab1a6869f58e906e2bda3aa47c27809bdb9910bfa0447",
+        "line": "328c2321fef22ac4d8428d412cf0e91d986fbe6bf9bdaf9bad589c6786a9d146",
+        "reserved": "54d54b4aa8e91c3e38a5cfdf3ba77dc52fa8c36821cd84e30b948ec82cb876b8"
+      },
+      "costs": {
+        "reverse": 1219,
+        "rotate": 1219,
+        "swap": 1219,
+        "value": 1251,
+        "line": 1221
+      },
+      "pair_inspection": {
+        "case_id": "5b82ee97a24f02291cf2",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "a3f27014886da97782c7",
+      "messages_sha256": {
+        "original": "0e5adbc929d73dd3f0938a45418d5f59283e7492bd0713649622b48a7bd0b6ce",
+        "reverse": "6b1cfe7baf3d1426217acccb3f12c9d2ef8273133e90af5d90e3fd3085534989",
+        "rotate": "9cfeb51c3f79b7b5ca9bf234d5cabddd66d37339558420faef224dd111acaf48",
+        "swap": "8a01520cc40f5ba9460dd64b1f53eaa85ad0ef5b612ed4b277999b708e190dcf",
+        "value": "af0cc4eed9eea643fe284ec8d286cecc48d533b00220f1565894420a341b9374",
+        "line": "50c3284db00257a47e98f9d453999d191a9485b95f9604f1157ab73252231c14",
+        "reserved": "ffc200b5916767acac16aea03d5b7a602b3b4fd3ea2db54769eb798b4c63ae2c"
+      },
+      "costs": {
+        "reverse": 1595,
+        "rotate": 1595,
+        "swap": 1595,
+        "value": 1510,
+        "line": 1599
+      },
+      "pair_inspection": {
+        "case_id": "a3f27014886da97782c7",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "21bac8cb73d1200d37c7",
+      "messages_sha256": {
+        "original": "0bdba9a5d59adf2998bc6c025f13d2229937b362f761f5c7562e686718141570",
+        "reverse": "8fbc05d457aa8e97cff02da66bc3c66fada8b2b1fbd54ef6b7c051d935b697e4",
+        "rotate": "d06bfa31b1967a3f0bc41621a8332b5c729f6fdb97af8fb00c7df349c1709787",
+        "swap": "56359d2d416bdebf324ec514affca93169be5db824f45f09f968219e658bfbc7",
+        "value": "156a5853701346983357fcbf5c4ab519db7195d1a4d44ae7708c5b61bb7e245a",
+        "line": "151ba48da035c33d98a6b9f78225faf76f93aeb865336cff55d3d185b85b7ad8",
+        "reserved": "84b8b131725c56a3eed55d5e2e61f1f4c8ad7c52bf0e2ae28374cb16b53893d6"
+      },
+      "costs": {
+        "reverse": 1474,
+        "rotate": 1474,
+        "swap": 1474,
+        "value": 1511,
+        "line": 1477
+      },
+      "pair_inspection": {
+        "case_id": "21bac8cb73d1200d37c7",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "dbe9a5efd104dfd04bcd",
+      "messages_sha256": {
+        "original": "638a47fbb0fcebad7d767d80dbfd1d243221e1be4dc11661c49f9e86027987f8",
+        "reverse": "6e3fe87bc6e32dca13196045829196c089e7cbe2ce0c29b27f13b4d62409c820",
+        "rotate": "f9669b6ba764973d01d6e1151b70ae4781f233b67a4784439fba7bb3f4df26a7",
+        "swap": "42771721ac14c2c4754dc9fd4551d26a2fe0f2a8c040cb50ddf791b907e02473",
+        "value": "e41d580da12c727b5869739d6cf9eb65e161e6299c7a2606cd580f23d2e3ec97",
+        "line": "a9204c3af6b57a6a7e92783efd78c04f3115a9a985c5c83930884ec0490eb434",
+        "reserved": "02be4195725572a289d8539ae75ef984a65f3f8585c959f9b10b042796ef4139"
+      },
+      "costs": {
+        "reverse": 1345,
+        "rotate": 1345,
+        "swap": 1345,
+        "value": 1369,
+        "line": 1347
+      },
+      "pair_inspection": {
+        "case_id": "dbe9a5efd104dfd04bcd",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 1,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "93e5fd846d0863a43fcc",
+      "messages_sha256": {
+        "original": "06494bf034740bf066d8b6336b7abd4c48b06f7dfb068233c341880f1e071363",
+        "reverse": "306147edf9c5baadda3e2a761be965f2158c7deeea59dac6f1b1e1b49929a535",
+        "rotate": "9f19af4044800164df495f8bc8e6235f9d5df4648e4f9e89e6fdfc0cd41bea24",
+        "swap": "7046d26fc8d6a61c90ab842dc29f9a422328ece099979d2bf66a3837bd4876a2",
+        "value": "6cf09722b09e9fc711aec4c3fd2fb7078cc512bdda47916b3c18cb2f2c476551",
+        "line": "997de998762cab99533b10e1282543dd8b1289cb216d2a1557394c922a56e584",
+        "reserved": "b32e5364c7eeecd1e1f5a22ce9ff71249550391f6b6e1051a1cb94d031a7217a"
+      },
+      "costs": {
+        "reverse": 1331,
+        "rotate": 1331,
+        "swap": 1331,
+        "value": 1346,
+        "line": 1333
+      },
+      "pair_inspection": {
+        "case_id": "93e5fd846d0863a43fcc",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "e41e84216737877183ed",
+      "messages_sha256": {
+        "original": "284910b98cdf784d69d4e4f5596908ed618261397840ff1e9b7a69db46fff619",
+        "reverse": "b6859660511e8df002144065db992e308c811f8bf49ca43d342051dcd3db1614",
+        "rotate": "63d7ae62f87a134133d5402c38a65b1fb9eee78af28b63508081f5462c3a1748",
+        "swap": "6a65e836534075acd3dac8b9dfad5969e0c0eb2437368955ed97a7e91aac0f51",
+        "value": "8a07c44f41f049e440059804a178e5d5e4303f8d88e16e3035ca4eb9fb72ca94",
+        "line": "64af909c135122914f1b41a4d574dbd7d5ccc7bbde7edd6be150993632e83822",
+        "reserved": "bcaf017b76e7c854429cd188dfe2d503f9d82818fa5c2e9b0327788e81bf1ed3"
+      },
+      "costs": {
+        "reverse": 1332,
+        "rotate": 1332,
+        "swap": 1332,
+        "value": 1347,
+        "line": 1334
+      },
+      "pair_inspection": {
+        "case_id": "e41e84216737877183ed",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "6c1d6d17bfceff15cb02",
+      "messages_sha256": {
+        "original": "f9b5a9ca17ec4b88aa4d1c021276a11ff943feb3d53c658af7f24d881371fd23",
+        "reverse": "87ba9d830071cf830ac6e6180b6d1489b3664b77bed73e073fc316ca2db8e1b9",
+        "rotate": "bac7820afec4eff2eff37c9e5b4d134d1d3e65b6e4180822ac0656261b7e5671",
+        "swap": "f68d5595105145a11e45de18301b89dbfec38f3af08bb44fa4339e1dde50b37b",
+        "value": "a3354dd2211fa891f31b4fc515103aabf8ff90c9a37b4efdff9e6ee0163fa905",
+        "line": "9decd14512b87e2c37d2636a9cfccf7324e9330ab0ca471f16dac7b5bcc5e90e",
+        "reserved": "757ea43bcd3b03927775d04ce69006b242fb3201c05a15655fa21ef2528ee305"
+      },
+      "costs": {
+        "reverse": 1473,
+        "rotate": 1473,
+        "swap": 1473,
+        "value": 1510,
+        "line": 1476
+      },
+      "pair_inspection": {
+        "case_id": "6c1d6d17bfceff15cb02",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "14bb4b8579658e1db1e9",
+      "messages_sha256": {
+        "original": "2e84a40af7366506904a6b58437428fcbc95bd99b9863d34dc5c82063d6d1ba1",
+        "reverse": "9c363b370a0b86191d49a3ea7fdfdf055a2431ae1948e6c3054600341ef562ae",
+        "rotate": "4439c0fbbd30ba7503036d8b23a64916ea466c9c6fe9452ad27afd677c6497c1",
+        "swap": "7db0ea53d203a3ef6b0a6dc837827a7828e297118856619086e30176550f87ca",
+        "value": "1ca5868c9d573c1b95a2a2a86b389d1f3eef42ac3a122639580ad5c68439b820",
+        "line": "6bfae653f49799b62f5bac95de6e21e20d516118e148885fa8ba84981c0fc7b7",
+        "reserved": "d5d381d78dfc105f2e9285e306f410321a803c9dcca2ebd503b27ff742f6ce18"
+      },
+      "costs": {
+        "reverse": 1342,
+        "rotate": 1342,
+        "swap": 1342,
+        "value": 1366,
+        "line": 1344
+      },
+      "pair_inspection": {
+        "case_id": "14bb4b8579658e1db1e9",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "59a0d8c8ff20e9d1b94f",
+      "messages_sha256": {
+        "original": "cdb5d6ff3ae8fd82f7c25fd10548d0cdccbc6ad2f6508d45a3f05c495bcca990",
+        "reverse": "e29e4cf3257a346810b55e94a031b772f8c65b4f5ece9d23d305d661f025df32",
+        "rotate": "07500f59e450cde2693ee22b46f76af143ca0234f69ce4adc4f8b2ba7d791dd1",
+        "swap": "bdac3c1178528adf8dd8ab187d34317fcd2b55395822b817b65be88f61d6a95a",
+        "value": "88dd91896615ebc3914eb80bdabc0f4076de807e15653061378504b3929b769d",
+        "line": "ff303cdf9bcbfbee195717a6103dc2032bb91be8eaa7b66c6b03b4d9da4471fd",
+        "reserved": "5c93365d450c8edc8aa6e3366dc45c69c3203c140d49c83b7e75a11147f42e71"
+      },
+      "costs": {
+        "reverse": 1220,
+        "rotate": 1220,
+        "swap": 1220,
+        "value": 1252,
+        "line": 1222
+      },
+      "pair_inspection": {
+        "case_id": "59a0d8c8ff20e9d1b94f",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "ae27c947bcf77295d6f3",
+      "messages_sha256": {
+        "original": "fd311c11ce0b2602c83d68c5eee164c501c4b0c79eb9c6e431afb93ac4c008bd",
+        "reverse": "0864aedb9fe2abe5fdf7b005d22cac2a7d40f15db6e42ff4af47cb9df9f7275e",
+        "rotate": "5fb58371cb6d86316a0c367e8f325b60007a1fe045704376d9a0d32858ba9709",
+        "swap": "0a39fe09b3cf2ae3f30112f6ea85be3c063b4a6e352880e89f30cf4fd174b44b",
+        "value": "b64176340a82b582b6f88b21fa71d987897d22889bde896792dc1dcdc1e36282",
+        "line": "bd57a3ffc2e9dfce0853d82e79ab15493d08071cd862b62d3192af6a6e7dd22f",
+        "reserved": "7913eae8e65e78a1012eb00a3027ce2109d8de870ef6e32a737b1e9e2eed17db"
+      },
+      "costs": {
+        "reverse": 1594,
+        "rotate": 1594,
+        "swap": 1594,
+        "value": 1509,
+        "line": 1598
+      },
+      "pair_inspection": {
+        "case_id": "ae27c947bcf77295d6f3",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "f53bf658cc18f31c0a0b",
+      "messages_sha256": {
+        "original": "a5cee5665ac4624c62006243923cf82da25ee9d6b84ddc21b92767325c7ac478",
+        "reverse": "32a1f745560ab82b00eb3fe956c7772a6dadb334593374befc7fdb21de7875a1",
+        "rotate": "e1d5bfa9d5e7a860f418377ef0547d2ecfb07fbae6455af388e10c8e474e4e9a",
+        "swap": "9a344d45bac6861c6dfca5a44c54c6484d978d3889a4a720746bac0f40685173",
+        "value": "65660b10de207d6e64d8f51603b1b4d7f842abd31ef5cc26a7225e01ae5c0405",
+        "line": "d326adb9dec4472788f0e20a53d1b8df21231125a53df71bb0019fdb0cb26cf1",
+        "reserved": "18915bbb287ceebf98cc565f5b94b90b66a2b525de360189ae0c55dd047bad26"
+      },
+      "costs": {
+        "reverse": 1344,
+        "rotate": 1344,
+        "swap": 1344,
+        "value": 1368,
+        "line": 1346
+      },
+      "pair_inspection": {
+        "case_id": "f53bf658cc18f31c0a0b",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 1,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "a19a7f4c3481d2cb77bc",
+      "messages_sha256": {
+        "original": "150e38781daeb3bba6e3c327c25fa4b36884bb4d216028d4f13384cfc50d2516",
+        "reverse": "dba2c8b43173c24a0a336f8c7aea37d8e187759b61d22c2be9b9b0dcef619da1",
+        "rotate": "989da388fcb5af06b00ce7d4f63799260283434f885bf25efbf8de875bd0815c",
+        "swap": "da16c68e5e41206a2faaa30a6a982bc5ceef6df08ceea3804538310efd802a25",
+        "value": "b05843479b6abca046c6986538a7d518a82465ddb296bf2f8e1001a7eb1e7585",
+        "line": "b5e14001b8346169ab4ec203667000ba5246196c381d5b7c8b0d652b6c46242c",
+        "reserved": "dcf47c83daa0c713e3da83537cc50d35edca1b35ab92db1ec694d6fc82f0a288"
+      },
+      "costs": {
+        "reverse": 1586,
+        "rotate": 1586,
+        "swap": 1586,
+        "value": 1498,
+        "line": 1589
+      },
+      "pair_inspection": {
+        "case_id": "a19a7f4c3481d2cb77bc",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 1,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "bb5ef71bbac26a813d52",
+      "messages_sha256": {
+        "original": "f2bc3f11d4fa087925cfbdc518a98194b18f86bed2fa8d268492392ade297c1d",
+        "reverse": "db11f1d14018aff0beb5c51f349f4167b06c2d1a066004c5fc38517dba5022a6",
+        "rotate": "295d270a7bacceab2fd214f4a140c0604b7984c19565603976f697b3b4660a59",
+        "swap": "90590bbd24fa03e887a4884b9ced78d350fc9b604c8feba22288c0420d82e778",
+        "value": "41a15c27d75346c47a672b4b799761567768e2167cbe4e393bc51e6c47acda1a",
+        "line": "8b7d2f49f70dce20dccd45ff27af521e2f1062cba357ab764d50dfe1fd5d17d2",
+        "reserved": "00f6f271512032e76014c2c87e4858dd0e19e464c808e5eba1267acc1f463120"
+      },
+      "costs": {
+        "reverse": 1341,
+        "rotate": 1341,
+        "swap": 1341,
+        "value": 1365,
+        "line": 1343
+      },
+      "pair_inspection": {
+        "case_id": "bb5ef71bbac26a813d52",
+        "row_count": 4,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 24,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "32be187ece72acd5db8c",
+      "messages_sha256": {
+        "original": "a8dfec3572b36142fe10170462fe49bda1f8eb0e8a73ae1be57ccd7e0d623289",
+        "reverse": "926485ff1284ec260dbf4a2bb0a1e5a6eb2ceb29148b603e00ae35b326fcf32c",
+        "rotate": "71e7feb1bbb6f8b39f3d28f3e6dfb857c43d58dc65ae4404ccaaf891d02072ff",
+        "swap": "4552428405a836fd2d1c6b6ca6ea790db1cd40a3dd66a4e925991cd4d2defd2b",
+        "value": "9e5988cc60d3f8de231eacc464be499e7336f8f53611d025a0695a758940ff1a",
+        "line": "2c3a9fc180e227fe497679142d7ce1d6a86bf03a95f10dfe3eecced348da0cdd",
+        "reserved": "c216b8aaa9774295edfc005b3a9e9f406bcd115ec2564d2b699d99f878baad3f"
+      },
+      "costs": {
+        "reverse": 1538,
+        "rotate": 1538,
+        "swap": 1538,
+        "value": 1511,
+        "line": 1541
+      },
+      "pair_inspection": {
+        "case_id": "32be187ece72acd5db8c",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 22,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "bc689069b0824e951908",
+      "messages_sha256": {
+        "original": "67b617c0b27e62e17a88d6dac23ced0d266a6a4d6f81449e6fdcb8d5d18c93f7",
+        "reverse": "8efa43868f6257eb82ddcfc4faba81469553bbc35b97b671cd10ca866731813d",
+        "rotate": "78d6e4a41fa70d66c1f2bc7e47665834e4e7155e93c36c9aad664b9edab408fc",
+        "swap": "39191d9882770ec614859861fda40872e36e732711e60da0c09b69af5c622ad1",
+        "value": "6a8912617ecd53e376728ebb463cf04755bdc85791d612a87b3a98aa6a982a98",
+        "line": "fb3100d108444496a536922b9836292a953011c26b5b03c298efadc488e145a9",
+        "reserved": "15fbcee7aeaedc87fbba7dfec018c9e9954ac60b829062a1e5fe52745cf30170"
+      },
+      "costs": {
+        "reverse": 1537,
+        "rotate": 1537,
+        "swap": 1537,
+        "value": 1510,
+        "line": 1540
+      },
+      "pair_inspection": {
+        "case_id": "bc689069b0824e951908",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 22,
+        "classes_splittable_by_reserved": []
+      }
+    },
+    {
+      "case_id": "b7628b816c4f1876fba7",
+      "messages_sha256": {
+        "original": "405eb897aa77615ac26701c1a6c116dcecad91f1a0a3506244e8f6875d44d27e",
+        "reverse": "7217e917883d19c879dff932074e11ca01e41c5bab92f3cb182da7242185efbc",
+        "rotate": "47f0f0103b3d2b980bc44ff438df9d2e3f7c1dd0b4771bbf481bdaf977eae361",
+        "swap": "049ec18187ff9d12d54032b9da287533abc718494344b013564dea5ba9e81d4c",
+        "value": "80ad3a097b9c67dd0ada5021c43aba07560e4c74c40fd2064b61beaca03fe14e",
+        "line": "78b1b6bc90a9fee370c3e31fc0ea855eb00c8cb9724bc1fae1718921a81b7c7a",
+        "reserved": "b4d8927cf244c234ed13a732181b8dbbda4a43f44b066e4f5eaf70103ba81721"
+      },
+      "costs": {
+        "reverse": 1585,
+        "rotate": 1585,
+        "swap": 1585,
+        "value": 1497,
+        "line": 1588
+      },
+      "pair_inspection": {
+        "case_id": "b7628b816c4f1876fba7",
+        "row_count": 6,
+        "exact_two_factor_pairs_for_reserved": [],
+        "content_equal_but_display_context_differs": [
+          [
+            "value",
+            "line"
+          ],
+          [
+            "line",
+            "value"
+          ]
+        ],
+        "paired_interaction_eligible": false,
+        "reserved_algebra": "reverse_display ∘ pure_line(3*l+5) ∘ value_bijection",
+        "line_single_algebra": "rotate_left_display ∘ pure_line(3*l+5)",
+        "missing_reverse_value_single": "reserved also changes coordinates; it is not reverse∘value alone",
+        "pool_equivalence_classes": 1,
+        "classes_splittable_by_reserved": []
+      }
+    }
+  ],
+  "protected_hashes": {
+    "P14_EVAL_PROTOCOL_20261119_ZH.md": "b796f25c2452467f4933fc6ef4e8aedad1436f52fd3c361adf385f801c1ba55f",
+    "P14_V2_REVISION_20261119_ZH.md": "7f5999554d187e080519152e28536c944b087118f3dddd64bad22c6f5977baa9",
+    "acod_round1_20261121/HANDOVER_ZH.md": "21ba2f1d5722d6d034d160388f333e80ff75bda5a8751cc300ad02058550792f",
+    "acod_round1_20261121/POSTHOC_AUDIT_ZH.md": "cfb57dd83446b43e72d5e6f48d293a63e5ec05f6ce77088782a58a22b3770a54",
+    "acod_round1_20261121/PROTOCOL_ZH.md": "9277908b28abb66eb5ea78447b6e88aaabc077069edb49361d04a86fea7c23e1",
+    "acod_round1_20261121/REPORT_ZH.md": "c38899cabbb67a1e10eec2fbc106618183fe538aa3bbdc6e3d0135cc7e69442a",
+    "acod_round1_20261121/acod_round1_bundle.zip": "fd6d1b776d2d9760c7e1fafab58a7ef7c4e75cda11a443c5ccf26f58162b39e9",
+    "acod_round1_20261121/analyze.py": "20b96c0f7fa67e59e464add19acb02291e8b2ee4a102306a4040a92c0a821dfe",
+    "acod_round1_20261121/cpu_tests.json": "034e6b3b6a5e6ef678ac03da725d79d2809095b224998fd699fecb3e4ea2cbc7",
+    "acod_round1_20261121/delivery_hashes.json": "38b5ef96e754c69375284bbb3303d205e4f0a27d5d0e432f73de8089bdb3ed88",
+    "acod_round1_20261121/exhaustive_reference.json": "ccf68ad9cf4d79c553299b9758115c8980ca18d2994b36f012ae467f738522f5",
+    "acod_round1_20261121/final_artifact_hashes.json": "cfedc4f792772e4f9de038b0e44c1f46c44c4580d427efb47412daabb38121e0",
+    "acod_round1_20261121/manifest.json": "fd3cbd5cba3207d9fa445dc23e3526de390458105702eb40aed822b8fc04dbe3",
+    "acod_round1_20261121/posthoc_audit.py": "6ab75ded1cb44fd4a7d65621e69c74dcc7695128255a1886687d7d992a95c01e",
+    "acod_round1_20261121/protocol.py": "0ab6f25c7f873c020b0e554b8482f3dbcf469b3cb8d9dd14b287a9e4c88a966d",
+    "acod_round1_20261121/results/COMPLETE.json": "002f7cae1f17260bd10f9dd9e915f1bdef0420cbc9096f6ff2bcfc8436c8cbea",
+    "acod_round1_20261121/results/budget_curves.json": "3036c7c795e350df335550a4943d61342d03e8de337ee53318c30c74a7e41a84",
+    "acod_round1_20261121/results/calls_started.jsonl": "421f16f04f9ed53708d459259a99581cf36b821d5e16fde06de4af7a6649d72b",
+    "acod_round1_20261121/results/events.jsonl": "8b13973a97072f93a60b346136cd8a2e16f58f4fb98c38d2642f8bf612b1e7f3",
+    "acod_round1_20261121/results/full_pool_support.json": "ca41cc9f0865bf9055d68d5f77794671dfba6b4205a47ed4c76997c37987f463",
+    "acod_round1_20261121/results/input_costs_seed20261108.json": "7fc3f4291d8059845935bc82412f243dcc702bfd3887e72fa0c3320f3782838f",
+    "acod_round1_20261121/results/input_costs_seed20261109.json": "7fc3f4291d8059845935bc82412f243dcc702bfd3887e72fa0c3320f3782838f",
+    "acod_round1_20261121/results/logs/guard.jsonl": "c74d1ba759f1c7c3ae784efeba693c728613c56122078e5e00ed36d0ac6032cd",
+    "acod_round1_20261121/results/logs/worker.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acod_round1_20261121/results/logs/worker.log": "f4aef79f341daa7e7e58e8ffd0e163258c61e49ff7695280b2c0811e81f2a6fe",
+    "acod_round1_20261121/results/logs/worker_guard.jsonl": "897135a5bcbbb04a310b4d38fd286ae8771a715697bb0452163438546f81991f",
+    "acod_round1_20261121/results/model_receipts.jsonl": "5dfc5fd070c5b0b3bbf7b68c4de5009a412c6077b56d2eb050b4c695b6f0e93a",
+    "acod_round1_20261121/results/posthoc_output_audit.json": "9226f6ad54970dc8e8bb69ad1f8625c8642c41969cc2bb8cbd493e6025707f2e",
+    "acod_round1_20261121/results/replay_traces.jsonl": "07cab96c82c00ed097557d5ac1f447371bb05506fba72e2eb90e329e3e802ca5",
+    "acod_round1_20261121/results/responses.jsonl": "3f79312d21c7e3518bd69e45ab43540cd82aee71fa615688686621acff38b5bf",
+    "acod_round1_20261121/results/summary.json": "c5cadaa8e4ad05d280b54ee3e12edaa2eb51fb9146c4a982d2565cdbd4454307",
+    "acod_round1_20261121/runner.py": "e68b1dcb87504ba2103887742a9d1ff458bd9ca486867d4932ef3b646ad7144a",
+    "acod_round1_20261121/simulator_results.json": "a728df82a6df48b0da91faf24ccd1664dfc77b029a284481a59fcaa8ff07865a",
+    "acod_round1_20261121/tasks.json": "7327937420233c846526c2b0def91dbd36d78fe085ca7356e0b88c8201616872",
+    "data_ext_p10_twoview_cpu_20261117/cpu_acceptance.json": "750c355d43912c51e8b47d89e5c8dd016efa6c7bf5415be7a4f4eda752fbe5d8",
+    "data_ext_p10_twoview_cpu_20261117/dev.jsonl": "737201190d3d7e8f60d63bbd74e001c53c189750c09173a978ba6b8633ad409f",
+    "data_ext_p10_twoview_cpu_20261117/holdout.jsonl": "9277e44d15fce68c1844722bb599200e9e21452db7a596000060d330e62ecb3d",
+    "data_ext_p10_twoview_cpu_20261117/manifest.json": "cb4efc53c096059a002b6d5b67bd188efb99449ebd5fa421cb6e51e3aa231b91",
+    "data_ext_p10_twoview_cpu_20261117/normal_pool.jsonl": "60773d04acab591f7e2f2d52f1e16d743b757b0b35aaeae6271c0398c5c005eb",
+    "data_ext_p10_twoview_cpu_20261117/plan_seed20261108.json": "54c4a7347982dcd512de612348c96fb0bdb37a163acb2e90f6443c6f4086b025",
+    "data_ext_p10_twoview_cpu_20261117/plan_seed20261109.json": "b51082975a1881a17443aeb2ff8fe8112e624271e51a9dc7cddf15a33f79fca0",
+    "data_ext_p10_twoview_cpu_20261117/plan_seed20261110.json": "a05be6e9d9f72af8313abe3b8e8646ab35d07add1c79ba3594529e21f374b81a",
+    "data_ext_p10_twoview_cpu_20261117/reverse_pool.jsonl": "38eb61f30164abf7380aada060885f4f50cda03a1951cd9ab335054776849057",
+    "data_ext_p10_twoview_cpu_20261117/sideeffects.jsonl": "48a5fe82fe556da5008d11dcb5ab50298d23e985473f087c6738ec2070c82b82",
+    "data_ext_p14_eval_protocol/continual_factors.json": "af9d36b7896806a46b5a1fbda8da2f16ef67a40e267a7362d61308783843f7ea",
+    "data_ext_p14_eval_protocol/coverage_expected.json": "7c7b56274e991870a0e56b3243a8e13f5e78add85cd405c8d835e2670ce5b886",
+    "data_ext_p14_eval_protocol/dev/rows.jsonl": "f4d910db5a23aa729e0c3033f738f0651043477d0acbeb8e6d349f04f8cad3cb",
+    "data_ext_p14_eval_protocol/fixtures/dev.json": "4215882395d67b8389f7ef07b802e02b9ae156858c19829a736887585d0dc871",
+    "data_ext_p14_eval_protocol/fixtures/test.json": "748e7778f203f6493a9d81912661b06aca73d2c4965b762181f72ea7b57eaa8e",
+    "data_ext_p14_eval_protocol/fixtures/train.json": "b442fe71d7bc3004099408ba248249b93f5cc7ae505ae4b04c2404bd32862ef2",
+    "data_ext_p14_eval_protocol/manifest.json": "944b8e3d9b254e928559a55623aef3c41060234a8b04f010b9f1919f0f0b3881",
+    "data_ext_p14_eval_protocol/manifest.sha256": "e23b8fbb3a43b54ac7a901e7719f49b8bf8d464a9703280df7083ec5390c8909",
+    "data_ext_p14_eval_protocol/p14_cpu_freeze.py": "fff29b1ccff395eb68f6f1fdc2b7e724efa66e15846f53fa8c2f04f931af2b78",
+    "data_ext_p14_eval_protocol/replay_candidates.json": "b014945e2712bdee9091527b91b877edffe2ecfaf9b3c8821b4efb664ab0c72e",
+    "data_ext_p14_eval_protocol/template_bank.json": "10f852fd6285a31eff8431cc1dff7108b2c9025e2326295d767962eb1765116b",
+    "data_ext_p14_eval_protocol/test/rows.jsonl": "7600738bbf0cbe1d50eedc423286b27330af9c6ec12abc691ef024aa35276f87",
+    "data_ext_p14_eval_protocol/train/rows.jsonl": "e6b55b256f9c79db783168dd9710639c98390d649ae43ce0f66e1b7370fdcf89",
+    "data_ext_p14_eval_protocol_v2/dev/rows.jsonl": "0e0af339310a664f5c8f9b62a083fe637d03b5f601e4c42fb557506e2716f9a1",
+    "data_ext_p14_eval_protocol_v2/fixtures/dev.json": "4215882395d67b8389f7ef07b802e02b9ae156858c19829a736887585d0dc871",
+    "data_ext_p14_eval_protocol_v2/fixtures/test.json": "748e7778f203f6493a9d81912661b06aca73d2c4965b762181f72ea7b57eaa8e",
+    "data_ext_p14_eval_protocol_v2/fixtures/train.json": "b442fe71d7bc3004099408ba248249b93f5cc7ae505ae4b04c2404bd32862ef2",
+    "data_ext_p14_eval_protocol_v2/gold_reconciliation.json": "3b7102506ab95df30c99403b2d5d53059c8469794857b1dbed39144f425d33a5",
+    "data_ext_p14_eval_protocol_v2/manifest.json": "da99ed3b8a7fa74b1d9fdcb25a6245d6c086358caf341588baff00f5a6fd4bb8",
+    "data_ext_p14_eval_protocol_v2/manifest.sha256": "f9b7f074468061caadeeb8059b7af64501aa7d0665e6f48ef2698fcec41fc5ef",
+    "data_ext_p14_eval_protocol_v2/month_metadata_changes.json": "048b495f00cf16cada60629e0fd60f37cc62bb84990e95cba8422b7ebbde11d6",
+    "data_ext_p14_eval_protocol_v2/operation_matrix.json": "478034406304d58b3b4932cefa0d295da5f494f8c8c56a0d18c12f9ae7617d86",
+    "data_ext_p14_eval_protocol_v2/test/rows.jsonl": "a1d9d84badca4a6f8f872df7a564419de37a3a60683f9e756da3692838f0d7e3",
+    "data_ext_p14_eval_protocol_v2/train/rows.jsonl": "fb7b94b29311cd14cf3d35e58354457db7397607a243b2f51b5ac286479adb5b",
+    "data_ext_p9_counterfactual_20261117/checks.json": "4024dba9a86f5de576b40f0f77d0bdf9c9ce9ee4abcffc1cc1bf2918bc4544bc",
+    "data_ext_p9_counterfactual_20261117/counter.jsonl": "3ef3766bcdfd23ebec6336b1888ce2935c0e6104b500222d3a958cd94c7d07fb",
+    "data_ext_p9_counterfactual_20261117/dev.jsonl": "737201190d3d7e8f60d63bbd74e001c53c189750c09173a978ba6b8633ad409f",
+    "data_ext_p9_counterfactual_20261117/file_probes.json": "37aec2480e1bda012fdc35a74025da0ce0493fdee33f5ed3935677438a8cb121",
+    "data_ext_p9_counterfactual_20261117/holdout.jsonl": "92cceee1d80c40eebb362d2dffea60cdc8576b667aa6bddd238b7f6a4f35236f",
+    "data_ext_p9_counterfactual_20261117/manifest.json": "f99d4b04a59e457e86539d55ee945e477e4f3703e122c349704e0f2203f626f1",
+    "data_ext_p9_counterfactual_20261117/normal.jsonl": "60773d04acab591f7e2f2d52f1e16d743b757b0b35aaeae6271c0398c5c005eb",
+    "data_ext_p9_counterfactual_20261117/sideeffects.jsonl": "2ea70aa913a90754981a889cf4820df881b98a18dc75a669d157fc65d0839f94",
+    "data_ext_p9_counterfactual_20261117/sql_probes.jsonl": "1b93ff61d6ee4e37b0348a7353415eb13978daa3dd4b4205cdb04db3532f524a",
+    "fac_tinyagent/p10_devdiagnosis_20261117.py": "03a75fc586c10577c63ed8eca0177928f4423b16d76fde0fd621625a21fdcc38",
+    "fac_tinyagent/p10_twoview_plan_20261117.py": "212d2bc30026ae95ea82499bbbcc096d6f752438ad0026e42f29351336fb3e72",
+    "fac_tinyagent/p9_counterfactual_20261117.py": "09f20363af0a398f1f33d225793e3da8a87a6630b92b746f8c702912f9a98d40",
+    "fac_tinyagent/replay_study.py": "4a13cf746e6df456fbf28dc8a28281eaea92741f8f1c1bf811720ed925bc5ee4",
+    "fac_tinyagent/sft/dataset.py": "253ef011111e45aa032858056415b4bcacc57df4acb2646aaa9b2885ac80852e",
+    "fac_tinyagent/sft/evaluate.py": "d4e7311c472a194bd4f742c6da491d74181cb861f929a8dbbf00d5c7af5ca964",
+    "fac_tinyagent/sft/train.py": "e73d7bdddb4a504e71dbb6845e82bba4b058514398d5a9437b0ef1e827f7493d",
+    "runs_ext_p9_counterfactual_20261117/branches/seed20261108_normal/checkpoint/adapter_config.json": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+    "runs_ext_p9_counterfactual_20261117/branches/seed20261108_normal/checkpoint/adapter_model.safetensors": "dcf7cf52d5fadb43b66b55489420ca86773576d634c14c37d0cef249989dd73a",
+    "runs_ext_p9_counterfactual_20261117/branches/seed20261109_normal/checkpoint/adapter_config.json": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+    "runs_ext_p9_counterfactual_20261117/branches/seed20261109_normal/checkpoint/adapter_model.safetensors": "7b151a157245b9746fdb7040ac44af32bf12dd79241bdcc57799313aa8159abf",
+    "runs_phase2/A_seed20261108/config.json": "8a8d5600b193d6fde89ebcae518dfda4a750f1094e54bcbe4f4a3e50f5f47d77",
+    "runs_phase2/A_seed20261109/config.json": "2424ab2436df4244379fccdbfa4577552289f81b18aa1d0a9138a10f01f1f101",
+    "acod_v2_freeze_20261121/acod_v2_cpu_freeze_bundle.zip": "2e248dd9a66d8801734e6fefe6da11f1ac4798907de928bcf33e9d1e616712dc",
+    "acod_v2_freeze_20261121/build_data.py": "ad004fd8064fec10a74a2126bd5bbf85887f0e97e27eff6605f64068e878a51f",
+    "acod_v2_freeze_20261121/core.py": "7f14d8b2009790979a49c77e98378a86e4533ed628a8d140ba16cee0b39d132a",
+    "acod_v2_freeze_20261121/cpu_phase_receipts.json": "7ee3227244c27cb2d40988c47951436563deee4325fb2f0cf02d56f9efe08e36",
+    "acod_v2_freeze_20261121/cpu_regression.json": "7ba51d70859ca556e8767dcd191f196592974c54da5593dc41815b0856f45a6a",
+    "acod_v2_freeze_20261121/CPU_REPORT_ZH.md": "4d0edde6b1049b5fe4f1af33b2b0323b3529954c4f27b54c5fabbc52834994db",
+    "acod_v2_freeze_20261121/data_validation.json": "243de1ee4c85caeb270be11839129f8d642b5fa76708a132dff1a19329e6e89c",
+    "acod_v2_freeze_20261121/freeze_receipt.json": "cd1a148315d03ed388942b52e52b7add6c62819b4b2dbc38b515f6051eb94c40",
+    "acod_v2_freeze_20261121/HANDOVER_ZH.md": "a30ca2ccccb9f8ddf0e8aabf6eca123903ca4a6fff71de4c2001872a23f91838",
+    "acod_v2_freeze_20261121/interfaces.py": "b978fcfc50a17640d31f4d769835fa4f7e08bc9e5fa330d19704bec1456e7793",
+    "acod_v2_freeze_20261121/legacy_before.json": "b89e7a169a6268df979108330ed278431760375b1edbc0178ff533a9f2608d95",
+    "acod_v2_freeze_20261121/legacy_unchanged.json": "6320939ab35ba1ddeee9555e47de8aba22595bb03e9bb83e99aa498cca1de0d5",
+    "acod_v2_freeze_20261121/manifest.json": "ee525e4c76a5db668604ff8ff2992ade614373ec60f71630ee39589121063235",
+    "acod_v2_freeze_20261121/manifest.sha256": "c66958097def5107cd16ef6174da3c4e89051598ca9997313616d2fb1d69d2d0",
+    "acod_v2_freeze_20261121/PREREG_NEXT_ZH.md": "9c2a718a94b6b5623ea390396fcbe5b46a417d8e2e83ab8c4e4a8e3ebcb2a14b",
+    "acod_v2_freeze_20261121/PRE_DATA_LOCK.json": "83c6b266b02458835258e4bc9c138ebbe55633f1e959ad1f7e74c341a93ee067",
+    "acod_v2_freeze_20261121/REVISION_ZH.md": "03315208b593ceb5aec7a804163b41821d22e6424502c8b6fc48e31d3df3efc0",
+    "acod_v2_freeze_20261121/seal_and_freeze.py": "5244688312af35f0d70590bfc40545b9cf07ebe0f02850710c24a60e234ef309",
+    "acod_v2_freeze_20261121/test_v2.py": "a28b16034e1fe5011c4daf221dbcf55ce5db917aa257255b60f2c57bc2f0711a",
+    "acod_v2_freeze_20261121/validate_data.py": "4c6afba3a291858a34ce2af51d94b0bf3f9171eace5dfb77496cef6e7e6a4103",
+    "acod_v2_freeze_20261121/verify_freeze.py": "17f07d38e31f99c5c80ca5b38e953c7bfa9e220215dc8d272532ebdb30696ced",
+    "acod_v2_freeze_20261121/data/recipe_manifest.json": "5ea43fe95216ab98010bd7653470129b184ce9819d80170b757d7ca914d08bc5",
+    "acod_v2_freeze_20261121/data/scorer_only/groups.jsonl": "fb2c9143b2d2ae7c955e132bd0949d214ce42c6280ec750aa174cd2c143efafe",
+    "acod_v2_freeze_20261121/data/validator_only/source_fixtures.jsonl": "ae68bca0be973f875bb19ea13f394a5adcb8b50deb1d80abb503f33db00baa00",
+    "acod_v2_freeze_20261121/data/development/public/cases.jsonl": "294060e62c666000297f02fcb32defddfe9a2e47e62e3b3bbf21d8c1289aaa93",
+    "acod_v2_freeze_20261121/data/development/scorer_only/gold.jsonl": "dc959848615b2e2a6a42be624c512191536907490e2eafd4aee4ac90fd669c8b",
+    "acod_v2_freeze_20261121/data/heldout/public/cases.jsonl": "559d69dd5dfc39855649bd2e285300e4f56ef3f64734094fcd767ec110d5f705",
+    "acod_v2_freeze_20261121/data/heldout/scorer_only/gold.jsonl": "9fc800b140927cd31abd59cf50249008e5cb71dccd9120658f3e76dd1e731881"
+  },
+  "source_hashes": {
+    "analyze.py": "111ceae99bd171b64c6d21ae2fd45f831ffef0259015e43e5af6b33a1dd85421",
+    "lock_protocol.py": "d6d1a6a140150751b6073b8528035511e3997854ee4a05002fe619f895a9f82e",
+    "PREREG_SUPPLEMENT_ZH.md": "67d89f3aaaa331111cb6655c7dec4016304436b5741f7cd911a16beec3fabc2b",
+    "runner.py": "016144e6d9bada833d2b460f5826a2054b27edb96d57b45e7f3483490b183ae7"
+  },
+  "no_natural_responses_seen_before_lock": true,
+  "v2_manifest_sha256": "ee525e4c76a5db668604ff8ff2992ade614373ec60f71630ee39589121063235"
+}

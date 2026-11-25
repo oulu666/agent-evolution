@@ -1,0 +1,6189 @@
+{
+ "basic": {
+  "witness": {
+   "stale_read": [
+    "getA",
+    "addA",
+    "getA"
+   ],
+   "undo_ignored": [
+    "mark",
+    "addA",
+    "undo",
+    "getA"
+   ],
+   "outer_rollback": [
+    "mark",
+    "addA",
+    "mark",
+    "undo",
+    "getA"
+   ]
+  },
+  "blocked": [
+   "release_reverts",
+   "wrong_row"
+  ],
+  "oracle_calls": 5264,
+  "oracle_resets": 1227,
+  "replays": [
+   {
+    "layout": 0,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     20,
+     "ok",
+     21
+    ],
+    "observed": [
+     20,
+     "ok",
+     20
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     20
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     20
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     28,
+     "ok",
+     29
+    ],
+    "observed": [
+     28,
+     "ok",
+     28
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     28
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     28
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     90,
+     "ok",
+     91
+    ],
+    "observed": [
+     90,
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     91
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     91
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     89,
+     "ok",
+     90
+    ],
+    "observed": [
+     89,
+     "ok",
+     89
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     89
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     89
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     21,
+     "ok",
+     22
+    ],
+    "observed": [
+     21,
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     22
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     22
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     43,
+     "ok",
+     44
+    ],
+    "observed": [
+     43,
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     44
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     44
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     49,
+     "ok",
+     50
+    ],
+    "observed": [
+     49,
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     18,
+     "ok",
+     19
+    ],
+    "observed": [
+     18,
+     "ok",
+     18
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     18
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     19
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     19
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     18
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     80,
+     "ok",
+     81
+    ],
+    "observed": [
+     80,
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     81
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     81
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     50,
+     "ok",
+     51
+    ],
+    "observed": [
+     50,
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     50,
+     "ok",
+     51
+    ],
+    "observed": [
+     50,
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     59,
+     "ok",
+     60
+    ],
+    "observed": [
+     59,
+     "ok",
+     59
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     59
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     59
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     96,
+     "ok",
+     97
+    ],
+    "observed": [
+     96,
+     "ok",
+     96
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     96
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     97
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     97
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     96
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     11,
+     "ok",
+     12
+    ],
+    "observed": [
+     11,
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     5,
+     "ok",
+     6
+    ],
+    "observed": [
+     5,
+     "ok",
+     5
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     5
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     6
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     6
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     5
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     29,
+     "ok",
+     30
+    ],
+    "observed": [
+     29,
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     14,
+     "ok",
+     15
+    ],
+    "observed": [
+     14,
+     "ok",
+     14
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     14
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     14
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     11,
+     "ok",
+     12
+    ],
+    "observed": [
+     11,
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     99,
+     "ok",
+     100
+    ],
+    "observed": [
+     99,
+     "ok",
+     99
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     99
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     100
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     100
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     99
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     33,
+     "ok",
+     34
+    ],
+    "observed": [
+     33,
+     "ok",
+     33
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     33
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     34
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     34
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     33
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     47,
+     "ok",
+     48
+    ],
+    "observed": [
+     47,
+     "ok",
+     47
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     47
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     47
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     40,
+     "ok",
+     41
+    ],
+    "observed": [
+     40,
+     "ok",
+     40
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     40
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     40
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     76,
+     "ok",
+     77
+    ],
+    "observed": [
+     76,
+     "ok",
+     76
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     76
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     77
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     77
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     76
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     85,
+     "ok",
+     86
+    ],
+    "observed": [
+     85,
+     "ok",
+     85
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     85
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     86
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     86
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     85
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     42,
+     "ok",
+     43
+    ],
+    "observed": [
+     42,
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     66,
+     "ok",
+     67
+    ],
+    "observed": [
+     66,
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     66,
+     "ok",
+     67
+    ],
+    "observed": [
+     66,
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     30,
+     "ok",
+     31
+    ],
+    "observed": [
+     30,
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     31
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     31
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     41,
+     "ok",
+     42
+    ],
+    "observed": [
+     41,
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     1,
+     "ok",
+     2
+    ],
+    "observed": [
+     1,
+     "ok",
+     1
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     1
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     2
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     2
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     1
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     48,
+     "ok",
+     49
+    ],
+    "observed": [
+     48,
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     79,
+     "ok",
+     80
+    ],
+    "observed": [
+     79,
+     "ok",
+     79
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     79
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     79
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     15,
+     "ok",
+     16
+    ],
+    "observed": [
+     15,
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     16
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     16
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     3,
+     "ok",
+     4
+    ],
+    "observed": [
+     3,
+     "ok",
+     3
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     3
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     4
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     4
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     3
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     26,
+     "ok",
+     27
+    ],
+    "observed": [
+     26,
+     "ok",
+     26
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     26
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     27
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     27
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     26
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     60,
+     "ok",
+     61
+    ],
+    "observed": [
+     60,
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     61
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     61
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     60
+    ]
+   }
+  ]
+ },
+ "extended": {
+  "witness": {
+   "wrong_row": [
+    "addB",
+    "getA"
+   ],
+   "stale_read": [
+    "getA",
+    "addA",
+    "getA"
+   ],
+   "undo_ignored": [
+    "mark",
+    "addA",
+    "undo",
+    "getA"
+   ],
+   "release_reverts": [
+    "mark",
+    "addA",
+    "release",
+    "getA"
+   ],
+   "outer_rollback": [
+    "mark",
+    "addA",
+    "mark",
+    "undo",
+    "getA"
+   ]
+  },
+  "blocked": [],
+  "oracle_calls": 45679,
+  "oracle_resets": 10505,
+  "replays": [
+   {
+    "layout": 0,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     20
+    ],
+    "observed": [
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     20,
+     "ok",
+     21
+    ],
+    "observed": [
+     20,
+     "ok",
+     20
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     20
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     20
+    ]
+   },
+   {
+    "layout": 0,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     20
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     28
+    ],
+    "observed": [
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     28,
+     "ok",
+     29
+    ],
+    "observed": [
+     28,
+     "ok",
+     28
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     28
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     28
+    ]
+   },
+   {
+    "layout": 1,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     28
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     91
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     90,
+     "ok",
+     91
+    ],
+    "observed": [
+     90,
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     91
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     91
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 2,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     91
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     89
+    ],
+    "observed": [
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     89,
+     "ok",
+     90
+    ],
+    "observed": [
+     89,
+     "ok",
+     89
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     89
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     89
+    ]
+   },
+   {
+    "layout": 3,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     90
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     89
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     22
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     21,
+     "ok",
+     22
+    ],
+    "observed": [
+     21,
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     22
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     22
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 4,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     22
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     21
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     44
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     43,
+     "ok",
+     44
+    ],
+    "observed": [
+     43,
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     44
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     44
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 5,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     44
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     49,
+     "ok",
+     50
+    ],
+    "observed": [
+     49,
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 6,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     18
+    ],
+    "observed": [
+     "ok",
+     19
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     18,
+     "ok",
+     19
+    ],
+    "observed": [
+     18,
+     "ok",
+     18
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     18
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     19
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     19
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     18
+    ]
+   },
+   {
+    "layout": 7,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     19
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     18
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     81
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     80,
+     "ok",
+     81
+    ],
+    "observed": [
+     80,
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     81
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     81
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 8,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     81
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     50,
+     "ok",
+     51
+    ],
+    "observed": [
+     50,
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 9,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     50,
+     "ok",
+     51
+    ],
+    "observed": [
+     50,
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 10,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     51
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     50
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     59
+    ],
+    "observed": [
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     59,
+     "ok",
+     60
+    ],
+    "observed": [
+     59,
+     "ok",
+     59
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     59
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     59
+    ]
+   },
+   {
+    "layout": 11,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     59
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     96
+    ],
+    "observed": [
+     "ok",
+     97
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     96,
+     "ok",
+     97
+    ],
+    "observed": [
+     96,
+     "ok",
+     96
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     96
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     97
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     97
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     96
+    ]
+   },
+   {
+    "layout": 12,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     97
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     96
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     11,
+     "ok",
+     12
+    ],
+    "observed": [
+     11,
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 13,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     5
+    ],
+    "observed": [
+     "ok",
+     6
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     5,
+     "ok",
+     6
+    ],
+    "observed": [
+     5,
+     "ok",
+     5
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     5
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     6
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     6
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     5
+    ]
+   },
+   {
+    "layout": 14,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     6
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     5
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     29,
+     "ok",
+     30
+    ],
+    "observed": [
+     29,
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 15,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     29
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     14
+    ],
+    "observed": [
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     14,
+     "ok",
+     15
+    ],
+    "observed": [
+     14,
+     "ok",
+     14
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     14
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     14
+    ]
+   },
+   {
+    "layout": 16,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     14
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     11,
+     "ok",
+     12
+    ],
+    "observed": [
+     11,
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 17,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     12
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     11
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     99
+    ],
+    "observed": [
+     "ok",
+     100
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     99,
+     "ok",
+     100
+    ],
+    "observed": [
+     99,
+     "ok",
+     99
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     99
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     100
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     100
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     99
+    ]
+   },
+   {
+    "layout": 18,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     100
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     99
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     33
+    ],
+    "observed": [
+     "ok",
+     34
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     33,
+     "ok",
+     34
+    ],
+    "observed": [
+     33,
+     "ok",
+     33
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     33
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     34
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     34
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     33
+    ]
+   },
+   {
+    "layout": 19,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     34
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     33
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     47
+    ],
+    "observed": [
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     47,
+     "ok",
+     48
+    ],
+    "observed": [
+     47,
+     "ok",
+     47
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     47
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     47
+    ]
+   },
+   {
+    "layout": 20,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     47
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     40
+    ],
+    "observed": [
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     40,
+     "ok",
+     41
+    ],
+    "observed": [
+     40,
+     "ok",
+     40
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     40
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     40
+    ]
+   },
+   {
+    "layout": 21,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     40
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     76
+    ],
+    "observed": [
+     "ok",
+     77
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     76,
+     "ok",
+     77
+    ],
+    "observed": [
+     76,
+     "ok",
+     76
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     76
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     77
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     77
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     76
+    ]
+   },
+   {
+    "layout": 22,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     77
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     76
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     85
+    ],
+    "observed": [
+     "ok",
+     86
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     85,
+     "ok",
+     86
+    ],
+    "observed": [
+     85,
+     "ok",
+     85
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     85
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     86
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     86
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     85
+    ]
+   },
+   {
+    "layout": 23,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     86
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     85
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     42,
+     "ok",
+     43
+    ],
+    "observed": [
+     42,
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 24,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     43
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     66,
+     "ok",
+     67
+    ],
+    "observed": [
+     66,
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 25,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     66,
+     "ok",
+     67
+    ],
+    "observed": [
+     66,
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 26,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     67
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     66
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     31
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     30,
+     "ok",
+     31
+    ],
+    "observed": [
+     30,
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     31
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     31
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 27,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     31
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     30
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     41,
+     "ok",
+     42
+    ],
+    "observed": [
+     41,
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 28,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     42
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     41
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     1
+    ],
+    "observed": [
+     "ok",
+     2
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     1,
+     "ok",
+     2
+    ],
+    "observed": [
+     1,
+     "ok",
+     1
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     1
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     2
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     2
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     1
+    ]
+   },
+   {
+    "layout": 29,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     2
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     1
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     48,
+     "ok",
+     49
+    ],
+    "observed": [
+     48,
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 30,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     49
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     48
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     79
+    ],
+    "observed": [
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     79,
+     "ok",
+     80
+    ],
+    "observed": [
+     79,
+     "ok",
+     79
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     79
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     79
+    ]
+   },
+   {
+    "layout": 31,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     80
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     79
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     16
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     15,
+     "ok",
+     16
+    ],
+    "observed": [
+     15,
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     16
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     16
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 32,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     16
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     15
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     3
+    ],
+    "observed": [
+     "ok",
+     4
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     3,
+     "ok",
+     4
+    ],
+    "observed": [
+     3,
+     "ok",
+     3
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     3
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     4
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     4
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     3
+    ]
+   },
+   {
+    "layout": 33,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     4
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     3
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     26
+    ],
+    "observed": [
+     "ok",
+     27
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     26,
+     "ok",
+     27
+    ],
+    "observed": [
+     26,
+     "ok",
+     26
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     26
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     27
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     27
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     26
+    ]
+   },
+   {
+    "layout": 34,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     27
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     26
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "wrong_row",
+    "seq": [
+     "addB",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     61
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "stale_read",
+    "seq": [
+     "getA",
+     "addA",
+     "getA"
+    ],
+    "expected": [
+     60,
+     "ok",
+     61
+    ],
+    "observed": [
+     60,
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "undo_ignored",
+    "seq": [
+     "mark",
+     "addA",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     61
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "release_reverts",
+    "seq": [
+     "mark",
+     "addA",
+     "release",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     61
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     60
+    ]
+   },
+   {
+    "layout": 35,
+    "fault": "outer_rollback",
+    "seq": [
+     "mark",
+     "addA",
+     "mark",
+     "undo",
+     "getA"
+    ],
+    "expected": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     61
+    ],
+    "observed": [
+     "ok",
+     "ok",
+     "ok",
+     "ok",
+     60
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,103 @@
+{
+  "seed": 20261123,
+  "shared_first": true,
+  "max_calls": 2,
+  "hypotheses": [
+    [
+      [
+        0,
+        0
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      2
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      null
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      2
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      null
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      1
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      2
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      null
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      2
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      null
+    ]
+  ],
+  "panels": "64 archived schedules and 64 new: one center changed from 1 event to 0 or 2, dates shifted and half of held schemas aliased",
+  "model": "P11 seed08 frozen, A/B logits in both action orders, same remaining-set verifier for all arms",
+  "routing": "menu fixed from public fixture before tool feedback; static fallback on layouts with no adaptive gain",
+  "evidence": [
+    "A actual page + common task and fixture",
+    "B adds consistent contracts",
+    "C adds per-contract counterfactuals",
+    "D adds singleton counts per action"
+  ],
+  "primary": "strict opposite-optimum reply pairs within same layout, both decisions correct; jointly confirmed contracts / 768",
+  "gate": "C evidence route requires positive C-static on held and improved paired accuracy vs A; inspect clustered uncertainty before attributing gains",
+  "intervals": "paired percentile bootstrap by layout, 20,000 draws for identification rate differences"
+}

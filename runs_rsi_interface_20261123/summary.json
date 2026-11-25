@@ -1,0 +1,197 @@
+{
+  "totals": {
+    "schema_default": {
+      "mappings": 1,
+      "days": 15
+    },
+    "model_prior": {
+      "mappings": 1,
+      "days": 17
+    },
+    "model_evidence": {
+      "mappings": 1,
+      "days": 17
+    },
+    "constraint_solver": {
+      "mappings": 4,
+      "days": 48
+    },
+    "oracle": {
+      "mappings": 4,
+      "days": 48
+    }
+  },
+  "interfaces": {
+    "v01": {
+      "schema_default": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": false,
+        "correct_dates": 1
+      },
+      "model_prior": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 2
+      },
+      "model_evidence": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 2
+      },
+      "constraint_solver": {
+        "mapping": [
+          0,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "oracle": {
+        "mapping": [
+          0,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      }
+    },
+    "v02": {
+      "schema_default": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": false,
+        "correct_dates": 1
+      },
+      "model_prior": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "model_evidence": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "constraint_solver": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "oracle": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      }
+    },
+    "v03": {
+      "schema_default": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "model_prior": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 1
+      },
+      "model_evidence": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 1
+      },
+      "constraint_solver": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "oracle": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      }
+    },
+    "v04": {
+      "schema_default": {
+        "mapping": [
+          0,
+          0
+        ],
+        "mapping_correct": false,
+        "correct_dates": 1
+      },
+      "model_prior": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 2
+      },
+      "model_evidence": {
+        "mapping": [
+          -1,
+          1
+        ],
+        "mapping_correct": false,
+        "correct_dates": 2
+      },
+      "constraint_solver": {
+        "mapping": [
+          -1,
+          0
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      },
+      "oracle": {
+        "mapping": [
+          -1,
+          0
+        ],
+        "mapping_correct": true,
+        "correct_dates": 12
+      }
+    }
+  },
+  "probe_calls": 4,
+  "selector_forwards": 20,
+  "parameter_updates": 0
+}

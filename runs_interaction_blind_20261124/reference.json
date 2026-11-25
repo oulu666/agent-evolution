@@ -1,0 +1,480 @@
+{
+ "attrs": {
+  "rows": {
+   "convert_validate/00": {
+    "value": [
+     "7",
+     "str"
+    ],
+    "expected": [
+     "7",
+     "str"
+    ],
+    "pass": true
+   },
+   "convert_validate/10": {
+    "value": [
+     7,
+     "int"
+    ],
+    "expected": [
+     7,
+     "int"
+    ],
+    "pass": true
+   },
+   "convert_validate/01": {
+    "value": "TypeError",
+    "expected": "TypeError",
+    "pass": true
+   },
+   "convert_validate/11": {
+    "value": [
+     7,
+     "int"
+    ],
+    "expected": [
+     7,
+     "int"
+    ],
+    "pass": true
+   },
+   "private_evolve/00": {
+    "value": [
+     3,
+     1
+    ],
+    "expected": [
+     3,
+     1
+    ],
+    "pass": true
+   },
+   "private_evolve/10": {
+    "value": [
+     3,
+     1
+    ],
+    "expected": [
+     3,
+     1
+    ],
+    "pass": true
+   },
+   "private_evolve/01": {
+    "value": [
+     3,
+     1
+    ],
+    "expected": [
+     3,
+     1
+    ],
+    "pass": true
+   },
+   "private_evolve/11": {
+    "value": [
+     3,
+     1
+    ],
+    "expected": [
+     3,
+     1
+    ],
+    "pass": true
+   },
+   "nested_dict/00": {
+    "value": {
+     "x": 2,
+     "note": "note"
+    },
+    "expected": {
+     "x": 2,
+     "note": "note"
+    },
+    "pass": true
+   },
+   "nested_dict/10": {
+    "value": {
+     "x": {
+      "x": 2,
+      "note": "note"
+     },
+     "note": "note"
+    },
+    "expected": {
+     "x": {
+      "x": 2,
+      "note": "note"
+     },
+     "note": "note"
+    },
+    "pass": true
+   },
+   "nested_dict/01": {
+    "value": {
+     "x": 2
+    },
+    "expected": {
+     "x": 2
+    },
+    "pass": true
+   },
+   "nested_dict/11": {
+    "value": {
+     "x": {
+      "x": 2
+     }
+    },
+    "expected": {
+     "x": {
+      "x": 2
+     }
+    },
+    "pass": true
+   },
+   "compare/00": {
+    "value": true,
+    "expected": true,
+    "pass": true
+   },
+   "compare/10": {
+    "value": true,
+    "expected": true,
+    "pass": true
+   },
+   "compare/01": {
+    "value": false,
+    "expected": false,
+    "pass": true
+   },
+   "compare/11": {
+    "value": true,
+    "expected": true,
+    "pass": true
+   },
+   "defaults/00": {
+    "value": null,
+    "expected": null,
+    "pass": true
+   },
+   "defaults/10": {
+    "value": [],
+    "expected": [],
+    "pass": true
+   },
+   "defaults/01": {
+    "value": [
+     4
+    ],
+    "expected": [
+     4
+    ],
+    "pass": true
+   },
+   "defaults/11": {
+    "value": [
+     4
+    ],
+    "expected": [
+     4
+    ],
+    "pass": true
+   },
+   "assignment/00": {
+    "value": [
+     "9",
+     "str"
+    ],
+    "expected": [
+     "9",
+     "str"
+    ],
+    "pass": true
+   },
+   "assignment/10": {
+    "value": [
+     9,
+     "int"
+    ],
+    "expected": [
+     9,
+     "int"
+    ],
+    "pass": true
+   },
+   "assignment/01": {
+    "value": [
+     "TypeError",
+     1
+    ],
+    "expected": [
+     "TypeError",
+     1
+    ],
+    "pass": true
+   },
+   "assignment/11": {
+    "value": [
+     9,
+     "int"
+    ],
+    "expected": [
+     9,
+     "int"
+    ],
+    "pass": true
+   }
+  },
+  "plan_ns": {
+   "single": [
+    2776200,
+    2841600,
+    3011300,
+    3007100,
+    2519800
+   ],
+   "combined": [
+    3208300,
+    3047100,
+    2759700,
+    3004000,
+    3008000
+   ],
+   "mirror": [
+    2659100,
+    3048700,
+    2913100,
+    2806200,
+    2777500
+   ]
+  }
+ },
+ "dateutil": {
+  "rows": {
+   "month_shift/00": {
+    "value": "2021-02-15T00:00:00",
+    "expected": "2021-02-15T00:00:00",
+    "pass": true
+   },
+   "month_shift/10": {
+    "value": "2021-02-28T00:00:00",
+    "expected": "2021-02-28T00:00:00",
+    "pass": true
+   },
+   "month_shift/01": {
+    "value": "2020-02-15T00:00:00",
+    "expected": "2020-02-15T00:00:00",
+    "pass": true
+   },
+   "month_shift/11": {
+    "value": "2020-02-29T00:00:00",
+    "expected": "2020-02-29T00:00:00",
+    "pass": true
+   },
+   "weekday/00": {
+    "value": "2021-03-22T00:00:00",
+    "expected": "2021-03-22T00:00:00",
+    "pass": true
+   },
+   "weekday/10": {
+    "value": "2021-03-01T00:00:00",
+    "expected": "2021-03-01T00:00:00",
+    "pass": true
+   },
+   "weekday/01": {
+    "value": "2021-03-29T00:00:00",
+    "expected": "2021-03-29T00:00:00",
+    "pass": true
+   },
+   "weekday/11": {
+    "value": "2021-03-08T00:00:00",
+    "expected": "2021-03-08T00:00:00",
+    "pass": true
+   },
+   "monthly/00": {
+    "value": [
+     "2021-01-15T00:00:00",
+     "2021-02-15T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-04-15T00:00:00"
+    ],
+    "expected": [
+     "2021-01-15T00:00:00",
+     "2021-02-15T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-04-15T00:00:00"
+    ],
+    "pass": true
+   },
+   "monthly/10": {
+    "value": [
+     "2021-01-31T00:00:00",
+     "2021-03-31T00:00:00",
+     "2021-05-31T00:00:00",
+     "2021-07-31T00:00:00"
+    ],
+    "expected": [
+     "2021-01-31T00:00:00",
+     "2021-03-31T00:00:00",
+     "2021-05-31T00:00:00",
+     "2021-07-31T00:00:00"
+    ],
+    "pass": true
+   },
+   "monthly/01": {
+    "value": [
+     "2021-01-15T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-05-15T00:00:00",
+     "2021-07-15T00:00:00"
+    ],
+    "expected": [
+     "2021-01-15T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-05-15T00:00:00",
+     "2021-07-15T00:00:00"
+    ],
+    "pass": true
+   },
+   "monthly/11": {
+    "value": [
+     "2021-01-31T00:00:00",
+     "2021-03-31T00:00:00",
+     "2021-05-31T00:00:00",
+     "2021-07-31T00:00:00"
+    ],
+    "expected": [
+     "2021-01-31T00:00:00",
+     "2021-03-31T00:00:00",
+     "2021-05-31T00:00:00",
+     "2021-07-31T00:00:00"
+    ],
+    "pass": true
+   },
+   "weekly/00": {
+    "value": [
+     "2021-03-01T00:00:00",
+     "2021-03-08T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-22T00:00:00"
+    ],
+    "expected": [
+     "2021-03-01T00:00:00",
+     "2021-03-08T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-22T00:00:00"
+    ],
+    "pass": true
+   },
+   "weekly/10": {
+    "value": [
+     "2021-03-01T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-29T00:00:00",
+     "2021-04-12T00:00:00"
+    ],
+    "expected": [
+     "2021-03-01T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-29T00:00:00",
+     "2021-04-12T00:00:00"
+    ],
+    "pass": true
+   },
+   "weekly/01": {
+    "value": [
+     "2021-03-01T00:00:00",
+     "2021-03-03T00:00:00",
+     "2021-03-08T00:00:00",
+     "2021-03-10T00:00:00"
+    ],
+    "expected": [
+     "2021-03-01T00:00:00",
+     "2021-03-03T00:00:00",
+     "2021-03-08T00:00:00",
+     "2021-03-10T00:00:00"
+    ],
+    "pass": true
+   },
+   "weekly/11": {
+    "value": [
+     "2021-03-01T00:00:00",
+     "2021-03-03T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-17T00:00:00"
+    ],
+    "expected": [
+     "2021-03-01T00:00:00",
+     "2021-03-03T00:00:00",
+     "2021-03-15T00:00:00",
+     "2021-03-17T00:00:00"
+    ],
+    "pass": true
+   },
+   "parse_defaults/00": {
+    "value": "2021-02-10T09:45:00",
+    "expected": "2021-02-10T09:45:00",
+    "pass": true
+   },
+   "parse_defaults/10": {
+    "value": "2020-02-10T09:45:00",
+    "expected": "2020-02-10T09:45:00",
+    "pass": true
+   },
+   "parse_defaults/01": {
+    "value": "2021-02-28T09:45:00",
+    "expected": "2021-02-28T09:45:00",
+    "pass": true
+   },
+   "parse_defaults/11": {
+    "value": "2020-02-29T09:45:00",
+    "expected": "2020-02-29T09:45:00",
+    "pass": true
+   },
+   "parse_offset/00": {
+    "value": "2021-04-05T12:30:00",
+    "expected": "2021-04-05T12:30:00",
+    "pass": true
+   },
+   "parse_offset/10": {
+    "value": "2021-04-05T12:30:00+05:30",
+    "expected": "2021-04-05T12:30:00+05:30",
+    "pass": true
+   },
+   "parse_offset/01": {
+    "value": "2021-04-05T12:30:00",
+    "expected": "2021-04-05T12:30:00",
+    "pass": true
+   },
+   "parse_offset/11": {
+    "value": "2021-04-05T12:30:00",
+    "expected": "2021-04-05T12:30:00",
+    "pass": true
+   }
+  },
+  "plan_ns": {
+   "single": [
+    283000,
+    278400,
+    276400,
+    275900,
+    277500
+   ],
+   "combined": [
+    293700,
+    294200,
+    280000,
+    284500,
+    277400
+   ],
+   "mirror": [
+    283500,
+    285600,
+    276400,
+    282500,
+    295600
+   ]
+  }
+ }
+}

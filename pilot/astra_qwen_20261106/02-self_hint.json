@@ -1,0 +1,109 @@
+{
+  "id": 2,
+  "group": "self_hint",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "hint",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nAvailable pushes: U D\nGive the student one short hint (at most 24 words) about a useful intermediate target or trap. Do not provide the full solution.",
+      "output": "Push B down to clear space\u2014then move to the right to reach the goal.",
+      "input_tokens": 140,
+      "output_tokens": 18,
+      "reasoning_tokens": 0,
+      "total_tokens": 158
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: \nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 173,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 175
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#P..#\n#.#B..#\n#######\nAvailable actions: RESET\nChoose one available action. Reply with just its label.",
+      "output": "RESET",
+      "input_tokens": 172,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 174
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 175,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 177
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET D\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#P..#\n#.#B..#\n#######\nAvailable actions: RESET\nChoose one available action. Reply with just its label.",
+      "output": "RESET",
+      "input_tokens": 174,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 176
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET D RESET\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 177,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 179
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET D RESET D\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#P..#\n#.#B..#\n#######\nAvailable actions: RESET\nChoose one available action. Reply with just its label.",
+      "output": "RESET",
+      "input_tokens": 176,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 178
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET D RESET D RESET\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 179,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 181
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#B..#\n#.#..P#\n#######\nInitial history: attempted to walk D twice, both blocked.\nHint: Push B down to clear space\u2014then move to the right to reach the goal.\nActions taken: D RESET D RESET D RESET D\nCurrent board:\n#######\n#.....#\n#.#G..#\n#.#...#\n#.#P..#\n#.#B..#\n#######\nAvailable actions: RESET\nChoose one available action. Reply with just its label.",
+      "output": "RESET",
+      "input_tokens": 178,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 180
+    }
+  ],
+  "actions": [
+    "D",
+    "RESET",
+    "D",
+    "RESET",
+    "D",
+    "RESET",
+    "D",
+    "RESET"
+  ],
+  "done": true,
+  "solved": false,
+  "tokens": 1578
+}

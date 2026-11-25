@@ -1,0 +1,32 @@
+{
+  "id": 1,
+  "group": "full_guidance",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "full_guidance",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##GB..#\n#..#..#\n#..#..#\n#....P#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nStudent actions taken: \nCurrent board:\n#######\n##GB..#\n#..#..#\n#..#..#\n#....P#\n#.....#\n#######\nAvailable actions: L R RESET\nYou supervise a smaller model that executes one action at a time. Solve the whole remaining task and give a complete ordered action plan. Explicitly state the ONE action the student must execute now. Check whether the previous instruction was followed and correct mistakes. Include a brief expected state after the next action. Be concise.",
+      "output": "**Execute L now.**\n\nComplete plan: **L**. The player can reach the box\u2019s right side and push it left onto G.\n\nThe earlier R walks were blocked and changed nothing; no student action has been taken since.\n\nExpected state: box on the goal at row 2, column 3; player at row 2, column 4. **Solved.**",
+      "input_tokens": 207,
+      "output_tokens": 160,
+      "reasoning_tokens": 77,
+      "total_tokens": 367
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##GB..#\n#..#..#\n#..#..#\n#....P#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: \nCurrent board:\n#######\n##GB..#\n#..#..#\n#..#..#\n#....P#\n#.....#\n#######\nAvailable actions: L R RESET\nTeacher instructions:\n**Execute L now.**\n\nComplete plan: **L**. The player can reach the box\u2019s right side and push it left onto G.\n\nThe earlier R walks were blocked and changed nothing; no student action has been taken since.\n\nExpected state: box on the goal at row 2, column 3; player at row 2, column 4. **Solved.**\nExecute the teacher's requested next action. Reply with just one label from the available actions.",
+      "output": "L",
+      "input_tokens": 240,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 242
+    }
+  ],
+  "actions": [
+    "L"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 609
+}

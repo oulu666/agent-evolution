@@ -1,0 +1,2280 @@
+{
+  "num2words-1": [
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {},
+      "want": "forty-two",
+      "lines": [
+        35,
+        36
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "ordinal": true
+      },
+      "want": "forty-second",
+      "lines": [
+        37,
+        38
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "lang": "fr"
+      },
+      "want": "quarante-deux",
+      "lines": [
+        39,
+        40
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "equiv",
+      "arg": 1,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 8,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 42,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 1,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 8,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 42,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "raises",
+      "arg": 1,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 8,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 42,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    }
+  ],
+  "num2words-2": [
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {},
+      "want": "forty-two",
+      "lines": [
+        35,
+        36
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "ordinal": true
+      },
+      "want": "forty-second",
+      "lines": [
+        37,
+        38
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "lang": "fr"
+      },
+      "want": "quarante-deux",
+      "lines": [
+        39,
+        40
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "equiv",
+      "arg": 1,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 8,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 42,
+      "kw": {},
+      "want": null,
+      "lines": [
+        49
+      ],
+      "evidence": "explicit",
+      "other": {
+        "lang": "en"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 1,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 8,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 42,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        76,
+        77
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "raises",
+      "arg": 1,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 8,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 42,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        77
+      ],
+      "evidence": "explicit",
+      "other": null
+    }
+  ],
+  "num2words-3": [
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {},
+      "want": "forty-two",
+      "lines": [
+        27,
+        28
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "ordinal": true
+      },
+      "want": "forty-second",
+      "lines": [
+        29,
+        30
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": 42,
+      "kw": {
+        "lang": "fr"
+      },
+      "want": "quarante-deux",
+      "lines": [
+        31,
+        32
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "equiv",
+      "arg": 1,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        39,
+        40
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 8,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        39,
+        40
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "equiv",
+      "arg": 42,
+      "kw": {
+        "lang": "fr_FR"
+      },
+      "want": null,
+      "lines": [
+        39,
+        40
+      ],
+      "evidence": "locale_inference",
+      "other": {
+        "lang": "fr"
+      }
+    },
+    {
+      "kind": "raises",
+      "arg": 1,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        40
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 8,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        40
+      ],
+      "evidence": "explicit",
+      "other": null
+    },
+    {
+      "kind": "raises",
+      "arg": 42,
+      "kw": {
+        "lang": "zz_ZZ"
+      },
+      "want": "NotImplementedError",
+      "lines": [
+        40
+      ],
+      "evidence": "explicit",
+      "other": null
+    }
+  ],
+  "python-slugify-1": [
+    {
+      "kind": "exact",
+      "arg": "This is a test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        38,
+        39,
+        40
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "___This is a test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        42,
+        43,
+        44
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "___This is a test___",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        46,
+        47,
+        48
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "This -- is a ## test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        50,
+        51,
+        52
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "\u5f71\u5e2b\u55ce",
+      "kw": {},
+      "want": "ying-shi-ma",
+      "lines": [
+        54,
+        55,
+        56
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "C'est d\u00e9j\u00e0 l'\u00e9t\u00e9.",
+      "kw": {},
+      "want": "cest-deja-lete",
+      "lines": [
+        58,
+        59,
+        60
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "N\u00edn h\u01ceo. W\u01d2 sh\u00ec zh\u014dng gu\u00f3 r\u00e9n",
+      "kw": {},
+      "want": "nin-hao-wo-shi-zhong-guo-ren",
+      "lines": [
+        62,
+        63,
+        64
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {},
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        66,
+        67,
+        68
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "\u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440",
+      "kw": {},
+      "want": "kompiuter",
+      "lines": [
+        70,
+        71,
+        72
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 9
+      },
+      "want": "jaja-lol",
+      "lines": [
+        74,
+        75,
+        76
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15
+      },
+      "want": "jaja-lol-mememe",
+      "lines": [
+        78,
+        79,
+        80
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 50
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        82,
+        83,
+        84
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-a",
+      "lines": [
+        86,
+        87,
+        88
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 17,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo",
+      "lines": [
+        90,
+        91,
+        92
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 18,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo",
+      "lines": [
+        94,
+        95,
+        96
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 19,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        98,
+        99,
+        100
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "."
+      },
+      "want": "jaja.lol.mememeoo.a",
+      "lines": [
+        102,
+        103,
+        104
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "ZZZZZZ"
+      },
+      "want": "jajaZZZZZZlolZZZZZZmememeooZZZZZZa",
+      "lines": [
+        106,
+        107,
+        108
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 13,
+        "word_boundary": true,
+        "save_order": true
+      },
+      "want": "one-two-three",
+      "lines": [
+        110,
+        111,
+        112
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 13,
+        "word_boundary": true,
+        "save_order": false
+      },
+      "want": "one-two-three",
+      "lines": [
+        114,
+        115,
+        116
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 12,
+        "word_boundary": true,
+        "save_order": false
+      },
+      "want": "one-two-four",
+      "lines": [
+        118,
+        119,
+        120
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 12,
+        "word_boundary": true,
+        "save_order": true
+      },
+      "want": "one-two",
+      "lines": [
+        122,
+        123,
+        124
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "this has a stopword",
+      "kw": {
+        "stopwords": [
+          "stopword"
+        ]
+      },
+      "want": "this-has-a",
+      "lines": [
+        126,
+        127,
+        128
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "the quick brown fox jumps over the lazy dog",
+      "kw": {
+        "stopwords": [
+          "the"
+        ]
+      },
+      "want": "quick-brown-fox-jumps-over-lazy-dog",
+      "lines": [
+        130,
+        131,
+        132
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "Foo A FOO B foo C",
+      "kw": {
+        "stopwords": [
+          "foo"
+        ]
+      },
+      "want": "a-b-c",
+      "lines": [
+        134,
+        135,
+        136
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "Foo A FOO B foo C",
+      "kw": {
+        "stopwords": [
+          "FOO"
+        ]
+      },
+      "want": "a-b-c",
+      "lines": [
+        138,
+        139,
+        140
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "the quick brown fox jumps over the lazy dog in a hurry",
+      "kw": {
+        "stopwords": [
+          "the",
+          "in",
+          "a",
+          "hurry"
+        ]
+      },
+      "want": "quick-brown-fox-jumps-over-lazy-dog",
+      "lines": [
+        142,
+        143,
+        144
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "foo &amp; bar",
+      "kw": {},
+      "want": "foo-bar",
+      "lines": [
+        146,
+        147,
+        148
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "_"
+      },
+      "want": "jaja_lol_mememeoo_a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "~"
+      },
+      "want": "jaja~lol~mememeoo~a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "|"
+      },
+      "want": "jaja|lol|mememeoo|a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "green oak red",
+      "kw": {
+        "stopwords": [
+          "green"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "green oak red",
+      "kw": {
+        "stopwords": [
+          "red"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "a quick blue fox",
+      "kw": {
+        "stopwords": [
+          "a"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "a quick blue fox",
+      "kw": {
+        "stopwords": [
+          "fox"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "new old paper",
+      "kw": {
+        "stopwords": [
+          "new"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "new old paper",
+      "kw": {
+        "stopwords": [
+          "paper"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    }
+  ],
+  "python-slugify-2": [
+    {
+      "kind": "exact",
+      "arg": "This is a test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        38,
+        39,
+        40
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "___This is a test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        42,
+        43,
+        44
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "___This is a test___",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        46,
+        47,
+        48
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "This -- is a ## test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        50,
+        51,
+        52
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "\u5f71\u5e2b\u55ce",
+      "kw": {},
+      "want": "ying-shi-ma",
+      "lines": [
+        54,
+        55,
+        56
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "C'est d\u00e9j\u00e0 l'\u00e9t\u00e9.",
+      "kw": {},
+      "want": "cest-deja-lete",
+      "lines": [
+        58,
+        59,
+        60
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "N\u00edn h\u01ceo. W\u01d2 sh\u00ec zh\u014dng gu\u00f3 r\u00e9n",
+      "kw": {},
+      "want": "nin-hao-wo-shi-zhong-guo-ren",
+      "lines": [
+        62,
+        63,
+        64
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {},
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        66,
+        67,
+        68
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "\u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440",
+      "kw": {},
+      "want": "kompiuter",
+      "lines": [
+        70,
+        71,
+        72
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 9
+      },
+      "want": "jaja-lol",
+      "lines": [
+        74,
+        75,
+        76
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15
+      },
+      "want": "jaja-lol-mememe",
+      "lines": [
+        78,
+        79,
+        80
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 50
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        82,
+        83,
+        84
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-a",
+      "lines": [
+        86,
+        87,
+        88
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 17,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo",
+      "lines": [
+        90,
+        91,
+        92
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 18,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo",
+      "lines": [
+        94,
+        95,
+        96
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 19,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        98,
+        99,
+        100
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "."
+      },
+      "want": "jaja.lol.mememeoo.a",
+      "lines": [
+        102,
+        103,
+        104
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "ZZZZZZ"
+      },
+      "want": "jajaZZZZZZlolZZZZZZmememeooZZZZZZa",
+      "lines": [
+        106,
+        107,
+        108
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 13,
+        "word_boundary": true,
+        "save_order": true
+      },
+      "want": "one-two-three",
+      "lines": [
+        110,
+        111,
+        112
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 13,
+        "word_boundary": true,
+        "save_order": false
+      },
+      "want": "one-two-three",
+      "lines": [
+        114,
+        115,
+        116
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 12,
+        "word_boundary": true,
+        "save_order": false
+      },
+      "want": "one-two-four",
+      "lines": [
+        118,
+        119,
+        120
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "one two three four five",
+      "kw": {
+        "max_length": 12,
+        "word_boundary": true,
+        "save_order": true
+      },
+      "want": "one-two",
+      "lines": [
+        122,
+        123,
+        124
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "this has a stopword",
+      "kw": {
+        "stopwords": [
+          "stopword"
+        ]
+      },
+      "want": "this-has-a",
+      "lines": [
+        126,
+        127,
+        128
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "the quick brown fox jumps over the lazy dog",
+      "kw": {
+        "stopwords": [
+          "the"
+        ]
+      },
+      "want": "quick-brown-fox-jumps-over-lazy-dog",
+      "lines": [
+        130,
+        131,
+        132
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "Foo A FOO B foo C",
+      "kw": {
+        "stopwords": [
+          "foo"
+        ]
+      },
+      "want": "a-b-c",
+      "lines": [
+        134,
+        135,
+        136
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "Foo A FOO B foo C",
+      "kw": {
+        "stopwords": [
+          "FOO"
+        ]
+      },
+      "want": "a-b-c",
+      "lines": [
+        138,
+        139,
+        140
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "the quick brown fox jumps over the lazy dog in a hurry",
+      "kw": {
+        "stopwords": [
+          "the",
+          "in",
+          "a",
+          "hurry"
+        ]
+      },
+      "want": "quick-brown-fox-jumps-over-lazy-dog",
+      "lines": [
+        142,
+        143,
+        144
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "foo &amp; bar",
+      "kw": {},
+      "want": "foo-bar",
+      "lines": [
+        146,
+        147,
+        148
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "_"
+      },
+      "want": "jaja_lol_mememeoo_a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "~"
+      },
+      "want": "jaja~lol~mememeoo~a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "|"
+      },
+      "want": "jaja|lol|mememeoo|a",
+      "lines": [
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "green oak red",
+      "kw": {
+        "stopwords": [
+          "green"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "green oak red",
+      "kw": {
+        "stopwords": [
+          "red"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "a quick blue fox",
+      "kw": {
+        "stopwords": [
+          "a"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "a quick blue fox",
+      "kw": {
+        "stopwords": [
+          "fox"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "new old paper",
+      "kw": {
+        "stopwords": [
+          "new"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "absent",
+      "arg": "new old paper",
+      "kw": {
+        "stopwords": [
+          "paper"
+        ]
+      },
+      "want": null,
+      "lines": [
+        126,
+        127,
+        128,
+        130,
+        131,
+        132
+      ],
+      "evidence": "example_inference",
+      "other": null
+    }
+  ],
+  "python-slugify-3": [
+    {
+      "kind": "exact",
+      "arg": "This is a test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        37,
+        38,
+        39
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "This -- is a ## test ---",
+      "kw": {},
+      "want": "this-is-a-test",
+      "lines": [
+        41,
+        42,
+        43
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "C'est d\u00e9j\u00e0 l'\u00e9t\u00e9.",
+      "kw": {},
+      "want": "cest-deja-lete",
+      "lines": [
+        45,
+        46,
+        47
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "N\u00edn h\u01ceo. W\u01d2 sh\u00ec zh\u014dng gu\u00f3 r\u00e9n",
+      "kw": {},
+      "want": "nin-hao-wo-shi-zhong-guo-ren",
+      "lines": [
+        49,
+        50,
+        51
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "\u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440",
+      "kw": {},
+      "want": "kompiuter",
+      "lines": [
+        53,
+        54,
+        55
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {},
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        57,
+        58,
+        59
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 9
+      },
+      "want": "jaja-lol",
+      "lines": [
+        61,
+        62,
+        63
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15
+      },
+      "want": "jaja-lol-mememe",
+      "lines": [
+        65,
+        66,
+        67
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 50
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        69,
+        70,
+        71
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 15,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-a",
+      "lines": [
+        73,
+        74,
+        75
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 19,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo",
+      "lines": [
+        77,
+        78,
+        79
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true
+      },
+      "want": "jaja-lol-mememeoo-a",
+      "lines": [
+        81,
+        82,
+        83
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "."
+      },
+      "want": "jaja.lol.mememeoo.a",
+      "lines": [
+        85,
+        86,
+        87
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "ZZZZZZ"
+      },
+      "want": "jajaZZZZZZlolZZZZZZmememeooZZZZZZa",
+      "lines": [
+        89,
+        90,
+        91
+      ],
+      "evidence": "literal",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "_"
+      },
+      "want": "jaja_lol_mememeoo_a",
+      "lines": [
+        85,
+        86,
+        87,
+        89,
+        90,
+        91
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "~"
+      },
+      "want": "jaja~lol~mememeoo~a",
+      "lines": [
+        85,
+        86,
+        87,
+        89,
+        90,
+        91
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "exact_new",
+      "arg": "jaja---lol-m\u00e9m\u00e9m\u00e9oo--a",
+      "kw": {
+        "max_length": 20,
+        "word_boundary": true,
+        "separator": "|"
+      },
+      "want": "jaja|lol|mememeoo|a",
+      "lines": [
+        85,
+        86,
+        87,
+        89,
+        90,
+        91
+      ],
+      "evidence": "contrast_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "a quick blue fox",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 4
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    },
+    {
+      "kind": "bound",
+      "arg": "new old paper",
+      "kw": {
+        "max_length": 8
+      },
+      "want": null,
+      "lines": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "evidence": "example_inference",
+      "other": null
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "id": "train-title-0",
+    "day": "2071-03-01",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-01. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Bloom",
+      "Bloom",
+      "Cedar"
+    ],
+    "source": [
+      "Bloom",
+      "Alto",
+      "Bloom",
+      "Cedar"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-01\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-01-0",
+          "date": "2071-03-01",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Bloom",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-01-1",
+          "date": "2071-03-01",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Alto",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-01-2",
+          "date": "2071-03-01",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Bloom",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-01-3",
+          "date": "2071-03-01",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Cedar",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Bloom\"},\n  {\"title\": \"Alto\"},\n  {\"title\": \"Cedar\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  },
+  {
+    "id": "train-title-1",
+    "day": "2071-03-02",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-02. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Alto",
+      "Bloom",
+      "Cedar"
+    ],
+    "source": [
+      "Cedar",
+      "Bloom",
+      "Alto",
+      "Alto"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-02\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-02-0",
+          "date": "2071-03-02",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Cedar",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-02-1",
+          "date": "2071-03-02",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Bloom",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-02-2",
+          "date": "2071-03-02",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Alto",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-02-3",
+          "date": "2071-03-02",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Alto",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Cedar\"},\n  {\"title\": \"Bloom\"},\n  {\"title\": \"Alto\"},\n  {\"title\": \"Alto\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  },
+  {
+    "id": "train-title-2",
+    "day": "2071-03-03",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-03. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Alto",
+      "Bloom",
+      "Cedar"
+    ],
+    "source": [
+      "Alto",
+      "Alto",
+      "Bloom",
+      "Cedar"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-03\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-03-0",
+          "date": "2071-03-03",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Alto",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-03-1",
+          "date": "2071-03-03",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Alto",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-03-2",
+          "date": "2071-03-03",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Bloom",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-03-3",
+          "date": "2071-03-03",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Cedar",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Alto\"},\n  {\"title\": \"Bloom\"},\n  {\"title\": \"Cedar\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  },
+  {
+    "id": "train-title-3",
+    "day": "2071-03-04",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-04. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Bloom",
+      "Cedar",
+      "Delta"
+    ],
+    "source": [
+      "Cedar",
+      "Alto",
+      "Delta",
+      "Bloom"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-04\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-04-0",
+          "date": "2071-03-04",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Cedar",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-04-1",
+          "date": "2071-03-04",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Alto",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-04-2",
+          "date": "2071-03-04",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Delta",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-04-3",
+          "date": "2071-03-04",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Bloom",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Cedar\"},\n  {\"title\": \"Alto\"},\n  {\"title\": \"Delta\"},\n  {\"title\": \"Bloom\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  },
+  {
+    "id": "train-title-4",
+    "day": "2071-03-05",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-05. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Bloom",
+      "Cedar",
+      "Delta"
+    ],
+    "source": [
+      "Delta",
+      "Cedar",
+      "Bloom",
+      "Alto"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-05\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-05-0",
+          "date": "2071-03-05",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Delta",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-05-1",
+          "date": "2071-03-05",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Cedar",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-05-2",
+          "date": "2071-03-05",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Bloom",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-05-3",
+          "date": "2071-03-05",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Alto",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Delta\"},\n  {\"title\": \"Cedar\"},\n  {\"title\": \"Bloom\"},\n  {\"title\": \"Alto\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  },
+  {
+    "id": "train-title-5",
+    "day": "2071-03-06",
+    "skill": "title",
+    "prompt": "Collect every event title on 2071-03-06. Return a JSON array in ascending order, keeping duplicates.",
+    "gold": [
+      "Alto",
+      "Bloom",
+      "Cedar",
+      "Delta"
+    ],
+    "source": [
+      "Alto",
+      "Bloom",
+      "Cedar",
+      "Delta"
+    ],
+    "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2071-03-06\"}}",
+    "observation": {
+      "ok": true,
+      "result": [
+        {
+          "id": "EV2071-03-06-0",
+          "date": "2071-03-06",
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Alto",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-06-1",
+          "date": "2071-03-06",
+          "start": "10:00",
+          "end": "11:00",
+          "title": "Bloom",
+          "location": "Room A",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-06-2",
+          "date": "2071-03-06",
+          "start": "11:00",
+          "end": "12:00",
+          "title": "Cedar",
+          "location": "Room B",
+          "attendees": [
+            "Lee"
+          ]
+        },
+        {
+          "id": "EV2071-03-06-3",
+          "date": "2071-03-06",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Delta",
+          "location": "Room C",
+          "attendees": [
+            "Lee"
+          ]
+        }
+      ]
+    },
+    "raw_final": "```json\n[\n  {\"title\": \"Alto\"},\n  {\"title\": \"Bloom\"},\n  {\"title\": \"Cedar\"},\n  {\"title\": \"Delta\"}\n]\n```",
+    "valid": false,
+    "parsed": null,
+    "core": true
+  }
+]

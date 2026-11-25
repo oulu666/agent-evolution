@@ -1,0 +1,45 @@
+{
+  "id": 3,
+  "actor": "astra",
+  "condition": "clean",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#.##..#\n##....#\n#.#.B.#\n##G...#\n#...P.#\n#######\nActions since this trial started: \nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "D",
+      "input_tokens": 132,
+      "output_tokens": 101,
+      "reasoning_tokens": 94,
+      "total_tokens": 233
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#.##..#\n##....#\n#.#.P.#\n##G.B.#\n#.....#\n#######\nActions since this trial started: D\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "L",
+      "input_tokens": 132,
+      "output_tokens": 77,
+      "reasoning_tokens": 70,
+      "total_tokens": 209
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#.##..#\n##....#\n#.#...#\n##GBP.#\n#.....#\n#######\nActions since this trial started: D L\nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "L",
+      "input_tokens": 130,
+      "output_tokens": 28,
+      "reasoning_tokens": 21,
+      "total_tokens": 158
+    }
+  ],
+  "actions": [
+    "D",
+    "L",
+    "L"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 600
+}

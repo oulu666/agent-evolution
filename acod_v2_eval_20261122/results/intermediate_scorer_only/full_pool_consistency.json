@@ -1,0 +1,7248 @@
+[
+  {
+    "seed": 20261108,
+    "case_id": "5b82ee97a24f02291cf2",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "a89df1dcc5dd127199",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_4_part0\",\"\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"36\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"3\",\"36\",\"25\",\"25\",\"113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"25\",\"25\",\"3\",\"3\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"25\",\"113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"36\",\"113\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"there are 9 slots\",\"there are 9 slots\",\"9\",\"mapped_3_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 36\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 3\",\"line 36\",\"line 25\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 25\",\"line 25\",\"line 3\",\"line 3\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 113\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"9\",\"\",\"there are 9 slots\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"mapped_4_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,36,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,3,36,25,25,113]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,25,25,3,3,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,25,113]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,36,113]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "a3f27014886da97782c7",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "28d0ea3fb1bd458bcb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"110\",\"335\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"21\",\"335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"110\",\"68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"29\",\"29\",\"21\",\"21\",\"92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"29\",\"21\",\"110\",\"29\",\"29\",\"335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_1_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-1 / maple\",\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-1 / maple\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 0-1 / maple\",\"mapped_5_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_1_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_6_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 335\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 21\",\"line 335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 110\",\"line 68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 29\",\"line 29\",\"line 21\",\"line 21\",\"line 92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 29\",\"line 21\",\"line 110\",\"line 29\",\"line 29\",\"line 335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,110,335]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,21,335]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,110,68]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,29,29,21,21,92]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[29,21,110,29,29,335]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "21bac8cb73d1200d37c7",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "f7c13f2fd675f84667",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 15,
+    "compatible_classes": [
+      {
+        "signature": "[\"102\",\"28\",\"102\",\"102\",\"102\",\"311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"20\",\"338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"102\",\"65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"20\",\"65\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"28\",\"102\",\"28\",\"28\",\"28\",\"89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_1_part0\",\"9\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 102\",\"line 28\",\"line 102\",\"line 102\",\"line 102\",\"line 311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 20\",\"line 338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 102\",\"line 65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 65\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 28\",\"line 102\",\"line 28\",\"line 28\",\"line 28\",\"line 89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 9\",\"not line 9\",\"line 9\",\"line 9\",\"mapped_2_part0\",\"line 9\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_3_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[102,28,102,102,102,311]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,20,338]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,102,65]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,20,65]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[28,102,28,28,28,89]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "dbe9a5efd104dfd04bcd",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "2c197f33a6c3a5d8bb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "93e5fd846d0863a43fcc",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "d0ad05a0415824aea1",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"37\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"37\",\"25\",\"25\",\"25\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"25\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"3\",\"116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_1_part0\\nmapped_1_part1\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 37\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 37\",\"line 25\",\"line 25\",\"line 25\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 25\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 3\",\"line 116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,37,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,37,25,25,25,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,25,37,37,37,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,3,116]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "e41e84216737877183ed",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "d0ad05a0415824aea1",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"37\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"37\",\"25\",\"25\",\"25\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"25\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"3\",\"116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_1_part0\\nmapped_1_part1\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 37\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 37\",\"line 25\",\"line 25\",\"line 25\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 25\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 3\",\"line 116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,37,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,37,25,25,25,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,25,37,37,37,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,3,116]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "6c1d6d17bfceff15cb02",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "f7c13f2fd675f84667",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 15,
+    "compatible_classes": [
+      {
+        "signature": "[\"102\",\"28\",\"102\",\"102\",\"102\",\"311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"20\",\"338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"102\",\"65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"20\",\"65\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"28\",\"102\",\"28\",\"28\",\"28\",\"89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_1_part0\",\"9\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 102\",\"line 28\",\"line 102\",\"line 102\",\"line 102\",\"line 311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 20\",\"line 338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 102\",\"line 65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 65\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 28\",\"line 102\",\"line 28\",\"line 28\",\"line 28\",\"line 89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 9\",\"not line 9\",\"line 9\",\"line 9\",\"mapped_2_part0\",\"line 9\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_3_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[102,28,102,102,102,311]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,20,338]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,102,65]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,20,65]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[28,102,28,28,28,89]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "14bb4b8579658e1db1e9",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "524be4b4c570e6b473",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"4\",\"4\",\"25\",\"25\",\"17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"4\",\"116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"25\",\"37\",\"4\",\"4\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"37\",\"17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"4\",\"17\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 500\\ncontinuation 2\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"mapped_2_part0\\nmapped_2_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 4\",\"line 4\",\"line 25\",\"line 25\",\"line 17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 25\",\"line 37\",\"line 4\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 37\",\"line 17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 17\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,4,4,25,25,17]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,4,116]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,25,37,4,4,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,37,17]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,4,17]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "59a0d8c8ff20e9d1b94f",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "a89df1dcc5dd127199",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_4_part0\",\"\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"36\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"3\",\"36\",\"25\",\"25\",\"113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"25\",\"25\",\"3\",\"3\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"25\",\"113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"36\",\"113\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"there are 9 slots\",\"there are 9 slots\",\"9\",\"mapped_3_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 36\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 3\",\"line 36\",\"line 25\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 25\",\"line 25\",\"line 3\",\"line 3\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 113\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"9\",\"\",\"there are 9 slots\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"mapped_4_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,36,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,3,36,25,25,113]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,25,25,3,3,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,25,113]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,36,113]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "ae27c947bcf77295d6f3",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "28d0ea3fb1bd458bcb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"110\",\"335\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"21\",\"335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"110\",\"68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"29\",\"29\",\"21\",\"21\",\"92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"29\",\"21\",\"110\",\"29\",\"29\",\"335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_1_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-1 / maple\",\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-1 / maple\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 0-1 / maple\",\"mapped_5_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_1_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_6_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 335\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 21\",\"line 335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 110\",\"line 68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 29\",\"line 29\",\"line 21\",\"line 21\",\"line 92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 29\",\"line 21\",\"line 110\",\"line 29\",\"line 29\",\"line 335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,110,335]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,21,335]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,110,68]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,29,29,21,21,92]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[29,21,110,29,29,335]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "f53bf658cc18f31c0a0b",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "2c197f33a6c3a5d8bb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "a19a7f4c3481d2cb77bc",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "01bab9c87123a06e02",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "bb5ef71bbac26a813d52",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "524be4b4c570e6b473",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"4\",\"4\",\"25\",\"25\",\"17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"4\",\"116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"25\",\"37\",\"4\",\"4\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"37\",\"17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"4\",\"17\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 500\\ncontinuation 2\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"mapped_2_part0\\nmapped_2_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 4\",\"line 4\",\"line 25\",\"line 25\",\"line 17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 25\",\"line 37\",\"line 4\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 37\",\"line 17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 17\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,4,4,25,25,17]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,4,116]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,25,37,4,4,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,37,17]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,4,17]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "32be187ece72acd5db8c",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "eea82334c33a1c94d2",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 22,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"104\",\"104\",\"104\",\"104\",\"111\",\"317\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"111\",\"30\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"30\",\"111\",\"30\",\"30\",\"30\",\"95\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"30\",\"30\",\"30\",\"30\",\"21\",\"95\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"mapped_1_part0\",\"fragment suffix\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"mapped_2_part0\",\"fragment suffix\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 104\",\"line 104\",\"line 104\",\"line 104\",\"line 111\",\"line 317\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 111\",\"line 30\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 30\",\"line 111\",\"line 30\",\"line 30\",\"line 30\",\"line 95\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 30\",\"line 30\",\"line 30\",\"line 30\",\"line 21\",\"line 95\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"mapped_1_part0\",\"repeated fragment text\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"mapped_2_part0\",\"repeated fragment text\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[104,104,104,104,111,317]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[111,30,111,111,111,338]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[30,111,30,30,30,95]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[30,30,30,30,21,95]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "bc689069b0824e951908",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "eea82334c33a1c94d2",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 22,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"104\",\"104\",\"104\",\"104\",\"111\",\"317\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"111\",\"30\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"30\",\"111\",\"30\",\"30\",\"30\",\"95\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"30\",\"30\",\"30\",\"30\",\"21\",\"95\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"mapped_1_part0\",\"fragment suffix\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"fragment suffix\",\"mapped_2_part0\",\"fragment suffix\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 104\",\"line 104\",\"line 104\",\"line 104\",\"line 111\",\"line 317\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 111\",\"line 30\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 30\",\"line 111\",\"line 30\",\"line 30\",\"line 30\",\"line 95\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"line 30\",\"line 30\",\"line 30\",\"line 30\",\"line 21\",\"line 95\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"mapped_1_part0\",\"repeated fragment text\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"repeated fragment text\",\"mapped_2_part0\",\"repeated fragment text\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[104,104,104,104,111,317]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[111,30,111,111,111,338]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[30,111,30,30,30,95]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      },
+      {
+        "signature": "[30,30,30,30,21,95]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.045454545454545456
+      }
+    ]
+  },
+  {
+    "seed": 20261108,
+    "case_id": "b7628b816c4f1876fba7",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "01bab9c87123a06e02",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "5b82ee97a24f02291cf2",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "a89df1dcc5dd127199",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_4_part0\",\"\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"36\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"3\",\"36\",\"25\",\"25\",\"113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"25\",\"25\",\"3\",\"3\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"25\",\"113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"36\",\"113\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"there are 9 slots\",\"there are 9 slots\",\"9\",\"mapped_3_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 36\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 3\",\"line 36\",\"line 25\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 25\",\"line 25\",\"line 3\",\"line 3\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 113\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"9\",\"\",\"there are 9 slots\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"mapped_4_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,36,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,3,36,25,25,113]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,25,25,3,3,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,25,113]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,36,113]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "a3f27014886da97782c7",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "28d0ea3fb1bd458bcb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"110\",\"335\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"21\",\"335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"110\",\"68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"29\",\"29\",\"21\",\"21\",\"92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"29\",\"21\",\"110\",\"29\",\"29\",\"335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_1_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-1 / maple\",\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-1 / maple\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 0-1 / maple\",\"mapped_5_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_1_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_6_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 335\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 21\",\"line 335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 110\",\"line 68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 29\",\"line 29\",\"line 21\",\"line 21\",\"line 92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 29\",\"line 21\",\"line 110\",\"line 29\",\"line 29\",\"line 335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,110,335]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,21,335]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,110,68]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,29,29,21,21,92]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[29,21,110,29,29,335]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "21bac8cb73d1200d37c7",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "f7c13f2fd675f84667",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 15,
+    "compatible_classes": [
+      {
+        "signature": "[\"102\",\"28\",\"102\",\"102\",\"102\",\"311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"20\",\"338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"102\",\"65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"20\",\"65\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"28\",\"102\",\"28\",\"28\",\"28\",\"89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_1_part0\",\"9\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 102\",\"line 28\",\"line 102\",\"line 102\",\"line 102\",\"line 311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 20\",\"line 338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 102\",\"line 65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 65\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 28\",\"line 102\",\"line 28\",\"line 28\",\"line 28\",\"line 89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 9\",\"not line 9\",\"line 9\",\"line 9\",\"mapped_2_part0\",\"line 9\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_3_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[102,28,102,102,102,311]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,20,338]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,102,65]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,20,65]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[28,102,28,28,28,89]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "dbe9a5efd104dfd04bcd",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "2c197f33a6c3a5d8bb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "93e5fd846d0863a43fcc",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "d0ad05a0415824aea1",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"37\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"37\",\"25\",\"25\",\"25\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"25\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"3\",\"116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_1_part0\\nmapped_1_part1\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 37\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 37\",\"line 25\",\"line 25\",\"line 25\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 25\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 3\",\"line 116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,37,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,37,25,25,25,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,25,37,37,37,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,3,116]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "e41e84216737877183ed",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "d0ad05a0415824aea1",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 11,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"37\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"37\",\"25\",\"25\",\"25\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"25\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"3\",\"116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_1_part0\\nmapped_1_part1\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"heading 803\\ncontinuation 3\\nfooter A\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"heading 803\\ncontinuation 3\\nfooter A\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 37\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 37\",\"line 25\",\"line 25\",\"line 25\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 25\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 3\",\"line 116\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"heading 803\\ncontinuation 3\\nfooter A\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_1_part0\\nmapped_1_part1\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"same head\\nsame continuation\",\"mapped_2_part0\\nmapped_2_part1\\nmapped_2_part2\",\"same head\\nsame continuation\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,37,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,37,25,25,25,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,25,37,37,37,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,3,116]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "6c1d6d17bfceff15cb02",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "f7c13f2fd675f84667",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 15,
+    "compatible_classes": [
+      {
+        "signature": "[\"102\",\"28\",\"102\",\"102\",\"102\",\"311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"111\",\"338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"111\",\"111\",\"111\",\"111\",\"20\",\"338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"102\",\"65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"20\",\"20\",\"20\",\"20\",\"20\",\"65\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"28\",\"102\",\"28\",\"28\",\"28\",\"89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_1_part0\",\"9\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 102\",\"line 28\",\"line 102\",\"line 102\",\"line 102\",\"line 311\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 338\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 111\",\"line 111\",\"line 111\",\"line 111\",\"line 20\",\"line 338\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 102\",\"line 65\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 20\",\"line 65\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 28\",\"line 102\",\"line 28\",\"line 28\",\"line 28\",\"line 89\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 9\",\"not line 9\",\"line 9\",\"line 9\",\"mapped_2_part0\",\"line 9\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_1_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"not line 9\",\"not line 9\",\"not line 9\",\"not line 9\",\"mapped_3_part0\",\"not line 9\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[102,28,102,102,102,311]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,111,338]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[111,111,111,111,20,338]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,102,65]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[20,20,20,20,20,65]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[28,102,28,28,28,89]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "14bb4b8579658e1db1e9",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "524be4b4c570e6b473",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"4\",\"4\",\"25\",\"25\",\"17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"4\",\"116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"25\",\"37\",\"4\",\"4\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"37\",\"17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"4\",\"17\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 500\\ncontinuation 2\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"mapped_2_part0\\nmapped_2_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 4\",\"line 4\",\"line 25\",\"line 25\",\"line 17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 25\",\"line 37\",\"line 4\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 37\",\"line 17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 17\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,4,4,25,25,17]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,4,116]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,25,37,4,4,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,37,17]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,4,17]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "59a0d8c8ff20e9d1b94f",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "a89df1dcc5dd127199",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"\",\"\",\"\",\"\",\"mapped_4_part0\",\"\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"25\",\"25\",\"25\",\"36\",\"80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"25\",\"3\",\"36\",\"25\",\"25\",\"113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"25\",\"25\",\"3\",\"3\",\"80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"3\",\"3\",\"3\",\"3\",\"3\",\"14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"25\",\"113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"36\",\"36\",\"36\",\"36\",\"36\",\"113\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"9\",\"9\",\"9\",\"mapped_3_part0\",\"9\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"9\",\"there are 9 slots\",\"there are 9 slots\",\"9\",\"mapped_3_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 25\",\"line 25\",\"line 25\",\"line 36\",\"line 80\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 3\",\"line 36\",\"line 25\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 25\",\"line 25\",\"line 3\",\"line 3\",\"line 80\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 3\",\"line 14\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 25\",\"line 113\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 36\",\"line 113\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"9\",\"\",\"there are 9 slots\",\"mapped_1_part0\",\"\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"there are 9 slots\",\"mapped_4_part0\",\"there are 9 slots\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,25,25,25,36,80]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,3,36,25,25,113]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,25,25,3,3,80]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[3,3,3,3,3,14]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,25,113]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[36,36,36,36,36,113]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "ae27c947bcf77295d6f3",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "28d0ea3fb1bd458bcb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"110\",\"335\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"110\",\"110\",\"110\",\"110\",\"21\",\"335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"110\",\"68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"21\",\"21\",\"21\",\"21\",\"68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"21\",\"29\",\"29\",\"21\",\"21\",\"92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"29\",\"21\",\"110\",\"29\",\"29\",\"335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_1_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-0 / birch\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-0 / birch\",\"fragment payload 0-1 / maple\",\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"mapped_6_part0\",\"fragment payload 0-1 / maple\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 0-1 / maple\",\"fragment payload 0-0 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 0-1 / maple\",\"mapped_5_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_1_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"fragment payload 2-1 / birch\",\"mapped_6_part0\",\"fragment payload 2-1 / birch\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 335\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 110\",\"line 110\",\"line 110\",\"line 110\",\"line 21\",\"line 335\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 110\",\"line 68\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 21\",\"line 68\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 21\",\"line 29\",\"line 29\",\"line 21\",\"line 21\",\"line 92\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 29\",\"line 21\",\"line 110\",\"line 29\",\"line 29\",\"line 335\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,110,335]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[110,110,110,110,21,335]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,110,68]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,21,21,21,21,68]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[21,29,29,21,21,92]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[29,21,110,29,29,335]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "f53bf658cc18f31c0a0b",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "2c197f33a6c3a5d8bb",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "a19a7f4c3481d2cb77bc",
+    "family": "H_fragment_offsets_scope",
+    "fixture_id": "01bab9c87123a06e02",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 1,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 1,
+    "compatible_classes": [
+      {
+        "signature": "[null,null,null,null,null,null]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ],
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ],
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_first",
+            "line",
+            "native"
+          ],
+          [
+            "display_first",
+            "text",
+            "native"
+          ],
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "display_last",
+            "line",
+            "native"
+          ],
+          [
+            "display_last",
+            "text",
+            "native"
+          ],
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_max",
+            "line",
+            "native"
+          ],
+          [
+            "text_max",
+            "text",
+            "native"
+          ],
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ],
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ],
+          [
+            "text_min",
+            "line",
+            "native"
+          ],
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 1.0
+      }
+    ]
+  },
+  {
+    "seed": 20261109,
+    "case_id": "bb5ef71bbac26a813d52",
+    "family": "H_multiline_record_assembly",
+    "fixture_id": "524be4b4c570e6b473",
+    "diagnosis": {
+      "status": "insufficient_parse_evidence",
+      "class_count": 24,
+      "rule_count": 24,
+      "open_world_unknown_always_possible": true,
+      "unusable_observations": 6
+    },
+    "fits_all_pool": false,
+    "reserved_parsed": false,
+    "reserved_covered": false,
+    "reserved_breaks_fitting_library": false,
+    "prediction_width": 12,
+    "compatible_classes": [
+      {
+        "signature": "[\"25\",\"4\",\"4\",\"25\",\"25\",\"17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"37\",\"116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"37\",\"37\",\"37\",\"37\",\"4\",\"116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"25\",\"37\",\"4\",\"4\",\"116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"37\",\"17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"4\",\"4\",\"4\",\"4\",\"4\",\"17\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "decimal_string"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "text_min",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 463\\ncontinuation 0\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "display_first",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 500\\ncontinuation 2\",\"heading 463\\ncontinuation 0\",\"heading 463\\ncontinuation 0\",\"heading 500\\ncontinuation 2\",\"mapped_2_part0\\nmapped_2_part1\",\"heading 463\\ncontinuation 0\"]",
+        "members": [
+          [
+            "display_last",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_1_part0\\nmapped_1_part1\\nmapped_1_part2\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"heading 596\\ncontinuation 3\\nfooter B\",\"mapped_4_part0\\nmapped_4_part1\",\"heading 596\\ncontinuation 3\\nfooter B\"]",
+        "members": [
+          [
+            "text_max",
+            "text",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 25\",\"line 4\",\"line 4\",\"line 25\",\"line 25\",\"line 17\"]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 116\"]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 37\",\"line 37\",\"line 37\",\"line 37\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 25\",\"line 37\",\"line 4\",\"line 4\",\"line 116\"]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 37\",\"line 17\"]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 4\",\"line 17\"]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "line_prefix"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[25,4,4,25,25,17]",
+        "members": [
+          [
+            "display_last",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,37,116]",
+        "members": [
+          [
+            "coordinate_intent",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[37,37,37,37,4,116]",
+        "members": [
+          [
+            "text_max",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,25,37,4,4,116]",
+        "members": [
+          [
+            "display_first",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,37,17]",
+        "members": [
+          [
+            "text_min",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      },
+      {
+        "signature": "[4,4,4,4,4,17]",
+        "members": [
+          [
+            "coordinate_opposite",
+            "line",
+            "native"
+          ]
+        ],
+        "prior": 0.041666666666666664
+      }
+    ]
+  }
+]

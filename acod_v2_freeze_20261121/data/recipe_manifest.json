@@ -1,0 +1,44 @@
+{
+  "root_seed": 2026112102,
+  "development_cases": 8,
+  "heldout_cases": 16,
+  "heldout_families": 2,
+  "base_fixtures_heldout": 8,
+  "strata": [
+    "empty",
+    "distinct",
+    "numeric_text",
+    "duplicate"
+  ],
+  "views_per_case": 7,
+  "size_rationale": "2 structurally distinct construction roots x4 correctness/ambiguity strata x2 paired intents; engineering coverage, not powered efficacy estimate",
+  "family_ancestry": {
+    "D_flat_explicit": [
+      "development_flat"
+    ],
+    "H_fragment_offsets_scope": [
+      "heldout_fragment_assembly"
+    ],
+    "H_multiline_record_assembly": [
+      "heldout_continuation_records"
+    ],
+    "historical_excluded": [
+      "P9 single-flat-file literal regex templates",
+      "P10 inherited P9 dev/formal",
+      "P14 Calendar count/pluck/unique templates",
+      "R1 simple flat regex/index construction"
+    ]
+  },
+  "shared_utilities_not_content_ancestors": [
+    "canonical JSON",
+    "make_views transform engine",
+    "render observation transport"
+  ],
+  "builder_ast_sha256": {
+    "development_flat": "e931e9126976dacf8b96aa19795b838b3474c24d107b2e2ed485851f7d0472e4",
+    "heldout_fragment_assembly": "7fa6c3dba62b2d0dce66a71fb34e7cf1f449c30ace534bdf1dcc2443885f22e8",
+    "heldout_continuation_records": "7ff67a299e15211283c4428172ee34fb59383726e8b58e709ad0ee085674700c"
+  },
+  "claim_boundary": "construction-family-heldout under shared finite selection/projection semantics; normalized rows common IR. Not a new tool/OOD/general task-semantic independence claim. No proof of non-overlap with uninspected historical assets.",
+  "no_round1_imports": true
+}

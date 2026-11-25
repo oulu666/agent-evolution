@@ -1,0 +1,3380 @@
+{
+  "time": "2026-11-21 14:14:26 +0800",
+  "tests": 842,
+  "passed": 842,
+  "failed": 0,
+  "elapsed_seconds": 0.3841814060000006,
+  "new_generations": 0,
+  "simulator_cases_are_not_natural_root_cause_gold": true,
+  "heldout_files_opened": 0,
+  "results": [
+    {
+      "name": "retain_raw_type_{\"answer\":9}",
+      "passed": true
+    },
+    {
+      "name": "retain_raw_type_{\"answer\":\"9\"}",
+      "passed": true
+    },
+    {
+      "name": "retain_raw_type_{\"answer\":\"line 9\"}",
+      "passed": true
+    },
+    {
+      "name": "integer_9_not_strict_text_9",
+      "passed": true
+    },
+    {
+      "name": "string_9_strict_text_9",
+      "passed": true
+    },
+    {
+      "name": "line_prefix_not_strict_text_9",
+      "passed": true
+    },
+    {
+      "name": "line_prefix_can_be_true_text",
+      "passed": true
+    },
+    {
+      "name": "numeric_text_line_collision_both",
+      "passed": true
+    },
+    {
+      "name": "line_literal_text_collision_both",
+      "passed": true
+    },
+    {
+      "name": "arbitrary_numeric_text_not_line",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_meeting 9",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_09",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_9 items",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_line 9 extra",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_-9",
+      "passed": true
+    },
+    {
+      "name": "no_loose_digit_regex_9.0",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_null",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_[]",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_[9,12]",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_{}",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_true",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_9.0",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_\"\"",
+      "passed": true
+    },
+    {
+      "name": "preserve_json_value_\"null\"",
+      "passed": true
+    },
+    {
+      "name": "null_for_empty_correct",
+      "passed": true
+    },
+    {
+      "name": "string_null_not_empty_correct",
+      "passed": true
+    },
+    {
+      "name": "empty_text_not_null",
+      "passed": true
+    },
+    {
+      "name": "wrapper_strict_fail_behavior_salvage_Answer: {\"answer\":9}.",
+      "passed": true
+    },
+    {
+      "name": "wrapper_strict_fail_behavior_salvage_```json\n{\"answer\":9}\n```",
+      "passed": true
+    },
+    {
+      "name": "malformed_not_silently_normalized_{\"answer\":9",
+      "passed": true
+    },
+    {
+      "name": "malformed_not_silently_normalized_{answer:9}",
+      "passed": true
+    },
+    {
+      "name": "malformed_not_silently_normalized_{\"answer\":NaN}",
+      "passed": true
+    },
+    {
+      "name": "malformed_not_silently_normalized_{\"answer\":9,\"answer\":\"9\"}",
+      "passed": true
+    },
+    {
+      "name": "malformed_not_silently_normalized_{\"outer\":{\"answer\":9}",
+      "passed": true
+    },
+    {
+      "name": "multiple_answer_objects_no_update",
+      "passed": true
+    },
+    {
+      "name": "extra_envelope_keys_strict_reject",
+      "passed": true
+    },
+    {
+      "name": "duplicate_text_row_identity_ambiguous",
+      "passed": true
+    },
+    {
+      "name": "empty_signature_single_class",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_distinct_first",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_distinct_first",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_first_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_distinct_last",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_distinct_last",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_distinct_last_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_numeric_first",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_numeric_first",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_first_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_numeric_last",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_numeric_last",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_numeric_last_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_duplicate_first",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_duplicate_first",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_first_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_duplicate_last",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_duplicate_last",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_duplicate_last_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_empty_first",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_empty_first",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_first_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "signature_prior_normalized_reg_empty_last",
+      "passed": true
+    },
+    {
+      "name": "duplicate_rules_do_not_reweight_reg_empty_last",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_intent', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('coordinate_opposite', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_first', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('display_last', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_min', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'text', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'text', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'text', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'text', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'native')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'native')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'native')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'native')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'decimal_string')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'decimal_string')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'decimal_string')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'decimal_string')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'line_prefix')_fixed",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'line_prefix')_random",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'line_prefix')_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "sim_reg_empty_last_('text_max', 'line', 'line_prefix')_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "unknown_does_not_force_class",
+      "passed": true
+    },
+    {
+      "name": "mixed_incompatible_reject",
+      "passed": true
+    },
+    {
+      "name": "unparsed_does_not_fabricate_negative",
+      "passed": true
+    },
+    {
+      "name": "reserved_cannot_update",
+      "passed": true
+    },
+    {
+      "name": "future_response_table_rejected",
+      "passed": true
+    },
+    {
+      "name": "private_key_rejected_gold",
+      "passed": true
+    },
+    {
+      "name": "private_key_rejected_family",
+      "passed": true
+    },
+    {
+      "name": "private_key_rejected_split",
+      "passed": true
+    },
+    {
+      "name": "private_key_rejected_labels",
+      "passed": true
+    },
+    {
+      "name": "unsupported_contract_empty",
+      "passed": true
+    },
+    {
+      "name": "unsupported_contract_bad_intent",
+      "passed": true
+    },
+    {
+      "name": "unsupported_contract_duplicate_line",
+      "passed": true
+    },
+    {
+      "name": "equivalent_members_keep_reserved_uncertainty",
+      "passed": true
+    },
+    {
+      "name": "same_shared_public_information_fixed",
+      "passed": true
+    },
+    {
+      "name": "same_shared_public_information_random",
+      "passed": true
+    },
+    {
+      "name": "same_shared_public_information_gbs_gini",
+      "passed": true
+    },
+    {
+      "name": "same_shared_public_information_ig_per_byte_cost",
+      "passed": true
+    },
+    {
+      "name": "selector_no_gold_or_filesystem_api",
+      "passed": true
+    },
+    {
+      "name": "correct_is_behavioral_combination",
+      "passed": true
+    },
+    {
+      "name": "no_model_modules_imported",
+      "passed": true
+    }
+  ]
+}

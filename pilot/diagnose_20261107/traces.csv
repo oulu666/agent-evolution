@@ -1,0 +1,49 @@
+group,id,solved,d0,first_kind,first_worsening,target,recovered,reset_after,optimal,lateral,classified,pre_optimal,pre_classified,post_optimal,post_classified,resets,invalids,dead,actions,path
+student,1,False,1,worse,0,1,False,True,0,0,6,0,0,0,1,2,0,True,R R RESET R R RESET R R,worse:1>2 worse:2>None reset:None>None worse:1>2 worse:2>None reset:None>None worse:1>2 worse:2>None
+student,2,False,2,worse,0,2,False,True,0,0,4,0,0,0,0,4,0,True,D RESET D RESET D RESET D RESET,worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None
+student,3,False,2,worse,0,2,False,True,4,0,7,0,0,3,5,1,0,True,L D R D R D RESET R,worse:2>5 optimal:5>4 optimal:4>3 worse:3>4 optimal:4>3 worse:3>None reset:None>None optimal:2>1
+student,4,False,3,worse,0,3,False,True,1,0,5,0,0,0,1,1,0,True,R R RESET D D D R R,worse:3>4 worse:4>None reset:None>None optimal:3>2 worse:2>3 worse:3>None dead:None>None dead:None>None
+student,5,False,3,worse,0,3,False,True,2,0,4,0,0,0,0,1,0,True,R D D D RESET D D D,worse:3>None dead:None>None dead:None>None dead:None>None reset:None>None optimal:3>2 optimal:2>1 worse:1>None
+student,6,True,2,worse,0,2,False,True,2,0,4,0,0,0,1,1,0,True,L L RESET R R,worse:2>3 worse:3>None reset:None>None optimal:2>1 optimal:1>0
+student,7,False,6,worse,0,6,False,True,3,0,5,0,0,0,0,2,0,True,L D RESET R R R D RESET,worse:6>None dead:None>None reset:None>None optimal:6>5 optimal:5>4 optimal:4>3 worse:3>None reset:None>None
+student,8,False,2,worse,0,2,False,True,1,0,4,0,0,0,0,1,0,True,R D D D RESET D D D,worse:2>None dead:None>None dead:None>None dead:None>None reset:None>None optimal:2>1 worse:1>2 worse:2>None
+student,9,True,4,optimal,,,,False,4,0,4,4,4,0,0,0,0,False,D R D D,optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+student,10,False,4,worse,0,4,False,True,0,0,2,0,0,0,0,2,0,True,D R R RESET D R R RESET,worse:4>None dead:None>None dead:None>None reset:None>None worse:4>None dead:None>None dead:None>None reset:None>None
+student,11,False,4,optimal,1,3,False,True,1,0,4,1,1,0,0,2,0,True,R D RESET D R RESET D R,optimal:4>3 worse:3>None reset:None>None worse:4>None dead:None>None reset:None>None worse:4>None dead:None>None
+student,12,True,1,optimal,,,,False,1,0,1,1,1,0,0,0,0,False,L,optimal:1>0
+self_hint,1,True,1,optimal,,,,False,1,0,1,1,1,0,0,0,0,False,L,optimal:1>0
+self_hint,2,False,2,worse,0,2,False,True,0,0,4,0,0,0,0,4,0,True,D RESET D RESET D RESET D RESET,worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None
+self_hint,3,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,R U,optimal:2>1 optimal:1>0
+self_hint,4,False,3,worse,0,3,False,True,0,0,6,0,0,0,1,2,0,True,R R RESET R R RESET R R,worse:3>4 worse:4>None reset:None>None worse:3>4 worse:4>None reset:None>None worse:3>4 worse:4>None
+self_hint,5,False,3,worse,0,3,False,True,0,0,3,0,0,0,0,2,0,True,R U RESET R U RESET R U,worse:3>None dead:None>None reset:None>None worse:3>None dead:None>None reset:None>None worse:3>None dead:None>None
+self_hint,6,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,R R,optimal:2>1 optimal:1>0
+self_hint,7,True,6,optimal,,,,False,6,0,6,6,6,0,0,0,0,False,R R R U U U,optimal:6>5 optimal:5>4 optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+self_hint,8,False,2,worse,0,2,False,True,0,0,1,0,0,0,0,1,1,True,R INVALID(R) D D U U U RESET,worse:2>None invalid:None>None dead:None>None dead:None>None dead:None>None dead:None>None dead:None>None reset:None>None
+self_hint,9,False,4,worse,0,4,False,True,0,0,4,0,0,0,2,1,0,True,L L L D D D RESET L,worse:4>5 worse:5>6 worse:6>None dead:None>None dead:None>None dead:None>None reset:None>None worse:4>5
+self_hint,10,False,4,optimal,1,3,False,True,2,0,4,1,1,0,0,2,0,True,L L D RESET L L D RESET,optimal:4>3 worse:3>None dead:None>None reset:None>None optimal:4>3 worse:3>None dead:None>None reset:None>None
+self_hint,11,False,4,worse,0,4,False,True,0,0,3,0,0,0,0,2,0,True,D R RESET D R RESET D R,worse:4>None dead:None>None reset:None>None worse:4>None dead:None>None reset:None>None worse:4>None dead:None>None
+self_hint,12,False,1,worse,0,1,False,True,0,0,6,0,0,0,2,2,0,True,R R R RESET R R R RESET,worse:1>2 worse:2>3 worse:3>None reset:None>None worse:1>2 worse:2>3 worse:3>None reset:None>None
+guided,1,False,1,worse,0,1,False,True,0,0,6,0,0,0,1,2,0,True,R R RESET R R RESET R R,worse:1>2 worse:2>None reset:None>None worse:1>2 worse:2>None reset:None>None worse:1>2 worse:2>None
+guided,2,False,2,worse,0,2,False,True,0,0,4,0,0,0,0,4,0,True,D RESET D RESET D RESET D RESET,worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None worse:2>None reset:None>None
+guided,3,False,2,worse,0,2,False,True,2,0,5,0,0,1,3,1,0,True,L D D D R R RESET R,worse:2>5 optimal:5>4 worse:4>5 worse:5>None dead:None>None dead:None>None reset:None>None optimal:2>1
+guided,4,False,3,optimal,1,2,False,True,3,0,7,1,1,1,2,1,0,True,D R D R RESET D D D,optimal:3>2 worse:2>5 optimal:5>4 worse:4>None reset:None>None optimal:3>2 worse:2>3 worse:3>None
+guided,5,True,3,optimal,,,,False,3,0,3,3,3,0,0,0,0,False,L D D,optimal:3>2 optimal:2>1 optimal:1>0
+guided,6,True,2,worse,0,2,True,False,3,0,4,0,0,3,3,0,0,False,L R R R,worse:2>3 optimal:3>2 optimal:2>1 optimal:1>0
+guided,7,False,6,optimal,4,2,False,True,5,0,7,4,4,0,1,1,0,True,R R R U D D RESET R,optimal:6>5 optimal:5>4 optimal:4>3 optimal:3>2 worse:2>3 worse:3>None reset:None>None optimal:6>5
+guided,8,False,2,optimal,1,1,False,True,2,0,4,1,1,0,1,1,0,True,L R R D D D RESET D,optimal:2>1 worse:1>2 worse:2>None dead:None>None dead:None>None dead:None>None reset:None>None optimal:2>1
+guided,9,False,4,worse,0,4,False,True,4,0,7,0,0,0,0,1,0,True,R RESET L L D D D R,worse:4>None reset:None>None worse:4>5 worse:5>6 optimal:6>5 optimal:5>4 optimal:4>3 optimal:3>2
+guided,10,False,4,worse,0,4,True,False,1,0,3,0,0,1,2,0,1,True,R L D INVALID(D) L R R R,worse:4>5 optimal:5>4 worse:4>None invalid:None>None dead:None>None dead:None>None dead:None>None dead:None>None
+guided,11,False,4,worse,0,4,True,True,2,0,5,0,0,2,3,2,0,True,L R R D RESET D R RESET,worse:4>5 optimal:5>4 optimal:4>3 worse:3>None reset:None>None worse:4>None dead:None>None reset:None>None
+guided,12,False,1,worse,0,1,False,True,0,0,6,0,0,0,2,2,0,True,R R R RESET R R R RESET,worse:1>2 worse:2>3 worse:3>None reset:None>None worse:1>2 worse:2>3 worse:3>None reset:None>None
+teacher_solo,1,True,1,optimal,,,,False,1,0,1,1,1,0,0,0,0,False,L,optimal:1>0
+teacher_solo,2,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,U U,optimal:2>1 optimal:1>0
+teacher_solo,3,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,R U,optimal:2>1 optimal:1>0
+teacher_solo,4,True,3,optimal,,,,False,3,0,3,3,3,0,0,0,0,False,L D L,optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,5,True,3,optimal,,,,False,3,0,3,3,3,0,0,0,0,False,D L D,optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,6,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,R R,optimal:2>1 optimal:1>0
+teacher_solo,7,True,6,optimal,,,,False,6,0,6,6,6,0,0,0,0,False,R R R U U U,optimal:6>5 optimal:5>4 optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,8,True,2,optimal,,,,False,2,0,2,2,2,0,0,0,0,False,L D,optimal:2>1 optimal:1>0
+teacher_solo,9,True,4,optimal,,,,False,4,0,4,4,4,0,0,0,0,False,D R D D,optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,10,True,4,optimal,,,,False,4,0,4,4,4,0,0,0,0,False,U U L U,optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,11,True,4,optimal,,,,False,4,0,4,4,4,0,0,0,0,False,R U U U,optimal:4>3 optimal:3>2 optimal:2>1 optimal:1>0
+teacher_solo,12,True,1,optimal,,,,False,1,0,1,1,1,0,0,0,0,False,L,optimal:1>0

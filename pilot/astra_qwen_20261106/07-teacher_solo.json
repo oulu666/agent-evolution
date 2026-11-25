@@ -1,0 +1,77 @@
+{
+  "id": 7,
+  "group": "teacher_solo",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: \nCurrent board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 155,
+      "output_tokens": 110,
+      "reasoning_tokens": 103,
+      "total_tokens": 265
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#.PB..#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 157,
+      "output_tokens": 72,
+      "reasoning_tokens": 65,
+      "total_tokens": 229
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: R R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#..PB.#\n#.....#\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 157,
+      "output_tokens": 66,
+      "reasoning_tokens": 59,
+      "total_tokens": 223
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: R R R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#...PB#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "input_tokens": 157,
+      "output_tokens": 69,
+      "reasoning_tokens": 62,
+      "total_tokens": 226
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: R R R U\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#B#\n#....P#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "input_tokens": 158,
+      "output_tokens": 49,
+      "reasoning_tokens": 42,
+      "total_tokens": 207
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nActions taken: R R R U U\nCurrent board:\n#######\n##...G#\n#...#B#\n#.#.#P#\n#.....#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "input_tokens": 159,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "total_tokens": 164
+    }
+  ],
+  "actions": [
+    "R",
+    "R",
+    "R",
+    "U",
+    "U",
+    "U"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 1314
+}

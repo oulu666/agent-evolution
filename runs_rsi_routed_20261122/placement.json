@@ -1,0 +1,246 @@
+{
+  "chosen": [
+    {
+      "id": "P14-train-0622",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Extract every event title on 2033-05-27; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0622-Agenda-W",
+        "P14-train-0622-Agenda-X",
+        "P14-train-0622-Agenda-Y",
+        "P14-train-0622-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0622-Agenda-Z\", \"P14-train-0622-Agenda-Y\", \"P14-train-0622-Agenda-X\", \"P14-train-0622-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-27\"}}"
+    },
+    {
+      "id": "P14-train-0607",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Extract every event title on 2033-04-27; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0607-Agenda-W",
+        "P14-train-0607-Agenda-X",
+        "P14-train-0607-Agenda-Y",
+        "P14-train-0607-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0607-Agenda-Z\", \"P14-train-0607-Agenda-Y\", \"P14-train-0607-Agenda-X\", \"P14-train-0607-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-27\"}}"
+    },
+    {
+      "id": "P14-train-0605",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-04-23, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0605-Agenda-W",
+        "P14-train-0605-Agenda-X",
+        "P14-train-0605-Agenda-Y",
+        "P14-train-0605-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0605-Agenda-Z\", \"P14-train-0605-Agenda-Y\", \"P14-train-0605-Agenda-X\", \"P14-train-0605-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-23\"}}"
+    },
+    {
+      "id": "P14-train-0620",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-05-23, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0620-Agenda-W",
+        "P14-train-0620-Agenda-X",
+        "P14-train-0620-Agenda-Y",
+        "P14-train-0620-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0620-Agenda-Z\", \"P14-train-0620-Agenda-Y\", \"P14-train-0620-Agenda-X\", \"P14-train-0620-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-23\"}}"
+    },
+    {
+      "id": "P14-train-0603",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-04-19, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0603-Agenda-W",
+        "P14-train-0603-Agenda-X",
+        "P14-train-0603-Agenda-Y",
+        "P14-train-0603-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0603-Agenda-Z\", \"P14-train-0603-Agenda-Y\", \"P14-train-0603-Agenda-X\", \"P14-train-0603-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-19\"}}"
+    },
+    {
+      "id": "P14-train-0608",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-04-29, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0608-Agenda-W",
+        "P14-train-0608-Agenda-X",
+        "P14-train-0608-Agenda-Y",
+        "P14-train-0608-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0608-Agenda-Z\", \"P14-train-0608-Agenda-Y\", \"P14-train-0608-Agenda-X\", \"P14-train-0608-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-29\"}}"
+    },
+    {
+      "id": "P14-train-0617",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-05-17, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0617-Agenda-W",
+        "P14-train-0617-Agenda-X",
+        "P14-train-0617-Agenda-Y",
+        "P14-train-0617-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0617-Agenda-Z\", \"P14-train-0617-Agenda-Y\", \"P14-train-0617-Agenda-X\", \"P14-train-0617-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-17\"}}"
+    },
+    {
+      "id": "P14-train-0609",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-05-01, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0609-Agenda-W",
+        "P14-train-0609-Agenda-X",
+        "P14-train-0609-Agenda-Y",
+        "P14-train-0609-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0609-Agenda-Z\", \"P14-train-0609-Agenda-Y\", \"P14-train-0609-Agenda-X\", \"P14-train-0609-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-01\"}}"
+    }
+  ],
+  "final": [
+    {
+      "id": "P14-train-0622",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Extract every event title on 2033-05-27; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0622-Agenda-W",
+        "P14-train-0622-Agenda-X",
+        "P14-train-0622-Agenda-Y",
+        "P14-train-0622-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0622-Agenda-Z\", \"P14-train-0622-Agenda-Y\", \"P14-train-0622-Agenda-X\", \"P14-train-0622-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-27\"}}"
+    },
+    {
+      "id": "P14-train-0607",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Extract every event title on 2033-04-27; keep repetitions, sort lexicographically, and return a JSON array.",
+      "expected": [
+        "P14-train-0607-Agenda-W",
+        "P14-train-0607-Agenda-X",
+        "P14-train-0607-Agenda-Y",
+        "P14-train-0607-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0607-Agenda-Z\", \"P14-train-0607-Agenda-Y\", \"P14-train-0607-Agenda-X\", \"P14-train-0607-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-27\"}}"
+    },
+    {
+      "id": "P14-train-0605",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-04-23, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0605-Agenda-W",
+        "P14-train-0605-Agenda-X",
+        "P14-train-0605-Agenda-Y",
+        "P14-train-0605-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0605-Agenda-Z\", \"P14-train-0605-Agenda-Y\", \"P14-train-0605-Agenda-X\", \"P14-train-0605-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-23\"}}"
+    },
+    {
+      "id": "P14-train-0620",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-05-23, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0620-Agenda-W",
+        "P14-train-0620-Agenda-X",
+        "P14-train-0620-Agenda-Y",
+        "P14-train-0620-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0620-Agenda-Z\", \"P14-train-0620-Agenda-Y\", \"P14-train-0620-Agenda-X\", \"P14-train-0620-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-23\"}}"
+    },
+    {
+      "id": "P14-train-0603",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-04-19, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0603-Agenda-W",
+        "P14-train-0603-Agenda-X",
+        "P14-train-0603-Agenda-Y",
+        "P14-train-0603-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0603-Agenda-Z\", \"P14-train-0603-Agenda-Y\", \"P14-train-0603-Agenda-X\", \"P14-train-0603-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-19\"}}"
+    },
+    {
+      "id": "P14-train-0608",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-04-29, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0608-Agenda-W",
+        "P14-train-0608-Agenda-X",
+        "P14-train-0608-Agenda-Y",
+        "P14-train-0608-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0608-Agenda-Z\", \"P14-train-0608-Agenda-Y\", \"P14-train-0608-Agenda-X\", \"P14-train-0608-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-04-29\"}}"
+    },
+    {
+      "id": "P14-train-0617",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "For 2033-05-17, return a lexicographically sorted JSON array of all title values, including duplicates.",
+      "expected": [
+        "P14-train-0617-Agenda-W",
+        "P14-train-0617-Agenda-X",
+        "P14-train-0617-Agenda-Y",
+        "P14-train-0617-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0617-Agenda-Z\", \"P14-train-0617-Agenda-Y\", \"P14-train-0617-Agenda-X\", \"P14-train-0617-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-17\"}}"
+    },
+    {
+      "id": "P14-train-0609",
+      "skill": "cal.extract_title_sorted",
+      "joint": false,
+      "core": true,
+      "prompt": "Collect the title field from events on 2033-05-01, sort ascending without deduplication, and answer with a JSON array.",
+      "expected": [
+        "P14-train-0609-Agenda-W",
+        "P14-train-0609-Agenda-X",
+        "P14-train-0609-Agenda-Y",
+        "P14-train-0609-Agenda-Z"
+      ],
+      "answer": "{\"answer\": [\"P14-train-0609-Agenda-Z\", \"P14-train-0609-Agenda-Y\", \"P14-train-0609-Agenda-X\", \"P14-train-0609-Agenda-W\"]}",
+      "call": "{\"tool\": \"calendar_list\", \"arguments\": {\"date\": \"2033-05-01\"}}"
+    }
+  ]
+}

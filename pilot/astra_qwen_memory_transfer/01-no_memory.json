@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "group": "no_memory",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#..##.#\n#P...##\n#.##B.#\n##..G.#\n#..##.#\n#######\nInitial history: attempted to walk L twice, both blocked.\nActions taken: \nCurrent board:\n#######\n#..##.#\n#P...##\n#.##B.#\n##..G.#\n#..##.#\n#######\nAvailable actions: D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 157,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 159
+    }
+  ],
+  "actions": [
+    "D"
+  ],
+  "done": true,
+  "memory_sha256": null,
+  "solved": true,
+  "tokens": 159
+}

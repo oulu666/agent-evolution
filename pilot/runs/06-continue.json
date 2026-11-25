@@ -1,0 +1,83 @@
+{
+  "id": 6,
+  "group": "continue",
+  "solved": false,
+  "history": [
+    "Initial attempts: D was blocked twice. Board unchanged.",
+    "URRDDL -> blocked at move 3",
+    "URRDDLDRUULLDRRDDL -> blocked at move 3",
+    "RESET\nURRDDLLUURRDDDRRULLDRR -> blocked at move 3",
+    "Invalid move syntax: RESET\nURRDDLLUURRDDDRRULLDRRUDU"
+  ],
+  "tokens": 1051,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...B.#\n#..P..#\n#######\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nCurrent board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...B.#\n#..P..#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "URRDDL",
+      "usage": {
+        "completion_tokens": 4,
+        "prompt_tokens": 229,
+        "total_tokens": 233,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...B.#\n#..P..#\n#######\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nURRDDL -> blocked at move 3\nCurrent board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...PB#\n#.....#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "URRDDLDRUULLDRRDDL",
+      "usage": {
+        "completion_tokens": 11,
+        "prompt_tokens": 238,
+        "total_tokens": 249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...B.#\n#..P..#\n#######\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nURRDDL -> blocked at move 3\nURRDDLDRUULLDRRDDL -> blocked at move 3\nCurrent board:\n#######\n#.....#\n#.....#\n#.#..+#\n#....B#\n#.....#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nURRDDLLUURRDDDRRULLDRR",
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 256,
+        "total_tokens": 272,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...B.#\n#..P..#\n#######\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nURRDDL -> blocked at move 3\nURRDDLDRUULLDRRDDL -> blocked at move 3\nRESET\nURRDDLLUURRDDDRRULLDRR -> blocked at move 3\nCurrent board:\n#######\n#.....#\n#.....#\n#.#..G#\n#...PB#\n#.....#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nURRDDLLUURRDDDRRULLDRRUDU",
+      "usage": {
+        "completion_tokens": 18,
+        "prompt_tokens": 279,
+        "total_tokens": 297,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

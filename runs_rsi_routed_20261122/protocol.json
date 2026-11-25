@@ -1,0 +1,10 @@
+{
+  "target": "cal.extract_title_sorted",
+  "comparator": "optimizer chooses turn",
+  "treatment": "verified core correct: final-turn-only repair",
+  "memory": "empty both arms",
+  "proposals": 2,
+  "proposer_cap": 96,
+  "accept": "target net gain > 0 on 4, no old case lost on 8; first passing max gain",
+  "extra_readout": "first free-stage proposal verbatim on fresh title items both at its chosen turn and at FINAL regardless of gate, diagnostic only"
+}

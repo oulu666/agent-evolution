@@ -1,0 +1,74 @@
+{
+  "decision": {
+    "label": "B",
+    "operation": "keep",
+    "label_logits": {
+      "A": 25.109375,
+      "B": 27.984375,
+      "C": 27.5
+    }
+  },
+  "evidence": [
+    {
+      "action": "A",
+      "correct": 2,
+      "total": 6,
+      "per_case": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "action": "B",
+      "correct": 2,
+      "total": 6,
+      "per_case": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "action": "C",
+      "correct": 6,
+      "total": 6,
+      "per_case": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "previous": {
+    "label": "B",
+    "operation": "keep",
+    "label_logits": {
+      "A": 25.21875,
+      "B": 28.0,
+      "C": 27.5
+    }
+  },
+  "scores_on_original_model_answers": {
+    "raw_feedback": {
+      "title": 2,
+      "location": 4,
+      "count": 8
+    },
+    "tool_feedback": {
+      "title": 2,
+      "location": 4,
+      "count": 8
+    }
+  },
+  "additional_model_calls": 1
+}

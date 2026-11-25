@@ -1,0 +1,2827 @@
+{
+ "transitions": {
+  "primary": {
+   "direct": {
+    "unique": 0,
+    "correct": 0,
+    "unbound": [],
+    "reversed": []
+   },
+   "derived": {
+    "unique": 0,
+    "correct": 0,
+    "unbound": [],
+    "reversed": []
+   },
+   "identified": 0,
+   "total": 55,
+   "adjacent": 0,
+   "adjacent_total": 10,
+   "offline_swaps_detected": 0,
+   "swapped_pairs": [],
+   "in_path_supported": 0,
+   "supported_adjacent": 0,
+   "unsupported_agreements": []
+  },
+  "normalized": {
+   "direct": {
+    "unique": 10,
+    "correct": 8,
+    "unbound": [
+     [
+      "machine.after_state_change",
+      "machine.on_exception"
+     ],
+     [
+      "machine.on_exception",
+      "machine.finalize_event"
+     ]
+    ],
+    "reversed": []
+   },
+   "derived": {
+    "unique": 21,
+    "correct": 19,
+    "unbound": [
+     [
+      "state.on_enter",
+      "machine.on_exception"
+     ],
+     [
+      "transition.after",
+      "machine.on_exception"
+     ]
+    ],
+    "reversed": []
+   },
+   "identified": 27,
+   "total": 55,
+   "adjacent": 9,
+   "adjacent_total": 10,
+   "offline_swaps_detected": 9,
+   "swapped_pairs": [
+    [
+     "machine.prepare_event",
+     "transition.prepare"
+    ],
+    [
+     "transition.prepare",
+     "transition.conditions"
+    ],
+    [
+     "transition.conditions",
+     "transition.unless"
+    ],
+    [
+     "transition.unless",
+     "machine.before_state_change"
+    ],
+    [
+     "machine.before_state_change",
+     "transition.before"
+    ],
+    [
+     "transition.before",
+     "state.on_exit"
+    ],
+    [
+     "state.on_enter",
+     "transition.after"
+    ],
+    [
+     "transition.after",
+     "machine.after_state_change"
+    ],
+    [
+     "machine.after_state_change",
+     "machine.finalize_event"
+    ]
+   ],
+   "in_path_supported": 24,
+   "supported_adjacent": 8,
+   "unsupported_agreements": [
+    [
+     "machine.after_state_change",
+     "machine.finalize_event"
+    ],
+    [
+     "state.on_enter",
+     "machine.finalize_event"
+    ],
+    [
+     "transition.after",
+     "machine.finalize_event"
+    ]
+   ]
+  },
+  "normalized_records": {
+   "README.md": {
+    "direct": [
+     {
+      "left": "machine.prepare_event",
+      "right": "transition.prepare",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       901,
+       902
+      ]
+     },
+     {
+      "left": "transition.prepare",
+      "right": "transition.conditions",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       902,
+       903
+      ]
+     },
+     {
+      "left": "transition.conditions",
+      "right": "transition.unless",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       903,
+       904
+      ]
+     },
+     {
+      "left": "transition.unless",
+      "right": "machine.before_state_change",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       904,
+       905
+      ]
+     },
+     {
+      "left": "machine.before_state_change",
+      "right": "transition.before",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       905,
+       906
+      ]
+     },
+     {
+      "left": "transition.before",
+      "right": "state.on_exit",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       906,
+       907
+      ]
+     },
+     {
+      "left": "state.on_enter",
+      "right": "transition.after",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       909,
+       910
+      ]
+     },
+     {
+      "left": "transition.after",
+      "right": "machine.after_state_change",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       910,
+       911
+      ]
+     },
+     {
+      "left": "machine.after_state_change",
+      "right": "machine.on_exception",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       911,
+       912
+      ]
+     },
+     {
+      "left": "machine.on_exception",
+      "right": "machine.finalize_event",
+      "kind": "ordered_rows",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "lines": [
+       912,
+       913
+      ]
+     }
+    ],
+    "derived": [
+     {
+      "left": "machine.after_state_change",
+      "right": "machine.finalize_event",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        911,
+        912
+       ],
+       [
+        912,
+        913
+       ]
+      ]
+     },
+     {
+      "left": "machine.before_state_change",
+      "right": "state.on_exit",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        905,
+        906
+       ],
+       [
+        906,
+        907
+       ]
+      ]
+     },
+     {
+      "left": "machine.prepare_event",
+      "right": "transition.conditions",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        901,
+        902
+       ],
+       [
+        902,
+        903
+       ]
+      ]
+     },
+     {
+      "left": "machine.prepare_event",
+      "right": "transition.unless",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        901,
+        902
+       ],
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ]
+      ]
+     },
+     {
+      "left": "machine.prepare_event",
+      "right": "machine.before_state_change",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        901,
+        902
+       ],
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ]
+      ]
+     },
+     {
+      "left": "machine.prepare_event",
+      "right": "transition.before",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        901,
+        902
+       ],
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ]
+      ]
+     },
+     {
+      "left": "machine.prepare_event",
+      "right": "state.on_exit",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        901,
+        902
+       ],
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ],
+       [
+        906,
+        907
+       ]
+      ]
+     },
+     {
+      "left": "state.on_enter",
+      "right": "machine.after_state_change",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        909,
+        910
+       ],
+       [
+        910,
+        911
+       ]
+      ]
+     },
+     {
+      "left": "state.on_enter",
+      "right": "machine.on_exception",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        909,
+        910
+       ],
+       [
+        910,
+        911
+       ],
+       [
+        911,
+        912
+       ]
+      ]
+     },
+     {
+      "left": "state.on_enter",
+      "right": "machine.finalize_event",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        909,
+        910
+       ],
+       [
+        910,
+        911
+       ],
+       [
+        911,
+        912
+       ],
+       [
+        912,
+        913
+       ]
+      ]
+     },
+     {
+      "left": "transition.after",
+      "right": "machine.on_exception",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        910,
+        911
+       ],
+       [
+        911,
+        912
+       ]
+      ]
+     },
+     {
+      "left": "transition.after",
+      "right": "machine.finalize_event",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        910,
+        911
+       ],
+       [
+        911,
+        912
+       ],
+       [
+        912,
+        913
+       ]
+      ]
+     },
+     {
+      "left": "transition.conditions",
+      "right": "machine.before_state_change",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ]
+      ]
+     },
+     {
+      "left": "transition.conditions",
+      "right": "transition.before",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ]
+      ]
+     },
+     {
+      "left": "transition.conditions",
+      "right": "state.on_exit",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ],
+       [
+        906,
+        907
+       ]
+      ]
+     },
+     {
+      "left": "transition.prepare",
+      "right": "transition.unless",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ]
+      ]
+     },
+     {
+      "left": "transition.prepare",
+      "right": "machine.before_state_change",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ]
+      ]
+     },
+     {
+      "left": "transition.prepare",
+      "right": "transition.before",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ]
+      ]
+     },
+     {
+      "left": "transition.prepare",
+      "right": "state.on_exit",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        902,
+        903
+       ],
+       [
+        903,
+        904
+       ],
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ],
+       [
+        906,
+        907
+       ]
+      ]
+     },
+     {
+      "left": "transition.unless",
+      "right": "transition.before",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ]
+      ]
+     },
+     {
+      "left": "transition.unless",
+      "right": "state.on_exit",
+      "scope": "<a name=\"execution-order\"></a>Callback execution order",
+      "kind": "transitive",
+      "spans": [
+       [
+        904,
+        905
+       ],
+       [
+        905,
+        906
+       ],
+       [
+        906,
+        907
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "statemachine": {
+  "primary": {
+   "direct": {
+    "unique": 0,
+    "correct": 0,
+    "unbound": [],
+    "reversed": []
+   },
+   "derived": {
+    "unique": 0,
+    "correct": 0,
+    "unbound": [],
+    "reversed": []
+   },
+   "identified": 0,
+   "total": 78,
+   "adjacent": 0,
+   "adjacent_total": 12,
+   "offline_swaps_detected": 0,
+   "swapped_pairs": [],
+   "in_path_supported": 0,
+   "supported_adjacent": 0,
+   "unsupported_agreements": []
+  },
+  "normalized": {
+   "direct": {
+    "unique": 12,
+    "correct": 12,
+    "unbound": [],
+    "reversed": []
+   },
+   "derived": {
+    "unique": 66,
+    "correct": 66,
+    "unbound": [],
+    "reversed": []
+   },
+   "identified": 78,
+   "total": 78,
+   "adjacent": 12,
+   "adjacent_total": 12,
+   "offline_swaps_detected": 12,
+   "swapped_pairs": [
+    [
+     "validators()",
+     "conditions()"
+    ],
+    [
+     "conditions()",
+     "unless()"
+    ],
+    [
+     "unless()",
+     "before_transition()"
+    ],
+    [
+     "before_transition()",
+     "before_<event>()"
+    ],
+    [
+     "before_<event>()",
+     "on_exit_state()"
+    ],
+    [
+     "on_exit_state()",
+     "on_exit_<state.id>()"
+    ],
+    [
+     "on_exit_<state.id>()",
+     "on_transition()"
+    ],
+    [
+     "on_transition()",
+     "on_<event>()"
+    ],
+    [
+     "on_<event>()",
+     "on_enter_state()"
+    ],
+    [
+     "on_enter_state()",
+     "on_enter_<state.id>()"
+    ],
+    [
+     "on_enter_<state.id>()",
+     "after_<event>()"
+    ],
+    [
+     "after_<event>()",
+     "after_transition()"
+    ]
+   ],
+   "in_path_supported": 78,
+   "supported_adjacent": 12,
+   "unsupported_agreements": []
+  },
+  "normalized_records": {
+   "README.md": {
+    "direct": [],
+    "derived": []
+   },
+   "docs/actions.md": {
+    "direct": [
+     {
+      "left": "validators()",
+      "right": "conditions()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       309,
+       311
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "unless()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       311,
+       313
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "before_transition()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       313,
+       315
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "before_<event>()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       315,
+       317
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "on_exit_state()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       317,
+       319
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "on_exit_<state.id>()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       319,
+       321
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "on_transition()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       321,
+       323
+      ]
+     },
+     {
+      "left": "on_transition()",
+      "right": "on_<event>()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       323,
+       325
+      ]
+     },
+     {
+      "left": "on_<event>()",
+      "right": "on_enter_state()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       325,
+       327
+      ]
+     },
+     {
+      "left": "on_enter_state()",
+      "right": "on_enter_<state.id>()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       327,
+       329
+      ]
+     },
+     {
+      "left": "on_enter_<state.id>()",
+      "right": "after_<event>()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       329,
+       331
+      ]
+     },
+     {
+      "left": "after_<event>()",
+      "right": "after_transition()",
+      "kind": "ordered_rows",
+      "scope": "Ordering",
+      "lines": [
+       331,
+       333
+      ]
+     }
+    ],
+    "derived": [
+     {
+      "left": "before_<event>()",
+      "right": "on_exit_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "before_<event>()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_exit_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_exit_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "before_transition()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "before_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "before_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_exit_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_exit_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "conditions()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_<event>()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "on_<event>()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "on_<event>()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_enter_<state.id>()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_enter_state()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "on_enter_state()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_<state.id>()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "on_exit_state()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "on_transition()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "on_transition()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "on_transition()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "on_transition()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "before_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_exit_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_exit_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "unless()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "unless()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "before_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "before_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_exit_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_exit_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_enter_state()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "on_enter_<state.id>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "after_<event>()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ]
+      ]
+     },
+     {
+      "left": "validators()",
+      "right": "after_transition()",
+      "scope": "Ordering",
+      "kind": "transitive",
+      "spans": [
+       [
+        309,
+        311
+       ],
+       [
+        311,
+        313
+       ],
+       [
+        313,
+        315
+       ],
+       [
+        315,
+        317
+       ],
+       [
+        317,
+        319
+       ],
+       [
+        319,
+        321
+       ],
+       [
+        321,
+        323
+       ],
+       [
+        323,
+        325
+       ],
+       [
+        325,
+        327
+       ],
+       [
+        327,
+        329
+       ],
+       [
+        329,
+        331
+       ],
+       [
+        331,
+        333
+       ]
+      ]
+     }
+    ]
+   },
+   "docs/processing_model.md": {
+    "direct": [],
+    "derived": []
+   }
+  }
+ }
+}

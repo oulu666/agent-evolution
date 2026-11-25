@@ -1,0 +1,100 @@
+{
+  "id": 7,
+  "group": "teacher",
+  "solved": false,
+  "history": [
+    "Initial attempts: D was blocked twice. Board unchanged.",
+    "Invalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD",
+    "Invalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR",
+    "Invalid move syntax: RESET\nU\nU\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nD\nD\nL\nD\nR\nR\nD\nL\nU\nU\nL\nD\nR\nR\nD\nL\nU\nU\nR",
+    "Invalid move syntax: RESET\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nD"
+  ],
+  "tokens": 2064,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-pro-260215",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nInitial attempts: D was blocked twice. Board unchanged.\nGive one short strategic hint for this board. Point out a specific intermediate position or push direction. Do not give a full move sequence.",
+      "output": "### Strategic Hint\nFirst navigate the player to the square **directly above the crate (B)** (row 2, column 5, counting top-left as row 1, column 1) to execute a downward push, which moves the crate one step closer to the goal's vertical alignment.",
+      "usage": {
+        "completion_tokens": 61,
+        "prompt_tokens": 193,
+        "total_tokens": 254,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nOne-time advice: ### Strategic Hint\nFirst navigate the player to the square **directly above the crate (B)** (row 2, column 5, counting top-left as row 1, column 1) to execute a downward push, which moves the crate one step closer to the goal's vertical alignment.\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nCurrent board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD",
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 299,
+        "total_tokens": 349,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nOne-time advice: ### Strategic Hint\nFirst navigate the player to the square **directly above the crate (B)** (row 2, column 5, counting top-left as row 1, column 1) to execute a downward push, which moves the crate one step closer to the goal's vertical alignment.\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nCurrent board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 354,
+        "total_tokens": 418,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nOne-time advice: ### Strategic Hint\nFirst navigate the player to the square **directly above the crate (B)** (row 2, column 5, counting top-left as row 1, column 1) to execute a downward push, which moves the crate one step closer to the goal's vertical alignment.\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nInvalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nCurrent board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nU\nU\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nD\nD\nL\nD\nR\nR\nD\nL\nU\nU\nL\nD\nR\nR\nD\nL\nU\nU\nR",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 423,
+        "total_tokens": 487,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nOne-time advice: ### Strategic Hint\nFirst navigate the player to the square **directly above the crate (B)** (row 2, column 5, counting top-left as row 1, column 1) to execute a downward push, which moves the crate one step closer to the goal's vertical alignment.\nHistory:\nInitial attempts: D was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nInvalid move syntax: RESET\nU\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nInvalid move syntax: RESET\nU\nU\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nD\nD\nL\nD\nR\nR\nD\nL\nU\nU\nL\nD\nR\nR\nD\nL\nU\nU\nR\nCurrent board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nU\nU\nR\nR\nR\nD\nD\nD\nL\nL\nR\nR\nR\nU\nU\nU\nL\nL\nD\nD\nR\nR\nD\nD\nL\nL\nU\nU\nR\nR\nD",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 492,
+        "total_tokens": 556,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length"
+    }
+  ]
+}

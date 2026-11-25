@@ -1,0 +1,171 @@
+{
+  "id": 12,
+  "group": "teacher",
+  "solved": false,
+  "history": [
+    "L",
+    "U",
+    "D",
+    "U",
+    "U",
+    "D",
+    "U",
+    "D"
+  ],
+  "tokens": 2261,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-pro-260215",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAvailable initial pushes: U D L R\nGive one short strategic hint for this board, e.g. an intermediate square or push direction. Do not give a full move sequence.",
+      "output": "Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.",
+      "usage": {
+        "completion_tokens": 37,
+        "prompt_tokens": 200,
+        "total_tokens": 237,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: \nCurrent board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 252,
+        "total_tokens": 253,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L\nCurrent board:\n#######\n#..#..#\n#.....#\n#..G..#\n#BP...#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 249,
+        "total_tokens": 250,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U\nCurrent board:\n#######\n#..#..#\n#.....#\n#B.G..#\n#P....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 250,
+        "total_tokens": 251,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U D\nCurrent board:\n#######\n#..#..#\n#.....#\n#P.G..#\n#B....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 251,
+        "total_tokens": 252,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U D U\nCurrent board:\n#######\n#..#..#\n#.....#\n#B.G..#\n#P....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 252,
+        "total_tokens": 253,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U D U U\nCurrent board:\n#######\n#..#..#\n#B....#\n#P.G..#\n#.....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 253,
+        "total_tokens": 254,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U D U U D\nCurrent board:\n#######\n#..#..#\n#P....#\n#B.G..#\n#.....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 254,
+        "total_tokens": 255,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nBefore this snapshot, walking U hit a wall or blocked crate twice.\nAdvice: Strategic hint: First push crate B **up** once to get it onto the same horizontal row as the goal G, eliminating the vertical offset between the crate and the target early.\nActions taken: L U D U U D U\nCurrent board:\n#######\n#..#..#\n#B....#\n#P.G..#\n#.....#\n#..#..#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 255,
+        "total_tokens": 256,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

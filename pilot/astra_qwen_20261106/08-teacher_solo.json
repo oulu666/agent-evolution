@@ -1,0 +1,33 @@
+{
+  "id": 8,
+  "group": "teacher_solo",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#P..B.#\n#..G..#\n#.....#\n#.#...#\n#######\nInitial history: attempted to walk L twice, both blocked.\nActions taken: \nCurrent board:\n#######\n#.....#\n#P..B.#\n#..G..#\n#.....#\n#.#...#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "input_tokens": 157,
+      "output_tokens": 38,
+      "reasoning_tokens": 31,
+      "total_tokens": 195
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#P..B.#\n#..G..#\n#.....#\n#.#...#\n#######\nInitial history: attempted to walk L twice, both blocked.\nActions taken: L\nCurrent board:\n#######\n#.....#\n#..BP.#\n#..G..#\n#.....#\n#.#...#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 157,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "total_tokens": 162
+    }
+  ],
+  "actions": [
+    "L",
+    "D"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 357
+}

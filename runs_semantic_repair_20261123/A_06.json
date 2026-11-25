@@ -1,0 +1,1010 @@
+[
+  {
+    "truth": {
+      "key": "begins",
+      "direction": "asc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "asc",
+      "take": 2
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 3\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "begins",
+          "direction": "asc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "begins",
+      "direction": "asc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "asc",
+      "take": 2
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "begins",
+          "direction": "asc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "begins",
+      "direction": "desc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "begins",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "begins",
+      "direction": "desc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "begins",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "created",
+      "direction": "asc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "asc",
+      "take": 2
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 3\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "created",
+          "direction": "asc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "created",
+      "direction": "asc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "asc",
+      "take": 2
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 2\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 2
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 2\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "created",
+          "direction": "asc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "created",
+      "direction": "desc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "created",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "created",
+      "direction": "desc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "created",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "event_time",
+      "direction": "asc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "event_time",
+          "direction": "asc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "event_time",
+      "direction": "asc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "event_time",
+          "direction": "asc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 3
+    },
+    "prior": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 3\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 5
+    },
+    "prior": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "added_at",
+      "direction": "asc",
+      "take": 3
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "added_at",
+          "direction": "asc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "added_at",
+      "direction": "asc",
+      "take": 5
+    },
+    "prior": {
+      "key": "id",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"asc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "asc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "id",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"id\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "added_at",
+          "direction": "asc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "added_at",
+      "direction": "desc",
+      "take": 3
+    },
+    "prior": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 3,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "added_at",
+          "direction": "desc",
+          "take": 3
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  },
+  {
+    "truth": {
+      "key": "added_at",
+      "direction": "desc",
+      "take": 5
+    },
+    "prior": {
+      "key": "event_time",
+      "direction": "desc",
+      "take": 1
+    },
+    "observed": 5,
+    "arms": {
+      "A0": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 1
+        },
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A1": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 5\n}\n```",
+        "rule": {
+          "key": "event_time",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A2": {
+        "raw": "```json\n{\n  \"key\": \"event_time\",\n  \"direction\": \"desc\",\n  \"take\": 1\n}\n```",
+        "rule": null,
+        "count_ok": false,
+        "correct_take": false,
+        "exact": false,
+        "consistent": false,
+        "held": 0
+      },
+      "A3": {
+        "raw": null,
+        "rule": {
+          "key": "added_at",
+          "direction": "desc",
+          "take": 5
+        },
+        "count_ok": true,
+        "correct_take": true,
+        "exact": true,
+        "consistent": true,
+        "held": 3
+      }
+    }
+  }
+]

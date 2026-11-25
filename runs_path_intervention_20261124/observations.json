@@ -1,0 +1,1352 @@
+{
+ "0.9.0": [
+  {
+   "path": "success",
+   "trigger_result": true,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "guard_declines",
+   "trigger_result": false,
+   "end": "a",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "a"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "state.on_enter",
+      "transition.after",
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "transition.after",
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "early_raise",
+   "trigger_result": false,
+   "end": "a",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "raise",
+     "state": "a"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "a"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "state.on_enter",
+      "transition.after",
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "transition.after",
+      "machine.after_state_change"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "transition_after_raise",
+   "trigger_result": false,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "raise",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "machine_after_raise",
+   "trigger_result": false,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "raise",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    }
+   ]
+  }
+ ],
+ "0.9.2": [
+  {
+   "path": "success",
+   "trigger_result": true,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.on_exception"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "guard_declines",
+   "trigger_result": false,
+   "end": "a",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "a"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "state.on_enter",
+      "transition.after",
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": false,
+     "absent_nodes": [
+      "transition.after",
+      "machine.after_state_change",
+      "machine.on_exception"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "early_raise",
+   "trigger_result": false,
+   "end": "a",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "raise",
+     "state": "a"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "a"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "state.on_enter",
+      "transition.after",
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "transition.after",
+      "machine.after_state_change"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "transition_after_raise",
+   "trigger_result": false,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "raise",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "outside_endpoint_scope",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "agreement_without_chain",
+     "handler_observed": true,
+     "absent_nodes": [
+      "machine.after_state_change"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "machine_after_raise",
+   "trigger_result": false,
+   "end": "b",
+   "events": [
+    {
+     "event": "machine.prepare_event",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.prepare_event",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.prepare",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.conditions",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.unless",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "machine.before_state_change",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "transition.before",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "entry",
+     "state": "a"
+    },
+    {
+     "event": "state.on_exit",
+     "phase": "return",
+     "state": "a"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "state.on_enter",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "transition.after",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.after_state_change",
+     "phase": "raise",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.on_exception",
+     "phase": "return",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "entry",
+     "state": "b"
+    },
+    {
+     "event": "machine.finalize_event",
+     "phase": "return",
+     "state": "b"
+    }
+   ],
+   "setup_checks": {
+    "expected_state": true,
+    "handler_count": true,
+    "finalization": true,
+    "intended_raise": true
+   },
+   "proofs": [
+    {
+     "source": "machine.after_state_change",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    },
+    {
+     "source": "state.on_enter",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    },
+    {
+     "source": "transition.after",
+     "target": "machine.finalize_event",
+     "outcome": "ordered_chain_observed",
+     "handler_observed": true,
+     "absent_nodes": []
+    }
+   ]
+  }
+ ]
+}

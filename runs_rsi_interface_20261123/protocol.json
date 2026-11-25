@@ -1,0 +1,54 @@
+{
+  "schema": {
+    "name": "calendar_range",
+    "arguments": {
+      "start": "ISO date",
+      "end": "ISO date"
+    },
+    "description": "Return calendar events between start and end, ordered by date and id."
+  },
+  "dates": [
+    "2043-12-31",
+    "2044-02-29",
+    "2044-03-01",
+    "2044-04-30",
+    "2044-05-15",
+    "2044-06-16",
+    "2045-01-01",
+    "2045-02-28",
+    "2045-04-11",
+    "2045-05-07",
+    "2045-06-25",
+    "2045-08-09"
+  ],
+  "options": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "model": "runs_ext_p11_eaar_v1/branches/A_seed20261108_eaar_v1/checkpoint",
+  "decode": "greedy one-token, four cyclic orders, majority vote; ties by first menu logit",
+  "primary": "exact day adapter, by interface",
+  "secondary": "exact returned event sequence, by date",
+  "arms": [
+    "schema_default",
+    "model_prior",
+    "model_evidence",
+    "constraint_solver",
+    "oracle"
+  ],
+  "primary_unit": "4 synthetic boundary contracts, same schema, one read-only probe per contract"
+}

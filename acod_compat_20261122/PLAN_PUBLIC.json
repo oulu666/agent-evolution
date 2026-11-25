@@ -1,0 +1,154 @@
+{
+  "created": "2026-11-22 11:44:05 +0800",
+  "scope": "Existing historical development only; two fixed original cases, no reserved/heldout or new cases",
+  "models": [
+    {
+      "seed": 20261108,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p9_counterfactual_20261117/branches/seed20261108_normal/checkpoint",
+      "adapter_sha256": "dcf7cf52d5fadb43b66b55489420ca86773576d634c14c37d0cef249989dd73a",
+      "adapter_config_sha256": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+      "source_config_sha256": "8a8d5600b193d6fde89ebcae518dfda4a750f1094e54bcbe4f4a3e50f5f47d77",
+      "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+      "expected_parameter_digest": "62e47b3979fe955e9c56e02f0367da1e23f57243f36158be1a0164dc040646a9"
+    },
+    {
+      "seed": 20261109,
+      "adapter": "/mnt/c/Users/Egret/Desktop/oulu/Agent Self-Evolution/fac_tinyagent/runs_ext_p9_counterfactual_20261117/branches/seed20261109_normal/checkpoint",
+      "adapter_sha256": "7b151a157245b9746fdb7040ac44af32bf12dd79241bdcc57799313aa8159abf",
+      "adapter_config_sha256": "d414750dd930b2d7f243be21c7681166c048c5190f6cb06e6244a0f20dcab99f",
+      "source_config_sha256": "2424ab2436df4244379fccdbfa4577552289f81b18aa1d0a9138a10f01f1f101",
+      "model_name_or_path": "/home/egret/models/Qwen3-0.6B",
+      "expected_parameter_digest": "27b8fc0f4a959db348c272c4dee2dcd6eea63c902d2dd1ee54b84c7431a4e757"
+    }
+  ],
+  "configurations": [
+    "A_historical_reference",
+    "B_v2_style",
+    "C_v2_system_legacy_stage"
+  ],
+  "cases": [
+    {
+      "case_id": "historical_0_first",
+      "messages": {
+        "A_historical_reference": [
+          {
+            "role": "system",
+            "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev0z' in p9_dev/note_0.txt. Which complete matching line occurs first in the file?"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"arguments\":{\"path\":\"p9_dev/note_0.txt\",\"pattern\":\"kdev0z\"},\"tool\":\"file_search\"}"
+          },
+          {
+            "role": "user",
+            "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":9,\"text\":\"kdev0z observation 41589\"},{\"line\":12,\"text\":\"kdev0z observation 97165\"}]}"
+          }
+        ],
+        "B_v2_style": [
+          {
+            "role": "system",
+            "content": "You are answering a controlled read-only tool-observation task. Output exactly one JSON object with the sole key answer. Its value must be the complete requested text as a JSON string, or JSON null for no included records. Do not output markdown, explanations, or a tool call."
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev0z' in p9_dev/note_0.txt. Which complete matching line occurs first in the file?\nTOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":9,\"text\":\"kdev0z observation 41589\"},{\"line\":12,\"text\":\"kdev0z observation 97165\"}]}"
+          }
+        ],
+        "C_v2_system_legacy_stage": [
+          {
+            "role": "system",
+            "content": "You are answering a controlled read-only tool-observation task. Output exactly one JSON object with the sole key answer. Its value must be the complete requested text as a JSON string, or JSON null for no included records. Do not output markdown, explanations, or a tool call."
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev0z' in p9_dev/note_0.txt. Which complete matching line occurs first in the file?"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"arguments\":{\"path\":\"p9_dev/note_0.txt\",\"pattern\":\"kdev0z\"},\"tool\":\"file_search\"}"
+          },
+          {
+            "role": "user",
+            "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":9,\"text\":\"kdev0z observation 41589\"},{\"line\":12,\"text\":\"kdev0z observation 97165\"}]}"
+          }
+        ]
+      },
+      "input_tokens": {
+        "A_historical_reference": 317,
+        "B_v2_style": 151,
+        "C_v2_system_legacy_stage": 187
+      }
+    },
+    {
+      "case_id": "historical_1_last",
+      "messages": {
+        "A_historical_reference": [
+          {
+            "role": "system",
+            "content": "You are a deterministic tool-using assistant.\nTools:\n- file_list(directory: string): List all files under a directory, recursively. Paths are relative to the sandbox.\n- file_read(path: string): Read a UTF-8 text file from the sandbox and return its contents.\n- file_search(path: string, pattern: string): Search a sandbox text file with a regular expression; return matching lines.\n- file_write(path: string, content: string): Write UTF-8 text to a file inside the sandbox and report the character count.\n\nAll paths are relative to a sandbox directory. Use only the listed file tools.\n\nOutput format:\n1. First assistant turn: exactly one JSON object {\"tool\": <tool_name>, \"arguments\": <object>}.\n2. After the user message starting with TOOL RESULT, exactly one JSON object {\"answer\": <value>}.\nDo not output markdown, code fences, or any other text.\n"
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev1z' in p9_dev/note_1.txt. Which complete matching line occurs last in the file?"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"arguments\":{\"path\":\"p9_dev/note_1.txt\",\"pattern\":\"kdev1z\"},\"tool\":\"file_search\"}"
+          },
+          {
+            "role": "user",
+            "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":7,\"text\":\"kdev1z observation 58056\"},{\"line\":9,\"text\":\"kdev1z observation 26308\"},{\"line\":16,\"text\":\"kdev1z observation 93830\"}]}"
+          }
+        ],
+        "B_v2_style": [
+          {
+            "role": "system",
+            "content": "You are answering a controlled read-only tool-observation task. Output exactly one JSON object with the sole key answer. Its value must be the complete requested text as a JSON string, or JSON null for no included records. Do not output markdown, explanations, or a tool call."
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev1z' in p9_dev/note_1.txt. Which complete matching line occurs last in the file?\nTOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":7,\"text\":\"kdev1z observation 58056\"},{\"line\":9,\"text\":\"kdev1z observation 26308\"},{\"line\":16,\"text\":\"kdev1z observation 93830\"}]}"
+          }
+        ],
+        "C_v2_system_legacy_stage": [
+          {
+            "role": "system",
+            "content": "You are answering a controlled read-only tool-observation task. Output exactly one JSON object with the sole key answer. Its value must be the complete requested text as a JSON string, or JSON null for no included records. Do not output markdown, explanations, or a tool call."
+          },
+          {
+            "role": "user",
+            "content": "Find lines containing 'kdev1z' in p9_dev/note_1.txt. Which complete matching line occurs last in the file?"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"arguments\":{\"path\":\"p9_dev/note_1.txt\",\"pattern\":\"kdev1z\"},\"tool\":\"file_search\"}"
+          },
+          {
+            "role": "user",
+            "content": "TOOL RESULT:\n{\"ok\":true,\"result\":[{\"line\":7,\"text\":\"kdev1z observation 58056\"},{\"line\":9,\"text\":\"kdev1z observation 26308\"},{\"line\":16,\"text\":\"kdev1z observation 93830\"}]}"
+          }
+        ]
+      },
+      "input_tokens": {
+        "A_historical_reference": 335,
+        "B_v2_style": 169,
+        "C_v2_system_legacy_stage": 205
+      }
+    }
+  ],
+  "tokenizer_backend_sha256": "41e00eccf531cffc2e562d38bdd879d41e5044ea279af5b73c6a32aabcc8fe04",
+  "decode": {
+    "batch_size": 1,
+    "greedy": true,
+    "use_cache": false,
+    "max_new_tokens": 128
+  },
+  "maximum_calls": 12,
+  "technical_retries": 0,
+  "walltime_seconds": 600,
+  "single_call_timeout_seconds": 60
+}

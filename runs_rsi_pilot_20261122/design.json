@@ -1,0 +1,93 @@
+{
+  "checkpoint": "runs_ext_p11_eaar_v1/branches/A_seed20261108_eaar_v1/checkpoint",
+  "precision": "fp16 merged adapter",
+  "first": "cal.list_locations",
+  "transfer": "cal.extract_title_sorted",
+  "old": "cal.count_date",
+  "proposals_per_round": 2,
+  "proposal_token_cap": 96,
+  "call_cap": 96,
+  "answer_cap": 128,
+  "proposal_context_cap": 2048,
+  "accept": "target net gains > 0, zero old Joint losses",
+  "ids": {
+    "train": {
+      "cal.list_locations": [
+        "P14-train-0205",
+        "P14-train-0382",
+        "P14-train-0307",
+        "P14-train-0175",
+        "P14-train-0369",
+        "P14-train-0592"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-train-0621",
+        "P14-train-0623",
+        "P14-train-0610",
+        "P14-train-0612",
+        "P14-train-0616",
+        "P14-train-0602"
+      ],
+      "cal.count_date": [
+        "P14-train-0078",
+        "P14-train-0079",
+        "P14-train-0018",
+        "P14-train-0074",
+        "P14-train-0028",
+        "P14-train-0051"
+      ]
+    },
+    "gate": {
+      "cal.list_locations": [
+        "P14-dev-0180",
+        "P14-dev-0161",
+        "P14-dev-0201",
+        "P14-dev-0274"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-dev-0306",
+        "P14-dev-0308",
+        "P14-dev-0311",
+        "P14-dev-0303"
+      ],
+      "cal.count_date": [
+        "P14-dev-0040",
+        "P14-dev-0016",
+        "P14-dev-0030",
+        "P14-dev-0010"
+      ]
+    },
+    "blind": {
+      "cal.list_locations": [
+        "P14-dev-0082",
+        "P14-dev-0176",
+        "P14-dev-0283",
+        "P14-dev-0203",
+        "P14-dev-0129",
+        "P14-dev-0123",
+        "P14-dev-0261",
+        "P14-dev-0231"
+      ],
+      "cal.extract_title_sorted": [
+        "P14-dev-0304",
+        "P14-dev-0302",
+        "P14-dev-0312",
+        "P14-dev-0305",
+        "P14-dev-0309",
+        "P14-dev-0301",
+        "P14-dev-0310",
+        "P14-dev-0307"
+      ],
+      "cal.count_date": [
+        "P14-dev-0002",
+        "P14-dev-0043",
+        "P14-dev-0032",
+        "P14-dev-0013",
+        "P14-dev-0047",
+        "P14-dev-0008",
+        "P14-dev-0024",
+        "P14-dev-0007"
+      ]
+    }
+  }
+}

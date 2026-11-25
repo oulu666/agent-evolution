@@ -1,0 +1,116 @@
+{
+  "layouts": [
+    "none",
+    "left",
+    "right",
+    "both"
+  ],
+  "windows": [
+    [
+      "2076-02-28",
+      "2076-03-01"
+    ],
+    [
+      "2077-03-30",
+      "2077-04-01"
+    ],
+    [
+      "2077-12-30",
+      "2078-01-01"
+    ]
+  ],
+  "hypotheses": [
+    [
+      [
+        0,
+        0
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      2
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      null
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      2
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      null
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      1
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      2
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      null
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      2
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      null
+    ]
+  ],
+  "primary": "unique correct joint boundary and cap identification; uniform worlds within layout",
+  "baseline": "optimize single precommitted query pair over same candidate space and primary metric",
+  "arms": "shared first: fixed, static, entropy, success, qwen; free first: best static and best adaptive",
+  "budget": "two distinct first-page queries maximum; stop as soon as joint contract is unique",
+  "observations": "known calibration fixture; actual response dates, no count metadata, no cursor, no total",
+  "ties": "lowest query index, lexicographic pair; Qwen averages both label orders",
+  "model": "P11 seed08 frozen with exact surviving contracts; same prompt cached by observed history",
+  "secondary": "whether boundary pair alone is unique under same policies"
+}

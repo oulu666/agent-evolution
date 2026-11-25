@@ -1,0 +1,152 @@
+{
+ "blinker": {
+  "time_cap_ns": 29550,
+  "call_cap": 15,
+  "methods": {
+   "ordinary": [
+    "final",
+    [
+     "Signal.receiver_connected/0",
+     "Signal.receiver_disconnected/0",
+     "Signal.send/0"
+    ]
+   ],
+   "combination": [
+    "final",
+    [
+     "Signal.receiver_connected/1",
+     "Signal.receiver_disconnected/1",
+     "Signal.send/1"
+    ]
+   ],
+   "contract": [
+    "boundary",
+    [
+     "Signal.receiver_connected/1",
+     "Signal.receiver_disconnected/1",
+     "Signal.send/1"
+    ]
+   ],
+   "budget_contract": [
+    "both",
+    [
+     "Signal.send/0",
+     "Signal.receiver_disconnected/1",
+     "Signal.receiver_connected/1"
+    ]
+   ]
+  },
+  "cost": {
+   "Signal.receiver_connected/0": {
+    "final": 2,
+    "boundary": 3,
+    "both": 3
+   },
+   "Signal.receiver_connected/1": {
+    "final": 2,
+    "boundary": 3,
+    "both": 3
+   },
+   "Signal.receiver_disconnected/0": {
+    "final": 3,
+    "boundary": 4,
+    "both": 4
+   },
+   "Signal.receiver_disconnected/1": {
+    "final": 3,
+    "boundary": 4,
+    "both": 4
+   },
+   "Signal.send/0": {
+    "final": 2,
+    "boundary": 2,
+    "both": 2
+   },
+   "Signal.send/1": {
+    "final": 2,
+    "boundary": 2,
+    "both": 2
+   },
+   "Signal.send_async/0": {
+    "final": 2,
+    "boundary": 2,
+    "both": 2
+   },
+   "Signal.send_async/1": {
+    "final": 2,
+    "boundary": 2,
+    "both": 2
+   }
+  }
+ },
+ "pluggy": {
+  "time_cap_ns": 171750,
+  "call_cap": 15,
+  "methods": {
+   "ordinary": [
+    "final",
+    [
+     "HookCaller.call_historic/0",
+     "HookCaller.call_extra/0",
+     "PluginManager.add_hookcall_monitoring/0"
+    ]
+   ],
+   "combination": [
+    "final",
+    [
+     "HookCaller.call_historic/1",
+     "HookCaller.call_extra/1",
+     "PluginManager.add_hookcall_monitoring/1"
+    ]
+   ],
+   "contract": [
+    "boundary",
+    [
+     "HookCaller.call_historic/1",
+     "HookCaller.call_extra/1",
+     "PluginManager.add_hookcall_monitoring/1"
+    ]
+   ],
+   "budget_contract": [
+    "both",
+    [
+     "PluginManager.add_hookcall_monitoring/1",
+     "PluginManager.add_hookcall_monitoring/0",
+     "HookCaller.call_historic/1"
+    ]
+   ]
+  },
+  "cost": {
+   "HookCaller.call_historic/0": {
+    "final": 3,
+    "boundary": 3,
+    "both": 3
+   },
+   "HookCaller.call_historic/1": {
+    "final": 3,
+    "boundary": 3,
+    "both": 3
+   },
+   "HookCaller.call_extra/0": {
+    "final": 4,
+    "boundary": 4,
+    "both": 4
+   },
+   "HookCaller.call_extra/1": {
+    "final": 4,
+    "boundary": 4,
+    "both": 4
+   },
+   "PluginManager.add_hookcall_monitoring/0": {
+    "final": 4,
+    "boundary": 4,
+    "both": 4
+   },
+   "PluginManager.add_hookcall_monitoring/1": {
+    "final": 6,
+    "boundary": 6,
+    "both": 6
+   }
+  }
+ }
+}

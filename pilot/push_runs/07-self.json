@@ -1,0 +1,171 @@
+{
+  "id": 7,
+  "group": "self",
+  "solved": false,
+  "history": [
+    "L",
+    "R",
+    "L",
+    "L",
+    "R",
+    "L",
+    "R",
+    "L"
+  ],
+  "tokens": 2304,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAvailable initial pushes: U D L R\nGive one short strategic hint for this board, e.g. an intermediate square or push direction. Do not give a full move sequence.",
+      "output": "To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.",
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_tokens": 182,
+        "total_tokens": 227,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: \nCurrent board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 257,
+        "total_tokens": 258,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L\nCurrent board:\n#######\n#.#..##\n#..BP.#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 255,
+        "total_tokens": 256,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R\nCurrent board:\n#######\n#.#..##\n#..PB.#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 258,
+        "total_tokens": 259,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R L\nCurrent board:\n#######\n#.#..##\n#..BP.#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 257,
+        "total_tokens": 258,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R L L\nCurrent board:\n#######\n#.#..##\n#.BP..#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 259,
+        "total_tokens": 260,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R L L R\nCurrent board:\n#######\n#.#..##\n#.PB..#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 260,
+        "total_tokens": 261,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R L L R L\nCurrent board:\n#######\n#.#..##\n#.BP..#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 261,
+        "total_tokens": 262,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Push the crate B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the crate one square up/down/left/right. The player automatically walks behind it when reachable. No pulling. Avoid stranding the crate. RESET restores the initial board. Initial board:\n#######\n#.#..##\n#...B.#\n#..#..#\n#...G##\n#.#P.##\n#######\nBefore this snapshot, walking D hit a wall or blocked crate twice.\nAdvice: To push crate B toward goal G, first move the player to the square immediately left of B (on the third row, between the left wall and B) to set up a push of B right toward the G column.\nActions taken: L R L L R L R\nCurrent board:\n#######\n#.#..##\n#.PB..#\n#..#..#\n#...G##\n#.#..##\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 262,
+        "total_tokens": 263,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

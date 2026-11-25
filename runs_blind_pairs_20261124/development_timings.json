@@ -1,0 +1,1133 @@
+{
+ "click": {
+  "default": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 2
+    },
+    "text": "num=2"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 2
+    },
+    "text": "num=2"
+   },
+   "calls": 2,
+   "raw": "num=2\n",
+   "run": 545900,
+   "phases": {
+    "runner_setup": 14100,
+    "invoke_and_capture": 519800
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 3100,
+    "status+payload+text": 2300,
+    "status+exit": 1200,
+    "status+exit+payload": 1800,
+    "status+text": 1900,
+    "status+exit+text": 2500,
+    "status": 1000
+   }
+  },
+  "given": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 7
+    },
+    "text": "num=7"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 7
+    },
+    "text": "num=7"
+   },
+   "calls": 2,
+   "raw": "num=7\n",
+   "run": 446600,
+   "phases": {
+    "runner_setup": 8900,
+    "invoke_and_capture": 425200
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 2500,
+    "status+payload+text": 2000,
+    "status+exit": 1100,
+    "status+exit+payload": 1600,
+    "status+text": 1700,
+    "status+exit+text": 2200,
+    "status": 900
+   }
+  },
+  "repeat": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": [
+      "a",
+      "b"
+     ]
+    },
+    "text": "val=a,b"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": [
+      "a",
+      "b"
+     ]
+    },
+    "text": "val=a,b"
+   },
+   "calls": 2,
+   "raw": "val=a,b\n",
+   "run": 761000,
+   "phases": {
+    "runner_setup": 9600,
+    "invoke_and_capture": 740200
+   },
+   "obs": {
+    "status+payload": 1600,
+    "status+exit+payload+text": 2700,
+    "status+payload+text": 2000,
+    "status+exit": 1100,
+    "status+exit+payload": 1600,
+    "status+text": 1800,
+    "status+exit+text": 2000,
+    "status": 900
+   }
+  },
+  "count": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": 3
+    },
+    "text": "val=3"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": 3
+    },
+    "text": "val=3"
+   },
+   "calls": 2,
+   "raw": "val=3\n",
+   "run": 597000,
+   "phases": {
+    "runner_setup": 9000,
+    "invoke_and_capture": 573100
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 2300,
+    "status+payload+text": 2200,
+    "status+exit": 1100,
+    "status+exit+payload": 1600,
+    "status+text": 1600,
+    "status+exit+text": 2000,
+    "status": 900
+   }
+  },
+  "env": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 4
+    },
+    "text": "num=4"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 4
+    },
+    "text": "num=4"
+   },
+   "calls": 2,
+   "raw": "num=4\n",
+   "run": 473100,
+   "phases": {
+    "runner_setup": 9000,
+    "invoke_and_capture": 451700
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 2500,
+    "status+payload+text": 2100,
+    "status+exit": 1200,
+    "status+exit+payload": 1500,
+    "status+text": 1700,
+    "status+exit+text": 2100,
+    "status": 900
+   }
+  },
+  "override": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 7
+    },
+    "text": "num=7"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "num": 7
+    },
+    "text": "num=7"
+   },
+   "calls": 2,
+   "raw": "num=7\n",
+   "run": 531700,
+   "phases": {
+    "runner_setup": 9000,
+    "invoke_and_capture": 509300
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 2300,
+    "status+payload+text": 2100,
+    "status+exit": 1100,
+    "status+exit+payload": 1500,
+    "status+text": 1700,
+    "status+exit+text": 2000,
+    "status": 900
+   }
+  },
+  "off": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": false
+    },
+    "text": "val=False"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": false
+    },
+    "text": "val=False"
+   },
+   "calls": 2,
+   "raw": "val=False\n",
+   "run": 451300,
+   "phases": {
+    "runner_setup": 8500,
+    "invoke_and_capture": 427600
+   },
+   "obs": {
+    "status+payload": 1700,
+    "status+exit+payload+text": 2400,
+    "status+payload+text": 2000,
+    "status+exit": 1200,
+    "status+exit+payload": 1500,
+    "status+text": 1700,
+    "status+exit+text": 2000,
+    "status": 800
+   }
+  },
+  "args": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": [
+      "a",
+      "b"
+     ]
+    },
+    "text": "val=a,b"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {
+     "val": [
+      "a",
+      "b"
+     ]
+    },
+    "text": "val=a,b"
+   },
+   "calls": 2,
+   "raw": "val=a,b\n",
+   "run": 417500,
+   "phases": {
+    "runner_setup": 8200,
+    "invoke_and_capture": 399400
+   },
+   "obs": {
+    "status+payload": 1600,
+    "status+exit+payload+text": 2300,
+    "status+payload+text": 1900,
+    "status+exit": 1200,
+    "status+exit+payload": 1500,
+    "status+text": 1600,
+    "status+exit+text": 1900,
+    "status": 800
+   }
+  },
+  "help": {
+   "values": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {},
+    "text": "documents default and option"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 0,
+    "payload": {},
+    "text": "documents default and option"
+   },
+   "calls": 2,
+   "raw": "Usage: command [OPTIONS]\n\nOptions:\n  --num INTEGER  [default: 2]\n  --help         Show this message and exit.\n",
+   "run": 1300200,
+   "phases": {
+    "runner_setup": 11800,
+    "invoke_and_capture": 1273800
+   },
+   "obs": {
+    "status+payload": 1800,
+    "status+exit+payload+text": 5000,
+    "status+payload+text": 4800,
+    "status+exit": 1200,
+    "status+exit+payload": 1600,
+    "status+text": 4100,
+    "status+exit+text": 4700,
+    "status": 900
+   }
+  },
+  "invalid": {
+   "values": {
+    "status": "ok",
+    "exit": 2,
+    "payload": {},
+    "text": "explains allowed choices"
+   },
+   "expected": {
+    "status": "ok",
+    "exit": 2,
+    "payload": {},
+    "text": "explains allowed choices"
+   },
+   "calls": 2,
+   "raw": "Usage: command [OPTIONS]\nTry 'command --help' for help.\n\nError: Invalid value for '--color': 'green' is not one of 'red', 'blue'.\n",
+   "run": 1437900,
+   "phases": {
+    "runner_setup": 11200,
+    "invoke_and_capture": 1413600
+   },
+   "obs": {
+    "status+payload": 1900,
+    "status+exit+payload+text": 3200,
+    "status+payload+text": 3100,
+    "status+exit": 1200,
+    "status+exit+payload": 1600,
+    "status+text": 2700,
+    "status+exit+text": 3200,
+    "status": 900
+   }
+  }
+ },
+ "markdown": {
+  "basic": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "hello"
+    ],
+    "structure": [
+     "p"
+    ],
+    "attrs": []
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "hello"
+    ],
+    "structure": [
+     "p"
+    ],
+    "attrs": []
+   },
+   "calls": 2,
+   "raw": "<p>hello</p>",
+   "run": 205400,
+   "phases": {
+    "fresh_converter": 90300,
+    "final_render": 101600
+   },
+   "obs": {
+    "status+structure": 13300,
+    "status+text+structure+attrs": 14200,
+    "status+structure+attrs": 13400,
+    "status+text": 12700,
+    "status+text+structure": 14000,
+    "status+attrs": 12800,
+    "status+text+attrs": 13300,
+    "status": 900
+   }
+  },
+  "em": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "hello"
+    ],
+    "structure": [
+     "p",
+     "em"
+    ],
+    "attrs": []
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "hello"
+    ],
+    "structure": [
+     "p",
+     "em"
+    ],
+    "attrs": []
+   },
+   "calls": 2,
+   "raw": "<p><em>hello</em></p>",
+   "run": 184700,
+   "phases": {
+    "fresh_converter": 77300,
+    "final_render": 102000
+   },
+   "obs": {
+    "status+structure": 13400,
+    "status+text+structure+attrs": 14200,
+    "status+structure+attrs": 13800,
+    "status+text": 12200,
+    "status+text+structure": 13400,
+    "status+attrs": 12500,
+    "status+text+attrs": 13200,
+    "status": 900
+   }
+  },
+  "head": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "Alpha"
+    ],
+    "structure": [
+     "h1"
+    ],
+    "attrs": [
+     "alpha"
+    ]
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "Alpha"
+    ],
+    "structure": [
+     "h1"
+    ],
+    "attrs": [
+     "alpha"
+    ]
+   },
+   "calls": 2,
+   "raw": "<h1 id=\"alpha\">Alpha</h1>",
+   "run": 182100,
+   "phases": {
+    "fresh_converter": 77500,
+    "final_render": 96900
+   },
+   "obs": {
+    "status+structure": 13000,
+    "status+text+structure+attrs": 14000,
+    "status+structure+attrs": 13300,
+    "status+text": 12400,
+    "status+text+structure": 13300,
+    "status+attrs": 12500,
+    "status+text+attrs": 13400,
+    "status": 900
+   }
+  },
+  "twins": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "Alpha",
+     "Alpha"
+    ],
+    "structure": [
+     "h1",
+     "h1"
+    ],
+    "attrs": [
+     "alpha",
+     "alpha_1"
+    ]
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "Alpha",
+     "Alpha"
+    ],
+    "structure": [
+     "h1",
+     "h1"
+    ],
+    "attrs": [
+     "alpha",
+     "alpha_1"
+    ]
+   },
+   "calls": 2,
+   "raw": "<h1 id=\"alpha\">Alpha</h1>\n<h1 id=\"alpha_1\">Alpha</h1>",
+   "run": 202300,
+   "phases": {
+    "fresh_converter": 72900,
+    "final_render": 124100
+   },
+   "obs": {
+    "status+structure": 13100,
+    "status+text+structure+attrs": 14500,
+    "status+structure+attrs": 13900,
+    "status+text": 12700,
+    "status+text+structure": 13600,
+    "status+attrs": 13300,
+    "status+text+attrs": 14200,
+    "status": 900
+   }
+  },
+  "reuse": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "Alpha"
+    ],
+    "structure": [
+     "h1"
+    ],
+    "attrs": [
+     "alpha"
+    ]
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "Alpha"
+    ],
+    "structure": [
+     "h1"
+    ],
+    "attrs": [
+     "alpha"
+    ]
+   },
+   "calls": 4,
+   "raw": "<h1 id=\"alpha\">Alpha</h1>",
+   "run": 227300,
+   "phases": {
+    "fresh_converter": 69600,
+    "explicit_reset": 1000,
+    "final_render": 70600
+   },
+   "obs": {
+    "status+structure": 12300,
+    "status+text+structure": 13100,
+    "status+structure+attrs": 13200,
+    "status": 900,
+    "status+attrs": 12600,
+    "status+text": 12200,
+    "status+text+attrs": 13400,
+    "status+text+structure+attrs": 13500
+   }
+  },
+  "table": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "A",
+     "B",
+     "x",
+     "y"
+    ],
+    "structure": [
+     "table",
+     "tr",
+     "th",
+     "th",
+     "tr",
+     "td",
+     "td"
+    ],
+    "attrs": []
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "A",
+     "B",
+     "x",
+     "y"
+    ],
+    "structure": [
+     "table",
+     "tr",
+     "th",
+     "th",
+     "tr",
+     "td",
+     "td"
+    ],
+    "attrs": []
+   },
+   "calls": 2,
+   "raw": "<table>\n<thead>\n<tr>\n<th>A</th>\n<th>B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>x</td>\n<td>y</td>\n</tr>\n</tbody>\n</table>",
+   "run": 243800,
+   "phases": {
+    "fresh_converter": 70800,
+    "final_render": 168100
+   },
+   "obs": {
+    "status+structure": 15800,
+    "status+text+structure+attrs": 17700,
+    "status+structure+attrs": 16400,
+    "status+text": 15000,
+    "status+text+structure": 16500,
+    "status+attrs": 15200,
+    "status+text+attrs": 16600,
+    "status": 900
+   }
+  },
+  "fence": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "<tag>"
+    ],
+    "structure": [
+     "pre",
+     "code"
+    ],
+    "attrs": [
+     "language-html"
+    ]
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "<tag>"
+    ],
+    "structure": [
+     "pre",
+     "code"
+    ],
+    "attrs": [
+     "language-html"
+    ]
+   },
+   "calls": 2,
+   "raw": "<pre><code class=\"language-html\">&lt;tag&gt;\n</code></pre>",
+   "run": 177000,
+   "phases": {
+    "fresh_converter": 72200,
+    "final_render": 96400
+   },
+   "obs": {
+    "status+structure": 14600,
+    "status+text+structure+attrs": 14900,
+    "status+structure+attrs": 13900,
+    "status+text": 13200,
+    "status+text+structure": 14300,
+    "status+attrs": 13600,
+    "status+text+attrs": 14300,
+    "status": 900
+   }
+  },
+  "link": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "title"
+    ],
+    "structure": [
+     "p",
+     "a"
+    ],
+    "attrs": [
+     "/guide"
+    ]
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "title"
+    ],
+    "structure": [
+     "p",
+     "a"
+    ],
+    "attrs": [
+     "/guide"
+    ]
+   },
+   "calls": 2,
+   "raw": "<p><a href=\"/guide\">title</a></p>",
+   "run": 176600,
+   "phases": {
+    "fresh_converter": 69300,
+    "final_render": 103500
+   },
+   "obs": {
+    "status+structure": 12800,
+    "status+text+structure+attrs": 14000,
+    "status+structure+attrs": 13400,
+    "status+text": 12500,
+    "status+text+structure": 13600,
+    "status+attrs": 12600,
+    "status+text+attrs": 13300,
+    "status": 900
+   }
+  },
+  "list": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "x",
+     "y"
+    ],
+    "structure": [
+     "ul",
+     "li",
+     "li"
+    ],
+    "attrs": []
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "x",
+     "y"
+    ],
+    "structure": [
+     "ul",
+     "li",
+     "li"
+    ],
+    "attrs": []
+   },
+   "calls": 2,
+   "raw": "<ul>\n<li>x</li>\n<li>y</li>\n</ul>",
+   "run": 177400,
+   "phases": {
+    "fresh_converter": 67900,
+    "final_render": 105700
+   },
+   "obs": {
+    "status+structure": 13100,
+    "status+text+structure+attrs": 14500,
+    "status+structure+attrs": 13500,
+    "status+text": 12300,
+    "status+text+structure": 13300,
+    "status+attrs": 12600,
+    "status+text+attrs": 13400,
+    "status": 800
+   }
+  },
+  "refreset": {
+   "values": {
+    "status": "ok",
+    "text": [
+     "[title][id]"
+    ],
+    "structure": [
+     "p"
+    ],
+    "attrs": []
+   },
+   "expected": {
+    "status": "ok",
+    "text": [
+     "[title][id]"
+    ],
+    "structure": [
+     "p"
+    ],
+    "attrs": []
+   },
+   "calls": 4,
+   "raw": "<p>[title][id]</p>",
+   "run": 251000,
+   "phases": {
+    "fresh_converter": 68300,
+    "explicit_reset": 800,
+    "final_render": 72700
+   },
+   "obs": {
+    "status+structure": 11800,
+    "status+text+structure": 12400,
+    "status+structure+attrs": 12700,
+    "status": 900,
+    "status+attrs": 12000,
+    "status+text": 11600,
+    "status+text+attrs": 12600,
+    "status+text+structure+attrs": 13300
+   }
+  }
+ },
+ "tqdm": {
+  "empty": {
+   "values": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "job|0/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "job|0/5"
+   },
+   "calls": 3,
+   "raw": "\rjob|0/5\rjob|0/5\rjob|0/5\n",
+   "run": 73400,
+   "phases": {
+    "fresh_bar": 31900,
+    "final_refresh": 13300,
+    "close": 20200
+   },
+   "obs": {
+    "status+total+text": 1500,
+    "status+counter": 1100,
+    "status+counter+total": 1300,
+    "status": 800,
+    "status+counter+text": 1600,
+    "status+total": 1100,
+    "status+text": 1400,
+    "status+counter+total+text": 1800
+   }
+  },
+  "one": {
+   "values": {
+    "status": "ok",
+    "counter": 1,
+    "total": 5,
+    "text": "job|1/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 1,
+    "total": 5,
+    "text": "job|1/5"
+   },
+   "calls": 4,
+   "raw": "\rjob|0/5\rjob|1/5\rjob|1/5\n",
+   "run": 55300,
+   "phases": {
+    "fresh_bar": 23200,
+    "final_refresh": 10400,
+    "close": 16100
+   },
+   "obs": {
+    "status+total": 1000,
+    "status+counter+total": 1300,
+    "status+total+text": 1500,
+    "status": 800,
+    "status+text": 1200,
+    "status+counter": 1000,
+    "status+counter+text": 1500,
+    "status+counter+total+text": 1700
+   }
+  },
+  "initial": {
+   "values": {
+    "status": "ok",
+    "counter": 4,
+    "total": 5,
+    "text": "job|4/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 4,
+    "total": 5,
+    "text": "job|4/5"
+   },
+   "calls": 4,
+   "raw": "\rjob|2/5\rjob|4/5\rjob|4/5\n",
+   "run": 49900,
+   "phases": {
+    "fresh_bar": 21500,
+    "final_refresh": 9600,
+    "close": 14800
+   },
+   "obs": {
+    "status+total": 900,
+    "status+counter+total": 1200,
+    "status+total+text": 1400,
+    "status": 700,
+    "status+text": 1200,
+    "status+counter": 900,
+    "status+counter+text": 1500,
+    "status+counter+total+text": 1600
+   }
+  },
+  "many": {
+   "values": {
+    "status": "ok",
+    "counter": 3,
+    "total": 5,
+    "text": "job|3/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 3,
+    "total": 5,
+    "text": "job|3/5"
+   },
+   "calls": 5,
+   "raw": "\rjob|0/5\rjob|3/5\rjob|3/5\n",
+   "run": 49100,
+   "phases": {
+    "fresh_bar": 21200,
+    "final_refresh": 9500,
+    "close": 14400
+   },
+   "obs": {
+    "status+counter+total": 1100,
+    "status+counter+total+text": 1600,
+    "status+total": 1000,
+    "status+total+text": 1400,
+    "status+text": 1200,
+    "status+counter": 1000,
+    "status+counter+text": 1400,
+    "status": 700
+   }
+  },
+  "reset": {
+   "values": {
+    "status": "ok",
+    "counter": 0,
+    "total": 8,
+    "text": "job|0/8"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 0,
+    "total": 8,
+    "text": "job|0/8"
+   },
+   "calls": 5,
+   "raw": "\rjob|0/5\rjob|0/8\rjob|0/8\rjob|0/8\n",
+   "run": 58100,
+   "phases": {
+    "fresh_bar": 20400,
+    "explicit_reset": 10500,
+    "final_refresh": 9100,
+    "close": 14100
+   },
+   "obs": {
+    "status+counter+total": 1100,
+    "status+counter+total+text": 1500,
+    "status+total": 900,
+    "status+total+text": 1400,
+    "status+text": 1100,
+    "status+counter": 1000,
+    "status+counter+text": 1400,
+    "status": 700
+   }
+  },
+  "resume": {
+   "values": {
+    "status": "ok",
+    "counter": 3,
+    "total": 8,
+    "text": "job|3/8"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 3,
+    "total": 8,
+    "text": "job|3/8"
+   },
+   "calls": 6,
+   "raw": "\rjob|0/5\rjob|0/8\rjob|3/8\rjob|3/8\n",
+   "run": 60400,
+   "phases": {
+    "fresh_bar": 20500,
+    "explicit_reset": 10100,
+    "final_refresh": 9400,
+    "close": 14100
+   },
+   "obs": {
+    "status+counter+text": 1400,
+    "status+counter": 1000,
+    "status+total": 1000,
+    "status": 600,
+    "status+total+text": 1400,
+    "status+counter+total": 1200,
+    "status+counter+total+text": 1600,
+    "status+text": 1200
+   }
+  },
+  "rename": {
+   "values": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "next|0/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "next|0/5"
+   },
+   "calls": 4,
+   "raw": "\rjob|0/5\rnext|0/5\rnext|0/5\rnext|0/5\n",
+   "run": 56500,
+   "phases": {
+    "fresh_bar": 20200,
+    "final_refresh": 9200,
+    "close": 14100
+   },
+   "obs": {
+    "status+total": 1000,
+    "status+counter+total": 1200,
+    "status+total+text": 1400,
+    "status": 700,
+    "status+text": 1200,
+    "status+counter": 900,
+    "status+counter+text": 1500,
+    "status+counter+total+text": 1600
+   }
+  },
+  "finish": {
+   "values": {
+    "status": "ok",
+    "counter": 5,
+    "total": 5,
+    "text": "job|5/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 5,
+    "total": 5,
+    "text": "job|5/5"
+   },
+   "calls": 4,
+   "raw": "\rjob|0/5\rjob|5/5\rjob|5/5\n",
+   "run": 46700,
+   "phases": {
+    "fresh_bar": 19900,
+    "final_refresh": 9400,
+    "close": 14100
+   },
+   "obs": {
+    "status+total": 1000,
+    "status+counter+total": 1200,
+    "status+total+text": 1400,
+    "status": 700,
+    "status+text": 1100,
+    "status+counter": 900,
+    "status+counter+text": 1400,
+    "status+counter+total+text": 1500
+   }
+  },
+  "reset_same": {
+   "values": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "job|0/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 0,
+    "total": 5,
+    "text": "job|0/5"
+   },
+   "calls": 5,
+   "raw": "\rjob|0/5\rjob|0/5\rjob|0/5\rjob|0/5\n",
+   "run": 57900,
+   "phases": {
+    "fresh_bar": 20500,
+    "explicit_reset": 10100,
+    "final_refresh": 9100,
+    "close": 14100
+   },
+   "obs": {
+    "status+counter+total": 1200,
+    "status+counter+total+text": 1500,
+    "status+total": 1000,
+    "status+total+text": 1400,
+    "status+text": 1200,
+    "status+counter": 1000,
+    "status+counter+text": 1400,
+    "status": 700
+   }
+  },
+  "fraction": {
+   "values": {
+    "status": "ok",
+    "counter": 0.5,
+    "total": 5,
+    "text": "job|0.5/5"
+   },
+   "expected": {
+    "status": "ok",
+    "counter": 0.5,
+    "total": 5,
+    "text": "job|0.5/5"
+   },
+   "calls": 4,
+   "raw": "\rjob|0/5\rjob|0.5/5\rjob|0.5/5\n",
+   "run": 47800,
+   "phases": {
+    "fresh_bar": 20000,
+    "final_refresh": 10000,
+    "close": 14500
+   },
+   "obs": {
+    "status+total": 1000,
+    "status+counter+total": 1200,
+    "status+total+text": 1400,
+    "status": 700,
+    "status+text": 1200,
+    "status+counter": 900,
+    "status+counter+text": 1300,
+    "status+counter+total+text": 1500
+   }
+  }
+ }
+}

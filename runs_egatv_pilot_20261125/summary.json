@@ -1,0 +1,181 @@
+{
+  "started": "2026-11-24T17:51:25.402585+00:00",
+  "development": {
+    "worlds": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "kills": [
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "summary": [
+    {
+      "method": "direct",
+      "n": 256,
+      "success": 200,
+      "wrong": 56,
+      "defer": 0,
+      "fallback": 0,
+      "extra": 0,
+      "calls": 512,
+      "committed": 256,
+      "weighted_error": 152,
+      "median_decision_us": 1.3,
+      "median_workflow_ms": 1.391
+    },
+    {
+      "method": "status",
+      "n": 256,
+      "success": 200,
+      "wrong": 48,
+      "defer": 8,
+      "fallback": 8,
+      "extra": 0,
+      "calls": 504,
+      "committed": 248,
+      "weighted_error": 132,
+      "median_decision_us": 1.4,
+      "median_workflow_ms": 0.426
+    },
+    {
+      "method": "fixed",
+      "n": 256,
+      "success": 200,
+      "wrong": 56,
+      "defer": 0,
+      "fallback": 0,
+      "extra": 256,
+      "calls": 768,
+      "committed": 256,
+      "weighted_error": 152,
+      "median_decision_us": 2.8,
+      "median_workflow_ms": 1.173
+    },
+    {
+      "method": "matched",
+      "n": 256,
+      "success": 216,
+      "wrong": 24,
+      "defer": 16,
+      "fallback": 16,
+      "extra": 256,
+      "calls": 752,
+      "committed": 240,
+      "weighted_error": 72,
+      "median_decision_us": 2.7,
+      "median_workflow_ms": 0.765
+    },
+    {
+      "method": "reuse_matched",
+      "n": 256,
+      "success": 216,
+      "wrong": 24,
+      "defer": 16,
+      "fallback": 16,
+      "extra": 192,
+      "calls": 688,
+      "committed": 240,
+      "weighted_error": 72,
+      "median_decision_us": 1.6,
+      "median_workflow_ms": 0.414
+    },
+    {
+      "method": "mutation",
+      "n": 256,
+      "success": 200,
+      "wrong": 24,
+      "defer": 32,
+      "fallback": 32,
+      "extra": 256,
+      "calls": 736,
+      "committed": 224,
+      "weighted_error": 72,
+      "median_decision_us": 4.0,
+      "median_workflow_ms": 0.798
+    },
+    {
+      "method": "full",
+      "n": 256,
+      "success": 216,
+      "wrong": 24,
+      "defer": 16,
+      "fallback": 16,
+      "extra": 512,
+      "calls": 1008,
+      "committed": 240,
+      "weighted_error": 72,
+      "median_decision_us": 4.1,
+      "median_workflow_ms": 1.096
+    },
+    {
+      "method": "fallback_first",
+      "n": 256,
+      "success": 228,
+      "wrong": 28,
+      "defer": 0,
+      "fallback": 128,
+      "extra": 0,
+      "calls": 512,
+      "committed": 256,
+      "weighted_error": 76,
+      "median_decision_us": 1.4,
+      "median_workflow_ms": 0.755
+    },
+    {
+      "method": "uncertainty",
+      "n": 256,
+      "success": 228,
+      "wrong": 28,
+      "defer": 0,
+      "fallback": 64,
+      "extra": 0,
+      "calls": 512,
+      "committed": 256,
+      "weighted_error": 76,
+      "median_decision_us": 10.5,
+      "median_workflow_ms": 0.776
+    },
+    {
+      "method": "generic_risk",
+      "n": 256,
+      "success": 224,
+      "wrong": 24,
+      "defer": 8,
+      "fallback": 40,
+      "extra": 60,
+      "calls": 564,
+      "committed": 248,
+      "weighted_error": 48,
+      "median_decision_us": 20.2,
+      "median_workflow_ms": 0.408
+    },
+    {
+      "method": "egatv",
+      "n": 256,
+      "success": 224,
+      "wrong": 24,
+      "defer": 8,
+      "fallback": 40,
+      "extra": 48,
+      "calls": 552,
+      "committed": 248,
+      "weighted_error": 48,
+      "median_decision_us": 11.9,
+      "median_workflow_ms": 0.435
+    }
+  ]
+}

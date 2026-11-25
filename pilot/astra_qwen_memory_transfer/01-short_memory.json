@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "group": "short_memory",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#..##.#\n#P...##\n#.##B.#\n##..G.#\n#..##.#\n#######\nInitial history: attempted to walk L twice, both blocked.\nYour reusable rules from earlier training tasks:\n1. Only push a box if the destination cell is empty and reachable.  \n2. After pushing, the player moves behind the box, so ensure the new position is valid.  \n3. Avoid pushing boxes into walls or corners where no path exists.  \n4. Plan moves in sequences\u2014each push must open a path for the next.  \n5. Never pull; only push, and always verify the box can move freely.\nActions taken: \nCurrent board:\n#######\n#..##.#\n#P...##\n#.##B.#\n##..G.#\n#..##.#\n#######\nAvailable actions: D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 252,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 254
+    }
+  ],
+  "actions": [
+    "D"
+  ],
+  "done": true,
+  "memory_sha256": "e35f158122e3f724e3202053d5acd46f7309e93ed65a9ca82784232612bc8f76",
+  "solved": true,
+  "tokens": 254
+}

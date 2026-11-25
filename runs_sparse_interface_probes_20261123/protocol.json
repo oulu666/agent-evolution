@@ -1,0 +1,37 @@
+{
+  "windows": [
+    [
+      "2076-02-28",
+      "2076-03-01"
+    ],
+    [
+      "2077-03-30",
+      "2077-04-01"
+    ],
+    [
+      "2077-12-30",
+      "2078-01-01"
+    ]
+  ],
+  "masks": [
+    "none",
+    "left",
+    "right",
+    "both"
+  ],
+  "design": "full factorial 4^3 schedules crossed with four contracts",
+  "access": "complete known event dates in calibration sandbox; no hidden contract, model receives exact same surviving hypotheses as rule",
+  "budget": "shared first window; if unique stop, otherwise one additional call for two-call policies; if ambiguous abstain",
+  "arms": [
+    "schema_same_day",
+    "one_probe",
+    "fixed_second",
+    "occupancy_plan",
+    "information_gain",
+    "qwen_window",
+    "known_contract"
+  ],
+  "model": "P11 seed 08 frozen; compare both menu orders and average signed logits",
+  "primary": "correct unique mappings / all; wrong acceptance; unresolved; calls",
+  "evaluation": "six independent nonempty target dates with neighbors, exact returned events; abstention yields no service"
+}

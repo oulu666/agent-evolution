@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-22 11:50:33 +0800",
+  "method": "Exact installed GenerationMixin._prepare_generation_config using recorded config and identical explicit generate kwargs; stub only supplies config field getter. No model/weights/GPU/response generation.",
+  "records": [
+    {
+      "seed": 20261108,
+      "model_config_use_cache": false,
+      "loaded_generation_config_use_cache": null,
+      "resolved_generation_use_cache": true,
+      "resolved_do_sample": false,
+      "resolved_max_new_tokens": 128,
+      "configuration_only_no_model_inference": true
+    },
+    {
+      "seed": 20261109,
+      "model_config_use_cache": false,
+      "loaded_generation_config_use_cache": null,
+      "resolved_generation_use_cache": true,
+      "resolved_do_sample": false,
+      "resolved_max_new_tokens": 128,
+      "configuration_only_no_model_inference": true
+    }
+  ],
+  "proof_scope": "Generation config preparation resolves use_cache; no per-forward tracing was collected. Cannot claim forced cache=False.",
+  "new_inference_calls": 0
+}

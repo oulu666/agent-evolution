@@ -1,0 +1,120 @@
+{
+  "id": 3,
+  "group": "no_correction",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "plan",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#..P#G#\n#.#.B.#\n#.....#\n#.#...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nCurrent board:\n#######\n#..P#G#\n#.#.B.#\n#.....#\n#.#...#\n#.....#\n#######\nCurrent coordinates: {\"player\": [2, 4], \"box\": [3, 5]}\nAvailable actions: L R RESET\nActions taken: \nReason for request: Initial planning.\nGive a complete plan from the CURRENT state to the goal. Return JSON only, with steps containing action, box, and player. box and player are EXPECTED positions AFTER that action, each [row,column], 1-based including the outer walls. After a push the player occupies the box's previous square. Example schema: {\"steps\":[{\"action\":\"R\",\"box\":[2,4],\"player\":[2,3]}]}. Use at most 8 actions. The student will execute without further supervision unless the observed state diverges. Include RESET if recovery requires it.",
+      "output": "{\"steps\":[{\"action\":\"R\",\"box\":[3,6],\"player\":[3,5]},{\"action\":\"U\",\"box\":[2,6],\"player\":[3,6]}]}",
+      "input_tokens": 289,
+      "output_tokens": 117,
+      "reasoning_tokens": 73,
+      "total_tokens": 406
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#..P#G#\n#.#.B.#\n#.....#\n#.#...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nCurrent board:\n#######\n#..P#G#\n#.#.B.#\n#.....#\n#.#...#\n#.....#\n#######\nCurrent coordinates: {\"player\": [2, 4], \"box\": [3, 5]}\nAvailable actions: L R RESET\nActions taken: \nRemaining teacher plan:\n[{\"action\": \"R\", \"box\": [3, 6], \"player\": [3, 5]}, {\"action\": \"U\", \"box\": [2, 6], \"player\": [3, 6]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "R",
+      "input_tokens": 238,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 240
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#..P#G#\n#.#.B.#\n#.....#\n#.#...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nCurrent board:\n#######\n#...#G#\n#.#.PB#\n#.....#\n#.#...#\n#.....#\n#######\nCurrent coordinates: {\"player\": [3, 5], \"box\": [3, 6]}\nAvailable actions: U RESET\nActions taken: R\nRemaining teacher plan:\n[{\"action\": \"U\", \"box\": [2, 6], \"player\": [3, 6]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "U",
+      "input_tokens": 212,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 214
+    }
+  ],
+  "actions": [
+    "R",
+    "U"
+  ],
+  "checks": [
+    {
+      "expected": {
+        "action": "R",
+        "box": [
+          3,
+          6
+        ],
+        "player": [
+          3,
+          5
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          5
+        ],
+        "box": [
+          3,
+          6
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "U",
+        "box": [
+          2,
+          6
+        ],
+        "player": [
+          3,
+          6
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          6
+        ],
+        "box": [
+          2,
+          6
+        ]
+      },
+      "matched": true
+    }
+  ],
+  "shared_prefix_actions": 2,
+  "reused_calls": 3,
+  "plan": [
+    {
+      "action": "R",
+      "box": [
+        3,
+        6
+      ],
+      "player": [
+        3,
+        5
+      ]
+    },
+    {
+      "action": "U",
+      "box": [
+        2,
+        6
+      ],
+      "player": [
+        3,
+        6
+      ]
+    }
+  ],
+  "done": true,
+  "solved": true,
+  "stop_reason": "goal",
+  "tokens": 860
+}

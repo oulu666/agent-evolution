@@ -1,0 +1,212 @@
+{
+  "id": 10,
+  "group": "no_correction",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "plan",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nInitial history: attempted to walk D twice, both blocked.\nCurrent board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nCurrent coordinates: {\"player\": [6, 4], \"box\": [5, 4]}\nAvailable actions: U D L R RESET\nActions taken: \nReason for request: Initial planning.\nGive a complete plan from the CURRENT state to the goal. Return JSON only, with steps containing action, box, and player. box and player are EXPECTED positions AFTER that action, each [row,column], 1-based including the outer walls. After a push the player occupies the box's previous square. Example schema: {\"steps\":[{\"action\":\"R\",\"box\":[2,4],\"player\":[2,3]}]}. Use at most 8 actions. The student will execute without further supervision unless the observed state diverges. Include RESET if recovery requires it.",
+      "output": "{\"steps\":[{\"action\":\"U\",\"box\":[4,4],\"player\":[5,4]},{\"action\":\"U\",\"box\":[3,4],\"player\":[4,4]},{\"action\":\"L\",\"box\":[3,3],\"player\":[3,4]},{\"action\":\"U\",\"box\":[2,3],\"player\":[3,3]}]}",
+      "input_tokens": 289,
+      "output_tokens": 179,
+      "reasoning_tokens": 101,
+      "total_tokens": 468
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nInitial history: attempted to walk D twice, both blocked.\nCurrent board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nCurrent coordinates: {\"player\": [6, 4], \"box\": [5, 4]}\nAvailable actions: U D L R RESET\nActions taken: \nRemaining teacher plan:\n[{\"action\": \"U\", \"box\": [4, 4], \"player\": [5, 4]}, {\"action\": \"U\", \"box\": [3, 4], \"player\": [4, 4]}, {\"action\": \"L\", \"box\": [3, 3], \"player\": [3, 4]}, {\"action\": \"U\", \"box\": [2, 3], \"player\": [3, 3]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "U",
+      "input_tokens": 286,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 288
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nInitial history: attempted to walk D twice, both blocked.\nCurrent board:\n#######\n#.G.#.#\n#.....#\n#..B..#\n#..P..#\n#.....#\n#######\nCurrent coordinates: {\"player\": [5, 4], \"box\": [4, 4]}\nAvailable actions: U D L R RESET\nActions taken: U\nRemaining teacher plan:\n[{\"action\": \"U\", \"box\": [3, 4], \"player\": [4, 4]}, {\"action\": \"L\", \"box\": [3, 3], \"player\": [3, 4]}, {\"action\": \"U\", \"box\": [2, 3], \"player\": [3, 3]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "U",
+      "input_tokens": 263,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 265
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nInitial history: attempted to walk D twice, both blocked.\nCurrent board:\n#######\n#.G.#.#\n#..B..#\n#..P..#\n#.....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [4, 4], \"box\": [3, 4]}\nAvailable actions: U D L R RESET\nActions taken: U U\nRemaining teacher plan:\n[{\"action\": \"L\", \"box\": [3, 3], \"player\": [3, 4]}, {\"action\": \"U\", \"box\": [2, 3], \"player\": [3, 3]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "L",
+      "input_tokens": 240,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 242
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.G.#.#\n#.....#\n#.....#\n#..B..#\n#..P..#\n#######\nInitial history: attempted to walk D twice, both blocked.\nCurrent board:\n#######\n#.G.#.#\n#.BP..#\n#.....#\n#.....#\n#.....#\n#######\nCurrent coordinates: {\"player\": [3, 4], \"box\": [3, 3]}\nAvailable actions: U D L R RESET\nActions taken: U U L\nRemaining teacher plan:\n[{\"action\": \"U\", \"box\": [2, 3], \"player\": [3, 3]}]\nExecute the FIRST action of this remaining plan. Reply with exactly one action label from the available actions.",
+      "output": "D",
+      "input_tokens": 214,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 216
+    }
+  ],
+  "actions": [
+    "U",
+    "U",
+    "L",
+    "D"
+  ],
+  "checks": [
+    {
+      "expected": {
+        "action": "U",
+        "box": [
+          4,
+          4
+        ],
+        "player": [
+          5,
+          4
+        ]
+      },
+      "actual": {
+        "player": [
+          5,
+          4
+        ],
+        "box": [
+          4,
+          4
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "U",
+        "box": [
+          3,
+          4
+        ],
+        "player": [
+          4,
+          4
+        ]
+      },
+      "actual": {
+        "player": [
+          4,
+          4
+        ],
+        "box": [
+          3,
+          4
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "L",
+        "box": [
+          3,
+          3
+        ],
+        "player": [
+          3,
+          4
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          4
+        ],
+        "box": [
+          3,
+          3
+        ]
+      },
+      "matched": true
+    },
+    {
+      "expected": {
+        "action": "U",
+        "box": [
+          2,
+          3
+        ],
+        "player": [
+          3,
+          3
+        ]
+      },
+      "actual": {
+        "player": [
+          3,
+          3
+        ],
+        "box": [
+          4,
+          3
+        ]
+      },
+      "matched": false
+    }
+  ],
+  "shared_prefix_actions": 4,
+  "reused_calls": 5,
+  "plan": [
+    {
+      "action": "U",
+      "box": [
+        4,
+        4
+      ],
+      "player": [
+        5,
+        4
+      ]
+    },
+    {
+      "action": "U",
+      "box": [
+        3,
+        4
+      ],
+      "player": [
+        4,
+        4
+      ]
+    },
+    {
+      "action": "L",
+      "box": [
+        3,
+        3
+      ],
+      "player": [
+        3,
+        4
+      ]
+    },
+    {
+      "action": "U",
+      "box": [
+        2,
+        3
+      ],
+      "player": [
+        3,
+        3
+      ]
+    }
+  ],
+  "done": true,
+  "solved": false,
+  "stop_reason": "original_plan_exhausted",
+  "tokens": 1479
+}

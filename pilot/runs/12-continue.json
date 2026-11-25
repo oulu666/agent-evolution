@@ -1,0 +1,83 @@
+{
+  "id": 12,
+  "group": "continue",
+  "solved": false,
+  "history": [
+    "Initial attempts: U was blocked twice. Board unchanged.",
+    "Invalid move syntax: RESET\nDD\nLL\nD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD",
+    "Invalid move syntax: RESET\nDD\nL\nU\nR\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL",
+    "Invalid move syntax: RESET\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nD\nR\nU\nL\nU\nR\nD\nL",
+    "Invalid move syntax: RESET\nR\nD\nD\nL\nL\nD\nR\nR\nU\nU\nR\nD\nL\nL\nU\nU\nR\nD\nL\nL\nU\nU\nR\nD"
+  ],
+  "tokens": 1556,
+  "calls": [
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nHistory:\nInitial attempts: U was blocked twice. Board unchanged.\nCurrent board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nDD\nLL\nD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 237,
+        "total_tokens": 301,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nHistory:\nInitial attempts: U was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nDD\nLL\nD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nCurrent board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nDD\nL\nU\nR\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL",
+      "usage": {
+        "completion_tokens": 56,
+        "prompt_tokens": 306,
+        "total_tokens": 362,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nHistory:\nInitial attempts: U was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nDD\nLL\nD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nInvalid move syntax: RESET\nDD\nL\nU\nR\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nCurrent board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nD\nR\nU\nL\nU\nR\nD\nL",
+      "usage": {
+        "completion_tokens": 52,
+        "prompt_tokens": 367,
+        "total_tokens": 419,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "doubao-seed-2-0-mini-260428",
+      "prompt": "Solve a single-crate Sokoban board. # wall, . floor, P player, B crate, G goal. U/D/L/R move one square. Walking into the crate pushes it if the next square is free. You cannot pull. The crate must land on G. Rows are shown top to bottom. + means player on goal.\nInitial board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nHistory:\nInitial attempts: U was blocked twice. Board unchanged.\nInvalid move syntax: RESET\nDD\nLL\nD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nR\nUU\nR\nDD\nL\nUU\nL\nDD\nR\nUU\nR\nDD\nInvalid move syntax: RESET\nDD\nL\nU\nR\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nInvalid move syntax: RESET\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nU\nR\nR\nD\nL\nL\nD\nR\nU\nL\nU\nR\nD\nL\nCurrent board:\n#######\n#.P#..#\n#.....#\n#..G..#\n#.B...#\n#..#..#\n#######\nReturn only a sequence of UDLR moves (max 24), optionally prefixed by RESET to restart from the initial board. Try to solve the entire board. Execution stops on the first illegal move.",
+      "output": "RESET\nR\nD\nD\nL\nL\nD\nR\nR\nU\nU\nR\nD\nL\nL\nU\nU\nR\nD\nL\nL\nU\nU\nR\nD",
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 424,
+        "total_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

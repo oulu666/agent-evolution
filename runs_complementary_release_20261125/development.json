@@ -1,0 +1,93 @@
+{
+  "cost_ms": {
+    "('A', False)": 0.0025,
+    "('A', True)": 0.00025,
+    "('B', False)": 0.012199999999999999,
+    "('B', True)": 0.0094,
+    "('J', False)": 0.0022500000000000003,
+    "('J', True)": 0.0003,
+    "reuse": 0.0002,
+    "zip": 0.0327,
+    "build": 1.4182000000000001
+  },
+  "weights": {
+    "(False, False)": 6,
+    "(False, True)": 8,
+    "(True, False)": 6,
+    "(True, True)": 8
+  },
+  "plans": {
+    "artifacts": [
+      0.7233642857142857,
+      [
+        "A",
+        {
+          "0": [
+            "build",
+            {}
+          ],
+          "1": [
+            "B",
+            {
+              "0": [
+                "zip",
+                {}
+              ],
+              "1": [
+                "reuse",
+                {}
+              ]
+            }
+          ]
+        }
+      ]
+    ],
+    "receipts": [
+      0.7184142857142858,
+      [
+        "J",
+        {
+          "0": [
+            "build",
+            {}
+          ],
+          "1": [
+            "build",
+            {}
+          ],
+          "2": [
+            "zip",
+            {}
+          ],
+          "3": [
+            "reuse",
+            {}
+          ]
+        }
+      ]
+    ]
+  },
+  "revisions": [
+    "f8015d0cc3c6e7f8d566d0fb9ac6ab451897c318",
+    "2ae44e6acfcdeb5cf2fbff1ec3c7e7c9432740c4",
+    "ca3fe83c4060488cebebf1248dcca6f76a331a7f",
+    "4f1f7da9500d32f62e5685d17aae2d8192e4aa6e",
+    "634391bcf7a59b2be898a5f40c290f2bf7662b54",
+    "2c7ec0c21b412f5242951a3ced9628cf6d3fc0a7",
+    "b62ddeda02fadcd09def9354eb2ef46a7562a106",
+    "4b11593b681966e5c9a7a70c84a19546fc2e185c",
+    "929c5f4ea9f9d958884f9fef578b5d244c4575ea",
+    "cb9cdc86575dab7afd3296c030e338cea3fc936e",
+    "a675c2a10985405ef9fddcc80b1e79d4553b4cdf",
+    "7d978e13c3762bb58005e7f36c0514b64a1c5005",
+    "8e7528fa5c98bf4652deb13206d6e6241d61630b",
+    "faf73b08bb984669fcba044259f8d67fbfed69ab",
+    "21ba00c230e41a1de90b4f7608e5133e254ba109",
+    "77fb7f1b51076becff488a9b42ef2883153262a0",
+    "a2a9c53ea262ea0d39e76aa18430ce071fbe68d5",
+    "42d4b4336e97485b96c1e4e9fcdb4e8df2501217"
+  ],
+  "metadata_ms": 0.35590000000000005,
+  "python": "3.11.9",
+  "markdown_it": "4.2.0"
+}

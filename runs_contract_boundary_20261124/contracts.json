@@ -1,0 +1,109 @@
+{
+ "blinker": {
+  "documents_examined": 12,
+  "records": [
+   {
+    "id": "Signal.receiver_connected",
+    "kind": "notification",
+    "action": "connect",
+    "observer": "receiver_connected",
+    "fields": [
+     "receiver",
+     "sender",
+     "weak"
+    ],
+    "source": "src/blinker/base.py",
+    "line": 52,
+    "doc_sha256": "9548b2600bc128aba1129140e1cfa183f21352a48266f1680180b2b34deb3f93"
+   },
+   {
+    "id": "Signal.receiver_disconnected",
+    "kind": "notification",
+    "action": "disconnect",
+    "observer": "receiver_disconnected",
+    "fields": [
+     "receiver",
+     "sender"
+    ],
+    "source": "src/blinker/base.py",
+    "line": 64,
+    "doc_sha256": "0c459294bd5acfe090944fadb1ebed524f442d962382bcfdde22398f778259f8"
+   },
+   {
+    "id": "Signal.send",
+    "kind": "forward",
+    "action": "send",
+    "observer": "receiver",
+    "fields": [
+     "sender",
+     "kwargs"
+    ],
+    "source": "src/blinker/base.py",
+    "line": 278,
+    "doc_sha256": "287d47e989a0988fdbc62ab6116b8ba703bfbe73d116686fa9ec8c0cd55500cf"
+   },
+   {
+    "id": "Signal.send_async",
+    "kind": "forward",
+    "action": "send_async",
+    "observer": "receiver",
+    "fields": [
+     "sender",
+     "kwargs"
+    ],
+    "source": "src/blinker/base.py",
+    "line": 310,
+    "doc_sha256": "8b784960bd8e6098cd6b4c0bfd0ac945fcd9df9b60d3618e9bc14e19bb10420c"
+   }
+  ],
+  "match_ns": 511600,
+  "extract_with_io_ns": 37262300
+ },
+ "pluggy": {
+  "documents_examined": 25,
+  "records": [
+   {
+    "id": "HookCaller.call_historic",
+    "kind": "deferred",
+    "action": "call_historic",
+    "observer": "result_callback",
+    "fields": [
+     "result",
+     "late_registration"
+    ],
+    "source": "src/pluggy/_hooks.py",
+    "line": 500,
+    "doc_sha256": "a29b447900e587feb3d25e1cc2d8ac47eff9b763e7c7b93d7a8a05b781e2e071"
+   },
+   {
+    "id": "HookCaller.call_extra",
+    "kind": "temporary",
+    "action": "call_extra",
+    "observer": "additional_method",
+    "fields": [
+     "kwargs",
+     "membership"
+    ],
+    "source": "src/pluggy/_hooks.py",
+    "line": 524,
+    "doc_sha256": "4d479fb987719cd6fa89f1bf2b1fa5f9e563d364f40fea76ba5961fe3cca1c73"
+   },
+   {
+    "id": "PluginManager.add_hookcall_monitoring",
+    "kind": "monitor",
+    "action": "add_hookcall_monitoring",
+    "observer": "before+after",
+    "fields": [
+     "kwargs",
+     "outcome",
+     "undo"
+    ],
+    "source": "src/pluggy/_manager.py",
+    "line": 432,
+    "doc_sha256": "60fa62b73f60fa32b9a3de56402e7afbbf350f6fd0a7b297899d305461c6f7f7"
+   }
+  ],
+  "match_ns": 148700,
+  "extract_with_io_ns": 65640700
+ }
+}

@@ -1,0 +1,109 @@
+{
+  "id": 7,
+  "group": "guided",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "hint",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nAvailable pushes: L R\nGive the student one short hint (at most 24 words) about a useful intermediate target or trap. Do not provide the full solution.",
+      "output": "Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.",
+      "input_tokens": 139,
+      "output_tokens": 273,
+      "reasoning_tokens": 244,
+      "total_tokens": 412
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: \nCurrent board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 177,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 179
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#.PB..#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 179,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 181
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#..PB.#\n#.....#\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 179,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 181
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R R\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#...PB#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "U",
+      "input_tokens": 179,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 181
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R R U\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#B#\n#....P#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 180,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 182
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R R U D\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#P#\n#....B#\n#.....#\n#######\nAvailable actions: U D RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 181,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 183
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R R U D D\nCurrent board:\n#######\n##...G#\n#...#.#\n#.#.#.#\n#....P#\n#....B#\n#######\nAvailable actions: RESET\nChoose one available action. Reply with just its label.",
+      "output": "RESET",
+      "input_tokens": 181,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 183
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nInitial history: attempted to walk U twice, both blocked.\nHint: Aim for the rightmost square in the box\u2019s current row, keeping space below it so you can push upward.\nActions taken: R R R U D D RESET\nCurrent board:\n#######\n##P..G#\n#...#.#\n#.#.#.#\n#.B...#\n#.....#\n#######\nAvailable actions: L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "R",
+      "input_tokens": 184,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 186
+    }
+  ],
+  "actions": [
+    "R",
+    "R",
+    "R",
+    "U",
+    "D",
+    "D",
+    "RESET",
+    "R"
+  ],
+  "done": true,
+  "solved": false,
+  "tokens": 1868
+}

@@ -1,0 +1,49 @@
+case,actor,condition,solved,first_optimal,tokens,actions
+1,astra,clean,True,True,497,R D R
+1,astra,error_flag,True,True,930,D D R R
+1,astra,oracle_plan,True,True,952,D D R R
+1,astra,recovery,True,True,890,R D R D
+1,qwen,clean,True,True,664,R L R D R
+1,qwen,error_flag,True,True,1182,R L R R D D
+1,qwen,oracle_plan,True,True,839,R R D D
+1,qwen,recovery,True,True,667,R R D D
+2,astra,clean,True,True,328,D R
+2,astra,error_flag,True,True,925,D D R
+2,astra,oracle_plan,True,True,726,D D R
+2,astra,recovery,True,True,738,D R D
+2,qwen,clean,True,True,261,R D
+2,qwen,error_flag,True,True,585,R D D
+2,qwen,oracle_plan,True,True,624,R D D
+2,qwen,recovery,True,True,498,R D D
+3,astra,clean,True,True,600,D L L
+3,astra,error_flag,True,True,1155,D D L L
+3,astra,oracle_plan,True,True,1091,D D L L
+3,astra,recovery,True,True,1025,D D L L
+3,qwen,clean,False,False,396,R D D
+3,qwen,error_flag,False,False,793,R D D D
+3,qwen,oracle_plan,False,False,424,L L
+3,qwen,recovery,False,False,677,R D D D
+4,astra,clean,True,True,524,U U R
+4,astra,error_flag,True,True,1076,U U R U
+4,astra,oracle_plan,True,True,969,U U U R
+4,astra,recovery,True,True,904,U U U R
+4,qwen,clean,False,False,530,R R D D
+4,qwen,error_flag,False,False,198,D
+4,qwen,oracle_plan,True,False,1081,INVALID(R) U U U R
+4,qwen,recovery,False,False,169,D
+5,astra,clean,True,True,560,D L L
+5,astra,error_flag,True,True,976,L L D D
+5,astra,oracle_plan,True,True,958,D D L L
+5,astra,recovery,True,True,884,L L D D
+5,qwen,clean,False,True,807,D R L L R INVALID(Let's analyze the current board and the path to push the box B onto G)
+5,qwen,error_flag,False,False,1169,R L R R D D
+5,qwen,oracle_plan,True,True,827,L L D D
+5,qwen,recovery,False,False,824,R R D D D
+6,astra,clean,True,True,355,U R
+6,astra,error_flag,True,True,904,U U R
+6,astra,oracle_plan,True,True,691,U U R
+6,astra,recovery,True,True,708,R U U
+6,qwen,clean,False,False,528,D R D D
+6,qwen,error_flag,False,True,587,R D D
+6,qwen,oracle_plan,True,True,625,R U U
+6,qwen,recovery,False,True,500,R D D

@@ -1,0 +1,37 @@
+{
+ "transitions": {
+  "end": "b",
+  "trace": [
+   "machine.prepare_event",
+   "transition.prepare",
+   "transition.conditions",
+   "transition.unless",
+   "machine.before_state_change",
+   "transition.before",
+   "state.on_exit",
+   "state.on_enter",
+   "transition.after",
+   "machine.after_state_change",
+   "machine.finalize_event"
+  ]
+ },
+ "statemachine": {
+  "initial": "a",
+  "end": "b",
+  "trace": [
+   "validators()",
+   "conditions()",
+   "unless()",
+   "before_transition()",
+   "before_<event>()",
+   "on_exit_state()",
+   "on_exit_<state.id>()",
+   "on_transition()",
+   "on_<event>()",
+   "on_enter_state()",
+   "on_enter_<state.id>()",
+   "after_<event>()",
+   "after_transition()"
+  ]
+ }
+}

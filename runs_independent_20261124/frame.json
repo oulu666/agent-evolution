@@ -1,0 +1,313 @@
+{
+ "protocol_sha256": "0ace0670667de4ac1866e9bfdfcc70443d4e68e3431a59032639f6ebebc9c651",
+ "projects": [
+  {
+   "repo": "python-humanize/humanize",
+   "url": "https://api.github.com/search/issues?q=repo%3Apython-humanize%2Fhumanize+is%3Apr+is%3Amerged+merged%3A2022-01-01..2025-12-31+fix+in%3Atitle&sort=created&order=desc&per_page=11",
+   "total": 28,
+   "records": [
+    {
+     "number": 273,
+     "title": "Fix plural form for `intword` and improve performance",
+     "html_url": "https://github.com/python-humanize/humanize/pull/273",
+     "created_at": "2025-11-03T14:46:01Z",
+     "body": "Fixes #175 \r\n\r\nChanges proposed in this pull request:\r\n\r\n* Fix the plural form produced by intword by correctly taking into account how rounding is done\r\n* Improved code readability and performance\r\n* Fix one small error in the French translation\r\n"
+    },
+    {
+     "number": 254,
+     "title": "Fix `precisedelta` rounding",
+     "html_url": "https://github.com/python-humanize/humanize/pull/254",
+     "created_at": "2025-05-26T15:34:17Z",
+     "body": "Fixes #14 \r\nFixes #20 \r\nFixes #30 \r\n\r\nBased on PR #39 . \r\n\r\nChanges proposed in this pull request:\r\n\r\n* I rebased the work that had been done on top of the latest `main` and resolve the conflicts.\r\n* I removed the logic regarding regex for the `format` in favour of a new helper function which will evaluate the rounding based on the format provided\r\n* Added several additional test cases to highlight some of the differences between `%d` format and `%.0f`.\r\n"
+    },
+    {
+     "number": 250,
+     "title": "Fix regression in `naturalsize` for float and str",
+     "html_url": "https://github.com/python-humanize/humanize/pull/250",
+     "created_at": "2025-04-08T20:41:50Z",
+     "body": "Currently if `gnu` is set to False, calling `naturalsize(1.0)` or `naturalsize(\"1\")` will return `\"1.0 Byte` instead of `\"1 Byte\"`, which was the return value until 4.12."
+    },
+    {
+     "number": 240,
+     "title": "Fix regression in `naturalsize` for float",
+     "html_url": "https://github.com/python-humanize/humanize/pull/240",
+     "created_at": "2025-02-17T21:30:38Z",
+     "body": "Fixes https://github.com/python-humanize/humanize/issues/239.\r\n"
+    },
+    {
+     "number": 221,
+     "title": "Fix zizmor findings on CI",
+     "html_url": "https://github.com/python-humanize/humanize/pull/221",
+     "created_at": "2024-12-07T22:35:38Z",
+     "body": "And replace pre-commit/action with faster tox-dev/action-pre-commit-uv."
+    },
+    {
+     "number": 218,
+     "title": "Fix overflow issue in `naturalsize` with `np.int32` input",
+     "html_url": "https://github.com/python-humanize/humanize/pull/218",
+     "created_at": "2024-11-06T17:49:02Z",
+     "body": "Fixes #217 \r\n\r\nChanges proposed in this pull request:\r\n\r\n* Change the order of operations of the return statement in the naturalsize function to ensure all intermediate calculations stay float to prevent overflow issues."
+    },
+    {
+     "number": 216,
+     "title": "Fix pt_BR locale",
+     "html_url": "https://github.com/python-humanize/humanize/pull/216",
+     "created_at": "2024-11-02T17:38:49Z",
+     "body": "Fixes issues with pt_BR locale.\r\n\r\nChanges proposed in this pull request:\r\n\r\n* Some values were wrong (big numbers)\r\n* Some values were missing (thousand and thousands)\r\n\r\nFor non-Portuguese speakers trying their best to review it:\r\n* [Gogool](https://pt.wikipedia.org/wiki/Googol) (bold expression at the end of the first paragraph is the source)\r\n* And numbers (as digits) [followed by their representation in words](https://portuguesduvidoso.blogspot.com/2017/04/sequencia-numerica-milhao-bilhao.html)"
+    },
+    {
+     "number": 206,
+     "title": "Fix rollover from ZB to 1.0 YB",
+     "html_url": "https://github.com/python-humanize/humanize/pull/206",
+     "created_at": "2024-09-29T16:40:20Z",
+     "body": "Fixes https://github.com/python-humanize/humanize/issues/205.\r\n\r\nAvoid the conversion to float where possible.\r\n\r\n```pycon\r\nPython 3.13.0rc2 (v3.13.0rc2:ec610069637, Sep  6 2024, 17:57:29) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin\r\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\r\n>>> from humanize import filesize\r\n>>> filesize.naturalsize(100_000_000_000_000_000_000_000)\r\n'100.0 ZB'\r\n>>> filesize.naturalsize(1_000_000_000_000_000_000_000_000)\r\n'1.0 YB'\r\n>>> filesize.naturalsize(10_000_000_000_000_000_000_000_000)\r\n'10.0 YB'\r\n>>> filesize.naturalsize(1_000_000_000_000_000_050_331_648)\r\n'1.0 YB'\r\n>>> filesize.naturalsize(1_000_000_000_000_000_050_331_649)\r\n'1.0 YB'\r\n```\r\n"
+    },
+    {
+     "number": 204,
+     "title": "Fix finding location of translations",
+     "html_url": "https://github.com/python-humanize/humanize/pull/204",
+     "created_at": "2024-09-22T14:59:48Z",
+     "body": "Fixes #105\r\n\r\nChanges proposed in this pull request:\r\n\r\n* Use `importlib.resources` available since Python 3.9 to find the location of the locale folder containing the translations.\r\n \r\n"
+    },
+    {
+     "number": 196,
+     "title": "Fix zh_CN/zh_HK translation for \"1 year, %d days\"",
+     "html_url": "https://github.com/python-humanize/humanize/pull/196",
+     "created_at": "2024-08-20T03:32:34Z",
+     "body": "Fix #195 "
+    }
+   ]
+  },
+  {
+   "repo": "prettytable/prettytable",
+   "url": "https://api.github.com/search/issues?q=repo%3Aprettytable%2Fprettytable+is%3Apr+is%3Amerged+merged%3A2022-01-01..2025-12-31+fix+in%3Atitle&sort=created&order=desc&per_page=11",
+   "total": 17,
+   "records": [
+    {
+     "number": 390,
+     "title": "Fix `README` for `sort_key`",
+     "html_url": "https://github.com/prettytable/prettytable/pull/390",
+     "created_at": "2025-05-25T16:23:48Z",
+     "body": "fixed wrong documentation for `prettytable.sort_key` in README.md (#389)"
+    },
+    {
+     "number": 382,
+     "title": "Fix filter example",
+     "html_url": "https://github.com/prettytable/prettytable/pull/382",
+     "created_at": "2025-04-04T16:06:16Z",
+     "body": "Filtering example fails with `self` argument"
+    },
+    {
+     "number": 379,
+     "title": "Fix typing: replace `Iterable` with indexable `Sequence`",
+     "html_url": "https://github.com/prettytable/prettytable/pull/379",
+     "created_at": "2025-02-27T19:56:27Z",
+     "body": null
+    },
+    {
+     "number": 378,
+     "title": "Fix `IndexError` for `add_rows()` with an empty list",
+     "html_url": "https://github.com/prettytable/prettytable/pull/378",
+     "created_at": "2025-02-27T19:37:51Z",
+     "body": "Fixes https://github.com/prettytable/prettytable/issues/377."
+    },
+    {
+     "number": 356,
+     "title": "Fix divider intersection for border styles",
+     "html_url": "https://github.com/prettytable/prettytable/pull/356",
+     "created_at": "2025-01-31T13:30:52Z",
+     "body": "Fixes #237.\r\n\r\nSmall demo:\r\n```python\r\nfrom prettytable import PrettyTable, TableStyle\r\n\r\nfor style in TableStyle:\r\n    t = PrettyTable()\r\n    t.title = style.name\r\n    t.set_style(style)\r\n    t.add_row([11, 12, 13, 14])\r\n    t.add_row([21, 22, 23, 24])\r\n    t.add_row([31, 32, 33, 34], divider=True)\r\n    t.add_row([41, 42, 43, 44])\r\n    print(t)\r\n    print()\r\n```\r\n\r\n# Before\r\n\r\nAffects `SINGLE_BORDER` and `DOUBLE_BORDER` styles:\r\n\r\n```\r\n+---------------------------------------+\r\n|                DEFAULT                |\r\n+---------+---------+---------+---------+\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n+---------+---------+---------+---------+\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n+---------+---------+---------+---------+\r\n|    41   |    42   |    43   |    44   |\r\n+---------+---------+---------+---------+\r\n\r\n+---------------------------------------+\r\n|            MSWORD_FRIENDLY            |\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n+---------+---------+---------+---------+\r\n|    41   |    42   |    43   |    44   |\r\n\r\n                      PLAIN_COLUMNS\r\nField 1        Field 2        Field 3        Field 4\r\n   11             12             13             14\r\n   21             22             23             24\r\n   31             32             33             34\r\n\r\n   41             42             43             44\r\n\r\n| :-----: - :-----: - :-----: - :-----: |\r\n|                MARKDOWN               |\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n| :-----: | :-----: | :-----: | :-----: |\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n| :-----: | :-----: | :-----: | :-----: |\r\n|    41   |    42   |    43   |    44   |\r\n\r\n|---------------------------------------|\r\n|                ORGMODE                |\r\n|---------+---------+---------+---------|\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n|---------+---------+---------+---------|\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n|---------+---------+---------+---------|\r\n|    41   |    42   |    43   |    44   |\r\n|---------+---------+---------+---------|\r\n\r\n╔═══════════════════════════════════════╗\r\n║             DOUBLE_BORDER             ║\r\n╠═════════╦═════════╦═════════╦═════════╣\r\n║ Field 1 ║ Field 2 ║ Field 3 ║ Field 4 ║\r\n╠═════════╬═════════╬═════════╬═════════╣\r\n║    11   ║    12   ║    13   ║    14   ║\r\n║    21   ║    22   ║    23   ║    24   ║\r\n║    31   ║    32   ║    33   ║    34   ║\r\n╚═════════╩═════════╩═════════╩═════════╝\r\n║    41   ║    42   ║    43   ║    44   ║\r\n╚═════════╩═════════╩═════════╩═════════╝\r\n\r\n┌───────────────────────────────────────┐\r\n│             SINGLE_BORDER             │\r\n├─────────┬─────────┬─────────┬─────────┤\r\n│ Field 1 │ Field 2 │ Field 3 │ Field 4 │\r\n├─────────┼─────────┼─────────┼─────────┤\r\n│    11   │    12   │    13   │    14   │\r\n│    21   │    22   │    23   │    24   │\r\n│    31   │    32   │    33   │    34   │\r\n└─────────┴─────────┴─────────┴─────────┘\r\n│    41   │    42   │    43   │    44   │\r\n└─────────┴─────────┴─────────┴─────────┘\r\n\r\n^;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;^\r\n)                 RANDOM            )\r\n)     11       12       13       14 )\r\n)     21       22       23       24 )\r\n)     31       32       33       34 )\r\n^;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;^\r\n)     41       42       43       44 )\r\n```\r\n\r\n# After\r\n\r\n```\r\n+---------------------------------------+\r\n|                DEFAULT                |\r\n+---------+---------+---------+---------+\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n+---------+---------+---------+---------+\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n+---------+---------+---------+---------+\r\n|    41   |    42   |    43   |    44   |\r\n+---------+---------+---------+---------+\r\n\r\n+---------------------------------------+\r\n|            MSWORD_FRIENDLY            |\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n+---------+---------+---------+---------+\r\n|    41   |    42   |    43   |    44   |\r\n\r\n                      PLAIN_COLUMNS                              \r\nField 1        Field 2        Field 3        Field 4        \r\n   11             12             13             14          \r\n   21             22             23             24          \r\n   31             32             33             34          \r\n\r\n   41             42             43             44          \r\n\r\n| :-----: - :-----: - :-----: - :-----: |\r\n|                MARKDOWN               |\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n| :-----: | :-----: | :-----: | :-----: |\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n| :-----: | :-----: | :-----: | :-----: |\r\n|    41   |    42   |    43   |    44   |\r\n\r\n|---------------------------------------|\r\n|                ORGMODE                |\r\n|---------+---------+---------+---------|\r\n| Field 1 | Field 2 | Field 3 | Field 4 |\r\n|---------+---------+---------+---------|\r\n|    11   |    12   |    13   |    14   |\r\n|    21   |    22   |    23   |    24   |\r\n|    31   |    32   |    33   |    34   |\r\n|---------+---------+---------+---------|\r\n|    41   |    42   |    43   |    44   |\r\n|---------+---------+---------+---------|\r\n\r\n╔═══════════════════════════════════════╗\r\n║             DOUBLE_BORDER             ║\r\n╠═════════╦═════════╦═════════╦═════════╣\r\n║ Field 1 ║ Field 2 ║ Field 3 ║ Field 4 ║\r\n╠═════════╬═════════╬═════════╬═════════╣\r\n║    11   ║    12   ║    13   ║    14   ║\r\n║    21   ║    22   ║    23   ║    24   ║\r\n║    31   ║    32   ║    33   ║    34   ║\r\n╠═════════╬═════════╬═════════╬═════════╣\r\n║    41   ║    42   ║    43   ║    44   ║\r\n╚═════════╩═════════╩═════════╩═════════╝\r\n\r\n┌───────────────────────────────────────┐\r\n│             SINGLE_BORDER             │\r\n├─────────┬─────────┬─────────┬─────────┤\r\n│ Field 1 │ Field 2 │ Field 3 │ Field 4 │\r\n├─────────┼─────────┼─────────┼─────────┤\r\n│    11   │    12   │    13   │    14   │\r\n│    21   │    22   │    23   │    24   │\r\n│    31   │    32   │    33   │    34   │\r\n├─────────┼─────────┼─────────┼─────────┤\r\n│    41   │    42   │    43   │    44   │\r\n└─────────┴─────────┴─────────┴─────────┘\r\n\r\n      RANDOM     \r\n!!!!!!!!!!!!!!!!!\r\n  11  12  13  14 \r\n  21  22  23  24 \r\n  31  32  33  34 \r\n!!!!!!!!!!!!!!!!!\r\n  41  42  43  44 \r\n!!!!!!!!!!!!!!!!!\r\n```"
+    },
+    {
+     "number": 355,
+     "title": "Fix `sortby` at class declaration",
+     "html_url": "https://github.com/prettytable/prettytable/pull/355",
+     "created_at": "2025-01-30T23:34:09Z",
+     "body": "closes #354 "
+    },
+    {
+     "number": 345,
+     "title": "Fix `add_autoindex` alignment for HTML",
+     "html_url": "https://github.com/prettytable/prettytable/pull/345",
+     "created_at": "2025-01-01T19:59:28Z",
+     "body": "Fixes #199 using changes from  #272 "
+    },
+    {
+     "number": 344,
+     "title": "Fix default styles not being reset between `set_style()` calls",
+     "html_url": "https://github.com/prettytable/prettytable/pull/344",
+     "created_at": "2024-12-09T18:06:21Z",
+     "body": "Looks to fix issue as outlined in [Issue 341](https://github.com/prettytable/prettytable/issues/341)\r\n\r\nAddition of pytest tests for testing if default has been reset after initially having another style. The case of random is tested, but frankly a redundant test as other cases cover every scenario of a reset.\r\n\r\nAdded resetting of styles in the set_style method along with removal of the default_reset in the orgmode setter."
+    },
+    {
+     "number": 332,
+     "title": "Fix drawing headerless colored tables with title",
+     "html_url": "https://github.com/prettytable/prettytable/pull/332",
+     "created_at": "2024-10-17T19:20:52Z",
+     "body": "The pull request #299 (issue #290) fixed drawing `ColorTable` with a title set. However, it didn't fix drawing such a table with `header` set to False.\r\n\r\nThis PR fixes that; there was some incorrect line slicing that led to ANSI codes being cut off partially.\r\n\r\nHere's how it looks without this PR:\r\n```\r\n+-----------------------+\r\n|        Efforts        |\r\n+[36m+---+---+---+---+---+---+ 1 | 2 | 3 | 4 | 5 | 6 |\r\n+---+---+---+---+---+---+\r\n```\r\nand with this PR - the correct result:\r\n```\r\n+-----------------------+\r\n|        Efforts        |\r\n+---+---+---+---+---+---+\r\n| 1 | 2 | 3 | 4 | 5 | 6 |\r\n+---+---+---+---+---+---+\r\n```\r\nProduced by this code:\r\n```python\r\nfrom prettytable import colortable\r\n\r\ntable = colortable.ColorTable(\r\n    (\"A\", \"B\", \"C\", \"D\", \"E\", \"f\"),\r\n    align=\"l\",\r\n    theme=colortable.Themes.OCEAN,\r\n)\r\ntable.title = \"Efforts\"\r\ntable.header = False\r\ntable.add_row([1, 2, 3, 4, 5, 6])\r\nprint(table)\r\n```\r\n\r\nI have also added parametrized tests to the `test_colortable.py`, so that it will test all possible cases of header/title combinations."
+    },
+    {
+     "number": 302,
+     "title": "Fix typo in `README.md`",
+     "html_url": "https://github.com/prettytable/prettytable/pull/302",
+     "created_at": "2024-05-26T01:19:22Z",
+     "body": null
+    }
+   ]
+  },
+  {
+   "repo": "more-itertools/more-itertools",
+   "url": "https://api.github.com/search/issues?q=repo%3Amore-itertools%2Fmore-itertools+is%3Apr+is%3Amerged+merged%3A2022-01-01..2025-12-31+fix+in%3Atitle&sort=created&order=desc&per_page=11",
+   "total": 41,
+   "records": [
+    {
+     "number": 1105,
+     "title": "Fix typos",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1105",
+     "created_at": "2025-11-18T20:02:41Z",
+     "body": "### Issue reference\r\n<!-- If you're adding a new feature, please make an issue first -->\r\n<!-- If you're fixing a trivial bug (e.g. a typo) you need not make an issue first -->\r\n<!-- If you're fixing a non-trivial bug, please go ahead and make an issue first -->\r\n<!-- Not all proposals for new functionality will be accepted, so please save yourself some work by checking first with an issue -->\r\nTypo fixes - no GitHub issue\r\n\r\n### Changes\r\n<!-- Describe what your PR adds, fixes, or changes here -->\r\nI detected two typos with the [codespell](https://github.com/codespell-project/codespell) tool. If you like, I can configure this tool for the repo in a separate PR.\r\n\r\n### Checks and tests\r\n<!-- Please create and activate a virtual environment and then run `make all-checks` to ensure sure your branch meets the standards enforced by GitHub Actions. -->\r\nI have run `make all-checks`."
+    },
+    {
+     "number": 1088,
+     "title": "Fix bug for negative inputs to exactly_n(). Optimize code a bit.",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1088",
+     "created_at": "2025-10-28T23:22:18Z",
+     "body": "Fixes three issues:\r\n\r\n* The call `exactly_n([], -10)` raises a `ValueError` unlike `exactly_n([], -1)` which returns `False`.\r\n* The existing code keeps two running counts, one in the `islice` and another ilen's  `sum/compress` logic.\r\n* The tests do not cover all cases.\r\n"
+    },
+    {
+     "number": 1082,
+     "title": "Fix product_index() with iterator input",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1082",
+     "created_at": "2025-10-10T13:15:16Z",
+     "body": "* Fix typo in previous edit that precluded use of iterator inputs.\r\n* Add test that would have caught the error."
+    },
+    {
+     "number": 1045,
+     "title": "docs: Fix invisible REPL output in HTML dark mode",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1045",
+     "created_at": "2025-08-06T13:34:05Z",
+     "body": "With the sphinx theme output was rendered in virtually the same colour as the background. The light theme should be unchanged.\r\n\r\nSee\r\n- https://pradyunsg.me/furo/customisation/colors/#code-block-styling\r\n\r\n### Issue reference\r\nNone\r\n\r\n### Changes\r\nChanges the Pygments theme for code blocks in HTML dark mode to \"monokai\"\r\n\r\n#### Before\r\n<img width=\"1472\" height=\"508\" alt=\"Screenshot 2025-08-06 at 14-22-01 API Reference - more-itertools 10 7 0 documentation\" src=\"https://github.com/user-attachments/assets/a707f074-a77b-43ef-8934-32b2deee102e\" />\r\n\r\n#### After\r\n<img width=\"1472\" height=\"508\" alt=\"Screenshot 2025-08-06 at 14-22-28 API Reference - more-itertools 10 7 0 documentation\" src=\"https://github.com/user-attachments/assets/0b33b6dc-f51f-4b74-8a46-8a75bc674852\" />\r\n\r\n### Checks and tests\r\n\r\n<details>\r\n\r\n```\r\n➜  more-itertools git:(pygments-dark) . .venv/bin/activate\r\n(more-itertools) ➜  more-itertools git:(pygments-dark) make all-checks     \r\npython3 -m pip install -r requirements/development.txt\r\nRequirement already satisfied: coverage in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 1)) (7.10.2)\r\nRequirement already satisfied: flit in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 2)) (3.12.0)\r\nRequirement already satisfied: mypy in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 3)) (1.17.1)\r\nRequirement already satisfied: ruff in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 4)) (0.12.7)\r\nRequirement already satisfied: setuptools in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 5)) (80.9.0)\r\nRequirement already satisfied: sphinx in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 6)) (8.2.3)\r\nRequirement already satisfied: furo>=2024.8 in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 7)) (2024.8.6)\r\nRequirement already satisfied: twine in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 8)) (6.1.0)\r\nRequirement already satisfied: wheel in ./.venv/lib/python3.13/site-packages (from -r requirements/development.txt (line 9)) (0.45.1)\r\nRequirement already satisfied: flit_core>=3.12.0 in ./.venv/lib/python3.13/site-packages (from flit->-r requirements/development.txt (line 2)) (3.12.0)\r\nRequirement already satisfied: requests in ./.venv/lib/python3.13/site-packages (from flit->-r requirements/development.txt (line 2)) (2.32.4)\r\nRequirement already satisfied: docutils in ./.venv/lib/python3.13/site-packages (from flit->-r requirements/development.txt (line 2)) (0.21.2)\r\nRequirement already satisfied: tomli-w in ./.venv/lib/python3.13/site-packages (from flit->-r requirements/development.txt (line 2)) (1.2.0)\r\nRequirement already satisfied: pip in ./.venv/lib/python3.13/site-packages (from flit->-r requirements/development.txt (line 2)) (25.2)\r\nRequirement already satisfied: typing_extensions>=4.6.0 in ./.venv/lib/python3.13/site-packages (from mypy->-r requirements/development.txt (line 3)) (4.14.1)\r\nRequirement already satisfied: mypy_extensions>=1.0.0 in ./.venv/lib/python3.13/site-packages (from mypy->-r requirements/development.txt (line 3)) (1.1.0)\r\nRequirement already satisfied: pathspec>=0.9.0 in ./.venv/lib/python3.13/site-packages (from mypy->-r requirements/development.txt (line 3)) (0.12.1)\r\nRequirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.0.0)\r\nRequirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.0.0)\r\nRequirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.1.0)\r\nRequirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (1.0.1)\r\nRequirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.0.0)\r\nRequirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.0.0)\r\nRequirement already satisfied: Jinja2>=3.1 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (3.1.6)\r\nRequirement already satisfied: Pygments>=2.17 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.19.2)\r\nRequirement already satisfied: snowballstemmer>=2.2 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (3.0.1)\r\nRequirement already satisfied: babel>=2.13 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (2.17.0)\r\nRequirement already satisfied: alabaster>=0.7.14 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (1.0.0)\r\nRequirement already satisfied: imagesize>=1.3 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (1.4.1)\r\nRequirement already satisfied: roman-numerals-py>=1.0.0 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (3.1.0)\r\nRequirement already satisfied: packaging>=23.0 in ./.venv/lib/python3.13/site-packages (from sphinx->-r requirements/development.txt (line 6)) (25.0)\r\nRequirement already satisfied: beautifulsoup4 in ./.venv/lib/python3.13/site-packages (from furo>=2024.8->-r requirements/development.txt (line 7)) (4.13.4)\r\nRequirement already satisfied: sphinx-basic-ng>=1.0.0.beta2 in ./.venv/lib/python3.13/site-packages (from furo>=2024.8->-r requirements/development.txt (line 7)) (1.0.0b2)\r\nRequirement already satisfied: readme-renderer>=35.0 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (44.0)\r\nRequirement already satisfied: requests-toolbelt!=0.9.0,>=0.8.0 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (1.0.0)\r\nRequirement already satisfied: urllib3>=1.26.0 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (2.5.0)\r\nRequirement already satisfied: keyring>=15.1 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (25.6.0)\r\nRequirement already satisfied: rfc3986>=1.4.0 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (2.0.0)\r\nRequirement already satisfied: rich>=12.0.0 in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (14.1.0)\r\nRequirement already satisfied: id in ./.venv/lib/python3.13/site-packages (from twine->-r requirements/development.txt (line 8)) (1.5.0)\r\nRequirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.13/site-packages (from Jinja2>=3.1->sphinx->-r requirements/development.txt (line 6)) (3.0.2)\r\nRequirement already satisfied: jaraco.classes in ./.venv/lib/python3.13/site-packages (from keyring>=15.1->twine->-r requirements/development.txt (line 8)) (3.4.0)\r\nRequirement already satisfied: jaraco.functools in ./.venv/lib/python3.13/site-packages (from keyring>=15.1->twine->-r requirements/development.txt (line 8)) (4.2.1)\r\nRequirement already satisfied: jaraco.context in ./.venv/lib/python3.13/site-packages (from keyring>=15.1->twine->-r requirements/development.txt (line 8)) (6.0.1)\r\nRequirement already satisfied: nh3>=0.2.14 in ./.venv/lib/python3.13/site-packages (from readme-renderer>=35.0->twine->-r requirements/development.txt (line 8)) (0.3.0)\r\nRequirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.13/site-packages (from requests->flit->-r requirements/development.txt (line 2)) (3.4.2)\r\nRequirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.13/site-packages (from requests->flit->-r requirements/development.txt (line 2)) (3.10)\r\nRequirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.13/site-packages (from requests->flit->-r requirements/development.txt (line 2)) (2025.8.3)\r\nRequirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.13/site-packages (from rich>=12.0.0->twine->-r requirements/development.txt (line 8)) (3.0.0)\r\nRequirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.13/site-packages (from markdown-it-py>=2.2.0->rich>=12.0.0->twine->-r requirements/development.txt (line 8)) (0.1.2)\r\nRequirement already satisfied: soupsieve>1.2 in ./.venv/lib/python3.13/site-packages (from beautifulsoup4->furo>=2024.8->-r requirements/development.txt (line 7)) (2.7)\r\nRequirement already satisfied: more-itertools in ./.venv/lib/python3.13/site-packages (from jaraco.classes->keyring>=15.1->twine->-r requirements/development.txt (line 8)) (10.7.0)\r\npython3 -m pip install --editable .\r\nObtaining file:///Users/alex/src/more-itertools\r\n  Installing build dependencies ... done\r\n  Checking if build backend supports build_editable ... done\r\n  Getting requirements to build editable ... done\r\n  Preparing editable metadata (pyproject.toml) ... done\r\nBuilding wheels for collected packages: more-itertools\r\n  Building editable for more-itertools (pyproject.toml) ... done\r\n  Created wheel for more-itertools: filename=more_itertools-10.7.0-py3-none-any.whl size=5440 sha256=976c2367d03e6800516f82f4fe976975f06375109bb54befaa1d456aaca5f243\r\n  Stored in directory: /private/var/folders/hw/y1c1nkcs3ls5j9kv5rr_tn040000gn/T/pip-ephem-wheel-cache-pqwavohw/wheels/cf/a9/4f/54f725f20acaa5aa578fb2ded31bdb5ee7ad675a21d5bab703\r\nSuccessfully built more-itertools\r\nInstalling collected packages: more-itertools\r\n  Attempting uninstall: more-itertools\r\n    Found existing installation: more-itertools 10.7.0\r\n    Uninstalling more-itertools-10.7.0:\r\n      Successfully uninstalled more-itertools-10.7.0\r\nSuccessfully installed more-itertools-10.7.0\r\ncoverage run --include=\"more_itertools/*.py\" -m unittest\r\n....................................................................................................................................................................................................................................................................................................................................................................................................................................../Users/alex/src/more-itertools/more_itertools/more.py:1838: DeprecationWarning: zip_equal will be removed in a future version of more-itertools. Use the builtin zip function with strict=True instead.\r\n  warnings.warn(\r\n...................................................................................................................../Users/alex/src/more-itertools/more_itertools/more.py:1838: DeprecationWarning: zip_equal will be removed in a future version of more-itertools. Use the builtin zip function with strict=True instead.\r\n  warnings.warn(\r\n................................................................................s..................................................................................................................................................................s.........................................ssss.................\r\n----------------------------------------------------------------------\r\nRan 845 tests in 30.286s\r\n\r\nOK (skipped=6)\r\ncoverage report --show-missing --fail-under=99\r\nName                         Stmts   Miss  Cover   Missing\r\n----------------------------------------------------------\r\nmore_itertools/__init__.py       3      0   100%\r\nmore_itertools/more.py        1629      1    99%   3438\r\nmore_itertools/recipes.py      366      9    98%   99-100, 108-109, 116, 357-358, 1012, 1421\r\n----------------------------------------------------------\r\nTOTAL                         1998     10    99%\r\nruff format --check .\r\n10 files already formatted\r\nruff check more_itertools tests\r\nAll checks passed!\r\nstubtest more_itertools.more more_itertools.recipes\r\nSuccess: no issues found in 2 modules\r\nsphinx-build -W -b html docs docs/_build/html\r\nRunning Sphinx v8.2.3\r\nloading translations [en]... done\r\nConverting `source_suffix = '.rst'` to `source_suffix = {'.rst': 'restructuredtext'}`.\r\nloading pickled environment... The configuration has changed (2 options: 'html_css_files', 'pygments_dark_style')\r\ndone\r\nbuilding [mo]: targets for 0 po files that are out of date\r\nwriting output... \r\nbuilding [html]: targets for 4 source files that are out of date\r\nupdating environment: 0 added, 1 changed, 0 removed\r\nreading sources... [100%] index\r\nlooking for now-outdated files... none found\r\npickling environment... done\r\nchecking consistency... done\r\npreparing documents... done\r\ncopying assets... \r\ncopying static files... \r\nWriting evaluated template result to /Users/alex/src/more-itertools/docs/_build/html/_static/basic.css\r\nWriting evaluated template result to /Users/alex/src/more-itertools/docs/_build/html/_static/language_data.js\r\nWriting evaluated template result to /Users/alex/src/more-itertools/docs/_build/html/_static/documentation_options.js\r\ncopying static files: done\r\ncopying extra files... \r\ncopying extra files: done\r\ncopying assets: done\r\nwriting output... [100%] versions\r\ngenerating indices... genindex py-modindex done\r\nhighlighting module code... [100%] more_itertools.recipes\r\nwriting additional pages... search done\r\ndumping search index in English (code: en)... done\r\ndumping object inventory... done\r\nbuild succeeded.\r\n\r\nThe HTML pages are in docs/_build/html.\r\nflit build --setup-py\r\nFetching list of valid trove classifiers                                                               I-flit.validate\r\nFound 36 files tracked in git                                                                             I-flit.sdist\r\nWriting generated setup.py                                                                                I-flit.sdist\r\nBuilt sdist: dist/more_itertools-10.7.0.tar.gz                                                       I-flit_core.sdist\r\nCopying package file(s) from /var/folders/hw/y1c1nkcs3ls5j9kv5rr_tn040000gn/T/tmpbhynrov_/more_itertools-10.7.0/more_itertools  I-flit_core.wheel\r\nWriting metadata files                                                                               I-flit_core.wheel\r\nWriting the record of files                                                                          I-flit_core.wheel\r\nBuilt wheel: dist/more_itertools-10.7.0-py3-none-any.whl                                             I-flit_core.wheel\r\ntwine check dist/*\r\nChecking dist/more_itertools-10.7.0-py3-none-any.whl: PASSED\r\nChecking dist/more_itertools-10.7.0.tar.gz: PASSED\r\n```\r\n\r\n</details>\r\n"
+    },
+    {
+     "number": 1038,
+     "title": "Fix linespacing",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1038",
+     "created_at": "2025-07-28T21:10:21Z",
+     "body": null
+    },
+    {
+     "number": 1036,
+     "title": "Fix docstring and comment in private _nth_prime_bounds function",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1036",
+     "created_at": "2025-07-26T17:42:19Z",
+     "body": "* The sieve call in `nth_prime` relies on the upper bound being exclusive.  Adjust the comment in `_nth_prime_bounds function` to match.  Demonstration:\r\n\r\n```python\r\nfor n, p in enumerate(sieve(10**8), start=1):\r\n    l, u = _nth_prime_bounds(n)\r\n    assert l < p < u\r\n```\r\n\r\n* The spread ratio noted in the comment should be relative to the nth prime rather than *n*.\r\n\r\n```python\r\n>>> l, u = _nth_prime_bounds(688_383)\r\n>>> (u - l) / l\r\n0.0029597587292980792\r\n```\r\n\r\n* Note that tighter estimates may be added in the future. See https://cs.uwaterloo.ca/journals/JIS/VOL22/Axler/axler17.pdf for some of the possiblities."
+    },
+    {
+     "number": 1031,
+     "title": "Issue 1029: fix batched IDE/help() docs",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1031",
+     "created_at": "2025-07-15T19:02:28Z",
+     "body": "Fixes #1029\r\n\r\n1. `help(batched)` in 3.13+ is useful\r\n```py\r\nHelp on function batched in module more_itertools.recipes:\r\n\r\nbatched(iterable, n, *, strict=False)\r\n    Batch data into tuples of length *n*. If the number of items in\r\n    *iterable* is not divisible by *n*:\r\n    * The last batch will be shorter if *strict* is ``False``.\r\n    * :exc:`ValueError` will be raised if *strict* is ``True``.\r\n\r\n    >>> list(batched('ABCDEFG', 3))\r\n    [('A', 'B', 'C'), ('D', 'E', 'F'), ('G',)]\r\n\r\n    On Python 3.13 and above, this is an alias for :func:`itertools.batched`.\r\n```\r\n2. IDE doc string is useful\r\n<img width=\"632\" height=\"280\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fc9f7e86-3206-4d46-93d9-29cf588df45b\" />\r\n"
+    },
+    {
+     "number": 1028,
+     "title": "Issue 1001: fix last() when __reversed__ is None",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1028",
+     "created_at": "2025-07-14T00:35:41Z",
+     "body": "Fixes #1001 by swapping `hasattr` with `getattr`.\r\n\r\nWe might consider a stronger check that `iterable.__reversed__` is callable, but that seems unnecessary given expected usage."
+    },
+    {
+     "number": 1021,
+     "title": "Fix 1009: Confused docstring for minmax()",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1021",
+     "created_at": "2025-06-27T19:13:11Z",
+     "body": null
+    },
+    {
+     "number": 1004,
+     "title": "Fix broken link",
+     "html_url": "https://github.com/more-itertools/more-itertools/pull/1004",
+     "created_at": "2025-06-18T14:56:21Z",
+     "body": null
+    }
+   ]
+  },
+  {
+   "repo": "Textualize/rich",
+   "url": "https://api.github.com/search/issues?q=repo%3ATextualize%2Frich+is%3Apr+is%3Amerged+merged%3A2022-01-01..2025-12-31+fix+in%3Atitle&sort=created&order=desc&per_page=11",
+   "total": 134,
+   "records": [
+    {
+     "number": 3776,
+     "title": "Fix small typo in comments",
+     "html_url": "https://github.com/Textualize/rich/pull/3776",
+     "created_at": "2025-06-20T14:37:23Z",
+     "body": "## Type of changes\r\n\r\n- [ ] Bug fix\r\n- [ ] New feature\r\n- [X] Documentation / docstrings\r\n- [ ] Tests\r\n- [ ] Other\r\n\r\n## Checklist\r\n\r\n- [ ] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [ ] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [ ] I've added tests for new code.\r\n- [X] I accept that @willmcgugan may be pedantic in the code review.\r\n\r\n## Description\r\n\r\nFound and fixed typo in comments"
+    },
+    {
+     "number": 3772,
+     "title": "Fix traceback recursion",
+     "html_url": "https://github.com/Textualize/rich/pull/3772",
+     "created_at": "2025-06-19T08:24:44Z",
+     "body": "Fixes https://github.com/Textualize/rich/issues/3708\r\nFixes https://github.com/Textualize/rich/issues/3682"
+    },
+    {
+     "number": 3731,
+     "title": "fix(logging): fix tracebacks_code_width type hint",
+     "html_url": "https://github.com/Textualize/rich/pull/3731",
+     "created_at": "2025-05-10T16:02:04Z",
+     "body": "Closes #3729\r\n\r\n## Type of changes\r\n\r\n- [ ] Bug fix\r\n- [ ] New feature\r\n- [ ] Documentation / docstrings\r\n- [ ] Tests\r\n- [x] Other\r\n\r\n## Checklist\r\n\r\n- [x] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [ ] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [ ] I've added tests for new code.\r\n- [x] I accept that @willmcgugan may be pedantic in the code review.\r\n"
+    },
+    {
+     "number": 3720,
+     "title": "Fix typos in Polish README",
+     "html_url": "https://github.com/Textualize/rich/pull/3720",
+     "created_at": "2025-05-05T05:25:13Z",
+     "body": "CC: @pufereq"
+    },
+    {
+     "number": 3718,
+     "title": "fix(panel): fix title missing panel background",
+     "html_url": "https://github.com/Textualize/rich/pull/3718",
+     "created_at": "2025-05-01T21:13:15Z",
+     "body": " Fix `Panel` title missing the panel background style.\r\n    \r\nThis really just reverts the change in 7a38204. There's a history of issues related to the panel title styles, so I was careful to run all the examples in those issues to ensure there wasn't any regression.\r\n    \r\nFixes #3569\r\n\r\n## Type of changes\r\n\r\n- [x] Bug fix\r\n- [ ] New feature\r\n- [ ] Documentation / docstrings\r\n- [ ] Tests\r\n- [ ] Other\r\n\r\n## Checklist\r\n\r\n- [x] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [x] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [x] I've added tests for new code.\r\n- [x] I accept that @willmcgugan may be pedantic in the code review.\r\n"
+    },
+    {
+     "number": 3698,
+     "title": "docs: fix search not working",
+     "html_url": "https://github.com/Textualize/rich/pull/3698",
+     "created_at": "2025-04-15T11:33:05Z",
+     "body": "Fix the documentation search not working after a recent Read the Docs upgrade.\r\n\r\nThis adds `sphinx_rtd_theme` to the extensions as recommended in the install guide: https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html\r\n\r\nFixes: #3697\r\n\r\n## Type of changes\r\n\r\n- [ ] Bug fix\r\n- [ ] New feature\r\n- [x] Documentation / docstrings\r\n- [ ] Tests\r\n- [ ] Other\r\n\r\n## Checklist\r\n\r\n- [ ] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [ ] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [ ] I've added tests for new code.\r\n- [x] I accept that @willmcgugan may be pedantic in the code review.\r\n"
+    },
+    {
+     "number": 3692,
+     "title": "fix for null tb_offset",
+     "html_url": "https://github.com/Textualize/rich/pull/3692",
+     "created_at": "2025-04-04T18:36:42Z",
+     "body": "## Type of changes\r\n\r\n- [x] Bug fix\r\n- [ ] New feature\r\n- [ ] Documentation / docstrings\r\n- [ ] Tests\r\n- [ ] Other\r\n\r\n## Checklist\r\n\r\n- [x] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [ ] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [ ] I've added tests for new code.\r\n- [x] I accept that @willmcgugan may be pedantic in the code review.\r\n\r\n## Description\r\n\r\ntb_offset can be passed explicitly as `None` in ipython when calling `shell.showtraceback(...)`. this can happen for example in the case of shell subclasses that override showtraceback and then just propagate the kwarg default. this then causes issues if we then try to iterate over this null value. to fix, add an explicit null check, and make sure we set rich's defaults if it's null.\r\n"
+    },
+    {
+     "number": 3653,
+     "title": "fix typo in `docs/source/style.rst`",
+     "html_url": "https://github.com/Textualize/rich/pull/3653",
+     "created_at": "2025-03-07T05:50:00Z",
+     "body": null
+    },
+    {
+     "number": 3521,
+     "title": "Segment.split_cells fix",
+     "html_url": "https://github.com/Textualize/rich/pull/3521",
+     "created_at": "2024-10-04T11:45:26Z",
+     "body": "Fixes https://github.com/Textualize/textual/issues/5090"
+    },
+    {
+     "number": 3518,
+     "title": "fix(table): highlight columns added by add_row",
+     "html_url": "https://github.com/Textualize/rich/pull/3518",
+     "created_at": "2024-10-03T15:10:54Z",
+     "body": "## Type of changes\r\n\r\n- [x] Bug fix\r\n- [ ] New feature\r\n- [ ] Documentation / docstrings\r\n- [ ] Tests\r\n- [ ] Other\r\n\r\n## Checklist\r\n\r\n- [x] I've run the latest [black](https://github.com/psf/black) with default args on new code.\r\n- [x] I've updated CHANGELOG.md and CONTRIBUTORS.md where appropriate.\r\n- [x] I've added tests for new code.\r\n- [x] I accept that @willmcgugan may be pedantic in the code review.\r\n\r\n## Description\r\n\r\nFixes #3517. The default value for the `Column.highlight` is False, so where necessary columns are added by the `add_row` method this should default to the `Table.highlight` value."
+    }
+   ]
+  }
+ ]
+}

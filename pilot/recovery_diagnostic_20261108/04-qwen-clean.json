@@ -1,0 +1,56 @@
+{
+  "id": 4,
+  "actor": "qwen",
+  "condition": "clean",
+  "calls": [
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#...G.#\n#.....#\n#..B..#\n#...#.#\n##P.#.#\n#######\nActions since this trial started: \nAvailable actions: U D L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "R",
+      "input_tokens": 132,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 134
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#...G.#\n#.....#\n#..PB.#\n#...#.#\n##..#.#\n#######\nActions since this trial started: R\nAvailable actions: L R\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "R",
+      "input_tokens": 130,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 132
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#...G.#\n#.....#\n#...PB#\n#...#.#\n##..#.#\n#######\nActions since this trial started: R R\nAvailable actions: D\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "D",
+      "input_tokens": 129,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 131
+    },
+    {
+      "model": "qwen3-4b-instruct-2507-q4_k_m",
+      "kind": "action",
+      "prompt": "Push the box B onto G. # wall, . floor, P player, + player on goal. U/D/L/R specify the direction the BOX moves, not where the player walks. The environment automatically walks the player behind the box when possible. Each action pushes once. No pulling or reset. Only listed actions are legal.\nCurrent board:\n#######\n#...G.#\n#.....#\n#....P#\n#...#B#\n##..#.#\n#######\nActions since this trial started: R R D\nAvailable actions: D\nChoose the next box push to reach G. Reply with exactly one action label.",
+      "output": "D",
+      "input_tokens": 131,
+      "output_tokens": 2,
+      "reasoning_tokens": 0,
+      "total_tokens": 133
+    }
+  ],
+  "actions": [
+    "R",
+    "R",
+    "D",
+    "D"
+  ],
+  "done": true,
+  "solved": false,
+  "tokens": 530
+}

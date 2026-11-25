@@ -1,0 +1,105 @@
+{
+ "time": "2026-11-24T13:07:12.162413+00:00",
+ "runner": "c65e3327fbcadcb0aa57e9db9c2423dc7367cfb534dd393ae84c0d9783e8b0c8",
+ "audit": "c29631b9382d0ba3c6c68996fcf23f33e40fcffaac22180e7c3812be5fb7543e",
+ "fixtures": "ac7385175183c5b40683e0513f41394592da554ba3b8bd23b77156aaa85c4269",
+ "design": {
+  "success": [
+   true,
+   null,
+   "b"
+  ],
+  "guard_declines": [
+   false,
+   null,
+   "a"
+  ],
+  "early_raise": [
+   true,
+   "transition.before",
+   "a"
+  ],
+  "transition_after_raise": [
+   true,
+   "transition.after",
+   "b"
+  ],
+  "machine_after_raise": [
+   true,
+   "machine.after_state_change",
+   "b"
+  ]
+ },
+ "revisions": {
+  "0.9.0": "56949457a4b2e6e2e932a939ec1dddb29ba0f302",
+  "0.9.2": "a8773cab2c22b0189528fad9dd2876af8546c1bf"
+ },
+ "chains": [
+  {
+   "nodes": [
+    "machine.after_state_change",
+    "machine.on_exception",
+    "machine.finalize_event"
+   ],
+   "source_lines": [
+    [
+     911,
+     912
+    ],
+    [
+     912,
+     913
+    ]
+   ]
+  },
+  {
+   "nodes": [
+    "state.on_enter",
+    "transition.after",
+    "machine.after_state_change",
+    "machine.on_exception",
+    "machine.finalize_event"
+   ],
+   "source_lines": [
+    [
+     909,
+     910
+    ],
+    [
+     910,
+     911
+    ],
+    [
+     911,
+     912
+    ],
+    [
+     912,
+     913
+    ]
+   ]
+  },
+  {
+   "nodes": [
+    "transition.after",
+    "machine.after_state_change",
+    "machine.on_exception",
+    "machine.finalize_event"
+   ],
+   "source_lines": [
+    [
+     910,
+     911
+    ],
+    [
+     911,
+     912
+    ],
+    [
+     912,
+     913
+    ]
+   ]
+  }
+ ]
+}

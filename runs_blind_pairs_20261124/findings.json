@@ -1,0 +1,464 @@
+{
+ "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+ "pairs": [
+  {
+   "project": "click",
+   "commit": "1787497713fa389435ed732c9b26274c3cdc458d",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "click",
+   "commit": "c326df95e9e3da0425360e030413f6a3ee25fdee",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "click",
+   "commit": "1a4d8c1bb1e8f8e214ede7223bd2c05dc2ce006a",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "click",
+   "commit": "d251cb0abc9b0dbda2402d4d831c18718cfb51bf",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "click",
+   "commit": "166b31261f55ba3126456bbc2ff9e16142115e56",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "markdown",
+   "commit": "8e517de89015e6469e6829d98b6d7c55bd9fedf8",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "markdown",
+   "commit": "99425b47bc5b5cf5cda570c1ae5f739082370d8d",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  },
+  {
+   "project": "tqdm",
+   "commit": "165a23a31c746447707bb1ec6417776e9fd06140",
+   "raw_diff": [],
+   "semantic_diff": [],
+   "before_failed": [],
+   "after_failed": []
+  }
+ ],
+ "projects": {
+  "click": {
+   "pairs": 5,
+   "task_run_us": 445.15,
+   "full_observe_us": 2.2,
+   "regimes": {
+    "calls": {
+     "Input-only": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 4.25245,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     },
+     "Oracle-only": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 15,
+      "candidate_hits": [],
+      "median_ms": 2.9544,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     },
+     "Sequential": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 19,
+      "candidate_hits": [],
+      "median_ms": 4.27935,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     },
+     "Joint": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 19,
+      "candidate_hits": [],
+      "median_ms": 4.16705,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     },
+     "Full-Oracle": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 24,
+      "candidate_hits": [],
+      "median_ms": 4.33035,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     },
+     "Joint inputs, full fields": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 24,
+      "candidate_hits": [],
+      "median_ms": 4.24935,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 10
+     }
+    },
+    "time_and_calls": {
+     "Input-only": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 6,
+      "candidate_hits": [],
+      "median_ms": 1.27035,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     },
+     "Oracle-only": {
+      "steps": 4,
+      "tasks": 2,
+      "assertions": 7,
+      "candidate_hits": [],
+      "median_ms": 0.8256,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     },
+     "Sequential": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 10,
+      "candidate_hits": [],
+      "median_ms": 1.25935,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     },
+     "Joint": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 10,
+      "candidate_hits": [],
+      "median_ms": 1.2495,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     },
+     "Full-Oracle": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 1.2359,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     },
+     "Joint inputs, full fields": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 1.28315,
+      "cap_ms": 1.6245,
+      "versions_over_cap": 0,
+      "versions": 10
+     }
+    }
+   }
+  },
+  "markdown": {
+   "pairs": 2,
+   "task_run_us": 206.45,
+   "full_observe_us": 14.8,
+   "regimes": {
+    "calls": {
+     "Input-only": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 1.39745,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     },
+     "Oracle-only": {
+      "steps": 12,
+      "tasks": 5,
+      "assertions": 19,
+      "candidate_hits": [],
+      "median_ms": 1.16315,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     },
+     "Sequential": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 22,
+      "candidate_hits": [],
+      "median_ms": 1.43315,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     },
+     "Joint": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 23,
+      "candidate_hits": [],
+      "median_ms": 1.4679,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     },
+     "Full-Oracle": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 24,
+      "candidate_hits": [],
+      "median_ms": 1.3096,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     },
+     "Joint inputs, full fields": {
+      "steps": 12,
+      "tasks": 6,
+      "assertions": 24,
+      "candidate_hits": [],
+      "median_ms": 1.34805,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 4
+     }
+    },
+    "time_and_calls": {
+     "Input-only": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 6,
+      "candidate_hits": [],
+      "median_ms": 0.7019,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 4,
+      "versions": 4
+     },
+     "Oracle-only": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 11,
+      "candidate_hits": [],
+      "median_ms": 0.60975,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 1,
+      "versions": 4
+     },
+     "Sequential": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 6,
+      "candidate_hits": [],
+      "median_ms": 0.7237,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 3,
+      "versions": 4
+     },
+     "Joint": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 0.6446,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 3,
+      "versions": 4
+     },
+     "Full-Oracle": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 0.68745,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 4,
+      "versions": 4
+     },
+     "Joint inputs, full fields": {
+      "steps": 6,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 0.69715,
+      "cap_ms": 0.62355,
+      "versions_over_cap": 3,
+      "versions": 4
+     }
+    }
+   }
+  },
+  "tqdm": {
+   "pairs": 1,
+   "task_run_us": 56.85,
+   "full_observe_us": 1.6,
+   "regimes": {
+    "calls": {
+     "Input-only": {
+      "steps": 12,
+      "tasks": 3,
+      "assertions": 6,
+      "candidate_hits": [],
+      "median_ms": 0.16015,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     },
+     "Oracle-only": {
+      "steps": 11,
+      "tasks": 3,
+      "assertions": 8,
+      "candidate_hits": [],
+      "median_ms": 0.15065,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     },
+     "Sequential": {
+      "steps": 12,
+      "tasks": 3,
+      "assertions": 11,
+      "candidate_hits": [],
+      "median_ms": 0.16205,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     },
+     "Joint": {
+      "steps": 12,
+      "tasks": 3,
+      "assertions": 11,
+      "candidate_hits": [],
+      "median_ms": 0.16175,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     },
+     "Full-Oracle": {
+      "steps": 12,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 0.163,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     },
+     "Joint inputs, full fields": {
+      "steps": 12,
+      "tasks": 3,
+      "assertions": 12,
+      "candidate_hits": [],
+      "median_ms": 0.1618,
+      "cap_ms": null,
+      "versions_over_cap": null,
+      "versions": 2
+     }
+    },
+    "time_and_calls": {
+     "Input-only": {
+      "steps": 10,
+      "tasks": 2,
+      "assertions": 4,
+      "candidate_hits": [],
+      "median_ms": 0.1104,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     },
+     "Oracle-only": {
+      "steps": 7,
+      "tasks": 2,
+      "assertions": 7,
+      "candidate_hits": [],
+      "median_ms": 0.10145,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     },
+     "Sequential": {
+      "steps": 10,
+      "tasks": 2,
+      "assertions": 8,
+      "candidate_hits": [],
+      "median_ms": 0.11295,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     },
+     "Joint": {
+      "steps": 9,
+      "tasks": 2,
+      "assertions": 8,
+      "candidate_hits": [],
+      "median_ms": 0.11085,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     },
+     "Full-Oracle": {
+      "steps": 9,
+      "tasks": 2,
+      "assertions": 8,
+      "candidate_hits": [],
+      "median_ms": 0.1141,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     },
+     "Joint inputs, full fields": {
+      "steps": 9,
+      "tasks": 2,
+      "assertions": 8,
+      "candidate_hits": [],
+      "median_ms": 0.1139,
+      "cap_ms": 0.17265,
+      "versions_over_cap": 0,
+      "versions": 2
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 4,
+  "group": "teacher_solo",
+  "calls": [
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: \nCurrent board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "input_tokens": 153,
+      "output_tokens": 93,
+      "reasoning_tokens": 86,
+      "total_tokens": 246
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: L\nCurrent board:\n#######\n#.....#\n#.BP..#\n#G...##\n##....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "D",
+      "input_tokens": 152,
+      "output_tokens": 66,
+      "reasoning_tokens": 59,
+      "total_tokens": 218
+    },
+    {
+      "model": "gpt-6-astra",
+      "kind": "action",
+      "prompt": "Push B onto G. # wall, . floor, P player, + player on goal. U/D/L/R push the box one square up/down/left/right; the player walks behind it automatically if reachable. You cannot pull. RESET restores the initial board. Rows run top to bottom.\nInitial board:\n#######\n#.....#\n#..B..#\n#G..P##\n##....#\n#.....#\n#######\nInitial history: attempted to walk R twice, both blocked.\nActions taken: L D\nCurrent board:\n#######\n#.....#\n#.P...#\n#GB..##\n##....#\n#.....#\n#######\nAvailable actions: U D L R RESET\nChoose one available action. Reply with just its label.",
+      "output": "L",
+      "input_tokens": 153,
+      "output_tokens": 51,
+      "reasoning_tokens": 44,
+      "total_tokens": 204
+    }
+  ],
+  "actions": [
+    "L",
+    "D",
+    "L"
+  ],
+  "done": true,
+  "solved": true,
+  "tokens": 668
+}
