@@ -1,0 +1,1 @@
+Run the reproduction commands in README_ZH.md from the parent directory of rsi_transfer. Per-scenario traces, witness data and answer materials are not included in the public archive. The software and aggregate tables in the report are sufficient to reproduce the controlled results.
