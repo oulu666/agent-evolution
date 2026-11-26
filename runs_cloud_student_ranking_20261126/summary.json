@@ -1,0 +1,122 @@
+{
+ "winner": "tree_rank",
+ "strongest": "expert_rank",
+ "passed": false,
+ "test_offset": 768,
+ "development": {
+  "feedback_linear": {
+   "original": 109,
+   "both": 105,
+   "exact": 91,
+   "reachable": 179
+  },
+  "expert_linear": {
+   "original": 121,
+   "both": 112,
+   "exact": 102,
+   "reachable": 179
+  },
+  "expert_rank": {
+   "original": 119,
+   "both": 109,
+   "exact": 96,
+   "reachable": 179
+  },
+  "pair_linear": {
+   "original": 110,
+   "both": 105,
+   "exact": 90,
+   "reachable": 179
+  },
+  "tree_class": {
+   "original": 119,
+   "both": 108,
+   "exact": 95,
+   "reachable": 179
+  },
+  "tree_rank": {
+   "original": 119,
+   "both": 110,
+   "exact": 96,
+   "reachable": 179
+  }
+ },
+ "test": {
+  "feedback_linear": {
+   "original": 277,
+   "both": 265,
+   "exact": 228,
+   "reachable": 483
+  },
+  "expert_linear": {
+   "original": 281,
+   "both": 265,
+   "exact": 234,
+   "reachable": 483
+  },
+  "expert_rank": {
+   "original": 284,
+   "both": 267,
+   "exact": 239,
+   "reachable": 483
+  },
+  "pair_linear": {
+   "original": 283,
+   "both": 271,
+   "exact": 230,
+   "reachable": 483
+  },
+  "tree_class": {
+   "original": 282,
+   "both": 265,
+   "exact": 235,
+   "reachable": 483
+  },
+  "tree_rank": {
+   "original": 285,
+   "both": 270,
+   "exact": 239,
+   "reachable": 483
+  }
+ },
+ "costs": {
+  "feedback_linear": {
+   "informative_training_tasks": 702,
+   "positive_programs": 2080,
+   "candidate_programs": 36864,
+   "coefficients": 14329,
+   "cpu_seconds": 1.199
+  },
+  "expert_linear": {
+   "informative_training_tasks": 611,
+   "positive_programs": 611,
+   "candidate_programs": 36864,
+   "coefficients": 12699,
+   "cpu_seconds": 1.108
+  },
+  "expert_rank": {
+   "informative_training_tasks": 611,
+   "features": 12699,
+   "cpu_seconds": 2.216
+  },
+  "pair_linear": {
+   "informative_training_tasks": 702,
+   "features": 14329,
+   "training_pairs": 84318,
+   "cpu_seconds": 1.538
+  },
+  "tree_class": {
+   "informative_training_tasks": 702,
+   "features": 14329,
+   "cpu_seconds": 2.38
+  },
+  "tree_rank": {
+   "informative_training_tasks": 702,
+   "features": 14329,
+   "cpu_seconds": 2.493
+  }
+ },
+ "teacher_queries": 2304,
+ "feedback_candidate_queries": 110592,
+ "archive_sha256": "755c728ab188e364575705c8641f3fafd86fb089cb8b08e8c03f01832aae0881"
+}
