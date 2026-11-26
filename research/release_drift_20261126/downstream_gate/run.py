@@ -15,7 +15,7 @@ from tempfile import TemporaryDirectory
 from threading import Thread
 from time import perf_counter
 import tomllib
-from urllib.parse import unquote, urljoin, urlsplit
+from urllib.parse import quote, unquote, urljoin, urlsplit
 
 from bs4 import BeautifulSoup, Tag
 from playwright.sync_api import sync_playwright
@@ -159,20 +159,19 @@ def serve(site):
         thread.join()
 
 
-BROWSER_JS = """frags => {
+BROWSER_JS = """() => {
+    const target=document.querySelector(':target');
+    if (!target) return null;
+    if (!/^H[1-6]$/.test(target.tagName)) return 'nonheading';
     const map = new Map(), stack = [];
     for (const h of document.querySelectorAll('h1,h2,h3,h4,h5,h6')) {
         const level = Number(h.tagName.slice(1)), c=h.cloneNode(true);
         c.querySelectorAll('.headerlink').forEach(n=>n.remove());
         while(stack.length && stack.at(-1)[0]>=level) stack.pop();
         stack.push([level,c.textContent.trim().replace(/\\s+/g,' ')]);
-        map.set(h,stack.map(s=>s[1]));
+        if (h===target) return stack.map(s=>s[1]);
     }
-    return frags.map(f=>{
-        location.hash=encodeURIComponent(f);
-        const target=document.querySelector(':target');
-        return [f, target ? (map.get(target) || 'nonheading') : null];
-    });
+    return null;
 }"""
 
 
@@ -186,8 +185,10 @@ def browser_read(browser, site, destinations):
             if response.status != 200:
                 results[path] = {}
                 continue
-            # Real fragment navigation establishes :target; skip same-document network requests.
-            results[path] = dict(page.evaluate(BROWSER_JS, sorted(frags)))
+            results[path] = {}
+            for f in sorted(frags):
+                page.goto(origin+path+"#"+quote(f,safe=""), wait_until="domcontentloaded")
+                results[path][f] = page.evaluate(BROWSER_JS)
         page.close()
     return results
 
@@ -209,8 +210,14 @@ def compare(sites, statuses):
         browser = pw.chromium.launch(channel="chrome", args=["--disable-ipc-flooding-protection"])
         # Positive and negative controls for native fragment selection.
         page = browser.new_page()
-        page.goto("data:text/html,<h1 id='known'>First</h1>")
-        assert page.evaluate(BROWSER_JS, ["known","missing"]) == [["known",["First"]],["missing",None]]
+        with TemporaryDirectory() as tmp:
+            fixture = Path(tmp)
+            (fixture/"index.html").write_text("<h1 id='known'>First</h1>")
+            with serve(fixture) as origin:
+                for f, want in (("known", ["First"]), ("missing", None)):
+                    page.goto(origin+"/#"+f, wait_until="domcontentloaded")
+                    got = page.evaluate(BROWSER_JS)
+                    assert got == want, (f, got, want)
         page.close()
         old, new = [browser_read(browser, site, destinations) for site in sites]
         chrome = browser.version
