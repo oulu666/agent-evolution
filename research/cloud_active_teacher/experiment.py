@@ -50,7 +50,8 @@ def load_split(directory, split, n, offset=None):
             sql = e["sql"]
             cond = tuple(sorted(((c, op, normalized(v, tab["types"][c])) for c, op, v in sql["conds"]),
                                 key=lambda z: (z[0], z[1], str(z[2]))))
-            tasks.append(dict(table=tid, rows=rows, types=tab["types"], plans=plans, features=features,
+            tasks.append(dict(table=tid, question=e["question"], headers=tab["header"],
+                              rows=rows, types=tab["types"], plans=plans, features=features,
                               gold=(sql["sel"], sql["agg"], cond)))
     return tasks
 

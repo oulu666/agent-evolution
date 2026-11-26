@@ -1,0 +1,37 @@
+name: Semantic plan grounding
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cloud-semantic-grounding.yml']
+permissions:
+  contents: read
+jobs:
+  parallel-grounding:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            research/cloud_task_learning
+            research/cloud_active_teacher
+            research/cloud_student_ranking
+            research/cloud_semantic_grounding
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==1.26.4 scipy==1.13.1 scikit-learn==1.5.2 lightgbm==4.6.0 onnxruntime==1.20.1 tokenizers==0.21.4
+      - run: python research/cloud_semantic_grounding/study.py /tmp/wikisql grounding-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grounding-results
+          path: grounding-results
+          if-no-files-found: warn
