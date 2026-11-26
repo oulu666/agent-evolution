@@ -1,0 +1,430 @@
+{
+  "revision": "94caa57142c057ce52504cdf239ae0ed3168f9b5",
+  "side": "parent",
+  "rows": [
+    {
+      "task": "default",
+      "access": "returned_object",
+      "view": {
+        "final": 100
+      },
+      "scorer": {
+        "final": 100,
+        "callback": [
+          100
+        ]
+      },
+      "callback_already_wrong": false,
+      "first_ns": 349796,
+      "methods": {
+        "direct": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 19439,
+          "outcome": "correct"
+        },
+        "metamorphic": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 6098,
+          "outcome": "correct"
+        },
+        "eliminate": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 4301,
+          "outcome": "correct"
+        },
+        "adaptive": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 3197,
+          "outcome": "correct"
+        },
+        "preplanned": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 92809,
+          "outcome": "correct"
+        }
+      }
+    },
+    {
+      "task": "default",
+      "access": "first_hook",
+      "view": {
+        "final": 100,
+        "callback": [
+          100
+        ]
+      },
+      "scorer": {
+        "final": 100,
+        "callback": [
+          100
+        ]
+      },
+      "callback_already_wrong": false,
+      "first_ns": 349796,
+      "methods": {
+        "direct": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 5240,
+          "outcome": "correct"
+        },
+        "metamorphic": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 3827,
+          "outcome": "correct"
+        },
+        "eliminate": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 9509,
+          "outcome": "correct"
+        },
+        "adaptive": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 4435,
+          "outcome": "correct"
+        },
+        "preplanned": {
+          "initial_verdict": "satisfied",
+          "verdict": "satisfied",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 50636,
+          "outcome": "correct"
+        }
+      }
+    },
+    {
+      "task": "explicit",
+      "access": "returned_object",
+      "view": {
+        "final": 200
+      },
+      "scorer": {
+        "final": 200,
+        "callback": [
+          100
+        ]
+      },
+      "callback_already_wrong": true,
+      "first_ns": 255797,
+      "methods": {
+        "direct": {
+          "initial_verdict": "undetermined",
+          "verdict": "undetermined",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "deliver_current",
+          "elapsed_ns": 6823,
+          "outcome": "wrong"
+        },
+        "metamorphic": {
+          "initial_verdict": "undetermined",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [
+            {
+              "q": "default",
+              "response": {
+                "final": 100,
+                "callback": [
+                  100
+                ]
+              },
+              "before": [
+                "forward_argument",
+                "forward_default"
+              ],
+              "after": [
+                "forward_argument",
+                "forward_default"
+              ]
+            },
+            {
+              "q": "explicit",
+              "response": {
+                "final": 200,
+                "callback": [
+                  100
+                ]
+              },
+              "before": [
+                "forward_argument",
+                "forward_default"
+              ],
+              "after": [
+                "forward_default"
+              ]
+            }
+          ],
+          "charges": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "request": "default",
+              "completed": true,
+              "elapsed_ns": 244032
+            },
+            {
+              "step": 2,
+              "purpose": "probe",
+              "request": "explicit",
+              "completed": true,
+              "elapsed_ns": 229182
+            }
+          ],
+          "relation": {
+            "observed_difference": 0,
+            "expected_difference": 100
+          },
+          "action": "defer",
+          "elapsed_ns": 502383,
+          "outcome": "deferred"
+        },
+        "eliminate": {
+          "initial_verdict": "undetermined",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [
+            {
+              "q": "explicit",
+              "response": {
+                "final": 200,
+                "callback": [
+                  100
+                ]
+              },
+              "before": [
+                "forward_argument",
+                "forward_default"
+              ],
+              "after": [
+                "forward_default"
+              ]
+            }
+          ],
+          "charges": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "request": "explicit",
+              "completed": true,
+              "elapsed_ns": 220352
+            }
+          ],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 251235,
+          "outcome": "deferred"
+        },
+        "adaptive": {
+          "initial_verdict": "undetermined",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [
+            {
+              "q": "explicit",
+              "response": {
+                "final": 200,
+                "callback": [
+                  100
+                ]
+              },
+              "before": [
+                "forward_argument",
+                "forward_default"
+              ],
+              "after": [
+                "forward_default"
+              ]
+            }
+          ],
+          "charges": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "request": "explicit",
+              "completed": true,
+              "elapsed_ns": 225691
+            }
+          ],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 336713,
+          "outcome": "deferred"
+        },
+        "preplanned": {
+          "initial_verdict": "undetermined",
+          "verdict": "violated",
+          "sequence_commitment": [
+            "explicit"
+          ],
+          "trace": [
+            {
+              "q": "explicit",
+              "response": {
+                "final": 200,
+                "callback": [
+                  100
+                ]
+              },
+              "before": [
+                "forward_argument",
+                "forward_default"
+              ],
+              "after": [
+                "forward_default"
+              ]
+            }
+          ],
+          "charges": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "request": "explicit",
+              "completed": true,
+              "elapsed_ns": 358067
+            }
+          ],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 717631,
+          "outcome": "deferred"
+        }
+      }
+    },
+    {
+      "task": "explicit",
+      "access": "first_hook",
+      "view": {
+        "final": 200,
+        "callback": [
+          100
+        ]
+      },
+      "scorer": {
+        "final": 200,
+        "callback": [
+          100
+        ]
+      },
+      "callback_already_wrong": true,
+      "first_ns": 255797,
+      "methods": {
+        "direct": {
+          "initial_verdict": "violated",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 4869,
+          "outcome": "deferred"
+        },
+        "metamorphic": {
+          "initial_verdict": "violated",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 3166,
+          "outcome": "deferred"
+        },
+        "eliminate": {
+          "initial_verdict": "violated",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 2693,
+          "outcome": "deferred"
+        },
+        "adaptive": {
+          "initial_verdict": "violated",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 3356,
+          "outcome": "deferred"
+        },
+        "preplanned": {
+          "initial_verdict": "violated",
+          "verdict": "violated",
+          "sequence_commitment": [],
+          "trace": [],
+          "charges": [],
+          "relation": null,
+          "action": "defer",
+          "elapsed_ns": 43417,
+          "outcome": "deferred"
+        }
+      }
+    }
+  ],
+  "runner_sha256": "a1ace1f5432f363ea8a6b4e820c897e9e2f20c78b04b14258904aeea5dc083ed"
+}
