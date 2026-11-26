@@ -1,0 +1,74 @@
+{
+  "allowed_offline_criteria": [],
+  "arms": {
+    "after": {
+      "filename": "babel-2.17.0-py3-none-any.whl",
+      "sha256": "4d0b53093fdfb4b21c92b5213dba5a1b23885afa8383709427046b21c366e5f2",
+      "url": "https://files.pythonhosted.org/packages/b7/b8/3fe70c75fe32afc4bb507f75563d39bc5642255d1d94f1f23604725780bf/babel-2.17.0-py3-none-any.whl",
+      "version": "2.17.0"
+    },
+    "before": {
+      "filename": "babel-2.16.0-py3-none-any.whl",
+      "sha256": "368b5b98b37c06b7daf6696391c3240c938b37767d4584413e8438c5c435fa8b",
+      "url": "https://files.pythonhosted.org/packages/ed/20/bc79bc575ba2e2a7f70e8a1155618bb1301eaa5132a8271373a6903f73f8/babel-2.16.0-py3-none-any.whl",
+      "version": "2.16.0"
+    }
+  },
+  "case_id": "babel-week",
+  "expected": [
+    "2003-W24-7",
+    "2003-W01-3",
+    "2003-W52-7",
+    "2004-W01-1",
+    "2004-W01-3",
+    "2004-W25-2",
+    "2004-W01-4",
+    "2004-W53-2",
+    "2004-W53-3",
+    "2004-W53-5",
+    "2005-W24-3",
+    "2004-W53-6",
+    "2005-W52-3",
+    "2005-W52-4",
+    "2005-W52-6",
+    "2008-W24-7",
+    "2008-W01-2",
+    "2008-W52-7",
+    "2009-W01-1",
+    "2009-W01-3"
+  ],
+  "expected_are_contract_expressions": false,
+  "inputs": [
+    "2003-06-15",
+    "2003-01-01",
+    "2003-12-28",
+    "2003-12-29",
+    "2003-12-31",
+    "2004-06-15",
+    "2004-01-01",
+    "2004-12-28",
+    "2004-12-29",
+    "2004-12-31",
+    "2005-06-15",
+    "2005-01-01",
+    "2005-12-28",
+    "2005-12-29",
+    "2005-12-31",
+    "2008-06-15",
+    "2008-01-01",
+    "2008-12-28",
+    "2008-12-29",
+    "2008-12-31"
+  ],
+  "inputs_are_formal_regression_set": false,
+  "label": "calibration",
+  "library": "Babel",
+  "live_arm": "before",
+  "observation_kind": "str",
+  "operation": "week",
+  "provenance": {
+    "fixture": "runs_upstream_functional_20261124/paired_releases.json",
+    "readme_is_pre_upgrade_doc": false,
+    "source": "https://github.com/python-babel/babel/pull/1179"
+  }
+}

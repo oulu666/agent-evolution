@@ -1,0 +1,46 @@
+{
+  "allowed_offline_criteria": [],
+  "arms": {
+    "after": {
+      "filename": "XlsxWriter-1.3.8-py2.py3-none-any.whl",
+      "sha256": "30ebc19d0f201fafa34a6c622050ed2a268ac8dee24037a61605caa801dc8af5",
+      "url": "https://files.pythonhosted.org/packages/34/eb/40aaf7a73fd158aea04ad8812b97fd3049929276c9ea652d8a995cd18425/XlsxWriter-1.3.8-py2.py3-none-any.whl",
+      "version": "1.3.8"
+    },
+    "before": {
+      "filename": "XlsxWriter-1.3.7-py2.py3-none-any.whl",
+      "sha256": "b807c2d3e379bf6a925f472955beef3e07495c1bac708640696876e68675b49b",
+      "url": "https://files.pythonhosted.org/packages/6b/41/bf1aae04932d1eaffee1fc5f8b38ca47bbbf07d765129539bc4bcce1ce0c/XlsxWriter-1.3.7-py2.py3-none-any.whl",
+      "version": "1.3.7"
+    }
+  },
+  "case_id": "xlsx-duration",
+  "expected": [
+    1,
+    30,
+    59,
+    59.5,
+    60,
+    75
+  ],
+  "expected_are_contract_expressions": false,
+  "inputs": [
+    1,
+    30,
+    59,
+    59.5,
+    60,
+    75
+  ],
+  "inputs_are_formal_regression_set": false,
+  "label": "calibration",
+  "library": "XlsxWriter",
+  "live_arm": "before",
+  "observation_kind": "float",
+  "operation": "duration",
+  "provenance": {
+    "fixture": "runs_upstream_functional_20261124/paired_releases.json",
+    "readme_is_pre_upgrade_doc": false,
+    "source": "https://github.com/jmcnamara/XlsxWriter/issues/731"
+  }
+}
