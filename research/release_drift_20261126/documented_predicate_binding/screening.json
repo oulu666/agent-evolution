@@ -1,0 +1,3227 @@
+{
+  "freeze_commit": "f0805b3742c2c5c6de728e49dd1d849cda16567b",
+  "libraries": {
+    "click": {
+      "repo": "pallets/click",
+      "source": "https://github.com/pallets/click/"
+    },
+    "requests": {
+      "repo": "psf/requests",
+      "source": "https://github.com/psf/requests"
+    },
+    "httpx": {
+      "repo": "encode/httpx",
+      "source": "https://github.com/encode/httpx"
+    },
+    "pydantic": {
+      "repo": "pydantic/pydantic",
+      "source": "https://github.com/pydantic/pydantic"
+    },
+    "pytest": {
+      "repo": "pytest-dev/pytest",
+      "source": "https://github.com/pytest-dev/pytest"
+    },
+    "Jinja2": {
+      "repo": "pallets/jinja",
+      "source": "https://github.com/pallets/jinja/"
+    },
+    "flask": {
+      "repo": "pallets/flask",
+      "source": "https://github.com/pallets/flask/"
+    },
+    "werkzeug": {
+      "repo": "pallets/werkzeug",
+      "source": "https://github.com/pallets/werkzeug/"
+    },
+    "marshmallow": {
+      "repo": "marshmallow-code/marshmallow",
+      "source": "https://github.com/marshmallow-code/marshmallow"
+    },
+    "jsonschema": {
+      "repo": "python-jsonschema/jsonschema",
+      "source": "https://github.com/python-jsonschema/jsonschema"
+    },
+    "python-dateutil": {
+      "repo": "dateutil/dateutil",
+      "source": "https://github.com/dateutil/dateutil"
+    },
+    "arrow": {
+      "repo": "arrow-py/arrow",
+      "source": "https://github.com/arrow-py/arrow"
+    },
+    "attrs": {
+      "repo": null,
+      "source": ""
+    },
+    "rich": {
+      "repo": "Textualize/rich",
+      "source": "https://github.com/Textualize/rich"
+    },
+    "hypothesis": {
+      "repo": null,
+      "source": ""
+    },
+    "lxml": {
+      "repo": "lxml/lxml",
+      "source": "https://github.com/lxml/lxml"
+    },
+    "beautifulsoup4": {
+      "repo": null,
+      "source": ""
+    },
+    "PyYAML": {
+      "repo": "yaml/pyyaml",
+      "source": "https://github.com/yaml/pyyaml"
+    },
+    "toml": {
+      "repo": "uiri/toml",
+      "source": "https://github.com/uiri/toml"
+    },
+    "tomli": {
+      "repo": "hukkin/tomli",
+      "source": "https://github.com/hukkin/tomli"
+    }
+  },
+  "queues": {
+    "click": [
+      {
+        "number": 3912,
+        "title": "Add missing link to #3818 and fix release date",
+        "html_url": "https://github.com/pallets/click/pull/3912"
+      },
+      {
+        "number": 3884,
+        "title": "Fix `show_envvar` output for a sequence or an empty `envvar`",
+        "html_url": "https://github.com/pallets/click/pull/3884"
+      },
+      {
+        "number": 3865,
+        "title": "Fix short help abbreviation",
+        "html_url": "https://github.com/pallets/click/pull/3865"
+      },
+      {
+        "number": 3818,
+        "title": "Fix race condition on `KeyboardInterrupt` in `Command.main()`",
+        "html_url": "https://github.com/pallets/click/pull/3818"
+      },
+      {
+        "number": 3805,
+        "title": "Fix `copy`, `deepcopy` and `pickle` of `Sentinel` members",
+        "html_url": "https://github.com/pallets/click/pull/3805"
+      },
+      {
+        "number": 3446,
+        "title": "Fix dev version 8.4.1",
+        "html_url": "https://github.com/pallets/click/pull/3446"
+      },
+      {
+        "number": 3152,
+        "title": "Fix handling of options which set both is_flag=False and flag_value=...",
+        "html_url": "https://github.com/pallets/click/pull/3152"
+      },
+      {
+        "number": 3141,
+        "title": "Fix Ruff UP038 warning",
+        "html_url": "https://github.com/pallets/click/pull/3141"
+      },
+      {
+        "number": 3129,
+        "title": "Fix test_edit to work with BSD sed",
+        "html_url": "https://github.com/pallets/click/pull/3129"
+      },
+      {
+        "number": 3079,
+        "title": "Fix default handling to defer `UNSET` normalization",
+        "html_url": "https://github.com/pallets/click/pull/3079"
+      },
+      {
+        "number": 3013,
+        "title": "Fix completions for quoted/escaped parameters in Fish",
+        "html_url": "https://github.com/pallets/click/pull/3013"
+      },
+      {
+        "number": 3004,
+        "title": "Fix rendering of Enum choices' default",
+        "html_url": "https://github.com/pallets/click/pull/3004"
+      },
+      {
+        "number": 2944,
+        "title": "Fix _pipepager()/_tempfilepage() to work with multi-call binaries",
+        "html_url": "https://github.com/pallets/click/pull/2944"
+      },
+      {
+        "number": 2940,
+        "title": "testing/CliRunner: Fix regression related to EOF introduced in 262bdf0",
+        "html_url": "https://github.com/pallets/click/pull/2940"
+      },
+      {
+        "number": 2935,
+        "title": "fix shell completion for nested groups",
+        "html_url": "https://github.com/pallets/click/pull/2935"
+      },
+      {
+        "number": 2921,
+        "title": "Fix documenting-arguments anchor in docs",
+        "html_url": "https://github.com/pallets/click/pull/2921"
+      },
+      {
+        "number": 2919,
+        "title": "fix filename formatting test for Windows compatibility",
+        "html_url": "https://github.com/pallets/click/pull/2919"
+      },
+      {
+        "number": 2884,
+        "title": "Minimal fix to CI",
+        "html_url": "https://github.com/pallets/click/pull/2884"
+      },
+      {
+        "number": 2855,
+        "title": "Fix compatibility with pyright 1.1.394",
+        "html_url": "https://github.com/pallets/click/pull/2855"
+      },
+      {
+        "number": 2850,
+        "title": "Fix read the docs configuration",
+        "html_url": "https://github.com/pallets/click/pull/2850"
+      },
+      {
+        "number": 2811,
+        "title": "Fix eagerness of help option generated by `help_option_names`",
+        "html_url": "https://github.com/pallets/click/pull/2811"
+      },
+      {
+        "number": 2733,
+        "title": "Fix missing reset in isolation function",
+        "html_url": "https://github.com/pallets/click/pull/2733"
+      },
+      {
+        "number": 2730,
+        "title": "fix bug in show defaults when using a flag option and a default map",
+        "html_url": "https://github.com/pallets/click/pull/2730"
+      },
+      {
+        "number": 2729,
+        "title": "fix color handling in test runner",
+        "html_url": "https://github.com/pallets/click/pull/2729"
+      },
+      {
+        "number": 2680,
+        "title": "Fix closing of callbacks on CLI exit",
+        "html_url": "https://github.com/pallets/click/pull/2680"
+      },
+      {
+        "number": 2607,
+        "title": "Fix colored output on Windows (#2606)",
+        "html_url": "https://github.com/pallets/click/pull/2607"
+      }
+    ],
+    "requests": [
+      {
+        "number": 7431,
+        "title": "Fix mutability issues with headers input types",
+        "html_url": "https://github.com/psf/requests/pull/7431"
+      },
+      {
+        "number": 7576,
+        "title": "Fix link to AI Policy in CONTRIBUTING.md",
+        "html_url": "https://github.com/psf/requests/pull/7576"
+      },
+      {
+        "number": 7502,
+        "title": "Fix `_encode_files` detection for `__getattr__`-based file wrappers",
+        "html_url": "https://github.com/psf/requests/pull/7502"
+      },
+      {
+        "number": 7433,
+        "title": "Fix `prepare_body` stream detection for `__getattr__`-based file wrappers",
+        "html_url": "https://github.com/psf/requests/pull/7433"
+      },
+      {
+        "number": 7425,
+        "title": "sessions: fix hooks type",
+        "html_url": "https://github.com/psf/requests/pull/7425"
+      },
+      {
+        "number": 7421,
+        "title": "docs: Fix missing hook output in hook example",
+        "html_url": "https://github.com/psf/requests/pull/7421"
+      },
+      {
+        "number": 7395,
+        "title": "Fix typos",
+        "html_url": "https://github.com/psf/requests/pull/7395"
+      },
+      {
+        "number": 7308,
+        "title": "Fix cosmetic header validity parsing regex",
+        "html_url": "https://github.com/psf/requests/pull/7308"
+      },
+      {
+        "number": 7306,
+        "title": "Fix unintended \"test\" extra",
+        "html_url": "https://github.com/psf/requests/pull/7306"
+      },
+      {
+        "number": 7227,
+        "title": "docs: fix FAQ grammar in httplib2 example",
+        "html_url": "https://github.com/psf/requests/pull/7227"
+      },
+      {
+        "number": 6960,
+        "title": "docs: clarify Quickstart POST example (fixes #6949)",
+        "html_url": "https://github.com/psf/requests/pull/6960"
+      },
+      {
+        "number": 6529,
+        "title": "fix doc: correct models.Response.json() docstring",
+        "html_url": "https://github.com/psf/requests/pull/6529"
+      },
+      {
+        "number": 7205,
+        "title": "Fix empty netrc entry usage",
+        "html_url": "https://github.com/psf/requests/pull/7205"
+      },
+      {
+        "number": 7190,
+        "title": "Fix CI and build failures",
+        "html_url": "https://github.com/psf/requests/pull/7190"
+      },
+      {
+        "number": 6682,
+        "title": "Fix compatibility with pytest 8",
+        "html_url": "https://github.com/psf/requests/pull/6682"
+      },
+      {
+        "number": 6302,
+        "title": "Fix the proxy_bypass_registry function all returning true in some cases.",
+        "html_url": "https://github.com/psf/requests/pull/6302"
+      },
+      {
+        "number": 6629,
+        "title": "Fix #6628 - JSONDecodeError are not deserializable",
+        "html_url": "https://github.com/psf/requests/pull/6629"
+      },
+      {
+        "number": 6583,
+        "title": "Fix broken links in docs",
+        "html_url": "https://github.com/psf/requests/pull/6583"
+      },
+      {
+        "number": 6641,
+        "title": "Fix CI",
+        "html_url": "https://github.com/psf/requests/pull/6641"
+      },
+      {
+        "number": 6605,
+        "title": "fix for ##6604",
+        "html_url": "https://github.com/psf/requests/pull/6605"
+      },
+      {
+        "number": 6600,
+        "title": "Add note on connection timeout being larger than specified. Fix #5773",
+        "html_url": "https://github.com/psf/requests/pull/6600"
+      },
+      {
+        "number": 6574,
+        "title": "Fix missing space in error message",
+        "html_url": "https://github.com/psf/requests/pull/6574"
+      },
+      {
+        "number": 6545,
+        "title": "Fix urllib3 pin in setup.cfg",
+        "html_url": "https://github.com/psf/requests/pull/6545"
+      },
+      {
+        "number": 6508,
+        "title": "Fix documentation monthly download badge",
+        "html_url": "https://github.com/psf/requests/pull/6508"
+      }
+    ],
+    "httpx": [
+      {
+        "number": 3872,
+        "title": "Fix Python version in publish.yml",
+        "html_url": "https://github.com/encode/httpx/pull/3872"
+      },
+      {
+        "number": 3442,
+        "title": "Fix `verify=False`, `cert=...` case.",
+        "html_url": "https://github.com/encode/httpx/pull/3442"
+      },
+      {
+        "number": 3380,
+        "title": "Fix `extensions` type annotation.",
+        "html_url": "https://github.com/encode/httpx/pull/3380"
+      },
+      {
+        "number": 3361,
+        "title": "Docs minor fix",
+        "html_url": "https://github.com/encode/httpx/pull/3361"
+      },
+      {
+        "number": 3116,
+        "title": "Fix client.send() timeout when used with a new Request instance",
+        "html_url": "https://github.com/encode/httpx/pull/3116"
+      },
+      {
+        "number": 3175,
+        "title": "[fix] Use proxy ssl context consistently",
+        "html_url": "https://github.com/encode/httpx/pull/3175"
+      },
+      {
+        "number": 3186,
+        "title": "Fix doc links for making requests directly to WSGI/ASGI apps",
+        "html_url": "https://github.com/encode/httpx/pull/3186"
+      },
+      {
+        "number": 3138,
+        "title": "Docs: fix small typos in Extensions doc",
+        "html_url": "https://github.com/encode/httpx/pull/3138"
+      },
+      {
+        "number": 3131,
+        "title": "Fix Ruff v0.3.0 violations",
+        "html_url": "https://github.com/encode/httpx/pull/3131"
+      },
+      {
+        "number": 3123,
+        "title": "Docs: fix 404ing /advanced/#<anchor> links -> /advanced/clients/#<anchor>",
+        "html_url": "https://github.com/encode/httpx/pull/3123"
+      },
+      {
+        "number": 3045,
+        "title": "Fix RFC 2069 mode digest authentication",
+        "html_url": "https://github.com/encode/httpx/pull/3045"
+      },
+      {
+        "number": 3058,
+        "title": "Fix sections references",
+        "html_url": "https://github.com/encode/httpx/pull/3058"
+      },
+      {
+        "number": 2741,
+        "title": "Fix environment proxies",
+        "html_url": "https://github.com/encode/httpx/pull/2741"
+      },
+      {
+        "number": 2902,
+        "title": "Fix third party package documentation link",
+        "html_url": "https://github.com/encode/httpx/pull/2902"
+      },
+      {
+        "number": 2886,
+        "title": "Fix encode host",
+        "html_url": "https://github.com/encode/httpx/pull/2886"
+      },
+      {
+        "number": 2747,
+        "title": "Fix sample in quickstart.md",
+        "html_url": "https://github.com/encode/httpx/pull/2747"
+      },
+      {
+        "number": 2740,
+        "title": "Fix URLPattern examples",
+        "html_url": "https://github.com/encode/httpx/pull/2740"
+      },
+      {
+        "number": 2701,
+        "title": "Fix for gen-delims escaping behaviour in path/query/fragment",
+        "html_url": "https://github.com/encode/httpx/pull/2701"
+      },
+      {
+        "number": 2680,
+        "title": "Fix ruff error and script",
+        "html_url": "https://github.com/encode/httpx/pull/2680"
+      },
+      {
+        "number": 2671,
+        "title": "Fix optional percent encoding behaviour.",
+        "html_url": "https://github.com/encode/httpx/pull/2671"
+      },
+      {
+        "number": 2659,
+        "title": "fix: NO_PROXY should support IPv4, IPv6 and localhost",
+        "html_url": "https://github.com/encode/httpx/pull/2659"
+      }
+    ],
+    "pydantic": [
+      {
+        "number": 14383,
+        "title": "Fix flaky `test_exceptions_and_markers_report_python_references()` test",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14383"
+      },
+      {
+        "number": 14373,
+        "title": "Fix GitHub brand casing",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14373"
+      },
+      {
+        "number": 14337,
+        "title": "Fix the `PydanticUseDefault` and `ArgsKwargs` docstring examples",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14337"
+      },
+      {
+        "number": 14316,
+        "title": "Fix the documented JSON Schema for `timedelta`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14316"
+      },
+      {
+        "number": 14318,
+        "title": "Fix the documented JSON Schema for `Json`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14318"
+      },
+      {
+        "number": 14320,
+        "title": "Fix the documented JSON Schema for `Decimal`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14320"
+      },
+      {
+        "number": 14326,
+        "title": "Fix DNS issue in CI",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14326"
+      },
+      {
+        "number": 14308,
+        "title": "Fix clippy 1.100 lints",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14308"
+      },
+      {
+        "number": 14261,
+        "title": "Fix display of `Callable` parameters in type representations",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14261"
+      },
+      {
+        "number": 13891,
+        "title": "Fix config propagation of stdlib dataclasses and `TypedDict`s in JSON Schema",
+        "html_url": "https://github.com/pydantic/pydantic/pull/13891"
+      },
+      {
+        "number": 13516,
+        "title": "Fix application of constraints in pipeline API",
+        "html_url": "https://github.com/pydantic/pydantic/pull/13516"
+      },
+      {
+        "number": 14287,
+        "title": "Fix Graalpy CI",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14287"
+      },
+      {
+        "number": 14255,
+        "title": "Fix model signature when a field alias is the name used for extra kwargs",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14255"
+      },
+      {
+        "number": 14254,
+        "title": "Fix validation constraints leaking into the `Decimal` JSON Schema",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14254"
+      },
+      {
+        "number": 13819,
+        "title": "Fix various issues about GC tracking in `pydantic-core`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/13819"
+      },
+      {
+        "number": 14253,
+        "title": "Fix more issues about GC tracking in `pydantic-core`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14253"
+      },
+      {
+        "number": 14244,
+        "title": "Fix `Decimal` JSON Schema patterns accepting bare `0` when no whole digits are allowed",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14244"
+      },
+      {
+        "number": 13953,
+        "title": "Fix JSON Schema for `arguments` schema",
+        "html_url": "https://github.com/pydantic/pydantic/pull/13953"
+      },
+      {
+        "number": 14176,
+        "title": "Fix `ByteSize.human_readable()` showing `1024.0KiB` instead of `1.0MiB` just below a unit boundary",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14176"
+      },
+      {
+        "number": 14165,
+        "title": "Fix uncollected tests",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14165"
+      },
+      {
+        "number": 14164,
+        "title": "Fix deeply nested data being reported as a cyclic reference",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14164"
+      },
+      {
+        "number": 14160,
+        "title": "Fix quadratic serialization time with per-index `include`/`exclude` on sequences",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14160"
+      },
+      {
+        "number": 14133,
+        "title": "Fix broken anchor and outdated test paths in SECURITY.md and contributing guide",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14133"
+      },
+      {
+        "number": 14119,
+        "title": "Fix third-party tests",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14119"
+      },
+      {
+        "number": 14115,
+        "title": "Fix `RecursionError` when copying or unpickling models with `defer_build`",
+        "html_url": "https://github.com/pydantic/pydantic/pull/14115"
+      }
+    ],
+    "pytest": [
+      {
+        "number": 15361,
+        "title": "Fix IndexError in Collector.repr_failure for CollectError without args",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15361"
+      },
+      {
+        "number": 15301,
+        "title": "[PR #15285/4b3bb3cc backport][9.2.x] Fix `pytest.approx` regression with JAX arrays",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15301"
+      },
+      {
+        "number": 15285,
+        "title": "Fix `pytest.approx` regression with JAX arrays",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15285"
+      },
+      {
+        "number": 14216,
+        "title": "doc: fix removed pytest.config reference in historical-notes",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14216"
+      },
+      {
+        "number": 15192,
+        "title": "Fix documentation build with Pluggy 1.7",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15192"
+      },
+      {
+        "number": 15145,
+        "title": "Fix node duration formatting when rounding crosses a unit boundary",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15145"
+      },
+      {
+        "number": 15151,
+        "title": "Fix two flaky tests: slow-teardown timing and pdb EOF race",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15151"
+      },
+      {
+        "number": 15058,
+        "title": "Fix fixture discovery for bound methods in custom collectors",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15058"
+      },
+      {
+        "number": 14931,
+        "title": "fix: stop reusing shared PytestWarning instances whose tracebacks grow under -W error",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14931"
+      },
+      {
+        "number": 14447,
+        "title": "fix(rewrite): prevent walrus operator double evaluation in assertions",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14447"
+      },
+      {
+        "number": 13745,
+        "title": "fix #13564 - warn when fixtures get wrapped with a decorator",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/13745"
+      },
+      {
+        "number": 13073,
+        "title": "fix #13031: use the concrete id NOTSET for the empty parameter list",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/13073"
+      },
+      {
+        "number": 14331,
+        "title": "fix: rm_rf now handles directories without S_IXUSR permission",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14331"
+      },
+      {
+        "number": 14645,
+        "title": "fix: deduplicate Directory nodes on re-collection to preserve fixture identity (#14635)",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14645"
+      },
+      {
+        "number": 14125,
+        "title": "fix(parametrize): handle trailing comma in string argnames",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14125"
+      },
+      {
+        "number": 13370,
+        "title": "fix #6881 - add policies for too long ids from a str and use short as default",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/13370"
+      },
+      {
+        "number": 6847,
+        "title": "fix #571: deprecate pytest_collect_directory as ...",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/6847"
+      },
+      {
+        "number": 14127,
+        "title": "fix: validate marker names in -m expression with --strict-markers",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14127"
+      },
+      {
+        "number": 14126,
+        "title": "fix: show correct program name in argparse help/errors",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14126"
+      },
+      {
+        "number": 14098,
+        "title": "fix #14004 - connect conftests to nodeids/nodes instead of matching string prefixes - ensure we connect in the collect phase in case of directory confusion",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14098"
+      },
+      {
+        "number": 11155,
+        "title": "fix #10447 - consider marks in reverse mro order to give base classes priority",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/11155"
+      },
+      {
+        "number": 10343,
+        "title": "fix #10342: put location into warning exceptions",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/10343"
+      },
+      {
+        "number": 15033,
+        "title": "Fix doctest option flags leaking between docstrings",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15033"
+      },
+      {
+        "number": 15053,
+        "title": "fixtures: fix lineno off-by-one in --fixtures/--fixtures-per-test and a couple of error messages",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/15053"
+      },
+      {
+        "number": 14972,
+        "title": "testing: fix test failing when PYTHONPYCACHEPREFIX is set",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14972"
+      },
+      {
+        "number": 14989,
+        "title": "fix: bytecode cache invalidation for moved test files (#14552)",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14989"
+      },
+      {
+        "number": 14969,
+        "title": "fix(monkeypatch): don't leave inherited attributes in the instance dict",
+        "html_url": "https://github.com/pytest-dev/pytest/pull/14969"
+      }
+    ],
+    "Jinja2": [
+      {
+        "number": 2061,
+        "title": "fix default for `Environment.overlay(enable_async)`",
+        "html_url": "https://github.com/pallets/jinja/pull/2061"
+      },
+      {
+        "number": 2056,
+        "title": "fix Jinja syntax in example",
+        "html_url": "https://github.com/pallets/jinja/pull/2056"
+      },
+      {
+        "number": 2017,
+        "title": "fix list comprehension example",
+        "html_url": "https://github.com/pallets/jinja/pull/2017"
+      },
+      {
+        "number": 1984,
+        "title": "fix how int filter handles scientific notation",
+        "html_url": "https://github.com/pallets/jinja/pull/1984"
+      },
+      {
+        "number": 2029,
+        "title": "Fix pickle/copy support for the `missing` singleton",
+        "html_url": "https://github.com/pallets/jinja/pull/2029"
+      },
+      {
+        "number": 2054,
+        "title": "Fix nl2br example in documentation",
+        "html_url": "https://github.com/pallets/jinja/pull/2054"
+      },
+      {
+        "number": 1979,
+        "title": "fix test_package_zip_list on 3.13",
+        "html_url": "https://github.com/pallets/jinja/pull/1979"
+      },
+      {
+        "number": 1960,
+        "title": "test on trio, fix all missing aclose related warnings",
+        "html_url": "https://github.com/pallets/jinja/pull/1960"
+      },
+      {
+        "number": 1858,
+        "title": "fix check for empty required block",
+        "html_url": "https://github.com/pallets/jinja/pull/1858"
+      },
+      {
+        "number": 450,
+        "title": "FIX DOC-EXAMPLE: cache_extension.py",
+        "html_url": "https://github.com/pallets/jinja/pull/450"
+      },
+      {
+        "number": 1682,
+        "title": "fix get_template example",
+        "html_url": "https://github.com/pallets/jinja/pull/1682"
+      },
+      {
+        "number": 1655,
+        "title": "Fix Race conditions in FileSystemBytecodeCache",
+        "html_url": "https://github.com/pallets/jinja/pull/1655"
+      },
+      {
+        "number": 1620,
+        "title": "Fix formatting in tricks.rst",
+        "html_url": "https://github.com/pallets/jinja/pull/1620"
+      },
+      {
+        "number": 1613,
+        "title": "Fix pickleability of filters decorated with @async_variant",
+        "html_url": "https://github.com/pallets/jinja/pull/1613"
+      },
+      {
+        "number": 1509,
+        "title": "Fix typos",
+        "html_url": "https://github.com/pallets/jinja/pull/1509"
+      },
+      {
+        "number": 1449,
+        "title": "fix loop scoping bug",
+        "html_url": "https://github.com/pallets/jinja/pull/1449"
+      },
+      {
+        "number": 1439,
+        "title": "fix deprecated `Markup` subclass",
+        "html_url": "https://github.com/pallets/jinja/pull/1439"
+      },
+      {
+        "number": 1440,
+        "title": "fix deprecated `Markup` subclass",
+        "html_url": "https://github.com/pallets/jinja/pull/1440"
+      },
+      {
+        "number": 1436,
+        "title": "fix context for deprecated extensions",
+        "html_url": "https://github.com/pallets/jinja/pull/1436"
+      },
+      {
+        "number": 1414,
+        "title": "fix py.typed in manifest",
+        "html_url": "https://github.com/pallets/jinja/pull/1414"
+      },
+      {
+        "number": 1401,
+        "title": "fix deprecated `Markup` subclass",
+        "html_url": "https://github.com/pallets/jinja/pull/1401"
+      },
+      {
+        "number": 1366,
+        "title": "Fix unicode newlines",
+        "html_url": "https://github.com/pallets/jinja/pull/1366"
+      }
+    ],
+    "flask": [
+      {
+        "number": 5917,
+        "title": "fix provide_automatic_options override",
+        "html_url": "https://github.com/pallets/flask/pull/5917"
+      },
+      {
+        "number": 5808,
+        "title": "fix annotation for select_jinja_autoescape",
+        "html_url": "https://github.com/pallets/flask/pull/5808"
+      },
+      {
+        "number": 5742,
+        "title": "Docs: Fix escaping in HTML escaping example",
+        "html_url": "https://github.com/pallets/flask/pull/5742"
+      },
+      {
+        "number": 5737,
+        "title": "Fix global CONTRIBUTING link",
+        "html_url": "https://github.com/pallets/flask/pull/5737"
+      },
+      {
+        "number": 5647,
+        "title": "fix type hint for `cli_runner.invoke`",
+        "html_url": "https://github.com/pallets/flask/pull/5647"
+      },
+      {
+        "number": 5627,
+        "title": "fix example and tutorial compatibility and update metadata",
+        "html_url": "https://github.com/pallets/flask/pull/5627"
+      },
+      {
+        "number": 5620,
+        "title": "fix pyright type errors",
+        "html_url": "https://github.com/pallets/flask/pull/5620"
+      },
+      {
+        "number": 5389,
+        "title": "Fix jinja_loader typehint",
+        "html_url": "https://github.com/pallets/flask/pull/5389"
+      },
+      {
+        "number": 5393,
+        "title": "fix super call in list comprehension",
+        "html_url": "https://github.com/pallets/flask/pull/5393"
+      },
+      {
+        "number": 5344,
+        "title": "fix missing quote in `--key` error message",
+        "html_url": "https://github.com/pallets/flask/pull/5344"
+      },
+      {
+        "number": 5336,
+        "title": "type hint fix for flask.send_file",
+        "html_url": "https://github.com/pallets/flask/pull/5336"
+      },
+      {
+        "number": 5303,
+        "title": "docs/testing.rst: fix follow_redirects sample code",
+        "html_url": "https://github.com/pallets/flask/pull/5303"
+      },
+      {
+        "number": 5171,
+        "title": "fix update import of declarative_base from SQLAlchemy",
+        "html_url": "https://github.com/pallets/flask/pull/5171"
+      },
+      {
+        "number": 5161,
+        "title": "fix use of `importlib.util.find_spec`",
+        "html_url": "https://github.com/pallets/flask/pull/5161"
+      },
+      {
+        "number": 5085,
+        "title": "Fix importing Markup from flask",
+        "html_url": "https://github.com/pallets/flask/pull/5085"
+      },
+      {
+        "number": 4972,
+        "title": "fix test client arg for query string example",
+        "html_url": "https://github.com/pallets/flask/pull/4972"
+      },
+      {
+        "number": 4966,
+        "title": "Fix command-line formatting",
+        "html_url": "https://github.com/pallets/flask/pull/4966"
+      },
+      {
+        "number": 4960,
+        "title": "Fix appfactories doc",
+        "html_url": "https://github.com/pallets/flask/pull/4960"
+      },
+      {
+        "number": 4952,
+        "title": "Fix function argument name",
+        "html_url": "https://github.com/pallets/flask/pull/4952"
+      },
+      {
+        "number": 4935,
+        "title": "Fix subdomain inheritance for nested blueprints",
+        "html_url": "https://github.com/pallets/flask/pull/4935"
+      }
+    ],
+    "werkzeug": [
+      {
+        "number": 3215,
+        "title": "fix boolean logic for external url",
+        "html_url": "https://github.com/pallets/werkzeug/pull/3215"
+      },
+      {
+        "number": 3089,
+        "title": "fix parsing last newline in multipart data",
+        "html_url": "https://github.com/pallets/werkzeug/pull/3089"
+      },
+      {
+        "number": 3080,
+        "title": "fix typos",
+        "html_url": "https://github.com/pallets/werkzeug/pull/3080"
+      },
+      {
+        "number": 3058,
+        "title": "fix reference to MapAdapter in docs",
+        "html_url": "https://github.com/pallets/werkzeug/pull/3058"
+      },
+      {
+        "number": 3069,
+        "title": "Fix typos discovered by codespell",
+        "html_url": "https://github.com/pallets/werkzeug/pull/3069"
+      },
+      {
+        "number": 2986,
+        "title": "fix `str(request.headers)`",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2986"
+      },
+      {
+        "number": 2953,
+        "title": "Fix logging of client addresses with IPv6 scope",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2953"
+      },
+      {
+        "number": 2944,
+        "title": "Fix headlines in `quickstart.rst`",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2944"
+      },
+      {
+        "number": 2882,
+        "title": "Fix CacheControl issues",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2882"
+      },
+      {
+        "number": 2832,
+        "title": "Fix handling of custom response_wrapper in test.Client",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2832"
+      },
+      {
+        "number": 2860,
+        "title": "Fix issue with repeated-slash requests redirecting",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2860"
+      },
+      {
+        "number": 2804,
+        "title": "Fix: slow multipart parsing for huge files with few CR/LF characters for 2.3.x branch",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2804"
+      },
+      {
+        "number": 2763,
+        "title": "Fix multipart parsing when additional newlines are present",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2763"
+      },
+      {
+        "number": 2765,
+        "title": "Fix empty stream file uploads when testing",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2765"
+      },
+      {
+        "number": 2750,
+        "title": "Fix: Improve Error Message",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2750"
+      },
+      {
+        "number": 2753,
+        "title": "Fix qvalue parsing",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2753"
+      },
+      {
+        "number": 1927,
+        "title": "Fix docs for werkzeug.formparser.parse_form_data",
+        "html_url": "https://github.com/pallets/werkzeug/pull/1927"
+      },
+      {
+        "number": 2718,
+        "title": "Fix handling of invalid base64 values",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2718"
+      },
+      {
+        "number": 2678,
+        "title": "Fix the parsing of large multipart bodies",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2678"
+      },
+      {
+        "number": 2677,
+        "title": "Fix errors in the documentation",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2677"
+      },
+      {
+        "number": 2643,
+        "title": "fix `ProfilerMiddleware` stream param type hint",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2643"
+      },
+      {
+        "number": 2051,
+        "title": "fix connection reset when over max content size",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2051"
+      },
+      {
+        "number": 2559,
+        "title": "fix LimitedStream.read method to work with raw IO streams",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2559"
+      },
+      {
+        "number": 2535,
+        "title": "Fix strict slash redirects for final RuleParts",
+        "html_url": "https://github.com/pallets/werkzeug/pull/2535"
+      }
+    ],
+    "marshmallow": [
+      {
+        "number": 2823,
+        "title": "Fix incorrect export by removing 'pprint' from __all__.",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2823"
+      },
+      {
+        "number": 3082,
+        "title": "Fix Pluck handling of empty data_key",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/3082"
+      },
+      {
+        "number": 3034,
+        "title": "Various docstring fixes",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/3034"
+      },
+      {
+        "number": 3016,
+        "title": "Fix URL validator rejecting a fragment after an empty path",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/3016"
+      },
+      {
+        "number": 2937,
+        "title": "Fix validate.Email to accept IDNs",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2937"
+      },
+      {
+        "number": 2935,
+        "title": "Fix Unreachable Warning",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2935"
+      },
+      {
+        "number": 2907,
+        "title": "Fix Field.error_messages type to allow dict and list values",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2907"
+      },
+      {
+        "number": 2903,
+        "title": "Fix nested partial to use attr_name instead of data_key for prefix",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2903"
+      },
+      {
+        "number": 2909,
+        "title": "Fix OneOf.options() emitting phantom entries when labels outnumber choices",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2909"
+      },
+      {
+        "number": 2901,
+        "title": "Fix Constant field with required=True raising ValueError",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2901"
+      },
+      {
+        "number": 2894,
+        "title": "Fix Constant field rejecting None values during load",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2894"
+      },
+      {
+        "number": 2892,
+        "title": "fix: handle uppercase `file` URLs ",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2892"
+      },
+      {
+        "number": 2874,
+        "title": "Fix: Case sensitivity in validator",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2874"
+      },
+      {
+        "number": 2861,
+        "title": "(fix) missing constant with len validation",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2861"
+      },
+      {
+        "number": 2806,
+        "title": "Fix types for class Meta options",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2806"
+      },
+      {
+        "number": 2800,
+        "title": "fix: add `file` handling to URL fields",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2800"
+      },
+      {
+        "number": 2793,
+        "title": "Fix typing of validates_schema",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2793"
+      },
+      {
+        "number": 2785,
+        "title": "Follow pep8 for TypeVar naming; fix typing for Context.get",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2785"
+      },
+      {
+        "number": 2782,
+        "title": "Fix broken links",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2782"
+      },
+      {
+        "number": 2775,
+        "title": "Fix mypy setup",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2775"
+      },
+      {
+        "number": 2769,
+        "title": "Fix typing of loads",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2769"
+      },
+      {
+        "number": 2756,
+        "title": "Fix a few type annotations in fields and class_registry",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2756"
+      },
+      {
+        "number": 2744,
+        "title": "Fix opts typing",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2744"
+      },
+      {
+        "number": 2735,
+        "title": "Fix typing for class_registry.get_class",
+        "html_url": "https://github.com/marshmallow-code/marshmallow/pull/2735"
+      }
+    ],
+    "jsonschema": [
+      {
+        "number": 1396,
+        "title": "Fix `Validator` protocol init to match runtime",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/1396"
+      },
+      {
+        "number": 1351,
+        "title": "Fix calculation of evaluated properties",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/1351"
+      },
+      {
+        "number": 1076,
+        "title": "fix: Python 3.11 date.fromisoformat() allows extra formats",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/1076"
+      },
+      {
+        "number": 1063,
+        "title": "documentation mistype fix",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/1063"
+      },
+      {
+        "number": 1055,
+        "title": "Maybe fix PDF builds (in ReadTheDocs).",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/1055"
+      },
+      {
+        "number": 969,
+        "title": "docs: Fix a few typos",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/969"
+      },
+      {
+        "number": 965,
+        "title": "Fix fuzzer to include instrumentation",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/965"
+      },
+      {
+        "number": 850,
+        "title": "validators: Fix dependentSchemas when instance is not an object",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/850"
+      },
+      {
+        "number": 862,
+        "title": "Fix prefixItems index reporting in ValidationError",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/862"
+      },
+      {
+        "number": 721,
+        "title": "Fix issue #669 and add test case.",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/721"
+      },
+      {
+        "number": 819,
+        "title": "Fixes validation for uri-template format",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/819"
+      },
+      {
+        "number": 785,
+        "title": "Fix fuzzer",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/785"
+      },
+      {
+        "number": 725,
+        "title": "Fix cli bug about getting arguments[\"validator\"].",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/725"
+      },
+      {
+        "number": 719,
+        "title": "fix bug about hostname by import fqdn",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/719"
+      },
+      {
+        "number": 661,
+        "title": "[CLI] Improve the overall console output (fix #623)",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/661"
+      },
+      {
+        "number": 472,
+        "title": "Fix py2 urlopen",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/472"
+      },
+      {
+        "number": 452,
+        "title": "Fix infinite recursion in TypeChecker example",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/452"
+      },
+      {
+        "number": 427,
+        "title": "Fix unclosed resource in validators",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/427"
+      },
+      {
+        "number": 430,
+        "title": "Fix bug in current registration of validators and address #417",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/430"
+      },
+      {
+        "number": 338,
+        "title": "Dedent examples in validate.rst to fix sphinx doctest",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/338"
+      },
+      {
+        "number": 303,
+        "title": "Fix indentation",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/303"
+      },
+      {
+        "number": 288,
+        "title": "Minor fix in ErrorTree for multiple errors on different levels.",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/288"
+      },
+      {
+        "number": 224,
+        "title": "Fix formatting error for unique items if instance is a tuple",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/224"
+      },
+      {
+        "number": 231,
+        "title": "Fix universal wheels",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/231"
+      },
+      {
+        "number": 192,
+        "title": "Fix Draft4Validator example code in validate.rst",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/192"
+      },
+      {
+        "number": 174,
+        "title": "Fix Error.absolute_path logic",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/174"
+      },
+      {
+        "number": 9,
+        "title": "Python3 minor fixes",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/9"
+      },
+      {
+        "number": 11,
+        "title": "Fix \"properties\" verification.",
+        "html_url": "https://github.com/python-jsonschema/jsonschema/pull/11"
+      }
+    ],
+    "python-dateutil": [
+      {
+        "number": 1621,
+        "title": "Fix wheels with a broken _version.py and remove deprecated setuptools usage",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1621"
+      },
+      {
+        "number": 1374,
+        "title": "fix(rrule): don't die on experimental properties",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1374"
+      },
+      {
+        "number": 1581,
+        "title": "Fix the isoparse round trip property test for ambiguous times",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1581"
+      },
+      {
+        "number": 1579,
+        "title": "Fix test collection under pytest 9.1 and the gettz property test outside of UTC",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1579"
+      },
+      {
+        "number": 1578,
+        "title": "Fix test_gettz_returns_local outside of UTC",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1578"
+      },
+      {
+        "number": 1577,
+        "title": "Fix test collection under pytest 9.1",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1577"
+      },
+      {
+        "number": 1467,
+        "title": "Fixes to script that runs against the upstream tz master branch",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1467"
+      },
+      {
+        "number": 1417,
+        "title": "Fix validation workflow",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1417"
+      },
+      {
+        "number": 1380,
+        "title": "Fix bitrot in Github Actions on older Python versions",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1380"
+      },
+      {
+        "number": 1286,
+        "title": "fix ci",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1286"
+      },
+      {
+        "number": 1192,
+        "title": "Pytest warnings fix",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1192"
+      },
+      {
+        "number": 1127,
+        "title": "ci: Fix 3.4 test runs",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1127"
+      },
+      {
+        "number": 1126,
+        "title": "tests: Fix logic on detecting platform support for `-d`",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1126"
+      },
+      {
+        "number": 1078,
+        "title": "Fix documentation warning about relative links",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1078"
+      },
+      {
+        "number": 1015,
+        "title": "Fix tox not running files under docs/",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1015"
+      },
+      {
+        "number": 1024,
+        "title": "Fix tz.gettz() not returning local time for empty string",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1024"
+      },
+      {
+        "number": 1026,
+        "title": "Fix Easter typos",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1026"
+      },
+      {
+        "number": 1017,
+        "title": "Fix failing build by removing broken mirror in README.rst",
+        "html_url": "https://github.com/dateutil/dateutil/pull/1017"
+      },
+      {
+        "number": 994,
+        "title": "Parser (and other) documentation fixes",
+        "html_url": "https://github.com/dateutil/dateutil/pull/994"
+      },
+      {
+        "number": 993,
+        "title": "Fix custom repr for ParserError",
+        "html_url": "https://github.com/dateutil/dateutil/pull/993"
+      },
+      {
+        "number": 987,
+        "title": "Fix TypeError in parser's error-wrapping logic",
+        "html_url": "https://github.com/dateutil/dateutil/pull/987"
+      }
+    ],
+    "arrow": [
+      {
+        "number": 1239,
+        "title": "Fix linting",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1239"
+      },
+      {
+        "number": 1224,
+        "title": "fix humanize month limits",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1224"
+      },
+      {
+        "number": 1172,
+        "title": "fix: adding persian names of months and month-abbreviations and day-abbreviations in Gregorian calendar",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1172"
+      },
+      {
+        "number": 1171,
+        "title": "Fix type signature of Arrow.__getattr__",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1171"
+      },
+      {
+        "number": 1163,
+        "title": "Fix failing builds and add read the docs configuration",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1163"
+      },
+      {
+        "number": 1123,
+        "title": "Fix hungarian locale",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1123"
+      },
+      {
+        "number": 1114,
+        "title": "Fix GH Actions failing due to a change in Sphinx.",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1114"
+      },
+      {
+        "number": 1107,
+        "title": "Fix failing CI lint task",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1107"
+      },
+      {
+        "number": 1091,
+        "title": "Fix issues and add tests for Danish language",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1091"
+      },
+      {
+        "number": 1074,
+        "title": "Fix ordinals for norwegian languages",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1074"
+      },
+      {
+        "number": 1086,
+        "title": "Fix outdated Python 2 print in docs",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1086"
+      },
+      {
+        "number": 1051,
+        "title": "Fix typos",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1051"
+      },
+      {
+        "number": 1045,
+        "title": "Fix pypy CI issues and begin testing against Python 3.10",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1045"
+      },
+      {
+        "number": 1042,
+        "title": "Fixing plural of years and days in Hebrew",
+        "html_url": "https://github.com/arrow-py/arrow/pull/1042"
+      },
+      {
+        "number": 986,
+        "title": "Fix floats appearing in Humanize output for locales that override _format_timeframe",
+        "html_url": "https://github.com/arrow-py/arrow/pull/986"
+      },
+      {
+        "number": 968,
+        "title": "Fix multiple bugs in arrow.get() tzinfo kwarg handling",
+        "html_url": "https://github.com/arrow-py/arrow/pull/968"
+      },
+      {
+        "number": 935,
+        "title": "Swedish locale fix",
+        "html_url": "https://github.com/arrow-py/arrow/pull/935"
+      },
+      {
+        "number": 931,
+        "title": "Fix overflow on 32-bit Linux systems",
+        "html_url": "https://github.com/arrow-py/arrow/pull/931"
+      },
+      {
+        "number": 922,
+        "title": "Fix German time frames",
+        "html_url": "https://github.com/arrow-py/arrow/pull/922"
+      },
+      {
+        "number": 905,
+        "title": "Fix linting CI and tweak is_between tests",
+        "html_url": "https://github.com/arrow-py/arrow/pull/905"
+      },
+      {
+        "number": 882,
+        "title": "Fix MAX_TIMESTAMP on Windows",
+        "html_url": "https://github.com/arrow-py/arrow/pull/882"
+      },
+      {
+        "number": 865,
+        "title": "Fix french locale",
+        "html_url": "https://github.com/arrow-py/arrow/pull/865"
+      },
+      {
+        "number": 844,
+        "title": "Fix range behaviour at end of month/quarter/year frames (#842)",
+        "html_url": "https://github.com/arrow-py/arrow/pull/844"
+      },
+      {
+        "number": 805,
+        "title": "Fix intermittent regression test failure",
+        "html_url": "https://github.com/arrow-py/arrow/pull/805"
+      },
+      {
+        "number": 823,
+        "title": "Fix arrow.get functionality when weekday is parsed alone",
+        "html_url": "https://github.com/arrow-py/arrow/pull/823"
+      },
+      {
+        "number": 806,
+        "title": "Attempt fix at CI",
+        "html_url": "https://github.com/arrow-py/arrow/pull/806"
+      }
+    ],
+    "attrs": [],
+    "rich": [
+      {
+        "number": 3941,
+        "title": "Fix typing for save_html, save_text, save_svg to accept PathLike",
+        "html_url": "https://github.com/Textualize/rich/pull/3941"
+      },
+      {
+        "number": 3698,
+        "title": "docs: fix search not working",
+        "html_url": "https://github.com/Textualize/rich/pull/3698"
+      },
+      {
+        "number": 1963,
+        "title": "Fix tests",
+        "html_url": "https://github.com/Textualize/rich/pull/1963"
+      },
+      {
+        "number": 2820,
+        "title": "fix for empty dataclass",
+        "html_url": "https://github.com/Textualize/rich/pull/2820"
+      },
+      {
+        "number": 2246,
+        "title": "Render height fix",
+        "html_url": "https://github.com/Textualize/rich/pull/2246"
+      },
+      {
+        "number": 2657,
+        "title": "fix for locals max length",
+        "html_url": "https://github.com/Textualize/rich/pull/2657"
+      },
+      {
+        "number": 1920,
+        "title": "Fix repr highlighter",
+        "html_url": "https://github.com/Textualize/rich/pull/1920"
+      },
+      {
+        "number": 2804,
+        "title": "Fix duplicate progress output in Jupyter",
+        "html_url": "https://github.com/Textualize/rich/pull/2804"
+      },
+      {
+        "number": 4006,
+        "title": "fix for infinite loop in split_graphemes",
+        "html_url": "https://github.com/Textualize/rich/pull/4006"
+      },
+      {
+        "number": 3953,
+        "title": "Fix ZWJ and edge cases",
+        "html_url": "https://github.com/Textualize/rich/pull/3953"
+      },
+      {
+        "number": 3944,
+        "title": "fix fonts",
+        "html_url": "https://github.com/Textualize/rich/pull/3944"
+      },
+      {
+        "number": 3828,
+        "title": "Fix Two Typos",
+        "html_url": "https://github.com/Textualize/rich/pull/3828"
+      },
+      {
+        "number": 3938,
+        "title": "fix background style with soft wrap",
+        "html_url": "https://github.com/Textualize/rich/pull/3938"
+      },
+      {
+        "number": 3882,
+        "title": "Fix raw markup printed on prompt errors sometimes",
+        "html_url": "https://github.com/Textualize/rich/pull/3882"
+      },
+      {
+        "number": 3935,
+        "title": "fix for padding width",
+        "html_url": "https://github.com/Textualize/rich/pull/3935"
+      },
+      {
+        "number": 3915,
+        "title": "Fix IPython silently ignoring console instance passed to `pretty.install`",
+        "html_url": "https://github.com/Textualize/rich/pull/3915"
+      },
+      {
+        "number": 2002,
+        "title": "Fixes Pretty.__measure__ not respecting expand_all",
+        "html_url": "https://github.com/Textualize/rich/pull/2002"
+      },
+      {
+        "number": 2631,
+        "title": "Fix typos",
+        "html_url": "https://github.com/Textualize/rich/pull/2631"
+      },
+      {
+        "number": 2463,
+        "title": "fix invalid escapes",
+        "html_url": "https://github.com/Textualize/rich/pull/2463"
+      },
+      {
+        "number": 2772,
+        "title": "Fix typos",
+        "html_url": "https://github.com/Textualize/rich/pull/2772"
+      },
+      {
+        "number": 1950,
+        "title": "Markup escaping fixes",
+        "html_url": "https://github.com/Textualize/rich/pull/1950"
+      },
+      {
+        "number": 2262,
+        "title": "fix for default background in svg export",
+        "html_url": "https://github.com/Textualize/rich/pull/2262"
+      },
+      {
+        "number": 3692,
+        "title": "fix for null tb_offset",
+        "html_url": "https://github.com/Textualize/rich/pull/3692"
+      },
+      {
+        "number": 3731,
+        "title": "fix(logging): fix tracebacks_code_width type hint",
+        "html_url": "https://github.com/Textualize/rich/pull/3731"
+      },
+      {
+        "number": 3772,
+        "title": "Fix traceback recursion",
+        "html_url": "https://github.com/Textualize/rich/pull/3772"
+      },
+      {
+        "number": 3420,
+        "title": "fix(console): fix selective enabling of highlighting",
+        "html_url": "https://github.com/Textualize/rich/pull/3420"
+      }
+    ],
+    "hypothesis": [],
+    "lxml": [
+      {
+        "number": 591,
+        "title": "Make the generated etree.c independent of PYTHONHASHSEED and fix a base URL leak of resolvers",
+        "html_url": "https://github.com/lxml/lxml/pull/591"
+      },
+      {
+        "number": 555,
+        "title": "Fix Windows library compiler mismatches",
+        "html_url": "https://github.com/lxml/lxml/pull/555"
+      },
+      {
+        "number": 545,
+        "title": "fix(html): select matching option in fill_form for single-valued select",
+        "html_url": "https://github.com/lxml/lxml/pull/545"
+      },
+      {
+        "number": 546,
+        "title": "Pypy3.12 fixes",
+        "html_url": "https://github.com/lxml/lxml/pull/546"
+      },
+      {
+        "number": 542,
+        "title": "Fix soupparser performance issues",
+        "html_url": "https://github.com/lxml/lxml/pull/542"
+      },
+      {
+        "number": 492,
+        "title": "fix: htmldiff with proper error handling.",
+        "html_url": "https://github.com/lxml/lxml/pull/492"
+      },
+      {
+        "number": 494,
+        "title": "Fix various docstring formatting issues and update tutorial for Sphinx",
+        "html_url": "https://github.com/lxml/lxml/pull/494"
+      },
+      {
+        "number": 489,
+        "title": "Fix typos and grammar errors across documentation",
+        "html_url": "https://github.com/lxml/lxml/pull/489"
+      },
+      {
+        "number": 473,
+        "title": "Fix `test_wrap_html` with the latest Python HTMLParser",
+        "html_url": "https://github.com/lxml/lxml/pull/473"
+      },
+      {
+        "number": 470,
+        "title": "fix: setuptools deprecation warning",
+        "html_url": "https://github.com/lxml/lxml/pull/470"
+      },
+      {
+        "number": 467,
+        "title": "Fix expected messages for XPath namespace errors",
+        "html_url": "https://github.com/lxml/lxml/pull/467"
+      },
+      {
+        "number": 436,
+        "title": "docs: fix defusedxml link",
+        "html_url": "https://github.com/lxml/lxml/pull/436"
+      },
+      {
+        "number": 423,
+        "title": "Fix `KeyError` in `Schematron` When Handling Missing or Invalid Namespace Prefixes",
+        "html_url": "https://github.com/lxml/lxml/pull/423"
+      },
+      {
+        "number": 416,
+        "title": "Build: fix Makefile to work on systems without `which(1)`",
+        "html_url": "https://github.com/lxml/lxml/pull/416"
+      },
+      {
+        "number": 407,
+        "title": "Fix test_elementtree with Expat 2.6.0",
+        "html_url": "https://github.com/lxml/lxml/pull/407"
+      },
+      {
+        "number": 373,
+        "title": "fix invalid escape sequences",
+        "html_url": "https://github.com/lxml/lxml/pull/373"
+      },
+      {
+        "number": 374,
+        "title": "Fix CI caching/upload with STATIC_DEPS",
+        "html_url": "https://github.com/lxml/lxml/pull/374"
+      },
+      {
+        "number": 370,
+        "title": "Fix crash due to order of initialization for threading on Windows with shared libxml2 2.11.4",
+        "html_url": "https://github.com/lxml/lxml/pull/370"
+      },
+      {
+        "number": 365,
+        "title": "Fix build failed on windows server 2022",
+        "html_url": "https://github.com/lxml/lxml/pull/365"
+      },
+      {
+        "number": 359,
+        "title": "Fix wheel building for ARM Mac",
+        "html_url": "https://github.com/lxml/lxml/pull/359"
+      },
+      {
+        "number": 340,
+        "title": "Fix inheritance in lxml.html",
+        "html_url": "https://github.com/lxml/lxml/pull/340"
+      },
+      {
+        "number": 334,
+        "title": "Fix typos",
+        "html_url": "https://github.com/lxml/lxml/pull/334"
+      },
+      {
+        "number": 331,
+        "title": "Fix arch variable reference error in buildlibxml.py for older python versions",
+        "html_url": "https://github.com/lxml/lxml/pull/331"
+      },
+      {
+        "number": 318,
+        "title": "Fix banner layout",
+        "html_url": "https://github.com/lxml/lxml/pull/318"
+      },
+      {
+        "number": 307,
+        "title": "Makefile: fix double quotes",
+        "html_url": "https://github.com/lxml/lxml/pull/307"
+      },
+      {
+        "number": 292,
+        "title": "Fix some typos in comments (found by codespell)",
+        "html_url": "https://github.com/lxml/lxml/pull/292"
+      }
+    ],
+    "beautifulsoup4": [],
+    "PyYAML": [
+      {
+        "number": 580,
+        "title": "Fix typos",
+        "html_url": "https://github.com/yaml/pyyaml/pull/580"
+      },
+      {
+        "number": 564,
+        "title": "Various setup fixes",
+        "html_url": "https://github.com/yaml/pyyaml/pull/564"
+      },
+      {
+        "number": 497,
+        "title": "Fix yaml11 float resolver for '.'",
+        "html_url": "https://github.com/yaml/pyyaml/pull/497"
+      },
+      {
+        "number": 480,
+        "title": "Fix stub compat with older pyyaml versions that may unwittingly load it",
+        "html_url": "https://github.com/yaml/pyyaml/pull/480"
+      },
+      {
+        "number": 378,
+        "title": "Fix compatibility with Jython",
+        "html_url": "https://github.com/yaml/pyyaml/pull/378"
+      },
+      {
+        "number": 472,
+        "title": "Potential fix for #420",
+        "html_url": "https://github.com/yaml/pyyaml/pull/472"
+      },
+      {
+        "number": 354,
+        "title": "Fix appveyor.yml to use libyaml tag not branch",
+        "html_url": "https://github.com/yaml/pyyaml/pull/354"
+      },
+      {
+        "number": 270,
+        "title": "fix typos and stylistic nit",
+        "html_url": "https://github.com/yaml/pyyaml/pull/270"
+      },
+      {
+        "number": 161,
+        "title": "Fix handling of __slots__",
+        "html_url": "https://github.com/yaml/pyyaml/pull/161"
+      },
+      {
+        "number": 351,
+        "title": "Fix reader for Unicode code points over 0xFFFF",
+        "html_url": "https://github.com/yaml/pyyaml/pull/351"
+      },
+      {
+        "number": 329,
+        "title": "Fix for Python 3.10",
+        "html_url": "https://github.com/yaml/pyyaml/pull/329"
+      },
+      {
+        "number": 279,
+        "title": "A more flexible fix for custom tag constructors",
+        "html_url": "https://github.com/yaml/pyyaml/pull/279"
+      },
+      {
+        "number": 276,
+        "title": "Fix logic for quoting special characters",
+        "html_url": "https://github.com/yaml/pyyaml/pull/276"
+      }
+    ],
+    "toml": [
+      {
+        "number": 410,
+        "title": "Support pickle for TomlTz. Fix #407",
+        "html_url": "https://github.com/uiri/toml/pull/410"
+      },
+      {
+        "number": 379,
+        "title": "Fix typos in CONTRIBUTING",
+        "html_url": "https://github.com/uiri/toml/pull/379"
+      },
+      {
+        "number": 330,
+        "title": "Fix #287: Broken quoted section name starts with dot",
+        "html_url": "https://github.com/uiri/toml/pull/330"
+      },
+      {
+        "number": 309,
+        "title": "Fix #308: Add __deepcopy__ method to the `tz.TomlTz` class",
+        "html_url": "https://github.com/uiri/toml/pull/309"
+      },
+      {
+        "number": 266,
+        "title": "Fix the issue where the parser fails on time attr with no space after =",
+        "html_url": "https://github.com/uiri/toml/pull/266"
+      },
+      {
+        "number": 264,
+        "title": "Fix #239: Handle arrays of multiline strings",
+        "html_url": "https://github.com/uiri/toml/pull/264"
+      },
+      {
+        "number": 262,
+        "title": "Fix #258: Fix bad syntax handling",
+        "html_url": "https://github.com/uiri/toml/pull/262"
+      },
+      {
+        "number": 224,
+        "title": "Fix loading values when a line has \" }\" after a boolean",
+        "html_url": "https://github.com/uiri/toml/pull/224"
+      },
+      {
+        "number": 225,
+        "title": "Fix ResourceWarning: unclosed file in test_api.py",
+        "html_url": "https://github.com/uiri/toml/pull/225"
+      },
+      {
+        "number": 184,
+        "title": "Fix Python 3.7 travis configuration",
+        "html_url": "https://github.com/uiri/toml/pull/184"
+      },
+      {
+        "number": 219,
+        "title": "Fix #209: Perform proper escaping on quoted keys",
+        "html_url": "https://github.com/uiri/toml/pull/219"
+      },
+      {
+        "number": 220,
+        "title": "Fix #205: Bug in array of nested inline tables",
+        "html_url": "https://github.com/uiri/toml/pull/220"
+      },
+      {
+        "number": 218,
+        "title": "Fix #217: dumps unable to detect circular refs",
+        "html_url": "https://github.com/uiri/toml/pull/218"
+      },
+      {
+        "number": 213,
+        "title": "Fix a deprecation warning",
+        "html_url": "https://github.com/uiri/toml/pull/213"
+      },
+      {
+        "number": 210,
+        "title": "Fix 206: Bug relating to escaped quotes in quoted keys",
+        "html_url": "https://github.com/uiri/toml/pull/210"
+      },
+      {
+        "number": 128,
+        "title": "Fix #100: track position while parsing for better errors",
+        "html_url": "https://github.com/uiri/toml/pull/128"
+      },
+      {
+        "number": 131,
+        "title": "fix inline table formatting (close uiri/toml#130)",
+        "html_url": "https://github.com/uiri/toml/pull/131"
+      },
+      {
+        "number": 22,
+        "title": "Fix issue in nested objects",
+        "html_url": "https://github.com/uiri/toml/pull/22"
+      }
+    ],
+    "tomli": [
+      {
+        "number": 24,
+        "title": "FIX: Raise `TOMLDecodeError` if overwriting nested inline tables from…",
+        "html_url": "https://github.com/hukkin/tomli/pull/24"
+      },
+      {
+        "number": 315,
+        "title": "Fix flake8-builtins error",
+        "html_url": "https://github.com/hukkin/tomli/pull/315"
+      },
+      {
+        "number": 232,
+        "title": "Fix GitHub Actions badge",
+        "html_url": "https://github.com/hukkin/tomli/pull/232"
+      },
+      {
+        "number": 35,
+        "title": "FIX: Error type when overwriting implicitly in an inline table",
+        "html_url": "https://github.com/hukkin/tomli/pull/35"
+      },
+      {
+        "number": 25,
+        "title": "Fix test data string encoding",
+        "html_url": "https://github.com/hukkin/tomli/pull/25"
+      },
+      {
+        "number": 22,
+        "title": "FIX: Three odd cases",
+        "html_url": "https://github.com/hukkin/tomli/pull/22"
+      },
+      {
+        "number": 21,
+        "title": "Fix date of running benchmark",
+        "html_url": "https://github.com/hukkin/tomli/pull/21"
+      }
+    ]
+  },
+  "title_skipped": [
+    {
+      "library": "click",
+      "repo": "pallets/click",
+      "number": 3685,
+      "title": "Fix `sdist` include to ship `CHANGES.md` after changelog rename",
+      "pr_url": "https://github.com/pallets/click/pull/3685",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 6806,
+      "title": "Fix typo in documentation for verify",
+      "pr_url": "https://github.com/psf/requests/pull/6806",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 7371,
+      "title": "Fix typo discovered by codespell",
+      "pr_url": "https://github.com/psf/requests/pull/7371",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 6581,
+      "title": "fix docstring typo: a -> as",
+      "pr_url": "https://github.com/psf/requests/pull/6581",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 3703,
+      "title": "docs/ssl: fix typo",
+      "pr_url": "https://github.com/encode/httpx/pull/3703",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 3519,
+      "title": "fix typo",
+      "pr_url": "https://github.com/encode/httpx/pull/3519",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 3112,
+      "title": "fix docs basic authentication typo",
+      "pr_url": "https://github.com/encode/httpx/pull/3112",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 3124,
+      "title": "Fix broken links in docs/contributing.md and CHANGELOG.md",
+      "pr_url": "https://github.com/encode/httpx/pull/3124",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 2830,
+      "title": "fix a typo in docs/logging.md",
+      "pr_url": "https://github.com/encode/httpx/pull/2830",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 2711,
+      "title": "Update changelog with WSGITransport SERVER_PROTOCOL fix",
+      "pr_url": "https://github.com/encode/httpx/pull/2711",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "number": 14375,
+      "title": "Fix possessive typo in pipeline docstring",
+      "pr_url": "https://github.com/pydantic/pydantic/pull/14375",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "number": 14226,
+      "title": "Fix typo in `ErrorTypeDefaults` comment",
+      "pr_url": "https://github.com/pydantic/pydantic/pull/14226",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1819,
+      "title": "Docs: Fix small error about whitespace control",
+      "pr_url": "https://github.com/pallets/jinja/pull/1819",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1881,
+      "title": "fix a typo in docs/templates.rst",
+      "pr_url": "https://github.com/pallets/jinja/pull/1881",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1911,
+      "title": "Fix typo on filter name",
+      "pr_url": "https://github.com/pallets/jinja/pull/1911",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1685,
+      "title": "Fix typo in docs/api/#custom-tests",
+      "pr_url": "https://github.com/pallets/jinja/pull/1685",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1548,
+      "title": "Fix little typo in docstring",
+      "pr_url": "https://github.com/pallets/jinja/pull/1548",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5262,
+      "title": "docs: fix wrong spelling of JS method .innerHTML",
+      "pr_url": "https://github.com/pallets/flask/pull/5262",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5829,
+      "title": "Docs typo/markup fixes",
+      "pr_url": "https://github.com/pallets/flask/pull/5829",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5650,
+      "title": "Fix typo in the docs",
+      "pr_url": "https://github.com/pallets/flask/pull/5650",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5618,
+      "title": "Fix the issue link in the Flask 3.0.1 Changelog in the send_file argu…",
+      "pr_url": "https://github.com/pallets/flask/pull/5618",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5609,
+      "title": "Fix typo in the changelog",
+      "pr_url": "https://github.com/pallets/flask/pull/5609",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5180,
+      "title": "fix typo in errorhandling doc",
+      "pr_url": "https://github.com/pallets/flask/pull/5180",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5037,
+      "title": "Fix typo in appfactories.rst code block",
+      "pr_url": "https://github.com/pallets/flask/pull/5037",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 4835,
+      "title": "fix typo in quickstart",
+      "pr_url": "https://github.com/pallets/flask/pull/4835",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 3129,
+      "title": "fix trailing whitespace in WWW-Authenticate bearer",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/3129",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 3012,
+      "title": "fix docstring typo",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/3012",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 2698,
+      "title": "Fix typo: \"serve crash\" -> \"server crash\"",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/2698",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 2568,
+      "title": "Bump pytest xprocess to latest version and fix issue with junk binary data to log streams",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/2568",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2881,
+      "title": "Fix usage of :cve: role in changelog",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2881",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2838,
+      "title": "Docs fix tuple spelling mistake",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2838",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2807,
+      "title": "Fix typo in example",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2807",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2749,
+      "title": "Fix heading underlines in changelog to be consistent",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2749",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1585,
+      "title": "Fix a misnamed changelog fragment and clean up the tz CI script",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1585",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1461,
+      "title": "Fix line endings on changelog file",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1461",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1424,
+      "title": "Fix: bump six version",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1424",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1213,
+      "title": "Fix typo",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1213",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1148,
+      "title": "Fix typo discovered by codespell",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1148",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1142,
+      "title": "Fix typo in RELEASING steps",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1142",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 986,
+      "title": "Fix simple typo: negilible -> negligible",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/986",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "arrow",
+      "repo": "arrow-py/arrow",
+      "number": 1121,
+      "title": "Fix typo in Italian locale, update Romansh locale",
+      "pr_url": "https://github.com/arrow-py/arrow/pull/1121",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "arrow",
+      "repo": "arrow-py/arrow",
+      "number": 901,
+      "title": "Fix simple docs typo, inpute -> input",
+      "pr_url": "https://github.com/arrow-py/arrow/pull/901",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "rich",
+      "repo": "Textualize/rich",
+      "number": 2325,
+      "title": "Fix typo in examples/downloader.py",
+      "pr_url": "https://github.com/Textualize/rich/pull/2325",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "rich",
+      "repo": "Textualize/rich",
+      "number": 3718,
+      "title": "fix(panel): fix title missing panel background",
+      "pr_url": "https://github.com/Textualize/rich/pull/3718",
+      "reason": "excluded_prior_study"
+    },
+    {
+      "library": "lxml",
+      "repo": "lxml/lxml",
+      "number": 504,
+      "title": "Fix typo: `type annotions` -> `type annotations` in PEP 560 comments",
+      "pr_url": "https://github.com/lxml/lxml/pull/504",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "lxml",
+      "repo": "lxml/lxml",
+      "number": 400,
+      "title": "Typo fixes",
+      "pr_url": "https://github.com/lxml/lxml/pull/400",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "PyYAML",
+      "repo": "yaml/pyyaml",
+      "number": 553,
+      "title": "Fix spelling of “hexadecimal”",
+      "pr_url": "https://github.com/yaml/pyyaml/pull/553",
+      "reason": "title_not_behavior"
+    },
+    {
+      "library": "PyYAML",
+      "repo": "yaml/pyyaml",
+      "number": 309,
+      "title": "Fix up small typo",
+      "pr_url": "https://github.com/yaml/pyyaml/pull/309",
+      "reason": "title_not_behavior"
+    }
+  ],
+  "examined": [
+    {
+      "id": "click-3764",
+      "library": "click",
+      "repo": "pallets/click",
+      "number": 3764,
+      "title": "Fix error reporting on Windows when an error is raised in the pager ",
+      "pr_url": "https://github.com/pallets/click/pull/3764",
+      "parent_sha": "150d1071d69c5cdad7de78590013ffe56cf9e3bb",
+      "fix_sha": "fc5c7f45da0a4443f60ba2d322fe4bf829977739",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/click/issues/3739",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "requests-7309",
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 7309,
+      "title": "Fix malformed value parsing for Content-Type",
+      "pr_url": "https://github.com/psf/requests/pull/7309",
+      "parent_sha": "bc7dd0fc4d56e808bcdd85ac2d797b3107c89259",
+      "fix_sha": "f0198e6dfc431a2293dc16e1b1e8fcddc910a7f3",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/psf/requests/issues/6646",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "httpx-2669",
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 2669,
+      "title": "Fix exception suppression in asgi transport",
+      "pr_url": "https://github.com/encode/httpx/pull/2669",
+      "parent_sha": "f9abbbbb4898cac96420e5c5b9d34036a94d46bf",
+      "fix_sha": "a682f6f1c7f1c5e10c66ae5bef139aea37ef0c4e",
+      "quote": "Can be set to `False` for use cases such as testing the content of a client 500 response.",
+      "quote_path": "httpx/_transports/asgi.py",
+      "behavior_quote": "If httpx client uses asgi transport with `raise_app_exceptions=False` and response is not complete, exception is still raised.",
+      "issue_url": null,
+      "decision": "include",
+      "reason": "parent_sentence_states_obligation",
+      "link": "shared_token",
+      "tokens": [
+        "q:false"
+      ],
+      "qualname": "ASGITransport",
+      "parent_url": "https://github.com/encode/httpx/blob/f9abbbbb4898cac96420e5c5b9d34036a94d46bf/httpx/_transports/asgi.py",
+      "file_sha256": "94a00bfba761c6a4a7640d9f316b63f8ca244932338e7c306b70d3924a1fe5c1"
+    },
+    {
+      "id": "pydantic-14201",
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "number": 14201,
+      "title": "Fix statements that never run inside `pytest.raises()` blocks",
+      "pr_url": "https://github.com/pydantic/pydantic/pull/14201",
+      "parent_sha": "12edde5adebc13b74b45e11e966ddadfc99f8fa1",
+      "fix_sha": "577aa83f5075bff3bef0ffa119ef141675a44822",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "not_a_behavior_repair"
+    },
+    {
+      "id": "pytest-14630",
+      "library": "pytest",
+      "repo": "pytest-dev/pytest",
+      "number": 14630,
+      "title": "fix: iter_markers/get_closest_marker returns correct closest MRO marker (#14329)",
+      "pr_url": "https://github.com/pytest-dev/pytest/pull/14630",
+      "parent_sha": "6665a79fb9a6553ce4e1be5574c21a9e3b769eec",
+      "fix_sha": "9255aa01e48f47be636987293471a5b102d78c26",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pytest-dev/pytest/issues/14332",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "jinja2-1367",
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1367,
+      "title": "Fix incorrect docs - line statements have no default",
+      "pr_url": "https://github.com/pallets/jinja/pull/1367",
+      "parent_sha": "eaf0cca37baddfdbd065924194a948199186f397",
+      "fix_sha": "4a941cab0ddff1ce58f4c6634e22a7659fd0648b",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "flask-5136",
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 5136,
+      "title": "Fix wrong FormData.append syntax on javascript.rst",
+      "pr_url": "https://github.com/pallets/flask/pull/5136",
+      "parent_sha": "b80baaf35985a9a48f2db903a21b6ee7e7cc7340",
+      "fix_sha": "55332be325a9f1a5882a309951f1f7db510036dd",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/flask/issues/5135",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "werkzeug-3050",
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 3050,
+      "title": "Fix invalid exception handling in the URL Routing docs",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/3050",
+      "parent_sha": "22e00851b37fa232711f036c85d06508e729e15b",
+      "fix_sha": "94cdca241c09675821ca7b5ceecceb024fbae28b",
+      "quote": "def application(environ, start_response): urls = url_map.bind_to_environ(environ) try: endpoint, args = urls.match() except HTTPException, e: return e(environ, start_response) start_response('200 OK', [('Content-Type', 'text/plain')]) return [f'Rule points to {endpoint!r} with arguments {args!r}'.encode()]",
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "parent_sentence_absent_from_fix",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "marshmallow-2792",
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2792,
+      "title": "Fix handling data_key in ValidationErrors raised in schema validators",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2792",
+      "parent_sha": "a578ed23092bd558acfbd9cd09a164108689326d",
+      "fix_sha": "9f751e1cef943e2ca1a77f93d3483b4a171d4303",
+      "quote": "If `None`, the value for `self.many` is used.",
+      "quote_path": "src/marshmallow/schema.py",
+      "behavior_quote": "def validate_restricted_permission2(self, data, **kwargs) -> None:",
+      "issue_url": "https://github.com/marshmallow-code/marshmallow/issues/2170",
+      "decision": "include",
+      "reason": "parent_sentence_states_obligation",
+      "link": "shared_token",
+      "tokens": [
+        "q:none"
+      ],
+      "qualname": "Schema.validate",
+      "parent_url": "https://github.com/marshmallow-code/marshmallow/blob/a578ed23092bd558acfbd9cd09a164108689326d/src/marshmallow/schema.py",
+      "file_sha256": "4c0df4fed5e3b7c055ae336c156e93f5a3db4201f60853ad7a29b3ee9876ec63"
+    },
+    {
+      "id": "jsonschema-1562",
+      "library": "jsonschema",
+      "repo": "python-jsonschema/jsonschema",
+      "number": 1562,
+      "title": "Fix a docs linkcheck failure",
+      "pr_url": "https://github.com/python-jsonschema/jsonschema/pull/1562",
+      "parent_sha": "eda977904c0205be337ede3865834b50c50d5f24",
+      "fix_sha": "75730ecaaf644e70d0e480af7ac6716f7df06e53",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "python-dateutil-1667",
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1667,
+      "title": "Fix dst() for zones that end in permanent DST",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1667",
+      "parent_sha": "a78cbd81d5d03b5f126eb36edb92bca78972c804",
+      "fix_sha": "2283058cc0a0743efc2b5b835f4486c6ebcfc0f5",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "arrow-1264",
+      "library": "arrow",
+      "repo": "arrow-py/arrow",
+      "number": 1264,
+      "title": "Revert \"Fix humanize reporting 'a month' for 16-day differences\"",
+      "pr_url": "https://github.com/arrow-py/arrow/pull/1264",
+      "parent_sha": "b423717da81aaf8117313b4b377efaa6413a9639",
+      "fix_sha": "2224255c4acc594d734cef0bbc83360452a67983",
+      "quote": ":param only_distance: (optional) returns only time difference eg: \"11 seconds\" without \"in\" or \"ago\" part.",
+      "quote_path": "arrow/arrow.py",
+      "behavior_quote": "Revert \"Fix humanize reporting 'a month' for 16-day differences\"",
+      "issue_url": "https://github.com/arrow-py/arrow/issues/1242",
+      "decision": "include",
+      "reason": "parent_sentence_states_obligation",
+      "link": "shared_token",
+      "tokens": [
+        "str:in"
+      ],
+      "qualname": "Arrow.humanize",
+      "parent_url": "https://github.com/arrow-py/arrow/blob/b423717da81aaf8117313b4b377efaa6413a9639/arrow/arrow.py",
+      "file_sha256": "d171cdb553aacaa8535e73b8d59c77d9d2046a011234949047d13a677208e7cf"
+    },
+    {
+      "id": "rich-3180",
+      "library": "rich",
+      "repo": "Textualize/rich",
+      "number": 3180,
+      "title": "Fix double-width characters disappearing when wrapping",
+      "pr_url": "https://github.com/Textualize/rich/pull/3180",
+      "parent_sha": "b32e42bda00c6275d4e18dcbe298268094359549",
+      "fix_sha": "59b1aca63bf9ec69ada93af960d8b2a7bd920477",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/Textualize/rich/issues/3176",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "lxml-521",
+      "library": "lxml",
+      "repo": "lxml/lxml",
+      "number": 521,
+      "title": "Fix bare except: use specific exception types in Python scripts",
+      "pr_url": "https://github.com/lxml/lxml/pull/521",
+      "parent_sha": "56a851bb1446dcc0a0ec75fbc5e8b84e0b28d33f",
+      "fix_sha": "8718d5da5c481a045060bb5d9a60229a4a086c8e",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "pyyaml-556",
+      "library": "PyYAML",
+      "repo": "yaml/pyyaml",
+      "number": 556,
+      "title": "Fix issue with representing Enum types",
+      "pr_url": "https://github.com/yaml/pyyaml/pull/556",
+      "parent_sha": "56644b3a9f80f72ed5ae3b474cef594bbb105fa5",
+      "fix_sha": "34e764fd9959513a1ce8a8ef984f15eaa0ec535a",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/yaml/pyyaml/issues/511",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "toml-433",
+      "library": "toml",
+      "repo": "uiri/toml",
+      "number": 433,
+      "title": "Fix toml-test scripts",
+      "pr_url": "https://github.com/uiri/toml/pull/433",
+      "parent_sha": "ce4f7a4ed14480171abf67c8bc80e2277e45d1d5",
+      "fix_sha": "f6e1e4c65b513544367fe88576ef1895eccded74",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "not_a_behavior_repair"
+    },
+    {
+      "id": "tomli-67",
+      "library": "tomli",
+      "repo": "hukkin/tomli",
+      "number": 67,
+      "title": "Fix exception type given invalid date or datetime",
+      "pr_url": "https://github.com/hukkin/tomli/pull/67",
+      "parent_sha": "b0691ff9c998878176cab8cf26a864ab71ae39e1",
+      "fix_sha": "8d34a6011584cfa607bd6716d34ea11a980b513a",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "click-2930",
+      "library": "click",
+      "repo": "pallets/click",
+      "number": 2930,
+      "title": "Fix flag value set when is_flag=True and type is provided",
+      "pr_url": "https://github.com/pallets/click/pull/2930",
+      "parent_sha": "011b9f9d190c71310264e6c54bae6259f5e38a9f",
+      "fix_sha": "884af5c20fdc95c9c7352df35c37273391464fb9",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/click/issues/2829",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "requests-6951",
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 6951,
+      "title": "docs: fix dead links to kenreitz.org",
+      "pr_url": "https://github.com/psf/requests/pull/6951",
+      "parent_sha": "c65c780849563c891f35ffc98d3198b71011c012",
+      "fix_sha": "7341690e842a23cf18ded0abd9229765fa88c4e2",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "httpx-3056",
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 3056,
+      "title": "Add an indent to fix wrong rendering in warning block",
+      "pr_url": "https://github.com/encode/httpx/pull/3056",
+      "parent_sha": "73e688875a3579b67eee5795839b9660a1cfe5d8",
+      "fix_sha": "d76607b112bf0bfbc79dc4dd8566101c69dbfa6e",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "predicate_not_about_recorded_difference",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "pydantic-14413",
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "number": 14413,
+      "title": "Fix backport CI job",
+      "pr_url": "https://github.com/pydantic/pydantic/pull/14413",
+      "parent_sha": "6d2a0265f568f2fc99d4470af9a4d5c9a5d237e0",
+      "fix_sha": "a055e09be88859c2fecccab699402cd95810ecca",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "not_a_behavior_repair"
+    },
+    {
+      "id": "pytest-15399",
+      "library": "pytest",
+      "repo": "pytest-dev/pytest",
+      "number": 15399,
+      "title": "[PR #15342/50234b4e backport][9.2.x] Fix startup crash on Python 3.10.0 caused by missing NodeId cache",
+      "pr_url": "https://github.com/pytest-dev/pytest/pull/15399",
+      "parent_sha": "c5a4d1418c0c7370d37772fe7ad1ebee0b207277",
+      "fix_sha": "953362ae9a9a249e0d6e695a20fb996172105fc6",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pytest-dev/pytest/issues/15342",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "jinja2-1665",
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1665,
+      "title": "Fix bug involving calling set on a template parameter within all branches of an if block",
+      "pr_url": "https://github.com/pallets/jinja/pull/1665",
+      "parent_sha": "fbc3a696c729d177340cc089531de7e2e5b6f065",
+      "fix_sha": "c8fdce1e0333f1122b244b03a48535fdd7b03d91",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/jinja/issues/1253",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "flask-6096",
+      "library": "flask",
+      "repo": "pallets/flask",
+      "number": 6096,
+      "title": "Fix `.partition(\":\")` usage on potential IPv6 addresses",
+      "pr_url": "https://github.com/pallets/flask/pull/6096",
+      "parent_sha": "514fc6b3e8402e4c646d5284e97a4f0ab50a7c4b",
+      "fix_sha": "05e9c6bd630ecf4ec0ec884b1fc7901663737bc7",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/flask/issues/6093",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "werkzeug-3299",
+      "library": "werkzeug",
+      "repo": "pallets/werkzeug",
+      "number": 3299,
+      "title": "fix `Request.application` typing",
+      "pr_url": "https://github.com/pallets/werkzeug/pull/3299",
+      "parent_sha": "fa93b5cee027bc9baadba67f21360a8a39b2317b",
+      "fix_sha": "b5c57f308465deb39bcc801017c4edde1f81d6ea",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/werkzeug/issues/3295",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "marshmallow-2902",
+      "library": "marshmallow",
+      "repo": "marshmallow-code/marshmallow",
+      "number": 2902,
+      "title": "Fix Enum field by-name lookup to only return actual members",
+      "pr_url": "https://github.com/marshmallow-code/marshmallow/pull/2902",
+      "parent_sha": "252090c7c707166cf4fcfcdc73eb4376b7bbc4b7",
+      "fix_sha": "024b5d09e9f026f0f96d220e243be69346687ce0",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "jsonschema-1444",
+      "library": "jsonschema",
+      "repo": "python-jsonschema/jsonschema",
+      "number": 1444,
+      "title": "docs: Fix misleading comment in relevance function",
+      "pr_url": "https://github.com/python-jsonschema/jsonschema/pull/1444",
+      "parent_sha": "a7277432b0f7bcd0551f6e589d30457017125df4",
+      "fix_sha": "79ae4a9f32a3e89d3ff7a5bc6210e7dca42a8062",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/python-jsonschema/jsonschema/issues/1325",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "python-dateutil-1583",
+      "library": "python-dateutil",
+      "repo": "dateutil/dateutil",
+      "number": 1583,
+      "title": "Fix yearday=366 resolving to Dec 30 instead of Dec 31 in leap years",
+      "pr_url": "https://github.com/dateutil/dateutil/pull/1583",
+      "parent_sha": "5391455e7c7839e300b63649041806fb5219432e",
+      "fix_sha": "d23ff760f8448b51579016d96f39590018445724",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "arrow-1242",
+      "library": "arrow",
+      "repo": "arrow-py/arrow",
+      "number": 1242,
+      "title": "Fix humanize reporting 'a month' for 16-day differences",
+      "pr_url": "https://github.com/arrow-py/arrow/pull/1242",
+      "parent_sha": "67ca577fb248ce9d803a9a85584b90a77ca989f0",
+      "fix_sha": "b423717da81aaf8117313b4b377efaa6413a9639",
+      "quote": ":param only_distance: (optional) returns only time difference eg: \"11 seconds\" without \"in\" or \"ago\" part.",
+      "quote_path": "arrow/arrow.py",
+      "behavior_quote": "Fix humanize reporting 'a month' for 16-day differences",
+      "issue_url": "https://github.com/arrow-py/arrow/issues/1240",
+      "decision": "include",
+      "reason": "parent_sentence_states_obligation",
+      "link": "shared_token",
+      "tokens": [
+        "str:in"
+      ],
+      "qualname": "Arrow.humanize",
+      "parent_url": "https://github.com/arrow-py/arrow/blob/67ca577fb248ce9d803a9a85584b90a77ca989f0/arrow/arrow.py",
+      "file_sha256": "bfb5dbb6ea15235c7e5bc823e440e626a35de982308b420543bb366b56fc0a58"
+    },
+    {
+      "id": "rich-1643",
+      "library": "rich",
+      "repo": "Textualize/rich",
+      "number": 1643,
+      "title": "fix detect color",
+      "pr_url": "https://github.com/Textualize/rich/pull/1643",
+      "parent_sha": "eb673d1204340738d3084ebc2e4c789a35a4e49b",
+      "fix_sha": "9ad5191913ed1d5ae3ebfd8285f0f8b36af78907",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/Textualize/rich/issues/1640",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "lxml-305",
+      "library": "lxml",
+      "repo": "lxml/lxml",
+      "number": 305,
+      "title": "Fix incorrect macOS casing",
+      "pr_url": "https://github.com/lxml/lxml/pull/305",
+      "parent_sha": "076c6740da7236ae6558436835b828da419f6476",
+      "fix_sha": "c9b38bc18f22f8a6889667115d326a8dd19edaab",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "not_a_behavior_repair"
+    },
+    {
+      "id": "pyyaml-820",
+      "library": "PyYAML",
+      "repo": "yaml/pyyaml",
+      "number": 820,
+      "title": "fix `setup.py test`, issue deprecation warning update supported Python metadata",
+      "pr_url": "https://github.com/yaml/pyyaml/pull/820",
+      "parent_sha": "a2d19c0234866dc9d4d55abf3009699c258bb72f",
+      "fix_sha": "f74f3350b530450ecd033ba5aceb334c4af867bd",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/yaml/pyyaml/issues/810",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "toml-431",
+      "library": "toml",
+      "repo": "uiri/toml",
+      "number": 431,
+      "title": "Fix #430: list index out of range",
+      "pr_url": "https://github.com/uiri/toml/pull/431",
+      "parent_sha": "7ffcfa3a08ffdbead6c814bcbb7c3fcd1f3a499d",
+      "fix_sha": "06f54ed2a063cdae04424baea0611fb5b281f82b",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "predicate_not_about_recorded_difference",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "tomli-27",
+      "library": "tomli",
+      "repo": "hukkin/tomli",
+      "number": 27,
+      "title": " FIX: Raise if escaped Unicode character is not a Unicode scalar value",
+      "pr_url": "https://github.com/hukkin/tomli/pull/27",
+      "parent_sha": "c1f87cef949b1477f574d31ce52ee4b572141328",
+      "fix_sha": "91df038c934497ed6ea197d7cb5edf6e80991137",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "not_a_behavior_repair"
+    },
+    {
+      "id": "click-2724",
+      "library": "click",
+      "repo": "pallets/click",
+      "number": 2724,
+      "title": "Fix printing of default option value to handle empty strings",
+      "pr_url": "https://github.com/pallets/click/pull/2724",
+      "parent_sha": "c021f05c838c1d0401ebc340d1de9b663c7fb578",
+      "fix_sha": "d3e3852eba45a6f7ce0ae5e02ca49106e228add6",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/click/issues/2500",
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "requests-6963",
+      "library": "requests",
+      "repo": "psf/requests",
+      "number": 6963,
+      "title": "fix CVE 2024 47081: manual url parsing leads to netloc credentials leak",
+      "pr_url": "https://github.com/psf/requests/pull/6963",
+      "parent_sha": "7bc45877a86192af77645e156eb3744f95b47dae",
+      "fix_sha": "5b4b64c3467fd7a3c03f91ee641aaa348b6bed3b",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "httpx-2667",
+      "library": "httpx",
+      "repo": "encode/httpx",
+      "number": 2667,
+      "title": "Fixes #2666: None is the default value of file for httpx.NetRCAuth",
+      "pr_url": "https://github.com/encode/httpx/pull/2667",
+      "parent_sha": "4b5a92e88e03443c2619f0905d756b159f9f0222",
+      "fix_sha": "c1cc6b2462e95b84315c67bd5aefb33df73d06c4",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/encode/httpx/issues/2665",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "pydantic-14377",
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "number": 14377,
+      "title": "Fix dynamic models example for fields with existing defaults",
+      "pr_url": "https://github.com/pydantic/pydantic/pull/14377",
+      "parent_sha": "1deb3acca0fd93166d2ee524aec87d0a296ad3d4",
+      "fix_sha": "51764787c1874a87417a817afd5c0038e961b53f",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": null,
+      "decision": "exclude",
+      "reason": "ambiguous_obligation",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "pytest-15342",
+      "library": "pytest",
+      "repo": "pytest-dev/pytest",
+      "number": 15342,
+      "title": "Fix startup crash on Python 3.10.0 caused by missing NodeId cache",
+      "pr_url": "https://github.com/pytest-dev/pytest/pull/15342",
+      "parent_sha": "fc9a7ef678f64d17f1c03b619f3842ea1d127e74",
+      "fix_sha": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pytest-dev/pytest/issues/15337",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    },
+    {
+      "id": "jinja2-1852",
+      "library": "Jinja2",
+      "repo": "pallets/jinja",
+      "number": 1852,
+      "title": "fix f-string syntax error in code generation",
+      "pr_url": "https://github.com/pallets/jinja/pull/1852",
+      "parent_sha": "48b0687e05a5466a91cd5812d604fa37ad0943b4",
+      "fix_sha": "767b23617628419ae3709ccfb02f9602ae9fe51f",
+      "quote": null,
+      "quote_path": null,
+      "behavior_quote": null,
+      "issue_url": "https://github.com/pallets/jinja/issues/1792",
+      "decision": "exclude",
+      "reason": "no_parent_sentence",
+      "link": null,
+      "tokens": null,
+      "qualname": null,
+      "parent_url": null,
+      "file_sha256": null
+    }
+  ],
+  "included_count": 4,
+  "stopped_because": "40_examined"
+}
