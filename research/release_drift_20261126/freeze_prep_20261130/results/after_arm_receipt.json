@@ -1,0 +1,1151 @@
+{
+  "label": "calibration",
+  "banner": "这是校准，不是正式结果。此处的数字不能替换正式分母，也不能用来在看见密封结局之后修改已经预注册的正式方法。本次运行没有密封结局。",
+  "preparation_not_formal_result": true,
+  "cannot_replace_formal_denominators": true,
+  "cannot_change_preregistered_method_after_sealed_outcomes": true,
+  "sealed_outcomes_used": false,
+  "method_frozen": false,
+  "methods_ranked": false,
+  "checklist_boxes_ticked": false,
+  "formal_paired_comparison_started": false,
+  "compared_arms_scored": false,
+  "new_algorithm": false,
+  "budget_limit": 3,
+  "addendum": "research/release_drift_20261126/freeze_prep_20261130/PROTOCOL_AFTER_ARM_ZH.md",
+  "addendum_commit": "7b2e502e1074d53b95581e3e59abaf45097ef748",
+  "head": "c8a0e2c0c382b43c0fb6d6301053315813379553",
+  "addendum_sha256": "5f93dedbe3ad42f7a3428b8e497cc37ad1d43ed5fc9021f46d0a33853bec5526",
+  "git_status": [],
+  "parent_python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "pin": {
+    "cpython_3_11_pin": "satisfied",
+    "executable": "/home/ubuntu/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/bin/python3.11",
+    "version": "3.11.18 (main, Nov 24 2026, 16:57:34) [Clang 23.1.3 ]",
+    "version_info": [
+      3,
+      11,
+      18
+    ],
+    "implementation": "CPython",
+    "pin_check_ran": true,
+    "random_arm_comparison_ran": false,
+    "formal_paired_comparison_started": false,
+    "sample_drawn": false,
+    "tasks": [
+      {
+        "case_id": "xlsx-column",
+        "seed": 20261126,
+        "sample_drawn": false
+      },
+      {
+        "case_id": "xlsx-duration",
+        "seed": 20261126,
+        "sample_drawn": false
+      },
+      {
+        "case_id": "babel-week",
+        "seed": 20261126,
+        "sample_drawn": false
+      },
+      {
+        "case_id": "python-slugify-1",
+        "seed": 20261126,
+        "sample_drawn": false
+      },
+      {
+        "case_id": "python-slugify-2",
+        "seed": 20261126,
+        "sample_drawn": false
+      },
+      {
+        "case_id": "python-slugify-3",
+        "seed": 20261126,
+        "sample_drawn": false
+      }
+    ],
+    "parent_python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "reason": "针脚检查进程自报 CPython 3.11。正式随机对照和四项配对比较没有运行。",
+    "notes": [
+      {
+        "command": [
+          "/home/ubuntu/.local/bin/uv",
+          "python",
+          "find",
+          "3.11"
+        ],
+        "returncode": 0,
+        "stdout": "/home/ubuntu/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11",
+        "stderr_tail": ""
+      },
+      {
+        "removed_home_shim": "/home/ubuntu/.local/bin/python3.11"
+      }
+    ],
+    "uninstall": "uv python uninstall 3.11"
+  },
+  "unidecode": {
+    "mentions": [],
+    "pins": [],
+    "unique_versions": [],
+    "exact_pin": null,
+    "conflict": false,
+    "installed": false,
+    "install_report": null,
+    "resolution": "environment-gap"
+  },
+  "outcome_prior": {
+    "source": null,
+    "admissible": false,
+    "development_preplanned_used": false,
+    "expected_outputs_are_masses": false,
+    "development_row_outcomes_used": false
+  },
+  "arithmetic_check": {
+    "label": "calibration",
+    "fixture": "protocol-tiny",
+    "case_rows_used": false,
+    "losses": [
+      0,
+      1,
+      5
+    ],
+    "actions": {
+      "violated_verified": "deliver_replacement",
+      "violated_unverified": "defer",
+      "satisfied": "deliver_current",
+      "undetermined": "deliver_current"
+    }
+  },
+  "stored_receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+  "cases": [
+    {
+      "id": "xlsx-column",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "pack_sha256": "92525f78b05000ae35a9ebad5b6533f34cc4273964e9ade9466df267edb3bcdc",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "before",
+        "requested_version": "3.3.0",
+        "observed_versions": [
+          "3.3.0",
+          "3.3.0",
+          "3.3.0"
+        ],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": true,
+          "version": "3.3.1",
+          "result_type": "dict",
+          "result": {
+            "visible": true,
+            "cell_text": ""
+          },
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "probe": {
+          "completed": true,
+          "version": "3.3.1",
+          "result_type": "dict",
+          "result": {
+            "visible": true,
+            "cell_text": ""
+          },
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": true,
+          "version": "3.3.1",
+          "result_type": "dict",
+          "result": {
+            "visible": true,
+            "cell_text": ""
+          },
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": true
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": true
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "after",
+        "requested_version": "3.3.1",
+        "observed_versions": [
+          "3.3.1",
+          "3.3.1",
+          "3.3.1"
+        ],
+        "version_matches_pack": true,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "92525f78b05000ae35a9ebad5b6533f34cc4273964e9ade9466df267edb3bcdc",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 65641,
+        "depth": 3,
+        "n_candidates": 40,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "值不是注册候选集上的规范化请求标识序列。",
+            "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+            "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+            "该键依赖开发捕获库，校准生成器不使用那些返回。"
+          ],
+          "value": [
+            2
+          ]
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "ran",
+        "signoff_ready": false,
+        "addressable": true,
+        "wrapped": false,
+        "reason": "列捕获本来就是含 visible 和 cell_text 的字典。这不是新的包裹。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": null,
+      "slugify_quality": null,
+      "signoff_ready": false,
+      "compared_to_expected": false
+    },
+    {
+      "id": "xlsx-duration",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "pack_sha256": "b710c6676b132bcb61a665481f73aa1443e8e2938d9e4df42e5df567e4800920",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "before",
+        "requested_version": "1.3.7",
+        "observed_versions": [
+          "1.3.7",
+          "1.3.7",
+          "1.3.7"
+        ],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": true,
+          "version": "1.3.8",
+          "result_type": "float",
+          "result": 1.0,
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "probe": {
+          "completed": true,
+          "version": "1.3.8",
+          "result_type": "float",
+          "result": 30.0,
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": true,
+          "version": "1.3.8",
+          "result_type": "float",
+          "result": 1.0,
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": true
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": true
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "after",
+        "requested_version": "1.3.8",
+        "observed_versions": [
+          "1.3.8",
+          "1.3.8",
+          "1.3.8"
+        ],
+        "version_matches_pack": true,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "b710c6676b132bcb61a665481f73aa1443e8e2938d9e4df42e5df567e4800920",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 259,
+        "depth": 3,
+        "n_candidates": 6,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "值不是注册候选集上的规范化请求标识序列。",
+            "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+            "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+            "该键依赖开发捕获库，校准生成器不使用那些返回。"
+          ],
+          "value": [
+            2
+          ]
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "gap",
+        "signoff_ready": false,
+        "accepted": false,
+        "addressable": false,
+        "wrapped": false,
+        "observed_type": "float",
+        "reason": "返回值仍是字符串或标量。没有包进新结构。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": null,
+      "slugify_quality": null,
+      "signoff_ready": false,
+      "compared_to_expected": false
+    },
+    {
+      "id": "babel-week",
+      "library": "Babel",
+      "label": "calibration",
+      "pack_sha256": "07c84df0db1f5b93726c63bf3aad35cd5dbaf4841862edb7ddf9f526373046c3",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "before",
+        "requested_version": "2.16.0",
+        "observed_versions": [
+          "2.16.0",
+          "2.16.0",
+          "2.16.0"
+        ],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": true,
+          "version": "2.17.0",
+          "result_type": "str",
+          "result": "2003-W24-7",
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "probe": {
+          "completed": true,
+          "version": "2.17.0",
+          "result_type": "str",
+          "result": "2003-W01-3",
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": true,
+          "version": "2.17.0",
+          "result_type": "str",
+          "result": "2003-W24-7",
+          "dependency": null,
+          "compared_to_expected": false
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": true
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": true
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "after",
+        "requested_version": "2.17.0",
+        "observed_versions": [
+          "2.17.0",
+          "2.17.0",
+          "2.17.0"
+        ],
+        "version_matches_pack": true,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "07c84df0db1f5b93726c63bf3aad35cd5dbaf4841862edb7ddf9f526373046c3",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 8421,
+        "depth": 3,
+        "n_candidates": 20,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "值不是注册候选集上的规范化请求标识序列。",
+            "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+            "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+            "该键依赖开发捕获库，校准生成器不使用那些返回。"
+          ],
+          "value": [
+            2
+          ]
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "gap",
+        "signoff_ready": false,
+        "accepted": false,
+        "addressable": false,
+        "wrapped": false,
+        "observed_type": "str",
+        "reason": "返回值仍是字符串或标量。没有包进新结构。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": null,
+      "slugify_quality": null,
+      "signoff_ready": false,
+      "compared_to_expected": false
+    },
+    {
+      "id": "python-slugify-1",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_sha256": "655512b8181b42054514572905ffb77e6bf111069daf73126c20c136199d3356",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "parent",
+        "requested_version": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+        "observed_versions": [
+          "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+          "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+          "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c"
+        ],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "probe": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": false
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": false
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "rev",
+        "requested_version": "0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8",
+        "observed_versions": [],
+        "version_matches_pack": false,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "655512b8181b42054514572905ffb77e6bf111069daf73126c20c136199d3356",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 1885,
+        "depth": 3,
+        "n_candidates": 12,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "这个案例没有 development preplanned 键。"
+          ],
+          "value": null
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "partial",
+        "signoff_ready": false,
+        "addressable": false,
+        "wrapped": false,
+        "reason": "slugify 只沿用上一份回执已经能读的现成键。本试跑不新包结构。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": {
+        "lines": [
+          {
+            "file": "setup.py",
+            "line": "install_requires = ['Unidecode>=0.04.16']"
+          },
+          {
+            "file": "requirements.txt",
+            "line": "Unidecode>=0.04.16"
+          }
+        ],
+        "exact_pin": null,
+        "fixture_pin": false,
+        "error": null
+      },
+      "slugify_quality": {
+        "fixture_pin": null,
+        "resolved_versions": [],
+        "matches_fixture_pin": false,
+        "signoff_quality_receipt": false,
+        "installed_from_fixture": false
+      },
+      "signoff_ready": false,
+      "compared_to_expected": false
+    },
+    {
+      "id": "python-slugify-2",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_sha256": "6b3bfea79f086aaae956c01702374f9bf20c7dd39e28e2f72a6a1793454917f4",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "parent",
+        "requested_version": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+        "observed_versions": [
+          "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+          "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+          "4091b444746032847ccce0d5c6a0cd5b1bb73d81"
+        ],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=a1543fe0ae019606bec660d6cf2e70a435ff29e4: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "probe": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=a1543fe0ae019606bec660d6cf2e70a435ff29e4: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=a1543fe0ae019606bec660d6cf2e70a435ff29e4: ModuleNotFoundError: No module named 'unidecode'"
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": false
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": false
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "rev",
+        "requested_version": "a1543fe0ae019606bec660d6cf2e70a435ff29e4",
+        "observed_versions": [],
+        "version_matches_pack": false,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "6b3bfea79f086aaae956c01702374f9bf20c7dd39e28e2f72a6a1793454917f4",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 1885,
+        "depth": 3,
+        "n_candidates": 12,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "这个案例没有 development preplanned 键。"
+          ],
+          "value": null
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "partial",
+        "signoff_ready": false,
+        "addressable": false,
+        "wrapped": false,
+        "reason": "slugify 只沿用上一份回执已经能读的现成键。本试跑不新包结构。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": {
+        "lines": [
+          {
+            "file": "setup.py",
+            "line": "install_requires = ['Unidecode>=0.04.16']"
+          },
+          {
+            "file": "requirements.txt",
+            "line": "Unidecode>=0.04.16"
+          }
+        ],
+        "exact_pin": null,
+        "fixture_pin": false,
+        "error": null
+      },
+      "slugify_quality": {
+        "fixture_pin": null,
+        "resolved_versions": [],
+        "matches_fixture_pin": false,
+        "signoff_quality_receipt": false,
+        "installed_from_fixture": false
+      },
+      "signoff_ready": false,
+      "compared_to_expected": false
+    },
+    {
+      "id": "python-slugify-3",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_sha256": "76282c22c6d3bb794d88339551c51032c78567f923f82c1561c47328381d22c8",
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "stored_arm": {
+        "ran": true,
+        "side": "parent",
+        "requested_version": "3d75734751b36ae14feab0d84f5d670f1d6225e3",
+        "observed_versions": [],
+        "receipt": "research/release_drift_20261126/freeze_prep_20261130/results/gaps_followup_receipt.json",
+        "reason": "上一份回执已经走完这一臂的预算脚本。"
+      },
+      "budget_enforcement": {
+        "name": "budget_enforcement",
+        "status": "ran",
+        "signoff_ready": false,
+        "live_adapter": true,
+        "shared_first": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=07155c2001580b0ec70b40f24a475baef6238aac: AttributeError: module 'slugify' has no attribute 'slugify'"
+        },
+        "probe": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=07155c2001580b0ec70b40f24a475baef6238aac: AttributeError: module 'slugify' has no attribute 'slugify'"
+        },
+        "verification": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "unregistered calibration operation"
+        },
+        "reset": {
+          "completed": false,
+          "error_type": "CalibrationCallError",
+          "error": "checked_out=07155c2001580b0ec70b40f24a475baef6238aac: AttributeError: module 'slugify' has no attribute 'slugify'"
+        },
+        "extra_events": [
+          {
+            "step": 1,
+            "purpose": "probe",
+            "completed": false
+          },
+          {
+            "step": 2,
+            "purpose": "verification",
+            "completed": false
+          },
+          {
+            "step": 3,
+            "purpose": "reset",
+            "completed": false
+          }
+        ],
+        "restore_dispatched": false,
+        "intercepted": "three additional calls already attempted",
+        "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。",
+        "arm": "rev",
+        "requested_version": "07155c2001580b0ec70b40f24a475baef6238aac",
+        "observed_versions": [],
+        "version_matches_pack": false,
+        "compared_to_expected": false
+      },
+      "both_arms_ran": true,
+      "case_row": {
+        "label": "calibration",
+        "formal_score": false,
+        "case_rows_used": false,
+        "both_arms_ran": true,
+        "evidence_sufficient": false,
+        "expected_task_loss": null,
+        "verdict": "undetermined",
+        "action": "deliver_current",
+        "transferred_verdict_called": false,
+        "reason": "空规则表不能提供已登记裁决。预期任务损失留空。"
+      },
+      "static_sequence": {
+        "name": "static_sequence",
+        "status": "partial",
+        "signoff_ready": false,
+        "check_search_parity": "passed",
+        "settings": {
+          "depth": 3,
+          "scoring_limit": null,
+          "task_pack": "76282c22c6d3bb794d88339551c51032c78567f923f82c1561c47328381d22c8",
+          "candidates": "pack-inputs",
+          "prior": "no-outcome-masses",
+          "transition": "call-budget-only",
+          "legal_actions": "public-calibration-input-or-stop",
+          "terminal_score": "freeze_guards.expected_task_loss",
+          "pruning": "none",
+          "tie_break": "fewer-calls-then-canonical-request-id"
+        },
+        "n_sequences": 1885,
+        "depth": 3,
+        "n_candidates": 12,
+        "transition_kind": "call-budget-only",
+        "outcome_transition": false,
+        "terminal_score_registered": true,
+        "sequence_scored": false,
+        "sequence_selected": false,
+        "development_preplanned": {
+          "matches_direction_gate": false,
+          "development_preplanned_used": false,
+          "failures": [
+            "这个案例没有 development preplanned 键。"
+          ],
+          "value": null
+        },
+        "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+      },
+      "registered_prior_selection": {
+        "sequence_selected": false,
+        "sequence_scored": false,
+        "loss": null,
+        "selected": null,
+        "label": "calibration",
+        "formal_score": false,
+        "reason": "没有顶层 outcome_prior。没有构造质量，也没有对序列调用 expected_task_loss。"
+      },
+      "field_address": {
+        "name": "field_address",
+        "status": "partial",
+        "signoff_ready": false,
+        "addressable": false,
+        "wrapped": false,
+        "reason": "slugify 只沿用上一份回执已经能读的现成键。本试跑不新包结构。",
+        "cross_field_invariants": [],
+        "new_wrapper": false
+      },
+      "library_unidecode_declaration": {
+        "lines": [
+          {
+            "file": "setup.py",
+            "line": "install_requires = ['Unidecode>=0.04.16']"
+          },
+          {
+            "file": "requirements.txt",
+            "line": "Unidecode>=0.04.16"
+          }
+        ],
+        "exact_pin": null,
+        "fixture_pin": false,
+        "error": null
+      },
+      "slugify_quality": {
+        "fixture_pin": null,
+        "resolved_versions": [],
+        "matches_fixture_pin": false,
+        "signoff_quality_receipt": false,
+        "installed_from_fixture": false
+      },
+      "signoff_ready": false,
+      "compared_to_expected": false
+    }
+  ],
+  "gaps": [
+    {
+      "id": "after_rev_arms",
+      "status": "partial",
+      "detail": "XlsxWriter 与 Babel 的 after 臂进入了资料包命名的版本。slugify 的 rev 已按脚本分派，但没有可签收的库版本。"
+    },
+    {
+      "id": "unidecode_pin",
+      "status": "open",
+      "detail": "公开夹具没有 Unidecode 的精确钉扎。未安装未钉扎版本。slugify 现场返回不是签收质量回执。"
+    },
+    {
+      "id": "outcome_prior",
+      "status": "partial",
+      "detail": "深度 3 的枚举和核对仍然通过。开发 preplanned 未使用。没有已登记的 outcome_prior，所以没有选出序列。"
+    },
+    {
+      "id": "case_row_loss",
+      "status": "partial",
+      "detail": "案例行进入了未定处置。预期任务损失留空，因为空规则表和缺失的三元质量不够。"
+    },
+    {
+      "id": "cpython_3_11_pin",
+      "status": "closed",
+      "detail": "针脚检查使用 /home/ubuntu/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/bin/python3.11，版本 '3.11.18 (main, Nov 24 2026, 16:57:34) [Clang 23.1.3 ]'。正式随机对照没有运行。"
+    },
+    {
+      "id": "field_addressability",
+      "status": "partial",
+      "detail": "没有新增包裹，也没有新增跨字段不变量。周历年字符串和时长档案标量仍不可寻址。"
+    }
+  ],
+  "hash_freeze_helper": {
+    "name": "hash_freeze_helper",
+    "status": "ran",
+    "signoff_ready": false,
+    "formal_checklist_ticked": false,
+    "sha256": "f7443d2963980effcbb30eff9d96ea95e0d41730e72d1c4b86e3de3dd08d617f",
+    "components": {
+      "deployable_parameters": "da960f3f215edb0f19d730be6f03c9d048e7a69d40321af7408d50e01b4d1ec2",
+      "disposition_rules": "a2fd8314da39c4eb8b5a66ac9e748e388768a6fff77816806187854a03d42aef",
+      "expectations": "a24e0c0e85270d6059b6ada8dcff5f4bf1deb6727a976b5249786ea021606f8c",
+      "task_registry": "ebd95058ce2513c930287742d63f333434682f425fb4010c36933127ea0bf5a6"
+    },
+    "input_set": [
+      "deployable_parameters",
+      "disposition_rules",
+      "expectations",
+      "task_registry"
+    ],
+    "reason": "这是校准登记的摘要，不是 11 月 30 日正式清单上的那次冻结。"
+  },
+  "entry": "research/release_drift_20261126/freeze_prep_20261130/run_after_arm.py"
+}
