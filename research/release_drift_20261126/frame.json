@@ -1,0 +1,23 @@
+{
+  "pillow": {
+    "repo": "python-pillow/Pillow",
+    "versions": ["9.5.0", "10.0.0", "10.1.0", "10.2.0", "10.3.0", "10.4.0", "11.0.0"],
+    "operations": ["PIL.Image.Image.resize", "PIL.Image.Image.convert", "PIL.ImageDraw.ImageDraw.line"],
+    "task": "根据用户明确给出的像素、模式、绘制或变换参数，交付指定输出栅格；另注册只交付该产物像素尺寸的任务。",
+    "schema": "成功返回；检查图像模式、尺寸及通道结构。像素和具体通道值为语义内容。"
+  },
+  "pandas": {
+    "repo": "pandas-dev/pandas",
+    "versions": ["1.5.3", "2.0.0", "2.1.0", "2.2.0", "2.3.0"],
+    "operations": ["Series.value_counts", "SeriesGroupBy.sum", "Series.rank"],
+    "task": "按用户请求交付键与计数、分组和或逐项排名，顺序仅在注册任务明确要求时评分；另注册只交付结果长度的任务。",
+    "schema": "成功返回 Series，显式核对长度、索引结构和索引及数值 dtype 类别；键值、统计值和次序为语义内容。"
+  },
+  "scipy": {
+    "repo": "scipy/scipy",
+    "versions": ["1.9.3", "1.10.1", "1.11.0", "1.12.0", "1.13.0", "1.14.0", "1.15.0"],
+    "operations": ["scipy.stats.rankdata", "scipy.stats.percentileofscore", "scipy.stats.kendalltau"],
+    "task": "按用户指定的缺失值、并列及统计约定，交付秩、百分位或 Kendall 统计量；另注册只交付结果形状的任务。",
+    "schema": "成功返回，检查所用公共字段、形状和数值类型类别；NaN 与有限值的替换按任务要求作为语义变化。"
+  }
+}
