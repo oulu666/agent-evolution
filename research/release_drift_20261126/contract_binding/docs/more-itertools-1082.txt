@@ -1,0 +1,12 @@
+# product_index
+Equivalent to ``list(product(*args)).index(element)``
+
+The products of *args* can be ordered lexicographically.
+:func:`product_index` computes the first index of *element* without
+computing the previous products.
+
+    >>> product_index([8, 2], range(10), range(5))
+    42
+
+``ValueError`` will be raised if the given *element* isn't in the product
+of *args*.

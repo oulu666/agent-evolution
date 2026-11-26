@@ -1,0 +1,14 @@
+# Worksheet.set_column
+Set the width, and other properties of a single column or a
+range of columns.
+
+Args:
+    first_col:   First column (zero-indexed).
+    last_col:    Last column (zero-indexed). Can be same as first_col.
+    width:       Column width. (optional).
+    cell_format: Column cell_format. (optional).
+    options:     Dict of options such as hidden and level.
+
+Returns:
+    0:  Success.
+    -1: Column number is out of worksheet bounds.

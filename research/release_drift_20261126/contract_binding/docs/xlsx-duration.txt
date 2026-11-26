@@ -1,0 +1,12 @@
+# Worksheet.write_datetime
+Write a date or time to a worksheet cell.
+
+Args:
+    row:         The cell row (zero indexed).
+    col:         The cell column (zero indexed).
+    date:        Date and/or time as a datetime object.
+    cell_format: A cell Format object.
+
+Returns:
+    0:  Success.
+    -1: Row or column is out of worksheet bounds.
