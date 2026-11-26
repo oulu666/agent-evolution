@@ -1,0 +1,30 @@
+{
+  "freeze_commit": "f0805b3742c2c5c6de728e49dd1d849cda16567b",
+  "protocol_sha256": "9d78ae6bb3d790576deb83486166db8b284c73898a98e1520db89d9979089dd3",
+  "scored": false,
+  "run_py_executed": false,
+  "decision": "insufficient_denominator",
+  "reason": "fewer_than_6_included",
+  "ranking": null,
+  "examined": 40,
+  "title_skipped": 48,
+  "mechanical_includes": 4,
+  "mechanical_include_ids": ["httpx-2669", "marshmallow-2792", "arrow-1264", "arrow-1242"],
+  "stopped_because": "40_examined",
+  "libraries_not_queued": {
+    "attrs": "PyPI GitHub URL is under the key GitHub, which the frozen field list does not read",
+    "hypothesis": "PyPI GitHub URL is under the key source; the frozen list spells Source",
+    "beautifulsoup4": "Registered homepage is https://www.crummy.com/software/BeautifulSoup/bs4/ and contains no github.com URL"
+  },
+  "not_run": [
+    {"name": "Jdoctor", "reason": "Java source in, Java expressions out. Not executed, and not ranked."},
+    {"name": "SPARK", "reason": "Not executed."},
+    {"name": "Gay et al. 2015", "reason": "Not executed."},
+    {"name": "AGORA+", "reason": "Not executed."},
+    {"name": "SpecFuzzer", "reason": "Not executed."},
+    {"name": "Hypothesis", "reason": "Not executed."}
+  ],
+  "methods_not_scored": ["status_only", "jdoctor_pattern", "bind", "sentence_grounded", "human_from_sentence", "full_output"],
+  "counts": null,
+  "note": "No parent or fix versions were installed. This sample cannot replace the ISSRE 12-group contract-binding denominator or the formal sealed four."
+}
