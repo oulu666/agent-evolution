@@ -1,0 +1,40 @@
+name: Release drift public calibration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cloud-release-drift-development.yml'
+      - 'research/release_drift_20261126/dev_parallel/run.py'
+permissions:
+  contents: read
+jobs:
+  calibration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [week, duration, column]
+    env:
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            research/release_drift_20261126
+            research/egatv_pilot
+            research/upstream_functional_witnesses.py
+            runs_upstream_functional_20261124
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python research/release_drift_20261126/dev_parallel/run.py ${{ matrix.case }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dev-${{ matrix.case }}
+          path: dev-results/*.json
+          if-no-files-found: error
