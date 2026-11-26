@@ -856,6 +856,7 @@ def _safe_members_ok(names: list[str], dest: Path) -> None:
 
 
 def download_artifact(spec: dict, dest: Path) -> Path:
+    dest.mkdir(parents=True, exist_ok=True)
     if spec.get("size") and spec["size"] > SDIST_BYTE_CAP:
         raise RuntimeError("sdist_too_large")
     archive = dest / spec["filename"]
@@ -1059,6 +1060,8 @@ def main() -> None:
                 f"  {release['version']} candidates={len(collected['candidates'])} families={collected['families']}",
                 flush=True,
             )
+        if not any(not entry.get("error") for entry in versions.values()):
+            raise SystemExit("no library archive was read; refusing to record decisions")
         screened = examine(queues, texts)
         screened["versions"] = versions
         screened["freeze_commit"] = freeze_commit()
