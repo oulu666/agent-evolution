@@ -1,0 +1,36 @@
+name: Release drift environment preflight
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cloud-release-drift-preflight.yml'
+      - 'research/release_drift_20261126/preflight.py'
+permissions:
+  contents: read
+jobs:
+  public-environments:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [pillow, pandas, scipy]
+    env:
+      PYTHONHASHSEED: '0'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: research/release_drift_20261126
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python research/release_drift_20261126/preflight.py ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preflight-${{ matrix.project }}
+          path: preflight-results/*.json
+          if-no-files-found: error
