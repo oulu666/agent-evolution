@@ -1,0 +1,733 @@
+{
+  "cloud_run": 45856732164,
+  "cloud_run_url": "https://github.com/oulu666/agent-evolution/actions/runs/45856732164",
+  "conclusion": "success",
+  "recorded_head": "421c5b715ea3f1cfc049389a43722beea29fc2d4",
+  "runner_sha256": "a1ace1f5432f363ea8a6b4e820c897e9e2f20c78b04b14258904aeea5dc083ed",
+  "artifacts": [
+    "attrs-parent",
+    "attrs-commit"
+  ],
+  "historical_repairs": 1,
+  "case": {
+    "project": "attrs",
+    "issue": 1427,
+    "pull_request": 1428,
+    "parent": "94caa57142c057ce52504cdf239ae0ed3168f9b5",
+    "commit": "937b1e232803cc4ec9b9375ef525fc57c24ec498"
+  },
+  "loss": {
+    "correct": 0,
+    "deferred": 1,
+    "wrong": 5
+  },
+  "recovery_registered": false,
+  "observations": [
+    {
+      "side": "parent",
+      "revision": "94caa57142c057ce52504cdf239ae0ed3168f9b5",
+      "task": "default",
+      "final": 100,
+      "callback": [
+        100
+      ],
+      "callback_already_wrong": false,
+      "first_ns": 349796
+    },
+    {
+      "side": "parent",
+      "revision": "94caa57142c057ce52504cdf239ae0ed3168f9b5",
+      "task": "explicit",
+      "final": 200,
+      "callback": [
+        100
+      ],
+      "callback_already_wrong": true,
+      "first_ns": 255797
+    },
+    {
+      "side": "commit",
+      "revision": "937b1e232803cc4ec9b9375ef525fc57c24ec498",
+      "task": "default",
+      "final": 100,
+      "callback": [
+        100
+      ],
+      "callback_already_wrong": false,
+      "first_ns": 405954
+    },
+    {
+      "side": "commit",
+      "revision": "937b1e232803cc4ec9b9375ef525fc57c24ec498",
+      "task": "explicit",
+      "final": 200,
+      "callback": [
+        200
+      ],
+      "callback_already_wrong": false,
+      "first_ns": 330959
+    }
+  ],
+  "by_permission": {
+    "returned_object": {
+      "situated_rows": 4,
+      "historical_repairs": 1,
+      "methods": {
+        "direct": {
+          "correct": 3,
+          "wrong": 1,
+          "deferred": 0,
+          "extra_probes": 0,
+          "loss": 5,
+          "probe_ns": 0,
+          "elapsed_ns": 56520,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "undetermined",
+              "action": "deliver_current",
+              "outcome": "wrong",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "undetermined",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        },
+        "metamorphic": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 4,
+          "loss": 1,
+          "probe_ns": 1090247,
+          "elapsed_ns": 1169170,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [
+                "default",
+                "explicit"
+              ],
+              "relation": {
+                "observed_difference": 0,
+                "expected_difference": 100
+              }
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [
+                "default",
+                "explicit"
+              ],
+              "relation": {
+                "observed_difference": 100,
+                "expected_difference": 100
+              }
+            }
+          ]
+        },
+        "eliminate": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 2,
+          "loss": 1,
+          "probe_ns": 510863,
+          "elapsed_ns": 592920,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            }
+          ]
+        },
+        "adaptive": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 2,
+          "loss": 1,
+          "probe_ns": 538664,
+          "elapsed_ns": 816525,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            }
+          ]
+        },
+        "preplanned": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 2,
+          "loss": 1,
+          "probe_ns": 854669,
+          "elapsed_ns": 1946462,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [
+                "explicit"
+              ],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "undetermined",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [
+                "explicit"
+              ],
+              "requests": [
+                "explicit"
+              ],
+              "relation": null
+            }
+          ]
+        }
+      }
+    },
+    "first_hook": {
+      "situated_rows": 4,
+      "historical_repairs": 1,
+      "methods": {
+        "direct": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 0,
+          "loss": 1,
+          "probe_ns": 0,
+          "elapsed_ns": 24227,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "violated",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        },
+        "metamorphic": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 0,
+          "loss": 1,
+          "probe_ns": 0,
+          "elapsed_ns": 17002,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "violated",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        },
+        "eliminate": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 0,
+          "loss": 1,
+          "probe_ns": 0,
+          "elapsed_ns": 28357,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "violated",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        },
+        "adaptive": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 0,
+          "loss": 1,
+          "probe_ns": 0,
+          "elapsed_ns": 18567,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "violated",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        },
+        "preplanned": {
+          "correct": 3,
+          "wrong": 0,
+          "deferred": 1,
+          "extra_probes": 0,
+          "loss": 1,
+          "probe_ns": 0,
+          "elapsed_ns": 235498,
+          "cells": [
+            {
+              "side": "parent",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "parent",
+              "task": "explicit",
+              "initial_verdict": "violated",
+              "verdict": "violated",
+              "action": "defer",
+              "outcome": "deferred",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "default",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            },
+            {
+              "side": "commit",
+              "task": "explicit",
+              "initial_verdict": "satisfied",
+              "verdict": "satisfied",
+              "action": "deliver_current",
+              "outcome": "correct",
+              "sequence_commitment": [],
+              "requests": [],
+              "relation": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "feedback": {
+    "splitting_probe": "explicit",
+    "legal_returns_observed": [
+      {
+        "side": "parent",
+        "callback": [
+          100
+        ],
+        "after": [
+          "forward_default"
+        ],
+        "action": "defer",
+        "following_request": null
+      },
+      {
+        "side": "commit",
+        "callback": [
+          200
+        ],
+        "after": [
+          "forward_argument"
+        ],
+        "action": "deliver_current",
+        "following_request": null
+      }
+    ],
+    "disposition_changes": true,
+    "next_request_changes": false,
+    "distinct_successor_requests": 0,
+    "default_probe": [
+      {
+        "side": "parent",
+        "q": "default",
+        "callback": [
+          100
+        ],
+        "before": [
+          "forward_argument",
+          "forward_default"
+        ],
+        "after": [
+          "forward_argument",
+          "forward_default"
+        ]
+      },
+      {
+        "side": "commit",
+        "q": "default",
+        "callback": [
+          100
+        ],
+        "before": [
+          "forward_argument",
+          "forward_default"
+        ],
+        "after": [
+          "forward_argument",
+          "forward_default"
+        ]
+      }
+    ]
+  },
+  "continuation_checks": {
+    "real_successor_branch": false,
+    "active_beats_best_preschedule": false,
+    "correct_deliveries_increased": false,
+    "decision": "drop"
+  },
+  "first_execution_ns": 1342506,
+  "note": "Four situated rows per permission are two calls on two revisions of one historical repair. Scores stay split by observation permission."
+}
