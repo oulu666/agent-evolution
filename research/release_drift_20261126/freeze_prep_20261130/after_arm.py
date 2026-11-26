@@ -267,6 +267,11 @@ def _locate_python311():
     if before_path is None and after_path is not None and Path(after_path).is_symlink():
         Path(after_path).unlink()
         notes.append({"removed_path_symlink": after_path})
+    home_shim = Path.home() / ".local" / "bin" / "python3.11"
+    uv_root = (Path.home() / ".local" / "share" / "uv" / "python").resolve()
+    if before_path is None and home_shim.is_symlink() and uv_root in home_shim.resolve().parents:
+        home_shim.unlink()
+        notes.append({"removed_home_shim": str(home_shim)})
     proc = subprocess.run([str(executable), str(PIN_CHECK), json.dumps(list(COUNTERPART))],
                           capture_output=True, text=True, timeout=60, check=False)
     if proc.returncode != 0:
@@ -354,6 +359,8 @@ def find_outcome_prior():
         if isinstance(pack, dict) and "outcome_prior" in pack:
             return {"source": followup.pack_relative(case_id), "value": pack["outcome_prior"]}
     for relative in sorted(harness.ALLOWED):
+        if not relative.endswith(".json"):
+            continue
         data = harness.load_allowed(relative)
         if isinstance(data, dict) and "outcome_prior" in data:
             value = data["outcome_prior"]
