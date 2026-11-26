@@ -1,0 +1,3058 @@
+{
+  "freeze_commit": "22a843467bfdc9d7b9663c0582f05f37cecd3a77",
+  "hashes": {
+    "protocol.md": "4ec1f794fcc36155c1f9e2842f932d27467e251e8b27cd72e90cbafca97e5cba",
+    "cases.json": "992ff92cbf6e300dc75250d56e738de0ab66c2b46331b87db26c3fa6465db073",
+    "jdoctor_patterns.py": "eac70f93dd145b38440f2ffcc1372b2a9bd2c73cfe996237692ba0e7e61de8ad",
+    "binding.py": "d89804f3a6c1e936a637638b152075b2ad3365f9bd31744074703b195529fe07",
+    "run.py": "a129fc24eda9129a35e23cb40481339824e8b4337c1797eeaf3216230205c38b"
+  },
+  "not_run": {
+    "jdoctor_binary": "Java source in, Java expressions out; pattern transcription is not the original program",
+    "spark_formal": "no SPARK or Ada contract in the frozen public cases",
+    "gay_oracle_selection": "no mutation campaign; expected values are not given to the extractors",
+    "agora_plus_binary": "REST and modified Daikon; only the restricted invariant instance ran",
+    "specfuzzer": "Java trace inference; not ported",
+    "hypothesis_and_frozen_synthesizer": "would generate new inputs or restart a paused ESWA prototype"
+  },
+  "decision": {
+    "decision": "refine",
+    "reason": "catalog_gap",
+    "bind_hits": [],
+    "projects": [],
+    "inversions": [],
+    "false_alarms": [],
+    "catalog_gap_projects": [
+      "humanize",
+      "prettytable",
+      "rich"
+    ]
+  },
+  "primary_classes": {
+    "humanize-273": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "humanize-254": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "doctest_only",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "humanize-250": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "humanize-218": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "humanize-216": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "inversion",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "prettytable-378": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "hit",
+      "agora_restricted": "no_check",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "prettytable-356": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "prettytable-355": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "hit",
+      "agora_restricted": "no_check",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "prettytable-345": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "hit",
+      "agora_restricted": "no_check",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "more-itertools-1088": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "hit",
+      "agora_restricted": "no_check",
+      "audit": "doctest_only",
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "more-itertools-1082": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "hit",
+      "agora_restricted": "no_check",
+      "audit": "doctest_only",
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    },
+    "rich-3718": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "inversion",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0
+    }
+  },
+  "calibration_classes": {
+    "humanize-240": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      }
+    },
+    "xlsx-column": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      }
+    },
+    "xlsx-duration": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      }
+    },
+    "babel-week": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "both_clear",
+      "audit": "catalog_gap",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      }
+    },
+    "attrs-1428": {
+      "bind": "no_check",
+      "jdoctor_pattern": "no_check",
+      "status_only": "both_clear",
+      "agora_restricted": "inversion",
+      "audit": "doctest_only",
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "humanize-273",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 7,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/50a413af6b3d3e052f1f631728ecae2267df6523/src/humanize/number.py",
+          "sha256": "2d8a570a1bbebeb7c4d933315fba7892688b3a86b66210841990bdfb311ca82b",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 16233
+        },
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/50a413af6b3d3e052f1f631728ecae2267df6523/src/humanize/locale/fr_FR/LC_MESSAGES/humanize.po",
+          "sha256": "d673a9b8321dc5d86999b7ca3dfe94a0c8be2f6013376a3103027be130654628",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 6625
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          },
+          {
+            "translation": "skeleton:fine:0.0 a",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok",
+          "skeleton:fine:0.0 a"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "1.0 millions",
+          "coarse": 1.0
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0
+        }
+      }
+    },
+    {
+      "id": "humanize-254",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "doctest_only",
+      "catalog_gap": false,
+      "doctests": 8,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/58d10b43175a22eb9ece2c6f3dcff6b6b681e2df/src/humanize/time.py",
+          "sha256": "b12dd20721aeabc9ab78d956b06bcaf887e31292ae6898f0cea00b0ec7b5178d",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 19154
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          },
+          {
+            "translation": "skeleton:fine:0 a",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok",
+          "skeleton:fine:0 a"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "60 seconds",
+          "coarse": 60.0
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0
+        }
+      }
+    },
+    {
+      "id": "humanize-250",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 8,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/8059ebe1732c89177709476165f6e87cc76fe1b7/src/humanize/filesize.py",
+          "sha256": "8290c6257eb4cc58897e7c2294db4e81e92d6ff1048869a907e6a8cfb4512f7d",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 2428
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "1.0 Byte",
+          "coarse": 1
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1
+        }
+      }
+    },
+    {
+      "id": "humanize-240",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": false,
+      "same_group": "humanize-250",
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 8,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/a0602c70bb6e11322107b51114333bab7adab021/src/humanize/filesize.py",
+          "sha256": "532d519a1bd775da677b36342dc0ce6f4845b698c4a2a5f686abaa8d5c46d733",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 2418
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "2 Bytes",
+          "coarse": 2
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "1.123456789 Bytes",
+          "coarse": 1
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "2 Bytes",
+          "coarse": 2
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1 Bytes",
+          "coarse": 1
+        }
+      }
+    },
+    {
+      "id": "humanize-218",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 8,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/ae62162e221ce2b14ebcf991fc1b84f5d6f209f1/src/humanize/filesize.py",
+          "sha256": "2105e3b38e98e9fee57e1ef8507deb29d563b3dce48dbbe86d6e3acb15f327f1",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 2415
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "-1.3 MB",
+          "coarse": "MB"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB"
+        }
+      }
+    },
+    {
+      "id": "humanize-216",
+      "project": "humanize",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 7,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/80fe633d70693e9a3356eda9e69c4e9d1a3e2ba2/src/humanize/number.py",
+          "sha256": "e499df8bfe39122561674b9a884d1f94d355a1a78eba68ab8a5f2822c624559a",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 16202
+        },
+        {
+          "url": "https://raw.githubusercontent.com/python-humanize/humanize/80fe633d70693e9a3356eda9e69c4e9d1a3e2ba2/src/humanize/locale/pt_BR/LC_MESSAGES/humanize.po",
+          "sha256": "6c5e043ef6d87386a993272817e42a64dd6d2fdd7b002fb87b9b1e3d642a837c",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 6482
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "inversion",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          },
+          {
+            "translation": "skeleton:fine:0.0 aãa",
+            "class": "inversion",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "alarm"
+            }
+          }
+        ],
+        "invariants": [
+          "ok",
+          "skeleton:fine:0.0 aãa"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1.0 milhão",
+          "coarse": 1.0
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "2.0 bilhão",
+          "coarse": 2.0
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1.0 milhão",
+          "coarse": 1.0
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "2.0 bilhões",
+          "coarse": 2.0
+        }
+      }
+    },
+    {
+      "id": "prettytable-378",
+      "project": "prettytable",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/prettytable/prettytable/88915082fa543aa3cac247880b12f81e6fed983e/src/prettytable/prettytable.py",
+          "sha256": "dfba017035be932052ae4c2505aa2ac01eaa4517ff0fd7947ab64eff65fd5c50",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 109918
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "hit",
+      "agora_restricted": {
+        "class": "no_check",
+        "checks": [],
+        "invariants": []
+      },
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": [
+            [
+              "X"
+            ]
+          ],
+          "coarse": 1
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": [
+            [
+              "X"
+            ]
+          ],
+          "coarse": 1
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": [],
+          "coarse": 0
+        }
+      }
+    },
+    {
+      "id": "prettytable-356",
+      "project": "prettytable",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/prettytable/prettytable/44124c302b072f6fca30c4df3acd77154dfea9cf/src/prettytable/prettytable.py",
+          "sha256": "e77908a1076448e825771bf323b01a187753aecbd147a0341b18acb2c659438b",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 103024
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "+",
+          "coarse": [
+            "X",
+            "Y"
+          ]
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "└",
+          "coarse": [
+            "X",
+            "Y"
+          ]
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "+",
+          "coarse": [
+            "X",
+            "Y"
+          ]
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "├",
+          "coarse": [
+            "X",
+            "Y"
+          ]
+        }
+      }
+    },
+    {
+      "id": "prettytable-355",
+      "project": "prettytable",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/prettytable/prettytable/d448aa14417a4eefa0d3641829be19c51c17f1f0/src/prettytable/prettytable.py",
+          "sha256": "f274c6050364dd5f531f3952dced3b933269edf0d453d5d1eb1e5aee75ecba2f",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 103129
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "hit",
+      "agora_restricted": {
+        "class": "no_check",
+        "checks": [],
+        "invariants": []
+      },
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": [
+            "z",
+            "a"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ]
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": [
+            "z",
+            "a"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ]
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": [
+            "a",
+            "z"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ]
+        }
+      }
+    },
+    {
+      "id": "prettytable-345",
+      "project": "prettytable",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/prettytable/prettytable/79f5999fd5b90aea0b3324bc6fb99f48f7db5daf/src/prettytable/prettytable.py",
+          "sha256": "4fc9dce705cce51a97e98bb117c11359cf52e42d43eaec83daf558fcbe821a77",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 103139
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "hit",
+      "agora_restricted": {
+        "class": "no_check",
+        "checks": [],
+        "invariants": []
+      },
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "X"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "X"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "1"
+        }
+      }
+    },
+    {
+      "id": "more-itertools-1088",
+      "project": "more-itertools",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "doctest_only",
+      "catalog_gap": false,
+      "doctests": 3,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/more-itertools/more-itertools/55fcdd8013baff9d2f5b3ab890904a0964fb61df/more_itertools/more.py",
+          "sha256": "20a22c47c8e034a37368094ddf149a57a3e72ffcaf10bb7f8c953be4efccfe72",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 163071
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "hit",
+      "agora_restricted": {
+        "class": "no_check",
+        "checks": [],
+        "invariants": []
+      },
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": true,
+          "coarse": true
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": true,
+          "coarse": true
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": false,
+          "coarse": false
+        }
+      }
+    },
+    {
+      "id": "more-itertools-1082",
+      "project": "more-itertools",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "doctest_only",
+      "catalog_gap": false,
+      "doctests": 1,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/more-itertools/more-itertools/aa8c480086052d4c2a64490d3214e67b7c6e674b/more_itertools/more.py",
+          "sha256": "a6893ad993f30a3f4e77c7fe1c0208fd0b13f460a9ef2a48cf8488580cf66973",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 162624
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "hit",
+      "agora_restricted": {
+        "class": "no_check",
+        "checks": [],
+        "invariants": []
+      },
+      "published_observer": {
+        "status": "hit",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3
+        }
+      }
+    },
+    {
+      "id": "rich-3718",
+      "project": "rich",
+      "stratum": "primary",
+      "denominator": true,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 1,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/Textualize/rich/7d36119f8378b36129502c3281a7faffef837e02/rich/panel.py",
+          "sha256": "4940da6b7cf8314eef223cef6e2d125ee73a06c943cc00f0758d405f84db4dd6",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 11225
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "inversion",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          },
+          {
+            "translation": "equals:fine:None",
+            "class": "inversion",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "alarm"
+            }
+          }
+        ],
+        "invariants": [
+          "ok",
+          "equals:fine:None"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "blue",
+          "coarse": "title"
+        }
+      }
+    },
+    {
+      "id": "xlsx-column",
+      "project": "XlsxWriter",
+      "stratum": "calibration",
+      "denominator": false,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/RELEASE_3.3.0/xlsxwriter/worksheet.py",
+          "sha256": "3bb714e46d2662c10dca09fff60443fe382c13302cc6f2e38eecc75c520bbe88",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 288224
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": [
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ]
+            ]
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "pairs": [
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": false,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": false
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": false,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": false
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": "hello world"
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            },
+            {
+              "ok": true,
+              "fine": {
+                "visible": true,
+                "cell_text": ""
+              },
+              "coarse": {
+                "visible": true
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "id": "xlsx-duration",
+      "project": "XlsxWriter",
+      "stratum": "calibration",
+      "denominator": false,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 0,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/RELEASE_1.3.7/xlsxwriter/worksheet.py",
+          "sha256": "7d047bd652a1b41012fe913562d34b6fa29697b5b4679c1fc262cc649e1f92c0",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 255039
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": [
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ]
+            ]
+          }
+        ],
+        "invariants": [
+          "ok"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "pairs": [
+          [
+            {
+              "ok": true,
+              "fine": 1.0,
+              "coarse": 1.0
+            },
+            {
+              "ok": true,
+              "fine": 1.0,
+              "coarse": 1.0
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": 30.0,
+              "coarse": 30.0
+            },
+            {
+              "ok": true,
+              "fine": 30.0,
+              "coarse": 30.0
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": 59.0,
+              "coarse": 59.0
+            },
+            {
+              "ok": true,
+              "fine": 59.0,
+              "coarse": 59.0
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": 60.5,
+              "coarse": 60.5
+            },
+            {
+              "ok": true,
+              "fine": 59.5,
+              "coarse": 59.5
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": 61.0,
+              "coarse": 61.0
+            },
+            {
+              "ok": true,
+              "fine": 60.0,
+              "coarse": 60.0
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": 76.0,
+              "coarse": 76.0
+            },
+            {
+              "ok": true,
+              "fine": 75.0,
+              "coarse": 75.0
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "id": "babel-week",
+      "project": "Babel",
+      "stratum": "calibration",
+      "denominator": false,
+      "same_group": null,
+      "audit": "catalog_gap",
+      "catalog_gap": true,
+      "doctests": 3,
+      "fetch": [
+        {
+          "url": "https://raw.githubusercontent.com/python-babel/babel/v2.16.0/babel/dates.py",
+          "sha256": "5d43b0cb08e5b95bedf6708601f6eb7365d1c53f0162a0a270a3000d6cbb04b7",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 73418
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "both_clear",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": [
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ]
+            ]
+          },
+          {
+            "translation": "skeleton:fine:0-a0-0",
+            "class": "both_clear",
+            "full": [
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ],
+              [
+                "clear",
+                "clear"
+              ]
+            ]
+          }
+        ],
+        "invariants": [
+          "ok",
+          "skeleton:fine:0-a0-0"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "hit",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "pairs": [
+          [
+            {
+              "ok": true,
+              "fine": "2003-W24-7",
+              "coarse": "2003-W24-7"
+            },
+            {
+              "ok": true,
+              "fine": "2003-W24-7",
+              "coarse": "2003-W24-7"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2003-W01-3",
+              "coarse": "2003-W01-3"
+            },
+            {
+              "ok": true,
+              "fine": "2003-W01-3",
+              "coarse": "2003-W01-3"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2003-W52-7",
+              "coarse": "2003-W52-7"
+            },
+            {
+              "ok": true,
+              "fine": "2003-W52-7",
+              "coarse": "2003-W52-7"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W01-1",
+              "coarse": "2004-W01-1"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W01-1",
+              "coarse": "2004-W01-1"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W01-3",
+              "coarse": "2004-W01-3"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W01-3",
+              "coarse": "2004-W01-3"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W25-2",
+              "coarse": "2004-W25-2"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W25-2",
+              "coarse": "2004-W25-2"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W01-4",
+              "coarse": "2004-W01-4"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W01-4",
+              "coarse": "2004-W01-4"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W53-2",
+              "coarse": "2004-W53-2"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W53-2",
+              "coarse": "2004-W53-2"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W53-3",
+              "coarse": "2004-W53-3"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W53-3",
+              "coarse": "2004-W53-3"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W53-5",
+              "coarse": "2004-W53-5"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W53-5",
+              "coarse": "2004-W53-5"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2005-W24-3",
+              "coarse": "2005-W24-3"
+            },
+            {
+              "ok": true,
+              "fine": "2005-W24-3",
+              "coarse": "2005-W24-3"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2004-W01-6",
+              "coarse": "2004-W01-6"
+            },
+            {
+              "ok": true,
+              "fine": "2004-W53-6",
+              "coarse": "2004-W53-6"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2005-W52-3",
+              "coarse": "2005-W52-3"
+            },
+            {
+              "ok": true,
+              "fine": "2005-W52-3",
+              "coarse": "2005-W52-3"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2005-W52-4",
+              "coarse": "2005-W52-4"
+            },
+            {
+              "ok": true,
+              "fine": "2005-W52-4",
+              "coarse": "2005-W52-4"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2005-W52-6",
+              "coarse": "2005-W52-6"
+            },
+            {
+              "ok": true,
+              "fine": "2005-W52-6",
+              "coarse": "2005-W52-6"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2008-W24-7",
+              "coarse": "2008-W24-7"
+            },
+            {
+              "ok": true,
+              "fine": "2008-W24-7",
+              "coarse": "2008-W24-7"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2008-W01-2",
+              "coarse": "2008-W01-2"
+            },
+            {
+              "ok": true,
+              "fine": "2008-W01-2",
+              "coarse": "2008-W01-2"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2008-W52-7",
+              "coarse": "2008-W52-7"
+            },
+            {
+              "ok": true,
+              "fine": "2008-W52-7",
+              "coarse": "2008-W52-7"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2009-W01-1",
+              "coarse": "2009-W01-1"
+            },
+            {
+              "ok": true,
+              "fine": "2009-W01-1",
+              "coarse": "2009-W01-1"
+            }
+          ],
+          [
+            {
+              "ok": true,
+              "fine": "2009-W01-3",
+              "coarse": "2009-W01-3"
+            },
+            {
+              "ok": true,
+              "fine": "2009-W01-3",
+              "coarse": "2009-W01-3"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "id": "attrs-1428",
+      "project": "attrs",
+      "stratum": "calibration",
+      "denominator": false,
+      "same_group": null,
+      "audit": "doctest_only",
+      "catalog_gap": false,
+      "doctests": 30,
+      "fetch": [
+        {
+          "url": "https://www.attrs.org/en/21.4.0/init.html",
+          "sha256": "80d3581ba1433dac626738948888ebdfb306c531f36061d884410d7538060cfc",
+          "missing_symbols": [],
+          "parse_error": null,
+          "raw_chars": 20071
+        }
+      ],
+      "bind": {
+        "class": "no_check",
+        "checks": []
+      },
+      "jdoctor_pattern": {
+        "class": "no_check",
+        "checks": []
+      },
+      "status_only": "both_clear",
+      "agora_restricted": {
+        "class": "inversion",
+        "checks": [
+          {
+            "translation": "ok",
+            "class": "both_clear",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "clear"
+            }
+          },
+          {
+            "translation": "equals:callback:[100]",
+            "class": "inversion",
+            "full": {
+              "ordinary_parent": "clear",
+              "ordinary_repair": "clear",
+              "edge_parent": "clear",
+              "edge_repair": "alarm"
+            }
+          }
+        ],
+        "invariants": [
+          "ok",
+          "equals:callback:[100]"
+        ]
+      },
+      "published_observer": {
+        "status": "both_clear",
+        "coarse": "both_clear",
+        "full": "hit"
+      },
+      "full_hit_coarse_miss": 0,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": {
+            "final": 100,
+            "callback": [
+              100
+            ]
+          },
+          "coarse": {
+            "final": 100
+          }
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": {
+            "final": 100,
+            "callback": [
+              100
+            ]
+          },
+          "coarse": {
+            "final": 100
+          }
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": {
+            "final": 200,
+            "callback": [
+              100
+            ]
+          },
+          "coarse": {
+            "final": 200
+          }
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": {
+            "final": 200,
+            "callback": [
+              200
+            ]
+          },
+          "coarse": {
+            "final": 200
+          }
+        }
+      }
+    }
+  ]
+}

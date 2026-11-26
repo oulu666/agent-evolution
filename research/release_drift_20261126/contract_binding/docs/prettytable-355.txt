@@ -1,0 +1,55 @@
+# PrettyTable.__init__
+Return a new PrettyTable instance
+
+Arguments:
+
+encoding - Unicode encoding scheme used to decode any encoded input
+title - optional table title
+field_names - list or tuple of field names
+fields - list or tuple of field names to include in displays
+start - index of first data row to include in output
+end - index of last data row to include in output PLUS ONE (list slice style)
+header - print a header showing field names (True or False)
+header_style - stylisation to apply to field names in header
+    ("cap", "title", "upper", "lower" or None)
+border - print a border around the table (True or False)
+preserve_internal_border - print a border inside the table even if
+    border is disabled (True or False)
+hrules - controls printing of horizontal rules after rows.
+    Allowed values: HRuleStyle
+vrules - controls printing of vertical rules between columns.
+    Allowed values: VRuleStyle
+int_format - controls formatting of integer data
+float_format - controls formatting of floating point data
+custom_format - controls formatting of any column using callable
+min_table_width - minimum desired table width, in characters
+max_table_width - maximum desired table width, in characters
+min_width - minimum desired field width, in characters
+max_width - maximum desired field width, in characters
+padding_width - number of spaces on either side of column data
+    (only used if left and right paddings are None)
+left_padding_width - number of spaces on left hand side of column data
+right_padding_width - number of spaces on right hand side of column data
+vertical_char - single character string used to draw vertical lines
+horizontal_char - single character string used to draw horizontal lines
+horizontal_align_char - single character string used to indicate alignment
+junction_char - single character string used to draw line junctions
+top_junction_char - single character string used to draw top line junctions
+bottom_junction_char -
+    single character string used to draw bottom line junctions
+right_junction_char - single character string used to draw right line junctions
+left_junction_char - single character string used to draw left line junctions
+top_right_junction_char -
+    single character string used to draw top-right line junctions
+top_left_junction_char -
+    single character string used to draw top-left line junctions
+bottom_right_junction_char -
+    single character string used to draw bottom-right line junctions
+bottom_left_junction_char -
+    single character string used to draw bottom-left line junctions
+sortby - name of field to sort rows by
+sort_key - sorting key function, applied to data points before sorting
+align - default align for each column (None, "l", "c" or "r")
+valign - default valign for each row (None, "t", "m" or "b")
+reversesort - True or False to sort in descending or ascending order
+oldsortslice - Slice rows before sorting in the "old style" 
