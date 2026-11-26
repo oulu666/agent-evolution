@@ -1,0 +1,35 @@
+name: Student plan ranking
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cloud-student-ranking.yml']
+permissions:
+  contents: read
+jobs:
+  students:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            research/cloud_task_learning
+            research/cloud_active_teacher
+            research/cloud_student_ranking
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==1.26.4 scipy==1.13.1 scikit-learn==1.5.2 lightgbm==4.6.0
+      - run: python research/cloud_student_ranking/students.py /tmp/wikisql student-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: student-results
+          path: student-results
+          if-no-files-found: warn

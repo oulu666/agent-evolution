@@ -15,11 +15,12 @@ def main(out, data):
     summary = read("summary.json")
     runs = {m: read(m + "_test.json") for m in summary["test"]}
     primary = runs[summary["winner"]]
-    entries = sample(data / "test.jsonl", 768)
-    old_ids = {e["table_id"] for e in entries[:256]}
+    offset = summary.get("test_offset", 256)
+    entries = sample(data / "test.jsonl", offset + len(primary))
+    old_ids = {e["table_id"] for e in entries[:offset]}
     checks = same = 0
     with sqlite3.connect((data / "test.db").resolve().as_uri() + "?mode=ro", uri=True) as db:
-        for i, entry in enumerate(entries[256:]):
+        for i, entry in enumerate(entries[offset:]):
             tid = entry["table_id"]
             assert tid not in old_ids
             name = "table_" + tid.replace("-", "_")

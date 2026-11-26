@@ -25,8 +25,9 @@ TRAIN = []
 INPUTS = []
 
 
-def load_split(directory, split, n):
-    offset = 0 if split == "train" else SIZES[split]
+def load_split(directory, split, n, offset=None):
+    if offset is None:
+        offset = 0 if split == "train" else SIZES[split]
     entries = sample(directory / (split + ".jsonl"), offset + n)
     exclude = {e["table_id"] for e in entries[:offset]}
     entries = entries[offset:]
@@ -72,14 +73,14 @@ def train_method(method):
 
 
 def evaluate(tasks, picks, out, split):
-    reports = {m: [] for m in METHODS}
+    reports = {m: [] for m in picks}
     for i, t in enumerate(tasks):
         gold = t["gold"]
-        plans = [gold, (gold[0], 0, gold[2])] + [t["plans"][picks[m][i]] for m in METHODS]
+        plans = [gold, (gold[0], 0, gold[2])] + [t["plans"][picks[m][i]] for m in picks]
         main, audit = [run_table(world(t["rows"], t["plans"], t["table"], name), t["types"], plans)
                        for name in ("original", "audit")]
         feasible = run_table(t["rows"], t["types"], t["plans"])
-        for j, method in enumerate(METHODS, 2):
+        for j, method in enumerate(picks, 2):
             reports[method].append(dict(table=t["table"], gold=gold, chosen=plans[j], original=main[j] == main[0],
                                         both=main[j] == main[0] and audit[j] == audit[0],
                                         exact=gold == plans[j], matching_rows=len(main[1]),
