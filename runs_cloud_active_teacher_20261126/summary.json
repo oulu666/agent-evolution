@@ -1,0 +1,162 @@
+{
+ "development": {
+  "expert": {
+   "original": 110,
+   "both": 103,
+   "exact": 91,
+   "reachable": 173
+  },
+  "legacy": {
+   "original": 107,
+   "both": 95,
+   "exact": 81,
+   "reachable": 173
+  },
+  "random": {
+   "original": 105,
+   "both": 96,
+   "exact": 81,
+   "reachable": 173
+  },
+  "construct": {
+   "original": 104,
+   "both": 97,
+   "exact": 84,
+   "reachable": 173
+  },
+  "adaptive": {
+   "original": 105,
+   "both": 100,
+   "exact": 83,
+   "reachable": 173
+  },
+  "pooled": {
+   "original": 105,
+   "both": 100,
+   "exact": 83,
+   "reachable": 173
+  }
+ },
+ "test": {
+  "expert": {
+   "original": 292,
+   "both": 281,
+   "exact": 244,
+   "reachable": 474
+  },
+  "legacy": {
+   "original": 293,
+   "both": 280,
+   "exact": 234,
+   "reachable": 474
+  },
+  "random": {
+   "original": 307,
+   "both": 296,
+   "exact": 240,
+   "reachable": 474
+  },
+  "construct": {
+   "original": 304,
+   "both": 292,
+   "exact": 239,
+   "reachable": 474
+  },
+  "adaptive": {
+   "original": 300,
+   "both": 290,
+   "exact": 244,
+   "reachable": 474
+  },
+  "pooled": {
+   "original": 300,
+   "both": 289,
+   "exact": 243,
+   "reachable": 474
+  }
+ },
+ "winner": "adaptive",
+ "strongest": "random",
+ "passed": false,
+ "costs": {
+  "expert": {
+   "informative_training_tasks": 611,
+   "positive_programs": 611,
+   "candidate_programs": 36864,
+   "coefficients": 12699,
+   "teacher_queries": 0,
+   "candidate_queries": 0,
+   "expert_plans": 768,
+   "extra_query_histogram": {},
+   "cpu_seconds": 1.236
+  },
+  "legacy": {
+   "informative_training_tasks": 686,
+   "positive_programs": 2070,
+   "candidate_programs": 36864,
+   "coefficients": 14122,
+   "teacher_queries": 2304,
+   "candidate_queries": 110592,
+   "expert_plans": 0,
+   "extra_query_histogram": {
+    "2": 768
+   },
+   "cpu_seconds": 3.161
+  },
+  "random": {
+   "informative_training_tasks": 702,
+   "positive_programs": 2080,
+   "candidate_programs": 36864,
+   "coefficients": 14329,
+   "teacher_queries": 2304,
+   "candidate_queries": 110592,
+   "expert_plans": 0,
+   "extra_query_histogram": {
+    "2": 768
+   },
+   "cpu_seconds": 3.572
+  },
+  "construct": {
+   "informative_training_tasks": 698,
+   "positive_programs": 1722,
+   "candidate_programs": 36864,
+   "coefficients": 14333,
+   "teacher_queries": 2304,
+   "candidate_queries": 110592,
+   "expert_plans": 0,
+   "extra_query_histogram": {
+    "2": 768
+   },
+   "cpu_seconds": 3.558
+  },
+  "adaptive": {
+   "informative_training_tasks": 703,
+   "positive_programs": 1578,
+   "candidate_programs": 36864,
+   "coefficients": 14387,
+   "teacher_queries": 2304,
+   "candidate_queries": 306720,
+   "expert_plans": 0,
+   "extra_query_histogram": {
+    "2": 768
+   },
+   "cpu_seconds": 5.496
+  },
+  "pooled": {
+   "informative_training_tasks": 703,
+   "positive_programs": 1572,
+   "candidate_programs": 36864,
+   "coefficients": 14387,
+   "teacher_queries": 2304,
+   "candidate_queries": 306720,
+   "expert_plans": 0,
+   "extra_query_histogram": {
+    "2": 760,
+    "3": 4,
+    "1": 4
+   },
+   "cpu_seconds": 5.516
+  }
+ },
+ "archive_sha256": "755c728ab188e364575705c8641f3fafd86fb089cb8b08e8c03f01832aae0881"
+}
