@@ -1,0 +1,43 @@
+name: Public attrs observation and feedback gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cloud-attrs-boundary-gap.yml', 'research/release_drift_20261126/boundary_gap/run.py']
+permissions:
+  contents: read
+jobs:
+  paired:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - side: parent
+            rev: 94caa57142c057ce52504cdf239ae0ed3168f9b5
+          - side: commit
+            rev: 937b1e232803cc4ec9b9375ef525fc57c24ec498
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            research/release_drift_20261126
+            runs_interaction_blind_20261124
+      - uses: actions/checkout@v4
+        with:
+          repository: python-attrs/attrs
+          ref: ${{ matrix.rev }}
+          path: upstream
+          persist-credentials: false
+          sparse-checkout: src
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python research/release_drift_20261126/boundary_gap/run.py upstream ${{ matrix.rev }} ${{ matrix.side }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: attrs-${{ matrix.side }}
+          path: attrs-${{ matrix.side }}.json
+          if-no-files-found: error
