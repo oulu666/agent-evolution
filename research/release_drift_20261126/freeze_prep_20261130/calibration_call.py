@@ -1,12 +1,13 @@
 """Thin adapters from ExtraCalls to the three public calibration libraries.
 
-XlsxWriter and Babel run from the wheel named in the shared pack. slugify runs
-only from the recorded parent commit. Another release is not substituted.
+XlsxWriter and Babel run from a wheel named in the shared pack. slugify runs
+only from a commit named in that pack. Another project is not substituted.
 """
 
 from hashlib import sha256
 import json
 from pathlib import Path
+import re
 import subprocess
 import sys
 import tempfile
@@ -37,30 +38,49 @@ def dispatch(request):
     pack = PACKS.get(case_id)
     if pack is None:
         raise CalibrationCallError("no shared pack is bound for this case")
-    if request.get("arm") != pack["live_arm"]:
-        raise CalibrationCallError("live calls are limited to the pack's before or parent arm")
+    arm_name = request.get("arm")
+    if arm_name not in pack.get("arms", {}):
+        raise CalibrationCallError("live calls are limited to an arm named in the shared pack")
     index = request.get("index")
     inputs = pack["inputs"]
     if type(index) is not int or index < 0 or index >= len(inputs):
         raise CalibrationCallError("calibration input index is outside the shared pack")
     if pack["library"] == "python-slugify":
-        return _slugify(pack, inputs[index])
-    return _wheel(pack, inputs[index])
+        return _slugify(pack, arm_name, inputs[index])
+    return _wheel(pack, arm_name, inputs[index])
 
 
-def _wheel(pack, value):
-    arm = pack["arms"][pack["live_arm"]]
+def _wheel(pack, arm_name, value):
+    arm = pack["arms"][arm_name]
     directory = _wheel_dir(arm["url"], arm["sha256"])
-    return _run(directory, pack["library"], arm["version"], {
+    body = _run(directory, pack["library"], arm["version"], {
         "operation": pack["operation"],
         "input": value,
     })
+    body["wheel_sha256"] = arm["sha256"]
+    return body
 
 
-def _slugify(pack, value):
-    commit = pack["arms"]["parent"]["commit"]
-    directory = _slugify_checkout(commit)
-    return _run(directory, "python-slugify", commit, {"input": value, "commit": commit})
+def slugify_tree(commit):
+    """Check out one pack commit. A missing commit is an error, not a substitute."""
+    if not re.fullmatch(r"[0-9a-f]{40}", commit or ""):
+        raise CalibrationCallError("slugify arm is not a 40-character commit")
+    return _slugify_checkout(commit)
+
+
+def _slugify(pack, arm_name, value):
+    commit = pack["arms"][arm_name]["commit"]
+    directory = slugify_tree(commit)
+    head = subprocess.check_output(["git", "-C", str(directory), "rev-parse", "HEAD"],
+                                   text=True, timeout=30).strip()
+    if head != commit:
+        raise CalibrationCallError(f"checkout {head} is not the requested commit {commit}")
+    try:
+        body = _run(directory, "python-slugify", commit, {"input": value, "commit": commit})
+    except CalibrationCallError as exc:
+        raise CalibrationCallError(f"checked_out={head}: {exc}") from exc
+    body["checked_out"] = head
+    return body
 
 
 def _run(directory, library, version, payload):
@@ -118,7 +138,7 @@ def _slugify_checkout(commit):
     probe = subprocess.run(["git", "-C", str(repo), "cat-file", "-e", f"{commit}^{{commit}}"],
                            check=False, timeout=30)
     if probe.returncode != 0:
-        raise CalibrationCallError(f"parent commit {commit} is not in {SLUGIFY_REMOTE}")
+        raise CalibrationCallError(f"commit {commit} is not in {SLUGIFY_REMOTE}")
     dest = CACHE / "checkouts" / commit
     if not dest.exists():
         dest.parent.mkdir(parents=True, exist_ok=True)
