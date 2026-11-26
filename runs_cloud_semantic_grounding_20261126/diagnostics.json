@@ -1,0 +1,199 @@
+{
+ "primary": "whole",
+ "matched": "lexical",
+ "comparisons": {
+  "feedback_base": {
+   "wins": 63,
+   "losses": 24,
+   "ties": 425,
+   "descriptive_paired_interval_pp": [
+    4.1,
+    11.13
+   ]
+  },
+  "expert_base": {
+   "wins": 67,
+   "losses": 17,
+   "ties": 428,
+   "descriptive_paired_interval_pp": [
+    6.45,
+    13.09
+   ]
+  },
+  "lexical": {
+   "wins": 30,
+   "losses": 25,
+   "ties": 457,
+   "descriptive_paired_interval_pp": [
+    -1.95,
+    3.71
+   ]
+  },
+  "lexical_values": {
+   "wins": 37,
+   "losses": 21,
+   "ties": 454,
+   "descriptive_paired_interval_pp": [
+    0.2,
+    6.05
+   ]
+  },
+  "expert_lexical": {
+   "wins": 34,
+   "losses": 24,
+   "ties": 454,
+   "descriptive_paired_interval_pp": [
+    -0.98,
+    4.88
+   ]
+  },
+  "raw_encoder": {
+   "wins": 181,
+   "losses": 37,
+   "ties": 294,
+   "descriptive_paired_interval_pp": [
+    23.05,
+    33.2
+   ]
+  },
+  "whole": {
+   "wins": 0,
+   "losses": 0,
+   "ties": 512,
+   "descriptive_paired_interval_pp": [
+    0.0,
+    0.0
+   ]
+  },
+  "factorized": {
+   "wins": 30,
+   "losses": 23,
+   "ties": 459,
+   "descriptive_paired_interval_pp": [
+    -1.37,
+    4.1
+   ]
+  },
+  "with_values": {
+   "wins": 36,
+   "losses": 24,
+   "ties": 452,
+   "descriptive_paired_interval_pp": [
+    -0.59,
+    5.27
+   ]
+  }
+ },
+ "ambiguous_examples": {
+  "gain": {
+   "table": "2-17689800-3",
+   "question": "What is the nationality of the player with 2 years of NBA experience for the previously played for the Los Angeles Lakers?",
+   "selected": [
+    2,
+    0,
+    [
+     [
+      3,
+      0,
+      "los angeles lakers"
+     ],
+     [
+      4,
+      0,
+      2.0
+     ]
+    ]
+   ],
+   "lexical": [
+    0,
+    0,
+    [
+     [
+      3,
+      0,
+      "los angeles lakers"
+     ],
+     [
+      4,
+      0,
+      2.0
+     ]
+    ]
+   ],
+   "gold": [
+    2,
+    0,
+    [
+     [
+      3,
+      0,
+      "los angeles lakers"
+     ],
+     [
+      4,
+      0,
+      2
+     ]
+    ]
+   ],
+   "headers": [
+    "Player",
+    "Pos.",
+    "Nationality",
+    "Previous team",
+    "Years of NBA experience [a ]"
+   ]
+  },
+  "loss": {
+   "table": "1-1714685-1",
+   "question": "When  7 april 2001 to 29 september 2001 was aired in japan 2 how many titles were there?",
+   "selected": [
+    3,
+    3,
+    [
+     [
+      0,
+      0,
+      "2"
+     ],
+     [
+      5,
+      0,
+      "7 april 2001 to 29 september 2001"
+     ]
+    ]
+   ],
+   "lexical": [
+    3,
+    3,
+    [
+     [
+      5,
+      0,
+      "7 april 2001 to 29 september 2001"
+     ]
+    ]
+   ],
+   "gold": [
+    1,
+    3,
+    [
+     [
+      5,
+      0,
+      "7 april 2001 to 29 september 2001"
+     ]
+    ]
+   ],
+   "headers": [
+    "Series",
+    "Title",
+    "Broadcasts (TV) 1",
+    "Episodes (TV+extra) 2",
+    "Directors",
+    "Aired in Japan 3",
+    "US Release Date"
+   ]
+  }
+ }
+}
