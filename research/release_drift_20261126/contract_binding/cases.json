@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {"id": "humanize-273", "stratum": "primary", "denominator": true, "project": "humanize", "pr": 273, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["intword"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/50a413af6b3d3e052f1f631728ecae2267df6523/src/humanize/number.py"]},
+      {"kind": "text", "symbols": [], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/50a413af6b3d3e052f1f631728ecae2267df6523/src/humanize/locale/fr_FR/LC_MESSAGES/humanize.po"]}
+    ]},
+    {"id": "humanize-254", "stratum": "primary", "denominator": true, "project": "humanize", "pr": 254, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["precisedelta"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/58d10b43175a22eb9ece2c6f3dcff6b6b681e2df/src/humanize/time.py"]}
+    ]},
+    {"id": "humanize-250", "stratum": "primary", "denominator": true, "project": "humanize", "pr": 250, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["naturalsize"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/8059ebe1732c89177709476165f6e87cc76fe1b7/src/humanize/filesize.py"]}
+    ]},
+    {"id": "humanize-240", "stratum": "primary", "denominator": false, "project": "humanize", "pr": 240, "same_group": "humanize-250", "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["naturalsize"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/a0602c70bb6e11322107b51114333bab7adab021/src/humanize/filesize.py"]}
+    ]},
+    {"id": "humanize-218", "stratum": "primary", "denominator": true, "project": "humanize", "pr": 218, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["naturalsize"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/ae62162e221ce2b14ebcf991fc1b84f5d6f209f1/src/humanize/filesize.py"]}
+    ]},
+    {"id": "humanize-216", "stratum": "primary", "denominator": true, "project": "humanize", "pr": 216, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["intword"], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/80fe633d70693e9a3356eda9e69c4e9d1a3e2ba2/src/humanize/number.py"]},
+      {"kind": "text", "symbols": [], "urls": ["https://raw.githubusercontent.com/python-humanize/humanize/80fe633d70693e9a3356eda9e69c4e9d1a3e2ba2/src/humanize/locale/pt_BR/LC_MESSAGES/humanize.po"]}
+    ]},
+    {"id": "prettytable-378", "stratum": "primary", "denominator": true, "project": "prettytable", "pr": 378, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["PrettyTable.add_rows"], "urls": ["https://raw.githubusercontent.com/prettytable/prettytable/88915082fa543aa3cac247880b12f81e6fed983e/src/prettytable/prettytable.py"]}
+    ]},
+    {"id": "prettytable-356", "stratum": "primary", "denominator": true, "project": "prettytable", "pr": 356, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["PrettyTable.get_string", "PrettyTable.add_row", "PrettyTable.set_style"], "urls": ["https://raw.githubusercontent.com/prettytable/prettytable/44124c302b072f6fca30c4df3acd77154dfea9cf/src/prettytable/prettytable.py"]}
+    ]},
+    {"id": "prettytable-355", "stratum": "primary", "denominator": true, "project": "prettytable", "pr": 355, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["PrettyTable.__init__"], "urls": ["https://raw.githubusercontent.com/prettytable/prettytable/d448aa14417a4eefa0d3641829be19c51c17f1f0/src/prettytable/prettytable.py"]}
+    ]},
+    {"id": "prettytable-345", "stratum": "primary", "denominator": true, "project": "prettytable", "pr": 345, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["PrettyTable.get_html_string"], "urls": ["https://raw.githubusercontent.com/prettytable/prettytable/79f5999fd5b90aea0b3324bc6fb99f48f7db5daf/src/prettytable/prettytable.py"]}
+    ]},
+    {"id": "more-itertools-1088", "stratum": "primary", "denominator": true, "project": "more-itertools", "pr": 1088, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["exactly_n"], "urls": ["https://raw.githubusercontent.com/more-itertools/more-itertools/55fcdd8013baff9d2f5b3ab890904a0964fb61df/more_itertools/more.py"]}
+    ]},
+    {"id": "more-itertools-1082", "stratum": "primary", "denominator": true, "project": "more-itertools", "pr": 1082, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["product_index"], "urls": ["https://raw.githubusercontent.com/more-itertools/more-itertools/aa8c480086052d4c2a64490d3214e67b7c6e674b/more_itertools/more.py"]}
+    ]},
+    {"id": "rich-3718", "stratum": "primary", "denominator": true, "project": "rich", "pr": 3718, "shape": "edges", "sources": [
+      {"kind": "py", "symbols": ["Panel", "Panel.__init__"], "urls": ["https://raw.githubusercontent.com/Textualize/rich/7d36119f8378b36129502c3281a7faffef837e02/rich/panel.py"]}
+    ]},
+    {"id": "xlsx-column", "stratum": "calibration", "denominator": false, "project": "XlsxWriter", "data_key": "column", "shape": "rows", "sources": [
+      {"kind": "py", "symbols": ["Worksheet.set_column"], "urls": [
+        "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/RELEASE_3.3.0/xlsxwriter/worksheet.py",
+        "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/3.3.0/xlsxwriter/worksheet.py"
+      ]}
+    ]},
+    {"id": "xlsx-duration", "stratum": "calibration", "denominator": false, "project": "XlsxWriter", "data_key": "duration", "shape": "rows", "sources": [
+      {"kind": "py", "symbols": ["Worksheet.write_datetime"], "urls": [
+        "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/RELEASE_1.3.7/xlsxwriter/worksheet.py",
+        "https://raw.githubusercontent.com/jmcnamara/XlsxWriter/1.3.7/xlsxwriter/worksheet.py"
+      ]}
+    ]},
+    {"id": "babel-week", "stratum": "calibration", "denominator": false, "project": "Babel", "data_key": "week", "shape": "rows", "sources": [
+      {"kind": "py", "symbols": ["format_date"], "urls": [
+        "https://raw.githubusercontent.com/python-babel/babel/v2.16.0/babel/dates.py",
+        "https://raw.githubusercontent.com/python-babel/babel/2.16.0/babel/dates.py"
+      ]}
+    ]},
+    {"id": "attrs-1428", "stratum": "calibration", "denominator": false, "project": "attrs", "shape": "edges", "observations": "archive", "sources": [
+      {"kind": "text", "symbols": [], "urls": [
+        "https://raw.githubusercontent.com/python-attrs/attrs/94caa57142c057ce52504cdf239ae0ed3168f9b5/docs/init.rst",
+        "https://www.attrs.org/en/21.4.0/init.html"
+      ]}
+    ]}
+  ]
+}
