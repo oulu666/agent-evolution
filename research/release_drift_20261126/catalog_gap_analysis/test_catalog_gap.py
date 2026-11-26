@@ -164,6 +164,17 @@ class CorpusTest(unittest.TestCase):
         self.assertFalse(any("blue" in (item["sentence"] or "") for item in rich["focal"]))
 
 
+class ReportTest(unittest.TestCase):
+    def test_report_states_the_drop_and_names_every_group(self):
+        report = (analyze.HERE / "REPORT_ZH.md").read_text(encoding="utf-8")
+        self.assertIn("决定是**停止**", report)
+        self.assertIn("没有新的计分运行", report)
+        self.assertIn("f40de3285593d246fa03e969826e6375c654d426", report)
+        for case_id in analyze.DENOMINATOR:
+            number = case_id.rsplit("-", 1)[1]
+            self.assertIn(number, report)
+
+
 class AllowlistTest(unittest.TestCase):
     def test_summary_json_is_readable_and_sealed_paths_are_refused(self):
         summary = json.loads(analyze.SUMMARY.read_text(encoding="utf-8"))

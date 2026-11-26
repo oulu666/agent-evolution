@@ -1,0 +1,1117 @@
+{
+  "new_scoring_run": false,
+  "ranking": null,
+  "frozen_study_commit": "22a843467bfdc9d7b9663c0582f05f37cecd3a77",
+  "frozen_hashes_match": true,
+  "translator": "frozen Toradocu 3.0 simpleMatch transcription; original Jdoctor was not run",
+  "not_run": {
+    "jdoctor_binary": "Java source in, Java expressions out; pattern transcription is not the original program",
+    "spark_formal": "no SPARK or Ada contract in the frozen public cases",
+    "gay_oracle_selection": "no mutation campaign; expected values are not given to the extractors",
+    "agora_plus_binary": "REST and modified Daikon; only the restricted invariant instance ran",
+    "specfuzzer": "Java trace inference; not ported",
+    "hypothesis_and_frozen_synthesizer": "would generate new inputs or restart a paused ESWA prototype"
+  },
+  "check_counts": {
+    "humanize-273": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 7,
+      "tagged_section": true
+    },
+    "humanize-254": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 8,
+      "tagged_section": false
+    },
+    "humanize-250": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 8,
+      "tagged_section": true
+    },
+    "humanize-218": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 8,
+      "tagged_section": true
+    },
+    "humanize-216": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 7,
+      "tagged_section": true
+    },
+    "prettytable-378": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 0,
+      "tagged_section": true
+    },
+    "prettytable-356": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 0,
+      "tagged_section": true
+    },
+    "prettytable-355": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 0,
+      "tagged_section": true
+    },
+    "prettytable-345": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 0,
+      "tagged_section": true
+    },
+    "more-itertools-1088": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 3,
+      "tagged_section": false
+    },
+    "more-itertools-1082": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 1,
+      "tagged_section": false
+    },
+    "rich-3718": {
+      "bind": 0,
+      "jdoctor_pattern": 0,
+      "doctests_removed": 1,
+      "tagged_section": true
+    }
+  },
+  "decision": {
+    "decision": "drop",
+    "reason": "recorded_drift_not_stated_as_predicate",
+    "justifying_groups": [],
+    "separating_normalizations": [],
+    "new_scoring_run": false
+  },
+  "counterfactuals": [
+    {
+      "candidate": "strip_backticks_then_simple_match",
+      "executed_as_score": false,
+      "transcription": "Toradocu 3.0 simpleMatch after deleting backticks; not the original Jdoctor program",
+      "prepared_sentence": "Return True if exactly n items in the iterable are True",
+      "translation": "==true",
+      "outcomes_on_stored_returns": {
+        "ordinary_parent": "clear",
+        "edge_parent": "no_return",
+        "ordinary_repair": "clear",
+        "edge_repair": "alarm"
+      },
+      "walkthrough_class": "inversion",
+      "separates_blind_group": false,
+      "stop": "unconditional ==true alarms the stored repair return False; the group is an exception boundary"
+    },
+    {
+      "candidate": "rewrite_positive_should_be",
+      "executed_as_score": false,
+      "prepared_sentence": " is an iterable of lists",
+      "translation": null,
+      "separates_blind_group": false,
+      "stop": "after the rewrite, simpleMatch still has no quality word; the group throws and the record has no structured arguments"
+    },
+    {
+      "candidate": "execute_gettext_plural_slots",
+      "executed_as_score": false,
+      "executed": false,
+      "slots_that_repeat_parent_word": [
+        {
+          "msgid": "billion",
+          "slots": [
+            "bilhão",
+            "bilhão"
+          ]
+        }
+      ],
+      "separates_blind_group": false,
+      "stop": "parent slots both state the parent surface form"
+    },
+    {
+      "candidate": "execute_gettext_plural_slots",
+      "executed_as_score": false,
+      "executed": false,
+      "slots_that_repeat_parent_word": [],
+      "separates_blind_group": false,
+      "stop": "the stored text does not identify the printed coefficient as n, so the slot pair was not executed"
+    }
+  ],
+  "cases": [
+    {
+      "id": "humanize-273",
+      "pr": 273,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0,
+          "input": "fr_FR 1000000"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "1.0 millions",
+          "coarse": 1.0,
+          "input": "fr_FR 1010000, one fractional digit"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0,
+          "input": "fr_FR 1000000"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1.0 million",
+          "coarse": 1.0,
+          "input": "fr_FR 1010000, one fractional digit"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [
+          "millions"
+        ],
+        "repair_only_words": [
+          "million"
+        ],
+        "parent_only_words_in_doc": [
+          "millions"
+        ],
+        "repair_only_words_in_doc": [
+          "million"
+        ]
+      },
+      "focal": [
+        {
+          "quote": "becomes \"1.0 million\"",
+          "in_translated_text": true,
+          "stop": "period_splits_illustration",
+          "flags": [
+            "verb_outside_catalog"
+          ],
+          "sentence": "For example, 1_000_000 becomes \"1",
+          "kind": "prose",
+          "translation": null
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "str: Friendly text representation as a string, unless the value passed could not",
+          "predicate": "",
+          "translation": null,
+          "quote": "str: Friendly text representation as a string, unless the value passed could not",
+          "in_translated_text": true,
+          "sentence": "str: Friendly text representation as a string, unless the value passed could not",
+          "kind": "return"
+        },
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "be coaxed into an `int`",
+          "translation": null,
+          "quote": "be coaxed into an `int`",
+          "in_translated_text": true,
+          "sentence": "be coaxed into an `int`",
+          "kind": "return"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "\"Plural-Forms: nplurals=2; plural=(n > 1);\\n\"",
+          "predicate": "",
+          "translation": null,
+          "quote": "Plural-Forms: nplurals=2; plural=(n > 1);",
+          "in_translated_text": true,
+          "sentence": "\"Plural-Forms: nplurals=2; plural=(n > 1);\\n\"",
+          "kind": "return"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "msgstr[0] \"million\"",
+          "predicate": "",
+          "translation": null,
+          "quote": "msgstr[0] \"million\"",
+          "in_translated_text": true,
+          "sentence": "msgstr[0] \"million\"",
+          "kind": "return"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "msgstr[1] \"millions\"",
+          "predicate": "",
+          "translation": null,
+          "quote": "msgstr[1] \"millions\"",
+          "in_translated_text": true,
+          "sentence": "msgstr[1] \"millions\"",
+          "kind": "return"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "humanize-254",
+      "pr": 254,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0,
+          "input": "60 s, zero fractional digits"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "60 seconds",
+          "coarse": 60.0,
+          "input": "59.5 s, zero fractional digits"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0,
+          "input": "60 s, zero fractional digits"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1 minute",
+          "coarse": 60.0,
+          "input": "59.5 s, zero fractional digits"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [
+          "seconds"
+        ],
+        "repair_only_words": [
+          "minute"
+        ],
+        "parent_only_words_in_doc": [
+          "seconds"
+        ],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "Return a precise representation of a timedelta",
+          "translation": null,
+          "quote": "Return a precise representation of a timedelta",
+          "in_translated_text": true,
+          "sentence": "Return a precise representation of a timedelta",
+          "kind": "prose"
+        },
+        {
+          "stop": "quantity_before_verb",
+          "flags": [],
+          "subject": "a value of zero ",
+          "predicate": "is returned:",
+          "translation": null,
+          "quote": "a value of zero will be returned",
+          "in_translated_text": true,
+          "sentence": "a value of zero is returned:",
+          "kind": "prose"
+        }
+      ],
+      "frozen_audit": "doctest_only"
+    },
+    {
+      "id": "humanize-250",
+      "pr": 250,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1,
+          "input": "1 as integer"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "1.0 Byte",
+          "coarse": 1,
+          "input": "1 as floating point"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1,
+          "input": "1 as integer"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "1 Byte",
+          "coarse": 1,
+          "input": "1 as floating point"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "str: Human readable representation of a filesize",
+          "predicate": "",
+          "translation": null,
+          "quote": "str: Human readable representation of a filesize",
+          "in_translated_text": true,
+          "sentence": "str: Human readable representation of a filesize",
+          "kind": "return"
+        },
+        {
+          "stop": "quality_without_catalog_verb",
+          "flags": [],
+          "subject": "binary (bool): If `True`, uses binary suffixes (KiB, MiB) with base",
+          "predicate": "",
+          "translation": null,
+          "quote": "If `True`, uses binary suffixes",
+          "in_translated_text": true,
+          "sentence": "binary (bool): If `True`, uses binary suffixes (KiB, MiB) with base",
+          "kind": "param"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "humanize-218",
+      "pr": 218,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB",
+          "input": "3000000 as Python integer"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "-1.3 MB",
+          "coarse": "MB",
+          "input": "3000000 as numpy.int32"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB",
+          "input": "3000000 as Python integer"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "3.0 MB",
+          "coarse": "MB",
+          "input": "3000000 as numpy.int32"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "str: Human readable representation of a filesize",
+          "predicate": "",
+          "translation": null,
+          "quote": "str: Human readable representation of a filesize",
+          "in_translated_text": true,
+          "sentence": "str: Human readable representation of a filesize",
+          "kind": "return"
+        },
+        {
+          "quote": "'3.0 MB'",
+          "in_translated_text": false,
+          "stop": "removed_before_match",
+          "flags": [
+            "doctest_not_applied"
+          ],
+          "sentence": null,
+          "kind": null
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "humanize-216",
+      "pr": 216,
+      "drift_class": "parent_doc_encodes_bug",
+      "drift_class_zh": "父文本把缺陷形式写成了译文",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "1.0 milhão",
+          "coarse": 1.0,
+          "input": "pt_BR 1000000"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "2.0 bilhão",
+          "coarse": 2.0,
+          "input": "pt_BR 2000000000"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "1.0 milhão",
+          "coarse": 1.0,
+          "input": "pt_BR 1000000"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "2.0 bilhões",
+          "coarse": 2.0,
+          "input": "pt_BR 2000000000"
+        }
+      },
+      "gettext": {
+        "encoded": true,
+        "entries": [
+          {
+            "msgid": "billion",
+            "slots": [
+              "bilhão",
+              "bilhão"
+            ]
+          }
+        ],
+        "parent_only_words": [
+          "bilhão"
+        ],
+        "repair_only_words": [
+          "bilhões"
+        ],
+        "parent_only_words_in_doc": [
+          "bilhão"
+        ],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "str: Friendly text representation as a string, unless the value passed could not",
+          "predicate": "",
+          "translation": null,
+          "quote": "str: Friendly text representation as a string, unless the value passed could not",
+          "in_translated_text": true,
+          "sentence": "str: Friendly text representation as a string, unless the value passed could not",
+          "kind": "return"
+        },
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "be coaxed into an `int`",
+          "translation": null,
+          "quote": "be coaxed into an `int`",
+          "in_translated_text": true,
+          "sentence": "be coaxed into an `int`",
+          "kind": "return"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "msgstr[0] \"bilhão\"",
+          "predicate": "",
+          "translation": null,
+          "quote": "msgstr[0] \"bilhão\"",
+          "in_translated_text": true,
+          "sentence": "msgstr[0] \"bilhão\"",
+          "kind": "return"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "msgstr[1] \"bilhão\"",
+          "predicate": "",
+          "translation": null,
+          "quote": "msgstr[1] \"bilhão\"",
+          "in_translated_text": true,
+          "sentence": "msgstr[1] \"bilhão\"",
+          "kind": "return"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "prettytable-378",
+      "pr": 378,
+      "drift_class": "exception_versus_value",
+      "drift_class_zh": "异常与返回值不是同一类契约",
+      "blind": false,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": [
+            [
+              "X"
+            ]
+          ],
+          "coarse": 1,
+          "input": "one populated row"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null,
+          "input": "empty row batch",
+          "error": "IndexError"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": [
+            [
+              "X"
+            ]
+          ],
+          "coarse": 1,
+          "input": "one populated row"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": [],
+          "coarse": 0,
+          "input": "empty row batch"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [
+            "positive_should_not_rewritten"
+          ],
+          "subject": "rows - rows of data, should ",
+          "predicate": "be an iterable of lists, each list with as many",
+          "translation": null,
+          "quote": "should be an iterable of lists",
+          "in_translated_text": true,
+          "sentence": "rows - rows of data, should be an iterable of lists, each list with as many",
+          "kind": "param"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "prettytable-356",
+      "pr": 356,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "+",
+          "coarse": [
+            "X",
+            "Y"
+          ],
+          "input": "default border, two rows, divider after X"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": "└",
+          "coarse": [
+            "X",
+            "Y"
+          ],
+          "input": "single-line border, same rows and divider"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "+",
+          "coarse": [
+            "X",
+            "Y"
+          ],
+          "input": "default border, two rows, divider after X"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "├",
+          "coarse": [
+            "X",
+            "Y"
+          ],
+          "input": "single-line border, same rows and divider"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "Return string representation of table in current state",
+          "translation": null,
+          "quote": "Return string representation of table in current state",
+          "in_translated_text": true,
+          "sentence": "Return string representation of table in current state",
+          "kind": "prose"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "bottom_left_junction_char -",
+          "predicate": "",
+          "translation": null,
+          "quote": "bottom_left_junction_char -",
+          "in_translated_text": true,
+          "sentence": "bottom_left_junction_char -",
+          "kind": "param"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "single character string used to draw bottom-left line junctions",
+          "predicate": "",
+          "translation": null,
+          "quote": "single character string used to draw bottom-left line junctions",
+          "in_translated_text": true,
+          "sentence": "single character string used to draw bottom-left line junctions",
+          "kind": "param"
+        },
+        {
+          "stop": "tokens_between_verb_and_quality",
+          "flags": [],
+          "subject": "if False ",
+          "predicate": "return an empty string",
+          "translation": null,
+          "quote": "if False return an empty string",
+          "in_translated_text": true,
+          "sentence": "if False return an empty string",
+          "kind": "param"
+        },
+        {
+          "stop": "quality_without_catalog_verb",
+          "flags": [],
+          "subject": "header - print a header showing field names (True or False)",
+          "predicate": "",
+          "translation": null,
+          "quote": "header - print a header showing field names (True or False)",
+          "in_translated_text": true,
+          "sentence": "header - print a header showing field names (True or False)",
+          "kind": "param"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "prettytable-355",
+      "pr": 355,
+      "drift_class": "exception_versus_value",
+      "drift_class_zh": "异常与返回值不是同一类契约",
+      "blind": false,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": [
+            "z",
+            "a"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ],
+          "input": "insertion order z,a"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null,
+          "input": "request sort on field k at construction",
+          "error": "ValueError"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": [
+            "z",
+            "a"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ],
+          "input": "insertion order z,a"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": [
+            "a",
+            "z"
+          ],
+          "coarse": [
+            "a",
+            "z"
+          ],
+          "input": "request sort on field k at construction"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [
+          "a",
+          "z"
+        ],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": [
+          "a"
+        ]
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "Return a new PrettyTable instance",
+          "translation": null,
+          "quote": "Return a new PrettyTable instance",
+          "in_translated_text": true,
+          "sentence": "Return a new PrettyTable instance",
+          "kind": "prose"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "sortby - name of field to sort rows by",
+          "predicate": "",
+          "translation": null,
+          "quote": "sortby - name of field to sort rows by",
+          "in_translated_text": true,
+          "sentence": "sortby - name of field to sort rows by",
+          "kind": "param"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "prettytable-345",
+      "pr": 345,
+      "drift_class": "exception_versus_value",
+      "drift_class_zh": "异常与返回值不是同一类契约",
+      "blind": false,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "X",
+          "input": "ordinary formatted HTML table"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null,
+          "input": "same table, automatic index added",
+          "error": "TypeError"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "X",
+          "input": "ordinary formatted HTML table"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "center",
+          "coarse": "1",
+          "input": "same table, automatic index added"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [
+          "center"
+        ],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "Return string representation of HTML formatted version of table in current",
+          "translation": null,
+          "quote": "Return string representation of HTML formatted version of table in current",
+          "in_translated_text": true,
+          "sentence": "Return string representation of HTML formatted version of table in current",
+          "kind": "prose"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    },
+    {
+      "id": "more-itertools-1088",
+      "pr": 1088,
+      "drift_class": "exception_versus_value",
+      "drift_class_zh": "异常与返回值不是同一类契约",
+      "blind": false,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": true,
+          "coarse": true,
+          "input": "[True], n=1"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null,
+          "input": "[True], n=-10",
+          "error": "ValueError"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": true,
+          "coarse": true,
+          "input": "[True], n=1"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": false,
+          "coarse": false,
+          "input": "[True], n=-10"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [
+          "False"
+        ],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": [
+          "False"
+        ]
+      },
+      "focal": [
+        {
+          "stop": "tokens_between_verb_and_quality",
+          "flags": [],
+          "subject": "",
+          "predicate": "Return ``True`` if exactly ``n`` items in the iterable are ``True``",
+          "translation": null,
+          "quote": "Return ``True`` if exactly ``n`` items in the iterable are ``True``",
+          "in_translated_text": true,
+          "sentence": "Return ``True`` if exactly ``n`` items in the iterable are ``True``",
+          "kind": "prose"
+        }
+      ],
+      "frozen_audit": "doctest_only"
+    },
+    {
+      "id": "more-itertools-1082",
+      "pr": 1082,
+      "drift_class": "exception_versus_value",
+      "drift_class_zh": "异常与返回值不是同一类契约",
+      "blind": false,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3,
+          "input": "tuple target and pools"
+        },
+        "edge_parent": {
+          "ok": false,
+          "fine": null,
+          "coarse": null,
+          "input": "one-pass iterators for target and pools",
+          "error": "TypeError"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3,
+          "input": "tuple target and pools"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": 3,
+          "coarse": 3,
+          "input": "one-pass iterators for target and pools"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "verb_without_quality",
+          "flags": [],
+          "subject": "``ValueError`` ",
+          "predicate": "is raised if the given *element* isn't in the product",
+          "translation": null,
+          "quote": "``ValueError`` will be raised if the given *element* isn't in the product",
+          "in_translated_text": true,
+          "sentence": "``ValueError`` is raised if the given *element* isn't in the product",
+          "kind": "prose"
+        }
+      ],
+      "frozen_audit": "doctest_only"
+    },
+    {
+      "id": "rich-3718",
+      "pr": 3718,
+      "drift_class": "implicit_visual_or_format",
+      "drift_class_zh": "隐含视觉或格式约定",
+      "blind": true,
+      "justifies_scoring_protocol": false,
+      "normalization_separates_blind_group": false,
+      "views": {
+        "ordinary_parent": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title",
+          "input": "panel with plain background"
+        },
+        "edge_parent": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title",
+          "input": "panel with blue background, red title"
+        },
+        "ordinary_repair": {
+          "ok": true,
+          "fine": null,
+          "coarse": "title",
+          "input": "panel with plain background"
+        },
+        "edge_repair": {
+          "ok": true,
+          "fine": "blue",
+          "coarse": "title",
+          "input": "panel with blue background, red title"
+        }
+      },
+      "gettext": {
+        "encoded": false,
+        "entries": [],
+        "parent_only_words": [],
+        "repair_only_words": [
+          "blue"
+        ],
+        "parent_only_words_in_doc": [],
+        "repair_only_words_in_doc": []
+      },
+      "focal": [
+        {
+          "stop": "python_none_without_catalog_verb",
+          "flags": [],
+          "subject": "Defaults to None",
+          "predicate": "",
+          "translation": null,
+          "quote": "Defaults to None",
+          "in_translated_text": true,
+          "sentence": "Defaults to None",
+          "kind": "param"
+        },
+        {
+          "stop": "no_catalog_verb",
+          "flags": [],
+          "subject": "style (str, optional): The style of the panel (border and contents)",
+          "predicate": "",
+          "translation": null,
+          "quote": "The style of the panel (border and contents)",
+          "in_translated_text": true,
+          "sentence": "style (str, optional): The style of the panel (border and contents)",
+          "kind": "param"
+        },
+        {
+          "stop": "quality_without_catalog_verb",
+          "flags": [],
+          "subject": "Defaults to False",
+          "predicate": "",
+          "translation": null,
+          "quote": "Defaults to False",
+          "in_translated_text": true,
+          "sentence": "Defaults to False",
+          "kind": "param"
+        }
+      ],
+      "frozen_audit": "catalog_gap"
+    }
+  ],
+  "protocol_commit": "f40de3285593d246fa03e969826e6375c654d426",
+  "protocol_sha256": "5a779742ab6cb01b853f17a69c3f7a9ef295604059be1beedd91b75bef5870c9"
+}
