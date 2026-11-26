@@ -1,0 +1,866 @@
+{
+  "label": "calibration",
+  "banner": "这是校准，不是正式结果。此处的数字不能替换正式分母，也不能用来在看见密封结局之后修改已经预注册的正式方法。本次运行没有密封结局。",
+  "preparation_not_formal_result": true,
+  "cannot_replace_formal_denominators": true,
+  "cannot_change_preregistered_method_after_sealed_outcomes": true,
+  "sealed_outcomes_used": false,
+  "method_frozen": false,
+  "methods_ranked": false,
+  "checklist_boxes_ticked": false,
+  "formal_paired_comparison_started": false,
+  "new_algorithm": false,
+  "budget_limit": 3,
+  "live_library_execution": false,
+  "protocol_commit": "e23a55dea61a697bb2ce4e0a12b77b4efb9ab5f3",
+  "head": "e23a55dea61a697bb2ce4e0a12b77b4efb9ab5f3",
+  "protocol_sha256": "a01452a10791118017220f2e51b95a7b736f0942f718bad1e9b04567c3cec418",
+  "git_status": [],
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "entry": "research/release_drift_20261126/freeze_prep_20261130/run.py",
+  "arithmetic_check": {
+    "label": "calibration",
+    "fixture": "protocol-tiny",
+    "case_rows_used": false,
+    "losses": [
+      0,
+      1,
+      5
+    ],
+    "actions": {
+      "violated_verified": "deliver_replacement",
+      "violated_unverified": "defer",
+      "satisfied": "deliver_current",
+      "undetermined": "deliver_current"
+    }
+  },
+  "slugify_inventory": {
+    "n_task_rows": 12,
+    "task_expected_present": true,
+    "revealed_ids": [
+      "python-slugify-1",
+      "python-slugify-2"
+    ],
+    "revealed_values_copied": false
+  },
+  "missing_allow_list_files": [],
+  "cases": [
+    {
+      "id": "xlsx-column",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "source": "https://github.com/jmcnamara/XlsxWriter/issues/1219",
+      "versions": [
+        "3.3.0",
+        "3.3.1"
+      ],
+      "n_archive_rows": 40,
+      "n_capture_initial": 40,
+      "n_capture_bank": 4,
+      "archive_actual_type": "dict",
+      "capture_observed_type": "dict",
+      "detected_inputs_recomputed": false,
+      "development_results_copied": false,
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "适用版本、出处和轮子摘要只出现在公开夹具里。",
+            "校准输入不是正式任务的升级前回归集。",
+            "存档 expected 不是已登记的契约表达式。",
+            "开发探针库不升格为资料包中的候选请求。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": true,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "ran",
+          "signoff_ready": false,
+          "shape": "column",
+          "wrapped": false,
+          "registered_normal_value": false,
+          "coupled_invariant": false,
+          "attempts": {
+            "overlapping": {
+              "rejected": true,
+              "exception": "ValueError",
+              "message": "duplicate or overlapping intervention paths"
+            },
+            "infeasible": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "infeasible observation"
+            },
+            "unchanged": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "no field changed"
+            },
+            "nonminimal": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "smaller feasible intervention exists"
+            },
+            "missing": {
+              "rejected": true,
+              "exception": "KeyError",
+              "message": "'missing'"
+            },
+            "legal": {
+              "rejected": false,
+              "effect": "request_changed",
+              "attribution": false,
+              "alternative": "calibration-alt",
+              "note": "calibration witness only; not an active-method attribution"
+            }
+          },
+          "reason": "replay_group 在已承认的形状上执行了。替代值是校准占位符，不是登记过的正常值，不能用于签收。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    },
+    {
+      "id": "xlsx-duration",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "source": "https://github.com/jmcnamara/XlsxWriter/issues/731",
+      "versions": [
+        "1.3.7",
+        "1.3.8"
+      ],
+      "n_archive_rows": 6,
+      "n_capture_initial": 6,
+      "n_capture_bank": 4,
+      "archive_actual_type": "float",
+      "capture_observed_type": "list",
+      "detected_inputs_recomputed": false,
+      "development_results_copied": false,
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "适用版本、出处和轮子摘要只出现在公开夹具里。",
+            "校准输入不是正式任务的升级前回归集。",
+            "存档 expected 不是已登记的契约表达式。",
+            "开发探针库不升格为资料包中的候选请求。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": true,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "ran",
+          "signoff_ready": false,
+          "shape": "duration",
+          "wrapped": false,
+          "registered_normal_value": false,
+          "coupled_invariant": false,
+          "attempts": {
+            "overlapping": {
+              "rejected": true,
+              "exception": "ValueError",
+              "message": "duplicate or overlapping intervention paths"
+            },
+            "infeasible": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "infeasible observation"
+            },
+            "unchanged": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "no field changed"
+            },
+            "nonminimal": {
+              "rejected": true,
+              "effect": "unauditable",
+              "reason": "smaller feasible intervention exists"
+            },
+            "missing": {
+              "rejected": true,
+              "exception": "IndexError",
+              "message": "list index out of range"
+            },
+            "legal": {
+              "rejected": false,
+              "effect": "request_changed",
+              "attribution": false,
+              "alternative": "calibration-alt",
+              "note": "calibration witness only; not an active-method attribution"
+            }
+          },
+          "reason": "replay_group 在已承认的形状上执行了。替代值是校准占位符，不是登记过的正常值，不能用于签收。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    },
+    {
+      "id": "babel-week",
+      "library": "Babel",
+      "label": "calibration",
+      "source": "https://github.com/python-babel/babel/pull/1179",
+      "versions": [
+        "2.16.0",
+        "2.17.0"
+      ],
+      "n_archive_rows": 20,
+      "n_capture_initial": 20,
+      "n_capture_bank": 4,
+      "archive_actual_type": "str",
+      "capture_observed_type": "str",
+      "detected_inputs_recomputed": false,
+      "development_results_copied": false,
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "适用版本、出处和轮子摘要只出现在公开夹具里。",
+            "校准输入不是正式任务的升级前回归集。",
+            "存档 expected 不是已登记的契约表达式。",
+            "开发探针库不升格为资料包中的候选请求。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": true,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "gap",
+          "signoff_ready": false,
+          "wrapped": false,
+          "observed_type": "str",
+          "reason": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-1",
+      "library": "python-slugify",
+      "label": "calibration",
+      "parent_commit": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+      "rev_commit": "0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8",
+      "payload_side": "parent",
+      "payload_kind": "deliveries",
+      "record_counts": {
+        "assertions": 43,
+        "properties": 24,
+        "deliveries": 48
+      },
+      "n_checks": 43,
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "import_error": null,
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "parent 与 rev 没有比较。",
+            "parent/rev 是另一项公开研究里的提交标识，不是静默漂移资料包中的版本对。",
+            "readme 已摘要，但没有当作升级前公开文档。",
+            "tasks 与 checks 里的期望值不是已登记的契约表达式。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": false,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "gap",
+          "signoff_ready": false,
+          "wrapped": false,
+          "observed_type": "dict",
+          "reason": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-2",
+      "library": "python-slugify",
+      "label": "calibration",
+      "parent_commit": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+      "rev_commit": "a1543fe0ae019606bec660d6cf2e70a435ff29e4",
+      "payload_side": "parent",
+      "payload_kind": "deliveries",
+      "record_counts": {
+        "assertions": 43,
+        "properties": 24,
+        "deliveries": 48
+      },
+      "n_checks": 43,
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "import_error": null,
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "parent 与 rev 没有比较。",
+            "parent/rev 是另一项公开研究里的提交标识，不是静默漂移资料包中的版本对。",
+            "readme 已摘要，但没有当作升级前公开文档。",
+            "tasks 与 checks 里的期望值不是已登记的契约表达式。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": false,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "gap",
+          "signoff_ready": false,
+          "wrapped": false,
+          "observed_type": "dict",
+          "reason": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-3",
+      "library": "python-slugify",
+      "label": "calibration",
+      "parent_commit": "3d75734751b36ae14feab0d84f5d670f1d6225e3",
+      "rev_commit": "07155c2001580b0ec70b40f24a475baef6238aac",
+      "payload_side": "parent",
+      "payload_kind": "import_error",
+      "record_counts": {},
+      "n_checks": 23,
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "import_error": "AttributeError: module 'slugify' has no attribute 'slugify'",
+      "artifacts": {
+        "shared_pack_summary_loader": {
+          "name": "shared_pack_summary_loader",
+          "status": "ran",
+          "signoff_ready": false,
+          "shared_pack_file": null,
+          "fields": {
+            "registered_operation": "absent",
+            "user_requirement": "absent",
+            "applicable_versions": "public_fixture_only",
+            "old_schema": "absent",
+            "pre_upgrade_public_docs": "absent",
+            "original_regression_inputs": "public_fixture_only",
+            "original_regression_expectations": "public_fixture_only",
+            "candidate_requests": "absent",
+            "criteria": "absent",
+            "shared_backup_actions": "absent",
+            "material_version": "public_fixture_only",
+            "provenance": "public_fixture_only"
+          },
+          "notes": [
+            "parent 与 rev 没有比较。",
+            "parent/rev 是另一项公开研究里的提交标识，不是静默漂移资料包中的版本对。",
+            "readme 已摘要，但没有当作升级前公开文档。",
+            "tasks 与 checks 里的期望值不是已登记的契约表达式。",
+            "parent 侧的公开记录是导入错误，没有工具返回。"
+          ],
+          "reason": "装载器读完了允许的公开夹具。没有共同资料包文件，不能做两侧共用的摘要。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "gap",
+          "signoff_ready": false,
+          "guard_invoked": true,
+          "empty_settings_rejected": true,
+          "rejection": "missing or different search setting: task_pack",
+          "sequence_enumerated": false,
+          "development_preplanned_present": false,
+          "development_preplanned_used": false,
+          "reason": "没有登记静态序列。残缺设置被 check_search_parity 拒绝。没有枚举序列，也没有使用开发实验的 preplanned 值。"
+        },
+        "field_group_replay": {
+          "name": "field_group_replay",
+          "status": "gap",
+          "signoff_ready": false,
+          "wrapped": false,
+          "observed_type": "dict",
+          "reason": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+        },
+        "disposition_and_expected_task_loss": {
+          "name": "disposition_and_expected_task_loss",
+          "status": "ran",
+          "signoff_ready": false,
+          "fixture": "protocol-tiny",
+          "case_rows_used": false,
+          "reason": "调用了共同函数。输入是协议里的小夹具，不是这个案例的行。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": false,
+          "adapters_invoked": [],
+          "shared_first_completed": true,
+          "shared_first_charged": false,
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "dispatched_roles": [
+            "shared-first",
+            "probe",
+            "unavailable",
+            "reset"
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "计数器按脚本执行了。分派的是存档载荷的类型，不是库适配器。"
+        }
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "id": "no_shared_pack",
+      "blocks_freeze_signoff": true,
+      "detail": "没有两侧共用的资料包文件。装载器只能指出公开夹具里散落的字段。"
+    },
+    {
+      "id": "no_static_sequence",
+      "blocks_freeze_signoff": true,
+      "detail": "没有登记候选生成器、合法动作、先验、转移、终端评分和深度为三的序列。残缺设置会被拒绝。开发实验的 preplanned 未使用。"
+    },
+    {
+      "id": "adapters_not_plugged_into_freeze_guards",
+      "blocks_freeze_signoff": true,
+      "detail": "XlsxWriter、Babel 和 slugify 的工具适配器没有接到 ExtraCalls 后面。试跑分派的是存档载荷。"
+    },
+    {
+      "id": "no_hash_freeze_helper",
+      "blocks_freeze_signoff": true,
+      "detail": "没有对可部署参数、任务注册表、合理预期和处置规则做哈希冻结的辅助函数。输入文件摘要不能代替它。"
+    },
+    {
+      "id": "no_registered_contract_expressions",
+      "blocks_freeze_signoff": true,
+      "detail": "这些案例没有登记 contract_value、direct_delivery 或 transferred_verdict 的表达式表。"
+    },
+    {
+      "id": "no_registered_normal_replacements",
+      "blocks_freeze_signoff": true,
+      "detail": "没有登记正常替代值和字段间不变量。校准占位符不能用于反事实签收。"
+    },
+    {
+      "id": "disposition_not_applied_to_case_rows",
+      "blocks_freeze_signoff": true,
+      "detail": "案例行没有登记的任务裁决。0、1、5 只来自协议小夹具。"
+    },
+    {
+      "id": "no_offline_cost_counters",
+      "blocks_freeze_signoff": true,
+      "detail": "离线 Schema、离线备用和初态快照复位的另计次数还没有实现。"
+    },
+    {
+      "id": "freeze_checklist_not_ticked",
+      "blocks_freeze_signoff": true,
+      "detail": "11 月 30 日清单没有勾选，正式方法也没有冻结。"
+    },
+    {
+      "id": "duration_archive_scalar_not_addressable",
+      "blocks_freeze_signoff": true,
+      "detail": "paired_releases 的时长 actual 不是可寻址的字段结构。试跑没有把开发捕获回写成该标量。"
+    },
+    {
+      "id": "babel-week_replay_not_addressable",
+      "blocks_freeze_signoff": true,
+      "detail": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+    },
+    {
+      "id": "python-slugify-1_replay_not_addressable",
+      "blocks_freeze_signoff": true,
+      "detail": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+    },
+    {
+      "id": "python-slugify-2_replay_not_addressable",
+      "blocks_freeze_signoff": true,
+      "detail": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+    },
+    {
+      "id": "python-slugify-3_replay_not_addressable",
+      "blocks_freeze_signoff": true,
+      "detail": "返回值没有登记的字段路径。没有包一层新的结构，也没有改选另一行。"
+    }
+  ],
+  "hash_freeze_helper": {
+    "status": "gap",
+    "reason": "输入摘要不是参数、注册表、预期和处置规则的哈希冻结。",
+    "calibration_input_digests_are_not_that_freeze": true,
+    "digests": {
+      "research/release_drift_20261126/dev_parallel/results/column.json": "369c523c531d073b9068553f57ae6efb3725f53e4c6fd195406cea06c3f6454b",
+      "research/release_drift_20261126/dev_parallel/results/duration.json": "5c2e2155dc9d27cf3f61a62644be2e20e0ff32e74be60aeb781c01ce958bcbe7",
+      "research/release_drift_20261126/dev_parallel/results/week.json": "a9da0ddfa143f43efd427f52c4bfc8277e89bd68d3afb25ec89e51bba90944c4",
+      "runs_contract_synthesis_gate_20261125/checks.json": "f07b908d04f33023b554159d7ca15da8925140d0a50034afe12baa8ec3987872",
+      "runs_contract_synthesis_gate_20261125/observations.json": "491add1072f970d9ecba86de680da112a56f9e5b399637baf73b860f6168b5f4",
+      "runs_contract_synthesis_gate_20261125/python-slugify-1.txt": "95712f45435a38eefdd38a742480d9c228b86310a1c64da8ace090775940e9e6",
+      "runs_contract_synthesis_gate_20261125/python-slugify-2.txt": "95712f45435a38eefdd38a742480d9c228b86310a1c64da8ace090775940e9e6",
+      "runs_contract_synthesis_gate_20261125/python-slugify-3.txt": "835c97c93d3d679389e24eeedd20963981f96385e79865ee1ae159b50f2c2acb",
+      "runs_contract_synthesis_gate_20261125/revealed_slugify.json": "4d6542330613ca5762bc9a029f35ef2be7b8b7547ef3c92d6b741055609929cf",
+      "runs_contract_synthesis_gate_20261125/sample.json": "deee7b2aa50e02cd5aa9196cf0b5c68ca4bdc5580df6a963d1be526a0488d948",
+      "runs_contract_synthesis_gate_20261125/tasks.json": "acc1f12f15cdfeebe652c6138896c4dd677eab942078195a6ecc10d3e25192ef",
+      "runs_upstream_functional_20261124/paired_releases.json": "2d1648e65fe88da2e707cf0cd7121a25ff39841222ede741f952fe368841647f"
+    }
+  }
+}
