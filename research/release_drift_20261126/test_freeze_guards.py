@@ -1,9 +1,75 @@
 import unittest
+from copy import deepcopy
+from fractions import Fraction
 
-from freeze_guards import BudgetExhausted, Decision, ExtraCalls, disposition, replay_choice
+from freeze_guards import (BudgetExhausted, Decision, ExtraCalls, check_search_parity, delivery_change,
+                           direct_delivery, disposition, expected_task_loss,
+                           replay_choice, replay_group, transferred_verdict)
 
 
 class GuardsTest(unittest.TestCase):
+    def test_search_parity_rejects_weaker_static_search(self):
+        settings = dict.fromkeys(("task_pack", "candidates", "prior", "transition", "legal_actions",
+                                  "terminal_score", "pruning", "tie_break"), "fixture-id")
+        settings.update(depth=3, scoring_limit=100)
+        check_search_parity(settings, dict(settings))
+        for change in ({"depth": 2}, {"scoring_limit": 50}, {"prior": "different"}):
+            with self.assertRaises(ValueError):
+                check_search_parity({**settings, **change}, settings)
+
+    def test_last_call_and_delivery_credit(self):
+        self.assertEqual(expected_task_loss(0, 1, 0), 1)
+        self.assertEqual(expected_task_loss(Fraction(1, 2), 0, Fraction(1, 2)), Fraction(5, 2))
+        with self.assertRaises(ValueError):
+            expected_task_loss(1, 1, 0)
+        blocked = delivery_change("wrong", "deferred")
+        self.assertTrue(blocked["blocked_by_deferral"])
+        self.assertFalse(blocked["wrong_to_correct"])
+        self.assertEqual(blocked["loss_reduction"], 4)
+        self.assertTrue(delivery_change("wrong", "correct")["wrong_to_correct"])
+
+    def test_transfer_requires_expected_and_observed_relation(self):
+        rule = {"relation": "scaled_quantity", "factor": 2, "clause": "size",
+                "operation": "count", "expected": {"op": "length", "input": ["items"]},
+                "observed": ["n"]}
+        probe = {"clause": "size", "operation": "count", "endpoint": "test",
+                 "snapshot": "initial", "inputs": {"items": [0, 1]}, "response": {"n": 1}}
+        target = {**probe, "inputs": {"items": [0, 1, 2, 3]}, "response": {"n": 2}}
+        self.assertEqual(transferred_verdict(rule, probe, target), "violated")
+        for change in ({"snapshot": "later"}, {"clause": "other"}, {"response": {}},
+                       {"response": {"n": 4}}, {"inputs": {"items": []}}):
+            self.assertEqual(transferred_verdict(rule, probe, {**target, **change}), "undetermined")
+        expressions = {"count": rule["expected"]}
+        self.assertEqual(direct_delivery("count", target["inputs"], expressions), ("available", 4))
+        self.assertEqual(direct_delivery("report", target["inputs"], expressions), ("unavailable", None))
+        restricted = deepcopy(rule)
+        restricted["expected"]["when"] = [{"op": "equals", "input": ["mode"], "value": "exact"}]
+        self.assertEqual(transferred_verdict(restricted, probe, target), "undetermined")
+        self.assertEqual(direct_delivery("count", target["inputs"], {"count": restricted["expected"]}),
+                         ("unavailable", None))
+
+    def test_coupled_observation_only_as_minimal_feasible_group(self):
+        def policy(context, history):
+            n = history[-1]["response"]["n"]
+            return Decision({"id": str(n)}, (), "check total")
+
+        def feasible(r):
+            return r["n"] == len(r["items"])
+
+        history = [{"response": {"n": 2, "items": ["a", "b"], "tag": "x"}}]
+        before = deepcopy(history)
+        logged = policy({}, history)
+        group = [(["n"], 1), (["items"], ["a"])]
+        for field in group:
+            result = replay_group(policy, {}, history, logged, [field], feasible)
+            self.assertEqual(result["effect"], "unauditable")
+        result = replay_group(policy, {}, history, logged, group, feasible)
+        self.assertEqual(result["effect"], "request_changed")
+        padded = group + [(["tag"], "y")]
+        result = replay_group(policy, {}, history, logged, padded, feasible)
+        self.assertEqual(result["effect"], "unauditable")
+        self.assertEqual(history, before)
+
     def test_failure_and_recovery_share_limit(self):
         dispatched = []
 
