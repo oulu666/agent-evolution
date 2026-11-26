@@ -1,0 +1,1375 @@
+{
+  "label": "calibration",
+  "banner": "这是校准，不是正式结果。此处的数字不能替换正式分母，也不能用来在看见密封结局之后修改已经预注册的正式方法。本次运行没有密封结局。",
+  "preparation_not_formal_result": true,
+  "cannot_replace_formal_denominators": true,
+  "cannot_change_preregistered_method_after_sealed_outcomes": true,
+  "sealed_outcomes_used": false,
+  "method_frozen": false,
+  "methods_ranked": false,
+  "checklist_boxes_ticked": false,
+  "formal_paired_comparison_started": false,
+  "new_algorithm": false,
+  "budget_limit": 3,
+  "addendum": "research/release_drift_20261126/freeze_prep_20261130/PROTOCOL_ADDENDUM_ZH.md",
+  "addendum_commit": "22f56d6568968b69ed152a4c43476bd433d40a2d",
+  "head": "7702338b4f2b74a4967bc8701d05640335c4a1bb",
+  "addendum_sha256": "1abe6c876ff938585c4918556c9cbbfe4b2ff37839ddfb392e48657c5737e78f",
+  "git_status": [],
+  "interpreter": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "python3_11_path": null,
+    "cpython_3_11_pin": "unset",
+    "random_arm_ran": false,
+    "note": "CPython 3.12 不满足方向判别里的 3.11 针脚。这次没有安装 3.11，也没有跑随机臂。"
+  },
+  "entry": "research/release_drift_20261126/freeze_prep_20261130/run_followup.py",
+  "arithmetic_check": {
+    "label": "calibration",
+    "fixture": "protocol-tiny",
+    "case_rows_used": false,
+    "losses": [
+      0,
+      1,
+      5
+    ],
+    "actions": {
+      "violated_verified": "deliver_replacement",
+      "violated_unverified": "defer",
+      "satisfied": "deliver_current",
+      "undetermined": "deliver_current"
+    }
+  },
+  "cases": [
+    {
+      "id": "xlsx-column",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/xlsx-column.json",
+      "pack_sha256": "92525f78b05000ae35a9ebad5b6533f34cc4273964e9ade9466df267edb3bcdc",
+      "arm_ids": {
+        "before": "3.3.0",
+        "after": "3.3.1"
+      },
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/xlsx-column.json",
+          "sha256": "92525f78b05000ae35a9ebad5b6533f34cc4273964e9ade9466df267edb3bcdc",
+          "n_inputs": 40,
+          "n_expected": 40,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "92525f78b05000ae35a9ebad5b6533f34cc4273964e9ade9466df267edb3bcdc",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 65641,
+          "depth": 3,
+          "n_candidates": 40,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "值不是注册候选集上的规范化请求标识序列。",
+              "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+              "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+              "该键依赖开发捕获库，校准生成器不使用那些返回。"
+            ],
+            "value": [
+              2
+            ]
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": true,
+            "version": "3.3.0",
+            "result_type": "dict",
+            "result": {
+              "visible": true,
+              "cell_text": ""
+            },
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "probe": {
+            "completed": true,
+            "version": "3.3.0",
+            "result_type": "dict",
+            "result": {
+              "visible": true,
+              "cell_text": ""
+            },
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": true,
+            "version": "3.3.0",
+            "result_type": "dict",
+            "result": {
+              "visible": true,
+              "cell_text": ""
+            },
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "ran",
+          "signoff_ready": false,
+          "registered": true,
+          "source": "该输入在共同资料包中的 expected",
+          "cross_field_invariants": [],
+          "attempts": [
+            {
+              "path": [
+                "visible"
+              ],
+              "normal_value": true,
+              "effect": "unauditable",
+              "reason": "no field changed",
+              "placeholder": false
+            },
+            {
+              "path": [
+                "cell_text"
+              ],
+              "normal_value": "",
+              "effect": "unauditable",
+              "reason": "no field changed",
+              "placeholder": false
+            }
+          ],
+          "reason": "正常值来自这一行自己的公开 expected。没有登记跨字段不变量。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "ran",
+          "signoff_ready": false,
+          "addressable": true,
+          "wrapped": false,
+          "reason": "列捕获本来就是含 visible 和 cell_text 的字典。这不是新的包裹。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 3198
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 4048
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 2550
+            }
+          ],
+          "schema": {
+            "accepted": true,
+            "addressable": true,
+            "wrapped": false
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    },
+    {
+      "id": "xlsx-duration",
+      "library": "XlsxWriter",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/xlsx-duration.json",
+      "pack_sha256": "b710c6676b132bcb61a665481f73aa1443e8e2938d9e4df42e5df567e4800920",
+      "arm_ids": {
+        "before": "1.3.7",
+        "after": "1.3.8"
+      },
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/xlsx-duration.json",
+          "sha256": "b710c6676b132bcb61a665481f73aa1443e8e2938d9e4df42e5df567e4800920",
+          "n_inputs": 6,
+          "n_expected": 6,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "b710c6676b132bcb61a665481f73aa1443e8e2938d9e4df42e5df567e4800920",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 259,
+          "depth": 3,
+          "n_candidates": 6,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "值不是注册候选集上的规范化请求标识序列。",
+              "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+              "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+              "该键依赖开发捕获库，校准生成器不使用那些返回。"
+            ],
+            "value": [
+              2
+            ]
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": true,
+            "version": "1.3.7",
+            "result_type": "float",
+            "result": 1.0,
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "probe": {
+            "completed": true,
+            "version": "1.3.7",
+            "result_type": "float",
+            "result": 30.0,
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": true,
+            "version": "1.3.7",
+            "result_type": "float",
+            "result": 1.0,
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "ran",
+          "signoff_ready": false,
+          "registered": true,
+          "source": "数值来自该输入的公开 expected；格式字面量来自公开调用中的 [h]:mm。",
+          "cross_field_invariants": [],
+          "attempts": [
+            {
+              "path": [
+                0
+              ],
+              "normal_value": 1.0,
+              "effect": "unauditable",
+              "reason": "no field changed",
+              "placeholder": false
+            },
+            {
+              "path": [
+                1
+              ],
+              "normal_value": "[h]:mm",
+              "effect": "unauditable",
+              "reason": "no field changed",
+              "placeholder": false
+            }
+          ],
+          "reason": "档案标量没有被写成列表。二元列表上的正常值等于第一条捕获时，重放没有字段变化。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "gap",
+          "signoff_ready": false,
+          "accepted": false,
+          "addressable": false,
+          "wrapped": false,
+          "observed_type": "float",
+          "reason": "返回值仍是字符串或标量。没有包进新结构。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 2758
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 1983
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 1855
+            }
+          ],
+          "schema": {
+            "accepted": true,
+            "addressable": true,
+            "wrapped": false
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    },
+    {
+      "id": "babel-week",
+      "library": "Babel",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/babel-week.json",
+      "pack_sha256": "07c84df0db1f5b93726c63bf3aad35cd5dbaf4841862edb7ddf9f526373046c3",
+      "arm_ids": {
+        "before": "2.16.0",
+        "after": "2.17.0"
+      },
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/babel-week.json",
+          "sha256": "07c84df0db1f5b93726c63bf3aad35cd5dbaf4841862edb7ddf9f526373046c3",
+          "n_inputs": 20,
+          "n_expected": 20,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "07c84df0db1f5b93726c63bf3aad35cd5dbaf4841862edb7ddf9f526373046c3",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 8421,
+          "depth": 3,
+          "n_candidates": 20,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "值不是注册候选集上的规范化请求标识序列。",
+              "dev_parallel.best_static 最小化的是剩余解释数、调用数和探针下标序列，不是 expected_task_loss。",
+              "平局由探针下标元组决定，不是先少调用再按规范化请求标识。",
+              "该键依赖开发捕获库，校准生成器不使用那些返回。"
+            ],
+            "value": [
+              2
+            ]
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": true,
+            "version": "2.16.0",
+            "result_type": "str",
+            "result": "2003-W24-7",
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "probe": {
+            "completed": true,
+            "version": "2.16.0",
+            "result_type": "str",
+            "result": "2003-W01-3",
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": true,
+            "version": "2.16.0",
+            "result_type": "str",
+            "result": "2003-W24-7",
+            "dependency": null,
+            "compared_to_expected": false
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "gap",
+          "signoff_ready": false,
+          "registered": false,
+          "cross_field_invariants": [],
+          "wrapped": false,
+          "reason": "公开 expected 的形状不能给这个记录提供字段级正常值。没有使用占位替代常量。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "gap",
+          "signoff_ready": false,
+          "accepted": false,
+          "addressable": false,
+          "wrapped": false,
+          "observed_type": "str",
+          "reason": "返回值仍是字符串或标量。没有包进新结构。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 3466
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 2786
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 1606
+            }
+          ],
+          "schema": {
+            "accepted": false,
+            "addressable": false,
+            "wrapped": false,
+            "observed_type": "str"
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-1",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-1.json",
+      "pack_sha256": "655512b8181b42054514572905ffb77e6bf111069daf73126c20c136199d3356",
+      "arm_ids": {
+        "parent": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+        "rev": "0c9b8e069994f6ab76b4f4f5efd2d85cf795bdd8"
+      },
+      "payload_kind": "deliveries",
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-1.json",
+          "sha256": "655512b8181b42054514572905ffb77e6bf111069daf73126c20c136199d3356",
+          "n_inputs": 12,
+          "n_expected": 12,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "655512b8181b42054514572905ffb77e6bf111069daf73126c20c136199d3356",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 1885,
+          "depth": 3,
+          "n_candidates": 12,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "这个案例没有 development preplanned 键。"
+            ],
+            "value": null
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": true,
+            "version": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+            "result_type": "str",
+            "result": "green-oak",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "probe": {
+            "completed": true,
+            "version": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+            "result_type": "str",
+            "result": "oak-elm",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": true,
+            "version": "eeabcc29eb67dd9ab34c693db44f9ece312e7a2c",
+            "result_type": "str",
+            "result": "green-oak",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "gap",
+          "signoff_ready": false,
+          "registered": false,
+          "cross_field_invariants": [],
+          "wrapped": false,
+          "reason": "公开 expected 的形状不能给这个记录提供字段级正常值。没有使用占位替代常量。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "ran",
+          "signoff_ready": false,
+          "addressable": true,
+          "wrapped": false,
+          "paths": [
+            {
+              "path": [
+                "method"
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "v",
+                0
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "v",
+                1
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "deliver"
+              ],
+              "type": "bool"
+            },
+            {
+              "path": [
+                "calls"
+              ],
+              "type": "int"
+            },
+            {
+              "path": [
+                "ns"
+              ],
+              "type": "int"
+            }
+          ],
+          "normal_replacement": false,
+          "reason": "交付记录的现成键可以 _read。这不是包裹。没有登记正常替代值，所以没有做反事实签收。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 7058
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 1585
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 7289
+            }
+          ],
+          "schema": {
+            "accepted": true,
+            "addressable": true,
+            "wrapped": false
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-2",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-2.json",
+      "pack_sha256": "6b3bfea79f086aaae956c01702374f9bf20c7dd39e28e2f72a6a1793454917f4",
+      "arm_ids": {
+        "parent": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+        "rev": "a1543fe0ae019606bec660d6cf2e70a435ff29e4"
+      },
+      "payload_kind": "deliveries",
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-2.json",
+          "sha256": "6b3bfea79f086aaae956c01702374f9bf20c7dd39e28e2f72a6a1793454917f4",
+          "n_inputs": 12,
+          "n_expected": 12,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "6b3bfea79f086aaae956c01702374f9bf20c7dd39e28e2f72a6a1793454917f4",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 1885,
+          "depth": 3,
+          "n_candidates": 12,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "这个案例没有 development preplanned 键。"
+            ],
+            "value": null
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": true,
+            "version": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+            "result_type": "str",
+            "result": "green-oak",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "probe": {
+            "completed": true,
+            "version": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+            "result_type": "str",
+            "result": "oak-elm",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": true,
+            "version": "4091b444746032847ccce0d5c6a0cd5b1bb73d81",
+            "result_type": "str",
+            "result": "green-oak",
+            "dependency": {
+              "unidecode": "1.4.0"
+            },
+            "compared_to_expected": false
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": true
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": true
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "gap",
+          "signoff_ready": false,
+          "registered": false,
+          "cross_field_invariants": [],
+          "wrapped": false,
+          "reason": "公开 expected 的形状不能给这个记录提供字段级正常值。没有使用占位替代常量。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "ran",
+          "signoff_ready": false,
+          "addressable": true,
+          "wrapped": false,
+          "paths": [
+            {
+              "path": [
+                "method"
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "v",
+                0
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "v",
+                1
+              ],
+              "type": "str"
+            },
+            {
+              "path": [
+                "deliver"
+              ],
+              "type": "bool"
+            },
+            {
+              "path": [
+                "calls"
+              ],
+              "type": "int"
+            },
+            {
+              "path": [
+                "ns"
+              ],
+              "type": "int"
+            }
+          ],
+          "normal_replacement": false,
+          "reason": "交付记录的现成键可以 _read。这不是包裹。没有登记正常替代值，所以没有做反事实签收。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 13350
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 2332
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 11810
+            }
+          ],
+          "schema": {
+            "accepted": true,
+            "addressable": true,
+            "wrapped": false
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    },
+    {
+      "id": "python-slugify-3",
+      "library": "python-slugify",
+      "label": "calibration",
+      "pack_file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-3.json",
+      "pack_sha256": "76282c22c6d3bb794d88339551c51032c78567f923f82c1561c47328381d22c8",
+      "arm_ids": {
+        "parent": "3d75734751b36ae14feab0d84f5d670f1d6225e3",
+        "rev": "07155c2001580b0ec70b40f24a475baef6238aac"
+      },
+      "payload_kind": "import_error",
+      "compared_parent_and_rev": false,
+      "revealed_values_copied": false,
+      "expression_table": [],
+      "expression_table_label": "空规则表",
+      "artifacts": {
+        "shared_pack": {
+          "name": "shared_pack",
+          "status": "ran",
+          "signoff_ready": false,
+          "file": "research/release_drift_20261126/freeze_prep_20261130/packs/python-slugify-3.json",
+          "sha256": "76282c22c6d3bb794d88339551c51032c78567f923f82c1561c47328381d22c8",
+          "n_inputs": 12,
+          "n_expected": 12,
+          "n_offline_criteria": 0,
+          "both_arms": true,
+          "missing": [],
+          "reason": "两臂读同一份资料包。装载器找到了文件并计算了摘要。离线判据列表允许为空。"
+        },
+        "static_sequence": {
+          "name": "static_sequence",
+          "status": "partial",
+          "signoff_ready": false,
+          "check_search_parity": "passed",
+          "settings": {
+            "depth": 3,
+            "scoring_limit": null,
+            "task_pack": "76282c22c6d3bb794d88339551c51032c78567f923f82c1561c47328381d22c8",
+            "candidates": "pack-inputs",
+            "prior": "no-outcome-masses",
+            "transition": "call-budget-only",
+            "legal_actions": "public-calibration-input-or-stop",
+            "terminal_score": "freeze_guards.expected_task_loss",
+            "pruning": "none",
+            "tie_break": "fewer-calls-then-canonical-request-id"
+          },
+          "n_sequences": 1885,
+          "depth": 3,
+          "n_candidates": 12,
+          "transition_kind": "call-budget-only",
+          "outcome_transition": false,
+          "terminal_score_registered": true,
+          "sequence_scored": false,
+          "sequence_selected": false,
+          "development_preplanned": {
+            "matches_direction_gate": false,
+            "development_preplanned_used": false,
+            "failures": [
+              "这个案例没有 development preplanned 键。"
+            ],
+            "value": null
+          },
+          "reason": "深度为三的序列已经数完，两臂设置相同，核对通过。没有结局质量，所以没有选出序列。开发 preplanned 未使用。"
+        },
+        "budget_enforcement": {
+          "name": "budget_enforcement",
+          "status": "ran",
+          "signoff_ready": false,
+          "live_adapter": true,
+          "shared_first": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "AttributeError: module 'slugify' has no attribute 'slugify'"
+          },
+          "probe": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "AttributeError: module 'slugify' has no attribute 'slugify'"
+          },
+          "verification": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "unregistered calibration operation"
+          },
+          "reset": {
+            "completed": false,
+            "error_type": "CalibrationCallError",
+            "error": "AttributeError: module 'slugify' has no attribute 'slugify'"
+          },
+          "extra_events": [
+            {
+              "step": 1,
+              "purpose": "probe",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "purpose": "verification",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "purpose": "reset",
+              "completed": false
+            }
+          ],
+          "restore_dispatched": false,
+          "intercepted": "three additional calls already attempted",
+          "reason": "成功调用进入适配器。未登记校验占用一次。在线复位走同一个计数器。第四次恢复没有进入适配器。"
+        },
+        "normal_replacements": {
+          "name": "normal_replacements",
+          "status": "gap",
+          "signoff_ready": false,
+          "registered": false,
+          "cross_field_invariants": [],
+          "wrapped": false,
+          "reason": "公开 expected 的形状不能给这个记录提供字段级正常值。没有使用占位替代常量。"
+        },
+        "field_address": {
+          "name": "field_address",
+          "status": "ran",
+          "signoff_ready": false,
+          "addressable": true,
+          "wrapped": false,
+          "paths": [
+            {
+              "path": [
+                "import_error"
+              ],
+              "type": "str"
+            }
+          ],
+          "stored_import_error": "AttributeError: module 'slugify' has no attribute 'slugify'",
+          "normal_replacement": false,
+          "reason": "导入错误本来就在 import_error 字段里。没有包裹，也没有正常替代值。"
+        },
+        "disposition_on_case_row": {
+          "name": "disposition_on_case_row",
+          "status": "partial",
+          "signoff_ready": false,
+          "label": "calibration",
+          "formal_score": false,
+          "verdict": "undetermined",
+          "verified_replacement": false,
+          "action": "deliver_current",
+          "expected_task_loss": null,
+          "direct_delivery": "unavailable",
+          "transferred_verdict_called": false,
+          "expression_table": [],
+          "expression_table_label": "空规则表",
+          "reason": "空规则表不能用已有词汇判定义务。裁决保持未定，动作为交付当前。没有编造结局质量，也没有把存档实际值翻译成违约或满足。"
+        },
+        "offline_costs": {
+          "name": "offline_costs",
+          "status": "ran",
+          "signoff_ready": false,
+          "events": [
+            {
+              "kind": "backup",
+              "elapsed_ns": 3026
+            },
+            {
+              "kind": "schema",
+              "elapsed_ns": 1741
+            },
+            {
+              "kind": "snapshot_reset",
+              "elapsed_ns": 2035
+            }
+          ],
+          "schema": {
+            "accepted": true,
+            "addressable": true,
+            "wrapped": false
+          },
+          "entered_extra_calls": false,
+          "reason": "三类离线动作只改内存计数，没有调用库，也没有进入 ExtraCalls。"
+        }
+      }
+    }
+  ],
+  "hash_freeze_helper": {
+    "name": "hash_freeze_helper",
+    "status": "ran",
+    "signoff_ready": false,
+    "formal_checklist_ticked": false,
+    "sha256": "2822eef76c4927b7da6d0a8fa756a8ab5bc75cc39fa36f38972697a338aa1a91",
+    "components": {
+      "deployable_parameters": "cb8c0b8ba0c15a91824886989c58a620940830fb61343576146ccc2383a39693",
+      "disposition_rules": "a2fd8314da39c4eb8b5a66ac9e748e388768a6fff77816806187854a03d42aef",
+      "expectations": "a24e0c0e85270d6059b6ada8dcff5f4bf1deb6727a976b5249786ea021606f8c",
+      "task_registry": "4443179031b5a7985586ef2b30feb61c28ddda4cdaa9c08510012bf86c730110"
+    },
+    "input_set": [
+      "deployable_parameters",
+      "disposition_rules",
+      "expectations",
+      "task_registry"
+    ],
+    "reason": "这是校准登记的摘要，不是 11 月 30 日正式清单上的那次冻结。"
+  },
+  "calibration_input_digests_are_not_that_freeze": true,
+  "calibration_input_digests": {
+    "research/release_drift_20261126/dev_parallel/results/column.json": "369c523c531d073b9068553f57ae6efb3725f53e4c6fd195406cea06c3f6454b",
+    "research/release_drift_20261126/dev_parallel/results/duration.json": "5c2e2155dc9d27cf3f61a62644be2e20e0ff32e74be60aeb781c01ce958bcbe7",
+    "research/release_drift_20261126/dev_parallel/results/week.json": "a9da0ddfa143f43efd427f52c4bfc8277e89bd68d3afb25ec89e51bba90944c4",
+    "runs_contract_synthesis_gate_20261125/checks.json": "f07b908d04f33023b554159d7ca15da8925140d0a50034afe12baa8ec3987872",
+    "runs_contract_synthesis_gate_20261125/observations.json": "491add1072f970d9ecba86de680da112a56f9e5b399637baf73b860f6168b5f4",
+    "runs_contract_synthesis_gate_20261125/python-slugify-1.txt": "95712f45435a38eefdd38a742480d9c228b86310a1c64da8ace090775940e9e6",
+    "runs_contract_synthesis_gate_20261125/python-slugify-2.txt": "95712f45435a38eefdd38a742480d9c228b86310a1c64da8ace090775940e9e6",
+    "runs_contract_synthesis_gate_20261125/python-slugify-3.txt": "835c97c93d3d679389e24eeedd20963981f96385e79865ee1ae159b50f2c2acb",
+    "runs_contract_synthesis_gate_20261125/revealed_slugify.json": "4d6542330613ca5762bc9a029f35ef2be7b8b7547ef3c92d6b741055609929cf",
+    "runs_contract_synthesis_gate_20261125/sample.json": "deee7b2aa50e02cd5aa9196cf0b5c68ca4bdc5580df6a963d1be526a0488d948",
+    "runs_contract_synthesis_gate_20261125/tasks.json": "acc1f12f15cdfeebe652c6138896c4dd677eab942078195a6ecc10d3e25192ef",
+    "runs_upstream_functional_20261124/paired_releases.json": "2d1648e65fe88da2e707cf0cd7121a25ff39841222ede741f952fe368841647f"
+  },
+  "gaps": [
+    {
+      "id": "shared_pack",
+      "status": "closed",
+      "detail": "六个案例各有一份两臂共用的资料包，装载器给出了 SHA-256。"
+    },
+    {
+      "id": "static_sequence",
+      "status": "partial",
+      "detail": "校准生成器、合法动作、预算转移、终端评分和深度 3 枚举已登记，核对通过。没有结局质量，未选序列。开发 preplanned 不符合 direction_gate，未使用。"
+    },
+    {
+      "id": "adapters",
+      "status": "partial",
+      "detail": "XlsxWriter 与 Babel 的 before 臂进入了钉住轮子。slugify 没有改用其他发行版。python-slugify-1 在 parent eeabcc29eb67dd9ab34c693db44f9ece312e7a2c 上返回了 str，依赖 Unidecode 1.4.0，该依赖版本不在夹具里。python-slugify-2 在 parent 4091b444746032847ccce0d5c6a0cd5b1bb73d81 上返回了 str，依赖 Unidecode 1.4.0，该依赖版本不在夹具里。python-slugify-3 的 parent 调用没有成功返回：AttributeError: module 'slugify' has no attribute 'slugify'",
+      "live_cases": {
+        "xlsx-column": true,
+        "xlsx-duration": true,
+        "babel-week": true,
+        "python-slugify-1": true,
+        "python-slugify-2": true,
+        "python-slugify-3": false
+      }
+    },
+    {
+      "id": "hash_freeze_helper",
+      "status": "closed",
+      "detail": "回执有总摘要和四段输入。正式清单没有勾选。"
+    },
+    {
+      "id": "contract_expressions",
+      "status": "closed",
+      "detail": "六个案例都是空规则表。公开义务不是完整输出上的整数、序列长度或整数常量换算。"
+    },
+    {
+      "id": "normal_replacements",
+      "status": "partial",
+      "detail": "列和时长的正常值来自各自公开 expected，不变量表为空。周历年和 slugify 没有登记正常值。没有使用占位替代常量。"
+    },
+    {
+      "id": "disposition_on_case_rows",
+      "status": "partial",
+      "detail": "空规则表下六个案例行都是未定、交付当前。这是同一条规则，不是六个分数。没有案例级预期损失。"
+    },
+    {
+      "id": "offline_cost_counters",
+      "status": "closed",
+      "detail": "离线 Schema、离线备用和快照复位各有次数和耗时，且不在 ExtraCalls 事件里。"
+    },
+    {
+      "id": "field_addressability",
+      "status": "partial",
+      "detail": "slugify 的现成字典可以按字段读取。周历年字符串和时长档案标量仍不可寻址，也没有被包裹。"
+    },
+    {
+      "id": "cpython_3_11_pin",
+      "status": "open",
+      "detail": "针脚为 unset。随机臂没有运行。3.12 不被记成 3.11。"
+    }
+  ]
+}
