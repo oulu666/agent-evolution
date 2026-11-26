@@ -1,0 +1,40 @@
+{
+  "freeze_commit": "68580782313e84ffedd6a29572f8bd81366e3518",
+  "scoring_commit": "d22f69ca568eeb79ade1170af68cf991170da86a",
+  "protocol_sha256": "7f504b41b62644f22e0f4c7acacca169b5710ea3c8fb357459469254e5e21f5c",
+  "included": 0,
+  "libraries_included": [],
+  "scored": false,
+  "decision": "insufficient_denominator",
+  "reason": "fewer_than_8_or_fewer_than_3_libraries",
+  "ranking": null,
+  "counts": null,
+  "not_run": [
+    {
+      "name": "Jdoctor",
+      "reason": "Java source in, Java expressions out. jdoctor_pattern only transcribes Toradocu 3.0 simpleMatch."
+    },
+    {
+      "name": "SPARK",
+      "reason": "These cases have no SPARK/Ada contracts."
+    },
+    {
+      "name": "Gay et al. 2015",
+      "reason": "No mutants are generated and no expected-value oracle is given to an extractor."
+    },
+    {
+      "name": "AGORA+",
+      "reason": "The REST/Daikon tool is not run."
+    },
+    {
+      "name": "SpecFuzzer",
+      "reason": "Java trace fuzzing is not run."
+    },
+    {
+      "name": "Hypothesis",
+      "reason": "Would synthesize new inputs. The hypothesis library may be a subject API; the Hypothesis tool is not run."
+    }
+  ],
+  "groups": [],
+  "note": "This is extractor feasibility on current documented APIs. It is not silent-drift detection, not a repair-catching study, and it cannot replace the ISSRE 12 groups or the formal sealed four."
+}
