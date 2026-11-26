@@ -1,0 +1,109 @@
+{
+  "allowed_offline_criteria": [],
+  "arms": {
+    "parent": {
+      "commit": "3d75734751b36ae14feab0d84f5d670f1d6225e3"
+    },
+    "rev": {
+      "commit": "07155c2001580b0ec70b40f24a475baef6238aac"
+    }
+  },
+  "case_id": "python-slugify-3",
+  "expected": [
+    "green-oak",
+    "oak-elm",
+    "cafe-noir",
+    "oak-elm",
+    "this-is-a-test",
+    "blue_river",
+    "green",
+    "oak-elm",
+    "go-school",
+    "red-blue",
+    "oak",
+    "a.blue.fox"
+  ],
+  "expected_are_contract_expressions": false,
+  "inputs": [
+    {
+      "arg": "Green Oak",
+      "kw": {}
+    },
+    {
+      "arg": "oak -- elm",
+      "kw": {}
+    },
+    {
+      "arg": "café noir",
+      "kw": {}
+    },
+    {
+      "arg": "oak &amp; elm",
+      "kw": {}
+    },
+    {
+      "arg": "This is a test ---",
+      "kw": {}
+    },
+    {
+      "arg": "blue river",
+      "kw": {
+        "separator": "_"
+      }
+    },
+    {
+      "arg": "green oak red",
+      "kw": {
+        "max_length": 5
+      }
+    },
+    {
+      "arg": "oak elm ash",
+      "kw": {
+        "max_length": 7
+      }
+    },
+    {
+      "arg": "go to school",
+      "kw": {
+        "stopwords": [
+          "to"
+        ]
+      }
+    },
+    {
+      "arg": "Red and BLUE",
+      "kw": {
+        "stopwords": [
+          "and"
+        ]
+      }
+    },
+    {
+      "arg": "oak elm",
+      "kw": {
+        "max_length": 3,
+        "word_boundary": true
+      }
+    },
+    {
+      "arg": "a blue fox",
+      "kw": {
+        "separator": "."
+      }
+    }
+  ],
+  "inputs_are_formal_regression_set": false,
+  "label": "calibration",
+  "library": "python-slugify",
+  "live_arm": "parent",
+  "observation_kind": "str",
+  "operation": "slugify",
+  "provenance": {
+    "doc_hash": "835c97c93d3d679389e24eeedd20963981f96385e79865ee1ae159b50f2c2acb",
+    "fixture": "runs_contract_synthesis_gate_20261125/sample.json",
+    "readme": "README.md",
+    "readme_is_pre_upgrade_doc": false,
+    "tasks_fixture": "runs_contract_synthesis_gate_20261125/tasks.json"
+  }
+}
