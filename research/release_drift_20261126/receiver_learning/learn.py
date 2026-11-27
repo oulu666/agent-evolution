@@ -4,10 +4,18 @@ from decimal import Decimal
 
 
 def equivalent(left, right, kind):
+    if kind == "full_string":
+        kind = "text"
+    elif kind == "parsed_value":
+        kind = "json"
+    if kind == "byte":
+        return left == right
     if kind == "text":
         def normalize(value):
             return value.replace("\r\n", "\n").removesuffix("\n")
         return normalize(left) == normalize(right)
+    if kind != "json":
+        raise ValueError(kind)
     def parse(value):
         return json.loads(value, parse_int=Decimal, parse_float=Decimal)
     try:

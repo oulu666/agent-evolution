@@ -1,0 +1,118 @@
+{
+ "slots_learned": [
+  1
+ ],
+ "slots_after_only": [
+  1,
+  2
+ ],
+ "receiver": 1,
+ "demos": [
+  {
+   "input": "demo-a",
+   "expected": "count: 41",
+   "before": [
+    "Configuration - scm-engine",
+    "pending delivery",
+    "count: 41\n"
+   ],
+   "after": [
+    "Configuration - scm-engine",
+    "count: 41",
+    "count: 41\n"
+   ],
+   "seconds": 0.35279652100001613
+  },
+  {
+   "input": "demo-b",
+   "expected": "count: 73",
+   "before": [
+    "Configuration - scm-engine",
+    "pending delivery",
+    "count: 73\n"
+   ],
+   "after": [
+    "Configuration - scm-engine",
+    "count: 73",
+    "count: 73\n"
+   ],
+   "seconds": 0.33290581800002883
+  }
+ ],
+ "rows": [
+  {
+   "input": "original",
+   "expected": "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()",
+   "before": [
+    "Configuration - scm-engine",
+    "pending delivery",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "after": [
+    "Configuration - scm-engine",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "seconds": 0.36804465699998445,
+   "version": "9.5.17",
+   "truth": true,
+   "decisions": {
+    "learned": true,
+    "after_only": null,
+    "lookup": true,
+    "fixed_replay": true
+   }
+  },
+  {
+   "input": "original",
+   "expected": "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()",
+   "before": [
+    "Configuration - scm-engine",
+    "pending delivery",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "after": [
+    "Configuration - scm-engine",
+    "label:\n\n  # Generate list of labels via script\n\n  - strategy: generate\n\n    # With a description (optional)\n\n    description: \"Modified this service directory\"\n\n    # With the color $pink\n\n    color: \"$pink\"\n\n    # From this script, returning a list of labels\n\n    script: >\n\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n\n      merge_request.modified_files_list(\"pkg/service/\")\n\n\n\n      /* Remove the filename from the path\n\n        pkg/service/example/file.go => pkg/service/example */\n\n      | map({ filepath_dir(#) })\n\n\n\n      /* Remove the prefix \"pkg/\" from the path\n\n         pkg/service/example => service/example */\n\n      | map({ trimPrefix(#, \"pkg/\") })\n\n\n\n      /* Remove duplicate values from the output */\n\n      | uniq()",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "seconds": 0.3203076309999915,
+   "version": "9.5.21",
+   "truth": false,
+   "decisions": {
+    "learned": false,
+    "after_only": null,
+    "lookup": false,
+    "fixed_replay": false
+   }
+  },
+  {
+   "input": "original",
+   "expected": "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()",
+   "before": [
+    "Configuration - scm-engine",
+    "pending delivery",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "after": [
+    "Configuration - scm-engine",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()",
+    "label:\n  # Generate list of labels via script\n  - strategy: generate\n    # With a description (optional)\n    description: \"Modified this service directory\"\n    # With the color $pink\n    color: \"$pink\"\n    # From this script, returning a list of labels\n    script: >\n      /* Generate a list of files changed in the MR inside pkg/service/ */\n      merge_request.modified_files_list(\"pkg/service/\")\n\n      /* Remove the filename from the path\n        pkg/service/example/file.go => pkg/service/example */\n      | map({ filepath_dir(#) })\n\n      /* Remove the prefix \"pkg/\" from the path\n         pkg/service/example => service/example */\n      | map({ trimPrefix(#, \"pkg/\") })\n\n      /* Remove duplicate values from the output */\n      | uniq()\n"
+   ],
+   "seconds": 0.32710375900001054,
+   "version": "9.5.22",
+   "truth": true,
+   "decisions": {
+    "learned": true,
+    "after_only": null,
+    "lookup": true,
+    "fixed_replay": true
+   }
+  }
+ ],
+ "slots": [
+  "title",
+  "clipboard",
+  "page code"
+ ]
+}
