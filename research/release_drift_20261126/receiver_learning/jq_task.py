@@ -7,7 +7,8 @@ from pathlib import Path
 from urllib.request import urlopen
 from time import perf_counter
 
-from learn import evaluate
+from oracle import STUDY_REQUIREMENTS
+from score import score_study
 
 VERSIONS = {"1.6": "jq-linux64", "1.7.1": "jq-linux-amd64"}
 SENTINEL = "pending delivery"
@@ -57,7 +58,9 @@ def main():
                     row = run(binary, root, mode, p.relative_to(CORPUS).as_posix(), p.read_text())
                     row["version"] = version
                     rows.append(row)
-            receipts["modes"][mode] = evaluate(demos, rows, 3 if mode == "stdout" else 2, "json")
+            action = "jq-stdout" if mode == "stdout" else "jq-file-redirect"
+            receipts["modes"][mode] = score_study(
+                demos, rows, STUDY_REQUIREMENTS["jq"], 3 if mode == "stdout" else 2, action)
     Path("jq-receipt.json").write_text(json.dumps(receipts, indent=1)+"\n")
 
 

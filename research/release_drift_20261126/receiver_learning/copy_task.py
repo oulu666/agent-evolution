@@ -14,7 +14,8 @@ from urllib.request import urlopen
 from playwright.sync_api import sync_playwright
 import yaml
 
-from learn import evaluate
+from oracle import STUDY_REQUIREMENTS
+from score import score_study
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "clipboard_decision"))
 from run import BASE, VERSIONS, Quiet
@@ -79,7 +80,7 @@ def main():
                     server.shutdown()
                     thread.join()
         browser.close()
-    receipt = evaluate(demos, rows, 1, "text")
+    receipt = score_study(demos, rows, STUDY_REQUIREMENTS["copy"], 1, "material-copy-button")
     receipt["slots"] = ["title", "clipboard", "page code"]
     Path("copy-receipt.json").write_text(json.dumps(receipt, indent=1)+"\n")
 

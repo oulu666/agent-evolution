@@ -1,0 +1,2510 @@
+{
+ "slots": [
+  "stderr",
+  "input",
+  "destination",
+  "stdout"
+ ],
+ "versions": {
+  "1.6": "af986793a515d500ab2d35f8d2aecd656e764504b789b66d7e1a0b727a124c44",
+  "1.7.1": "5942c9b0934e510ee61eb3e30273f1b3fe2590df93933a93d7c58b81d19c8ff5"
+ },
+ "modes": {
+  "stdout": {
+   "slots_learned": [
+    3
+   ],
+   "slots_after_only": [
+    1,
+    3
+   ],
+   "receiver": 3,
+   "demos": [
+    {
+     "input": "demo-41",
+     "expected": "[41]",
+     "before": [
+      "",
+      "[41]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[41]",
+      "pending delivery",
+      "[\n  41\n]\n"
+     ],
+     "seconds": 0.01624236300000348
+    },
+    {
+     "input": "demo-73",
+     "expected": "[73]",
+     "before": [
+      "",
+      "[73]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[73]",
+      "pending delivery",
+      "[\n  73\n]\n"
+     ],
+     "seconds": 0.016017716000000348
+    }
+   ],
+   "rows": [
+    {
+     "input": "test_parsing/y_number_0e+1.json",
+     "expected": "[0e+1]",
+     "before": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      "[\n  0\n]\n"
+     ],
+     "seconds": 0.016196875999995086,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e1.json",
+     "expected": "[0e1]",
+     "before": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      "[\n  0\n]\n"
+     ],
+     "seconds": 0.016430143000000896,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_after_space.json",
+     "expected": "[ 4]",
+     "before": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      "[\n  4\n]\n"
+     ],
+     "seconds": 0.016393048999994164,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_double_close_to_zero.json",
+     "expected": "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+     "before": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      "[\n  -1e-78\n]\n"
+     ],
+     "seconds": 0.016072197999996263,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_int_with_exp.json",
+     "expected": "[20e1]",
+     "before": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      "[\n  200\n]\n"
+     ],
+     "seconds": 0.016146934999994755,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_minus_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "pending delivery",
+      "[\n  -0\n]\n"
+     ],
+     "seconds": 0.016118839000000662,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_int.json",
+     "expected": "[-123]",
+     "before": [
+      "",
+      "[-123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-123]",
+      "pending delivery",
+      "[\n  -123\n]\n"
+     ],
+     "seconds": 0.01613667000000163,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_one.json",
+     "expected": "[-1]",
+     "before": [
+      "",
+      "[-1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-1]",
+      "pending delivery",
+      "[\n  -1\n]\n"
+     ],
+     "seconds": 0.016151246000006836,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "pending delivery",
+      "[\n  -0\n]\n"
+     ],
+     "seconds": 0.016037660999998593,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e.json",
+     "expected": "[1E22]",
+     "before": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      "[\n  1e+22\n]\n"
+     ],
+     "seconds": 0.016300542999999834,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_neg_exp.json",
+     "expected": "[1E-2]",
+     "before": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      "[\n  0.01\n]\n"
+     ],
+     "seconds": 0.016063353999996366,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_pos_exp.json",
+     "expected": "[1E+2]",
+     "before": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      "[\n  100\n]\n"
+     ],
+     "seconds": 0.01629937699999573,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_exponent.json",
+     "expected": "[123e45]",
+     "before": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      "[\n  1.23e+47\n]\n"
+     ],
+     "seconds": 0.016177464999998392,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_fraction_exponent.json",
+     "expected": "[123.456e78]",
+     "before": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      "[\n  1.23456e+80\n]\n"
+     ],
+     "seconds": 0.0161742489999952,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_neg_exp.json",
+     "expected": "[1e-2]",
+     "before": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      "[\n  0.01\n]\n"
+     ],
+     "seconds": 0.016141185000002167,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_pos_exponent.json",
+     "expected": "[1e+2]",
+     "before": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      "[\n  100\n]\n"
+     ],
+     "seconds": 0.016173144999996225,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_int.json",
+     "expected": "[123]",
+     "before": [
+      "",
+      "[123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123]",
+      "pending delivery",
+      "[\n  123\n]\n"
+     ],
+     "seconds": 0.016085687000000348,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_real.json",
+     "expected": "[123.456789]",
+     "before": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      "[\n  123.456789\n]\n"
+     ],
+     "seconds": 0.0162057479999973,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.0.json",
+     "expected": "[1.0]",
+     "before": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      "[\n  1\n]\n"
+     ],
+     "seconds": 0.016131357999995544,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.000000000000000005.json",
+     "expected": "[1.000000000000000005]",
+     "before": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      "[\n  1\n]\n"
+     ],
+     "seconds": 0.016212407000004703,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1000000000000000.json",
+     "expected": "[1000000000000000]\n",
+     "before": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      "[\n  1000000000000000\n]\n"
+     ],
+     "seconds": 0.016226084999999557,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_10000000000000000999.json",
+     "expected": "[10000000000000000999]",
+     "before": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      "[\n  1e+19\n]\n"
+     ],
+     "seconds": 0.016107716999997024,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1e-999.json",
+     "expected": "[1E-999]",
+     "before": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      "[\n  0\n]\n"
+     ],
+     "seconds": 0.016076325000000224,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1e6.json",
+     "expected": "[1E6]",
+     "before": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      "[\n  1000000\n]\n"
+     ],
+     "seconds": 0.016204463999997643,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e+1.json",
+     "expected": "[0e+1]",
+     "before": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      "[\n  0E+1\n]\n"
+     ],
+     "seconds": 0.0016057289999977797,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e1.json",
+     "expected": "[0e1]",
+     "before": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      "[\n  0E+1\n]\n"
+     ],
+     "seconds": 0.001396782000000485,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_after_space.json",
+     "expected": "[ 4]",
+     "before": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      "[\n  4\n]\n"
+     ],
+     "seconds": 0.0014854429999999752,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_double_close_to_zero.json",
+     "expected": "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+     "before": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      "[\n  -1E-78\n]\n"
+     ],
+     "seconds": 0.001309562999999514,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_int_with_exp.json",
+     "expected": "[20e1]",
+     "before": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      "[\n  2.0E+2\n]\n"
+     ],
+     "seconds": 0.0014450239999987957,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_minus_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "pending delivery",
+      "[\n  -0\n]\n"
+     ],
+     "seconds": 0.001304711000003067,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_int.json",
+     "expected": "[-123]",
+     "before": [
+      "",
+      "[-123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-123]",
+      "pending delivery",
+      "[\n  -123\n]\n"
+     ],
+     "seconds": 0.0014328779999956964,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_one.json",
+     "expected": "[-1]",
+     "before": [
+      "",
+      "[-1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-1]",
+      "pending delivery",
+      "[\n  -1\n]\n"
+     ],
+     "seconds": 0.0012794070000055058,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "pending delivery",
+      "[\n  -0\n]\n"
+     ],
+     "seconds": 0.0014676809999940588,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e.json",
+     "expected": "[1E22]",
+     "before": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      "[\n  1E+22\n]\n"
+     ],
+     "seconds": 0.001262149999995188,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_neg_exp.json",
+     "expected": "[1E-2]",
+     "before": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      "[\n  0.01\n]\n"
+     ],
+     "seconds": 0.001434400999997365,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_pos_exp.json",
+     "expected": "[1E+2]",
+     "before": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      "[\n  1E+2\n]\n"
+     ],
+     "seconds": 0.001289073999998891,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_exponent.json",
+     "expected": "[123e45]",
+     "before": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      "[\n  1.23E+47\n]\n"
+     ],
+     "seconds": 0.0014262910000013562,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_fraction_exponent.json",
+     "expected": "[123.456e78]",
+     "before": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      "[\n  1.23456E+80\n]\n"
+     ],
+     "seconds": 0.0013954890000036357,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_neg_exp.json",
+     "expected": "[1e-2]",
+     "before": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      "[\n  0.01\n]\n"
+     ],
+     "seconds": 0.0014272129999994831,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_pos_exponent.json",
+     "expected": "[1e+2]",
+     "before": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      "[\n  1E+2\n]\n"
+     ],
+     "seconds": 0.0013328140000012922,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_int.json",
+     "expected": "[123]",
+     "before": [
+      "",
+      "[123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123]",
+      "pending delivery",
+      "[\n  123\n]\n"
+     ],
+     "seconds": 0.0012906670000063514,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_real.json",
+     "expected": "[123.456789]",
+     "before": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      "[\n  123.456789\n]\n"
+     ],
+     "seconds": 0.001424960999997893,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.0.json",
+     "expected": "[1.0]",
+     "before": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      "[\n  1.0\n]\n"
+     ],
+     "seconds": 0.00129503999999514,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.000000000000000005.json",
+     "expected": "[1.000000000000000005]",
+     "before": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      "[\n  1.000000000000000005\n]\n"
+     ],
+     "seconds": 0.0014203550000004839,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1000000000000000.json",
+     "expected": "[1000000000000000]\n",
+     "before": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      "[\n  1000000000000000\n]\n"
+     ],
+     "seconds": 0.0012767879999984189,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_10000000000000000999.json",
+     "expected": "[10000000000000000999]",
+     "before": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      "[\n  10000000000000000999\n]\n"
+     ],
+     "seconds": 0.001459209000003625,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1e-999.json",
+     "expected": "[1E-999]",
+     "before": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      "[\n  1E-999\n]\n"
+     ],
+     "seconds": 0.0012774409999991576,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1e6.json",
+     "expected": "[1E6]",
+     "before": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      "[\n  1E+6\n]\n"
+     ],
+     "seconds": 0.0012659779999992793,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    }
+   ]
+  },
+  "file": {
+   "slots_learned": [
+    2
+   ],
+   "slots_after_only": [
+    1,
+    2
+   ],
+   "receiver": 2,
+   "demos": [
+    {
+     "input": "demo-41",
+     "expected": "[41]",
+     "before": [
+      "",
+      "[41]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[41]",
+      "[\n  41\n]\n",
+      ""
+     ],
+     "seconds": 0.01604051300000009
+    },
+    {
+     "input": "demo-73",
+     "expected": "[73]",
+     "before": [
+      "",
+      "[73]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[73]",
+      "[\n  73\n]\n",
+      ""
+     ],
+     "seconds": 0.01612632700000205
+    }
+   ],
+   "rows": [
+    {
+     "input": "test_parsing/y_number_0e+1.json",
+     "expected": "[0e+1]",
+     "before": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e+1]",
+      "[\n  0\n]\n",
+      ""
+     ],
+     "seconds": 0.016159895000001256,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e1.json",
+     "expected": "[0e1]",
+     "before": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e1]",
+      "[\n  0\n]\n",
+      ""
+     ],
+     "seconds": 0.016073538999997083,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_after_space.json",
+     "expected": "[ 4]",
+     "before": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[ 4]",
+      "[\n  4\n]\n",
+      ""
+     ],
+     "seconds": 0.016143135000000086,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_double_close_to_zero.json",
+     "expected": "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+     "before": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "[\n  -1e-78\n]\n",
+      ""
+     ],
+     "seconds": 0.01607561099999799,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_int_with_exp.json",
+     "expected": "[20e1]",
+     "before": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[20e1]",
+      "[\n  200\n]\n",
+      ""
+     ],
+     "seconds": 0.01601812300000205,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_minus_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "[\n  -0\n]\n",
+      ""
+     ],
+     "seconds": 0.015943456000002243,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_int.json",
+     "expected": "[-123]",
+     "before": [
+      "",
+      "[-123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-123]",
+      "[\n  -123\n]\n",
+      ""
+     ],
+     "seconds": 0.01598135799999767,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_one.json",
+     "expected": "[-1]",
+     "before": [
+      "",
+      "[-1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-1]",
+      "[\n  -1\n]\n",
+      ""
+     ],
+     "seconds": 0.016064042000003553,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "[\n  -0\n]\n",
+      ""
+     ],
+     "seconds": 0.016056308000003128,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e.json",
+     "expected": "[1E22]",
+     "before": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E22]",
+      "[\n  1e+22\n]\n",
+      ""
+     ],
+     "seconds": 0.015984426999999357,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_neg_exp.json",
+     "expected": "[1E-2]",
+     "before": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-2]",
+      "[\n  0.01\n]\n",
+      ""
+     ],
+     "seconds": 0.016132792999997037,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_pos_exp.json",
+     "expected": "[1E+2]",
+     "before": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E+2]",
+      "[\n  100\n]\n",
+      ""
+     ],
+     "seconds": 0.0160853580000051,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_exponent.json",
+     "expected": "[123e45]",
+     "before": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123e45]",
+      "[\n  1.23e+47\n]\n",
+      ""
+     ],
+     "seconds": 0.016141696999994792,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_fraction_exponent.json",
+     "expected": "[123.456e78]",
+     "before": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456e78]",
+      "[\n  1.23456e+80\n]\n",
+      ""
+     ],
+     "seconds": 0.016097690000002274,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_neg_exp.json",
+     "expected": "[1e-2]",
+     "before": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e-2]",
+      "[\n  0.01\n]\n",
+      ""
+     ],
+     "seconds": 0.016053662000004465,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_pos_exponent.json",
+     "expected": "[1e+2]",
+     "before": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e+2]",
+      "[\n  100\n]\n",
+      ""
+     ],
+     "seconds": 0.01621345600000268,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_int.json",
+     "expected": "[123]",
+     "before": [
+      "",
+      "[123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123]",
+      "[\n  123\n]\n",
+      ""
+     ],
+     "seconds": 0.019328603999994698,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_real.json",
+     "expected": "[123.456789]",
+     "before": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456789]",
+      "[\n  123.456789\n]\n",
+      ""
+     ],
+     "seconds": 0.016365044999993472,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.0.json",
+     "expected": "[1.0]",
+     "before": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.0]",
+      "[\n  1\n]\n",
+      ""
+     ],
+     "seconds": 0.016138083999997832,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.000000000000000005.json",
+     "expected": "[1.000000000000000005]",
+     "before": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.000000000000000005]",
+      "[\n  1\n]\n",
+      ""
+     ],
+     "seconds": 0.01610258299999856,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1000000000000000.json",
+     "expected": "[1000000000000000]\n",
+     "before": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1000000000000000]\n",
+      "[\n  1000000000000000\n]\n",
+      ""
+     ],
+     "seconds": 0.016020179000001633,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_10000000000000000999.json",
+     "expected": "[10000000000000000999]",
+     "before": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[10000000000000000999]",
+      "[\n  1e+19\n]\n",
+      ""
+     ],
+     "seconds": 0.01628992100000204,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1e-999.json",
+     "expected": "[1E-999]",
+     "before": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-999]",
+      "[\n  0\n]\n",
+      ""
+     ],
+     "seconds": 0.01641544299999964,
+     "version": "1.6",
+     "truth": false,
+     "decisions": {
+      "learned": false,
+      "after_only": null,
+      "lookup": false,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1e6.json",
+     "expected": "[1E6]",
+     "before": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E6]",
+      "[\n  1000000\n]\n",
+      ""
+     ],
+     "seconds": 0.016154694999997332,
+     "version": "1.6",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e+1.json",
+     "expected": "[0e+1]",
+     "before": [
+      "",
+      "[0e+1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e+1]",
+      "[\n  0E+1\n]\n",
+      ""
+     ],
+     "seconds": 0.0016670469999979787,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_0e1.json",
+     "expected": "[0e1]",
+     "before": [
+      "",
+      "[0e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[0e1]",
+      "[\n  0E+1\n]\n",
+      ""
+     ],
+     "seconds": 0.0013951780000027725,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_after_space.json",
+     "expected": "[ 4]",
+     "before": [
+      "",
+      "[ 4]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[ 4]",
+      "[\n  4\n]\n",
+      ""
+     ],
+     "seconds": 0.0014181410000020378,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_double_close_to_zero.json",
+     "expected": "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+     "before": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0.000000000000000000000000000000000000000000000000000000000000000000000000000001]\n",
+      "[\n  -1E-78\n]\n",
+      ""
+     ],
+     "seconds": 0.0013735940000003666,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_int_with_exp.json",
+     "expected": "[20e1]",
+     "before": [
+      "",
+      "[20e1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[20e1]",
+      "[\n  2.0E+2\n]\n",
+      ""
+     ],
+     "seconds": 0.0013759309999983316,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_minus_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "[\n  -0\n]\n",
+      ""
+     ],
+     "seconds": 0.001365512999996099,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_int.json",
+     "expected": "[-123]",
+     "before": [
+      "",
+      "[-123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-123]",
+      "[\n  -123\n]\n",
+      ""
+     ],
+     "seconds": 0.0013707929999995372,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_one.json",
+     "expected": "[-1]",
+     "before": [
+      "",
+      "[-1]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-1]",
+      "[\n  -1\n]\n",
+      ""
+     ],
+     "seconds": 0.0013889769999977375,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_negative_zero.json",
+     "expected": "[-0]",
+     "before": [
+      "",
+      "[-0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[-0]",
+      "[\n  -0\n]\n",
+      ""
+     ],
+     "seconds": 0.0013508169999951747,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e.json",
+     "expected": "[1E22]",
+     "before": [
+      "",
+      "[1E22]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E22]",
+      "[\n  1E+22\n]\n",
+      ""
+     ],
+     "seconds": 0.0016387659999992366,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_neg_exp.json",
+     "expected": "[1E-2]",
+     "before": [
+      "",
+      "[1E-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-2]",
+      "[\n  0.01\n]\n",
+      ""
+     ],
+     "seconds": 0.001457455999997137,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_capital_e_pos_exp.json",
+     "expected": "[1E+2]",
+     "before": [
+      "",
+      "[1E+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E+2]",
+      "[\n  1E+2\n]\n",
+      ""
+     ],
+     "seconds": 0.0013600429999982566,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_exponent.json",
+     "expected": "[123e45]",
+     "before": [
+      "",
+      "[123e45]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123e45]",
+      "[\n  1.23E+47\n]\n",
+      ""
+     ],
+     "seconds": 0.0013827940000012973,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_fraction_exponent.json",
+     "expected": "[123.456e78]",
+     "before": [
+      "",
+      "[123.456e78]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456e78]",
+      "[\n  1.23456E+80\n]\n",
+      ""
+     ],
+     "seconds": 0.0013304709999957254,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_neg_exp.json",
+     "expected": "[1e-2]",
+     "before": [
+      "",
+      "[1e-2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e-2]",
+      "[\n  0.01\n]\n",
+      ""
+     ],
+     "seconds": 0.0013280780000002324,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_real_pos_exponent.json",
+     "expected": "[1e+2]",
+     "before": [
+      "",
+      "[1e+2]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1e+2]",
+      "[\n  1E+2\n]\n",
+      ""
+     ],
+     "seconds": 0.0013420380000042087,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_int.json",
+     "expected": "[123]",
+     "before": [
+      "",
+      "[123]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123]",
+      "[\n  123\n]\n",
+      ""
+     ],
+     "seconds": 0.001352711000002671,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_parsing/y_number_simple_real.json",
+     "expected": "[123.456789]",
+     "before": [
+      "",
+      "[123.456789]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[123.456789]",
+      "[\n  123.456789\n]\n",
+      ""
+     ],
+     "seconds": 0.0013713010000060422,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.0.json",
+     "expected": "[1.0]",
+     "before": [
+      "",
+      "[1.0]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.0]",
+      "[\n  1.0\n]\n",
+      ""
+     ],
+     "seconds": 0.0013184649999971043,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_1.000000000000000005.json",
+     "expected": "[1.000000000000000005]",
+     "before": [
+      "",
+      "[1.000000000000000005]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1.000000000000000005]",
+      "[\n  1.000000000000000005\n]\n",
+      ""
+     ],
+     "seconds": 0.0013456080000011639,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1000000000000000.json",
+     "expected": "[1000000000000000]\n",
+     "before": [
+      "",
+      "[1000000000000000]\n",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1000000000000000]\n",
+      "[\n  1000000000000000\n]\n",
+      ""
+     ],
+     "seconds": 0.0013372889999985205,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    },
+    {
+     "input": "test_transform/number_10000000000000000999.json",
+     "expected": "[10000000000000000999]",
+     "before": [
+      "",
+      "[10000000000000000999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[10000000000000000999]",
+      "[\n  10000000000000000999\n]\n",
+      ""
+     ],
+     "seconds": 0.0013416350000028388,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1e-999.json",
+     "expected": "[1E-999]",
+     "before": [
+      "",
+      "[1E-999]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E-999]",
+      "[\n  1E-999\n]\n",
+      ""
+     ],
+     "seconds": 0.0013511649999955466,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": false
+     }
+    },
+    {
+     "input": "test_transform/number_1e6.json",
+     "expected": "[1E6]",
+     "before": [
+      "",
+      "[1E6]",
+      "pending delivery",
+      ""
+     ],
+     "after": [
+      "",
+      "[1E6]",
+      "[\n  1E+6\n]\n",
+      ""
+     ],
+     "seconds": 0.001335175999997773,
+     "version": "1.7.1",
+     "truth": true,
+     "decisions": {
+      "learned": true,
+      "after_only": null,
+      "lookup": true,
+      "fixed_replay": true
+     }
+    }
+   ]
+  }
+ }
+}
