@@ -1,0 +1,3217 @@
+{
+ "synthetic_only": true,
+ "not_independent_defect_evidence": true,
+ "core_algorithm_not_established": true,
+ "auto_oracle_generation_not_a_novelty_claim": true,
+ "base_head": "88ca0d2090794b363c8db82a4106f2c952b69aec",
+ "extra_observation_budget": 1,
+ "compared_systems": [
+  "lookup_fixed_oracle",
+  "autoloc_fixed_oracle",
+  "lookup_synthesized_oracle",
+  "joint"
+ ],
+ "split_systems": [
+  "lookup_fixed_oracle",
+  "autoloc_fixed_oracle",
+  "lookup_synthesized_oracle"
+ ],
+ "model_calls": 0,
+ "cases": {
+  "synthetic_preview_cache_download": {
+   "synthetic": true,
+   "mechanism_development_only": true,
+   "not_independent_defect_evidence": true,
+   "kind": "text_export",
+   "requirement": "生成配置文件，供另一个程序使用。将配置导出为下载文件，由另一个程序读取该下载文件后使用。内容保真，按文本比较。",
+   "slots": [
+    {
+     "name": "page_title",
+     "type": "ui_title"
+    },
+    {
+     "name": "page_preview",
+     "type": "ui_preview"
+    },
+    {
+     "name": "internal_cache",
+     "type": "internal_cache"
+    },
+    {
+     "name": "download_file",
+     "type": "downloaded_file"
+    }
+   ],
+   "truth_receiver": 3,
+   "truth_relation": "full_string",
+   "select_candidates_under_truth_relation": [
+    1,
+    2,
+    3
+   ],
+   "select_unique": false,
+   "initial_H": {
+    "pairs": [
+     [
+      3,
+      "byte"
+     ],
+     [
+      3,
+      "full_string"
+     ],
+     [
+      3,
+      "parsed_value"
+     ]
+    ],
+    "compatible_slots": [
+     3
+    ],
+    "synthesized_relation": "full_string",
+    "synthesized_abstain": null,
+    "fixed_oracle": {
+     "relation": "full_string",
+     "abstain": null,
+     "source": "fixed_conventional"
+    }
+   },
+   "synthesized_oracle": {
+    "relation": "full_string",
+    "abstain": null,
+    "requirement": "生成配置文件，供另一个程序使用。将配置导出为下载文件，由另一个程序读取该下载文件后使用。内容保真，按文本比较。",
+    "source_count": 2,
+    "hits": [
+     "full_string"
+    ],
+    "generic_also_present": true
+   },
+   "demo_inputs": [
+    "demo-a",
+    "demo-b"
+   ],
+   "test_inputs": [
+    "single-a",
+    "single-b",
+    "trigger-a",
+    "trigger-b"
+   ],
+   "violation_rows": [
+    {
+     "input": "trigger-a",
+     "version": "v1"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1"
+    }
+   ],
+   "healthy_rows": [
+    {
+     "input": "single-a",
+     "version": "v1"
+    },
+    {
+     "input": "single-b",
+     "version": "v1"
+    },
+    {
+     "input": "single-a",
+     "version": "v2"
+    },
+    {
+     "input": "single-b",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2"
+    }
+   ],
+   "slot_matches_examples": {
+    "v1_trigger": [
+     false,
+     true,
+     true,
+     false
+    ],
+    "v1_single": [
+     false,
+     true,
+     true,
+     true
+    ],
+    "v2_trigger": [
+     false,
+     true,
+     true,
+     true
+    ]
+   },
+   "systems": {
+    "lookup_fixed_oracle": {
+     "name": "lookup_fixed_oracle",
+     "pairs": [
+      [
+       3,
+       "full_string"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "name": "autoloc_fixed_oracle",
+     "pairs": [
+      [
+       3,
+       "full_string"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": "select_and_type",
+     "observer_log": []
+    },
+    "lookup_synthesized_oracle": {
+     "name": "lookup_synthesized_oracle",
+     "pairs": [
+      [
+       3,
+       "full_string"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "name": "joint",
+     "pairs": [
+      [
+       3,
+       "byte"
+      ],
+      [
+       3,
+       "full_string"
+      ],
+      [
+       3,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "relation": null,
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "rank": 1,
+     "note": [],
+     "observer_log": [],
+     "choice": {
+      "action": "stop",
+      "rank": 1,
+      "chosen": null,
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "structure": {
+      "allowed_slot_types": [
+       "downloaded_file",
+       "destination_file"
+      ],
+      "excluded_slot_types": [
+       "ui_preview",
+       "internal_cache",
+       "ui_title",
+       "stderr"
+      ],
+      "compatible_slots": [
+       3
+      ],
+      "abstain": null,
+      "relation": "full_string"
+     }
+    },
+    "strong_control": {
+     "name": "strong_control",
+     "pairs": [
+      [
+       3,
+       "byte"
+      ],
+      [
+       3,
+       "full_string"
+      ],
+      [
+       3,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "relation": null,
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "rank": 1,
+     "note": [
+      "all_channels_and_downstream"
+     ],
+     "observer_log": [],
+     "choice": {
+      "action": "stop",
+      "rank": 1,
+      "chosen": null,
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 1,
+        "outcome_ranks": [
+         1
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "used_all_demo_channels": true
+    },
+    "prebound_lookup_fixed": {
+     "name": "prebound_lookup_fixed",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "unbound_workflow",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "name": "fixed_replay",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "name": "all_readable_all_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "name": "all_readable_any_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_any_match"
+    }
+   },
+   "accuracy": {
+    "lookup_fixed_oracle": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "select_and_type"
+    },
+    "lookup_synthesized_oracle": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": []
+    },
+    "strong_control": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": [
+      "all_channels_and_downstream"
+     ]
+    },
+    "prebound_lookup_fixed": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "unbound_workflow",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_any_match"
+    }
+   },
+   "metrics": {
+    "lookup_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "autoloc_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "lookup_synthesized_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "joint": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "strong_control": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "prebound_lookup_fixed": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "fixed_replay": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 4,
+     "false_block": 2,
+     "healthy_deferred": 0
+    },
+    "all_readable_all_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 0,
+     "false_block": 6,
+     "healthy_deferred": 0
+    },
+    "all_readable_any_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    }
+   },
+   "cost": {
+    "lookup_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 8
+     }
+    },
+    "autoloc_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 2,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 16,
+      "run": 8
+     }
+    },
+    "lookup_synthesized_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 8
+     }
+    },
+    "joint": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 2,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 16,
+      "run": 8
+     }
+    },
+    "strong_control": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 2,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "used_all_demo_channels": true,
+     "logical_slot_reads": {
+      "build": 16,
+      "run": 8
+     }
+    },
+    "prebound_lookup_fixed": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "fixed_replay": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 4,
+      "run": 4
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 16,
+      "run": 16
+     }
+    },
+    "all_readable_all_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 32
+     }
+    },
+    "all_readable_any_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 32
+     }
+    }
+   },
+   "independent_gain_rows": {
+    "vs_three_split_systems": [],
+    "vs_strong_control": []
+   },
+   "row_decisions": [
+    {
+     "input": "single-a",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": false,
+      "autoloc_fixed_oracle": false,
+      "lookup_synthesized_oracle": false,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": false,
+      "autoloc_fixed_oracle": false,
+      "lookup_synthesized_oracle": false,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "single-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": true,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": true,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true
+     ]
+    }
+   ]
+  },
+  "synthetic_two_download_files": {
+   "synthetic": true,
+   "mechanism_development_only": true,
+   "not_independent_defect_evidence": true,
+   "kind": "text_export",
+   "requirement": "生成配置文件，供另一个程序使用。将产物导出为文件，由另一个程序读取导出文件后使用。内容保真，按文本比较。",
+   "slots": [
+    {
+     "name": "page_title",
+     "type": "ui_title"
+    },
+    {
+     "name": "page_preview",
+     "type": "ui_preview"
+    },
+    {
+     "name": "internal_cache",
+     "type": "internal_cache"
+    },
+    {
+     "name": "export_file_a",
+     "type": "downloaded_file"
+    },
+    {
+     "name": "export_file_b",
+     "type": "downloaded_file"
+    }
+   ],
+   "truth_receiver": 4,
+   "truth_relation": "full_string",
+   "select_candidates_under_truth_relation": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "select_unique": false,
+   "initial_H": {
+    "pairs": [
+     [
+      3,
+      "byte"
+     ],
+     [
+      3,
+      "full_string"
+     ],
+     [
+      3,
+      "parsed_value"
+     ],
+     [
+      4,
+      "byte"
+     ],
+     [
+      4,
+      "full_string"
+     ],
+     [
+      4,
+      "parsed_value"
+     ]
+    ],
+    "compatible_slots": [
+     3,
+     4
+    ],
+    "synthesized_relation": "full_string",
+    "synthesized_abstain": null,
+    "fixed_oracle": {
+     "relation": "full_string",
+     "abstain": null,
+     "source": "fixed_conventional"
+    }
+   },
+   "synthesized_oracle": {
+    "relation": "full_string",
+    "abstain": null,
+    "requirement": "生成配置文件，供另一个程序使用。将产物导出为文件，由另一个程序读取导出文件后使用。内容保真，按文本比较。",
+    "source_count": 2,
+    "hits": [
+     "full_string"
+    ],
+    "generic_also_present": true
+   },
+   "demo_inputs": [
+    "demo-a",
+    "demo-b"
+   ],
+   "test_inputs": [
+    "single-a",
+    "single-b",
+    "trigger-a",
+    "trigger-b"
+   ],
+   "violation_rows": [
+    {
+     "input": "trigger-a",
+     "version": "v1"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1"
+    }
+   ],
+   "healthy_rows": [
+    {
+     "input": "single-a",
+     "version": "v1"
+    },
+    {
+     "input": "single-b",
+     "version": "v1"
+    },
+    {
+     "input": "single-a",
+     "version": "v2"
+    },
+    {
+     "input": "single-b",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2"
+    }
+   ],
+   "slot_matches_examples": {
+    "v1_trigger": [
+     false,
+     true,
+     true,
+     true,
+     false
+    ],
+    "v1_single": [
+     false,
+     true,
+     true,
+     true,
+     true
+    ],
+    "v2_trigger": [
+     false,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "systems": {
+    "lookup_fixed_oracle": {
+     "name": "lookup_fixed_oracle",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "lookup_or_oracle_not_unique",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "name": "autoloc_fixed_oracle",
+     "pairs": [
+      [
+       4,
+       "full_string"
+      ]
+     ],
+     "positions": [
+      4
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": null,
+     "extra_observations": 1,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": "consumer_read",
+     "observer_log": [
+      {
+       "name": "subsequent_reads"
+      }
+     ]
+    },
+    "lookup_synthesized_oracle": {
+     "name": "lookup_synthesized_oracle",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "lookup_not_unique",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "name": "joint",
+     "pairs": [
+      [
+       4,
+       "byte"
+      ],
+      [
+       4,
+       "full_string"
+      ],
+      [
+       4,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      4
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "relation": null,
+     "abstain": null,
+     "extra_observations": 1,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "rank": 1,
+     "note": [
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ],
+     "observer_log": [
+      {
+       "name": "subsequent_reads"
+      }
+     ],
+     "choice": {
+      "action": "subsequent_reads",
+      "rank": 0,
+      "chosen": {
+       "kind": "subsequent_reads",
+       "current_rank": 0,
+       "outcome_ranks": [
+        1,
+        1
+       ],
+       "can_improve_decision": true,
+       "can_determine": false,
+       "n_improving_outcomes": 2,
+       "mean_outcome_rank": 1.0,
+       "max_outcome_rank": 1,
+       "note": "partition_by_consumed_slot"
+      },
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         1
+        ],
+        "can_improve_decision": true,
+        "can_determine": false,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         1
+        ],
+        "can_improve_decision": true,
+        "can_determine": false,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 0,
+        "outcome_ranks": [
+         0
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 0.0,
+        "max_outcome_rank": 0,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "structure": {
+      "allowed_slot_types": [
+       "downloaded_file",
+       "destination_file"
+      ],
+      "excluded_slot_types": [
+       "ui_preview",
+       "internal_cache",
+       "ui_title",
+       "stderr"
+      ],
+      "compatible_slots": [
+       3,
+       4
+      ],
+      "abstain": null,
+      "relation": "full_string"
+     }
+    },
+    "strong_control": {
+     "name": "strong_control",
+     "pairs": [
+      [
+       4,
+       "byte"
+      ],
+      [
+       4,
+       "full_string"
+      ],
+      [
+       4,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      4
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "relation": null,
+     "abstain": null,
+     "extra_observations": 1,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "rank": 1,
+     "note": [
+      "all_channels_and_downstream",
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ],
+     "observer_log": [
+      {
+       "name": "subsequent_reads"
+      }
+     ],
+     "choice": {
+      "action": "subsequent_reads",
+      "rank": 0,
+      "chosen": {
+       "kind": "subsequent_reads",
+       "current_rank": 0,
+       "outcome_ranks": [
+        1,
+        1
+       ],
+       "can_improve_decision": true,
+       "can_determine": false,
+       "n_improving_outcomes": 2,
+       "mean_outcome_rank": 1.0,
+       "max_outcome_rank": 1,
+       "note": "partition_by_consumed_slot"
+      },
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         1
+        ],
+        "can_improve_decision": true,
+        "can_determine": false,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         1
+        ],
+        "can_improve_decision": true,
+        "can_determine": false,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.0,
+        "max_outcome_rank": 1,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 0,
+        "outcome_ranks": [
+         0
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 0.0,
+        "max_outcome_rank": 0,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "used_all_demo_channels": true
+    },
+    "prebound_lookup_fixed": {
+     "name": "prebound_lookup_fixed",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "unbound_workflow",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "name": "fixed_replay",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "name": "all_readable_all_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "name": "all_readable_any_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_any_match"
+    }
+   },
+   "accuracy": {
+    "lookup_fixed_oracle": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "lookup_or_oracle_not_unique",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "positions": [
+      4
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 1,
+     "note": "consumer_read"
+    },
+    "lookup_synthesized_oracle": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "lookup_not_unique",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "positions": [
+      4
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 1,
+     "note": [
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ]
+    },
+    "strong_control": {
+     "positions": [
+      4
+     ],
+     "relations": [
+      "byte",
+      "full_string",
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": false,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 1,
+     "note": [
+      "all_channels_and_downstream",
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ]
+    },
+    "prebound_lookup_fixed": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "unbound_workflow",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_any_match"
+    }
+   },
+   "metrics": {
+    "lookup_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "autoloc_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "lookup_synthesized_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "joint": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "strong_control": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "prebound_lookup_fixed": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "fixed_replay": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 4,
+     "false_block": 2,
+     "healthy_deferred": 0
+    },
+    "all_readable_all_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 0,
+     "false_block": 6,
+     "healthy_deferred": 0
+    },
+    "all_readable_any_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    }
+   },
+   "cost": {
+    "lookup_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "autoloc_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 3,
+      "run": 8
+     },
+     "extra_observations": 1,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "lookup_synthesized_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "joint": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 3,
+      "run": 8
+     },
+     "extra_observations": 1,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "strong_control": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 3,
+      "run": 8
+     },
+     "extra_observations": 1,
+     "used_all_demo_channels": true,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "prebound_lookup_fixed": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "fixed_replay": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 4,
+      "run": 4
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 20
+     }
+    },
+    "all_readable_all_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 40
+     }
+    },
+    "all_readable_any_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 40
+     }
+    }
+   },
+   "independent_gain_rows": {
+    "vs_three_split_systems": [],
+    "vs_strong_control": []
+   },
+   "row_decisions": [
+    {
+     "input": "single-a",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": false,
+      "lookup_synthesized_oracle": null,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": false,
+      "lookup_synthesized_oracle": null,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "single-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    }
+   ]
+  },
+  "synthetic_joint_receiver_oracle": {
+   "synthetic": true,
+   "mechanism_development_only": true,
+   "not_independent_defect_evidence": true,
+   "kind": "json_export",
+   "requirement": "生成配置文件，供另一个程序使用。将产物导出为文件，由另一个程序读取导出文件后使用。内容保真。",
+   "slots": [
+    {
+     "name": "page_title",
+     "type": "ui_title"
+    },
+    {
+     "name": "page_preview",
+     "type": "ui_preview"
+    },
+    {
+     "name": "internal_cache",
+     "type": "internal_cache"
+    },
+    {
+     "name": "export_file_a",
+     "type": "downloaded_file"
+    },
+    {
+     "name": "export_file_b",
+     "type": "downloaded_file"
+    }
+   ],
+   "truth_receiver": 4,
+   "truth_relation": "parsed_value",
+   "select_candidates_under_truth_relation": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "select_unique": false,
+   "initial_H": {
+    "pairs": [
+     [
+      3,
+      "byte"
+     ],
+     [
+      3,
+      "full_string"
+     ],
+     [
+      3,
+      "parsed_value"
+     ],
+     [
+      4,
+      "parsed_value"
+     ]
+    ],
+    "compatible_slots": [
+     3,
+     4
+    ],
+    "synthesized_relation": null,
+    "synthesized_abstain": "underspecified_relation",
+    "fixed_oracle": {
+     "relation": "full_string",
+     "abstain": null,
+     "source": "fixed_conventional"
+    }
+   },
+   "synthesized_oracle": {
+    "relation": null,
+    "abstain": "underspecified_relation",
+    "requirement": "生成配置文件，供另一个程序使用。将产物导出为文件，由另一个程序读取导出文件后使用。内容保真。",
+    "source_count": 2,
+    "hits": [],
+    "generic_also_present": true
+   },
+   "demo_inputs": [
+    "demo-a",
+    "demo-b"
+   ],
+   "test_inputs": [
+    "single-a",
+    "single-b",
+    "trigger-a",
+    "trigger-b"
+   ],
+   "violation_rows": [
+    {
+     "input": "trigger-a",
+     "version": "v1"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1"
+    }
+   ],
+   "healthy_rows": [
+    {
+     "input": "single-a",
+     "version": "v1"
+    },
+    {
+     "input": "single-b",
+     "version": "v1"
+    },
+    {
+     "input": "single-a",
+     "version": "v2"
+    },
+    {
+     "input": "single-b",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2"
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2"
+    }
+   ],
+   "slot_matches_examples": {
+    "v1_trigger": [
+     false,
+     true,
+     true,
+     true,
+     false
+    ],
+    "v1_single": [
+     false,
+     true,
+     true,
+     true,
+     true
+    ],
+    "v2_trigger": [
+     false,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "systems": {
+    "lookup_fixed_oracle": {
+     "name": "lookup_fixed_oracle",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "lookup_or_oracle_not_unique",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "name": "autoloc_fixed_oracle",
+     "pairs": [
+      [
+       3,
+       "full_string"
+      ]
+     ],
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": null,
+     "extra_observations": 0,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": "select_and_type",
+     "observer_log": []
+    },
+    "lookup_synthesized_oracle": {
+     "name": "lookup_synthesized_oracle",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "lookup_not_unique+underspecified_relation",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "name": "joint",
+     "pairs": [
+      [
+       4,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      4
+     ],
+     "relations": [
+      "parsed_value"
+     ],
+     "relation": "parsed_value",
+     "abstain": null,
+     "extra_observations": 1,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": [
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ],
+     "observer_log": [
+      {
+       "name": "subsequent_reads"
+      }
+     ],
+     "choice": {
+      "action": "subsequent_reads",
+      "rank": 0,
+      "chosen": {
+       "kind": "subsequent_reads",
+       "current_rank": 0,
+       "outcome_ranks": [
+        1,
+        2
+       ],
+       "can_improve_decision": true,
+       "can_determine": true,
+       "n_improving_outcomes": 2,
+       "mean_outcome_rank": 1.5,
+       "max_outcome_rank": 2,
+       "note": "partition_by_consumed_slot"
+      },
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         2
+        ],
+        "can_improve_decision": true,
+        "can_determine": true,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.5,
+        "max_outcome_rank": 2,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         2
+        ],
+        "can_improve_decision": true,
+        "can_determine": true,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.5,
+        "max_outcome_rank": 2,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 0,
+        "outcome_ranks": [
+         0
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 0.0,
+        "max_outcome_rank": 0,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "structure": {
+      "allowed_slot_types": [
+       "downloaded_file",
+       "destination_file"
+      ],
+      "excluded_slot_types": [
+       "ui_preview",
+       "internal_cache",
+       "ui_title",
+       "stderr"
+      ],
+      "compatible_slots": [
+       3,
+       4
+      ],
+      "abstain": "underspecified_relation",
+      "relation": null
+     }
+    },
+    "strong_control": {
+     "name": "strong_control",
+     "pairs": [
+      [
+       4,
+       "parsed_value"
+      ]
+     ],
+     "positions": [
+      4
+     ],
+     "relations": [
+      "parsed_value"
+     ],
+     "relation": "parsed_value",
+     "abstain": null,
+     "extra_observations": 1,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "rank": 2,
+     "note": [
+      "all_channels_and_downstream",
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ],
+     "observer_log": [
+      {
+       "name": "subsequent_reads"
+      }
+     ],
+     "choice": {
+      "action": "subsequent_reads",
+      "rank": 0,
+      "chosen": {
+       "kind": "subsequent_reads",
+       "current_rank": 0,
+       "outcome_ranks": [
+        1,
+        2
+       ],
+       "can_improve_decision": true,
+       "can_determine": true,
+       "n_improving_outcomes": 2,
+       "mean_outcome_rank": 1.5,
+       "max_outcome_rank": 2,
+       "note": "partition_by_consumed_slot"
+      },
+      "scores": [
+       {
+        "kind": "subsequent_reads",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         2
+        ],
+        "can_improve_decision": true,
+        "can_determine": true,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.5,
+        "max_outcome_rank": 2,
+        "note": "partition_by_consumed_slot"
+       },
+       {
+        "kind": "contrast_canaries",
+        "current_rank": 0,
+        "outcome_ranks": [
+         1,
+         2
+        ],
+        "can_improve_decision": true,
+        "can_determine": true,
+        "n_improving_outcomes": 2,
+        "mean_outcome_rank": 1.5,
+        "max_outcome_rank": 2,
+        "note": "same_partition_as_consumer_read"
+       },
+       {
+        "kind": "reread_known_slot",
+        "current_rank": 0,
+        "outcome_ranks": [
+         0
+        ],
+        "can_improve_decision": false,
+        "can_determine": false,
+        "n_improving_outcomes": 0,
+        "mean_outcome_rank": 0.0,
+        "max_outcome_rank": 0,
+        "note": "demo_channels_already_observed"
+       }
+      ]
+     },
+     "used_all_demo_channels": true
+    },
+    "prebound_lookup_fixed": {
+     "name": "prebound_lookup_fixed",
+     "pairs": [],
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "relation": "full_string",
+     "abstain": "unbound_workflow",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "name": "fixed_replay",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "name": "all_readable_all_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "name": "all_readable_any_match",
+     "pairs": [],
+     "positions": [],
+     "relations": [],
+     "relation": null,
+     "abstain": "not_a_localizer",
+     "extra_observations": 0,
+     "unique_receiver": false,
+     "unique_relation": false,
+     "rank": null,
+     "note": "all_readable_any_match"
+    }
+   },
+   "accuracy": {
+    "lookup_fixed_oracle": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "lookup_or_oracle_not_unique",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup"
+    },
+    "autoloc_fixed_oracle": {
+     "positions": [
+      3
+     ],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": false,
+     "receiver_wrong": true,
+     "relation_correct": false,
+     "relation_wrong": true,
+     "extra_observations": 0,
+     "note": "select_and_type"
+    },
+    "lookup_synthesized_oracle": {
+     "positions": [],
+     "relations": [],
+     "abstain": "lookup_not_unique+underspecified_relation",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "transferable_lookup_plus_phrase_table"
+    },
+    "joint": {
+     "positions": [
+      4
+     ],
+     "relations": [
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 1,
+     "note": [
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ]
+    },
+    "strong_control": {
+     "positions": [
+      4
+     ],
+     "relations": [
+      "parsed_value"
+     ],
+     "abstain": null,
+     "unique_receiver": true,
+     "unique_relation": true,
+     "receiver_correct": true,
+     "receiver_wrong": false,
+     "relation_correct": true,
+     "relation_wrong": false,
+     "extra_observations": 1,
+     "note": [
+      "all_channels_and_downstream",
+      "subsequent_reads",
+      {
+       "consumer_slot": 4
+      }
+     ]
+    },
+    "prebound_lookup_fixed": {
+     "positions": [],
+     "relations": [
+      "full_string"
+     ],
+     "abstain": "unbound_workflow",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "prebound"
+    },
+    "fixed_replay": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "fixed_replay"
+    },
+    "all_readable_all_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_all_match"
+    },
+    "all_readable_any_match": {
+     "positions": [],
+     "relations": [],
+     "abstain": "not_a_localizer",
+     "unique_receiver": false,
+     "unique_relation": false,
+     "receiver_correct": false,
+     "receiver_wrong": false,
+     "relation_correct": false,
+     "relation_wrong": false,
+     "extra_observations": 0,
+     "note": "all_readable_any_match"
+    }
+   },
+   "metrics": {
+    "lookup_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "autoloc_fixed_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "lookup_synthesized_oracle": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "joint": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "strong_control": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    },
+    "prebound_lookup_fixed": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 0,
+     "violation_deferred": 2,
+     "retention": 0,
+     "false_block": 0,
+     "healthy_deferred": 6
+    },
+    "fixed_replay": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 4,
+     "false_block": 2,
+     "healthy_deferred": 0
+    },
+    "all_readable_all_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 0,
+     "correct_block": 2,
+     "violation_deferred": 0,
+     "retention": 0,
+     "false_block": 6,
+     "healthy_deferred": 0
+    },
+    "all_readable_any_match": {
+     "violation_rows": 2,
+     "healthy_rows": 6,
+     "false_release": 2,
+     "correct_block": 0,
+     "violation_deferred": 0,
+     "retention": 6,
+     "false_block": 0,
+     "healthy_deferred": 0
+    }
+   },
+   "cost": {
+    "lookup_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "autoloc_fixed_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 2,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "lookup_synthesized_oracle": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "joint": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 3,
+      "run": 8
+     },
+     "extra_observations": 1,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "strong_control": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 3,
+      "run": 8
+     },
+     "extra_observations": 1,
+     "used_all_demo_channels": true,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 8
+     }
+    },
+    "prebound_lookup_fixed": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 0
+     }
+    },
+    "fixed_replay": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 4,
+      "run": 4
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 20,
+      "run": 20
+     }
+    },
+    "all_readable_all_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 40
+     }
+    },
+    "all_readable_any_match": {
+     "model_calls": {
+      "build": 0,
+      "run": 0
+     },
+     "tool_actions": {
+      "build": 0,
+      "run": 8
+     },
+     "extra_observations": 0,
+     "logical_slot_reads": {
+      "build": 0,
+      "run": 40
+     }
+    }
+   },
+   "independent_gain_rows": {
+    "vs_three_split_systems": [
+     {
+      "input": "trigger-a",
+      "version": "v1",
+      "split_decisions": {
+       "lookup_fixed_oracle": null,
+       "autoloc_fixed_oracle": true,
+       "lookup_synthesized_oracle": null
+      },
+      "strong_control": false
+     },
+     {
+      "input": "trigger-b",
+      "version": "v1",
+      "split_decisions": {
+       "lookup_fixed_oracle": null,
+       "autoloc_fixed_oracle": true,
+       "lookup_synthesized_oracle": null
+      },
+      "strong_control": false
+     }
+    ],
+    "vs_strong_control": []
+   },
+   "row_decisions": [
+    {
+     "input": "single-a",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v1",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v1",
+     "truth": false,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": false,
+      "strong_control": false,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      false
+     ]
+    },
+    {
+     "input": "single-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "single-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": true,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-a",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "input": "trigger-b",
+     "version": "v2",
+     "truth": true,
+     "decisions": {
+      "lookup_fixed_oracle": null,
+      "autoloc_fixed_oracle": true,
+      "lookup_synthesized_oracle": null,
+      "joint": true,
+      "strong_control": true,
+      "prebound_lookup_fixed": null,
+      "fixed_replay": false,
+      "all_readable_all_match": false,
+      "all_readable_any_match": true
+     },
+     "slot_matches_truth_relation": [
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    }
+   ]
+  }
+ },
+ "independent_gain": {
+  "by_case": {
+   "synthetic_preview_cache_download": {
+    "vs_three_split_systems": [],
+    "vs_strong_control": []
+   },
+   "synthetic_two_download_files": {
+    "vs_three_split_systems": [],
+    "vs_strong_control": []
+   },
+   "synthetic_joint_receiver_oracle": {
+    "vs_three_split_systems": [
+     {
+      "input": "trigger-a",
+      "version": "v1",
+      "split_decisions": {
+       "lookup_fixed_oracle": null,
+       "autoloc_fixed_oracle": true,
+       "lookup_synthesized_oracle": null
+      },
+      "strong_control": false
+     },
+     {
+      "input": "trigger-b",
+      "version": "v1",
+      "split_decisions": {
+       "lookup_fixed_oracle": null,
+       "autoloc_fixed_oracle": true,
+       "lookup_synthesized_oracle": null
+      },
+      "strong_control": false
+     }
+    ],
+    "vs_strong_control": []
+   }
+  },
+  "any_independent_gain_vs_split": true,
+  "any_independent_gain_vs_strong_control": false
+ },
+ "public_transfer": {
+  "searched": true,
+  "qualified_case_found": false,
+  "reason": "合成机制验证已完成：联合学习在 synthetic_joint_receiver_oracle 上相对三种拆开系统有 2 行独立收益，但更强对照已经覆盖这些行。限时检索未见真实工作流，尚无合格案例，因此不能论证两项组件在真实任务上存在真正互补。合取标准未放宽。近例要么是单一常规导出或下载槽，可迁移查表或自动定位加固定判据就能检查；要么是格式偏好或开发期行为，不是可在冻结闭集关系下与可信原文比较的发布缺陷；要么缺少两个同类型候选位置与多种相容 (r, o) 组合并存、只有正确组合能通过全部证据的结构。未发明故障，未改写查表让它故意绑错，也未把 Material 复制、jq 或已排除近例重新纳入。",
+  "examined_this_round": [
+   {
+    "id": "zen-browser/desktop#8535",
+    "url": "https://github.com/zen-browser/desktop/issues/8535",
+    "reason": "内置 JSON 查看器保存会丢条目，复制却是完整的。出问题的是保存/下载这一常规文件槽，可迁移查表会绑定该文件并在任一冻结关系下拦住。"
+   },
+   {
+    "id": "Shopify/cli#3719",
+    "url": "https://github.com/Shopify/cli/issues/3719",
+    "reason": "Admin 下载、GitHub 同步与 CLI 对主题 JSON 的最小化或转义不一致。各路径仍是常规下载或同步文件槽；若可信原文给定，固定 full_string 也能在该槽上发现文本差异。"
+   },
+   {
+    "id": "payloadcms/payload#13210",
+    "url": "https://github.com/payloadcms/payload/issues/13210",
+    "reason": "JSON 预览曾被拍平，导出也曾写成 CSV 风格。可迁移查表仍会绑定导出文件；这不是同类型双文件加关系歧义的联合约束情形。"
+   },
+   {
+    "id": "unjs/nitro#1605",
+    "url": "https://github.com/unjs/nitro/issues/1605",
+    "reason": "开发模式下代理 JSON 被美化打印，维护者视为开发期特性而非生产缺陷；也只有单一响应通道，构不成 (r, o) 相互约束。"
+   },
+   {
+    "id": "snipe/snipe-it#10344",
+    "url": "https://github.com/snipe/snipe-it/issues/10344",
+    "reason": "Web UI 导出给部分字段前置空白，出问题的是单一导出文件槽。"
+   },
+   {
+    "id": "googleworkspace/cli#743",
+    "url": "https://github.com/googleworkspace/cli/issues/743",
+    "reason": "files export 写到 download.txt 而非标准输出，属于通道或路径约定问题，不是闭集关系下中间文件与消费端格式相互约束的合格案例。"
+   }
+  ],
+  "previously_excluded_not_readmitted": [
+   "elastic/kibana#241730",
+   "supabase/supabase#42818",
+   "kubernetes/website#23817",
+   "kubernetes/website#42179",
+   "jupyter/notebook#4481",
+   "outline/outline#3972",
+   "nexu-io/open-design#1842",
+   "kubeflow/pipelines#3814"
+  ]
+ },
+ "local_cpu_seconds": 0.0033942139998544008
+}
